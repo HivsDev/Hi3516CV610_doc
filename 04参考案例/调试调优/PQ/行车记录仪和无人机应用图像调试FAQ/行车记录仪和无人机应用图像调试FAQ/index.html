@@ -46,6 +46,13 @@
       
     
     
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
     
     
       <link rel="stylesheet" href="../../../../../static/css/extra.css">
@@ -57,41 +64,6 @@
       
 
     
-    
-      
-      <meta name="gitcode-issues-url" content="https://gitcode.com/HiSpark/fbb_ws63/issues">
-      
-      <link rel="dns-prefetch" href="https://docs.hisilicon.com">
-      <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-      <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://docs.hisilicon.com" crossorigin>
-      <link rel="preload" href="../../../../../assets/stylesheets/main.484c7ddc.min.css" as="style">
-      <link rel="preload" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css" as="style">
-      <link rel="preload" href="../../../../../static/css/extra.css" as="style">
-      <link rel="preload" href="../../../../../assets/javascripts/bundle.79ae519e.min.js" as="script">
-      <link rel="preload" href="../../../../../static/js/custom.js" as="script">
-
-      
-        <link rel="prefetch" href="../../../../Sample%E6%8C%87%E5%AF%BC%E8%AF%B4%E6%98%8E/Sample%E6%8C%87%E5%AF%BC%E8%AF%B4%E6%98%8E/" as="document">
-      
-      
-        
-        
-          
-        
-          
-            <link rel="prefetch" href="../../../../../zh-CN/00概览/Hi3516CV610%20超高清智慧视觉%20SoC%20产品简介/Hi3516CV610%20超高清智慧视觉%20SoC%20产品简介.md" as="document">
-          
-        
-      
-      <style>:root{--md-text-font:"Helvetica Neue, PingFang SC, Microsoft YaHei";--md-code-font:"Consolas, Roboto Mono"}</style>
-      <script>
-        // 防止宽窄屏刷新闪烁 — 在 body 解析前就读取 localStorage 标记 <html>
-        // 配合 CSS: html.prefer-narrow .md-grid 在首帧即应用 76%
-        if (localStorage.getItem('wideScreen') === 'false') {
-          document.documentElement.classList.add('prefer-narrow');
-        }
-      </script>
     
   </head>
   
@@ -129,16 +101,10 @@
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
     <a href="https://developers.hisilicon.com" title="Hi3516CV610 开发者中心" class="md-header__button md-logo" aria-label="Hi3516CV610 开发者中心" data-md-component="logo" target="_blank" rel="noopener noreferrer">
-      <img 
-  src="../../../../../static/images/light-icon.png" 
-  class="md-logo__img md-logo__img--light"
-  alt="Hi3516CV610 开发者中心" 
-/>
-<img 
-  src="../../../../../static/images/dark-icon.png" 
-  class="md-logo__img md-logo__img--dark"
-  alt="Hi3516CV610 开发者中心" 
-/>
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
     </a>
     <label class="md-header__button md-icon" for="__drawer">
       
@@ -146,17 +112,20 @@
     </label>
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hi3516CV610 开发者中心
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              行车记录仪/无人机图像调试FAQ
+            
+          </span>
+        </div>
       </div>
     </div>
-    
-      
-      
-        <label class="md-header__button md-icon md-header__button--search" for="__search">
-          
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-        </label>
-      
-    
     
       
         <form class="md-header__option" data-md-component="palette">
@@ -189,29 +158,13 @@
     
     
     
-      <div class="md-header__source">
-        <div class="source-container">
-  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="前往仓库" class="md-source" data-md-component="source" rel="noopener noreferrer">
-    <div class="md-source__icon md-icon">
-      <svg viewBox="0 0 1024 1024" width="20" height="20">
-        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
-      </svg>
-    </div>
-  </a>
-
-  <button class="wide-screen-toggle" id="wide-screen-toggle" >
-    <img src="../../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
-    <img src="../../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
-  </button>
-</div>
-      </div>
-    
-  </nav>
-  
-  
-    
-    
-      <div class="md-search" data-md-component="search" role="dialog">
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
@@ -223,13 +176,13 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="查找">
-        <!-- 
+        
           <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
             
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
           </a>
-         -->
-        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
@@ -250,23 +203,24 @@
     </div>
   </div>
 </div>
+      
     
+    
+      <div class="md-header__source">
+        <a href="https://github.com/hivsdev/Hi3516CV610_doc" title="前往仓库" class="md-source" data-md-component="source" target="_blank" rel="noopener noreferrer">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub 编辑
+  </div>
+</a>
+      </div>
+    
+  </nav>
   
 </header>
-
-
-<script>
-  var USER_DEFINED_OPTIONS = {
-    REPO_PATH: "Hi3516CV610_doc",
-    ROOT_URL: "https://docs.hisilicon.com/projects"
-  };
-  var DOCUMENTATION_OPTIONS = {
-    VERSION: "master",
-    // 构建时声明主题的语言
-    LANGUAGE: "zh"
-  };
-</script>
-<script src="https://docs.hisilicon.com/projects/version/hispark_version.js"></script>
     
     <div class="md-container" data-md-component="container">
       
@@ -281,40 +235,6 @@
             
               
               <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="sidebar-selectors">
-                  <div class="repo-select custom-select">
-                    <span class="select-label">芯片</span>
-                    <div class="repo-selector" title="">
-                      <span class="repo-readOnly"></span>
-                      <select id="repo-select" hidden>
-                        <option value=""></option>
-                      </select>
-                    </div>
-                    <ul class="select-options" id="repo-options" style="display:none"></ul>
-                  </div>
-                  <div class="version-select custom-select">
-                    <span class="select-label">版本</span>
-                    <div class="version-selector" title="">
-                      <span class="version-readOnly"></span>
-                      <select id="version-select" hidden>
-                        <option value=""></option>
-                      </select>
-                    </div>
-                    <ul class="select-options" id="version-options" style="display:none"></ul>
-                  </div>
-                  
-                    
-                    
-                      <div class="sidebar-search">
-                        <label class="sidebar-search__button" for="__search">
-                          
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
-                          <span>全文检索</span>
-                        </label>
-                      </div>
-                    
-                  
-                </div>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -322,22 +242,26 @@
 
 
 <nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://developers.hisilicon.com" title="Hi3516CV610 开发者中心" class="md-nav__button md-logo" aria-label="Hi3516CV610 开发者中心" data-md-component="logo" target="_blank" rel="noopener noreferrer">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Hi3516CV610 开发者中心
+  </label>
   
     <div class="md-nav__source">
-      <div class="source-container">
-  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="前往仓库" class="md-source" data-md-component="source" rel="noopener noreferrer">
-    <div class="md-source__icon md-icon">
-      <svg viewBox="0 0 1024 1024" width="20" height="20">
-        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
-      </svg>
-    </div>
-  </a>
-
-  <button class="wide-screen-toggle" id="wide-screen-toggle" >
-    <img src="../../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
-    <img src="../../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
-  </button>
-</div>
+      <a href="https://github.com/hivsdev/Hi3516CV610_doc" title="前往仓库" class="md-source" data-md-component="source" target="_blank" rel="noopener noreferrer">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub 编辑
+  </div>
+</a>
     </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -413,7 +337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/00概览/Hi3516CV610%20超高清智慧视觉%20SoC%20产品简介/Hi3516CV610%20超高清智慧视觉%20SoC%20产品简介.md" class="md-nav__link">
+      <a href="../../../../../00概览/Hi3516CV610%20超高清智慧视觉%20SoC%20产品简介/Hi3516CV610%20超高清智慧视觉%20SoC%20产品简介.md" class="md-nav__link">
         
   
   
@@ -812,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-1%20产品概述.md" class="md-nav__link">
+      <a href="../../../../../02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-1%20产品概述.md" class="md-nav__link">
         
   
   
@@ -840,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-2%20硬件特性.md" class="md-nav__link">
+      <a href="../../../../../02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-2%20硬件特性.md" class="md-nav__link">
         
   
   
@@ -868,7 +792,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-3%20系统.md" class="md-nav__link">
+      <a href="../../../../../02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-3%20系统.md" class="md-nav__link">
         
   
   
@@ -896,7 +820,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-4%20存储器接口.md" class="md-nav__link">
+      <a href="../../../../../02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-4%20存储器接口.md" class="md-nav__link">
         
   
   
@@ -924,7 +848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-5%20网络接口.md" class="md-nav__link">
+      <a href="../../../../../02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-5%20网络接口.md" class="md-nav__link">
         
   
   
@@ -952,7 +876,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-6%20视频编码.md" class="md-nav__link">
+      <a href="../../../../../02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-6%20视频编码.md" class="md-nav__link">
         
   
   
@@ -980,7 +904,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-7%20视频及图形处理.md" class="md-nav__link">
+      <a href="../../../../../02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-7%20视频及图形处理.md" class="md-nav__link">
         
   
   
@@ -1008,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-8%20智能加速引擎.md" class="md-nav__link">
+      <a href="../../../../../02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-8%20智能加速引擎.md" class="md-nav__link">
         
   
   
@@ -1036,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-9%20视频接口.md" class="md-nav__link">
+      <a href="../../../../../02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-9%20视频接口.md" class="md-nav__link">
         
   
   
@@ -1064,7 +988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-10%20ISP.md" class="md-nav__link">
+      <a href="../../../../../02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-10%20ISP.md" class="md-nav__link">
         
   
   
@@ -1092,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-11%20音频接口.md" class="md-nav__link">
+      <a href="../../../../../02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-11%20音频接口.md" class="md-nav__link">
         
   
   
@@ -1120,7 +1044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-12%20外围设备.md" class="md-nav__link">
+      <a href="../../../../../02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-12%20外围设备.md" class="md-nav__link">
         
   
   
@@ -1148,7 +1072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-13%20安全子系统.md" class="md-nav__link">
+      <a href="../../../../../02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-13%20安全子系统.md" class="md-nav__link">
         
   
   
@@ -1176,7 +1100,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/02-A%20订购须知.md" class="md-nav__link">
+      <a href="../../../../../02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/02-A%20订购须知.md" class="md-nav__link">
         
   
   
@@ -1204,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/00-3%20前言.md" class="md-nav__link">
+      <a href="../../../../../02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/00-3%20前言.md" class="md-nav__link">
         
   
   
@@ -1232,7 +1156,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/附录%20B-缩略语.md" class="md-nav__link">
+      <a href="../../../../../02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/附录%20B-缩略语.md" class="md-nav__link">
         
   
   
@@ -1402,7 +1326,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/安全子系统/Hi35xxVxxx%20安全启动使用指南/Hi35xxVxxx%20安全启动使用指南.md" class="md-nav__link">
+      <a href="../../../../../03API参考/安全子系统/Hi35xxVxxx%20安全启动使用指南/Hi35xxVxxx%20安全启动使用指南.md" class="md-nav__link">
         
   
   
@@ -1430,7 +1354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/安全子系统/Hi35xxVxxx%20安全子系统使用说明/Hi35xxVxxx%20安全子系统使用说明.md" class="md-nav__link">
+      <a href="../../../../../03API参考/安全子系统/Hi35xxVxxx%20安全子系统使用说明/Hi35xxVxxx%20安全子系统使用说明.md" class="md-nav__link">
         
   
   
@@ -1553,7 +1477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/BSP/Hi35xxVxxx%20开发环境用户指南/Hi35xxVxxx%20开发环境用户指南.md" class="md-nav__link">
+      <a href="../../../../../03API参考/BSP/Hi35xxVxxx%20开发环境用户指南/Hi35xxVxxx%20开发环境用户指南.md" class="md-nav__link">
         
   
   
@@ -1581,7 +1505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/BSP/Hi35xxVxxx%20U-boot%20移植应用开发指南/Hi35xxVxxx%20U-boot%20移植应用开发指南.md" class="md-nav__link">
+      <a href="../../../../../03API参考/BSP/Hi35xxVxxx%20U-boot%20移植应用开发指南/Hi35xxVxxx%20U-boot%20移植应用开发指南.md" class="md-nav__link">
         
   
   
@@ -1609,7 +1533,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/BSP/外围设备驱动%20操作指南/外围设备驱动%20操作指南.md" class="md-nav__link">
+      <a href="../../../../../03API参考/BSP/外围设备驱动%20操作指南/外围设备驱动%20操作指南.md" class="md-nav__link">
         
   
   
@@ -1637,7 +1561,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/BSP/UBI%20文件系统使用指南/UBI%20文件系统使用指南.md" class="md-nav__link">
+      <a href="../../../../../03API参考/BSP/UBI%20文件系统使用指南/UBI%20文件系统使用指南.md" class="md-nav__link">
         
   
   
@@ -1665,7 +1589,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/BSP/裸烧及非裸烧升级%20使用手册/裸烧及非裸烧升级%20使用手册.md" class="md-nav__link">
+      <a href="../../../../../03API参考/BSP/裸烧及非裸烧升级%20使用手册/裸烧及非裸烧升级%20使用手册.md" class="md-nav__link">
         
   
   
@@ -1758,7 +1682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/ISP/ISP%20开发参考/ISP%20开发参考（1~5）.md" class="md-nav__link">
+      <a href="../../../../../03API参考/ISP/ISP%20开发参考/ISP%20开发参考（1~5）.md" class="md-nav__link">
         
   
   
@@ -1786,7 +1710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/ISP/ISP%20开发参考/ISP%20开发参考（6~end）.md" class="md-nav__link">
+      <a href="../../../../../03API参考/ISP/ISP%20开发参考/ISP%20开发参考（6~end）.md" class="md-nav__link">
         
   
   
@@ -1814,7 +1738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/ISP/AIISP%20开发参考/AIISP%20开发参考.md" class="md-nav__link">
+      <a href="../../../../../03API参考/ISP/AIISP%20开发参考/AIISP%20开发参考.md" class="md-nav__link">
         
   
   
@@ -1842,7 +1766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/ISP/ISP%20FAQ/ISP%20FAQ.md" class="md-nav__link">
+      <a href="../../../../../03API参考/ISP/ISP%20FAQ/ISP%20FAQ.md" class="md-nav__link">
         
   
   
@@ -1951,7 +1875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/MPP/MPP%20媒体处理软件%20V6.0%20开发参考/0%20前言.md" class="md-nav__link">
+      <a href="../../../../../03API参考/MPP/MPP%20媒体处理软件%20V6.0%20开发参考/0%20前言.md" class="md-nav__link">
         
   
   
@@ -1979,7 +1903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/MPP/MPP%20媒体处理软件%20V6.0%20FAQ/MPP%20媒体处理软件%20V6.0%20FAQ.md" class="md-nav__link">
+      <a href="../../../../../03API参考/MPP/MPP%20媒体处理软件%20V6.0%20FAQ/MPP%20媒体处理软件%20V6.0%20FAQ.md" class="md-nav__link">
         
   
   
@@ -2007,7 +1931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/MPP/音频组件%20API参考/音频组件%20API参考.md" class="md-nav__link">
+      <a href="../../../../../03API参考/MPP/音频组件%20API参考/音频组件%20API参考.md" class="md-nav__link">
         
   
   
@@ -2035,7 +1959,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/MPP/安全子系统%20API%20参考/安全子系统%20API%20参考.md" class="md-nav__link">
+      <a href="../../../../../03API参考/MPP/安全子系统%20API%20参考/安全子系统%20API%20参考.md" class="md-nav__link">
         
   
   
@@ -2091,7 +2015,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/MPP/MIPI%20使用指南/MIPI%20使用指南.md" class="md-nav__link">
+      <a href="../../../../../03API参考/MPP/MIPI%20使用指南/MIPI%20使用指南.md" class="md-nav__link">
         
   
   
@@ -2119,7 +2043,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/MPP/SYS_CONFIG%20配置指南/SYS_CONFIG%20配置指南.md" class="md-nav__link">
+      <a href="../../../../../03API参考/MPP/SYS_CONFIG%20配置指南/SYS_CONFIG%20配置指南.md" class="md-nav__link">
         
   
   
@@ -2203,7 +2127,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/MPP/RTC%20应用指南/RTC%20应用指南.md" class="md-nav__link">
+      <a href="../../../../../03API参考/MPP/RTC%20应用指南/RTC%20应用指南.md" class="md-nav__link">
         
   
   
@@ -2231,7 +2155,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/MPP/哭声检测%20API参考/哭声检测%20API参考.md" class="md-nav__link">
+      <a href="../../../../../03API参考/MPP/哭声检测%20API参考/哭声检测%20API参考.md" class="md-nav__link">
         
   
   
@@ -2378,7 +2302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/SVP/IVE%20API%20参考/IVE%20API%20参考.md" class="md-nav__link">
+      <a href="../../../../../03API参考/SVP/IVE%20API%20参考/IVE%20API%20参考.md" class="md-nav__link">
         
   
   
@@ -2406,7 +2330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/03API参考/SVP/IVS%20API%20参考/IVS%20API%20参考.md" class="md-nav__link">
+      <a href="../../../../../03API参考/SVP/IVS%20API%20参考/IVS%20API%20参考.md" class="md-nav__link">
         
   
   
@@ -2627,7 +2551,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/04参考案例/调试调优/硬件/Hi3516CV610%20DDR3%20参数配置方法/Hi3516CV610%20DDR3%20参数配置方法.md" class="md-nav__link">
+      <a href="../../../../../04参考案例/调试调优/硬件/Hi3516CV610%20DDR3%20参数配置方法/Hi3516CV610%20DDR3%20参数配置方法.md" class="md-nav__link">
         
   
   
@@ -2722,7 +2646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/04参考案例/调试调优/BSP/Hi35xxVxxx%20快速启动优化指南/Hi35xxVxxx%20快速启动优化指南.md" class="md-nav__link">
+      <a href="../../../../../04参考案例/调试调优/BSP/Hi35xxVxxx%20快速启动优化指南/Hi35xxVxxx%20快速启动优化指南.md" class="md-nav__link">
         
   
   
@@ -2750,7 +2674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/04参考案例/调试调优/BSP/Hi35xxVxxx%20调试工具使用指南/Hi35xxVxxx%20调试工具使用指南.md" class="md-nav__link">
+      <a href="../../../../../04参考案例/调试调优/BSP/Hi35xxVxxx%20调试工具使用指南/Hi35xxVxxx%20调试工具使用指南.md" class="md-nav__link">
         
   
   
@@ -2806,7 +2730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/04参考案例/调试调优/BSP/BSP%20FAQ/BSP%20FAQ.md" class="md-nav__link">
+      <a href="../../../../../04参考案例/调试调优/BSP/BSP%20FAQ/BSP%20FAQ.md" class="md-nav__link">
         
   
   
@@ -2981,7 +2905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/04参考案例/调试调优/MPP/智能编码自适应%20使用说明/智能编码自适应%20使用说明.md" class="md-nav__link">
+      <a href="../../../../../04参考案例/调试调优/MPP/智能编码自适应%20使用说明/智能编码自适应%20使用说明.md" class="md-nav__link">
         
   
   
@@ -3084,7 +3008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/04参考案例/调试调优/PQ/ISP%20图像调优指南/ISP%20图像调优指南.md" class="md-nav__link">
+      <a href="../../../../../04参考案例/调试调优/PQ/ISP%20图像调优指南/ISP%20图像调优指南.md" class="md-nav__link">
         
   
   
@@ -3112,7 +3036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/04参考案例/调试调优/PQ/ISP%20颜色调优说明/ISP%20颜色调优说明.md" class="md-nav__link">
+      <a href="../../../../../04参考案例/调试调优/PQ/ISP%20颜色调优说明/ISP%20颜色调优说明.md" class="md-nav__link">
         
   
   
@@ -3140,7 +3064,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/04参考案例/调试调优/PQ/Sensor%20调试指南/Sensor%20调试指南.md" class="md-nav__link">
+      <a href="../../../../../04参考案例/调试调优/PQ/Sensor%20调试指南/Sensor%20调试指南.md" class="md-nav__link">
         
   
   
@@ -3168,7 +3092,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/04参考案例/调试调优/PQ/图像自适应%20使用说明/图像自适应%20使用说明.md" class="md-nav__link">
+      <a href="../../../../../04参考案例/调试调优/PQ/图像自适应%20使用说明/图像自适应%20使用说明.md" class="md-nav__link">
         
   
   
@@ -3196,7 +3120,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/04参考案例/调试调优/PQ/智能PQ%20使用指导/智能PQ%20使用指导.md" class="md-nav__link">
+      <a href="../../../../../04参考案例/调试调优/PQ/智能PQ%20使用指导/智能PQ%20使用指导.md" class="md-nav__link">
         
   
   
@@ -3360,7 +3284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/04参考案例/调试调优/PQ/Hisilicon%20IP%20Camera%20图像质量测试标准/Hisilicon%20IP%20Camera%20图像质量测试标准.md" class="md-nav__link">
+      <a href="../../../../../04参考案例/调试调优/PQ/Hisilicon%20IP%20Camera%20图像质量测试标准/Hisilicon%20IP%20Camera%20图像质量测试标准.md" class="md-nav__link">
         
   
   
@@ -3388,7 +3312,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/04参考案例/调试调优/PQ/Hi3516CV610╱Hi3516CV608%203DNR参数配置说明/Hi3516CV610╱Hi3516CV608%203DNR参数配置说明.md" class="md-nav__link">
+      <a href="../../../../../04参考案例/调试调优/PQ/Hi3516CV610╱Hi3516CV608%203DNR参数配置说明/Hi3516CV610╱Hi3516CV608%203DNR参数配置说明.md" class="md-nav__link">
         
   
   
@@ -3586,7 +3510,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/05硬件指南/单板/Hi3516CV610%20Demo%20单板使用指南（QFN）/Hi3516CV610%20Demo%20单板使用指南（QFN）.md" class="md-nav__link">
+      <a href="../../../../../05硬件指南/单板/Hi3516CV610%20Demo%20单板使用指南（QFN）/Hi3516CV610%20Demo%20单板使用指南（QFN）.md" class="md-nav__link">
         
   
   
@@ -3614,7 +3538,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/05硬件指南/单板/Hi3516CV610%20硬件设计用户指南（QFN）/Hi3516CV610%20硬件设计用户指南（QFN）.md" class="md-nav__link">
+      <a href="../../../../../05硬件指南/单板/Hi3516CV610%20硬件设计用户指南（QFN）/Hi3516CV610%20硬件设计用户指南（QFN）.md" class="md-nav__link">
         
   
   
@@ -3642,7 +3566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/05硬件指南/单板/Hi3516CV610%20硬件设计%20Checklist（QFN）/Hi3516CV610%20硬件设计%20Checklist（QFN）.md" class="md-nav__link">
+      <a href="../../../../../05硬件指南/单板/Hi3516CV610%20硬件设计%20Checklist（QFN）/Hi3516CV610%20硬件设计%20Checklist（QFN）.md" class="md-nav__link">
         
   
   
@@ -3808,7 +3732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/06工具中心/ToolPlatform/ToolPlatform工具平台使用指南/ToolPlatform工具平台%20使用指南.md" class="md-nav__link">
+      <a href="../../../../../06工具中心/ToolPlatform/ToolPlatform工具平台使用指南/ToolPlatform工具平台%20使用指南.md" class="md-nav__link">
         
   
   
@@ -4337,7 +4261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/06工具中心/SVP_NPU/MindCmd%20使用指南/MindCmd使用指南.md" class="md-nav__link">
+      <a href="../../../../../06工具中心/SVP_NPU/MindCmd%20使用指南/MindCmd使用指南.md" class="md-nav__link">
         
   
   
@@ -4471,7 +4395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../zh-CN/07FAQ/Hi3516CV610%20FAQ.md}" class="md-nav__link">
+      <a href="../../../../../07FAQ/Hi3516CV610%20FAQ.md}" class="md-nav__link">
         
   
   
@@ -4610,6 +4534,22 @@
         
   
   
+    <li class="md-path__item">
+      <a href="../../../../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    概览
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
     
     
       <li class="md-path__item">
@@ -4636,7 +4576,7 @@
     
     
       <li class="md-path__item">
-        <a href="../../../../../zh-CN/04参考案例/调试调优/硬件/Hi3516CV610%20DDR3%20参数配置方法/Hi3516CV610%20DDR3%20参数配置方法.md" class="md-path__link">
+        <a href="../../../../../04参考案例/调试调优/硬件/Hi3516CV610%20DDR3%20参数配置方法/Hi3516CV610%20DDR3%20参数配置方法.md" class="md-path__link">
           
   <span class="md-ellipsis">
     调试调优
@@ -4657,7 +4597,7 @@
     
     
       <li class="md-path__item">
-        <a href="../../../../../zh-CN/04参考案例/调试调优/PQ/ISP%20图像调优指南/ISP%20图像调优指南.md" class="md-path__link">
+        <a href="../../../../../04参考案例/调试调优/PQ/ISP%20图像调优指南/ISP%20图像调优指南.md" class="md-path__link">
           
   <span class="md-ellipsis">
     PQ
@@ -5228,165 +5168,58 @@ Hi3519DV500芯片不涉及运动MAP的显示。</p>
       
         <footer class="md-footer">
   
-  
-  
-  <nav class="md-footer__inner md-grid" aria-label="页脚" >
     
-    
-    <a href="../../../MPP/%E7%BC%96%E7%A0%81%E5%99%A8%E5%9B%BE%E5%83%8F%E8%B4%A8%E9%87%8F%E8%B0%83%E4%BC%98%E6%8C%87%E5%8D%97/%E7%BC%96%E7%A0%81%E5%99%A8%E5%9B%BE%E5%83%8F%E8%B4%A8%E9%87%8F%E8%B0%83%E4%BC%98%E6%8C%87%E5%8D%97/" class="md-footer__link md-footer__link--prev"
-      aria-label="上一页: 编码器图像质量调优">
-      <div class="md-footer__button md-icon">
+      
+      <nav class="md-footer__inner md-grid" aria-label="页脚" >
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-      </div>
-      <div class="md-footer__title">
-        <span class="md-footer__direction">
-          上一页
-        </span>
-        <div class="md-ellipsis">
-          编码器图像质量调优
-        </div>
-      </div>
-    </a>
-    
-    
-    
-    <a href="../../../../Sample%E6%8C%87%E5%AF%BC%E8%AF%B4%E6%98%8E/Sample%E6%8C%87%E5%AF%BC%E8%AF%B4%E6%98%8E/" class="md-footer__link md-footer__link--next"
-      aria-label="下一页: Sample 指导说明">
-      <div class="md-footer__title">
-        <span class="md-footer__direction">
-          下一页
-        </span>
-        <div class="md-ellipsis">
-          Sample 指导说明
-        </div>
-      </div>
-      <div class="md-footer__button md-icon">
+          
+          <a href="../../../MPP/%E7%BC%96%E7%A0%81%E5%99%A8%E5%9B%BE%E5%83%8F%E8%B4%A8%E9%87%8F%E8%B0%83%E4%BC%98%E6%8C%87%E5%8D%97/%E7%BC%96%E7%A0%81%E5%99%A8%E5%9B%BE%E5%83%8F%E8%B4%A8%E9%87%8F%E8%B0%83%E4%BC%98%E6%8C%87%E5%8D%97/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 编码器图像质量调优">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              <div class="md-ellipsis">
+                编码器图像质量调优
+              </div>
+            </div>
+          </a>
         
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-      </div>
-    </a>
+        
+          
+          <a href="../../../../Sample%E6%8C%87%E5%AF%BC%E8%AF%B4%E6%98%8E/Sample%E6%8C%87%E5%AF%BC%E8%AF%B4%E6%98%8E/" class="md-footer__link md-footer__link--next" aria-label="下一页: Sample 指导说明">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              <div class="md-ellipsis">
+                Sample 指导说明
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
-  </nav>
   
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
   
+    <div class="md-copyright__highlight">
+      Documentation © 2026 Hi3516CV610 contributors — <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a>
 
-  <div class="footer-box">
-    <div class="footer-list">
-      
-      
-      <div class="footer-list-child">
-        <a href="https://www.hisilicon.com/cn" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思官网</a>
-        <ul class="footer-ul"></ul>
-      </div>
-      
-      <div class="footer-list-child">
-        <a href="https://developers.hisilicon.com/home" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开发者网站</a>
-        <ul class="footer-ul"></ul>
-      </div>
-      
-      <div class="footer-list-child">
-        <a href="https://gitcode.com/HiSpark" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开源社区</a>
-        <ul class="footer-ul"></ul>
-      </div>
-      
-      <div class="footer-list-child">
-        <a href="https://developer.huawei.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">华为开发者官网</a>
-        <ul class="footer-ul"></ul>
-      </div>
-      
-      <div class="footer-list-child">
-        <a href="https://www.hikunpeng.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">鲲鹏社区</a>
-        <ul class="footer-ul"></ul>
-      </div>
-      
-      <div class="footer-list-child">
-        <a href="https://www.hiascend.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">昇腾社区</a>
-        <ul class="footer-ul"></ul>
-      </div>
-      
-      <div class="footer-list-child">
-        <a href="https://developers.hisilicon.com/aboutus" target="_blank" class="footer-nav-first" rel="noopener noreferrer">关于我们</a>
-        <ul class="footer-ul"></ul>
-      </div>
-      
-      <div class="footer-list-child">
-        <a href="https://developers.hisilicon.com/login" target="_blank" class="footer-nav-first" rel="noopener noreferrer">投诉举报</a>
-        <ul class="footer-ul"></ul>
-      </div>
-      
-      
     </div>
-    <div class="footer-fix">
-      <div class="footer-fix-content">
-        <div>
-          <span class="footer-copyright">&nbsp;&copy;2024 华为技术有限公司</span>
-          <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer">粤A2-20044005号</a>
-          <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702004153"
-            target="_blank" rel="noopener noreferrer">粤公网安备44030702004153号</a>
-        </div>
-        <div class="footer-name-list">
-          
-          
-          
-          <a href="https://developers.hisilicon.com/legalNotices/legalNotices" target="_blank" class="footer-name" rel="noopener noreferrer">法律声明</a>
-          
-          
-          
-          <a href="https://developers.hisilicon.com/legalNotices/cookie-policy" target="_blank" class="footer-name" rel="noopener noreferrer">关于Cookie</a>
-          
-          
-          
-          <a href="https://developers.hisilicon.com/legalNotices/privacyPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">隐私政策</a>
-          
-          
-          
-          <a href="https://developers.hisilicon.com/legalNotices/userPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">用户协议</a>
-          
-          
-          
-          <a href="javascript:void(0);" onclick="openDisclaimerDialog()" class="footer-name">免责声明</a>
-          
-          
-          
-        </div>
-      </div>
-
-
-      <!-- 免责声明弹窗 -->
-      <div id="disclaimerDialog" class="disclaimer-overlay" style="display: none;">
-        <div class="disclaimer-dialog">
-          <div class="disclaimer-dialog__header">
-            <span class="disclaimer-dialog__title">免责声明</span>
-            <button class="disclaimer-dialog__close" onclick="closeDisclaimerDialog()">×</button>
-          </div>
-          <div class="disclaimer-dialog__body">
-            <p class="disclaimer-dialog__text-center"><strong>海思开发者网站免责声明</strong></p>
-            <p>尊敬的用户，您好：</p>
-            <p>&nbsp; &nbsp;
-              请确保您通过本平台向海思提供或反馈的任何信息或意见不侵犯第三方知识产权和/或合法权益。如您提供或反馈的上述任何信息或意见侵犯第三方知识产权和/或合法权益，和/或给第三方造成损害的，您将承担全部法律及赔偿责任。
-            </p>
-          </div>
-          <div class="disclaimer-dialog__footer">
-            <button class="disclaimer-dialog__btn" onclick="closeDisclaimerDialog()">关闭</button>
-          </div>
-        </div>
-      </div>
-
-      <script>
-        function openDisclaimerDialog() {
-          document.getElementById('disclaimerDialog').style.display = 'flex';
-        }
-        function closeDisclaimerDialog() {
-          document.getElementById('disclaimerDialog').style.display = 'none';
-        }
-        // 点击弹窗背景关闭
-        document.getElementById('disclaimerDialog').addEventListener('click', function (e) {
-          if (e.target === this) {
-            closeDisclaimerDialog();
-          }
-        });
-      </script>
+  
+  
+</div>
+      
     </div>
   </div>
 </footer>
@@ -5424,4 +5257,3 @@ Hi3519DV500芯片不涉及运动MAP的显示。</p>
     
   </body>
 </html>
-
