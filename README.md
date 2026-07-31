@@ -50,21 +50,11 @@ Get-ChildItem -Recurse -Include "*.md","*.yml" | ForEach-Object {
 }
 ```
 
-### 2. 拉取 tools 子仓
+### 2. 构建文档
 
-模板依赖 tools 子仓提供主题、样式和基础配置：
-
-```bash
-git submodule add https://gitcode.com/HiSparkDocs/tools.git tools
-git submodule update --init --recursive --remote tools
-```
-
-### 3. 构建文档
+模板已内置主题配置和依赖文件，直接构建即可：
 
 ```bash
-python -m venv venv
-# Windows
-venv\Scripts\activate
 pip install -r requirements.txt
 mkdocs build    # 输出到 site/
 mkdocs serve    # 本地预览 http://127.0.0.1:8000
