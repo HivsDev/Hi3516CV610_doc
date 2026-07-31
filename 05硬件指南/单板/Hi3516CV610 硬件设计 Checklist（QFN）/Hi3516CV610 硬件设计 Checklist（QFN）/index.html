@@ -1,0 +1,5579 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hi3516CV610 超高清智慧视觉 SoC 文档中心">
+      
+      
+        <meta name="author" content="HiSpark">
+      
+      
+        <link rel="canonical" href="https://hivsdev.github.io/Hi3516CV610_doc/05%E7%A1%AC%E4%BB%B6%E6%8C%87%E5%8D%97/%E5%8D%95%E6%9D%BF/Hi3516CV610%20%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%20Checklist%EF%BC%88QFN%EF%BC%89/Hi3516CV610%20%E7%A1%AC%E4%BB%B6%E8%AE%BE%E8%AE%A1%20Checklist%EF%BC%88QFN%EF%BC%89/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../static/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>前言 - Hi3516CV610 开发者中心</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+    
+    
+      <link rel="stylesheet" href="../../../../static/css/extra.css">
+    
+      <link rel="stylesheet" href="../../../../static/css/version-selector.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+      <meta name="gitcode-issues-url" content="https://gitcode.com/HiSpark/fbb_ws63/issues">
+      
+      <link rel="dns-prefetch" href="https://docs.hisilicon.com">
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://docs.hisilicon.com" crossorigin>
+      <link rel="preload" href="../../../../assets/stylesheets/main.484c7ddc.min.css" as="style">
+      <link rel="preload" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" as="style">
+      <link rel="preload" href="../../../../static/css/extra.css" as="style">
+      <link rel="preload" href="../../../../assets/javascripts/bundle.79ae519e.min.js" as="script">
+      <link rel="preload" href="../../../../static/js/custom.js" as="script">
+
+      
+      
+        
+        
+          
+        
+          
+            <link rel="prefetch" href="../../../../zh-CN/00概览/Hi3516CV610%20超高清智慧视觉%20SoC%20产品简介/Hi3516CV610%20超高清智慧视觉%20SoC%20产品简介.md" as="document">
+          
+        
+      
+      <style>:root{--md-text-font:"Helvetica Neue, PingFang SC, Microsoft YaHei";--md-code-font:"Consolas, Roboto Mono"}</style>
+      <script>
+        // 防止宽窄屏刷新闪烁 — 在 body 解析前就读取 localStorage 标记 <html>
+        // 配合 CSS: html.prefer-narrow .md-grid 在首帧即应用 76%
+        if (localStorage.getItem('wideScreen') === 'false') {
+          document.documentElement.classList.add('prefer-narrow');
+        }
+      </script>
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#前言" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="https://developers.hisilicon.com" title="Hi3516CV610 开发者中心" class="md-header__button md-logo" aria-label="Hi3516CV610 开发者中心" data-md-component="logo" target="_blank" rel="noopener noreferrer">
+      <img 
+  src="../../../../static/images/light-icon.png" 
+  class="md-logo__img md-logo__img--light"
+  alt="Hi3516CV610 开发者中心" 
+/>
+<img 
+  src="../../../../static/images/dark-icon.png" 
+  class="md-logo__img md-logo__img--dark"
+  alt="Hi3516CV610 开发者中心" 
+/>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+      </div>
+    </div>
+    
+      
+      
+        <label class="md-header__button md-icon md-header__button--search" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+      
+    
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="切换到暗色主题"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色主题" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="切换到亮色主题"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色主题" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <div class="md-header__source">
+        <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="前往仓库" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+      </div>
+    
+  </nav>
+  
+  
+    
+    
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        <!-- 
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+         -->
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+</header>
+
+
+<script>
+  var USER_DEFINED_OPTIONS = {
+    REPO_PATH: "Hi3516CV610_doc",
+    ROOT_URL: "https://docs.hisilicon.com/projects"
+  };
+  var DOCUMENTATION_OPTIONS = {
+    VERSION: "master",
+    // 构建时声明主题的语言
+    LANGUAGE: "zh"
+  };
+</script>
+<script src="https://docs.hisilicon.com/projects/version/hispark_version.js"></script>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="sidebar-selectors">
+                  <div class="repo-select custom-select">
+                    <span class="select-label">芯片</span>
+                    <div class="repo-selector" title="">
+                      <span class="repo-readOnly"></span>
+                      <select id="repo-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="repo-options" style="display:none"></ul>
+                  </div>
+                  <div class="version-select custom-select">
+                    <span class="select-label">版本</span>
+                    <div class="version-selector" title="">
+                      <span class="version-readOnly"></span>
+                      <select id="version-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="version-options" style="display:none"></ul>
+                  </div>
+                  
+                    
+                    
+                      <div class="sidebar-search">
+                        <label class="sidebar-search__button" for="__search">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+                          <span>全文检索</span>
+                        </label>
+                      </div>
+                    
+                  
+                </div>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  
+    <div class="md-nav__source">
+      <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="前往仓库" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概览
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    概览
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/00概览/Hi3516CV610%20超高清智慧视觉%20SoC%20产品简介/Hi3516CV610%20超高清智慧视觉%20SoC%20产品简介.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hi3516CV610 产品简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速入门
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    快速入门
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Hi3516CV610%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/Hi3516CV610%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    环境搭建
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速启动
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整体架构
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    整体架构
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    版本说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/%E7%89%88%E6%9C%AC%E9%85%8D%E5%A5%97%E5%85%B3%E7%B3%BB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    版本配套关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/%E7%89%88%E6%9C%AC%E5%8F%B7%E8%A7%84%E8%8C%83%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    版本号规范说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    芯片用户指南
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    芯片用户指南
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-1%20产品概述.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    产品概述
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-2%20硬件特性.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件特性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-3%20系统.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-4%20存储器接口.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    存储器接口
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-5%20网络接口.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络接口
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-6%20视频编码.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    视频编码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-7%20视频及图形处理.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    视频及图形处理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-8%20智能加速引擎.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能加速引擎
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-9%20视频接口.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    视频接口
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-10%20ISP.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-11%20音频接口.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    音频接口
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-12%20外围设备.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    外围设备
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-13%20安全子系统.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全子系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/02-A%20订购须知.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    订购须知
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/00-3%20前言.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    前言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/附录%20B-缩略语.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    缩略语
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../03API%E5%8F%82%E8%80%83/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 参考
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API 参考
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全子系统
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    安全子系统
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/安全子系统/Hi35xxVxxx%20安全启动使用指南/Hi35xxVxxx%20安全启动使用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全启动使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/安全子系统/Hi35xxVxxx%20安全子系统使用说明/Hi35xxVxxx%20安全子系统使用说明.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全子系统使用说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../03API%E5%8F%82%E8%80%83/%E5%AE%89%E5%85%A8%E5%AD%90%E7%B3%BB%E7%BB%9F/SELinux%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/SELinux%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SELinux 开发指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BSP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    BSP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/BSP/Hi35xxVxxx%20开发环境用户指南/Hi35xxVxxx%20开发环境用户指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开发环境用户指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/BSP/Hi35xxVxxx%20U-boot%20移植应用开发指南/Hi35xxVxxx%20U-boot%20移植应用开发指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    U-boot 移植应用开发指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/BSP/外围设备驱动%20操作指南/外围设备驱动%20操作指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    外围设备驱动操作指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/BSP/UBI%20文件系统使用指南/UBI%20文件系统使用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UBI 文件系统使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/BSP/裸烧及非裸烧升级%20使用手册/裸烧及非裸烧升级%20使用手册.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    裸烧及非裸烧升级使用手册
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ISP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/ISP/ISP%20开发参考/ISP%20开发参考（1~5）.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP 开发参考（1~5）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/ISP/ISP%20开发参考/ISP%20开发参考（6~end）.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP 开发参考（6~end）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/ISP/AIISP%20开发参考/AIISP%20开发参考.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIISP 开发参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/ISP/ISP%20FAQ/ISP%20FAQ.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MPP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MPP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/MPP/MPP%20媒体处理软件%20V6.0%20开发参考/0%20前言.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MPP 开发参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/MPP/MPP%20媒体处理软件%20V6.0%20FAQ/MPP%20媒体处理软件%20V6.0%20FAQ.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MPP FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/MPP/音频组件%20API参考/音频组件%20API参考.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    音频组件 API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/MPP/安全子系统%20API%20参考/安全子系统%20API%20参考.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全子系统 API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../03API%E5%8F%82%E8%80%83/MPP/DEVSTAT%E5%BC%80%E5%8F%91%E5%8F%82%E8%80%83/DEVSTAT%E5%BC%80%E5%8F%91%E5%8F%82%E8%80%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DEVSTAT 开发参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/MPP/MIPI%20使用指南/MIPI%20使用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MIPI 使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/MPP/SYS_CONFIG%20配置指南/SYS_CONFIG%20配置指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SYS_CONFIG 配置指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../03API%E5%8F%82%E8%80%83/MPP/%E6%99%BA%E8%83%BD%E7%BC%96%E7%A0%81%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/%E6%99%BA%E8%83%BD%E7%BC%96%E7%A0%81%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能编码使用指导
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../03API%E5%8F%82%E8%80%83/MPP/%E8%8A%AF%E7%89%87%E7%A0%81%E7%8E%87%E6%8E%A7%E5%88%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/%E8%8A%AF%E7%89%87%E7%A0%81%E7%8E%87%E6%8E%A7%E5%88%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    芯片码率控制使用说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/MPP/RTC%20应用指南/RTC%20应用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RTC 应用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/MPP/哭声检测%20API参考/哭声检测%20API参考.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    哭声检测 API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../03API%E5%8F%82%E8%80%83/MPP/%E5%BC%80%E6%9C%BA%E5%A3%B0%E9%9F%B3%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/%E5%BC%80%E6%9C%BA%E5%A3%B0%E9%9F%B3%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开机声音使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SVP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SVP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../03API%E5%8F%82%E8%80%83/SVP/%E6%99%BA%E8%83%BD%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86%E8%BD%AF%E4%BB%B6V1.0%E5%BC%80%E5%8F%91%E5%8F%82%E8%80%83/%E6%99%BA%E8%83%BD%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86%E8%BD%AF%E4%BB%B6V1.0%E5%BC%80%E5%8F%91%E5%8F%82%E8%80%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能视频处理软件 V1.0 开发参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/SVP/IVE%20API%20参考/IVE%20API%20参考.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IVE API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/SVP/IVS%20API%20参考/IVS%20API%20参考.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IVS API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考案例
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    参考案例
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    调试调优
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    调试调优
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    硬件
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/硬件/Hi3516CV610%20DDR3%20参数配置方法/Hi3516CV610%20DDR3%20参数配置方法.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DDR3 参数配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_2" id="__nav_5_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BSP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    BSP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/BSP/Hi35xxVxxx%20快速启动优化指南/Hi35xxVxxx%20快速启动优化指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速启动优化指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/BSP/Hi35xxVxxx%20调试工具使用指南/Hi35xxVxxx%20调试工具使用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    调试工具使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/%E8%B0%83%E8%AF%95%E8%B0%83%E4%BC%98/BSP/%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80%E8%B0%83%E6%95%B4%E6%8C%87%E5%8D%97/%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80%E8%B0%83%E6%95%B4%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    内存布局调整指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/BSP/BSP%20FAQ/BSP%20FAQ.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BSP FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/%E8%B0%83%E8%AF%95%E8%B0%83%E4%BC%98/BSP/%E5%9F%BA%E4%BA%8Efmcv100%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84Flash%E7%A7%BB%E6%A4%8D%E6%8C%87%E5%8D%97/%E5%9F%BA%E4%BA%8Efmcv100%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84Flash%E7%A7%BB%E6%A4%8D%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flash 移植指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_3" id="__nav_5_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MPP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MPP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/%E8%B0%83%E8%AF%95%E8%B0%83%E4%BC%98/MPP/%E6%80%A7%E8%83%BD%E2%95%B1%E5%B8%A6%E5%AE%BD%E2%95%B1%E5%BB%B6%E6%97%B6%E2%95%B1%E5%86%85%E5%AD%98%E8%B0%83%E4%BC%98%E6%8C%87%E5%8D%97/%E6%80%A7%E8%83%BD%E2%95%B1%E5%B8%A6%E5%AE%BD%E2%95%B1%E5%BB%B6%E6%97%B6%E2%95%B1%E5%86%85%E5%AD%98%E8%B0%83%E4%BC%98%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    带宽/延时/内存调优
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/%E8%B0%83%E8%AF%95%E8%B0%83%E4%BC%98/MPP/%E7%BC%96%E7%A0%81%E5%99%A8%E5%9B%BE%E5%83%8F%E8%B4%A8%E9%87%8F%E8%B0%83%E4%BC%98%E6%8C%87%E5%8D%97/%E7%BC%96%E7%A0%81%E5%99%A8%E5%9B%BE%E5%83%8F%E8%B4%A8%E9%87%8F%E8%B0%83%E4%BC%98%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    编码器图像质量调优
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/MPP/智能编码自适应%20使用说明/智能编码自适应%20使用说明.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能编码自适应说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_4" id="__nav_5_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PQ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PQ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/PQ/ISP%20图像调优指南/ISP%20图像调优指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP 图像调优指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/PQ/ISP%20颜色调优说明/ISP%20颜色调优说明.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP 颜色调优说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/PQ/Sensor%20调试指南/Sensor%20调试指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sensor 调试指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/PQ/图像自适应%20使用说明/图像自适应%20使用说明.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图像自适应说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/PQ/智能PQ%20使用指导/智能PQ%20使用指导.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能PQ 使用指导
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/%E8%B0%83%E8%AF%95%E8%B0%83%E4%BC%98/PQ/%E8%A1%8C%E8%BD%A6%E8%AE%B0%E5%BD%95%E4%BB%AA%E5%92%8C%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%BA%94%E7%94%A8%E5%9B%BE%E5%83%8F%E8%B0%83%E8%AF%95FAQ/%E8%A1%8C%E8%BD%A6%E8%AE%B0%E5%BD%95%E4%BB%AA%E5%92%8C%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%BA%94%E7%94%A8%E5%9B%BE%E5%83%8F%E8%B0%83%E8%AF%95FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    行车记录仪/无人机图像调试FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/PQ/Hisilicon%20IP%20Camera%20图像质量测试标准/Hisilicon%20IP%20Camera%20图像质量测试标准.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图像质量测试标准
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/PQ/Hi3516CV610╱Hi3516CV608%203DNR参数配置说明/Hi3516CV610╱Hi3516CV608%203DNR参数配置说明.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3DNR 参数配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/Sample%E6%8C%87%E5%AF%BC%E8%AF%B4%E6%98%8E/Sample%E6%8C%87%E5%AF%BC%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sample 指导说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件指南
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    硬件指南
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    单板
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    单板
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/05硬件指南/单板/Hi3516CV610%20Demo%20单板使用指南（QFN）/Hi3516CV610%20Demo%20单板使用指南（QFN）.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demo 单板使用指南（QFN）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/05硬件指南/单板/Hi3516CV610%20硬件设计用户指南（QFN）/Hi3516CV610%20硬件设计用户指南（QFN）.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件设计用户指南（QFN）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/05硬件指南/单板/Hi3516CV610%20硬件设计%20Checklist（QFN）/Hi3516CV610%20硬件设计%20Checklist（QFN）.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件设计 Checklist（QFN）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具中心
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    工具中心
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ToolPlatform
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ToolPlatform
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/06工具中心/ToolPlatform/ToolPlatform工具平台使用指南/ToolPlatform工具平台%20使用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ToolPlatform 工具平台使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/ToolPlatform/BurnTool%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/BurnTool%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BurnTool 工具使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AQTools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AQTools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/AQTools/%E9%9F%B3%E9%A2%91%E8%B4%A8%E9%87%8F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/%E9%9F%B3%E9%A2%91%E8%B4%A8%E9%87%8F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    音频质量调试工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PQTools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PQTools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/PQTools/%E5%9B%BE%E5%83%8F%E8%B4%A8%E9%87%8F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/%E5%9B%BE%E5%83%8F%E8%B4%A8%E9%87%8F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图像质量调试工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SVP_NPU
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SVP_NPU
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/SVP_NPU/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速上手指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/SVP_NPU/%E9%A9%B1%E5%8A%A8%E5%92%8C%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/%E9%A9%B1%E5%8A%A8%E5%92%8C%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    驱动和开发环境安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/SVP_NPU/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    应用开发指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/SVP_NPU/AMCT%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%EF%BC%88Caffe%EF%BC%89/AMCT%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%EF%BC%88Caffe%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AMCT 使用指南（Caffe）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/SVP_NPU/AMCT%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%EF%BC%88PyTorch%EF%BC%89/AMCT%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%EF%BC%88PyTorch%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AMCT 使用指南（PyTorch）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/SVP_NPU/ATC%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/ATC%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ATC 工具使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/SVP_NPU/ATC%20Graph%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/ATC%20Graph%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ATC Graph 开发指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/SVP_NPU/ATC%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/ATC%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ATC 自定义算子开发
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/06工具中心/SVP_NPU/MindCmd%20使用指南/MindCmd使用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MindCmd 使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../07FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../08%E5%85%B6%E4%BB%96/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    其他
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/07FAQ/Hi3516CV610%20FAQ.md}" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#前言_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Checklist
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Checklist">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#芯片电源地的设计要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        芯片电源地的设计要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#主芯片时钟电路设计要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        主芯片时钟电路设计要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#上下电时序设计要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        上下电时序设计要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#复位电路设计要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        复位电路设计要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#IO电源设计要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        IO电源设计要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#DDR电路设计要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DDR电路设计要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SPI-NOR/SPI-Nand/eMMC电路设计要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SPI NOR/SPI Nand/eMMC电路设计要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SPI/I2C电路设计要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SPI/I2C电路设计要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#视频输入电路设计要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        视频输入电路设计要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#音频电路设计要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        音频电路设计要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ETH电路设计要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ETH电路设计要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#USB电路设计要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USB电路设计要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#JTAG和系统控制电路设计要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        JTAG和系统控制电路设计要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SDIO电路设计要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDIO电路设计要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#UART电路设计要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UART电路设计要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#特殊GPIO设计要求" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        特殊GPIO设计要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="前言">前言<a name="ZH-CN_TOPIC_0000001775036764"></a></h1>
+<h2 id="前言_1">前言<a name="ZH-CN_TOPIC_0000001775036764"></a></h2>
+<p><strong>概述<a name="section4537382116410"></a></strong></p>
+<p>本文档主要介绍Hi3516CV610芯片方案的硬件Checklist。</p>
+<p><strong>产品版本<a name="section186mcpsimp"></a></strong></p>
+<p>与本文档相对应的产品版本如下。</p>
+<p><a name="table189mcpsimp"></a></p>
+<table><thead align="left"><tr id="row194mcpsimp"><th class="cellrowborder" valign="top" width="32%" id="mcps1.1.3.1.1"><p id="p196mcpsimp"><a name="p196mcpsimp"></a><a name="p196mcpsimp"></a>产品名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="68%" id="mcps1.1.3.1.2"><p id="p198mcpsimp"><a name="p198mcpsimp"></a><a name="p198mcpsimp"></a>产品版本</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row200mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p202mcpsimp"><a name="p202mcpsimp"></a><a name="p202mcpsimp"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p204mcpsimp"><a name="p204mcpsimp"></a><a name="p204mcpsimp"></a>V610</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+-   根据功能不同，将Hi3516CV610分为10B/00S/20S/00G/20G不同型号，差异部分请见《Hi3516CV610 超高清智慧视觉 SoC 产品简介》“型号配置差异”。<br />
+-   本文档仅支持Hi3516CV610-10B/20S/20G。</p>
+</blockquote>
+<p><strong>读者对象<a name="section205mcpsimp"></a></strong></p>
+<p>本文档（本指南）主要适用于以下工程师：</p>
+<ul>
+<li>技术支持工程师</li>
+<li>单板硬件开发工程师</li>
+</ul>
+<p><strong>符号约定<a name="section211mcpsimp"></a></strong></p>
+<p>在本文中可能出现下列标志，它们所代表的含义如下。</p>
+<p><a name="table214mcpsimp"></a></p>
+<table><thead align="left"><tr id="row219mcpsimp"><th class="cellrowborder" valign="top" width="21%" id="mcps1.1.3.1.1"><p id="p221mcpsimp"><a name="p221mcpsimp"></a><a name="p221mcpsimp"></a>符号</p>
+</th>
+<th class="cellrowborder" valign="top" width="79%" id="mcps1.1.3.1.2"><p id="p223mcpsimp"><a name="p223mcpsimp"></a><a name="p223mcpsimp"></a>说明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row225mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p227mcpsimp"><a name="p227mcpsimp"></a><a name="p227mcpsimp"></a><a name="image106"></a><a name="image106"></a><span><img id="image106" src="figures/zh-cn_image_0000001775196440.png" height="25.270000000000003" width="67.83"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="p229mcpsimp"><a name="p229mcpsimp"></a><a name="p229mcpsimp"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row230mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p232mcpsimp"><a name="p232mcpsimp"></a><a name="p232mcpsimp"></a><a name="image107"></a><a name="image107"></a><span><img id="image107" src="figures/zh-cn_image_0000001821796393.png" height="25.270000000000003" width="67.83"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="p234mcpsimp"><a name="p234mcpsimp"></a><a name="p234mcpsimp"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row235mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p237mcpsimp"><a name="p237mcpsimp"></a><a name="p237mcpsimp"></a><a name="image108"></a><a name="image108"></a><span><img id="image108" src="figures/zh-cn_image_0000001775196436.png" height="25.270000000000003" width="67.83"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="p239mcpsimp"><a name="p239mcpsimp"></a><a name="p239mcpsimp"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row240mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p242mcpsimp"><a name="p242mcpsimp"></a><a name="p242mcpsimp"></a><a name="image109"></a><a name="image109"></a><span><img id="image109" src="figures/zh-cn_image_0000001775036768.png" height="25.270000000000003" width="67.83"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="p244mcpsimp"><a name="p244mcpsimp"></a><a name="p244mcpsimp"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
+<p id="p245mcpsimp"><a name="p245mcpsimp"></a><a name="p245mcpsimp"></a>“须知”不涉及人身伤害。</p>
+</td>
+</tr>
+<tr id="row246mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p248mcpsimp"><a name="p248mcpsimp"></a><a name="p248mcpsimp"></a><a name="image110"></a><a name="image110"></a><span><img id="image110" src="figures/zh-cn_image_0000001821836365.png" height="25.270000000000003" width="67.83"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="p250mcpsimp"><a name="p250mcpsimp"></a><a name="p250mcpsimp"></a>对正文中重点信息的补充说明。</p>
+<p id="p251mcpsimp"><a name="p251mcpsimp"></a><a name="p251mcpsimp"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>修改记录<a name="section252mcpsimp"></a></strong></p>
+<p><a name="table254mcpsimp"></a></p>
+<table><thead align="left"><tr id="row260mcpsimp"><th class="cellrowborder" valign="top" width="21%" id="mcps1.1.4.1.1"><p id="p262mcpsimp"><a name="p262mcpsimp"></a><a name="p262mcpsimp"></a>文档版本</p>
+</th>
+<th class="cellrowborder" valign="top" width="26%" id="mcps1.1.4.1.2"><p id="p264mcpsimp"><a name="p264mcpsimp"></a><a name="p264mcpsimp"></a>发布日期</p>
+</th>
+<th class="cellrowborder" valign="top" width="53%" id="mcps1.1.4.1.3"><p id="p266mcpsimp"><a name="p266mcpsimp"></a><a name="p266mcpsimp"></a>修改说明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row276mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.4.1.1 "><p id="p278mcpsimp"><a name="p278mcpsimp"></a><a name="p278mcpsimp"></a>00B01</p>
+</td>
+<td class="cellrowborder" valign="top" width="26%" headers="mcps1.1.4.1.2 "><p id="p280mcpsimp"><a name="p280mcpsimp"></a><a name="p280mcpsimp"></a>2026-06-30</p>
+</td>
+<td class="cellrowborder" valign="top" width="53%" headers="mcps1.1.4.1.3 "><p id="p282mcpsimp"><a name="p282mcpsimp"></a><a name="p282mcpsimp"></a>第1次临时版本发布。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="Checklist">Checklist<a name="ZH-CN_TOPIC_0000001821796385"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775196424">芯片电源地的设计要求</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001821796373">主芯片时钟电路设计要求</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775036752">上下电时序设计要求</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001821836345">复位电路设计要求</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775036760">IO电源设计要求</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001821836361">DDR电路设计要求</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001821796377">SPI NOR/SPI Nand/eMMC电路设计要求</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001821836357">SPI/I2C电路设计要求</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001821796389">视频输入电路设计要求</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001821836353">音频电路设计要求</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001821796381">ETH电路设计要求</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775036748">USB电路设计要求</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775196416">JTAG和系统控制电路设计要求</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775196428">SDIO电路设计要求</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001821836349">UART电路设计要求</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775196432">特殊GPIO设计要求</a></strong>  </p>
+</li>
+</ul>
+<h3 id="芯片电源地的设计要求">芯片电源地的设计要求<a name="ZH-CN_TOPIC_0000001775196424"></a></h3>
+<p><a name="table285mcpsimp"></a></p>
+<table><thead align="left"><tr id="row292mcpsimp"><th class="cellrowborder" valign="top" width="7.000000000000001%" id="mcps1.1.5.1.1"><p id="p294mcpsimp"><a name="p294mcpsimp"></a><a name="p294mcpsimp"></a>√</p>
+</th>
+<th class="cellrowborder" valign="top" width="42.34%" id="mcps1.1.5.1.2"><p id="p296mcpsimp"><a name="p296mcpsimp"></a><a name="p296mcpsimp"></a>Items</p>
+</th>
+<th class="cellrowborder" valign="top" width="28.660000000000004%" id="mcps1.1.5.1.3"><p id="p298mcpsimp"><a name="p298mcpsimp"></a><a name="p298mcpsimp"></a>客户确认（PASS/NO PASS）</p>
+</th>
+<th class="cellrowborder" valign="top" width="22%" id="mcps1.1.5.1.4"><p id="p300mcpsimp"><a name="p300mcpsimp"></a><a name="p300mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row302mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="42.34%" headers="mcps1.1.5.1.2 "><p id="p5732194010119"><a name="p5732194010119"></a><a name="p5732194010119"></a>VDD电源选型:</p>
+<p id="p3225161014596"><a name="p3225161014596"></a><a name="p3225161014596"></a>针对Hi3516CV610-10B，SOC的电源芯片选型要求其供电能力不小于2A，要求使用非轻载高效器件，选择开关频率1MHz及以上，非轻载高效的DC-DC，具体参考Hi3516CV610QDMEB最新原理图；</p>
+<p id="p199588139592"><a name="p199588139592"></a><a name="p199588139592"></a>针对Hi3516CV610-20S/20G，SOC的电源芯片选型要求其供电能力不小于2.5A，要求使用非轻载高效器件，选择开关频率1MHz及以上，非轻载高效的DC-DC,具体参考Hi3516CV610QDMEB最新原理图；VDD电源的实际电压由SVB动态调压电路控制，具体参考Hi3516CV610QDMEB最新原理图。DCDC使用请咨询DCDC原厂。</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.660000000000004%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="22%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row1815110227378"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="42.34%" headers="mcps1.1.5.1.2 "><p id="p16152192283710"><a name="p16152192283710"></a><a name="p16152192283710"></a>VDD电容滤波电容类型、数量和布局要求复制Hi3516CV610QDMEB，特别注意PIN11、PIN14及PIN 50需要表贴电容，具体参考Hi3516CV610QDMEB最新原理图和PCB。</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.660000000000004%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="22%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row8865115114410"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="42.34%" headers="mcps1.1.5.1.2 "><p id="p88657519445"><a name="p88657519445"></a><a name="p88657519445"></a>保证VDD电源铜皮宽度达2A及以上的通流能力，DC-DC尽量靠近SOC放置；在兼顾散热孔前提下，保证芯片供电脚附近的铜皮不要被GND过孔打碎。详细请见《Hi3516CV610 硬件设计用户指南（QFN）》“2.1 电源与滤波电容设计”小节。</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.660000000000004%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="22%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row314mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="42.34%" headers="mcps1.1.5.1.2 "><p id="p317mcpsimp"><a name="p317mcpsimp"></a><a name="p317mcpsimp"></a>Hi3516CV610内核电源必须采用SVB调压电路，否则会出现不稳定或死机等不可预知的现象。</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.660000000000004%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="22%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row320mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="42.34%" headers="mcps1.1.5.1.2 "><p id="p323mcpsimp"><a name="p323mcpsimp"></a><a name="p323mcpsimp"></a>复位电源上电时序，请参见《Hi3516CV610 硬件设计用户指南（QFN）》“1.2.5 上下电时序”小节。</p>
+<p id="p324mcpsimp"><a name="p324mcpsimp"></a><a name="p324mcpsimp"></a>复位电源下电时序，请参见《Hi3516CV610 硬件设计用户指南（QFN）》“1.2.5 上下电时序”小节。</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.660000000000004%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="22%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row327mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="42.34%" headers="mcps1.1.5.1.2 "><p id="p332mcpsimp"><a name="p332mcpsimp"></a><a name="p332mcpsimp"></a>AVDD33_PLL与3.3V之间用磁珠（1kΩ@100MHz，内阻小于1.25Ω）进行隔离,靠近SOC放2.2uF电容， 滤波电容独立过孔与内层GND相连，TOP层与bottom层不与GND连接，选用非轻载高效DCDC<strong id="b449665810487"><a name="b449665810487"></a><a name="b449665810487"></a>。</strong></p>
+<p id="p336mcpsimp"><a name="p336mcpsimp"></a><a name="p336mcpsimp"></a>AVDD33_DDR_PLL与3.3V之间用磁珠（1kΩ@100MHz，内阻小于1.25Ω）进行隔离，靠近SOC放100nF电容。</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.660000000000004%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="22%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="主芯片时钟电路设计要求">主芯片时钟电路设计要求<a name="ZH-CN_TOPIC_0000001821796373"></a></h3>
+<p><a name="table342mcpsimp"></a></p>
+<table><thead align="left"><tr id="row349mcpsimp"><th class="cellrowborder" valign="top" width="7.000000000000001%" id="mcps1.1.5.1.1"><p id="p351mcpsimp"><a name="p351mcpsimp"></a><a name="p351mcpsimp"></a>√</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.2"><p id="p353mcpsimp"><a name="p353mcpsimp"></a><a name="p353mcpsimp"></a>Items</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.3"><p id="p355mcpsimp"><a name="p355mcpsimp"></a><a name="p355mcpsimp"></a>客户确认（PASS/NO PASS）</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.4"><p id="p357mcpsimp"><a name="p357mcpsimp"></a><a name="p357mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row359mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.2 "><p id="p362mcpsimp"><a name="p362mcpsimp"></a><a name="p362mcpsimp"></a>主芯片需要一个24MHz外接时钟，最大偏差&plusmn;30ppm。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row365mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.2 "><p id="p368mcpsimp"><a name="p368mcpsimp"></a><a name="p368mcpsimp"></a>RTC时钟需要一个32.768kHz外接时钟，内置RTC的计时精度主要取决于外部晶体，请综合考虑晶体频率误差、温度漂移等因素，选择合适的晶体。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row371mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.2 "><p id="p374mcpsimp"><a name="p374mcpsimp"></a><a name="p374mcpsimp"></a>晶体及Xin，Xout，信号走线越短越好且全程做包地处理，保证有完整的参考平面，晶体电路下不能有高速信号穿过。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row377mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.2 "><p id="p380mcpsimp"><a name="p380mcpsimp"></a><a name="p380mcpsimp"></a>确保板面干净、整洁，防止锡渣粘连漏电，导致外置晶体高湿环境不起振。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="上下电时序设计要求">上下电时序设计要求<a name="ZH-CN_TOPIC_0000001775036752"></a></h3>
+<p><a name="table384mcpsimp"></a></p>
+<table><thead align="left"><tr id="row391mcpsimp"><th class="cellrowborder" valign="top" width="6.0606060606060606%" id="mcps1.1.5.1.1"><p id="p393mcpsimp"><a name="p393mcpsimp"></a><a name="p393mcpsimp"></a>√</p>
+</th>
+<th class="cellrowborder" valign="top" width="32.32323232323232%" id="mcps1.1.5.1.2"><p id="p395mcpsimp"><a name="p395mcpsimp"></a><a name="p395mcpsimp"></a>Items</p>
+</th>
+<th class="cellrowborder" valign="top" width="31.313131313131308%" id="mcps1.1.5.1.3"><p id="p397mcpsimp"><a name="p397mcpsimp"></a><a name="p397mcpsimp"></a>客户确认（PASS/NO PASS）</p>
+</th>
+<th class="cellrowborder" valign="top" width="30.303030303030305%" id="mcps1.1.5.1.4"><p id="p399mcpsimp"><a name="p399mcpsimp"></a><a name="p399mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row401mcpsimp"><td class="cellrowborder" valign="top" width="6.0606060606060606%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="32.32323232323232%" headers="mcps1.1.5.1.2 "><p id="p404mcpsimp"><a name="p404mcpsimp"></a><a name="p404mcpsimp"></a>上电时序要求3.3V(1.8V)&gt;DDRIO&gt;VDD&gt;RESET。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.313131313131308%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="30.303030303030305%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row407mcpsimp"><td class="cellrowborder" valign="top" width="6.0606060606060606%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="32.32323232323232%" headers="mcps1.1.5.1.2 "><p id="p410mcpsimp"><a name="p410mcpsimp"></a><a name="p410mcpsimp"></a>3.3V到Core电源稳定时间需要在8ms以内。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.313131313131308%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="30.303030303030305%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row413mcpsimp"><td class="cellrowborder" valign="top" width="6.0606060606060606%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="32.32323232323232%" headers="mcps1.1.5.1.2 "><p id="p416mcpsimp"><a name="p416mcpsimp"></a><a name="p416mcpsimp"></a>下电时序要求:</p>
+<p id="p417mcpsimp"><a name="p417mcpsimp"></a><a name="p417mcpsimp"></a>当3.3V电源电平下降到POR的<span>阈值</span>时，触发POR产生复位信号&gt;RESET&gt;VDD下电</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.313131313131308%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="30.303030303030305%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="复位电路设计要求">复位电路设计要求<a name="ZH-CN_TOPIC_0000001821836345"></a></h3>
+<p><a name="table428mcpsimp"></a></p>
+<table><thead align="left"><tr id="row435mcpsimp"><th class="cellrowborder" valign="top" width="7.000000000000001%" id="mcps1.1.5.1.1"><p id="p437mcpsimp"><a name="p437mcpsimp"></a><a name="p437mcpsimp"></a>√</p>
+</th>
+<th class="cellrowborder" valign="top" width="33%" id="mcps1.1.5.1.2"><p id="p439mcpsimp"><a name="p439mcpsimp"></a><a name="p439mcpsimp"></a>Items</p>
+</th>
+<th class="cellrowborder" valign="top" width="28.999999999999996%" id="mcps1.1.5.1.3"><p id="p441mcpsimp"><a name="p441mcpsimp"></a><a name="p441mcpsimp"></a>客户确认（PASS/NO PASS）</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.4"><p id="p443mcpsimp"><a name="p443mcpsimp"></a><a name="p443mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row458mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="33%" headers="mcps1.1.5.1.2 "><p id="p461mcpsimp"><a name="p461mcpsimp"></a><a name="p461mcpsimp"></a>小系统相关的外设（例如：存放boot的flash器件）必须先于或同时于Hi3516CV610释放复位信号，否则可能会出现无法启动等异常情况。</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="IO电源设计要求">IO电源设计要求<a name="ZH-CN_TOPIC_0000001775036760"></a></h3>
+<p><a name="table501mcpsimp"></a></p>
+<table><thead align="left"><tr id="row508mcpsimp"><th class="cellrowborder" valign="top" width="6.9306930693069315%" id="mcps1.1.5.1.1"><p id="p510mcpsimp"><a name="p510mcpsimp"></a><a name="p510mcpsimp"></a>√</p>
+</th>
+<th class="cellrowborder" valign="top" width="41.584158415841586%" id="mcps1.1.5.1.2"><p id="p512mcpsimp"><a name="p512mcpsimp"></a><a name="p512mcpsimp"></a>Items</p>
+</th>
+<th class="cellrowborder" valign="top" width="30.693069306930692%" id="mcps1.1.5.1.3"><p id="p514mcpsimp"><a name="p514mcpsimp"></a><a name="p514mcpsimp"></a>客户确认（PASS/NO PASS）</p>
+</th>
+<th class="cellrowborder" valign="top" width="20.792079207920793%" id="mcps1.1.5.1.4"><p id="p516mcpsimp"><a name="p516mcpsimp"></a><a name="p516mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row518mcpsimp"><td class="cellrowborder" valign="top" width="6.9306930693069315%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="41.584158415841586%" headers="mcps1.1.5.1.2 "><p id="p521mcpsimp"><a name="p521mcpsimp"></a><a name="p521mcpsimp"></a>IO电源（管脚名DVDD33）：连接数字3.3V电源。Sensor时钟、MIPI/LVDS接口电源（管脚名AVDD18_MIPIRX）：连接数字1.8V电源。</p>
+<p id="p19338175920561"><a name="p19338175920561"></a><a name="p19338175920561"></a>FLASH、EMMC、SDIO0接口IO电源（管脚名DVDD3318_FLASH）：连接数字3.3V/1.8V，实际连接的电源要与对接芯片的接口电平保持一致。</p>
+<p id="p14563201819586"><a name="p14563201819586"></a><a name="p14563201819586"></a>sensor配置管脚IO电源（管脚名DVDD3318_SENSOR）：支持3.3V/1.8V电源，实际连接的电源要与对接芯片的接口电平保持一致。</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="20.792079207920793%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row524mcpsimp"><td class="cellrowborder" valign="top" width="6.9306930693069315%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="41.584158415841586%" headers="mcps1.1.5.1.2 "><p id="p143292176018"><a name="p143292176018"></a><a name="p143292176018"></a>DVDD3318_FLASH电平存在3.3V和1.8V，两种电平模式支持最高速率不同：3.3V最高99MHz,1.8V最高75MHz，在硬件设计时，需要特别注意软件与硬件适配，如果选择1.8V器件，uboot表格软件上要适配最大不超过75MHz的频率；如果选择3.3V器件，uboot表格软件上要适配最大不超过99MHz的频率；防止出现速率与电平不匹配，出现flash启动异常。DMEB默认适配75MHz,如有快启需求，需要更新软件。</p>
+<p id="p527mcpsimp"><a name="p527mcpsimp"></a><a name="p527mcpsimp"></a><strong id="b185781633185916"><a name="b185781633185916"></a><a name="b185781633185916"></a>务必进行软、硬件速率适配</strong></p>
+</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="20.792079207920793%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="DDR电路设计要求">DDR电路设计要求<a name="ZH-CN_TOPIC_0000001821836361"></a></h3>
+<p><a name="table543mcpsimp"></a></p>
+<table><thead align="left"><tr id="row550mcpsimp"><th class="cellrowborder" valign="top" width="7.000000000000001%" id="mcps1.1.5.1.1"><p id="p552mcpsimp"><a name="p552mcpsimp"></a><a name="p552mcpsimp"></a>√</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.2"><p id="p554mcpsimp"><a name="p554mcpsimp"></a><a name="p554mcpsimp"></a>Items</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.3"><p id="p556mcpsimp"><a name="p556mcpsimp"></a><a name="p556mcpsimp"></a>客户确认（PASS/NO PASS）</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.4"><p id="p558mcpsimp"><a name="p558mcpsimp"></a><a name="p558mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row560mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.2 "><p id="p1761812141925"><a name="p1761812141925"></a><a name="p1761812141925"></a>Hi3516CV610-10B内置DDR2，电源典型IO电压（管脚名VDDIO_DDR）：连接1.8V/1.5V电源。</p>
+<p id="p1962692612217"><a name="p1962692612217"></a><a name="p1962692612217"></a>Hi3516CV610-20S/20G内置DDR3/3L，电源典型IO电压（管脚名VDDIO_DDR）：连接1.5V（DDR3）/1.35V(DDR3L)电源。</p>
+<p id="p341315396219"><a name="p341315396219"></a><a name="p341315396219"></a>电源芯片选型要求非轻载高效器件。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="SPI-NOR/SPI-Nand/eMMC电路设计要求">SPI NOR/SPI Nand/eMMC电路设计要求<a name="ZH-CN_TOPIC_0000001821796377"></a></h3>
+<p><a name="table595mcpsimp"></a></p>
+<table><thead align="left"><tr id="row602mcpsimp"><th class="cellrowborder" valign="top" width="7.000000000000001%" id="mcps1.1.5.1.1"><p id="p604mcpsimp"><a name="p604mcpsimp"></a><a name="p604mcpsimp"></a>√</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.2"><p id="p606mcpsimp"><a name="p606mcpsimp"></a><a name="p606mcpsimp"></a>Items</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.3"><p id="p608mcpsimp"><a name="p608mcpsimp"></a><a name="p608mcpsimp"></a>客户确认（PASS/NO PASS）</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.4"><p id="p610mcpsimp"><a name="p610mcpsimp"></a><a name="p610mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row612mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.2 "><p id="p61421647513"><a name="p61421647513"></a><a name="p61421647513"></a>FLASH的设计要求请参考《Hi3516CV610 硬件设计用户指南（QFN）》“1.1.6 FLASH原理图设计”和“2.4 FLASH电路设计”小节。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row618mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.2 "><p id="p622mcpsimp"><a name="p622mcpsimp"></a><a name="p622mcpsimp"></a>DVDD3318_FLASH电平存在3.3V和1.8V，两种电平模式支持最高速率不同：3.3V最高99MHz,1.8V最高75MHz，在硬件设计时，需要特别注意软件与硬件适配，防止出现速率与电平不匹配，出现flash启动异常。</p>
+<p id="p143292176018"><a name="p143292176018"></a><a name="p143292176018"></a>特别注意：如果选择1.8V器件，uboot表格软件上要适配最大不超过75MHz的频率；如果选择3.3V器件，uboot表格软件上要适配最大不超过99MHz的频率；防止出现速率与电平不匹配，出现flash启动异常。DMEB默认适配75MHz,如有快启需求，需要更新软件。</p>
+<p id="p527mcpsimp"><a name="p527mcpsimp"></a><a name="p527mcpsimp"></a><strong id="b185781633185916"><a name="b185781633185916"></a><a name="b185781633185916"></a>务必进行软、硬件速率适配</strong></p>
+</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="SPI/I2C电路设计要求">SPI/I2C电路设计要求<a name="ZH-CN_TOPIC_0000001821836357"></a></h3>
+<p><a name="table641mcpsimp"></a></p>
+<table><thead align="left"><tr id="row648mcpsimp"><th class="cellrowborder" valign="top" width="7.000000000000001%" id="mcps1.1.5.1.1"><p id="p650mcpsimp"><a name="p650mcpsimp"></a><a name="p650mcpsimp"></a>√</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.2"><p id="p652mcpsimp"><a name="p652mcpsimp"></a><a name="p652mcpsimp"></a>Items</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.3"><p id="p654mcpsimp"><a name="p654mcpsimp"></a><a name="p654mcpsimp"></a>客户确认（PASS/NO PASS）</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.4"><p id="p656mcpsimp"><a name="p656mcpsimp"></a><a name="p656mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row658mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.2 "><p id="p661mcpsimp"><a name="p661mcpsimp"></a><a name="p661mcpsimp"></a>I2C信号SCL、SDA,需要外接上拉电阻，根据总线负载不同，选择不同阻值的电阻。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row670mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.2 "><p id="p673mcpsimp"><a name="p673mcpsimp"></a><a name="p673mcpsimp"></a>I<sup id="sup674mcpsimp"><a name="sup674mcpsimp"></a><a name="sup674mcpsimp"></a>2</sup>C总线上各器件地址不要冲突。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="视频输入电路设计要求">视频输入电路设计要求<a name="ZH-CN_TOPIC_0000001821796389"></a></h3>
+<p><a name="table678mcpsimp"></a></p>
+<table><thead align="left"><tr id="row685mcpsimp"><th class="cellrowborder" valign="top" width="6.5600000000000005%" id="mcps1.1.5.1.1"><p id="p687mcpsimp"><a name="p687mcpsimp"></a><a name="p687mcpsimp"></a>√</p>
+</th>
+<th class="cellrowborder" valign="top" width="36.54%" id="mcps1.1.5.1.2"><p id="p689mcpsimp"><a name="p689mcpsimp"></a><a name="p689mcpsimp"></a>Items</p>
+</th>
+<th class="cellrowborder" valign="top" width="25.900000000000002%" id="mcps1.1.5.1.3"><p id="p691mcpsimp"><a name="p691mcpsimp"></a><a name="p691mcpsimp"></a>客户确认（PASS/NO PASS）</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.4"><p id="p693mcpsimp"><a name="p693mcpsimp"></a><a name="p693mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row695mcpsimp"><td class="cellrowborder" valign="top" width="6.5600000000000005%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="36.54%" headers="mcps1.1.5.1.2 "><p id="p698mcpsimp"><a name="p698mcpsimp"></a><a name="p698mcpsimp"></a>Hi3516CV610支持多路sensor输入，sensor的配置接口电平只支持3.3V/1.8V,设计请与对接sensor的电平匹配。</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.900000000000002%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row701mcpsimp"><td class="cellrowborder" valign="top" width="6.5600000000000005%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="36.54%" headers="mcps1.1.5.1.2 "><p id="p704mcpsimp"><a name="p704mcpsimp"></a><a name="p704mcpsimp"></a>MIPI RX/LVDS接口内置了100Ω跨接匹配电阻，外部无需再设计或者预留。</p>
+<p id="p705mcpsimp"><a name="p705mcpsimp"></a><a name="p705mcpsimp"></a>MIPI Rx/LVDS接口的设计要求，请参考《Hi3516CV610 硬件设计用户指南（QFN）》“1.3.2 音视频接口”小节的sensor配置接口设计。</p>
+<p id="p706mcpsimp"><a name="p706mcpsimp"></a><a name="p706mcpsimp"></a>VI接口应用场景请参考《Hi3516CV610 VI输入场景详细说明》。</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.900000000000002%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row709mcpsimp"><td class="cellrowborder" valign="top" width="6.5600000000000005%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="36.54%" headers="mcps1.1.5.1.2 "><p id="p712mcpsimp"><a name="p712mcpsimp"></a><a name="p712mcpsimp"></a>MIPI RX[0:1]的数据信号的线长均以MIPI RX[0:1]时钟信号的线长为基准，偏差控制在&plusmn;300mil以内(封装+PCB联合控制等长；</p>
+<p id="p713mcpsimp"><a name="p713mcpsimp"></a><a name="p713mcpsimp"></a>差分信号组内走线长度偏差控制在&plusmn;5mil以内，差分阻抗控制在100Ω。</p>
+<p id="p714mcpsimp"><a name="p714mcpsimp"></a><a name="p714mcpsimp"></a><strong id="b715mcpsimp"><a name="b715mcpsimp"></a><a name="b715mcpsimp"></a>注意：差分信号经过连接器时，相邻差分信号对之间必须使用GND管脚进行隔离。</strong></p>
+</td>
+<td class="cellrowborder" valign="top" width="25.900000000000002%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row718mcpsimp"><td class="cellrowborder" valign="top" width="6.5600000000000005%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="36.54%" headers="mcps1.1.5.1.2 "><p id="p721mcpsimp"><a name="p721mcpsimp"></a><a name="p721mcpsimp"></a>VI_CLK需在源端串33Ω，VI接口输入BT.1120信号时，高8bit是Y（亮度）信号，低8bit是C（色度）信号，注意不要对接错误。详细见《Hi3516CV610 VI输入场景详细说明》。</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.900000000000002%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row12609113135913"><td class="cellrowborder" valign="top" width="6.5600000000000005%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="36.54%" headers="mcps1.1.5.1.2 "><p id="p1160912312594"><a name="p1160912312594"></a><a name="p1160912312594"></a>请参考“1.3.2.4 VI接口设计”中MIPI 4Lane模式及2lane+2lane模式下的线序要求进行检查</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.900000000000002%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row4170131532719"><td class="cellrowborder" valign="top" width="6.5600000000000005%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="36.54%" headers="mcps1.1.5.1.2 "><p id="p1588122692716"><a name="p1588122692716"></a><a name="p1588122692716"></a>当两路时钟同时工作时，注意检查配置和物理连接。</p>
+<p id="p112206374263"><a name="p112206374263"></a><a name="p112206374263"></a>sensor CLK其信号走线在 15 inch以内，其频率需在26MHz以内，sensor CLK其信号走线在4 inch，其频率需在75MHz以内。</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.900000000000002%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="音频电路设计要求">音频电路设计要求<a name="ZH-CN_TOPIC_0000001821836353"></a></h3>
+<p><a name="table725mcpsimp"></a></p>
+<table><thead align="left"><tr id="row732mcpsimp"><th class="cellrowborder" valign="top" width="7.000000000000001%" id="mcps1.1.5.1.1"><p id="p734mcpsimp"><a name="p734mcpsimp"></a><a name="p734mcpsimp"></a>√</p>
+</th>
+<th class="cellrowborder" valign="top" width="36.33%" id="mcps1.1.5.1.2"><p id="p736mcpsimp"><a name="p736mcpsimp"></a><a name="p736mcpsimp"></a>Items</p>
+</th>
+<th class="cellrowborder" valign="top" width="27.67%" id="mcps1.1.5.1.3"><p id="p738mcpsimp"><a name="p738mcpsimp"></a><a name="p738mcpsimp"></a>客户确认（PASS/NO PASS）</p>
+</th>
+<th class="cellrowborder" valign="top" width="28.999999999999996%" id="mcps1.1.5.1.4"><p id="p740mcpsimp"><a name="p740mcpsimp"></a><a name="p740mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row742mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="36.33%" headers="mcps1.1.5.1.2 "><p id="p745mcpsimp"><a name="p745mcpsimp"></a><a name="p745mcpsimp"></a>AC_VREF引脚上的滤波电容2.2uF+100nF。</p>
+<p id="p746mcpsimp"><a name="p746mcpsimp"></a><a name="p746mcpsimp"></a>电容需要靠近主芯片放置，滤波电容地与强干扰的数字地做隔离。</p>
+</td>
+<td class="cellrowborder" valign="top" width="27.67%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row749mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="36.33%" headers="mcps1.1.5.1.2 "><p id="p752mcpsimp"><a name="p752mcpsimp"></a><a name="p752mcpsimp"></a>Hi3516CV610提供了1个AC_MICBIAS管脚，</p>
+<p id="p753mcpsimp"><a name="p753mcpsimp"></a><a name="p753mcpsimp"></a>AC_MICBIAS管脚处需要放置一个2.2uF电容，与强干扰的数字地做隔离。</p>
+</td>
+<td class="cellrowborder" valign="top" width="27.67%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row756mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="36.33%" headers="mcps1.1.5.1.2 "><p id="p759mcpsimp"><a name="p759mcpsimp"></a><a name="p759mcpsimp"></a>Audio模块容易受电源噪声和信号串扰影响，为了有效降低音频底噪，需要根据使用场景做相应处理，具体请见《Hi3516CV610 硬件设计用户指南（QFN）》“2.7模拟音频电路设计”小节。</p>
+</td>
+<td class="cellrowborder" valign="top" width="27.67%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row762mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="36.33%" headers="mcps1.1.5.1.2 "><p id="p765mcpsimp"><a name="p765mcpsimp"></a><a name="p765mcpsimp"></a>在使用MIC输入时，仅支持差分输入，用伪差分接入方式，负端接地，伴随正端从座子处一直接入SOC。</p>
+</td>
+<td class="cellrowborder" valign="top" width="27.67%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row768mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="36.33%" headers="mcps1.1.5.1.2 "><p id="p771mcpsimp"><a name="p771mcpsimp"></a><a name="p771mcpsimp"></a>音频输入信号上的隔直电容靠近Hi3516CV610放置，电容容值推荐选择2.2uF，并靠近SOC串4.7KΩ电阻。</p>
+</td>
+<td class="cellrowborder" valign="top" width="27.67%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row774mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="36.33%" headers="mcps1.1.5.1.2 "><p id="p777mcpsimp"><a name="p777mcpsimp"></a><a name="p777mcpsimp"></a>模拟音频输入输出信号、MICBIAS信号以GND为参考平面，并保证参考平面完整。</p>
+</td>
+<td class="cellrowborder" valign="top" width="27.67%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row780mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="36.33%" headers="mcps1.1.5.1.2 "><p id="p783mcpsimp"><a name="p783mcpsimp"></a><a name="p783mcpsimp"></a>模拟音频输入全程包地处理，差分时要求整组包地，输出信号、MICBIAS信号要求全程包地处理，并且相邻信号之间的GND过孔均匀放置。</p>
+</td>
+<td class="cellrowborder" valign="top" width="27.67%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row786mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="36.33%" headers="mcps1.1.5.1.2 "><p id="p789mcpsimp"><a name="p789mcpsimp"></a><a name="p789mcpsimp"></a>为获得较好的音频质量，建议在音频输出管脚AC_OUT的外围增加音频放大器以及滤波电路，详细请参考Hi3516CV610QDMEB板最新版本原理图。</p>
+</td>
+<td class="cellrowborder" valign="top" width="27.67%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row106751612183520"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="36.33%" headers="mcps1.1.5.1.2 "><p id="p11925745143417"><a name="p11925745143417"></a><a name="p11925745143417"></a>电源 (特别是VDD)、音频信号线及功放运放器件的电源走线、信号走线不要出现空间重叠，做好空间隔离。</p>
+<p id="p1254313285352"><a name="p1254313285352"></a><a name="p1254313285352"></a>如果SOC VDD的DCDC输入电源与运放或者功放供电电源合并，PCB设计上注意VDD的DCDC输入电源与运放或者功放的电源Y型走线。</p>
+</td>
+<td class="cellrowborder" valign="top" width="27.67%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row792mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="36.33%" headers="mcps1.1.5.1.2 "><p id="p795mcpsimp"><a name="p795mcpsimp"></a><a name="p795mcpsimp"></a>I2S接口的MCLK需在芯片近端串联33Ω电阻，用以获取更好的信号质量。</p>
+</td>
+<td class="cellrowborder" valign="top" width="27.67%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="ETH电路设计要求">ETH电路设计要求<a name="ZH-CN_TOPIC_0000001821796381"></a></h3>
+<p><a name="table840mcpsimp"></a></p>
+<table><thead align="left"><tr id="row847mcpsimp"><th class="cellrowborder" valign="top" width="7.000000000000001%" id="mcps1.1.5.1.1"><p id="p849mcpsimp"><a name="p849mcpsimp"></a><a name="p849mcpsimp"></a>√</p>
+</th>
+<th class="cellrowborder" valign="top" width="34.73%" id="mcps1.1.5.1.2"><p id="p851mcpsimp"><a name="p851mcpsimp"></a><a name="p851mcpsimp"></a>Items</p>
+</th>
+<th class="cellrowborder" valign="top" width="27.27%" id="mcps1.1.5.1.3"><p id="p853mcpsimp"><a name="p853mcpsimp"></a><a name="p853mcpsimp"></a>客户确认（PASS/NO PASS）</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.4"><p id="p855mcpsimp"><a name="p855mcpsimp"></a><a name="p855mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row857mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="34.73%" headers="mcps1.1.5.1.2 "><p id="p26752527123"><a name="p26752527123"></a><a name="p26752527123"></a>FE模块的模拟电源AVDD33_FE建议预留0Ω电阻与系统数字3.3V电源隔离，靠近管脚放置一个100nF电容。</p>
+</td>
+<td class="cellrowborder" valign="top" width="27.27%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row863mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="34.73%" headers="mcps1.1.5.1.2 "><p id="p3674161902920"><a name="p3674161902920"></a><a name="p3674161902920"></a>FE网口点灯控制管脚，存在3.3V和1.8V两种电平，根据实际LED选型进行设计。</p>
+<p id="p10713355337"><a name="p10713355337"></a><a name="p10713355337"></a><strong id="b106401916173411"><a name="b106401916173411"></a><a name="b106401916173411"></a>注意：GPIO管脚外部的上下拉电阻设计与LED默认状态保持匹配，以防出现上电时LED异常“闪烁”的问题。</strong></p>
+</td>
+<td class="cellrowborder" valign="top" width="27.27%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row175408449137"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="34.73%" headers="mcps1.1.5.1.2 "><p id="p1754114448133"><a name="p1754114448133"></a><a name="p1754114448133"></a>防护设计，SOC与变压器间，串接2Ω电阻，封装大小0603，差分线PN之间预留TVS管电路，根据要求，实际测试TVS是否需要加上，建议参考Hi3516CV610QDMEB中的设计。</p>
+</td>
+<td class="cellrowborder" valign="top" width="27.27%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row8413154313368"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="34.73%" headers="mcps1.1.5.1.2 "><p id="p194861851123515"><a name="p194861851123515"></a><a name="p194861851123515"></a>LED灯设计需要增加限流电阻，不可IO直驱。</p>
+</td>
+<td class="cellrowborder" valign="top" width="27.27%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row869mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="34.73%" headers="mcps1.1.5.1.2 "><p id="p615mcpsimp"><a name="p615mcpsimp"></a><a name="p615mcpsimp"></a>ETH的设计要求请参考《Hi3516CV610 硬件设计用户指南（QFN）》的“1.3.1 百兆网络接口（FE接口）”和“2.5 FE信号PCB设计”小节。</p>
+</td>
+<td class="cellrowborder" valign="top" width="27.27%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="USB电路设计要求">USB电路设计要求<a name="ZH-CN_TOPIC_0000001775036748"></a></h3>
+<p><a name="table882mcpsimp"></a></p>
+<table><thead align="left"><tr id="row889mcpsimp"><th class="cellrowborder" valign="top" width="7.000000000000001%" id="mcps1.1.5.1.1"><p id="p891mcpsimp"><a name="p891mcpsimp"></a><a name="p891mcpsimp"></a>√</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.2"><p id="p893mcpsimp"><a name="p893mcpsimp"></a><a name="p893mcpsimp"></a>Items</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.3"><p id="p895mcpsimp"><a name="p895mcpsimp"></a><a name="p895mcpsimp"></a>客户确认（PASS/NO PASS）</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.4"><p id="p897mcpsimp"><a name="p897mcpsimp"></a><a name="p897mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row899mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.2 "><p id="p902mcpsimp"><a name="p902mcpsimp"></a><a name="p902mcpsimp"></a>Hi3516CV610提供1个USB2.0接口，USB支持Host或者Device。详细请参考《Hi3516CV610 硬件设计用户指南（QFN）》“1.3.5 USB2.0接口”和“2.9 USB2.0信号设计”小节。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="JTAG和系统控制电路设计要求">JTAG和系统控制电路设计要求<a name="ZH-CN_TOPIC_0000001775196416"></a></h3>
+<p><a name="table906mcpsimp"></a></p>
+<table><thead align="left"><tr id="row913mcpsimp"><th class="cellrowborder" valign="top" width="7.000000000000001%" id="mcps1.1.5.1.1"><p id="p915mcpsimp"><a name="p915mcpsimp"></a><a name="p915mcpsimp"></a>√</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.2"><p id="p917mcpsimp"><a name="p917mcpsimp"></a><a name="p917mcpsimp"></a>Items</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.3"><p id="p919mcpsimp"><a name="p919mcpsimp"></a><a name="p919mcpsimp"></a>客户确认（PASS/NO PASS）</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.4"><p id="p921mcpsimp"><a name="p921mcpsimp"></a><a name="p921mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row923mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.2 "><p id="p926mcpsimp"><a name="p926mcpsimp"></a><a name="p926mcpsimp"></a>JTAG的TDI、TDO、TMS接4.7KΩ的上拉电阻，TCK接1KΩ的下拉电阻，TRSTN信号接10KΩ的下拉电阻，预留上拉电阻。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="SDIO电路设计要求">SDIO电路设计要求<a name="ZH-CN_TOPIC_0000001775196428"></a></h3>
+<p><a name="table930mcpsimp"></a></p>
+<table><thead align="left"><tr id="row937mcpsimp"><th class="cellrowborder" valign="top" width="6.9306930693069315%" id="mcps1.1.5.1.1"><p id="p939mcpsimp"><a name="p939mcpsimp"></a><a name="p939mcpsimp"></a>√</p>
+</th>
+<th class="cellrowborder" valign="top" width="31.683168316831683%" id="mcps1.1.5.1.2"><p id="p941mcpsimp"><a name="p941mcpsimp"></a><a name="p941mcpsimp"></a>Items</p>
+</th>
+<th class="cellrowborder" valign="top" width="30.693069306930692%" id="mcps1.1.5.1.3"><p id="p943mcpsimp"><a name="p943mcpsimp"></a><a name="p943mcpsimp"></a>客户确认（PASS/NO PASS）</p>
+</th>
+<th class="cellrowborder" valign="top" width="30.693069306930692%" id="mcps1.1.5.1.4"><p id="p945mcpsimp"><a name="p945mcpsimp"></a><a name="p945mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row947mcpsimp"><td class="cellrowborder" valign="top" width="6.9306930693069315%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.1.5.1.2 "><p id="p950mcpsimp"><a name="p950mcpsimp"></a><a name="p950mcpsimp"></a>SDIO0/1_CARD_POWER_EN_N低电平有效，其电平为3.3V电平。</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row953mcpsimp"><td class="cellrowborder" valign="top" width="6.9306930693069315%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.1.5.1.2 "><p id="p956mcpsimp"><a name="p956mcpsimp"></a><a name="p956mcpsimp"></a>SDIO0/1可用于对接SD卡，SDIO0支持3318电源。</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row972mcpsimp"><td class="cellrowborder" valign="top" width="6.9306930693069315%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.1.5.1.2 "><p id="p975mcpsimp"><a name="p975mcpsimp"></a><a name="p975mcpsimp"></a>当使用SD卡功能时，SDIO0/1_CARD_DETECT信号建议预留外接上拉电阻，推荐上拉电阻10KΩ。</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row980mcpsimp"><td class="cellrowborder" valign="top" width="6.9306930693069315%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.1.5.1.2 "><p id="p983mcpsimp"><a name="p983mcpsimp"></a><a name="p983mcpsimp"></a>PCB布局时，SD卡背面不要放置大功率的器件，以防止SD卡高温下失效。</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="UART电路设计要求">UART电路设计要求<a name="ZH-CN_TOPIC_0000001821836349"></a></h3>
+<p><a name="table987mcpsimp"></a></p>
+<table><thead align="left"><tr id="row994mcpsimp"><th class="cellrowborder" valign="top" width="7.000000000000001%" id="mcps1.1.5.1.1"><p id="p996mcpsimp"><a name="p996mcpsimp"></a><a name="p996mcpsimp"></a>√</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.2"><p id="p998mcpsimp"><a name="p998mcpsimp"></a><a name="p998mcpsimp"></a>Items</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.3"><p id="p1000mcpsimp"><a name="p1000mcpsimp"></a><a name="p1000mcpsimp"></a>客户确认（PASS/NO PASS）</p>
+</th>
+<th class="cellrowborder" valign="top" width="31%" id="mcps1.1.5.1.4"><p id="p1002mcpsimp"><a name="p1002mcpsimp"></a><a name="p1002mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1004mcpsimp"><td class="cellrowborder" valign="top" width="7.000000000000001%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.2 "><p id="p1007mcpsimp"><a name="p1007mcpsimp"></a><a name="p1007mcpsimp"></a>默认使用UART0进行调试，UART应用必须参考《Hi3516CV610 硬件设计用户指南（QFN）》“1.3.9 UART”小节。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="特殊GPIO设计要求">特殊GPIO设计要求<a name="ZH-CN_TOPIC_0000001775196432"></a></h3>
+<p><a name="table1011mcpsimp"></a></p>
+<table><thead align="left"><tr id="row1018mcpsimp"><th class="cellrowborder" valign="top" width="6.9306930693069315%" id="mcps1.1.5.1.1"><p id="p1020mcpsimp"><a name="p1020mcpsimp"></a><a name="p1020mcpsimp"></a>√</p>
+</th>
+<th class="cellrowborder" valign="top" width="31.93319331933193%" id="mcps1.1.5.1.2"><p id="p1022mcpsimp"><a name="p1022mcpsimp"></a><a name="p1022mcpsimp"></a>Items</p>
+</th>
+<th class="cellrowborder" valign="top" width="30.443044304430444%" id="mcps1.1.5.1.3"><p id="p1024mcpsimp"><a name="p1024mcpsimp"></a><a name="p1024mcpsimp"></a>客户确认（PASS/NO PASS）</p>
+</th>
+<th class="cellrowborder" valign="top" width="30.693069306930692%" id="mcps1.1.5.1.4"><p id="p1026mcpsimp"><a name="p1026mcpsimp"></a><a name="p1026mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1028mcpsimp"><td class="cellrowborder" valign="top" width="6.9306930693069315%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31.93319331933193%" headers="mcps1.1.5.1.2 "><p id="p1031mcpsimp"><a name="p1031mcpsimp"></a><a name="p1031mcpsimp"></a>GPIO0_0管脚号6，用于按键升级功能，需要接按键并上拉到DVDD3318_FLASH。</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.443044304430444%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row1034mcpsimp"><td class="cellrowborder" valign="top" width="6.9306930693069315%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31.93319331933193%" headers="mcps1.1.5.1.2 "><p id="p1037mcpsimp"><a name="p1037mcpsimp"></a><a name="p1037mcpsimp"></a>如果客户不使用UPDATE_MODE_N功能，客户只能用该管脚的GPIO输出功能，硬件设计必须保证该管脚有外部上拉电阻，阻值建议为4.7KΩ，同时该引脚必须使用串阻和电容进行防护设计。</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.443044304430444%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row1040mcpsimp"><td class="cellrowborder" valign="top" width="6.9306930693069315%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31.93319331933193%" headers="mcps1.1.5.1.2 "><p id="p1043mcpsimp"><a name="p1043mcpsimp"></a><a name="p1043mcpsimp"></a>MIPI RX复用了GPIO功能，如果需要使用这部分GPIO：</p>
+<a name="ul1044mcpsimp"></a><a name="ul1044mcpsimp"></a><ul id="ul1044mcpsimp"><li>速率不能超过10MHz，走线长度不超过10inch，最大负载为10pF。</li><li>这些GPIO驱动能力弱，不能用作电流源（如用于驱动LED）。</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="30.443044304430444%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row13261737135416"><td class="cellrowborder" valign="top" width="6.9306930693069315%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31.93319331933193%" headers="mcps1.1.5.1.2 "><p id="p3261153705418"><a name="p3261153705418"></a><a name="p3261153705418"></a>如果使用GPIO作为跨板连接，建议靠近连接器设计串阻进行ESD防护，阻值建议100Ω。</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.443044304430444%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row1186191295619"><td class="cellrowborder" valign="top" width="6.9306930693069315%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31.93319331933193%" headers="mcps1.1.5.1.2 "><p id="p21861912185619"><a name="p21861912185619"></a><a name="p21861912185619"></a>SENSOR0_CLK复用了TEST_CLK,在uboot生效前，此脚会输出波形，如果使用GPIO，需要评估是否有影响。</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.443044304430444%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row13366405211"><td class="cellrowborder" valign="top" width="6.9306930693069315%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31.93319331933193%" headers="mcps1.1.5.1.2 "><p id="p16337140529"><a name="p16337140529"></a><a name="p16337140529"></a>注意检视配置字及UPDATE_MODE_N与外设的上电状态，是否符合设计预期。</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.443044304430444%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row8907103116274"><td class="cellrowborder" valign="top" width="6.9306930693069315%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31.93319331933193%" headers="mcps1.1.5.1.2 "><p id="p811173282619"><a name="p811173282619"></a><a name="p811173282619"></a>PCB设计时特别注意配置字上下拉电阻的共焊盘设计，避免出现桩线，造成信号质量问题。</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.443044304430444%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row68782561025"><td class="cellrowborder" valign="top" width="6.9306930693069315%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31.93319331933193%" headers="mcps1.1.5.1.2 "><p id="p76687171532"><a name="p76687171532"></a><a name="p76687171532"></a>如果存在GPIO使能、控灯等应用场景，请参考《Hi3516CV610_PINOUT_CN (QFN)》“4.管脚默认状态”页签，进行上电电平状态检查，防止出现异常现象。</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.443044304430444%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row16294750173520"><td class="cellrowborder" valign="top" width="6.9306930693069315%" headers="mcps1.1.5.1.1 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="31.93319331933193%" headers="mcps1.1.5.1.2 "><p id="p1274505163913"><a name="p1274505163913"></a><a name="p1274505163913"></a>数字接口包括GPIO需要测试调整驱动到合适的值，防止过冲过大，超过器件使用规格；调试方法请参考《Hi3516CV610/Hi3516CV608 各IP/IO涉硬参数 调试指南》</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.443044304430444%" headers="mcps1.1.5.1.3 ">&nbsp;&nbsp;</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+
+  <div class="footer-box">
+    <div class="footer-list">
+      
+      
+      <div class="footer-list-child">
+        <a href="https://www.hisilicon.com/cn" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/home" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开发者网站</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://gitcode.com/HiSpark" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开源社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developer.huawei.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">华为开发者官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hikunpeng.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">鲲鹏社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hiascend.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">昇腾社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/aboutus" target="_blank" class="footer-nav-first" rel="noopener noreferrer">关于我们</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/login" target="_blank" class="footer-nav-first" rel="noopener noreferrer">投诉举报</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      
+    </div>
+    <div class="footer-fix">
+      <div class="footer-fix-content">
+        <div>
+          <span class="footer-copyright">&nbsp;&copy;2024 华为技术有限公司</span>
+          <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer">粤A2-20044005号</a>
+          <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702004153"
+            target="_blank" rel="noopener noreferrer">粤公网安备44030702004153号</a>
+        </div>
+        <div class="footer-name-list">
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/legalNotices" target="_blank" class="footer-name" rel="noopener noreferrer">法律声明</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/cookie-policy" target="_blank" class="footer-name" rel="noopener noreferrer">关于Cookie</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/privacyPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">隐私政策</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/userPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">用户协议</a>
+          
+          
+          
+          <a href="javascript:void(0);" onclick="openDisclaimerDialog()" class="footer-name">免责声明</a>
+          
+          
+          
+        </div>
+      </div>
+
+
+      <!-- 免责声明弹窗 -->
+      <div id="disclaimerDialog" class="disclaimer-overlay" style="display: none;">
+        <div class="disclaimer-dialog">
+          <div class="disclaimer-dialog__header">
+            <span class="disclaimer-dialog__title">免责声明</span>
+            <button class="disclaimer-dialog__close" onclick="closeDisclaimerDialog()">×</button>
+          </div>
+          <div class="disclaimer-dialog__body">
+            <p class="disclaimer-dialog__text-center"><strong>海思开发者网站免责声明</strong></p>
+            <p>尊敬的用户，您好：</p>
+            <p>&nbsp; &nbsp;
+              请确保您通过本平台向海思提供或反馈的任何信息或意见不侵犯第三方知识产权和/或合法权益。如您提供或反馈的上述任何信息或意见侵犯第三方知识产权和/或合法权益，和/或给第三方造成损害的，您将承担全部法律及赔偿责任。
+            </p>
+          </div>
+          <div class="disclaimer-dialog__footer">
+            <button class="disclaimer-dialog__btn" onclick="closeDisclaimerDialog()">关闭</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function openDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'flex';
+        }
+        function closeDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'none';
+        }
+        // 点击弹窗背景关闭
+        document.getElementById('disclaimerDialog').addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeDisclaimerDialog();
+          }
+        });
+      </script>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../static/js/custom.js"></script>
+      
+        <script src="../../../../static/js/version-selector.js"></script>
+      
+        <script src="../../../../static/js/code-highlight.js"></script>
+      
+        <script src="../../../../static/js/wavedrom-skin.js"></script>
+      
+        <script src="../../../../static/js/wavedrom.min.js"></script>
+      
+        <script src="../../../../static/js/wavedrom-init.js"></script>
+      
+        <script src="../../../../static/js/no-flash.js"></script>
+      
+    
+  </body>
+</html>
+

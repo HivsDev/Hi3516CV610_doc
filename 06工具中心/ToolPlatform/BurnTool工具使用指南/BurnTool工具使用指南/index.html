@@ -1,0 +1,7169 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hi3516CV610 超高清智慧视觉 SoC 文档中心">
+      
+      
+        <meta name="author" content="HiSpark">
+      
+      
+        <link rel="canonical" href="https://hivsdev.github.io/Hi3516CV610_doc/06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/ToolPlatform/BurnTool%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/BurnTool%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+      
+      
+        <link rel="prev" href="../../../">
+      
+      
+        <link rel="next" href="../../../AQTools/%E9%9F%B3%E9%A2%91%E8%B4%A8%E9%87%8F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/%E9%9F%B3%E9%A2%91%E8%B4%A8%E9%87%8F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../static/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>BurnTool 工具使用指南 - Hi3516CV610 开发者中心</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+    
+    
+      <link rel="stylesheet" href="../../../../static/css/extra.css">
+    
+      <link rel="stylesheet" href="../../../../static/css/version-selector.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+      <meta name="gitcode-issues-url" content="https://gitcode.com/HiSpark/fbb_ws63/issues">
+      
+      <link rel="dns-prefetch" href="https://docs.hisilicon.com">
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://docs.hisilicon.com" crossorigin>
+      <link rel="preload" href="../../../../assets/stylesheets/main.484c7ddc.min.css" as="style">
+      <link rel="preload" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" as="style">
+      <link rel="preload" href="../../../../static/css/extra.css" as="style">
+      <link rel="preload" href="../../../../assets/javascripts/bundle.79ae519e.min.js" as="script">
+      <link rel="preload" href="../../../../static/js/custom.js" as="script">
+
+      
+        <link rel="prefetch" href="../../../AQTools/%E9%9F%B3%E9%A2%91%E8%B4%A8%E9%87%8F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/%E9%9F%B3%E9%A2%91%E8%B4%A8%E9%87%8F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" as="document">
+      
+      
+        
+        
+          
+        
+          
+            <link rel="prefetch" href="../../../../zh-CN/00概览/Hi3516CV610%20超高清智慧视觉%20SoC%20产品简介/Hi3516CV610%20超高清智慧视觉%20SoC%20产品简介.md" as="document">
+          
+        
+      
+      <style>:root{--md-text-font:"Helvetica Neue, PingFang SC, Microsoft YaHei";--md-code-font:"Consolas, Roboto Mono"}</style>
+      <script>
+        // 防止宽窄屏刷新闪烁 — 在 body 解析前就读取 localStorage 标记 <html>
+        // 配合 CSS: html.prefer-narrow .md-grid 在首帧即应用 76%
+        if (localStorage.getItem('wideScreen') === 'false') {
+          document.documentElement.classList.add('prefer-narrow');
+        }
+      </script>
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#BurnTool-工具使用指南" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="https://developers.hisilicon.com" title="Hi3516CV610 开发者中心" class="md-header__button md-logo" aria-label="Hi3516CV610 开发者中心" data-md-component="logo" target="_blank" rel="noopener noreferrer">
+      <img 
+  src="../../../../static/images/light-icon.png" 
+  class="md-logo__img md-logo__img--light"
+  alt="Hi3516CV610 开发者中心" 
+/>
+<img 
+  src="../../../../static/images/dark-icon.png" 
+  class="md-logo__img md-logo__img--dark"
+  alt="Hi3516CV610 开发者中心" 
+/>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+      </div>
+    </div>
+    
+      
+      
+        <label class="md-header__button md-icon md-header__button--search" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+      
+    
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="切换到暗色主题"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色主题" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="切换到亮色主题"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色主题" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <div class="md-header__source">
+        <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="前往仓库" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+      </div>
+    
+  </nav>
+  
+  
+    
+    
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        <!-- 
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+         -->
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+</header>
+
+
+<script>
+  var USER_DEFINED_OPTIONS = {
+    REPO_PATH: "Hi3516CV610_doc",
+    ROOT_URL: "https://docs.hisilicon.com/projects"
+  };
+  var DOCUMENTATION_OPTIONS = {
+    VERSION: "master",
+    // 构建时声明主题的语言
+    LANGUAGE: "zh"
+  };
+</script>
+<script src="https://docs.hisilicon.com/projects/version/hispark_version.js"></script>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="sidebar-selectors">
+                  <div class="repo-select custom-select">
+                    <span class="select-label">芯片</span>
+                    <div class="repo-selector" title="">
+                      <span class="repo-readOnly"></span>
+                      <select id="repo-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="repo-options" style="display:none"></ul>
+                  </div>
+                  <div class="version-select custom-select">
+                    <span class="select-label">版本</span>
+                    <div class="version-selector" title="">
+                      <span class="version-readOnly"></span>
+                      <select id="version-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="version-options" style="display:none"></ul>
+                  </div>
+                  
+                    
+                    
+                      <div class="sidebar-search">
+                        <label class="sidebar-search__button" for="__search">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+                          <span>全文检索</span>
+                        </label>
+                      </div>
+                    
+                  
+                </div>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  
+    <div class="md-nav__source">
+      <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="前往仓库" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概览
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    概览
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/00概览/Hi3516CV610%20超高清智慧视觉%20SoC%20产品简介/Hi3516CV610%20超高清智慧视觉%20SoC%20产品简介.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hi3516CV610 产品简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速入门
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    快速入门
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Hi3516CV610%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/Hi3516CV610%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    环境搭建
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速启动
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整体架构
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    整体架构
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    版本说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/%E7%89%88%E6%9C%AC%E9%85%8D%E5%A5%97%E5%85%B3%E7%B3%BB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    版本配套关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/%E7%89%88%E6%9C%AC%E5%8F%B7%E8%A7%84%E8%8C%83%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    版本号规范说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    芯片用户指南
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    芯片用户指南
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-1%20产品概述.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    产品概述
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-2%20硬件特性.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件特性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-3%20系统.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-4%20存储器接口.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    存储器接口
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-5%20网络接口.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络接口
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-6%20视频编码.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    视频编码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-7%20视频及图形处理.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    视频及图形处理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-8%20智能加速引擎.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能加速引擎
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-9%20视频接口.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    视频接口
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-10%20ISP.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-11%20音频接口.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    音频接口
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-12%20外围设备.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    外围设备
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-13%20安全子系统.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全子系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/02-A%20订购须知.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    订购须知
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/00-3%20前言.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    前言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/附录%20B-缩略语.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    缩略语
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../03API%E5%8F%82%E8%80%83/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 参考
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API 参考
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全子系统
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    安全子系统
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/安全子系统/Hi35xxVxxx%20安全启动使用指南/Hi35xxVxxx%20安全启动使用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全启动使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/安全子系统/Hi35xxVxxx%20安全子系统使用说明/Hi35xxVxxx%20安全子系统使用说明.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全子系统使用说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../03API%E5%8F%82%E8%80%83/%E5%AE%89%E5%85%A8%E5%AD%90%E7%B3%BB%E7%BB%9F/SELinux%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/SELinux%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SELinux 开发指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BSP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    BSP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/BSP/Hi35xxVxxx%20开发环境用户指南/Hi35xxVxxx%20开发环境用户指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开发环境用户指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/BSP/Hi35xxVxxx%20U-boot%20移植应用开发指南/Hi35xxVxxx%20U-boot%20移植应用开发指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    U-boot 移植应用开发指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/BSP/外围设备驱动%20操作指南/外围设备驱动%20操作指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    外围设备驱动操作指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/BSP/UBI%20文件系统使用指南/UBI%20文件系统使用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UBI 文件系统使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/BSP/裸烧及非裸烧升级%20使用手册/裸烧及非裸烧升级%20使用手册.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    裸烧及非裸烧升级使用手册
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ISP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/ISP/ISP%20开发参考/ISP%20开发参考（1~5）.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP 开发参考（1~5）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/ISP/ISP%20开发参考/ISP%20开发参考（6~end）.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP 开发参考（6~end）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/ISP/AIISP%20开发参考/AIISP%20开发参考.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIISP 开发参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/ISP/ISP%20FAQ/ISP%20FAQ.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MPP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MPP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/MPP/MPP%20媒体处理软件%20V6.0%20开发参考/0%20前言.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MPP 开发参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/MPP/MPP%20媒体处理软件%20V6.0%20FAQ/MPP%20媒体处理软件%20V6.0%20FAQ.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MPP FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/MPP/音频组件%20API参考/音频组件%20API参考.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    音频组件 API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/MPP/安全子系统%20API%20参考/安全子系统%20API%20参考.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全子系统 API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../03API%E5%8F%82%E8%80%83/MPP/DEVSTAT%E5%BC%80%E5%8F%91%E5%8F%82%E8%80%83/DEVSTAT%E5%BC%80%E5%8F%91%E5%8F%82%E8%80%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DEVSTAT 开发参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/MPP/MIPI%20使用指南/MIPI%20使用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MIPI 使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/MPP/SYS_CONFIG%20配置指南/SYS_CONFIG%20配置指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SYS_CONFIG 配置指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../03API%E5%8F%82%E8%80%83/MPP/%E6%99%BA%E8%83%BD%E7%BC%96%E7%A0%81%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/%E6%99%BA%E8%83%BD%E7%BC%96%E7%A0%81%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能编码使用指导
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../03API%E5%8F%82%E8%80%83/MPP/%E8%8A%AF%E7%89%87%E7%A0%81%E7%8E%87%E6%8E%A7%E5%88%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/%E8%8A%AF%E7%89%87%E7%A0%81%E7%8E%87%E6%8E%A7%E5%88%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    芯片码率控制使用说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/MPP/RTC%20应用指南/RTC%20应用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RTC 应用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/MPP/哭声检测%20API参考/哭声检测%20API参考.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    哭声检测 API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../03API%E5%8F%82%E8%80%83/MPP/%E5%BC%80%E6%9C%BA%E5%A3%B0%E9%9F%B3%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/%E5%BC%80%E6%9C%BA%E5%A3%B0%E9%9F%B3%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开机声音使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SVP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SVP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../03API%E5%8F%82%E8%80%83/SVP/%E6%99%BA%E8%83%BD%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86%E8%BD%AF%E4%BB%B6V1.0%E5%BC%80%E5%8F%91%E5%8F%82%E8%80%83/%E6%99%BA%E8%83%BD%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86%E8%BD%AF%E4%BB%B6V1.0%E5%BC%80%E5%8F%91%E5%8F%82%E8%80%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能视频处理软件 V1.0 开发参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/SVP/IVE%20API%20参考/IVE%20API%20参考.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IVE API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/03API参考/SVP/IVS%20API%20参考/IVS%20API%20参考.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IVS API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考案例
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    参考案例
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    调试调优
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    调试调优
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    硬件
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/硬件/Hi3516CV610%20DDR3%20参数配置方法/Hi3516CV610%20DDR3%20参数配置方法.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DDR3 参数配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_2" id="__nav_5_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BSP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    BSP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/BSP/Hi35xxVxxx%20快速启动优化指南/Hi35xxVxxx%20快速启动优化指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速启动优化指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/BSP/Hi35xxVxxx%20调试工具使用指南/Hi35xxVxxx%20调试工具使用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    调试工具使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/%E8%B0%83%E8%AF%95%E8%B0%83%E4%BC%98/BSP/%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80%E8%B0%83%E6%95%B4%E6%8C%87%E5%8D%97/%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80%E8%B0%83%E6%95%B4%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    内存布局调整指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/BSP/BSP%20FAQ/BSP%20FAQ.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BSP FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/%E8%B0%83%E8%AF%95%E8%B0%83%E4%BC%98/BSP/%E5%9F%BA%E4%BA%8Efmcv100%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84Flash%E7%A7%BB%E6%A4%8D%E6%8C%87%E5%8D%97/%E5%9F%BA%E4%BA%8Efmcv100%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84Flash%E7%A7%BB%E6%A4%8D%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flash 移植指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_3" id="__nav_5_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MPP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MPP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/%E8%B0%83%E8%AF%95%E8%B0%83%E4%BC%98/MPP/%E6%80%A7%E8%83%BD%E2%95%B1%E5%B8%A6%E5%AE%BD%E2%95%B1%E5%BB%B6%E6%97%B6%E2%95%B1%E5%86%85%E5%AD%98%E8%B0%83%E4%BC%98%E6%8C%87%E5%8D%97/%E6%80%A7%E8%83%BD%E2%95%B1%E5%B8%A6%E5%AE%BD%E2%95%B1%E5%BB%B6%E6%97%B6%E2%95%B1%E5%86%85%E5%AD%98%E8%B0%83%E4%BC%98%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    带宽/延时/内存调优
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/%E8%B0%83%E8%AF%95%E8%B0%83%E4%BC%98/MPP/%E7%BC%96%E7%A0%81%E5%99%A8%E5%9B%BE%E5%83%8F%E8%B4%A8%E9%87%8F%E8%B0%83%E4%BC%98%E6%8C%87%E5%8D%97/%E7%BC%96%E7%A0%81%E5%99%A8%E5%9B%BE%E5%83%8F%E8%B4%A8%E9%87%8F%E8%B0%83%E4%BC%98%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    编码器图像质量调优
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/MPP/智能编码自适应%20使用说明/智能编码自适应%20使用说明.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能编码自适应说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_4" id="__nav_5_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PQ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PQ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/PQ/ISP%20图像调优指南/ISP%20图像调优指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP 图像调优指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/PQ/ISP%20颜色调优说明/ISP%20颜色调优说明.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP 颜色调优说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/PQ/Sensor%20调试指南/Sensor%20调试指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sensor 调试指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/PQ/图像自适应%20使用说明/图像自适应%20使用说明.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图像自适应说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/PQ/智能PQ%20使用指导/智能PQ%20使用指导.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能PQ 使用指导
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/%E8%B0%83%E8%AF%95%E8%B0%83%E4%BC%98/PQ/%E8%A1%8C%E8%BD%A6%E8%AE%B0%E5%BD%95%E4%BB%AA%E5%92%8C%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%BA%94%E7%94%A8%E5%9B%BE%E5%83%8F%E8%B0%83%E8%AF%95FAQ/%E8%A1%8C%E8%BD%A6%E8%AE%B0%E5%BD%95%E4%BB%AA%E5%92%8C%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%BA%94%E7%94%A8%E5%9B%BE%E5%83%8F%E8%B0%83%E8%AF%95FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    行车记录仪/无人机图像调试FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/PQ/Hisilicon%20IP%20Camera%20图像质量测试标准/Hisilicon%20IP%20Camera%20图像质量测试标准.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图像质量测试标准
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/04参考案例/调试调优/PQ/Hi3516CV610╱Hi3516CV608%203DNR参数配置说明/Hi3516CV610╱Hi3516CV608%203DNR参数配置说明.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3DNR 参数配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/Sample%E6%8C%87%E5%AF%BC%E8%AF%B4%E6%98%8E/Sample%E6%8C%87%E5%AF%BC%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sample 指导说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../05%E7%A1%AC%E4%BB%B6%E6%8C%87%E5%8D%97/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件指南
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    硬件指南
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    单板
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    单板
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/05硬件指南/单板/Hi3516CV610%20Demo%20单板使用指南（QFN）/Hi3516CV610%20Demo%20单板使用指南（QFN）.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demo 单板使用指南（QFN）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/05硬件指南/单板/Hi3516CV610%20硬件设计用户指南（QFN）/Hi3516CV610%20硬件设计用户指南（QFN）.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件设计用户指南（QFN）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/05硬件指南/单板/Hi3516CV610%20硬件设计%20Checklist（QFN）/Hi3516CV610%20硬件设计%20Checklist（QFN）.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件设计 Checklist（QFN）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具中心
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    工具中心
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ToolPlatform
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ToolPlatform
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/06工具中心/ToolPlatform/ToolPlatform工具平台使用指南/ToolPlatform工具平台%20使用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ToolPlatform 工具平台使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BurnTool 工具使用指南
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BurnTool 工具使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#前言" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#概述" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#工具概述" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工具概述
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#应用场景" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        应用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#烧写原理" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        烧写原理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#工具与单板器件匹配关系说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工具与单板器件匹配关系说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#环境准备" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        环境准备
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#USB-PC端驱动安装" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USB PC端驱动安装
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#按分区烧写" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        按分区烧写
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="按分区烧写">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#适用场景" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        适用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#烧写步骤" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        烧写步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#选中分区表单行点击跳转进入按地址烧写界面" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        选中分区表单行点击跳转进入按地址烧写界面
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#按地址烧写" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        按地址烧写
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="按地址烧写">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#适用场景_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        适用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#烧写步骤_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        烧写步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#上载步骤" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        上载步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#擦除步骤" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        擦除步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Boot烧写" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boot烧写
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boot烧写">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#适用场景_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        适用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#烧写步骤_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        烧写步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eMMC烧写" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eMMC烧写
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="eMMC烧写">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#适用场景_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        适用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#烧写步骤_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        烧写步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#制作烧片器镜像" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        制作烧片器镜像
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#上载步骤_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        上载步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#DDR烧写" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DDR烧写
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DDR烧写">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#适用场景_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        适用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#烧写步骤_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        烧写步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#合并镜像" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        合并镜像
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="合并镜像">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#适用场景_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        适用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#操作步骤" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        操作步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#首选项设置" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        首选项设置
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="首选项设置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#命令设置" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        命令设置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#TFTP设置" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TFTP设置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#其他设置" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        其他设置
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#FAQ" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#BurnTool烧写中出现TFTP超时提示时的解决办法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BurnTool烧写中出现TFTP超时提示时的解决办法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#如何使用外置的tftpd32进行镜像下载？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何使用外置的tftpd32进行镜像下载？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#BurnTool烧写Fastboot分区时，工具出现报错“Failed-to-send-start-frame”的解决办法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BurnTool烧写Fastboot分区时，工具出现报错“Failed to send start frame”的解决办法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#BurnTool烧写Fastboot分区时，控制台只打印了一段“#########”后停止打印，且工具出现报错“Failed-to-send-head-frame”的解决办法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BurnTool烧写Fastboot分区时，控制台只打印了一段“#########”后停止打印，且工具出现报错“Failed to send head frame”的解决办法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#BurnTool烧写Fastboot分区时，工具出现报错“Failed-to-send-data-frame”的解决办法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BurnTool烧写Fastboot分区时，工具出现报错“Failed to send data frame”的解决办法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#BurnTool烧写Fastboot分区时，工具出现报错“Failed-to-execute-command”的解决办法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BurnTool烧写Fastboot分区时，工具出现报错“Failed to execute command”的解决办法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#对于文件传输方式的选择，需要注意什么？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对于文件传输方式的选择，需要注意什么？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#按地址烧写界面，文件的长度要求？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        按地址烧写界面，文件的长度要求？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#遇到点击烧写，断电重启后，不开始烧写，可能原因？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        遇到点击烧写，断电重启后，不开始烧写，可能原因？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#串口找不到或tftp启动失败或报tftp端口被占用的原因？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        串口找不到或tftp启动失败或报tftp端口被占用的原因？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#烧写Nand时控制台打印pure-data-length和len_incl_bad分别是什么含义？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        烧写Nand时控制台打印pure data length和len_incl_bad分别是什么含义？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#单板DDR-Training失败的情况下工具会有什么打印？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单板DDR Training失败的情况下工具会有什么打印？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#反馈BurnTool使用过程中出现问题时需要提供什么？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        反馈BurnTool使用过程中出现问题时需要提供什么？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#如何查看是否有进程占用了tftp的69端口？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何查看是否有进程占用了tftp的69端口？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#如果是64位的PC且只安装了64位版本的JRE？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如果是64位的PC且只安装了64位版本的JRE？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#非中文语言系统无法烧写中文路径镜像" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        非中文语言系统无法烧写中文路径镜像
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#缩略语" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        缩略语
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AQTools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AQTools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AQTools/%E9%9F%B3%E9%A2%91%E8%B4%A8%E9%87%8F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/%E9%9F%B3%E9%A2%91%E8%B4%A8%E9%87%8F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    音频质量调试工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PQTools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PQTools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../PQTools/%E5%9B%BE%E5%83%8F%E8%B4%A8%E9%87%8F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/%E5%9B%BE%E5%83%8F%E8%B4%A8%E9%87%8F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图像质量调试工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SVP_NPU
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SVP_NPU
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SVP_NPU/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速上手指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SVP_NPU/%E9%A9%B1%E5%8A%A8%E5%92%8C%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/%E9%A9%B1%E5%8A%A8%E5%92%8C%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    驱动和开发环境安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SVP_NPU/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    应用开发指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SVP_NPU/AMCT%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%EF%BC%88Caffe%EF%BC%89/AMCT%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%EF%BC%88Caffe%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AMCT 使用指南（Caffe）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SVP_NPU/AMCT%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%EF%BC%88PyTorch%EF%BC%89/AMCT%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%EF%BC%88PyTorch%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AMCT 使用指南（PyTorch）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SVP_NPU/ATC%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/ATC%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ATC 工具使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SVP_NPU/ATC%20Graph%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/ATC%20Graph%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ATC Graph 开发指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../SVP_NPU/ATC%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/ATC%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ATC 自定义算子开发
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/06工具中心/SVP_NPU/MindCmd%20使用指南/MindCmd使用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MindCmd 使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../07FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../08%E5%85%B6%E4%BB%96/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    其他
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../zh-CN/07FAQ/Hi3516CV610%20FAQ.md}" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#前言" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#概述" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#工具概述" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工具概述
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#应用场景" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        应用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#烧写原理" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        烧写原理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#工具与单板器件匹配关系说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工具与单板器件匹配关系说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#环境准备" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        环境准备
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#USB-PC端驱动安装" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USB PC端驱动安装
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#按分区烧写" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        按分区烧写
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="按分区烧写">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#适用场景" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        适用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#烧写步骤" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        烧写步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#选中分区表单行点击跳转进入按地址烧写界面" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        选中分区表单行点击跳转进入按地址烧写界面
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#按地址烧写" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        按地址烧写
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="按地址烧写">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#适用场景_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        适用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#烧写步骤_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        烧写步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#上载步骤" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        上载步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#擦除步骤" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        擦除步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Boot烧写" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Boot烧写
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Boot烧写">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#适用场景_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        适用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#烧写步骤_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        烧写步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#eMMC烧写" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eMMC烧写
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="eMMC烧写">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#适用场景_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        适用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#烧写步骤_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        烧写步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#制作烧片器镜像" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        制作烧片器镜像
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#上载步骤_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        上载步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#DDR烧写" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DDR烧写
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DDR烧写">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#适用场景_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        适用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#烧写步骤_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        烧写步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#合并镜像" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        合并镜像
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="合并镜像">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#适用场景_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        适用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#操作步骤" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        操作步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#首选项设置" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        首选项设置
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="首选项设置">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#命令设置" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        命令设置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#TFTP设置" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TFTP设置
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#其他设置" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        其他设置
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#FAQ" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FAQ
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FAQ">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#BurnTool烧写中出现TFTP超时提示时的解决办法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BurnTool烧写中出现TFTP超时提示时的解决办法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#如何使用外置的tftpd32进行镜像下载？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何使用外置的tftpd32进行镜像下载？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#BurnTool烧写Fastboot分区时，工具出现报错“Failed-to-send-start-frame”的解决办法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BurnTool烧写Fastboot分区时，工具出现报错“Failed to send start frame”的解决办法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#BurnTool烧写Fastboot分区时，控制台只打印了一段“#########”后停止打印，且工具出现报错“Failed-to-send-head-frame”的解决办法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BurnTool烧写Fastboot分区时，控制台只打印了一段“#########”后停止打印，且工具出现报错“Failed to send head frame”的解决办法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#BurnTool烧写Fastboot分区时，工具出现报错“Failed-to-send-data-frame”的解决办法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BurnTool烧写Fastboot分区时，工具出现报错“Failed to send data frame”的解决办法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#BurnTool烧写Fastboot分区时，工具出现报错“Failed-to-execute-command”的解决办法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BurnTool烧写Fastboot分区时，工具出现报错“Failed to execute command”的解决办法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#对于文件传输方式的选择，需要注意什么？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        对于文件传输方式的选择，需要注意什么？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#按地址烧写界面，文件的长度要求？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        按地址烧写界面，文件的长度要求？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#遇到点击烧写，断电重启后，不开始烧写，可能原因？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        遇到点击烧写，断电重启后，不开始烧写，可能原因？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#串口找不到或tftp启动失败或报tftp端口被占用的原因？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        串口找不到或tftp启动失败或报tftp端口被占用的原因？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#烧写Nand时控制台打印pure-data-length和len_incl_bad分别是什么含义？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        烧写Nand时控制台打印pure data length和len_incl_bad分别是什么含义？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#单板DDR-Training失败的情况下工具会有什么打印？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单板DDR Training失败的情况下工具会有什么打印？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#反馈BurnTool使用过程中出现问题时需要提供什么？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        反馈BurnTool使用过程中出现问题时需要提供什么？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#如何查看是否有进程占用了tftp的69端口？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如何查看是否有进程占用了tftp的69端口？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#如果是64位的PC且只安装了64位版本的JRE？" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        如果是64位的PC且只安装了64位版本的JRE？
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#非中文语言系统无法烧写中文路径镜像" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        非中文语言系统无法烧写中文路径镜像
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#缩略语" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        缩略语
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="导航栏" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    工具中心
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../../../../zh-CN/06工具中心/ToolPlatform/ToolPlatform工具平台使用指南/ToolPlatform工具平台%20使用指南.md" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    ToolPlatform
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="BurnTool-工具使用指南">BurnTool 工具使用指南</h1>
+<h2 id="前言">前言<a name="ZH-CN_TOPIC_0000001443952846"></a></h2>
+<p><strong>概述<a name="section94015722114"></a></strong></p>
+<p>本文档主要介绍BurnTool烧写工具的使用方法，适用于一键烧写所有程序镜像到单板flash上的场景、单板已有boot可按地址烧写其他程序镜像到单板flash上的场景，以及在空板上只烧写boot到单板flash上的场景。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+本文未有特殊说明，Hi3516CV610、Hi3516CV608、Hi3516DV500、Hi3519DV500和Hi3511CV100内容完全一致。</p>
+</blockquote>
+<p><strong>产品版本<a name="section1241074213"></a></strong></p>
+<p>与本文档相对应的产品版本如下。</p>
+<p><a name="table16437719210"></a></p>
+<table><thead align="left"><tr id="row75927132112"><th class="cellrowborder" valign="top" width="31.759999999999998%" id="mcps1.1.3.1.1"><p id="p135997202113"><a name="p135997202113"></a><a name="p135997202113"></a>产品名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="68.24%" id="mcps1.1.3.1.2"><p id="p145917742113"><a name="p145917742113"></a><a name="p145917742113"></a>产品版本</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row155916713213"><td class="cellrowborder" valign="top" width="31.759999999999998%" headers="mcps1.1.3.1.1 "><p id="p13591471219"><a name="p13591471219"></a><a name="p13591471219"></a>Hi3519D</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.24%" headers="mcps1.1.3.1.2 "><p id="p18594716219"><a name="p18594716219"></a><a name="p18594716219"></a>V500</p>
+</td>
+</tr>
+<tr id="row4960122982419"><td class="cellrowborder" valign="top" width="31.759999999999998%" headers="mcps1.1.3.1.1 "><p id="p486653217248"><a name="p486653217248"></a><a name="p486653217248"></a>Hi3516D</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.24%" headers="mcps1.1.3.1.2 "><p id="p1786616322247"><a name="p1786616322247"></a><a name="p1786616322247"></a>V500</p>
+</td>
+</tr>
+<tr id="row18998122011221"><td class="cellrowborder" valign="top" width="31.759999999999998%" headers="mcps1.1.3.1.1 "><p id="p63331555172315"><a name="p63331555172315"></a><a name="p63331555172315"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.24%" headers="mcps1.1.3.1.2 "><p id="p141352132417"><a name="p141352132417"></a><a name="p141352132417"></a>V608</p>
+</td>
+</tr>
+<tr id="row1065616328394"><td class="cellrowborder" valign="top" width="31.759999999999998%" headers="mcps1.1.3.1.1 "><p id="p122296813558"><a name="p122296813558"></a><a name="p122296813558"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.24%" headers="mcps1.1.3.1.2 "><p id="p152294865520"><a name="p152294865520"></a><a name="p152294865520"></a>V610</p>
+</td>
+</tr>
+<tr id="row387431772913"><td class="cellrowborder" valign="top" width="31.759999999999998%" headers="mcps1.1.3.1.1 "><p id="p9874121710296"><a name="p9874121710296"></a><a name="p9874121710296"></a>Hi3511C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.24%" headers="mcps1.1.3.1.2 "><p id="p168747177299"><a name="p168747177299"></a><a name="p168747177299"></a>V100</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>读者对象<a name="section18436710211"></a></strong></p>
+<p>本文档（本指南）主要适用于以下工程师：</p>
+<ul>
+<li>技术支持工程师</li>
+<li>硬件开发工程师</li>
+</ul>
+<p><strong>符号约定<a name="section133020216410"></a></strong></p>
+<p>在本文中可能出现下列标志，它们所代表的含义如下。</p>
+<p><a name="table2622507016410"></a></p>
+<table><thead align="left"><tr id="row1530720816410"><th class="cellrowborder" valign="top" width="20.580000000000002%" id="mcps1.1.3.1.1"><p id="p6450074116410"><a name="p6450074116410"></a><a name="p6450074116410"></a><strong id="b2136615816410"><a name="b2136615816410"></a><a name="b2136615816410"></a>符号</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="79.42%" id="mcps1.1.3.1.2"><p id="p5435366816410"><a name="p5435366816410"></a><a name="p5435366816410"></a><strong id="b5941558116410"><a name="b5941558116410"></a><a name="b5941558116410"></a>说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1372280416410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p3734547016410"><a name="p3734547016410"></a><a name="p3734547016410"></a><a name="image2670064316410"></a><a name="image2670064316410"></a><span><img class="" id="image2670064316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001623896065.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p1757432116410"><a name="p1757432116410"></a><a name="p1757432116410"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row466863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1432579516410"><a name="p1432579516410"></a><a name="p1432579516410"></a><a name="image4895582316410"></a><a name="image4895582316410"></a><span><img class="" id="image4895582316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001573377110.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p959197916410"><a name="p959197916410"></a><a name="p959197916410"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row123863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1232579516410"><a name="p1232579516410"></a><a name="p1232579516410"></a><a name="image1235582316410"></a><a name="image1235582316410"></a><span><img class="" id="image1235582316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001573536454.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p123197916410"><a name="p123197916410"></a><a name="p123197916410"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row5786682116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p2204984716410"><a name="p2204984716410"></a><a name="p2204984716410"></a><a name="image4504446716410"></a><a name="image4504446716410"></a><span><img class="" id="image4504446716410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001623776153.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4388861916410"><a name="p4388861916410"></a><a name="p4388861916410"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
+<p id="p1238861916410"><a name="p1238861916410"></a><a name="p1238861916410"></a>“须知”不涉及人身伤害。</p>
+</td>
+</tr>
+<tr id="row2856923116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p5555360116410"><a name="p5555360116410"></a><a name="p5555360116410"></a><a name="image799324016410"></a><a name="image799324016410"></a><span><img class="" id="image799324016410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001623975705.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4612588116410"><a name="p4612588116410"></a><a name="p4612588116410"></a>对正文中重点信息的补充说明。</p>
+<p id="p1232588116410"><a name="p1232588116410"></a><a name="p1232588116410"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>修订记录<a name="section1530582391712"></a></strong></p>
+<p>修订记录累积了每次文档更新的说明。最新版本的文档包含以前所有文档版本的更新内容。</p>
+<p><a name="table1557726816410"></a></p>
+<table><thead align="left"><tr id="row2942532716410"><th class="cellrowborder" valign="top" width="16.03%" id="mcps1.1.4.1.1"><p id="p3778275416410"><a name="p3778275416410"></a><a name="p3778275416410"></a><strong id="b5687322716410"><a name="b5687322716410"></a><a name="b5687322716410"></a>文档版本</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="24.42%" id="mcps1.1.4.1.2"><p id="p5627845516410"><a name="p5627845516410"></a><a name="p5627845516410"></a><strong id="b5800814916410"><a name="b5800814916410"></a><a name="b5800814916410"></a>发布日期</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="59.550000000000004%" id="mcps1.1.4.1.3"><p id="p2382284816410"><a name="p2382284816410"></a><a name="p2382284816410"></a><strong id="b3316380216410"><a name="b3316380216410"></a><a name="b3316380216410"></a>修改说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row5947359616410"><td class="cellrowborder" valign="top" width="16.03%" headers="mcps1.1.4.1.1 "><p id="p2149706016410"><a name="p2149706016410"></a><a name="p2149706016410"></a>00B01</p>
+</td>
+<td class="cellrowborder" valign="top" width="24.42%" headers="mcps1.1.4.1.2 "><p id="p648803616410"><a name="p648803616410"></a><a name="p648803616410"></a><span id="ph11250113719499"><a name="ph11250113719499"></a><a name="ph11250113719499"></a>2026-06-30</span></p>
+</td>
+<td class="cellrowborder" valign="top" width="59.550000000000004%" headers="mcps1.1.4.1.3 "><p id="p1946537916410"><a name="p1946537916410"></a><a name="p1946537916410"></a>第1次临时版本发布。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="概述">概述<a name="ZH-CN_TOPIC_0000001493313469"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001443473022">工具概述</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001493432965">应用场景</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001493592873">烧写原理</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001443952850">工具与单板器件匹配关系说明</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001443792870">环境准备</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001606171860">USB PC端驱动安装</a></strong>  </p>
+</li>
+</ul>
+<h3 id="工具概述">工具概述<a name="ZH-CN_TOPIC_0000001443473022"></a></h3>
+<p>BurnTool工具主要是用于镜像烧写、镜像上载与烧片器镜像制作的多功能工具。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+当前工具只支持在64位操作系统上使用。</p>
+</blockquote>
+<h3 id="应用场景">应用场景<a name="ZH-CN_TOPIC_0000001493432965"></a></h3>
+<p>BurnTool工具三大主要功能的应用场景如下：</p>
+<ul>
+<li>镜像烧写：应用于将镜像通过串口、网口或USB口烧写到对应Flash地址上；</li>
+<li>镜像上载：应用于将Flash地址上数据通过DDR导出到PC上的文件中；</li>
+<li>烧片器镜像制作：应用于将分区表中的镜像按照烧片器工具要求的格式打包成对应的镜像文件以供烧片器量产烧写。</li>
+</ul>
+<h3 id="烧写原理">烧写原理<a name="ZH-CN_TOPIC_0000001493592873"></a></h3>
+<p>uboot烧写原理：BurnTool工具在开始烧写后，首先与bootrom进行交互，工具DDR参数传送到bootrom，即为uboot下载阶段5%处，然后初始化DDR，再把uboot传输到DDR中，uboot下载阶段100%处表示传输完毕，再从DDR启动uboot，uboot启动完成后，工具开始与uboot进行交互，发送烧写命令，将DDR中的uboot烧写到Flash对应地址中。</p>
+<p>其他镜像分区烧写原理：其他镜像分区，如kernel，rootfs等分区，工具默认采用网口传输的方式，客户可选择裸烧和非裸烧两种方式进行烧写，裸烧即为在按分区烧写或按Emmc烧写中勾选uboot进行烧写，此时uboot会被烧写到Flash中，非裸烧即为不勾选uboot，仅勾选其他分区进行烧写，此时需要保证当前单板上已经存在uboot，烧写时工具会启动uboot，与其交互，通过向uboot发送TFTP命令与Write命令，完成烧写。</p>
+<h3 id="工具与单板器件匹配关系说明">工具与单板器件匹配关系说明<a name="ZH-CN_TOPIC_0000001443952850"></a></h3>
+<p>对不同的单板，BurnTool工具在功能与器件上的支持有所差异。具体支持情况如<a href="#_Ref382475342">表1</a>所示。</p>
+<p><strong>表 1</strong>  工具与单板器件匹配关系说明</p>
+<p><a name="_Ref382475342"></a></p>
+<table><thead align="left"><tr id="row630mcpsimp"><th class="cellrowborder" rowspan="2" valign="top" id="mcps1.2.16.1.1"><p id="p632mcpsimp"><a name="p632mcpsimp"></a><a name="p632mcpsimp"></a>产品名称</p>
+</th>
+<th class="cellrowborder" colspan="4" valign="top" id="mcps1.2.16.1.2"><p id="p634mcpsimp"><a name="p634mcpsimp"></a><a name="p634mcpsimp"></a>Flash类型</p>
+</th>
+<th class="cellrowborder" colspan="5" valign="top" id="mcps1.2.16.1.3"><p id="p636mcpsimp"><a name="p636mcpsimp"></a><a name="p636mcpsimp"></a>文件系统</p>
+</th>
+<th class="cellrowborder" colspan="2" valign="top" id="mcps1.2.16.1.4"><p id="p638mcpsimp"><a name="p638mcpsimp"></a><a name="p638mcpsimp"></a>高级功能</p>
+</th>
+<th class="cellrowborder" colspan="3" valign="top" id="mcps1.2.16.1.5"><p id="p640mcpsimp"><a name="p640mcpsimp"></a><a name="p640mcpsimp"></a>通用接口</p>
+</th>
+</tr>
+<tr id="row641mcpsimp"><th class="cellrowborder" valign="top" id="mcps1.2.16.2.1"><p id="p643mcpsimp"><a name="p643mcpsimp"></a><a name="p643mcpsimp"></a>Spi nor</p>
+</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.16.2.2"><p id="p645mcpsimp"><a name="p645mcpsimp"></a><a name="p645mcpsimp"></a>Spi Nand/Nand</p>
+</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.16.2.3"><p id="p647mcpsimp"><a name="p647mcpsimp"></a><a name="p647mcpsimp"></a>eMMC</p>
+</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.16.2.4"><p id="p649mcpsimp"><a name="p649mcpsimp"></a><a name="p649mcpsimp"></a>Ufs</p>
+</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.16.2.5"><p id="p651mcpsimp"><a name="p651mcpsimp"></a><a name="p651mcpsimp"></a>Yaffs</p>
+</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.16.2.6"><p id="p653mcpsimp"><a name="p653mcpsimp"></a><a name="p653mcpsimp"></a>Jffs2</p>
+</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.16.2.7"><p id="p655mcpsimp"><a name="p655mcpsimp"></a><a name="p655mcpsimp"></a>SquashFS</p>
+</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.16.2.8"><p id="p657mcpsimp"><a name="p657mcpsimp"></a><a name="p657mcpsimp"></a>UBI</p>
+</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.16.2.9"><p id="p659mcpsimp"><a name="p659mcpsimp"></a><a name="p659mcpsimp"></a>ext3/4</p>
+</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.16.2.10"><p id="p661mcpsimp"><a name="p661mcpsimp"></a><a name="p661mcpsimp"></a>CA</p>
+</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.16.2.11"><p id="p663mcpsimp"><a name="p663mcpsimp"></a><a name="p663mcpsimp"></a>Bad Check</p>
+</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.16.2.12"><p id="p665mcpsimp"><a name="p665mcpsimp"></a><a name="p665mcpsimp"></a>串口</p>
+</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.16.2.13"><p id="p668mcpsimp"><a name="p668mcpsimp"></a><a name="p668mcpsimp"></a>网口</p>
+</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.16.2.14"><p id="p671mcpsimp"><a name="p671mcpsimp"></a><a name="p671mcpsimp"></a>USB</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row673mcpsimp"><td class="cellrowborder" valign="top" width="11.917614816045177%" headers="mcps1.2.16.1.1 mcps1.2.16.2.1 "><p id="p123081314124917"><a name="p123081314124917"></a><a name="p123081314124917"></a>Hi3519DV500</p>
+<p id="p675mcpsimp"><a name="p675mcpsimp"></a><a name="p675mcpsimp"></a>Hi3516CV610</p>
+<p id="p19669391123"><a name="p19669391123"></a><a name="p19669391123"></a>Hi3511CV110</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.286853251391079%" headers="mcps1.2.16.1.2 mcps1.2.16.2.2 "><p id="p677mcpsimp"><a name="p677mcpsimp"></a><a name="p677mcpsimp"></a>●</p>
+</td>
+<td class="cellrowborder" valign="top" width="8.603936550120421%" headers="mcps1.2.16.1.2 mcps1.2.16.2.3 "><p id="p679mcpsimp"><a name="p679mcpsimp"></a><a name="p679mcpsimp"></a>●</p>
+</td>
+<td class="cellrowborder" valign="top" width="7.590731666805081%" headers="mcps1.2.16.1.2 mcps1.2.16.2.4 "><p id="p681mcpsimp"><a name="p681mcpsimp"></a><a name="p681mcpsimp"></a>●</p>
+</td>
+<td class="cellrowborder" valign="top" width="5.946349970932645%" headers="mcps1.2.16.1.2 mcps1.2.16.2.5 "><p id="p683mcpsimp"><a name="p683mcpsimp"></a><a name="p683mcpsimp"></a>○</p>
+</td>
+<td class="cellrowborder" valign="top" width="4.933145087617307%" headers="mcps1.2.16.1.3 mcps1.2.16.2.6 "><p id="p685mcpsimp"><a name="p685mcpsimp"></a><a name="p685mcpsimp"></a>○</p>
+</td>
+<td class="cellrowborder" valign="top" width="5.813470641973257%" headers="mcps1.2.16.1.3 mcps1.2.16.2.7 "><p id="p687mcpsimp"><a name="p687mcpsimp"></a><a name="p687mcpsimp"></a>●</p>
+</td>
+<td class="cellrowborder" valign="top" width="7.39971763142596%" headers="mcps1.2.16.1.3 mcps1.2.16.2.8 "><p id="p689mcpsimp"><a name="p689mcpsimp"></a><a name="p689mcpsimp"></a>●</p>
+</td>
+<td class="cellrowborder" valign="top" width="4.3185781911801335%" headers="mcps1.2.16.1.3 mcps1.2.16.2.9 "><p id="p691mcpsimp"><a name="p691mcpsimp"></a><a name="p691mcpsimp"></a>●</p>
+</td>
+<td class="cellrowborder" valign="top" width="6.428037538410431%" headers="mcps1.2.16.1.3 mcps1.2.16.2.10 "><p id="p693mcpsimp"><a name="p693mcpsimp"></a><a name="p693mcpsimp"></a>●</p>
+</td>
+<td class="cellrowborder" valign="top" width="5.813470641973257%" headers="mcps1.2.16.1.4 mcps1.2.16.2.11 "><p id="p695mcpsimp"><a name="p695mcpsimp"></a><a name="p695mcpsimp"></a>○</p>
+</td>
+<td class="cellrowborder" valign="top" width="7.507682086205462%" headers="mcps1.2.16.1.4 mcps1.2.16.2.12 "><p id="p697mcpsimp"><a name="p697mcpsimp"></a><a name="p697mcpsimp"></a>○</p>
+</td>
+<td class="cellrowborder" valign="top" width="5.813470641973257%" headers="mcps1.2.16.1.5 mcps1.2.16.2.13 "><p id="p699mcpsimp"><a name="p699mcpsimp"></a><a name="p699mcpsimp"></a>●</p>
+</td>
+<td class="cellrowborder" valign="top" width="5.813470641973257%" headers="mcps1.2.16.1.5 mcps1.2.16.2.14 "><p id="p701mcpsimp"><a name="p701mcpsimp"></a><a name="p701mcpsimp"></a>●</p>
+</td>
+<td class="cellrowborder" valign="top" width="5.813470641973257%" headers="mcps1.2.16.1.5 "><p id="p703mcpsimp"><a name="p703mcpsimp"></a><a name="p703mcpsimp"></a>●</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>注：●表示支持；○表示不支持。</p>
+<h3 id="环境准备">环境准备<a name="ZH-CN_TOPIC_0000001443792870"></a></h3>
+<p>BurnTool工具烧写的环境准备如下：</p>
+<ol>
+<li>PC与单板之间连接好串口、网线，且因工具烧写需要涉及到与bootrom交互，故单板硬件上bootrom_sel需要设置为1，从bootrom启动。</li>
+<li>把位于SDK发布包中的ToolPlatform-X.X.X.zip（路径：01.software/common pc/ToolPlatform），拷贝到PC上（PC要求安装Win7、Win10操作系统）的某个本地硬盘。</li>
+<li>
+<p>解压ToolPlatform-X.X.X.zip，双击工具目录下的ToolPlatform.exe，打开ToolPlatform工具，如<a href="#_Ref427762404">图1</a>所示。</p>
+<p><strong>图 1</strong>  从ToolPlatform工具目录打开ToolPlatform工具<a name="_Ref427762404"></a><br />
+<img alt="" src="../figures/%E4%BB%8EToolPlatform%E5%B7%A5%E5%85%B7%E7%9B%AE%E5%BD%95%E6%89%93%E5%BC%80ToolPlatform%E5%B7%A5%E5%85%B7.png" title="从ToolPlatform工具目录打开ToolPlatform工具" /></p>
+</li>
+<li>
+<p>在欢迎页中选择BurnTool工具，如<a href="#fig251211014300">图2</a>所示。</p>
+<p><strong>图 2</strong>  选择BurnTool工具<a name="fig251211014300"></a><br />
+<img alt="" src="../figures/%E9%80%89%E6%8B%A9BurnTool%E5%B7%A5%E5%85%B7.png" title="选择BurnTool工具" /></p>
+</li>
+<li>
+<p>参数配置，选择连接单板所用的串口，选择PC端使用的网络IP地址，配置好单板的MAC地址、IP地址、子网掩码以及网关，波特率、停止位、校验位，配置如<a href="#fig1310419315512">图3</a>所示。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+-   所选择的PC的服务器IP必须和单板的网络配置在同一个网段内，否则无法通过网口烧写除fastboot以外的其他镜像（fastboot镜像是通过串口烧写的）。<br />
+-   烧写时，烧写小板的波特率需要与tool所选的波特率匹配。比如，如果选用4M的烧写速率，需要串口烧写小板也支持对应4M波特率(客户根据使用场景选择设计匹配速率的串口工具小板)。</p>
+</blockquote>
+<p><strong>图 3</strong>  参数设置<a name="fig1310419315512"></a><br />
+<img alt="" src="../figures/%E5%8F%82%E6%95%B0%E8%AE%BE%E7%BD%AE.png" title="参数设置" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+建议使用网口和USB口，串口比较慢。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="USB-PC端驱动安装">USB PC端驱动安装<a name="ZH-CN_TOPIC_0000001606171860"></a></h3>
+<p>由于PC端Tools工具与单板USB接口之间通信基于libusb的应用，所以需要在PC端安装指定驱动（仅安装一次，不依赖Tools工具)，安装步骤如下：</p>
+<ol>
+<li>
+<p>按住单板上的update键，通过单板开关上下电，PC端设备管理器出现新硬件设备。</p>
+<p>注：对于Hi3519DV500和Hi3516DV500的demo单板，如果没有出现新设备，请修改板子到USB deviece状态，即：焊接R4811，断开R4812，参考《Hi3519DV500 Demo 单板使用指南》，2.5章节中表“USB deviece 和VO RESET 使用切换配置”。</p>
+</li>
+<li>
+<p>下载zadig开源软件。</p>
+<p>开源软件托管网址为：<a href="https://zadig.akeo.ie/" target="_blank" rel="noopener noreferrer">https://zadig.akeo.ie/</a></p>
+<p>下载其安装程序如：zadig_2.5.exe</p>
+</li>
+<li>
+<p>双击运行 zadig_2.5.exe 可执行文件，选择 Options-&gt;List All Devices，点击选择List All Devices，如<a href="#fig117197491259">图1</a>所示。</p>
+<p><strong>图 1</strong>  Zadig Options<a name="fig117197491259"></a><br />
+<img alt="" src="../figures/Zadig-Options.png" title="Zadig-Options" /></p>
+</li>
+<li>
+<p>按住单板上的update键后，再重新上电，在红色方框位置选择正确的设备，然后方框内选择驱动libusb-win32，点击“Install Driver”或者“Replace Driver”，如<a href="#fig1460212121971">图2</a>所示。注：如果安装libusb-win32驱动，执行完步骤7，重启电脑后无法烧写，可能libusb-win32驱动不适用该电脑，可以将驱动选择改成libusbK，再从步骤4开始执行，安装libusbK驱动，如<a href="#fig1142313381806">图3</a>。</p>
+<p><strong>图 2</strong>  Zadig安装libusb-win32驱动<a name="fig1460212121971"></a><br />
+<img alt="" src="../figures/Zadig%E5%AE%89%E8%A3%85libusb-win32%E9%A9%B1%E5%8A%A8.png" title="Zadig安装libusb-win32驱动" /></p>
+<p><strong>图 3</strong>  Zadig安装libusbK驱动<a name="fig1142313381806"></a><br />
+<img alt="" src="../figures/Zadig%E5%AE%89%E8%A3%85libusbK%E9%A9%B1%E5%8A%A8.png" title="Zadig安装libusbK驱动" /></p>
+</li>
+<li>
+<p><a href="#fig718720440816">图4</a>代表驱动安装成功。</p>
+<p><strong>图 4</strong>  Driver Installation<a name="fig718720440816"></a><br />
+<img alt="" src="../figures/Driver-Installation.png" title="Driver-Installation" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+可能会出现弹框安装驱动失败的情况，实际上已经安装成功了，以步骤6中，设备管理器中是否可以识别USB设备为准</p>
+</blockquote>
+</li>
+<li>
+<p>libusb-win32 安装完成之后，按住单板上的update键，再单板上下电，此时打开设备管理器，查看是否出现新的设备，<a href="#fig973272151120">图6 libusb-win32 devices</a>为正确安装后的状态。如果你安装的是libusbK驱动，新的设备如<a href="#fig187873221682">图6</a>。</p>
+<p><strong>图 5</strong>  libusb-win32 devices<a name="fig973272151120"></a>  </p>
+<p><img alt="" src="../figures/%E6%88%AA%E5%9B%BE.png" /></p>
+<p><strong>图 6</strong>  libusbK USB Devices<a name="fig187873221682"></a><br />
+<img alt="" src="../figures/libusbK-USB-Devices.png" title="libusbK-USB-Devices" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+-   按住单板上的update键，再单板上下电，设备管理器中的识别的usb设备可能只会出现一小会，就会消失，是正常现象，可以在使用Toolplatform工具进行USB烧写过程中，打开设备管理器，此时USB设备一直会存在。<br />
+-   注意每次使用USB烧写，都需要按住单板上的update键，再单板上下电，才能正常烧写。</p>
+</blockquote>
+</li>
+<li>
+<p>安装完之后，需要重新启动电脑，这样，就可以使用USB升级了。</p>
+</li>
+</ol>
+<h2 id="按分区烧写">按分区烧写<a name="ZH-CN_TOPIC_0000001493432969"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001493592869">适用场景</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001443952858">烧写步骤</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001493712853">选中分区表单行点击跳转进入按地址烧写界面</a></strong>  </p>
+</li>
+</ul>
+<h3 id="适用场景">适用场景<a name="ZH-CN_TOPIC_0000001493592869"></a></h3>
+<p>按分区烧写功能，只适用于Spi Nand、Nand、Spi Nor烧写，不管单板上有没有boot都适用，可实现一键烧写所有镜像。</p>
+<h3 id="烧写步骤">烧写步骤<a name="ZH-CN_TOPIC_0000001443952858"></a></h3>
+<p>具体烧写步骤如下：</p>
+<ol>
+<li>
+<p>打开BurnTool后，切换到“Burn by Partition”页签，如<a href="#fig1560862365516">图1</a>所示。</p>
+<p><strong>图 1</strong>  BurnTool按分区烧写<a name="fig1560862365516"></a><br />
+<img alt="" src="../figures/BurnTool%E6%8C%89%E5%88%86%E5%8C%BA%E7%83%A7%E5%86%99.png" title="BurnTool按分区烧写" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+-   软件第一次打开时，软件会自动生成默认参数，当这些参数配置信息更改时，软件会自动记录更改后的最新值，在软件正常退出时，自动保存配置参数，下次启动时，使用最新配置参数，如软件遇到非法退出，软件的配置参数可能不会被正确保存，即最近一次的参数修改失效。<br />
+-   点击保存按钮，可以将当前板端的网络配置保存起来，点击加载按钮，可以从保存的结果中选择一组配置作为当前配置。<br />
+-   切换“默认采用XML所在路径”的勾选状态，若勾选，则优先在XML路径下查找该分区文件。若不勾选，则优先采用绝对路径查找该文件，若找不到，再尝试以在XML所在目录下查找该文件。<br />
+-   <strong>XML是一个配置文件用于保存分区表信息的，可以将编辑的分区表使用工具上的保存按钮保存成一个XML文件，下次打开工具时，将XML导入进来，分区表信息就直接加载进来。</strong></p>
+</blockquote>
+</li>
+<li>
+<p>配置单板分区信息，点击浏览按钮<img alt="" src="../figures/zh-cn_image_0000001443952874.png" />，可选择已设置好的分区表信息的XML，载入到工具中，分区信息被加载，如<a href="#fig31391842121411">图2</a>所示。</p>
+<p><strong>图 2</strong>  配置单板分区信息<a name="fig31391842121411"></a><br />
+<img alt="" src="../figures/%E9%85%8D%E7%BD%AE%E5%8D%95%E6%9D%BF%E5%88%86%E5%8C%BA%E4%BF%A1%E6%81%AF.png" title="配置单板分区信息" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+-   分区信息只用于烧写，并不决定单板真正的分区划分，单板真实的分区划分还是由单板的bootargs决定，请将此处的分区信息与单板bootargs指定的分区信息对应，否则可能会出错。<br />
+-   BurnTool支持分区路径不一致，支持远程烧写，即为烧写的镜像是远程路径下的镜像。<br />
+-   分区被选中，但未选择烧写文件时，此分区在烧写过程中将会被擦除。<br />
+-   如果需要将所有分区的文件打包成一个镜像烧写（对于nandflash，由于其本身特性特殊，如果文件系统分区是可读写的文件系统，则不能一起打包），则打包的文件必须要加载到fastboot分区进行烧写，并且镜像中需要包含fastboot，才可以正常烧写。因烧写fastboot分区是采用串口方式烧写，烧写速度较慢，故不推荐使用此种方法进行烧写。</p>
+</blockquote>
+<p>修改分区信息可以直接修改xml格式的分区信息文件，也可以在工具中修改，用鼠标点击需修改分区的所在列，即可修改，如<a href="#fig1732932542211">图3</a>所示。</p>
+<p><strong>图 3</strong>  编辑单板分区信息<a name="fig1732932542211"></a><br />
+<img alt="" src="../figures/%E7%BC%96%E8%BE%91%E5%8D%95%E6%9D%BF%E5%88%86%E5%8C%BA%E4%BF%A1%E6%81%AF.png" title="编辑单板分区信息" /></p>
+<ul>
+<li>单击按钮<img alt="" src="../figures/zh-cn_image_0000001443473066.jpg" />，可以增加一行分区。可以在这一行修改分区名，选择flash类型以及是否需要文件系统以及文件系统的类型，还可以修改分区的起始地址和分区大小。</li>
+</ul>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+-   分区的起始地址和分区大小都是以KB或MB为单位，而且必须是flash块大小的整数倍，否则可能会出错。<br />
+-   分区的文件系统中jffs2不是特殊格式，直接选择none即可。</p>
+</blockquote>
+<ul>
+<li>单击按钮<img alt="" src="../figures/zh-cn_image_0000001443952882.jpg" />，可选择或改变该分区的烧写文件。</li>
+<li>
+<p>单击按钮<img alt="" src="../figures/zh-cn_image_0000001443473054.jpg" />，可删除该分区信息。</p>
+</li>
+<li>
+<p>单击按钮<img alt="" src="../figures/zh-cn_image_0000001443473062.jpg" />，选择所有要烧写的分区，进行一键烧写所有分区，再次单击按钮<img alt="" src="../figures/zh-cn_image_0000001493592905.jpg" />，则取消所有要烧写的分区，也可以点击复选框  <img alt="" src="../figures/zh-cn_image_0000001443792898.jpg" />，选择相应的分区进行烧写。</p>
+</li>
+<li>单击保存按钮<img alt="" src="../figures/zh-cn_image_0000001493592901.png" />，可以将编辑好的分区表保存为文件。</li>
+</ul>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+-   单板分区信息在第一次打开工具时可能没有xml格式的分区信息文件，此时可以在工具界面中直接填写或修改来创建单板分区信息，创建完成后，在关闭ToolPlatform工具时，弹出如<a href="#Figure2.5">图4</a>对话框，会提醒是否保存分区信息，点击“确定”，在弹出的对话框中选择要保存分区信息的路径，输入要保存的文件名，就会保存为xml格式的分区信息，点击“取消”，则关闭工具且不保存分区信息。<br />
+-   创建完成后在切换工具时，弹出如<a href="#Figure2.6">图5</a>话框，“确定”，在弹出的对话框中选择要保存分区信息的路径，输入要保存的文件名，就会保存为xml 格式的分区信息，点击“取消”，则切换视图且不保存分区信息。注意保存分区信息的文件名后缀必须为.xml格式，否则下次载入分区信息时可能会出错而无法正确载入分区信息。信息另存为如<a href="#Figure2.7">图6</a>所示。</p>
+</blockquote>
+<p><strong>图 4</strong>  关闭ToolPlatform工具时提醒是否保存分区信息界面<a name="Figure2.5"></a><br />
+<img alt="" src="../figures/%E5%85%B3%E9%97%ADToolPlatform%E5%B7%A5%E5%85%B7%E6%97%B6%E6%8F%90%E9%86%92%E6%98%AF%E5%90%A6%E4%BF%9D%E5%AD%98%E5%88%86%E5%8C%BA%E4%BF%A1%E6%81%AF%E7%95%8C%E9%9D%A2.png" title="关闭ToolPlatform工具时提醒是否保存分区信息界面" /></p>
+<p><strong>图 5</strong>  切换视图时提醒是否保存分区信息界面<a name="Figure2.6"></a><br />
+<img alt="" src="../figures/%E5%88%87%E6%8D%A2%E8%A7%86%E5%9B%BE%E6%97%B6%E6%8F%90%E9%86%92%E6%98%AF%E5%90%A6%E4%BF%9D%E5%AD%98%E5%88%86%E5%8C%BA%E4%BF%A1%E6%81%AF%E7%95%8C%E9%9D%A2.png" title="切换视图时提醒是否保存分区信息界面" /></p>
+<p><strong>图 6</strong>  分区信息保存界面<a name="Figure2.7"></a><br />
+<img alt="" src="../figures/%E5%88%86%E5%8C%BA%E4%BF%A1%E6%81%AF%E4%BF%9D%E5%AD%98%E7%95%8C%E9%9D%A2.png" title="分区信息保存界面" /></p>
+<p>选中当前最后一行，点击新建<img alt="" src="../figures/zh-cn_image_0000001443792906.jpg" />得到新的最后一行，然后在该行长度一栏中输入“-”，再加入该行的分区名、文件系统以及文件的引用路径，在之后的烧写中即可计算出该行的长度，该长度为整个器件的剩余长度。如<a href="#fig182941749113717">图7</a>所示。</p>
+<p><strong>图 7</strong>  新建单板分区信息后设置长度为“-”<a name="fig182941749113717"></a><br />
+<img alt="" src="../figures/%E6%96%B0%E5%BB%BA%E5%8D%95%E6%9D%BF%E5%88%86%E5%8C%BA%E4%BF%A1%E6%81%AF%E5%90%8E%E8%AE%BE%E7%BD%AE%E9%95%BF%E5%BA%A6%E4%B8%BA--.png" title="新建单板分区信息后设置长度为--" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+若用户在新建分区行时，未选中当前的最后一个分区，则新建的分区可能不是新的最后一个分区，则无法使用“-”来代表剩余长度。</p>
+</blockquote>
+</li>
+<li>
+<p>准备单板环境，选择一种传输方式，如<a href="#fig1151555110405">图8</a>所示，如果单板处于通电状态，给单板下电。</p>
+<p><strong>图 8</strong>  选择传输方式<a name="fig1151555110405"></a><br />
+<img alt="" src="../figures/%E9%80%89%E6%8B%A9%E4%BC%A0%E8%BE%93%E6%96%B9%E5%BC%8F.png" title="选择传输方式" /></p>
+<ul>
+<li>若选择网口，连接单板的串口和网口。</li>
+<li>若选择串口，连接单板的串口。</li>
+</ul>
+</li>
+<li>
+<p>烧写单板，点击烧写按钮<img alt="" src="../figures/zh-cn_image_0000001493592897.png" />，如<a href="#fig6884249121419">图9</a>所示。</p>
+<p><strong>图 9</strong>  点击烧写<a name="fig6884249121419"></a><br />
+<img alt="" src="../figures/%E7%82%B9%E5%87%BB%E7%83%A7%E5%86%99.png" title="点击烧写" /></p>
+</li>
+<li>
+<p>给单板上电，进入烧写过程，等待烧写完成。烧写过程如<a href="#fig297215536181">图10</a>所示。</p>
+<p><strong>图 10</strong>  烧写过程<a name="fig297215536181"></a><br />
+<img alt="" src="../figures/%E7%83%A7%E5%86%99%E8%BF%87%E7%A8%8B.png" title="烧写过程" /></p>
+<p>烧写过程的信息会在如上的控制台中显示。如果发现烧写出错，请再次检查单板：</p>
+<ul>
+<li>串口选择是否正确。</li>
+<li>IP地址是否正确，是否被占用。</li>
+<li>是否有短接单板上的自举跳线。</li>
+</ul>
+</li>
+<li>
+<p>烧写完成，连接终端工具，重启单板。</p>
+</li>
+</ol>
+<h3 id="选中分区表单行点击跳转进入按地址烧写界面">选中分区表单行点击跳转进入按地址烧写界面<a name="ZH-CN_TOPIC_0000001493712853"></a></h3>
+<p>按分区烧写提供了携带子分区信息即分区的分区名、文件系统以及文件的引用路径和起始地址以及分区长度跳转到按地址烧写界面，并采用该分区的信息直接录入到按地址烧写信息栏中，方便用户使用。在按分区烧写界面中选中分区表中的一行，点击跳转按钮<img alt="" src="../figures/zh-cn_image_0000001493313485.jpg" />，即可跳转到按地址烧写界面中。如<a href="#fig19742104082116">图1</a>与<a href="#fig1241812821916">图2</a>所示。</p>
+<p><strong>图 1</strong>  选中单行，点击跳转<a name="fig19742104082116"></a><br />
+<img alt="" src="../figures/%E9%80%89%E4%B8%AD%E5%8D%95%E8%A1%8C-%E7%82%B9%E5%87%BB%E8%B7%B3%E8%BD%AC.png" title="选中单行-点击跳转" /></p>
+<p><strong>图 2</strong>  进入按地址烧写界面<a name="fig1241812821916"></a><br />
+<img alt="" src="../figures/%E8%BF%9B%E5%85%A5%E6%8C%89%E5%9C%B0%E5%9D%80%E7%83%A7%E5%86%99%E7%95%8C%E9%9D%A2.png" title="进入按地址烧写界面" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+在跳转前，用户必须选中需要跳转到按地址烧写页面的分区行，跳转按钮才会显示。</p>
+</blockquote>
+<h2 id="按地址烧写">按地址烧写<a name="ZH-CN_TOPIC_0000001443792882"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001493592865">适用场景</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001493712849">烧写步骤</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001443632954">上载步骤</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001443632958">擦除步骤</a></strong>  </p>
+</li>
+</ul>
+<h3 id="适用场景_1">适用场景<a name="ZH-CN_TOPIC_0000001493592865"></a></h3>
+<p>单板已有boot。</p>
+<h3 id="烧写步骤_1">烧写步骤<a name="ZH-CN_TOPIC_0000001493712849"></a></h3>
+<p>具体烧写步骤如下：</p>
+<ol>
+<li>
+<p>切换到“Burn by Address”页签，如<a href="#fig77356229246">图1</a>所示。</p>
+<p><strong>图 1</strong>  地址烧写界面<a name="fig77356229246"></a><br />
+<img alt="" src="../figures/%E5%9C%B0%E5%9D%80%E7%83%A7%E5%86%99%E7%95%8C%E9%9D%A2.png" title="地址烧写界面" /></p>
+</li>
+<li>
+<p>配置单板烧写信息，选择要烧写的 flash类型，设置烧写起始地址和长度，选择要烧写的文件，如<a href="#fig416711217599">图2</a>所示界面。</p>
+<p><strong>图 2</strong>  配置单板烧写信息<a name="fig416711217599"></a><br />
+<img alt="" src="../figures/%E9%85%8D%E7%BD%AE%E5%8D%95%E6%9D%BF%E7%83%A7%E5%86%99%E4%BF%A1%E6%81%AF.png" title="配置单板烧写信息" /></p>
+</li>
+<li>
+<p>同2.2章节<a href="#li54051056191111">3</a>。</p>
+</li>
+<li>
+<p>单击烧写按钮<img alt="" src="../figures/zh-cn_image_0000001443632978.png" />，如<a href="#fig76431678115">图3</a>所示。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+按地址烧写时，用户无需选择文件类型，只要选择自己想要烧写的文件即可。由于yaffs文件（带OOB数据）和其他类型文件（不带OOB数据）的格式不同，工具会根据选定的文件在后台自动区分文件类型（工具中区分为yaffs类型和None类型），然后根据不同的类型来执行相应的烧写，给单板上电，进入烧写过程，等待烧写完成。</p>
+</blockquote>
+<p><strong>图 3</strong>  单击烧写<a name="fig76431678115"></a><br />
+<img alt="" src="../figures/%E5%8D%95%E5%87%BB%E7%83%A7%E5%86%99.png" title="单击烧写" /></p>
+</li>
+<li>
+<p>给单板上电，进入烧写过程，等待烧写完成。烧写过程如<a href="#fig46901351828">图4</a>所示。</p>
+<p><strong>图 4</strong>  烧写过程<a name="fig46901351828"></a><br />
+<img alt="" src="../figures/%E7%83%A7%E5%86%99%E8%BF%87%E7%A8%8B-0.png" title="烧写过程-0" /></p>
+<p>烧写过程的信息会在如上的“控制台”中打印输出。如果发现烧写出错，请再次检查单板：</p>
+<ul>
+<li>串口选择是否正确</li>
+<li>IP地址设置是否正确，是否被占用</li>
+<li>是否有短接单板上的自举跳线</li>
+</ul>
+<p>Erase操作和Burn操作类似，这里不再赘述。</p>
+</li>
+<li>
+<p>烧写完成，连接终端工具，重启单板。</p>
+</li>
+</ol>
+<h3 id="上载步骤">上载步骤<a name="ZH-CN_TOPIC_0000001443632954"></a></h3>
+<p>串口不支持上载。烧写和上载是两个逆反操作，烧写功能是将镜像文件烧录到单板上，而上载功能则是按照用户设置的起始地址和长度将这段区域的内容上载至PC。上载的具体步骤完全可以参考烧写步骤。这里列出两个和烧写步骤中不一样的地方，重复的地方不在累述。</p>
+<ol>
+<li>同3.2章节<a href="#li109341792610">1</a>。</li>
+<li>同3.2章节<a href="#li20792205132610">2</a>。</li>
+<li>
+<p>配置单板上载信息，选择要上载的flash类型，设置存储设备中待上载的起始地址及长度，并且设置上载后的保存文件。如<a href="#fig12876191611389">图1</a>所示。</p>
+<p><strong>图 1</strong>  上载信息<a name="fig12876191611389"></a><br />
+<img alt="" src="../figures/%E4%B8%8A%E8%BD%BD%E4%BF%A1%E6%81%AF.png" title="上载信息" /></p>
+</li>
+<li>
+<p>同3.2章节<a href="#li17763211278">3</a>。</p>
+</li>
+<li>
+<p>单击“upload”，器件类型为spi nand/nand，如果待上载区域的镜像是fastboot，kernel，ubifs等请选择Data whithout OOB，如果镜像是yaffs，请选择Data with OOB。如<a href="#_Ref416783742">图2</a>所示。</p>
+<p><strong>图 2</strong>  选择数据类型<a name="_Ref416783742"></a><br />
+<img alt="" src="../figures/%E9%80%89%E6%8B%A9%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B.png" title="选择数据类型" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+按地址上载时，用户需要明确指定要上载的数据类型。这一步操作是在用户点击“上载”按钮后的弹出对话框中完成的。如果用户在这一步选择错误，会导致上载后的数据跟原始的文件无法吻合。yaffs文件系统部分上载时，长度应该为pagesize + oobsize的倍数。<br />
+传输方式为网口时，需要使用支持tftpput命令的uboot镜像。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="擦除步骤">擦除步骤<a name="ZH-CN_TOPIC_0000001443632958"></a></h3>
+<p>擦除功能是从指定地址开始将指定长度的内容从板端擦除。擦除的步骤同烧写步骤类似，这里列出两个和烧写步骤中不一样的地方，重复的地方不再累述。</p>
+<ol>
+<li>同3.2章节<a href="#li109341792610">1</a>。</li>
+<li>同3.2章节<a href="#li20792205132610">2</a>。</li>
+<li>
+<p>配置单板擦除信息，选择要擦除的flash类型，设置存储设备中待擦除的起始地址及长度。如<a href="#fig10547163316314">图1</a>所示。</p>
+<p><strong>图 1</strong>  擦除信息<a name="fig10547163316314"></a><br />
+<img alt="" src="../figures/%E6%93%A6%E9%99%A4%E4%BF%A1%E6%81%AF.png" title="擦除信息" /></p>
+</li>
+<li>
+<p>同3.2章节<a href="#li17763211278">3</a>。</p>
+</li>
+<li>
+<p>单击“erase”，给单板上电，进入擦除过程，等待擦除完成。如<a href="#_Ref416783804">图2</a>所示。</p>
+<p><strong>图 2</strong>  擦除过程<a name="_Ref416783804"></a><br />
+<img alt="" src="../figures/%E6%93%A6%E9%99%A4%E8%BF%87%E7%A8%8B.png" title="擦除过程" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+擦除时，长度应该为blocksize的倍数。</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="Boot烧写">Boot烧写<a name="ZH-CN_TOPIC_0000001443952854"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001493712845">适用场景</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001493432957">烧写步骤</a></strong>  </p>
+</li>
+</ul>
+<h3 id="适用场景_2">适用场景<a name="ZH-CN_TOPIC_0000001493712845"></a></h3>
+<p>单板上没有boot，和按地址烧写配合，可完成单板所有镜像的烧写。</p>
+<h3 id="烧写步骤_2">烧写步骤<a name="ZH-CN_TOPIC_0000001493432957"></a></h3>
+<p>具体烧写步骤如下：</p>
+<ol>
+<li>
+<p>切换到“Burn Fastboot”页签，如<a href="#fig59899010107">图1</a>所示。</p>
+<p><strong>图 1</strong>  Fastboot烧写界面<a name="fig59899010107"></a><br />
+<img alt="" src="../figures/Fastboot%E7%83%A7%E5%86%99%E7%95%8C%E9%9D%A2.png" title="Fastboot烧写界面" /></p>
+</li>
+<li>
+<p>配置串口，选择连接单板所用的串口，配置如<a href="#_Ref416783851">图2</a>所示。</p>
+<p><strong>图 2</strong>  串口选择<a name="_Ref416783851"></a><br />
+<img alt="" src="../figures/%E4%B8%B2%E5%8F%A3%E9%80%89%E6%8B%A9.png" title="串口选择" /></p>
+</li>
+<li>
+<p>配置Boot烧写信息，配置如<a href="#fig6981215103111">图3</a>所示。</p>
+<p><strong>图 3</strong>  配置boot 烧写信息<a name="fig6981215103111"></a><br />
+<img alt="" src="../figures/%E9%85%8D%E7%BD%AEboot-%E7%83%A7%E5%86%99%E4%BF%A1%E6%81%AF.png" title="配置boot-烧写信息" /></p>
+</li>
+<li>
+<p>准备单板环境，如果单板处于通电状态，请给单板下电；</p>
+</li>
+<li>
+<p>点击烧写按钮<img alt="" src="../figures/zh-cn_image_0000001493592893.png" />，如<a href="#fig1999382113211">图4</a>所示。</p>
+<p><strong>图 4</strong>  点击Burn<a name="fig1999382113211"></a><br />
+<img alt="" src="../figures/%E7%82%B9%E5%87%BBBurn.png" title="点击Burn" /></p>
+</li>
+<li>
+<p>给单板上电，进入烧写过程，等待烧写完成。烧写过程如<a href="#_Ref416783918">图5</a>所示。</p>
+<p><strong>图 5</strong>  烧写过程<a name="_Ref416783918"></a><br />
+<img alt="" src="../figures/%E7%83%A7%E5%86%99%E8%BF%87%E7%A8%8B-1.png" title="烧写过程-1" /></p>
+<p>烧写过程的信息会在如上的“控制台”打印输出。如果发现烧写出错，请再次检查串口选择是否正确。</p>
+</li>
+<li>
+<p>烧写完成，连接终端工具，重启单板。</p>
+</li>
+</ol>
+<h2 id="eMMC烧写">eMMC烧写<a name="ZH-CN_TOPIC_0000001639952618"></a></h2>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+Hi3511CV100不支持eMMC烧写。</p>
+</blockquote>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001688274497">适用场景</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001688233693">烧写步骤</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001640113778">制作烧片器镜像</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001639954510">上载步骤</a></strong>  </p>
+</li>
+</ul>
+<h3 id="适用场景_3">适用场景<a name="ZH-CN_TOPIC_0000001688274497"></a></h3>
+<p>适用场景如下：只适用于eMMC烧写，不管单板上有没有boot都适用，可实现一键烧写所有镜像。</p>
+<h3 id="烧写步骤_3">烧写步骤<a name="ZH-CN_TOPIC_0000001688233693"></a></h3>
+<p>具体烧写步骤如下：</p>
+<ol>
+<li>
+<p>切换到“烧写eMMC”页签，如<a href="#fig10733727164915">图1</a>所示。</p>
+<p><strong>图 1</strong>  eMMC 烧写界面<a name="fig10733727164915"></a><br />
+<img alt="" src="../figures/eMMC-%E7%83%A7%E5%86%99%E7%95%8C%E9%9D%A2.png" title="eMMC-烧写界面" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+-   切换“默认采用XML所在路径”的勾选状态，若勾选，则优先在XML路径下查找该分区文件。若不勾选，则优先采用绝对路径查找该文件，若找不到，再尝试以在XML所在目录下查找该文件，该状态默认被勾选。<br />
+-   <strong>XML是一个配置文件用于保存分区表信息的，可以将编辑的分区表使用工具上的Save按钮保存成一个XML文件，下次打开工具时，将XML导入进来，分区表信息就直接加载进来。</strong></p>
+</blockquote>
+</li>
+<li>
+<p>配置单板分区信息，点击“浏览”，可选择已设置好的分区表信息，载入工具中，如<a href="#fig19253651205117">图2</a>所示界面。</p>
+<p><strong>图 2</strong>  配置单板分区信息<a name="fig19253651205117"></a><br />
+<img alt="" src="../figures/%E9%85%8D%E7%BD%AE%E5%8D%95%E6%9D%BF%E5%88%86%E5%8C%BA%E4%BF%A1%E6%81%AF-2.png" title="配置单板分区信息-2" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+如果所有分区的文件打包成一个镜像烧写时（由于eMMC文件系统分区需要创建分区表，因此文件系统分区不同时，则不能一起打包，Android版本不存在此问题），此镜像必须要放到fastboot分区，而且此镜像中要包含fastboot，另外由于此时是采用串口方式烧写，烧写速度比较慢，要耐心等待。</p>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+eMMC采用DOS分区格式，对于Ext3/4文件系统分区需要创建分区表信息，内核才可以正确识别Ext3/4 文件系统分区。</p>
+</blockquote>
+<p>要修改某个分区的信息可以直接修改保存为 xml格式的分区信息文件，也可以直接在工具中修改，如果要在工具中修改某个分区的信息，用鼠标点击这个分区所在的行，则会出现如<a href="#fig1254215405399">图3</a>所示。</p>
+<p><strong>图 3</strong>  编辑单板分区信息<a name="fig1254215405399"></a><br />
+<img alt="" src="../figures/%E7%BC%96%E8%BE%91%E5%8D%95%E6%9D%BF%E5%88%86%E5%8C%BA%E4%BF%A1%E6%81%AF-3.png" title="编辑单板分区信息-3" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+分区的起始大小和分区大小都是以KB或MB为单位，而且必须是eMMC扇区大小的整数倍，否则可能会出错。</p>
+</blockquote>
+<ul>
+<li>单击按钮<img alt="" src="../figures/zh-cn_image_0000001688250301.jpg" />，可以增加一行分区。可以在这一行修改分区名、选择是否需要文件系统以及文件系统的类型，还可以修改分区的起始大小和分区大小。</li>
+<li>单击按钮<img alt="" src="../figures/zh-cn_image_0000001688291093.jpg" />，可选择或改变该分区的烧写文件。</li>
+<li>单击按钮<img alt="" src="../figures/zh-cn_image_0000001688291097.jpg" />，可删除改分区信息。注意：这里fastboot 分区无法被删除，而且fastboot 分区名不能被修改，因为如果fastboot 分区被删除或fastboot 分区名被修改则无法实现一键烧写。</li>
+<li>单击按钮<img alt="" src="../figures/zh-cn_image_0000001688291105.jpg" />，选择所有要烧写的分区，进行一键烧写所有分区，再次单击按钮<img alt="" src="../figures/zh-cn_image_0000001640130398.jpg" />  ，则取消所有要烧写的分区，也可以点击复选框<img alt="" src="../figures/zh-cn_image_0000001640130402.jpg" />，选择相应的分区进行烧写。</li>
+<li>单击按钮<img alt="" src="../figures/zh-cn_image_0000001688291109.jpg" />，可以将编辑好的分区表保存为文件。</li>
+</ul>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+创建分区表后，切换透视图，会弹出如<a href="#fig0725202195510">图4</a>对话框，“确定”，在弹出的对话框中选择要保存分区信息的路径，输入要保存的文件名，就会保存为xml 格式的分区信息，点击“取消”，则切换视图且不保存分区信息。注意保存分区信息的文件名后缀必须为.xml格式，否则下次载入分区信息时可能会出错而无法正确载入分区信息。信息另存为如<a href="#fig196451156109">图6</a>所示。</p>
+</blockquote>
+<p><strong>图 4</strong>  关闭BurnTool工具时提醒是否保存分区信息界面<a name="fig0725202195510"></a><br />
+<img alt="" src="../figures/%E5%85%B3%E9%97%ADBurnTool%E5%B7%A5%E5%85%B7%E6%97%B6%E6%8F%90%E9%86%92%E6%98%AF%E5%90%A6%E4%BF%9D%E5%AD%98%E5%88%86%E5%8C%BA%E4%BF%A1%E6%81%AF%E7%95%8C%E9%9D%A2.png" title="关闭BurnTool工具时提醒是否保存分区信息界面" /></p>
+<p><strong>图 5</strong>  切换视图时提醒是否保存分区信息界面<a name="fig13640113718555"></a><br />
+<img alt="" src="../figures/%E5%88%87%E6%8D%A2%E8%A7%86%E5%9B%BE%E6%97%B6%E6%8F%90%E9%86%92%E6%98%AF%E5%90%A6%E4%BF%9D%E5%AD%98%E5%88%86%E5%8C%BA%E4%BF%A1%E6%81%AF%E7%95%8C%E9%9D%A2-4.png" title="切换视图时提醒是否保存分区信息界面-4" /></p>
+<p><strong>图 6</strong>  分区信息保存界面<a name="fig196451156109"></a><br />
+<img alt="" src="../figures/%E5%88%86%E5%8C%BA%E4%BF%A1%E6%81%AF%E4%BF%9D%E5%AD%98%E7%95%8C%E9%9D%A2-5.png" title="分区信息保存界面-5" /></p>
+</li>
+<li>
+<p>同<a href="#ZH-CN_TOPIC_0000001443952858">烧写步骤</a>  步骤 3一样。</p>
+</li>
+<li>
+<p>烧写单板，点击烧写按钮<img alt="" src="../figures/zh-cn_image_0000001688291117.png" />，如<a href="#fig79197461111">图7</a>所示。</p>
+<p><strong>图 7</strong>  点击烧写<a name="fig79197461111"></a><br />
+<img alt="" src="../figures/%E7%82%B9%E5%87%BB%E7%83%A7%E5%86%99-6.png" title="点击烧写-6" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+单板点击烧写按钮后，需长按单板端的 update 按键 + 复位键，至少 50ms，松开复位按键，确定进入update模式，再松开update按键。</p>
+</blockquote>
+</li>
+<li>
+<p>给单板上电，进入烧写过程，等待烧写完成。</p>
+<p>烧写过程的信息会在控制台中显示。</p>
+<ul>
+<li>串口选择是否正确。</li>
+<li>IP地址设置是否正确，地址是否被占用。</li>
+<li>是否有短接单板上的自举跳线。</li>
+</ul>
+</li>
+<li>
+<p>烧写完成，连接终端工具，重启单板。</p>
+</li>
+</ol>
+<h3 id="制作烧片器镜像">制作烧片器镜像<a name="ZH-CN_TOPIC_0000001640113778"></a></h3>
+<p>制作烧片器镜像功能可以将当前分区列表中选择的文件制作为烧片器镜像文件。配置好分区列表后，点击制作烧片器镜像按钮<img alt="" src="../figures/zh-cn_image_0000001689567473.png" />，在弹出的保存对话框中设置好文件路径，制作烧片器镜像就开始了，如<a href="#fig114434436368">图1</a>所示。</p>
+<p><strong>图 1</strong>  制作烧片器镜像过程<a name="fig114434436368"></a><br />
+<img alt="" src="../figures/%E5%88%B6%E4%BD%9C%E7%83%A7%E7%89%87%E5%99%A8%E9%95%9C%E5%83%8F%E8%BF%87%E7%A8%8B.png" title="制作烧片器镜像过程" /></p>
+<h3 id="上载步骤_1">上载步骤<a name="ZH-CN_TOPIC_0000001639954510"></a></h3>
+<p>只有网口支持上载。eMMC烧写是将镜像文件烧录到eMMC器件上，而eMMC上载则是按照设置的起始地址和长度将这段内容上载至PC。上载的具体步骤完全可以参考<a href="#ZH-CN_TOPIC_0000001688233693">烧写步骤</a>。这里列出两个和原来烧写步骤中差异的地方，重复的不再累述。</p>
+<ol>
+<li>同<a href="#li1463683952512">1</a>。</li>
+<li>同<a href="#li7636123932513">2</a>。</li>
+<li>
+<p>配置上载信息，可以设置上载的起始地址在“开始地址栏”及长度在“长度栏”，点击“文件”栏，可以选择将这个上载的内容保存在PC上某个具体的文件中，如<a href="#fig15125723133613">图1</a>。</p>
+<p><strong>图 1</strong>  配置上载信息<a name="fig15125723133613"></a><br />
+<img alt="" src="../figures/%E9%85%8D%E7%BD%AE%E4%B8%8A%E8%BD%BD%E4%BF%A1%E6%81%AF.png" title="配置上载信息" /></p>
+</li>
+<li>
+<p>准备单板环境，连接单板的串口和网口，如果单板处于通电状态，给单板下电。</p>
+</li>
+<li>
+<p>准备上载，点击“上载”按钮，然后给单板上电，会将数据保存到指定的文件中，上载过程如<a href="#fig157062018232">图2</a>所示。</p>
+<p><strong>图 2</strong>  上载过程<a name="fig157062018232"></a>  </p>
+<p><img alt="" src="../figures/%E6%88%AA%E5%9B%BE-7.png" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+传输方式为网口时，需要使用支持tftpput命令的uboot镜像。</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="DDR烧写">DDR烧写<a name="ZH-CN_TOPIC_0000002282626964"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002282628776">适用场景</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002317205121">烧写步骤</a></strong>  </p>
+</li>
+</ul>
+<h3 id="适用场景_4">适用场景<a name="ZH-CN_TOPIC_0000002282628776"></a></h3>
+<p>只适用于Hi3511CV100的USB从启动烧写模式，烧写前需要切换成USB从启动模式。</p>
+<h3 id="烧写步骤_4">烧写步骤<a name="ZH-CN_TOPIC_0000002317205121"></a></h3>
+<p>具体烧写步骤如下：</p>
+<ol>
+<li>
+<p>切换到“DDR烧写”页签，如<a href="#fig208414814394">图1</a>所示。</p>
+<p><strong>图 1</strong>  DDR烧写界面<a name="fig208414814394"></a><br />
+<img alt="" src="../figures/DDR%E7%83%A7%E5%86%99%E7%95%8C%E9%9D%A2.png" title="DDR烧写界面" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+-   切换“默认采用XML所在路径”的勾选状态：<br />
+   -   若勾选，则优先在XML路径下查找该分区文件。<br />
+   -   若不勾选，则优先采用绝对路径查找该文件，若找不到，再尝试以在XML所在目录下查找该文件，该状态默认被勾选。<br />
+-   <strong>XML是一个配置文件用于保存分区表信息的，可以将编辑的分区表使用工具上的Save按钮保存成一个XML文件，下次打开工具时，将XML导入进来，分区表信息就直接加载进来。</strong></p>
+</blockquote>
+</li>
+<li>
+<p>配置单板分区信息，点击“浏览”，可选择已设置好的分区表信息，载入工具中，如<a href="#fig82311856174015">图2</a>界面。</p>
+<p><strong>图 2</strong>  配置单板分区信息<a name="fig82311856174015"></a><br />
+<img alt="" src="../figures/%E9%85%8D%E7%BD%AE%E5%8D%95%E6%9D%BF%E5%88%86%E5%8C%BA%E4%BF%A1%E6%81%AF-8.png" title="配置单板分区信息-8" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+分区表中第一行和第二行开始地址不可编辑，默认显示值为0x41000000（bootrom代码已经固定将第一行和第二行的文件烧写到地址0x41000000），第三行的开始地址要求不能小于0x42000000</p>
+</blockquote>
+<ul>
+<li>单击按钮<img alt="" src="../figures/zh-cn_image_0000002317322133.jpg" />，可以增加一行分区。可以在这一行修改分区名。</li>
+<li>单击按钮<img alt="" src="../figures/zh-cn_image_0000002282729440.jpg" />，可选择或改变该分区的烧写文件。</li>
+<li>
+<p>单击按钮<img alt="" src="../figures/zh-cn_image_0000002317369065.jpg" />，可删除该分区信息。</p>
+<p><strong>注意：这里fastboot 分区无法被删除，而且fastboot 分区名不能被修改，因为如果fastboot 分区被删除或fastboot 分区名被修改则无法实现一键烧写。</strong></p>
+</li>
+<li>
+<p>单击按钮<img alt="" src="../figures/zh-cn_image_0000002282832718.jpg" />，不生效，所有分区都只能是勾选状态，都会参与烧写。</p>
+</li>
+<li>单击复选框<img alt="" src="../figures/zh-cn_image_0000002317322137.jpg" />，不生效，所有分区都只能是勾选状态，都会参与烧写。</li>
+<li>单击按钮<img alt="" src="../figures/zh-cn_image_0000002282729444.png" />，可以将编辑好的分区表保存为文件。</li>
+</ul>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+创建分区表后，切换透视图，会弹出<a href="#fig0725202195510">图3</a>对括框，点击“OK”，在弹出的对话框中选择要保存分区信息的路径，输入要保存的文件名，就会保存为xml 格式的分区信息，点击“取消”，则切换视图且不保存分区信息。注意保存分区信息的文件名后缀必须为.xml格式，否则下次载入分区信息时可能会出错而无法正确载入分区信息。信息另存为如<a href="#fig196451156109">图5</a>所示。</p>
+</blockquote>
+<p><strong>图 3</strong>  关闭BurnTool工具时提醒是否保存分区信息界面<a name="fig0725202195510"></a><br />
+<img alt="" src="../figures/%E5%85%B3%E9%97%ADBurnTool%E5%B7%A5%E5%85%B7%E6%97%B6%E6%8F%90%E9%86%92%E6%98%AF%E5%90%A6%E4%BF%9D%E5%AD%98%E5%88%86%E5%8C%BA%E4%BF%A1%E6%81%AF%E7%95%8C%E9%9D%A2-9.png" title="关闭BurnTool工具时提醒是否保存分区信息界面-9" /></p>
+<p><strong>图 4</strong>  切换视图时提醒是否保存分区信息界面<a name="fig13640113718555"></a><br />
+<img alt="" src="../figures/%E5%88%87%E6%8D%A2%E8%A7%86%E5%9B%BE%E6%97%B6%E6%8F%90%E9%86%92%E6%98%AF%E5%90%A6%E4%BF%9D%E5%AD%98%E5%88%86%E5%8C%BA%E4%BF%A1%E6%81%AF%E7%95%8C%E9%9D%A2-10.png" title="切换视图时提醒是否保存分区信息界面-10" /></p>
+<p><strong>图 5</strong>  分区信息保存界面<a name="fig196451156109"></a><br />
+<img alt="" src="../figures/%E5%88%86%E5%8C%BA%E4%BF%A1%E6%81%AF%E4%BF%9D%E5%AD%98%E7%95%8C%E9%9D%A2-11.png" title="分区信息保存界面-11" /></p>
+</li>
+<li>
+<p>准备单板环境，连接好单板的USB口，如果单板处于通电状态，给单板下电。</p>
+</li>
+<li>
+<p>烧写单板，点击烧写按钮<img alt="" src="../figures/zh-cn_image_0000002282729448.png" />，如<a href="#fig769919554411">图6</a>所示。</p>
+<p><strong>图 6</strong>  点击烧写<a name="fig769919554411"></a><br />
+<img alt="" src="../figures/%E7%82%B9%E5%87%BB%E7%83%A7%E5%86%99-12.png" title="点击烧写-12" /></p>
+</li>
+<li>
+<p>给单板上电，进入烧写过程，等待烧写完成。</p>
+</li>
+<li>烧写完成。</li>
+</ol>
+<h2 id="合并镜像">合并镜像<a name="ZH-CN_TOPIC_0000001493313449"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001493592857">适用场景</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001443952842">操作步骤</a></strong>  </p>
+</li>
+</ul>
+<h3 id="适用场景_5">适用场景<a name="ZH-CN_TOPIC_0000001493592857"></a></h3>
+<p>适用场景如下：适用于SPI Flash中因存储空间较小，用户需要将多个小镜像合并为一个镜像，然后烧录到同一个block块中，从而节省flash空间的场景，也适用于将其他Flash类型的镜像合并为一个镜像。</p>
+<p>例如，有fastboot，kernel两个镜像他们分别为500K，而spi的block大小为1M，那么如果将这两个镜像当做两个分区来烧写，板端烧写命令会使用到2个block块来占用，如果合并镜像后，就只需要占用单个block块即可，从而省了1M的Flash空间。</p>
+<h3 id="操作步骤">操作步骤<a name="ZH-CN_TOPIC_0000001443952842"></a></h3>
+<p>具体烧写步骤如下：</p>
+<ol>
+<li>
+<p>切换到“Merge Image”页签，如<a href="#fig8858143717218">图1</a>所示。</p>
+<p><strong>图 1</strong>  BurnTool合并镜像界面<a name="fig8858143717218"></a><br />
+<img alt="" src="../figures/BurnTool%E5%90%88%E5%B9%B6%E9%95%9C%E5%83%8F%E7%95%8C%E9%9D%A2.png" title="BurnTool合并镜像界面" /></p>
+</li>
+<li>
+<p>点击Browse按钮，加载分区表或点击<img alt="" src="../figures/zh-cn_image_0000001493592877.png" />按钮，手动新建分区表，如<a href="#fig1195161117453">图2</a>所示。</p>
+<p><strong>图 2</strong>  加载分区表<a name="fig1195161117453"></a><br />
+<img alt="" src="../figures/%E5%8A%A0%E8%BD%BD%E5%88%86%E5%8C%BA%E8%A1%A8.png" title="加载分区表" /></p>
+</li>
+<li>
+<p>点击Merging Image按钮，合并镜像，如<a href="#fig168371127142814">图3</a>所示。</p>
+<p><strong>图 3</strong>  合并镜像<a name="fig168371127142814"></a><br />
+<img alt="" src="../figures/%E5%90%88%E5%B9%B6%E9%95%9C%E5%83%8F.png" title="合并镜像" /></p>
+</li>
+</ol>
+<h2 id="首选项设置">首选项设置<a name="ZH-CN_TOPIC_0000001443792862"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001443952838">命令设置</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001443473018">TFTP设置</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001493313453">其他设置</a></strong>  </p>
+</li>
+</ul>
+<h3 id="命令设置">命令设置<a name="ZH-CN_TOPIC_0000001443952838"></a></h3>
+<p>BurnTool工具的串口发送命令超时可通过首选项进行设置，点击菜单栏中“窗口”-&gt;“首选项”进入首选项对话框，进入“BurnTool”下“命令设置”页面，如<a href="#_Ref416784561">图1</a>所示。</p>
+<p><strong>图 1</strong>  命令设置页面<a name="_Ref416784561"></a><br />
+<img alt="" src="../figures/%E5%91%BD%E4%BB%A4%E8%AE%BE%E7%BD%AE%E9%A1%B5%E9%9D%A2.png" title="命令设置页面" /></p>
+<p>注: Timeout（ms）：用于串口发送命令响应超时。单位为ms。</p>
+<h3 id="TFTP设置">TFTP设置<a name="ZH-CN_TOPIC_0000001443473018"></a></h3>
+<p>BurnTool工具的TFTP可通过首选项进行设置，点击菜单栏中“窗口”-&gt;“首选项”进入首选项对话框，进入“BurnTool”下的“TFTP设置”页面，如<a href="#_Ref416784544">图1</a>所示。</p>
+<p><strong>图 1</strong>  TFTP设置页面<a name="_Ref416784544"></a><br />
+<img alt="" src="../figures/TFTP%E8%AE%BE%E7%BD%AE%E9%A1%B5%E9%9D%A2.png" title="TFTP设置页面" /></p>
+<p>设置项：</p>
+<ul>
+<li>TFTP速率：用于计算超时，根据传输文件的长度及设置的TFTP速率计算出超时。单位为byte/s。</li>
+<li>处理丢包：勾选“处理丢包”按钮，连续丢包次数项可配置，在传输过程中若连续丢失的包达到最大连续丢包次数，则判定传输失败。若不勾选“处理丢包”按钮，连续丢包次数项不可配置，且不管传输过程中的丢包情况。</li>
+<li>连续丢包次数：设置最大连续丢包次数。</li>
+<li>TFTP重试次数：设置TFTP重试次数，若传输失败，将重试，达到重试设置次数后仍未成功，将停止。</li>
+<li>TFTP无响应超时：设置TFTP无响应超时，传输过程中若在设置时间内无响应，则判定传输失败，单位为秒，默认值为10秒。</li>
+<li>开启CRC校验：勾选开启CRC校验，工具使用tftp下发文件数据后，获取单板返回crc32值，校验下发数据是否正确。</li>
+<li>开启tftp加速：勾选开启tftp加速，工具会加快下发tftp数据包的速度。</li>
+<li>设置传输的block个数：工具一次下发几个tftp数据包。</li>
+<li>设置tftp包大小：烧写时下发tftp数据包的大小。</li>
+</ul>
+<h3 id="其他设置">其他设置<a name="ZH-CN_TOPIC_0000001493313453"></a></h3>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001493712837">BurnTool-Debug控制台设置</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001493432961">检查同一网段设置</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001900439766">文件拆分大小设置</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002114074852">USB等待连接超时时间设置</a></strong>  </p>
+</li>
+</ul>
+<h4 id="BurnTool-Debug控制台设置">BurnTool-Debug控制台设置<a name="ZH-CN_TOPIC_0000001493712837"></a></h4>
+<p>BurnTool工具的Debug控制台可通过首选项进行设置。</p>
+<ol>
+<li>
+<p>点击菜单栏中“窗口”-&gt;“首选项”进入首选项对话框，进入“BurnTool”页面，选中“Open Debug Mode”按钮，表示开启Debug控制台，如<a href="#_Ref410048637">图1</a>所示。</p>
+<p><strong>图 1</strong>  选中开启Debug控制台<a name="_Ref410048637"></a>  </p>
+<p><img alt="" src="../figures/zh-cn_image_0000002114059688.png" /></p>
+</li>
+<li>
+<p>在开始烧写后，工具会自动创建Debug控制台，点击控制台右上角切换控制台按钮，选择切换控制台为“BurnTool-Debug”控制台，当前控制台就显示为Debug控制台，如<a href="#_Ref410048738">图2</a>所示。</p>
+<p><strong>图 2</strong>  切换BurnTool-Debug控制台<a name="_Ref410048738"></a><br />
+<img alt="" src="../figures/%E5%88%87%E6%8D%A2BurnTool-Debug%E6%8E%A7%E5%88%B6%E5%8F%B0.png" title="切换BurnTool-Debug控制台" /></p>
+</li>
+</ol>
+<h4 id="检查同一网段设置">检查同一网段设置<a name="ZH-CN_TOPIC_0000001493432961"></a></h4>
+<p>点击菜单栏中“窗口”-&gt;“首选项”进入首选项对话框，进入“BurnTool”页面，选中“Check whether the PC and Board IP addresses are in the same network segment”按钮，如<a href="#_Ref410048821">图1</a>所示，表示开启在烧写前检查PC与板端IP是否在同一网关，取消选中则表示不会在烧写前检查此项。</p>
+<p><strong>图 1</strong>  检查同一网段设置页面<a name="_Ref410048821"></a>  </p>
+<p><img alt="" src="../figures/zh-cn_image_0000002149698093.png" /></p>
+<h4 id="文件拆分大小设置">文件拆分大小设置<a name="ZH-CN_TOPIC_0000001900439766"></a></h4>
+<p>点击菜单栏中“窗口”-&gt;“首选项”进入首选项对话框，进入“BurnTool”页面，编辑Split file size(Unit: M)的值。</p>
+<p><strong>图 1</strong>  文件拆分大小<a name="fig17150428171111"></a>  </p>
+<p><img alt="" src="../figures/zh-cn_image_0000002114218840.png" /></p>
+<h4 id="USB等待连接超时时间设置">USB等待连接超时时间设置<a name="ZH-CN_TOPIC_0000002114074852"></a></h4>
+<p>点击菜单栏中“窗口”-&gt;“首选项”进入首选项对话框，进入“BurnTool”页面，编辑USB connection timeout interval (Unit: s)的值。</p>
+<p><strong>图 1</strong>  USB等待连接超时时间<a name="fig19989311417"></a><br />
+<img alt="" src="../figures/USB%E7%AD%89%E5%BE%85%E8%BF%9E%E6%8E%A5%E8%B6%85%E6%97%B6%E6%97%B6%E9%97%B4.png" title="USB等待连接超时时间" /></p>
+<h2 id="FAQ">FAQ<a name="ZH-CN_TOPIC_0000001443632950"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001443473014">BurnTool烧写中出现TFTP超时提示时的解决办法</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001493712841">如何使用外置的tftpd32进行镜像下载？</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001443632946">BurnTool烧写Fastboot分区时，工具出现报错“Failed to send start frame”的解决办法</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001443792866">BurnTool烧写Fastboot分区时，控制台只打印了一段“#########”后停止打印，且工具出现报错“Failed to send head frame”的解决办法</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001493592853">BurnTool烧写Fastboot分区时，工具出现报错“Failed to send data frame”的解决办法</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001443792874">BurnTool烧写Fastboot分区时，工具出现报错“Failed to execute command”的解决办法</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001493313457">对于文件传输方式的选择，需要注意什么？</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001443473030">按地址烧写界面，文件的长度要求？</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001493432977">遇到点击烧写，断电重启后，不开始烧写，可能原因？</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001443473034">串口找不到或tftp启动失败或报tftp端口被占用的原因？</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001443792878">烧写Nand时控制台打印pure data length和len_incl_bad分别是什么含义？</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001443473026">单板DDR Training失败的情况下工具会有什么打印？</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001493313465">反馈BurnTool使用过程中出现问题时需要提供什么？</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001443632962">如何查看是否有进程占用了tftp的69端口？</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001493432973">如果是64位的PC且只安装了64位版本的JRE？</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001493313461">非中文语言系统无法烧写中文路径镜像</a></strong>  </p>
+</li>
+</ul>
+<h3 id="BurnTool烧写中出现TFTP超时提示时的解决办法">BurnTool烧写中出现TFTP超时提示时的解决办法<a name="ZH-CN_TOPIC_0000001443473014"></a></h3>
+<p><strong>问题描述<a name="section9846741144918"></a></strong></p>
+<p>出现以下TFTP错误时，如<a href="#fig1044917304311">图1</a>所示，该如何解决？</p>
+<p><strong>图 1</strong>  TFTP超时问题<a name="fig1044917304311"></a><br />
+<img alt="" src="../figures/TFTP%E8%B6%85%E6%97%B6%E9%97%AE%E9%A2%98.png" title="TFTP超时问题" /></p>
+<p><strong>解决办法<a name="section05094512502"></a></strong></p>
+<p>解决此问题分以下四个方面：</p>
+<ul>
+<li>
+<p>检查BurnTool中网络配置是否正确，如<a href="#_Ref386011442">图2</a>所示，首先检查服务器IP是否正确，若不正确点击重新加载，加载最新的PC端IP地址；然后检查子网掩码与网关是否配置正确，若正确，再检查板端IP地址是否被占用（使用ping命令，查看当前单板IP是否能够ping通，若不能则表示当前网络不通），再查看，将以上参数全部保证正确后再尝试重新烧写。</p>
+<p><strong>图 2</strong>  检查网络配置是否正确<a name="_Ref386011442"></a><br />
+<img alt="" src="../figures/%E6%A3%80%E6%9F%A5%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E6%98%AF%E5%90%A6%E6%AD%A3%E7%A1%AE.png" title="检查网络配置是否正确" /></p>
+</li>
+<li>
+<p>使用外置的tftpd32工具代替工具中内置的TFTP进行下载操作（参见“<a href="#ZH-CN_TOPIC_0000001493712841">如何使用外置的tftpd32进行镜像下载？</a>”），若tftpd32也显示超时，则检查当前网络环境是否正常；</p>
+</li>
+<li>修改工具中TFTP参数设置，匹配当前网络环境，通过点击菜单栏上的“Window”-&gt;“Preferences”-&gt;“BurnTool”-&gt;“TFTP Setting”，如<a href="#_Ref386007685">图3</a>所示，将“The number of consecutive packet loss”与“TFTP no response timeout”两个参数设置大一些，然后在进行烧写，查看是否正常。</li>
+<li>
+<p>检查是否关闭防火墙，若未关闭，需要关闭防火墙。</p>
+<p><strong>图 3</strong>  修改TFTP设置<a name="_Ref386007685"></a><br />
+<img alt="" src="../figures/%E4%BF%AE%E6%94%B9TFTP%E8%AE%BE%E7%BD%AE.png" title="修改TFTP设置" /></p>
+</li>
+</ul>
+<h3 id="如何使用外置的tftpd32进行镜像下载？">如何使用外置的tftpd32进行镜像下载？<a name="ZH-CN_TOPIC_0000001493712841"></a></h3>
+<p><strong>问题描述<a name="section43891210195218"></a></strong></p>
+<p>如何使用外置的tftpd32进行镜像下载且需要注意什么？</p>
+<p><strong>解决办法<a name="section9229816115214"></a></strong></p>
+<p>使用外部tftpd32步骤为：</p>
+<ol>
+<li>
+<p>在烧写前打开tftpd32工具，并选择正确的PC端IP地址与将烧写的镜像所在目录，如<a href="#_Ref386011451">图1</a>所示。</p>
+<p><strong>图 1</strong>  配置tftpd32工具<a name="_Ref386011451"></a><br />
+<img alt="" src="../figures/%E9%85%8D%E7%BD%AEtftpd32%E5%B7%A5%E5%85%B7.png" title="配置tftpd32工具" /></p>
+</li>
+<li>
+<p>在BurnTool中正常点击烧写按钮，弹出提示框，如<a href="#_Ref386011453">图2</a>所示，点击确认，开始烧写，当前就会使用外置的tftpd32进行镜像的下载，如<a href="#fig6650185019582">图3</a>所示。</p>
+<p><strong>图 2</strong>  提示内置TFTP启动失败，端口被外置tftpd32工具占<a name="_Ref386011453"></a><br />
+<img alt="" src="../figures/%E6%8F%90%E7%A4%BA%E5%86%85%E7%BD%AETFTP%E5%90%AF%E5%8A%A8%E5%A4%B1%E8%B4%A5-%E7%AB%AF%E5%8F%A3%E8%A2%AB%E5%A4%96%E7%BD%AEtftpd32%E5%B7%A5%E5%85%B7%E5%8D%A0.png" title="提示内置TFTP启动失败-端口被外置tftpd32工具占" /></p>
+<p><strong>图 3</strong>  外置tftpd32工具正在下载镜像<a name="fig6650185019582"></a><br />
+<img alt="" src="../figures/%E5%A4%96%E7%BD%AEtftpd32%E5%B7%A5%E5%85%B7%E6%AD%A3%E5%9C%A8%E4%B8%8B%E8%BD%BD%E9%95%9C%E5%83%8F.png" title="外置tftpd32工具正在下载镜像" /></p>
+</li>
+</ol>
+<h3 id="BurnTool烧写Fastboot分区时，工具出现报错“Failed-to-send-start-frame”的解决办法">BurnTool烧写Fastboot分区时，工具出现报错“Failed to send start frame”的解决办法<a name="ZH-CN_TOPIC_0000001443632946"></a></h3>
+<p><strong>问题描述<a name="section17113181011420"></a></strong></p>
+<p>烧写Fastboot分区出现以下“Failed to send start frame”错误时，如<a href="#_Ref386011456">图1</a>所示。</p>
+<p><strong>图 1</strong>  “Failed to send start frame”报错信息<a name="_Ref386011456"></a><br />
+<img alt="" src="../figures/Failed-to-send-start-frame-%E6%8A%A5%E9%94%99%E4%BF%A1%E6%81%AF.png" title="Failed-to-send-start-frame-报错信息" /></p>
+<p><strong>解决办法<a name="section1951334642"></a></strong></p>
+<p>首先确认上一次点击烧写后，是否在15秒内给单板重新上电，若已经重新上电，则查看串口是否与单板接触良好，若连接正常，则检查BurnTool中是否选择了正确的串口号，如<a href="#_Ref386011460">图2</a>所示，全部保证正确后，请重新进行烧写。</p>
+<p><strong>图 2</strong>  检查串口号是否选择正确<a name="_Ref386011460"></a><br />
+<img alt="" src="../figures/%E6%A3%80%E6%9F%A5%E4%B8%B2%E5%8F%A3%E5%8F%B7%E6%98%AF%E5%90%A6%E9%80%89%E6%8B%A9%E6%AD%A3%E7%A1%AE.png" title="检查串口号是否选择正确" /></p>
+<h3 id="BurnTool烧写Fastboot分区时，控制台只打印了一段“#########”后停止打印，且工具出现报错“Failed-to-send-head-frame”的解决办法">BurnTool烧写Fastboot分区时，控制台只打印了一段“#########”后停止打印，且工具出现报错“Failed to send head frame”的解决办法<a name="ZH-CN_TOPIC_0000001443792866"></a></h3>
+<p><strong>问题描述<a name="section1174175519"></a></strong></p>
+<p>烧写Fastboot分区控制台只打印了一段“#########”后停止打印，且工具出现报错“Failed to send head frame”时，如<a href="#_Ref386011462">图1</a>所示，该如何解决？</p>
+<p><strong>图 1</strong>  “Failed to send head frame”报错信息<a name="_Ref386011462"></a><br />
+<img alt="" src="../figures/Failed-to-send-head-frame-%E6%8A%A5%E9%94%99%E4%BF%A1%E6%81%AF.png" title="Failed-to-send-head-frame-报错信息" /></p>
+<p><strong>解决办法<a name="section1286417136513"></a></strong></p>
+<p>此报错原因可能有以下两种：</p>
+<ul>
+<li>烧写的Fastboot镜像与当前单板型号不匹配导致，请直接查看单板标记型号，明确单板型号后，请使用匹配当前芯片的SDK镜像重新进行烧写；</li>
+<li>单板DDR有问题，无法正常进行DDR初始化操作。</li>
+</ul>
+<h3 id="BurnTool烧写Fastboot分区时，工具出现报错“Failed-to-send-data-frame”的解决办法">BurnTool烧写Fastboot分区时，工具出现报错“Failed to send data frame”的解决办法<a name="ZH-CN_TOPIC_0000001493592853"></a></h3>
+<p><strong>问题描述<a name="section956919507512"></a></strong></p>
+<p>烧写Fastboot分区出现以下“Failed to send data frame”错误时，如<a href="#_Ref386011468">图1</a>所示。</p>
+<p><strong>图 1</strong>  “Failed to send data frame”报错信息<a name="_Ref386011468"></a><br />
+<img alt="" src="../figures/Failed-to-send-data-frame-%E6%8A%A5%E9%94%99%E4%BF%A1%E6%81%AF.png" title="Failed-to-send-data-frame-报错信息" /></p>
+<p><strong>解决办法<a name="section35233257619"></a></strong></p>
+<p>此报错原因可能是烧写Fastboot镜像时串口连接出现松动导致工具与单板进行交互时数据发送失败，请检查串口连接情况。</p>
+<h3 id="BurnTool烧写Fastboot分区时，工具出现报错“Failed-to-execute-command”的解决办法">BurnTool烧写Fastboot分区时，工具出现报错“Failed to execute command”的解决办法<a name="ZH-CN_TOPIC_0000001443792874"></a></h3>
+<p><strong>问题描述<a name="section45431947769"></a></strong></p>
+<p>烧写Fastboot分区出现以下“Failed to execute command”错误时，如<a href="#_Ref386011469">图1</a>所示。</p>
+<p><strong>图 1</strong>  “Failed to execute command”报错信息<a name="_Ref386011469"></a><br />
+<img alt="" src="../figures/Failed-to-execute-command-%E6%8A%A5%E9%94%99%E4%BF%A1%E6%81%AF.png" title="Failed-to-execute-command-报错信息" /></p>
+<p><strong>解决办法<a name="section1426113619713"></a></strong></p>
+<p>此报错原因可能是当前Fastboot分区的Flash类型选择错误导致的，如<a href="#_Ref386011475">图2</a>所示，重启单板查看单板当前“Flash”属性，如当前为eMMC，则需要使用按EMMC烧写，且Fastboot分区的Flash类型选择为emmc。</p>
+<p><strong>图 2</strong>  通过串口查看单板Flash信息<a name="_Ref386011475"></a><br />
+<img alt="" src="../figures/%E9%80%9A%E8%BF%87%E4%B8%B2%E5%8F%A3%E6%9F%A5%E7%9C%8B%E5%8D%95%E6%9D%BFFlash%E4%BF%A1%E6%81%AF.png" title="通过串口查看单板Flash信息" /></p>
+<h3 id="对于文件传输方式的选择，需要注意什么？">对于文件传输方式的选择，需要注意什么？<a name="ZH-CN_TOPIC_0000001493313457"></a></h3>
+<p><strong>问题描述<a name="section290917257720"></a></strong></p>
+<p>在选择文件传输方式时，串口和网口之间的优缺点是什么？</p>
+<p><strong>解决办法<a name="section15228123017718"></a></strong></p>
+<p>串口优点：传输稳定，缺点：烧写速度慢。</p>
+<p>网口优点：烧写速度快，缺点：用户网络环境不稳定时，可能烧写失败。</p>
+<h3 id="按地址烧写界面，文件的长度要求？">按地址烧写界面，文件的长度要求？<a name="ZH-CN_TOPIC_0000001443473030"></a></h3>
+<p><strong>问题描述<a name="section129616216810"></a></strong></p>
+<p>按地址烧写界面，文件的长度要求是什么？</p>
+<p><strong>解决办法<a name="section14316972810"></a></strong></p>
+<p>擦除时，长度应该为blocksize的倍数；yaffs文件系统部分上载时，长度应该为pagesize + oobsize的倍数。</p>
+<h3 id="遇到点击烧写，断电重启后，不开始烧写，可能原因？">遇到点击烧写，断电重启后，不开始烧写，可能原因？<a name="ZH-CN_TOPIC_0000001493432977"></a></h3>
+<p><strong>问题描述<a name="section879943317814"></a></strong></p>
+<p>在点击烧写，断电重启后，但是工具并没有开始烧写，是什么原因？</p>
+<p><strong>解决办法<a name="section17459025490"></a></strong></p>
+<p>可能是串口选择错误或没有正常连接串口（请使用终端工具查看），请等待，控制台会打印出相关信息。</p>
+<h3 id="串口找不到或tftp启动失败或报tftp端口被占用的原因？">串口找不到或tftp启动失败或报tftp端口被占用的原因？<a name="ZH-CN_TOPIC_0000001443473034"></a></h3>
+<p><strong>问题描述<a name="section15781328107"></a></strong></p>
+<p>在linux下使用时，串口找不到或tftp启动失败或报tftp端口被占用，可能的原因什么？</p>
+<p><strong>解决办法<a name="section481113141014"></a></strong></p>
+<p>没有以root用户登录，无权限打开tftp服务或使用串口。报tftp端口被占用也有可能是其他软件占用了此端口。</p>
+<h3 id="烧写Nand时控制台打印pure-data-length和len_incl_bad分别是什么含义？">烧写Nand时控制台打印pure data length和len_incl_bad分别是什么含义？<a name="ZH-CN_TOPIC_0000001443792878"></a></h3>
+<p><strong>问题描述<a name="section9483135101011"></a></strong></p>
+<p>烧写Nand时控制台打印pure data length和len_incl_bad分别是什么含义？</p>
+<p><strong>解决办法<a name="section15954111011116"></a></strong></p>
+<p>如<a href="#_Ref386007893">图1</a>所示，其中pure data length表示实际烧写的数据长度，而len incl bad表示包含坏块的实际烧写占用的长度，以上两种长度均不包含oobSize长度。</p>
+<p><strong>图 1</strong>  控制台打印烧写命令反馈的烧写长度<a name="_Ref386007893"></a><br />
+<img alt="" src="../figures/%E6%8E%A7%E5%88%B6%E5%8F%B0%E6%89%93%E5%8D%B0%E7%83%A7%E5%86%99%E5%91%BD%E4%BB%A4%E5%8F%8D%E9%A6%88%E7%9A%84%E7%83%A7%E5%86%99%E9%95%BF%E5%BA%A6.png" title="控制台打印烧写命令反馈的烧写长度" /></p>
+<h3 id="单板DDR-Training失败的情况下工具会有什么打印？">单板DDR Training失败的情况下工具会有什么打印？<a name="ZH-CN_TOPIC_0000001443473026"></a></h3>
+<p><strong>问题描述<a name="section1033016544115"></a></strong></p>
+<p>单板DDR Training失败的情况下工具会有什么打印？</p>
+<p><strong>解决办法<a name="section2742102181210"></a></strong></p>
+<p>当单板出现DDR Training失败时，在烧写Fastboot分区时，会打印如<a href="#_Ref386011496">图1</a>所示信息。</p>
+<p><strong>图 1</strong>  打印DDR Training失败信息<a name="_Ref386011496"></a><br />
+<img alt="" src="../figures/%E6%89%93%E5%8D%B0DDR-Training%E5%A4%B1%E8%B4%A5%E4%BF%A1%E6%81%AF.png" title="打印DDR-Training失败信息" /></p>
+<h3 id="反馈BurnTool使用过程中出现问题时需要提供什么？">反馈BurnTool使用过程中出现问题时需要提供什么？<a name="ZH-CN_TOPIC_0000001493313465"></a></h3>
+<p><strong>问题描述<a name="section4620102214128"></a></strong></p>
+<p>反馈BurnTool使用过程中出现问题时需要提供什么？</p>
+<p><strong>解决办法<a name="section10510122714124"></a></strong></p>
+<p>使用BurnTool工具出现问题时，将控制台中打印内容通过控制台工具栏中导出按钮导出，反馈问题时一并反馈，将有助于问题的定位及解决。</p>
+<h3 id="如何查看是否有进程占用了tftp的69端口？">如何查看是否有进程占用了tftp的69端口？<a name="ZH-CN_TOPIC_0000001443632962"></a></h3>
+<p><strong>问题描述<a name="section1072719116131"></a></strong></p>
+<p>tftp命令总是报文件找不到，但实际所有的设置都是好的，原因是什么？如何查看是否有进程占用了tftp的69端口？</p>
+<p><strong>解决办法<a name="section17557141213133"></a></strong></p>
+<p>可能存在后台进程占用了69端口。可以使用如下方法查看是否有进程占用。</p>
+<p>在cmd命令行工具中输入：netstat -ano -p udp，打印例如<a href="#_Ref413161493">图1</a>所示。</p>
+<p><strong>图 1</strong>  查看进程的端口占用<a name="_Ref413161493"></a><br />
+<img alt="" src="../figures/%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E7%9A%84%E7%AB%AF%E5%8F%A3%E5%8D%A0%E7%94%A8.png" title="查看进程的端口占用" /></p>
+<p>查看是否有进程占用了69端口，上图中可以看到pid为7696的进程占用了69端口。再使用如下命令查看7696进程的名称，打印例如<a href="#_Ref413161472">图2</a>所示。</p>
+<p>tasklist|findstr "7696"</p>
+<p><strong>图 2</strong>  查看指定PID的进程名称<a name="_Ref413161472"></a><br />
+<img alt="" src="../figures/%E6%9F%A5%E7%9C%8B%E6%8C%87%E5%AE%9APID%E7%9A%84%E8%BF%9B%E7%A8%8B%E5%90%8D%E7%A7%B0.png" title="查看指定PID的进程名称" /></p>
+<p>然后在进程管理器中杀掉该进程即可。</p>
+<h3 id="如果是64位的PC且只安装了64位版本的JRE？">如果是64位的PC且只安装了64位版本的JRE？<a name="ZH-CN_TOPIC_0000001493432973"></a></h3>
+<p><strong>问题描述<a name="section234741210149"></a></strong></p>
+<p>PC安装了64位版本的JRE，打开ToolPlatform时报错，该怎么办？</p>
+<p><strong>解决办法<a name="section16521321181418"></a></strong></p>
+<p>因ToolPlatform依赖32位JRE版本，故在使用ToolPlatform前，请先登录JRE官网，下载并安装对应JRE版本的Windows x86的版本，网址如下：<a href="http://www.oracle.com/technetwork/java/javase/downloads/" target="_blank" rel="noopener noreferrer">http://www.oracle.com/technetwork/java/javase/downloads/</a></p>
+<p>另，ToolPlatform-XXX-4.0.15以后的版本已经内置JRE程序，无需再次安装JRE。</p>
+<h3 id="非中文语言系统无法烧写中文路径镜像">非中文语言系统无法烧写中文路径镜像<a name="ZH-CN_TOPIC_0000001493313461"></a></h3>
+<p><strong>问题描述<a name="section1999915715158"></a></strong></p>
+<p>如果系统为非中文系统，工具传入中文路径系统是无法进行烧写的，可在cmd下输入chcp命令查询语言系统，如<a href="#_Ref4156611">Figure 1</a>，437表示为美国语言系统，如果是936，则表示中文语言系统。</p>
+<p><strong>图 1</strong>  查询windows语言系统方法<a name="_Ref4156611"></a><br />
+<img alt="" src="../figures/%E6%9F%A5%E8%AF%A2windows%E8%AF%AD%E8%A8%80%E7%B3%BB%E7%BB%9F%E6%96%B9%E6%B3%95.png" title="查询windows语言系统方法" /></p>
+<p><strong>解决办法<a name="section185019199156"></a></strong></p>
+<p>非中文语言系统不支持带中文路径的镜像，将烧写路径修改英文路径。</p>
+<h2 id="缩略语">缩略语<a name="ZH-CN_TOPIC_0000001493712857"></a></h2>
+<p><a name="table177mcpsimp"></a></p>
+<table><tbody><tr id="row182mcpsimp"><td class="cellrowborder" colspan="2" valign="top"><p id="p184mcpsimp"><a name="p184mcpsimp"></a><a name="p184mcpsimp"></a><strong id="b185mcpsimp"><a name="b185mcpsimp"></a><a name="b185mcpsimp"></a>A</strong></p>
+</td>
+</tr>
+<tr id="row187mcpsimp"><td class="cellrowborder" valign="top" width="23%"><p id="p189mcpsimp"><a name="p189mcpsimp"></a><a name="p189mcpsimp"></a>AXI</p>
+</td>
+<td class="cellrowborder" valign="top" width="77%"><p id="p191mcpsimp"><a name="p191mcpsimp"></a><a name="p191mcpsimp"></a>Advanced eXtensible Interface</p>
+</td>
+</tr>
+<tr id="row195mcpsimp"><td class="cellrowborder" colspan="2" valign="top"><p id="p197mcpsimp"><a name="p197mcpsimp"></a><a name="p197mcpsimp"></a><strong id="b198mcpsimp"><a name="b198mcpsimp"></a><a name="b198mcpsimp"></a>D</strong></p>
+</td>
+</tr>
+<tr id="row200mcpsimp"><td class="cellrowborder" valign="top" width="23%"><p id="p202mcpsimp"><a name="p202mcpsimp"></a><a name="p202mcpsimp"></a>DDR</p>
+</td>
+<td class="cellrowborder" valign="top" width="77%"><p id="p204mcpsimp"><a name="p204mcpsimp"></a><a name="p204mcpsimp"></a>Double Data Rate</p>
+</td>
+</tr>
+<tr id="row208mcpsimp"><td class="cellrowborder" colspan="2" valign="top"><p id="p210mcpsimp"><a name="p210mcpsimp"></a><a name="p210mcpsimp"></a><strong id="b211mcpsimp"><a name="b211mcpsimp"></a><a name="b211mcpsimp"></a>E</strong></p>
+</td>
+</tr>
+<tr id="row213mcpsimp"><td class="cellrowborder" valign="top" width="23%"><p id="p215mcpsimp"><a name="p215mcpsimp"></a><a name="p215mcpsimp"></a>eMMC</p>
+</td>
+<td class="cellrowborder" valign="top" width="77%"><p id="p217mcpsimp"><a name="p217mcpsimp"></a><a name="p217mcpsimp"></a>Embedded MultiMediaCard</p>
+</td>
+</tr>
+<tr id="row221mcpsimp"><td class="cellrowborder" colspan="2" valign="top"><p id="p223mcpsimp"><a name="p223mcpsimp"></a><a name="p223mcpsimp"></a><strong id="b224mcpsimp"><a name="b224mcpsimp"></a><a name="b224mcpsimp"></a>G</strong></p>
+</td>
+</tr>
+<tr id="row226mcpsimp"><td class="cellrowborder" valign="top" width="23%"><p id="p228mcpsimp"><a name="p228mcpsimp"></a><a name="p228mcpsimp"></a>GPIO</p>
+</td>
+<td class="cellrowborder" valign="top" width="77%"><p id="p230mcpsimp"><a name="p230mcpsimp"></a><a name="p230mcpsimp"></a>General Purpose Input Output</p>
+</td>
+</tr>
+<tr id="row234mcpsimp"><td class="cellrowborder" colspan="2" valign="top"><p id="p236mcpsimp"><a name="p236mcpsimp"></a><a name="p236mcpsimp"></a><strong id="b237mcpsimp"><a name="b237mcpsimp"></a><a name="b237mcpsimp"></a>H</strong></p>
+</td>
+</tr>
+<tr id="row239mcpsimp"><td class="cellrowborder" valign="top" width="23%"><p id="p241mcpsimp"><a name="p241mcpsimp"></a><a name="p241mcpsimp"></a>HDMI</p>
+</td>
+<td class="cellrowborder" valign="top" width="77%"><p id="p243mcpsimp"><a name="p243mcpsimp"></a><a name="p243mcpsimp"></a>High Definition Multimedia Interface</p>
+</td>
+</tr>
+<tr id="row247mcpsimp"><td class="cellrowborder" colspan="2" valign="top"><p id="p249mcpsimp"><a name="p249mcpsimp"></a><a name="p249mcpsimp"></a><strong id="b250mcpsimp"><a name="b250mcpsimp"></a><a name="b250mcpsimp"></a>N</strong></p>
+</td>
+</tr>
+<tr id="row252mcpsimp"><td class="cellrowborder" valign="top" width="23%"><p id="p254mcpsimp"><a name="p254mcpsimp"></a><a name="p254mcpsimp"></a>NAND</p>
+</td>
+<td class="cellrowborder" valign="top" width="77%"><p id="p256mcpsimp"><a name="p256mcpsimp"></a><a name="p256mcpsimp"></a>NAND</p>
+</td>
+</tr>
+<tr id="row260mcpsimp"><td class="cellrowborder" colspan="2" valign="top"><p id="p262mcpsimp"><a name="p262mcpsimp"></a><a name="p262mcpsimp"></a><strong id="b263mcpsimp"><a name="b263mcpsimp"></a><a name="b263mcpsimp"></a>P</strong></p>
+</td>
+</tr>
+<tr id="row265mcpsimp"><td class="cellrowborder" valign="top" width="23%"><p id="p267mcpsimp"><a name="p267mcpsimp"></a><a name="p267mcpsimp"></a>PID</p>
+</td>
+<td class="cellrowborder" valign="top" width="77%"><p id="p269mcpsimp"><a name="p269mcpsimp"></a><a name="p269mcpsimp"></a>Process Identification</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+  <nav class="md-footer__inner md-grid" aria-label="页脚" >
+    
+    
+    <a href="../../../" class="md-footer__link md-footer__link--prev"
+      aria-label="上一页: 工具中心">
+      <div class="md-footer__button md-icon">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </div>
+      <div class="md-footer__title">
+        <span class="md-footer__direction">
+          上一页
+        </span>
+        <div class="md-ellipsis">
+          工具中心
+        </div>
+      </div>
+    </a>
+    
+    
+    
+    <a href="../../../AQTools/%E9%9F%B3%E9%A2%91%E8%B4%A8%E9%87%8F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/%E9%9F%B3%E9%A2%91%E8%B4%A8%E9%87%8F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="md-footer__link md-footer__link--next"
+      aria-label="下一页: 音频质量调试工具">
+      <div class="md-footer__title">
+        <span class="md-footer__direction">
+          下一页
+        </span>
+        <div class="md-ellipsis">
+          音频质量调试工具
+        </div>
+      </div>
+      <div class="md-footer__button md-icon">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+      </div>
+    </a>
+    
+  </nav>
+  
+  
+
+  <div class="footer-box">
+    <div class="footer-list">
+      
+      
+      <div class="footer-list-child">
+        <a href="https://www.hisilicon.com/cn" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/home" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开发者网站</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://gitcode.com/HiSpark" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开源社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developer.huawei.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">华为开发者官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hikunpeng.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">鲲鹏社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hiascend.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">昇腾社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/aboutus" target="_blank" class="footer-nav-first" rel="noopener noreferrer">关于我们</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/login" target="_blank" class="footer-nav-first" rel="noopener noreferrer">投诉举报</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      
+    </div>
+    <div class="footer-fix">
+      <div class="footer-fix-content">
+        <div>
+          <span class="footer-copyright">&nbsp;&copy;2024 华为技术有限公司</span>
+          <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer">粤A2-20044005号</a>
+          <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702004153"
+            target="_blank" rel="noopener noreferrer">粤公网安备44030702004153号</a>
+        </div>
+        <div class="footer-name-list">
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/legalNotices" target="_blank" class="footer-name" rel="noopener noreferrer">法律声明</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/cookie-policy" target="_blank" class="footer-name" rel="noopener noreferrer">关于Cookie</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/privacyPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">隐私政策</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/userPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">用户协议</a>
+          
+          
+          
+          <a href="javascript:void(0);" onclick="openDisclaimerDialog()" class="footer-name">免责声明</a>
+          
+          
+          
+        </div>
+      </div>
+
+
+      <!-- 免责声明弹窗 -->
+      <div id="disclaimerDialog" class="disclaimer-overlay" style="display: none;">
+        <div class="disclaimer-dialog">
+          <div class="disclaimer-dialog__header">
+            <span class="disclaimer-dialog__title">免责声明</span>
+            <button class="disclaimer-dialog__close" onclick="closeDisclaimerDialog()">×</button>
+          </div>
+          <div class="disclaimer-dialog__body">
+            <p class="disclaimer-dialog__text-center"><strong>海思开发者网站免责声明</strong></p>
+            <p>尊敬的用户，您好：</p>
+            <p>&nbsp; &nbsp;
+              请确保您通过本平台向海思提供或反馈的任何信息或意见不侵犯第三方知识产权和/或合法权益。如您提供或反馈的上述任何信息或意见侵犯第三方知识产权和/或合法权益，和/或给第三方造成损害的，您将承担全部法律及赔偿责任。
+            </p>
+          </div>
+          <div class="disclaimer-dialog__footer">
+            <button class="disclaimer-dialog__btn" onclick="closeDisclaimerDialog()">关闭</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function openDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'flex';
+        }
+        function closeDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'none';
+        }
+        // 点击弹窗背景关闭
+        document.getElementById('disclaimerDialog').addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeDisclaimerDialog();
+          }
+        });
+      </script>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../static/js/custom.js"></script>
+      
+        <script src="../../../../static/js/version-selector.js"></script>
+      
+        <script src="../../../../static/js/code-highlight.js"></script>
+      
+        <script src="../../../../static/js/wavedrom-skin.js"></script>
+      
+        <script src="../../../../static/js/wavedrom.min.js"></script>
+      
+        <script src="../../../../static/js/wavedrom-init.js"></script>
+      
+        <script src="../../../../static/js/no-flash.js"></script>
+      
+    
+  </body>
+</html>
+

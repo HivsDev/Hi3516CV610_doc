@@ -1,0 +1,6251 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hi3516CV610 超高清智慧视觉 SoC 文档中心">
+      
+      
+        <meta name="author" content="HiSpark">
+      
+      
+        <link rel="canonical" href="https://hivsdev.github.io/Hi3516CV610_doc/04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/%E8%B0%83%E8%AF%95%E8%B0%83%E4%BC%98/PQ/Hi3516CV610%E2%95%B1Hi3516CV608%203DNR%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/Hi3516CV610%E2%95%B1Hi3516CV608%203DNR%E5%8F%82%E6%95%B0%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../static/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>前言 - Hi3516CV610 开发者中心</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+    
+    
+      <link rel="stylesheet" href="../../../../../static/css/extra.css">
+    
+      <link rel="stylesheet" href="../../../../../static/css/version-selector.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+      <meta name="gitcode-issues-url" content="https://gitcode.com/HiSpark/fbb_ws63/issues">
+      
+      <link rel="dns-prefetch" href="https://docs.hisilicon.com">
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://docs.hisilicon.com" crossorigin>
+      <link rel="preload" href="../../../../../assets/stylesheets/main.484c7ddc.min.css" as="style">
+      <link rel="preload" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css" as="style">
+      <link rel="preload" href="../../../../../static/css/extra.css" as="style">
+      <link rel="preload" href="../../../../../assets/javascripts/bundle.79ae519e.min.js" as="script">
+      <link rel="preload" href="../../../../../static/js/custom.js" as="script">
+
+      
+      
+        
+        
+          
+        
+          
+            <link rel="prefetch" href="../../../../../zh-CN/00概览/Hi3516CV610%20超高清智慧视觉%20SoC%20产品简介/Hi3516CV610%20超高清智慧视觉%20SoC%20产品简介.md" as="document">
+          
+        
+      
+      <style>:root{--md-text-font:"Helvetica Neue, PingFang SC, Microsoft YaHei";--md-code-font:"Consolas, Roboto Mono"}</style>
+      <script>
+        // 防止宽窄屏刷新闪烁 — 在 body 解析前就读取 localStorage 标记 <html>
+        // 配合 CSS: html.prefer-narrow .md-grid 在首帧即应用 76%
+        if (localStorage.getItem('wideScreen') === 'false') {
+          document.documentElement.classList.add('prefer-narrow');
+        }
+      </script>
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#前言" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="https://developers.hisilicon.com" title="Hi3516CV610 开发者中心" class="md-header__button md-logo" aria-label="Hi3516CV610 开发者中心" data-md-component="logo" target="_blank" rel="noopener noreferrer">
+      <img 
+  src="../../../../../static/images/light-icon.png" 
+  class="md-logo__img md-logo__img--light"
+  alt="Hi3516CV610 开发者中心" 
+/>
+<img 
+  src="../../../../../static/images/dark-icon.png" 
+  class="md-logo__img md-logo__img--dark"
+  alt="Hi3516CV610 开发者中心" 
+/>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+      </div>
+    </div>
+    
+      
+      
+        <label class="md-header__button md-icon md-header__button--search" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+      
+    
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="切换到暗色主题"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色主题" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="切换到亮色主题"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色主题" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <div class="md-header__source">
+        <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="前往仓库" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+      </div>
+    
+  </nav>
+  
+  
+    
+    
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        <!-- 
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+         -->
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+</header>
+
+
+<script>
+  var USER_DEFINED_OPTIONS = {
+    REPO_PATH: "Hi3516CV610_doc",
+    ROOT_URL: "https://docs.hisilicon.com/projects"
+  };
+  var DOCUMENTATION_OPTIONS = {
+    VERSION: "master",
+    // 构建时声明主题的语言
+    LANGUAGE: "zh"
+  };
+</script>
+<script src="https://docs.hisilicon.com/projects/version/hispark_version.js"></script>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="sidebar-selectors">
+                  <div class="repo-select custom-select">
+                    <span class="select-label">芯片</span>
+                    <div class="repo-selector" title="">
+                      <span class="repo-readOnly"></span>
+                      <select id="repo-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="repo-options" style="display:none"></ul>
+                  </div>
+                  <div class="version-select custom-select">
+                    <span class="select-label">版本</span>
+                    <div class="version-selector" title="">
+                      <span class="version-readOnly"></span>
+                      <select id="version-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="version-options" style="display:none"></ul>
+                  </div>
+                  
+                    
+                    
+                      <div class="sidebar-search">
+                        <label class="sidebar-search__button" for="__search">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+                          <span>全文检索</span>
+                        </label>
+                      </div>
+                    
+                  
+                </div>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  
+    <div class="md-nav__source">
+      <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="前往仓库" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../.." class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概览
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    概览
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/00概览/Hi3516CV610%20超高清智慧视觉%20SoC%20产品简介/Hi3516CV610%20超高清智慧视觉%20SoC%20产品简介.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Hi3516CV610 产品简介
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速入门
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    快速入门
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/Hi3516CV610%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/Hi3516CV610%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    环境搭建
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速启动
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整体架构
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    整体架构
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    版本说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/%E7%89%88%E6%9C%AC%E9%85%8D%E5%A5%97%E5%85%B3%E7%B3%BB/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    版本配套关系
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/%E7%89%88%E6%9C%AC%E5%8F%B7%E8%A7%84%E8%8C%83%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    版本号规范说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    芯片用户指南
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    芯片用户指南
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-1%20产品概述.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    产品概述
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-2%20硬件特性.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件特性
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-3%20系统.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-4%20存储器接口.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    存储器接口
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-5%20网络接口.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络接口
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-6%20视频编码.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    视频编码
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-7%20视频及图形处理.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    视频及图形处理
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-8%20智能加速引擎.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能加速引擎
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-9%20视频接口.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    视频接口
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-10%20ISP.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-11%20音频接口.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    音频接口
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-12%20外围设备.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    外围设备
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/01-13%20安全子系统.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全子系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/02-A%20订购须知.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    订购须知
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/00-3%20前言.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    前言
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/02整体架构/Hi3516CV610%20超高清智慧视觉%20SoC%20用户指南/附录%20B-缩略语.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    缩略语
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../03API%E5%8F%82%E8%80%83/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 参考
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API 参考
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全子系统
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    安全子系统
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/安全子系统/Hi35xxVxxx%20安全启动使用指南/Hi35xxVxxx%20安全启动使用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全启动使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/安全子系统/Hi35xxVxxx%20安全子系统使用说明/Hi35xxVxxx%20安全子系统使用说明.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全子系统使用说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../03API%E5%8F%82%E8%80%83/%E5%AE%89%E5%85%A8%E5%AD%90%E7%B3%BB%E7%BB%9F/SELinux%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/SELinux%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SELinux 开发指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BSP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    BSP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/BSP/Hi35xxVxxx%20开发环境用户指南/Hi35xxVxxx%20开发环境用户指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开发环境用户指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/BSP/Hi35xxVxxx%20U-boot%20移植应用开发指南/Hi35xxVxxx%20U-boot%20移植应用开发指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    U-boot 移植应用开发指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/BSP/外围设备驱动%20操作指南/外围设备驱动%20操作指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    外围设备驱动操作指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/BSP/UBI%20文件系统使用指南/UBI%20文件系统使用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UBI 文件系统使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/BSP/裸烧及非裸烧升级%20使用手册/裸烧及非裸烧升级%20使用手册.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    裸烧及非裸烧升级使用手册
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_4" id="__nav_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ISP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/ISP/ISP%20开发参考/ISP%20开发参考（1~5）.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP 开发参考（1~5）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/ISP/ISP%20开发参考/ISP%20开发参考（6~end）.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP 开发参考（6~end）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/ISP/AIISP%20开发参考/AIISP%20开发参考.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AIISP 开发参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/ISP/ISP%20FAQ/ISP%20FAQ.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_5" id="__nav_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MPP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MPP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/MPP/MPP%20媒体处理软件%20V6.0%20开发参考/0%20前言.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MPP 开发参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/MPP/MPP%20媒体处理软件%20V6.0%20FAQ/MPP%20媒体处理软件%20V6.0%20FAQ.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MPP FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/MPP/音频组件%20API参考/音频组件%20API参考.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    音频组件 API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/MPP/安全子系统%20API%20参考/安全子系统%20API%20参考.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    安全子系统 API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../03API%E5%8F%82%E8%80%83/MPP/DEVSTAT%E5%BC%80%E5%8F%91%E5%8F%82%E8%80%83/DEVSTAT%E5%BC%80%E5%8F%91%E5%8F%82%E8%80%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DEVSTAT 开发参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/MPP/MIPI%20使用指南/MIPI%20使用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MIPI 使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/MPP/SYS_CONFIG%20配置指南/SYS_CONFIG%20配置指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SYS_CONFIG 配置指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../03API%E5%8F%82%E8%80%83/MPP/%E6%99%BA%E8%83%BD%E7%BC%96%E7%A0%81%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/%E6%99%BA%E8%83%BD%E7%BC%96%E7%A0%81%E4%BD%BF%E7%94%A8%E6%8C%87%E5%AF%BC/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能编码使用指导
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../03API%E5%8F%82%E8%80%83/MPP/%E8%8A%AF%E7%89%87%E7%A0%81%E7%8E%87%E6%8E%A7%E5%88%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/%E8%8A%AF%E7%89%87%E7%A0%81%E7%8E%87%E6%8E%A7%E5%88%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    芯片码率控制使用说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/MPP/RTC%20应用指南/RTC%20应用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RTC 应用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/MPP/哭声检测%20API参考/哭声检测%20API参考.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    哭声检测 API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../03API%E5%8F%82%E8%80%83/MPP/%E5%BC%80%E6%9C%BA%E5%A3%B0%E9%9F%B3%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/%E5%BC%80%E6%9C%BA%E5%A3%B0%E9%9F%B3%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开机声音使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_6" id="__nav_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SVP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SVP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../03API%E5%8F%82%E8%80%83/SVP/%E6%99%BA%E8%83%BD%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86%E8%BD%AF%E4%BB%B6V1.0%E5%BC%80%E5%8F%91%E5%8F%82%E8%80%83/%E6%99%BA%E8%83%BD%E8%A7%86%E9%A2%91%E5%A4%84%E7%90%86%E8%BD%AF%E4%BB%B6V1.0%E5%BC%80%E5%8F%91%E5%8F%82%E8%80%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能视频处理软件 V1.0 开发参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/SVP/IVE%20API%20参考/IVE%20API%20参考.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IVE API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/03API参考/SVP/IVS%20API%20参考/IVS%20API%20参考.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    IVS API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考案例
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    参考案例
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    调试调优
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    调试调优
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_1" id="__nav_5_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    硬件
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/04参考案例/调试调优/硬件/Hi3516CV610%20DDR3%20参数配置方法/Hi3516CV610%20DDR3%20参数配置方法.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    DDR3 参数配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_2" id="__nav_5_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BSP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    BSP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/04参考案例/调试调优/BSP/Hi35xxVxxx%20快速启动优化指南/Hi35xxVxxx%20快速启动优化指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速启动优化指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/04参考案例/调试调优/BSP/Hi35xxVxxx%20调试工具使用指南/Hi35xxVxxx%20调试工具使用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    调试工具使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BSP/%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80%E8%B0%83%E6%95%B4%E6%8C%87%E5%8D%97/%E5%86%85%E5%AD%98%E5%B8%83%E5%B1%80%E8%B0%83%E6%95%B4%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    内存布局调整指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/04参考案例/调试调优/BSP/BSP%20FAQ/BSP%20FAQ.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BSP FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../BSP/%E5%9F%BA%E4%BA%8Efmcv100%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84Flash%E7%A7%BB%E6%A4%8D%E6%8C%87%E5%8D%97/%E5%9F%BA%E4%BA%8Efmcv100%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84Flash%E7%A7%BB%E6%A4%8D%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Flash 移植指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_3" id="__nav_5_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MPP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MPP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MPP/%E6%80%A7%E8%83%BD%E2%95%B1%E5%B8%A6%E5%AE%BD%E2%95%B1%E5%BB%B6%E6%97%B6%E2%95%B1%E5%86%85%E5%AD%98%E8%B0%83%E4%BC%98%E6%8C%87%E5%8D%97/%E6%80%A7%E8%83%BD%E2%95%B1%E5%B8%A6%E5%AE%BD%E2%95%B1%E5%BB%B6%E6%97%B6%E2%95%B1%E5%86%85%E5%AD%98%E8%B0%83%E4%BC%98%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    带宽/延时/内存调优
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MPP/%E7%BC%96%E7%A0%81%E5%99%A8%E5%9B%BE%E5%83%8F%E8%B4%A8%E9%87%8F%E8%B0%83%E4%BC%98%E6%8C%87%E5%8D%97/%E7%BC%96%E7%A0%81%E5%99%A8%E5%9B%BE%E5%83%8F%E8%B4%A8%E9%87%8F%E8%B0%83%E4%BC%98%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    编码器图像质量调优
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/04参考案例/调试调优/MPP/智能编码自适应%20使用说明/智能编码自适应%20使用说明.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能编码自适应说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2_4" id="__nav_5_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PQ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PQ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/04参考案例/调试调优/PQ/ISP%20图像调优指南/ISP%20图像调优指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP 图像调优指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/04参考案例/调试调优/PQ/ISP%20颜色调优说明/ISP%20颜色调优说明.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ISP 颜色调优说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/04参考案例/调试调优/PQ/Sensor%20调试指南/Sensor%20调试指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sensor 调试指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/04参考案例/调试调优/PQ/图像自适应%20使用说明/图像自适应%20使用说明.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图像自适应说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/04参考案例/调试调优/PQ/智能PQ%20使用指导/智能PQ%20使用指导.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能PQ 使用指导
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E8%A1%8C%E8%BD%A6%E8%AE%B0%E5%BD%95%E4%BB%AA%E5%92%8C%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%BA%94%E7%94%A8%E5%9B%BE%E5%83%8F%E8%B0%83%E8%AF%95FAQ/%E8%A1%8C%E8%BD%A6%E8%AE%B0%E5%BD%95%E4%BB%AA%E5%92%8C%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%BA%94%E7%94%A8%E5%9B%BE%E5%83%8F%E8%B0%83%E8%AF%95FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    行车记录仪/无人机图像调试FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/04参考案例/调试调优/PQ/Hisilicon%20IP%20Camera%20图像质量测试标准/Hisilicon%20IP%20Camera%20图像质量测试标准.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图像质量测试标准
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/04参考案例/调试调优/PQ/Hi3516CV610╱Hi3516CV608%203DNR参数配置说明/Hi3516CV610╱Hi3516CV608%203DNR参数配置说明.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3DNR 参数配置
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Sample%E6%8C%87%E5%AF%BC%E8%AF%B4%E6%98%8E/Sample%E6%8C%87%E5%AF%BC%E8%AF%B4%E6%98%8E/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sample 指导说明
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../05%E7%A1%AC%E4%BB%B6%E6%8C%87%E5%8D%97/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件指南
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    硬件指南
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    单板
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    单板
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/05硬件指南/单板/Hi3516CV610%20Demo%20单板使用指南（QFN）/Hi3516CV610%20Demo%20单板使用指南（QFN）.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Demo 单板使用指南（QFN）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/05硬件指南/单板/Hi3516CV610%20硬件设计用户指南（QFN）/Hi3516CV610%20硬件设计用户指南（QFN）.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件设计用户指南（QFN）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/05硬件指南/单板/Hi3516CV610%20硬件设计%20Checklist（QFN）/Hi3516CV610%20硬件设计%20Checklist（QFN）.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件设计 Checklist（QFN）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具中心
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    工具中心
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ToolPlatform
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ToolPlatform
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/06工具中心/ToolPlatform/ToolPlatform工具平台使用指南/ToolPlatform工具平台%20使用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ToolPlatform 工具平台使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/ToolPlatform/BurnTool%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/BurnTool%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BurnTool 工具使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_3" id="__nav_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AQTools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AQTools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/AQTools/%E9%9F%B3%E9%A2%91%E8%B4%A8%E9%87%8F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/%E9%9F%B3%E9%A2%91%E8%B4%A8%E9%87%8F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    音频质量调试工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_4" id="__nav_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PQTools
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    PQTools
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/PQTools/%E5%9B%BE%E5%83%8F%E8%B4%A8%E9%87%8F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/%E5%9B%BE%E5%83%8F%E8%B4%A8%E9%87%8F%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    图像质量调试工具
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_5" id="__nav_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SVP_NPU
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SVP_NPU
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/SVP_NPU/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速上手指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/SVP_NPU/%E9%A9%B1%E5%8A%A8%E5%92%8C%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/%E9%A9%B1%E5%8A%A8%E5%92%8C%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    驱动和开发环境安装
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/SVP_NPU/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    应用开发指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/SVP_NPU/AMCT%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%EF%BC%88Caffe%EF%BC%89/AMCT%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%EF%BC%88Caffe%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AMCT 使用指南（Caffe）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/SVP_NPU/AMCT%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%EF%BC%88PyTorch%EF%BC%89/AMCT%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97%EF%BC%88PyTorch%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AMCT 使用指南（PyTorch）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/SVP_NPU/ATC%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/ATC%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ATC 工具使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/SVP_NPU/ATC%20Graph%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/ATC%20Graph%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ATC Graph 开发指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/SVP_NPU/ATC%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/ATC%E8%87%AA%E5%AE%9A%E4%B9%89%E7%AE%97%E5%AD%90%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ATC 自定义算子开发
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/06工具中心/SVP_NPU/MindCmd%20使用指南/MindCmd使用指南.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MindCmd 使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../07FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../08%E5%85%B6%E4%BB%96/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    其他
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../zh-CN/07FAQ/Hi3516CV610%20FAQ.md}" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#前言_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#接口及参数说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        接口及参数说明
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="接口及参数说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#参数说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        参数说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#默认参数" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        默认参数
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#空域滤波器参数说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        空域滤波器参数说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#时域接口参数说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        时域接口参数说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#色度去噪参数说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        色度去噪参数说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#后处理参数说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        后处理参数说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#典型场景下的3DNR接口调试指南" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        典型场景下的3DNR接口调试指南
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#调试3dnr过程中常见问题解答" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        调试3dnr过程中常见问题解答
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="前言">前言<a name="ZH-CN_TOPIC_0000001828215316"></a></h1>
+<h2 id="前言_1">前言<a name="ZH-CN_TOPIC_0000001828215316"></a></h2>
+<p><strong>概述<a name="section4537382116410"></a></strong></p>
+<p>本文档详细的描述了Hi3516CV610/Hi3516CV608 3DNR参数配置说明以及3DNR接口调试指南。</p>
+<p><strong>产品版本<a name="section21663550437"></a></strong></p>
+<p>与本文档相对应的产品版本如下。</p>
+<p><a name="table369mcpsimp"></a></p>
+<table><thead align="left"><tr id="row374mcpsimp"><th class="cellrowborder" valign="top" width="32%" id="mcps1.1.3.1.1"><p id="p376mcpsimp"><a name="p376mcpsimp"></a><a name="p376mcpsimp"></a>产品名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="68%" id="mcps1.1.3.1.2"><p id="p378mcpsimp"><a name="p378mcpsimp"></a><a name="p378mcpsimp"></a>产品版本</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row664916229122"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p63331555172315"><a name="p63331555172315"></a><a name="p63331555172315"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p141352132417"><a name="p141352132417"></a><a name="p141352132417"></a>V608</p>
+</td>
+</tr>
+<tr id="row380mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p382mcpsimp"><a name="p382mcpsimp"></a><a name="p382mcpsimp"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p384mcpsimp"><a name="p384mcpsimp"></a><a name="p384mcpsimp"></a>V610</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>读者对象<a name="section4378592816410"></a></strong></p>
+<p>本文档（本指南）主要适用于以下工程师：</p>
+<ul>
+<li>技术支持工程师</li>
+<li>软件开发工程师</li>
+</ul>
+<p><strong>符号约定<a name="section133020216410"></a></strong></p>
+<p>在本文中可能出现下列标志，它们所代表的含义如下。</p>
+<p><a name="table2622507016410"></a></p>
+<table><thead align="left"><tr id="row1530720816410"><th class="cellrowborder" valign="top" width="20.560000000000002%" id="mcps1.1.3.1.1"><p id="p6450074116410"><a name="p6450074116410"></a><a name="p6450074116410"></a><strong id="b2136615816410"><a name="b2136615816410"></a><a name="b2136615816410"></a>符号</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="79.44%" id="mcps1.1.3.1.2"><p id="p5435366816410"><a name="p5435366816410"></a><a name="p5435366816410"></a><strong id="b5941558116410"><a name="b5941558116410"></a><a name="b5941558116410"></a>说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1372280416410"><td class="cellrowborder" valign="top" width="20.560000000000002%" headers="mcps1.1.3.1.1 "><p id="p3734547016410"><a name="p3734547016410"></a><a name="p3734547016410"></a><a name="image2670064316410"></a><a name="image2670064316410"></a><span><img class="" id="image2670064316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001875094785.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.44%" headers="mcps1.1.3.1.2 "><p id="p1757432116410"><a name="p1757432116410"></a><a name="p1757432116410"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row466863216410"><td class="cellrowborder" valign="top" width="20.560000000000002%" headers="mcps1.1.3.1.1 "><p id="p1432579516410"><a name="p1432579516410"></a><a name="p1432579516410"></a><a name="image4895582316410"></a><a name="image4895582316410"></a><span><img class="" id="image4895582316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001875214577.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.44%" headers="mcps1.1.3.1.2 "><p id="p959197916410"><a name="p959197916410"></a><a name="p959197916410"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row123863216410"><td class="cellrowborder" valign="top" width="20.560000000000002%" headers="mcps1.1.3.1.1 "><p id="p1232579516410"><a name="p1232579516410"></a><a name="p1232579516410"></a><a name="image1235582316410"></a><a name="image1235582316410"></a><span><img class="" id="image1235582316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001828375104.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.44%" headers="mcps1.1.3.1.2 "><p id="p123197916410"><a name="p123197916410"></a><a name="p123197916410"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row5786682116410"><td class="cellrowborder" valign="top" width="20.560000000000002%" headers="mcps1.1.3.1.1 "><p id="p2204984716410"><a name="p2204984716410"></a><a name="p2204984716410"></a><a name="image4504446716410"></a><a name="image4504446716410"></a><span><img class="" id="image4504446716410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001828215324.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.44%" headers="mcps1.1.3.1.2 "><p id="p4388861916410"><a name="p4388861916410"></a><a name="p4388861916410"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
+<p id="p1238861916410"><a name="p1238861916410"></a><a name="p1238861916410"></a>“须知”不涉及人身伤害。</p>
+</td>
+</tr>
+<tr id="row2856923116410"><td class="cellrowborder" valign="top" width="20.560000000000002%" headers="mcps1.1.3.1.1 "><p id="p5555360116410"><a name="p5555360116410"></a><a name="p5555360116410"></a><a name="image799324016410"></a><a name="image799324016410"></a><span><img class="" id="image799324016410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001875094789.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.44%" headers="mcps1.1.3.1.2 "><p id="p4612588116410"><a name="p4612588116410"></a><a name="p4612588116410"></a>对正文中重点信息的补充说明。</p>
+<p id="p1232588116410"><a name="p1232588116410"></a><a name="p1232588116410"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>修改记录<a name="section2467512116410"></a></strong></p>
+<p><a name="table1557726816410"></a></p>
+<table><thead align="left"><tr id="row2942532716410"><th class="cellrowborder" valign="top" width="20.72%" id="mcps1.1.4.1.1"><p id="p3778275416410"><a name="p3778275416410"></a><a name="p3778275416410"></a><strong id="b5687322716410"><a name="b5687322716410"></a><a name="b5687322716410"></a>文档版本</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="21.490000000000002%" id="mcps1.1.4.1.2"><p id="p5627845516410"><a name="p5627845516410"></a><a name="p5627845516410"></a><strong id="b5800814916410"><a name="b5800814916410"></a><a name="b5800814916410"></a>发布日期</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="57.79%" id="mcps1.1.4.1.3"><p id="p2382284816410"><a name="p2382284816410"></a><a name="p2382284816410"></a><strong id="b3316380216410"><a name="b3316380216410"></a><a name="b3316380216410"></a>修改说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row5947359616410"><td class="cellrowborder" valign="top" width="20.72%" headers="mcps1.1.4.1.1 "><p id="p2149706016410"><a name="p2149706016410"></a><a name="p2149706016410"></a>00B01</p>
+</td>
+<td class="cellrowborder" valign="top" width="21.490000000000002%" headers="mcps1.1.4.1.2 "><p id="p648803616410"><a name="p648803616410"></a><a name="p648803616410"></a>2026-06-30</p>
+</td>
+<td class="cellrowborder" valign="top" width="57.79%" headers="mcps1.1.4.1.3 "><p id="p1946537916410"><a name="p1946537916410"></a><a name="p1946537916410"></a>第1次临时版本发布。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="接口及参数说明">接口及参数说明<a name="ZH-CN_TOPIC_0000001828374292"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001875213789">参数说明</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001875094001">默认参数</a></strong>  </p>
+</li>
+</ul>
+<h3 id="参数说明">参数说明<a name="ZH-CN_TOPIC_0000001875213789"></a></h3>
+<p>下面介绍3DNR的接口及参数。</p>
+<ul>
+<li><a href="#ZH-CN_TOPIC_0000001828214544">ot_nr_v2</a>：定义3DNR X接口版本V2的参数。</li>
+<li><a href="#ZH-CN_TOPIC_0000001875093993">ot_nr_v2_pshrp</a>：3DNR后增强模块参数。</li>
+<li><a href="#ZH-CN_TOPIC_0000001828374296">ot_nr_v2_sfy</a>：3DNR空域滤波参数。</li>
+<li><a href="#ZH-CN_TOPIC_0000001875213793">ot_nr_v2_mdy</a>：3DNR运动检测参数。</li>
+<li><a href="#ZH-CN_TOPIC_0000001828214548">ot_nr_v2_mdy0</a>：3DNR预时域处理参数。</li>
+<li><a href="#ZH-CN_TOPIC_0000001875093997">ot_nr_v2_tfy</a>：3DNR时域滤波参数。</li>
+<li><a href="#ZH-CN_TOPIC_0000001828374300">ot_nr_v2_sfy_lut</a>：3DNR空域滤波器曲线参数。</li>
+<li><a href="#ZH-CN_TOPIC_0000001875213797">ot_nr_v2_nrc0</a>：3DNR视频色度C0级滤波参数。</li>
+<li><a href="#ZH-CN_TOPIC_0000001828214552">ot_nr_v2_nrc1</a>：3DNR视频色度C1级滤波参数。</li>
+<li>
+<p><a href="#ZH-CN_TOPIC_0000001888868217">ot_nr_v2_pp</a>：3DNR视频后处理参数。</p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001828214544">ot_nr_v2</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001875093993">ot_nr_v2_pshrp</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001828374296">ot_nr_v2_sfy</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001875213793">ot_nr_v2_mdy</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001828214548">ot_nr_v2_mdy0</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001875093997">ot_nr_v2_tfy</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001828374300">ot_nr_v2_sfy_lut</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001875213797">ot_nr_v2_nrc0</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001828214552">ot_nr_v2_nrc1</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001888868217">ot_nr_v2_pp</a></strong>  </p>
+</li>
+</ul>
+<h4 id="ot_nr_v2">ot_nr_v2<a name="ZH-CN_TOPIC_0000001828214544"></a></h4>
+<p>【说明】</p>
+<p>定义3DNR X接口版本V2的参数。</p>
+<p>【定义】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>typedef struct {
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    ot_nr_v2_pshrp  iey;
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    ot_nr_v2_sfy  sfy[3];
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    ot_nr_v2_mdy  mdy[2];
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    ot_nr_v2_tfy  tfy[2];
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    ot_nr_v2_nrc0  nrc0;
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    ot_nr_v2_nrc1  nrc1;
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    ot_nr_v2_sfy_lut luty[2];
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    ot_nr_v2_pp  pp;
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    ot_nr_v2_mdy0  mdy0;
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    struct {
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    td_u8 nry1_en         : 1;
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    td_u8 nry2_en         : 1;
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    td_u8 nry3_en         : 1;
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    td_u8 nry4_en         : 1;
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    td_u8 nrc0_mode       : 1;
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    td_u8 nrc_en          : 1;
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    };
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>} ot_nr_v2;
+</span></code></pre></div>
+<p>【成员】</p>
+<p><a name="table225mcpsimp"></a></p>
+<table><thead align="left"><tr id="row230mcpsimp"><th class="cellrowborder" valign="top" width="28.000000000000004%" id="mcps1.1.3.1.1"><p id="p232mcpsimp"><a name="p232mcpsimp"></a><a name="p232mcpsimp"></a>成员名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="72%" id="mcps1.1.3.1.2"><p id="p234mcpsimp"><a name="p234mcpsimp"></a><a name="p234mcpsimp"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row236mcpsimp"><td class="cellrowborder" valign="top" width="28.000000000000004%" headers="mcps1.1.3.1.1 "><p id="p238mcpsimp"><a name="p238mcpsimp"></a><a name="p238mcpsimp"></a>iey</p>
+</td>
+<td class="cellrowborder" valign="top" width="72%" headers="mcps1.1.3.1.2 "><p id="p240mcpsimp"><a name="p240mcpsimp"></a><a name="p240mcpsimp"></a>亮度滤波增强模块参数。</p>
+</td>
+</tr>
+<tr id="row241mcpsimp"><td class="cellrowborder" valign="top" width="28.000000000000004%" headers="mcps1.1.3.1.1 "><p id="p243mcpsimp"><a name="p243mcpsimp"></a><a name="p243mcpsimp"></a>sfy</p>
+</td>
+<td class="cellrowborder" valign="top" width="72%" headers="mcps1.1.3.1.2 "><p id="p245mcpsimp"><a name="p245mcpsimp"></a><a name="p245mcpsimp"></a>亮度滤波空域滤波参数。</p>
+</td>
+</tr>
+<tr id="row246mcpsimp"><td class="cellrowborder" valign="top" width="28.000000000000004%" headers="mcps1.1.3.1.1 "><p id="p248mcpsimp"><a name="p248mcpsimp"></a><a name="p248mcpsimp"></a>mdy</p>
+</td>
+<td class="cellrowborder" valign="top" width="72%" headers="mcps1.1.3.1.2 "><p id="p250mcpsimp"><a name="p250mcpsimp"></a><a name="p250mcpsimp"></a>亮度滤波运动检测参数。</p>
+</td>
+</tr>
+<tr id="row251mcpsimp"><td class="cellrowborder" valign="top" width="28.000000000000004%" headers="mcps1.1.3.1.1 "><p id="p253mcpsimp"><a name="p253mcpsimp"></a><a name="p253mcpsimp"></a>tfy</p>
+</td>
+<td class="cellrowborder" valign="top" width="72%" headers="mcps1.1.3.1.2 "><p id="p255mcpsimp"><a name="p255mcpsimp"></a><a name="p255mcpsimp"></a>亮度滤波时域滤波参数。</p>
+</td>
+</tr>
+<tr id="row256mcpsimp"><td class="cellrowborder" valign="top" width="28.000000000000004%" headers="mcps1.1.3.1.1 "><p id="p258mcpsimp"><a name="p258mcpsimp"></a><a name="p258mcpsimp"></a>nrc0</p>
+</td>
+<td class="cellrowborder" valign="top" width="72%" headers="mcps1.1.3.1.2 "><p id="p260mcpsimp"><a name="p260mcpsimp"></a><a name="p260mcpsimp"></a>色度滤波C0级参数。</p>
+</td>
+</tr>
+<tr id="row261mcpsimp"><td class="cellrowborder" valign="top" width="28.000000000000004%" headers="mcps1.1.3.1.1 "><p id="p263mcpsimp"><a name="p263mcpsimp"></a><a name="p263mcpsimp"></a>nrc1</p>
+</td>
+<td class="cellrowborder" valign="top" width="72%" headers="mcps1.1.3.1.2 "><p id="p265mcpsimp"><a name="p265mcpsimp"></a><a name="p265mcpsimp"></a>色度滤波C1级参数。</p>
+</td>
+</tr>
+<tr id="row266mcpsimp"><td class="cellrowborder" valign="top" width="28.000000000000004%" headers="mcps1.1.3.1.1 "><p id="p268mcpsimp"><a name="p268mcpsimp"></a><a name="p268mcpsimp"></a>luty</p>
+</td>
+<td class="cellrowborder" valign="top" width="72%" headers="mcps1.1.3.1.2 "><p id="p270mcpsimp"><a name="p270mcpsimp"></a><a name="p270mcpsimp"></a>亮度滤波空域滤波曲线参数。</p>
+</td>
+</tr>
+<tr id="row271mcpsimp"><td class="cellrowborder" valign="top" width="28.000000000000004%" headers="mcps1.1.3.1.1 "><p id="p273mcpsimp"><a name="p273mcpsimp"></a><a name="p273mcpsimp"></a>pp</p>
+</td>
+<td class="cellrowborder" valign="top" width="72%" headers="mcps1.1.3.1.2 "><p id="p275mcpsimp"><a name="p275mcpsimp"></a><a name="p275mcpsimp"></a>3dnr后处理参数。</p>
+</td>
+</tr>
+<tr id="row276mcpsimp"><td class="cellrowborder" valign="top" width="28.000000000000004%" headers="mcps1.1.3.1.1 "><p id="p278mcpsimp"><a name="p278mcpsimp"></a><a name="p278mcpsimp"></a>mdy0</p>
+</td>
+<td class="cellrowborder" valign="top" width="72%" headers="mcps1.1.3.1.2 "><p id="p280mcpsimp"><a name="p280mcpsimp"></a><a name="p280mcpsimp"></a>亮度滤波预处理时域滤波参数。</p>
+</td>
+</tr>
+<tr id="row281mcpsimp"><td class="cellrowborder" valign="top" width="28.000000000000004%" headers="mcps1.1.3.1.1 "><p id="p283mcpsimp"><a name="p283mcpsimp"></a><a name="p283mcpsimp"></a>nry1_en</p>
+</td>
+<td class="cellrowborder" valign="top" width="72%" headers="mcps1.1.3.1.2 "><p id="p285mcpsimp"><a name="p285mcpsimp"></a><a name="p285mcpsimp"></a>亮度滤波N1级使能开关。取值范围：[0, 1]</p>
+</td>
+</tr>
+<tr id="row286mcpsimp"><td class="cellrowborder" valign="top" width="28.000000000000004%" headers="mcps1.1.3.1.1 "><p id="p288mcpsimp"><a name="p288mcpsimp"></a><a name="p288mcpsimp"></a>nry2_en</p>
+</td>
+<td class="cellrowborder" valign="top" width="72%" headers="mcps1.1.3.1.2 "><p id="p290mcpsimp"><a name="p290mcpsimp"></a><a name="p290mcpsimp"></a>亮度滤波N2级使能开关。取值范围：[0, 1]</p>
+</td>
+</tr>
+<tr id="row291mcpsimp"><td class="cellrowborder" valign="top" width="28.000000000000004%" headers="mcps1.1.3.1.1 "><p id="p293mcpsimp"><a name="p293mcpsimp"></a><a name="p293mcpsimp"></a>nry3_en</p>
+</td>
+<td class="cellrowborder" valign="top" width="72%" headers="mcps1.1.3.1.2 "><p id="p295mcpsimp"><a name="p295mcpsimp"></a><a name="p295mcpsimp"></a>亮度滤波N3级使能开关。取值范围：[0, 1]</p>
+</td>
+</tr>
+<tr id="row296mcpsimp"><td class="cellrowborder" valign="top" width="28.000000000000004%" headers="mcps1.1.3.1.1 "><p id="p298mcpsimp"><a name="p298mcpsimp"></a><a name="p298mcpsimp"></a>nry4_en</p>
+</td>
+<td class="cellrowborder" valign="top" width="72%" headers="mcps1.1.3.1.2 "><p id="p300mcpsimp"><a name="p300mcpsimp"></a><a name="p300mcpsimp"></a>亮度滤波N4级使能开关。取值范围：[0, 1]</p>
+</td>
+</tr>
+<tr id="row301mcpsimp"><td class="cellrowborder" valign="top" width="28.000000000000004%" headers="mcps1.1.3.1.1 "><p id="p303mcpsimp"><a name="p303mcpsimp"></a><a name="p303mcpsimp"></a>nrc0_mode</p>
+</td>
+<td class="cellrowborder" valign="top" width="72%" headers="mcps1.1.3.1.2 "><p id="p305mcpsimp"><a name="p305mcpsimp"></a><a name="p305mcpsimp"></a>色度滤波C0级模式选择。取值范围：[0, 1]</p>
+</td>
+</tr>
+<tr id="row306mcpsimp"><td class="cellrowborder" valign="top" width="28.000000000000004%" headers="mcps1.1.3.1.1 "><p id="p308mcpsimp"><a name="p308mcpsimp"></a><a name="p308mcpsimp"></a>nrc_en</p>
+</td>
+<td class="cellrowborder" valign="top" width="72%" headers="mcps1.1.3.1.2 "><p id="p310mcpsimp"><a name="p310mcpsimp"></a><a name="p310mcpsimp"></a>色度滤波使能开关。取值范围：[0, 1]</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>【3DNR X接口与MPI接口的对应关系】</p>
+<ul>
+<li>en 对应于nry1_en、nry2_en、nry3_en、nry4_en，默认参数分别为1、1、1、1；</li>
+<li>nCmode对应于nrc0_mode，默认参数为0；</li>
+<li>nCen对应于nrc_en，默认参数为1。</li>
+</ul>
+<h4 id="ot_nr_v2_pshrp">ot_nr_v2_pshrp<a name="ZH-CN_TOPIC_0000001875093993"></a></h4>
+<p>【说明】</p>
+<p>3DNR后增强模块参数。</p>
+<p>【定义】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>typedef struct { 
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    td_u16 coarse_g1, coarse_g2, coarse_g3, coarse_g4; 
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    td_u16 fine_g1, fine_g2, fine_g3, fine_g4;
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    td_u16 o_sht_b, u_sht_b;
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    td_u16 o_sht_f, u_sht_f;
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    td_u16 sfn7_0, sfn7_1, sfn8_0, sfn8_1;
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    td_u16 sf_bld[17];
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    td_u16 shp_ctl_mean[17], shp_ctl_dir[17];
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    td_u16 sth1_0, sth2_0, sth3_0, sth1_1, sth2_1, sth3_1;
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    td_u16 sfn0_0, sfn1_0, sfn2_0, sfn3_0, sfn0_1, sfn1_1, sfn2_1, sfn3_1; 
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>} ot_nr_v2_pshrp;
+</span></code></pre></div>
+<p>【成员】</p>
+<p><a name="table327mcpsimp"></a></p>
+<table><thead align="left"><tr id="row332mcpsimp"><th class="cellrowborder" valign="top" width="32%" id="mcps1.1.3.1.1"><p id="p334mcpsimp"><a name="p334mcpsimp"></a><a name="p334mcpsimp"></a>成员名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="68%" id="mcps1.1.3.1.2"><p id="p336mcpsimp"><a name="p336mcpsimp"></a><a name="p336mcpsimp"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row338mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p340mcpsimp"><a name="p340mcpsimp"></a><a name="p340mcpsimp"></a>coarse_g1, coarse_g2, coarse_g3, coarse_g4</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p342mcpsimp"><a name="p342mcpsimp"></a><a name="p342mcpsimp"></a>中频信息增强的强度，1~4对应不同增强滤波器。</p>
+<p id="p343mcpsimp"><a name="p343mcpsimp"></a><a name="p343mcpsimp"></a>取值范围：[0, 1023]</p>
+</td>
+</tr>
+<tr id="row344mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p346mcpsimp"><a name="p346mcpsimp"></a><a name="p346mcpsimp"></a>fine_g1, fine_g2, fine_g3, fine_g4</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p348mcpsimp"><a name="p348mcpsimp"></a><a name="p348mcpsimp"></a>高频信息增强的强度，1~4对应不同增强滤波器。</p>
+<p id="p349mcpsimp"><a name="p349mcpsimp"></a><a name="p349mcpsimp"></a>取值范围：[0, 1023]</p>
+</td>
+</tr>
+<tr id="row350mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p352mcpsimp"><a name="p352mcpsimp"></a><a name="p352mcpsimp"></a>o_sht_b, u_sht_b, o_sht_f, u_sht_f</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p354mcpsimp"><a name="p354mcpsimp"></a><a name="p354mcpsimp"></a>o_sht(over shoot control), u_sht(under shoot control)分别表示抑制增强导致的白边和黑边。f和b分别表示前景和背景。数值越小，表示抑制能力越强，即增强越弱。</p>
+<p id="p355mcpsimp"><a name="p355mcpsimp"></a><a name="p355mcpsimp"></a>取值范围：[0, 255]</p>
+</td>
+</tr>
+<tr id="row356mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p358mcpsimp"><a name="p358mcpsimp"></a><a name="p358mcpsimp"></a>sfn7_0, sfn7_1, sfn8_0, sfn8_1</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p360mcpsimp"><a name="p360mcpsimp"></a><a name="p360mcpsimp"></a>用于混合的滤波器号（7号、8号混合滤波器）。</p>
+<p id="p361mcpsimp"><a name="p361mcpsimp"></a><a name="p361mcpsimp"></a>取值范围：[0, 4]</p>
+</td>
+</tr>
+<tr id="row362mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p364mcpsimp"><a name="p364mcpsimp"></a><a name="p364mcpsimp"></a>sf_bld[17]</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p366mcpsimp"><a name="p366mcpsimp"></a><a name="p366mcpsimp"></a>7号、8号混合滤波器的混合曲线（共用一条曲线）。混合指标分别为边缘方向性、亮度。</p>
+<p id="p367mcpsimp"><a name="p367mcpsimp"></a><a name="p367mcpsimp"></a>取值范围：[0, 63]</p>
+</td>
+</tr>
+<tr id="row368mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p370mcpsimp"><a name="p370mcpsimp"></a><a name="p370mcpsimp"></a>shp_ctl_mean[17], shp_ctl_dir[17]</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p372mcpsimp"><a name="p372mcpsimp"></a><a name="p372mcpsimp"></a>用于抑制噪声不被增强的曲线（仅作用于1号和2号滤波器的中频信息增强（coarse_g））。纵坐标数值越小，表示增强越弱。</p>
+<p id="p373mcpsimp"><a name="p373mcpsimp"></a><a name="p373mcpsimp"></a>取值范围：[0, 63]</p>
+</td>
+</tr>
+<tr id="row374mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p376mcpsimp"><a name="p376mcpsimp"></a><a name="p376mcpsimp"></a>sth1_0, sth2_0, sth3_0, sth1_1, sth2_1, sth3_1</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p1498625355818"><a name="p1498625355818"></a><a name="p1498625355818"></a>运动前景和背景区域的保边阈值。根据阈值选择使用不同的滤波器，需要配合sfn使用。</p>
+<p id="p379mcpsimp"><a name="p379mcpsimp"></a><a name="p379mcpsimp"></a>取值范围：[0, 511]</p>
+</td>
+</tr>
+<tr id="row380mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p382mcpsimp"><a name="p382mcpsimp"></a><a name="p382mcpsimp"></a>sfn0_0, sfn1_0, sfn2_0, sfn3_0, sfn0_1, sfn1_1, sfn2_1, sfn3_1</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p384mcpsimp"><a name="p384mcpsimp"></a><a name="p384mcpsimp"></a>根据sth保边阈值，不同图像特性选择不同滤波器的类型（滤波器号），其中0、5、6号滤波器为输入。</p>
+<p id="p385mcpsimp"><a name="p385mcpsimp"></a><a name="p385mcpsimp"></a>取值范围：[0, 8]</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>【3DNR X接口与MPI接口的对应关系】</p>
+<ul>
+<li>N4级的nXsf1 对应于iey.coarse_g1、iey.fine_g1，默认参数分别为128、128；</li>
+<li>N4级的nXsf2 对应于iey.coarse_g2、iey.fine_g2，默认参数分别为128、128；</li>
+<li>N4级的nXsf3 对应于iey.coarse_g3、iey.fine_g3，默认参数分别为128、128；</li>
+<li>N4级的nXsf4 对应于iey.coarse_g4、iey.fine_g4，默认参数分别为128、128；</li>
+<li>N4级的nXsf7 对应于iey.sfn7_0、iey.sfn7_1，默认参数分别为0、0；</li>
+<li>N4级的nXsf8对应于 iey.sfn8_0、iey.sfn8_1，默认参数分别为0、0；</li>
+<li>N4级的nXsht 对应于iey.o_sht_f、iey.u_sht_f、iey.o_sht_b、iey.u_sht_b，默认参数分别为80、80、80、80;</li>
+<li>N4级的nXsfn对应于 iey.sfn0_0、iey.sfn1_0、iey.sfn2_0、iey.sfn3_0，默认参数分别为4、4、4、0;</li>
+<li>N4级的nX2sfn对应于iey.sfn0_1、iey.sfn1_1、iey.sfn2_1、iey.sfn3_1，默认参数分别为3、3、3、0;</li>
+<li>N4级的nXsth对应于 iey.sth1_0、iey.sth2_0、iey.sth3_0，默认参数分别为100、100、70;</li>
+<li>N4级的nX2sth对应于 iey.sth1_1、iey.sth2_1、iey.sth3_1，默认参数分别为100、100、70。</li>
+</ul>
+<p>【3DNR_N4 接口与MPI接口的对应关系】</p>
+<ul>
+<li>n4shp_ctl_mean 对应于iey.shp_ctl_mean[17]；</li>
+<li>n4shp_ctl_dir 对应于iey.shp_ctl_dir[17]；</li>
+<li>n4sf_bld 对应于iey.sf_bld[17]。</li>
+</ul>
+<h4 id="ot_nr_v2_sfy">ot_nr_v2_sfy<a name="ZH-CN_TOPIC_0000001828374296"></a></h4>
+<p>【说明】</p>
+<p>3DNR空域滤波参数。</p>
+<p>【定义】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>typedef struct { 
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    td_u8 sfs1, sfs2, sfs4, sfs5;
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    td_u8 sbr1, sbr2, sbr4;
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    td_u8 sft2, sft4;
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    td_u8 strf3, strf4, strb3, strb4;
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    td_u16 bld6;
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    td_u16 sth1_0, sth2_0, sth3_0, sth1_1, sth2_1, sth3_1;
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    td_u16 sfn0_0, sfn1_0, sfn2_0, sfn3_0, sfn0_1, sfn1_1, sfn2_1, sfn3_1;
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    td_u16 sfn6_0, sfn6_1, sfn7_0, sfn7_1, sfn8_0, sfn8_1;
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>} ot_nr_v2_sfy;
+</span></code></pre></div>
+<p>【成员】</p>
+<p><a name="table419mcpsimp"></a></p>
+<table><thead align="left"><tr id="row424mcpsimp"><th class="cellrowborder" valign="top" width="35%" id="mcps1.1.3.1.1"><p id="p426mcpsimp"><a name="p426mcpsimp"></a><a name="p426mcpsimp"></a>成员名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="65%" id="mcps1.1.3.1.2"><p id="p428mcpsimp"><a name="p428mcpsimp"></a><a name="p428mcpsimp"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row430mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p432mcpsimp"><a name="p432mcpsimp"></a><a name="p432mcpsimp"></a>sfs1, sfs2, sfs4, sfs5</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p434mcpsimp"><a name="p434mcpsimp"></a><a name="p434mcpsimp"></a>表示1~5号滤波器强度（N1级的3号4号滤波器强度均由sfs4控制，N2、N3级3号滤波器由strf3, strf4, strb3, strb4控制，5号滤波器仅在N2级有效）。</p>
+<p id="p435mcpsimp"><a name="p435mcpsimp"></a><a name="p435mcpsimp"></a>取值范围：[0, 255]</p>
+</td>
+</tr>
+<tr id="row436mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p438mcpsimp"><a name="p438mcpsimp"></a><a name="p438mcpsimp"></a>sbr1, sbr2, sbr4</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p440mcpsimp"><a name="p440mcpsimp"></a><a name="p440mcpsimp"></a>表示1、2、4号滤波器的滤波的不对称强度。</p>
+<p id="p441mcpsimp"><a name="p441mcpsimp"></a><a name="p441mcpsimp"></a>取值范围：[0, 255]</p>
+</td>
+</tr>
+<tr id="row442mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p444mcpsimp"><a name="p444mcpsimp"></a><a name="p444mcpsimp"></a>sft2, sft4</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p446mcpsimp"><a name="p446mcpsimp"></a><a name="p446mcpsimp"></a>表示2~4号滤波器附加强度。</p>
+<p id="p447mcpsimp"><a name="p447mcpsimp"></a><a name="p447mcpsimp"></a>取值范围：[0, 255]</p>
+</td>
+</tr>
+<tr id="row448mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p450mcpsimp"><a name="p450mcpsimp"></a><a name="p450mcpsimp"></a>strf3, strf4, strb3, strb4</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p452mcpsimp"><a name="p452mcpsimp"></a><a name="p452mcpsimp"></a>表示3号、4号滤波器前景以及背景的滤波强度（仅N2、N3级生效）。</p>
+<p id="p453mcpsimp"><a name="p453mcpsimp"></a><a name="p453mcpsimp"></a>取值范围：[0, 31]</p>
+</td>
+</tr>
+<tr id="row454mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p456mcpsimp"><a name="p456mcpsimp"></a><a name="p456mcpsimp"></a>bld6</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p458mcpsimp"><a name="p458mcpsimp"></a><a name="p458mcpsimp"></a>表示sfn6_0和sfn6_1滤波结果的混合比例（仅N1级生效）。</p>
+<p id="p459mcpsimp"><a name="p459mcpsimp"></a><a name="p459mcpsimp"></a>取值范围：[0,16]</p>
+</td>
+</tr>
+<tr id="row460mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p462mcpsimp"><a name="p462mcpsimp"></a><a name="p462mcpsimp"></a>sth1_0, sth2_0, sth3_0, sth1_1, sth2_1, sth3_1</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p464mcpsimp"><a name="p464mcpsimp"></a><a name="p464mcpsimp"></a>运动前景和背景区域的保边阈值。根据阈值选择使用不同的滤波器，需要配合sfn使用。</p>
+<p id="p465mcpsimp"><a name="p465mcpsimp"></a><a name="p465mcpsimp"></a>取值范围：[0, 511]</p>
+</td>
+</tr>
+<tr id="row466mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p468mcpsimp"><a name="p468mcpsimp"></a><a name="p468mcpsimp"></a>sfn0_0, sfn1_0, sfn2_0, sfn3_0, sfn0_1, sfn1_1, sfn2_1, sfn3_1</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p470mcpsimp"><a name="p470mcpsimp"></a><a name="p470mcpsimp"></a>根据sth保边阈值，不同图像特性选择不同滤波器的类型（滤波器号）。</p>
+<p id="p471mcpsimp"><a name="p471mcpsimp"></a><a name="p471mcpsimp"></a>取值范围：[0, 8]</p>
+</td>
+</tr>
+<tr id="row472mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p474mcpsimp"><a name="p474mcpsimp"></a><a name="p474mcpsimp"></a>sfn6_0, sfn6_1, sfn7_0, sfn7_1, sfn8_0, sfn8_1</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p476mcpsimp"><a name="p476mcpsimp"></a><a name="p476mcpsimp"></a>表示6号、7号、8号滤波器的混合选择（滤波器号）。</p>
+<p id="p477mcpsimp"><a name="p477mcpsimp"></a><a name="p477mcpsimp"></a>取值范围：[0, 5]</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>【3DNR X接口与MPI接口的对应关系】</p>
+<ul>
+<li>bld6仅在N1级有效。</li>
+<li>sfn7_0、sfn7_1、sfn8_0、sfn8_1仅在N2、N3级有效。</li>
+<li>sfs5仅在N2级有效。</li>
+<li>N1级的nXsf1 对应于 sfy[0].sfs1、sfy[0].sbr1，默认参数分别为30、128；</li>
+<li>N1级的nXsf2 对应于 sfy[0].sfs2、sfy[0].sft2、sfy[0].sbr2，默认参数分别为100、0、128；</li>
+<li>N1级的nXsf4 对应于 sfy[0].sfs4、sfy[0].sft4、sfy[0].sbr4，默认参数分别为100、10、128；</li>
+<li>N1级的nXsf6 对应于 sfy[0].sfn6_0、sfy[0].sfn6_1、sfy[0].bld6，默认参数分别为2、4、0；</li>
+<li>N1级的nXsfn对应于 sfy[0].sfn0_0、sfy[0].sfn1_0、sfy[0].sfn2_0、sfy[0].sfn3_0，默认参数分别为2、2、2、2；</li>
+<li>N1级的nXsth对应于 sfy[0].sth1_0、sfy[0].sth2_0、sfy[0].sth3_0，默认参数分别为40、100、100；</li>
+<li>N1级的nX2sfn对应于 sfy[0].sfn0_1、sfy[0].sfn1_1、sfy[0].sfn2_1、sfy[0].sfn3_1，默认参数分别为2、2、2、4；</li>
+<li>N1级的nX2sth对应于 sfy[0].sth1_1、sfy[0].sth2_1、sfy[0].sth3_1，默认参数分别为40、40、60。</li>
+<li>N2级的nXsf1 对应于 sfy[1].sfs1、sfy[1].sbr1，默认参数分别为20、128；</li>
+<li>N2级的nXsf2 对应于 sfy[1].sfs2、sfy[1].sft2、sfy[1].sbr2，默认参数分别为20、0、128；</li>
+<li>N2级的nXsf3 对应于 sfy[1].strf3、sfy[1].strb3，默认参数分别为20、10；</li>
+<li>N2级的nXsf4 对应于 sfy[1].sfs4、sfy[1].sft4、sfy[1].sbr4、sfy[1].strf4、sfy[1].strb4，默认参数分别为80、10、128、20、10；</li>
+<li>N2级的nXsf5 对应于 sfy[1].sfs5，默认参数为55；</li>
+<li>N2级的nXsf6 对应于 sfy[1].sfn6_0、sfy[1].sfn6_1，默认参数分别为5、3；</li>
+<li>N2级的nXsf7 对应于sfy[1].sfn7_0、sfy[1].sfn7_1，默认参数分别为4、3；</li>
+<li>N2级的nXsf8 对应于sfy[1].sfn8_0、sfy[1].sfn8_1，默认参数分别为4、3；</li>
+<li>N2级的nXsfn对应于 sfy[1].sfn0_0、sfy[1].sfn1_0、sfy[1].sfn2_0、sfy[1].sfn3_0，默认参数分别为6、6、6、6；</li>
+<li>N2级的nXsth对应于 sfy[1].sth1_0、sfy[1].sth2_0、sfy[1].sth3_0，默认参数分别为100、80、80；</li>
+<li>N2级的nX2sfn对应于 sfy[1].sfn0_1、sfy[1].sfn1_1、sfy[1].sfn2_1、sfy[1].sfn3_1，默认参数分别为0、0、3、4；</li>
+<li>N2级的nX2sth对应于 sfy[1].sth1_1、sfy[1].sth2_1、sfy[1].sth3_1，默认参数分别为0、0、40。</li>
+<li>N3级的nXsf1 对应于 sfy[2].sfs1、sfy[2].sbr1，默认参数分别为20、128；</li>
+<li>N3级的nXsf2 对应于 sfy[2].sfs2、sfy[2].sft2、sfy[2].sbr2，默认参数分别为40、0、128；</li>
+<li>N3级的nXsf3 对应于 sfy[2].strf3、sfy[2].strb3，默认参数分别为20、10；</li>
+<li>N3级的nXsf4 对应于 sfy[2].sfs4、sfy[2].sft4、sfy[2].sbr4、sfy[2].strf4、sfy[2].strb4，默认参数分别为100、0、128、20、10；</li>
+<li>N3级的nXsf6 对应于 sfy[2].sfn6_0、sfy[2].sfn6_1，默认参数分别为5、3；</li>
+<li>N3级的nXsf7 对应于sfy[2].sfn7_0、sfy[2].sfn7_1，默认参数分别为4、3；</li>
+<li>N3级的nXsf8 对应于sfy[2].sfn8_0、sfy[2].sfn8_1，默认参数分别为4、3；</li>
+<li>N3级的nXsfn对应于 sfy[2].sfn0_0、sfy[2].sfn1_0、sfy[2].sfn2_0、sfy[2].sfn3_0，默认参数分别为3、3、3、3；</li>
+<li>N3级的nXsth对应于 sfy[2].sth1_0、sfy[2].sth2_0、sfy[2].sth3_0，默认参数分别为60、100、80；</li>
+<li>N3级的nX2sfn对应于 sfy[2].sfn0_1、sfy[2].sfn1_1、sfy[2].sfn2_1、sfy[2].sfn3_1，默认参数分别为3、3、3、4；</li>
+<li>N3级的nX2sth对应于 sfy[2].sth1_1、sfy[2].sth2_1、sfy[2].sth3_1，默认参数分别为40、60、60。</li>
+</ul>
+<h4 id="ot_nr_v2_mdy">ot_nr_v2_mdy<a name="ZH-CN_TOPIC_0000001875213793"></a></h4>
+<p>【说明】</p>
+<p>3DNR运动检测参数。</p>
+<p>【定义】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>typedef struct { 
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    td_u16 math0, math1;
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    td_u16 mate0, mate1;
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    td_u8 mabw0, mabw1;
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>} ot_nr_v2_mdy;
+</span></code></pre></div>
+<p>【成员】</p>
+<p><a name="table524mcpsimp"></a></p>
+<table><thead align="left"><tr id="row529mcpsimp"><th class="cellrowborder" valign="top" width="35%" id="mcps1.1.3.1.1"><p id="p531mcpsimp"><a name="p531mcpsimp"></a><a name="p531mcpsimp"></a>成员名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="65%" id="mcps1.1.3.1.2"><p id="p533mcpsimp"><a name="p533mcpsimp"></a><a name="p533mcpsimp"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row535mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p537mcpsimp"><a name="p537mcpsimp"></a><a name="p537mcpsimp"></a>math0、math1</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p539mcpsimp"><a name="p539mcpsimp"></a><a name="p539mcpsimp"></a>表示通路0，1中动静判决阈值。取值范围：[0, 999]</p>
+</td>
+</tr>
+<tr id="row540mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p542mcpsimp"><a name="p542mcpsimp"></a><a name="p542mcpsimp"></a>mate0、mate1</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p544mcpsimp"><a name="p544mcpsimp"></a><a name="p544mcpsimp"></a>表示通路0，1中平坦区域运动检测指数。</p>
+<p id="p545mcpsimp"><a name="p545mcpsimp"></a><a name="p545mcpsimp"></a>取值范围：[0, 8]</p>
+</td>
+</tr>
+<tr id="row546mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p548mcpsimp"><a name="p548mcpsimp"></a><a name="p548mcpsimp"></a>mabw0、mabw1</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p550mcpsimp"><a name="p550mcpsimp"></a><a name="p550mcpsimp"></a>表示通路0，1中运动检测内容窗口大小的选择。</p>
+<p id="p551mcpsimp"><a name="p551mcpsimp"></a><a name="p551mcpsimp"></a>取值范围： [5, 9]</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>【3DNR X接口与MPI接口的对应关系】</p>
+<ul>
+<li>N1级的mXmath对应于 mdy[0].math0、mdy[0].math1，默认参数分别为200、200；</li>
+<li>N1级的mXmate对应于 mdy[0].mate1，默认参数为2；</li>
+<li>N1级的mXmabw对应于 mdy[0].mabw1，默认参数为9；</li>
+<li>N2级的mXmath对应于 mdy[1].math0、mdy[1].math1，默认参数分别为200、200；</li>
+<li>N2级的mXmate对应于 mdy[1].mate0、mdy[1].mate1，默认参数分别为2、2；</li>
+<li>N2级的mXmabw对应于 mdy[1].mabw0、mdy[1].mabw1，默认参数分别为9、9。</li>
+</ul>
+<h4 id="ot_nr_v2_mdy0">ot_nr_v2_mdy0<a name="ZH-CN_TOPIC_0000001828214548"></a></h4>
+<p>【说明】</p>
+<p>3DNR预时域处理参数。</p>
+<p>【定义】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>typedef struct { 
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    td_u16 tfs;
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    td_u16 math;
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    td_u16 mathd;
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    td_u8 mabw;
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>    td_u8 tdz;
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    td_u8 tfs_mot[17];
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>} ot_nr_v2_mdy0;
+</span></code></pre></div>
+<p>【成员】</p>
+<p><a name="table572mcpsimp"></a></p>
+<table><thead align="left"><tr id="row577mcpsimp"><th class="cellrowborder" valign="top" width="35%" id="mcps1.1.3.1.1"><p id="p579mcpsimp"><a name="p579mcpsimp"></a><a name="p579mcpsimp"></a>成员名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="65%" id="mcps1.1.3.1.2"><p id="p581mcpsimp"><a name="p581mcpsimp"></a><a name="p581mcpsimp"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row583mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p585mcpsimp"><a name="p585mcpsimp"></a><a name="p585mcpsimp"></a>tfs</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p587mcpsimp"><a name="p587mcpsimp"></a><a name="p587mcpsimp"></a>表示预时域处理的时域滤波强度。</p>
+<p id="p588mcpsimp"><a name="p588mcpsimp"></a><a name="p588mcpsimp"></a>取值范围：[0, 15]</p>
+</td>
+</tr>
+<tr id="row589mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p591mcpsimp"><a name="p591mcpsimp"></a><a name="p591mcpsimp"></a>math</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p593mcpsimp"><a name="p593mcpsimp"></a><a name="p593mcpsimp"></a>表示预时域中动静判决静止区域修正参数。取值范围：[0, 255]</p>
+</td>
+</tr>
+<tr id="row594mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p596mcpsimp"><a name="p596mcpsimp"></a><a name="p596mcpsimp"></a>mathd</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p598mcpsimp"><a name="p598mcpsimp"></a><a name="p598mcpsimp"></a>表示预时域中动静判决运动区域修正参数。取值范围：[0, 255]</p>
+</td>
+</tr>
+<tr id="row599mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p601mcpsimp"><a name="p601mcpsimp"></a><a name="p601mcpsimp"></a>mabw</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p603mcpsimp"><a name="p603mcpsimp"></a><a name="p603mcpsimp"></a>表示预时域处理中运动检测内容窗口大小的选择。</p>
+<p id="p604mcpsimp"><a name="p604mcpsimp"></a><a name="p604mcpsimp"></a>取值范围： [0, 2]</p>
+</td>
+</tr>
+<tr id="row605mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p607mcpsimp"><a name="p607mcpsimp"></a><a name="p607mcpsimp"></a>tdz</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p609mcpsimp"><a name="p609mcpsimp"></a><a name="p609mcpsimp"></a>表示运动检测死区。</p>
+<p id="p610mcpsimp"><a name="p610mcpsimp"></a><a name="p610mcpsimp"></a>取值范围：[0, 255]</p>
+</td>
+</tr>
+<tr id="row7608122575714"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p5608202517572"><a name="p5608202517572"></a><a name="p5608202517572"></a>tfs_mot[17]</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p2221032155818"><a name="p2221032155818"></a><a name="p2221032155818"></a>调整N0级的时域强度曲线。</p>
+<p id="p141091842143819"><a name="p141091842143819"></a><a name="p141091842143819"></a>取值范围：[0, 16]</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>【3DNR X接口与MPI接口的对应关系】</p>
+<ul>
+<li>N0级的pretfs对应于 mdy0.tfs，默认参数为8；</li>
+<li>N0级的premath对应于 mdy0.math，默认参数为100；</li>
+<li>N0级的premathd对应于 mdy0.mathd，默认参数为80；</li>
+<li>N0级的premabw对应于 mdy0.mabw，默认参数为2；</li>
+<li>N0级的pretdz对应于 mdy0.tdz，默认参数为32。</li>
+<li>N0级的tfs_mot对应于mdy0.tfs_mot数组。</li>
+</ul>
+<h4 id="ot_nr_v2_tfy">ot_nr_v2_tfy<a name="ZH-CN_TOPIC_0000001875093997"></a></h4>
+<p>【说明】</p>
+<p>3DNR时域滤波参数。</p>
+<p>【定义】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>typedef struct { 
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    td_u8 tfs0;
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    td_u8 tfs1;
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    td_u8 tfs2;
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    td_u8 ref_en;
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    td_u8 tss0;
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    td_u8 tss1;
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    td_u8 tss2;
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    td_u8 _rb_;
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    td_u8 tfr0[6];
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>    td_u8 tfr1[6];
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>    td_u8 tfs0_mot[17];
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>    td_u8 tfs1_mot[17];
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>    td_u8 tfs_mode;
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>} ot_nr_v2_tfy;
+</span></code></pre></div>
+<p>【成员】</p>
+<p><a name="table633mcpsimp"></a></p>
+<table><thead align="left"><tr id="row638mcpsimp"><th class="cellrowborder" valign="top" width="35%" id="mcps1.1.3.1.1"><p id="p640mcpsimp"><a name="p640mcpsimp"></a><a name="p640mcpsimp"></a>成员名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="65%" id="mcps1.1.3.1.2"><p id="p642mcpsimp"><a name="p642mcpsimp"></a><a name="p642mcpsimp"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row644mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p646mcpsimp"><a name="p646mcpsimp"></a><a name="p646mcpsimp"></a>tfs0、tfs1、tfs2</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p648mcpsimp"><a name="p648mcpsimp"></a><a name="p648mcpsimp"></a>不同通路中时域滤波绝对强度。</p>
+<p id="p649mcpsimp"><a name="p649mcpsimp"></a><a name="p649mcpsimp"></a>取值范围：[0, 15]</p>
+</td>
+</tr>
+<tr id="row650mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p652mcpsimp"><a name="p652mcpsimp"></a><a name="p652mcpsimp"></a>tss0、tss1、tss2</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p654mcpsimp"><a name="p654mcpsimp"></a><a name="p654mcpsimp"></a>不同通路中时域中混入空域的比例。</p>
+<p id="p655mcpsimp"><a name="p655mcpsimp"></a><a name="p655mcpsimp"></a>取值范围：[0, 31]</p>
+</td>
+</tr>
+<tr id="row11971617172813"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p169791722814"><a name="p169791722814"></a><a name="p169791722814"></a>tfr0[6]、tfr1[6]</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p169720174288"><a name="p169720174288"></a><a name="p169720174288"></a>通路0，1中静止区域时域滤波的相对强度。</p>
+<p id="p7652650103511"><a name="p7652650103511"></a><a name="p7652650103511"></a>取值范围：[0, 31]</p>
+</td>
+</tr>
+<tr id="row2707926143613"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p11707192613616"><a name="p11707192613616"></a><a name="p11707192613616"></a>tfs0_mot[17]、tfs1_mot[17]</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p13707192643610"><a name="p13707192643610"></a><a name="p13707192643610"></a>调整通路0，1中运动与静止区域的时域强度曲线。</p>
+<p id="p141091842143819"><a name="p141091842143819"></a><a name="p141091842143819"></a>取值范围：[0, 16]</p>
+</td>
+</tr>
+<tr id="row1546335613819"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p146311568382"><a name="p146311568382"></a><a name="p146311568382"></a>tfs_mode</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p1546385620385"><a name="p1546385620385"></a><a name="p1546385620385"></a>静止区域计算的模式选择。</p>
+<p id="p204514413392"><a name="p204514413392"></a><a name="p204514413392"></a>0：自动选择通路1和通路2的混合结果作为静止区域。</p>
+<p id="p1337421812405"><a name="p1337421812405"></a><a name="p1337421812405"></a>1：仅选择通路1的结果作为静止区域，此时tfs2与tss2失效。</p>
+</td>
+</tr>
+<tr id="row656mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p658mcpsimp"><a name="p658mcpsimp"></a><a name="p658mcpsimp"></a>ref_en</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p660mcpsimp"><a name="p660mcpsimp"></a><a name="p660mcpsimp"></a>参考帧开关。</p>
+<p id="p661mcpsimp"><a name="p661mcpsimp"></a><a name="p661mcpsimp"></a>0：关闭</p>
+<p id="p662mcpsimp"><a name="p662mcpsimp"></a><a name="p662mcpsimp"></a>1：打开</p>
+</td>
+</tr>
+<tr id="row663mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p665mcpsimp"><a name="p665mcpsimp"></a><a name="p665mcpsimp"></a>_rb_</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p667mcpsimp"><a name="p667mcpsimp"></a><a name="p667mcpsimp"></a>保留。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>【3DNR X接口与MPI接口的对应关系】</p>
+<ul>
+<li>ref对应于tfy[1].ref_en，用于控制N0级的时域开关和总的时域开关，默认参数为1。</li>
+<li>tfs_mode对应于tfy[0].tfs_mode，用于控制N1级与N2级静止区域计算的模式，默认参数为0。</li>
+<li>N1级的nXtfs对应于tfy[0].tfs0、tfy[0].tfs1、tfy[0].tfs2，默认参数分别为31、0、0；</li>
+<li>N1级的nXtss对应于tfy[0].tss0、tfy[0].tss1、tfy[0].tss2，默认参数分别为4、6、6；</li>
+<li>N1级的nXtfr0对应于tfy[0].tfr0[6]，默认参数分别为16、8、16、8、0、0；</li>
+<li>N1级的nXtfr1对应于tfy[0].tfr1[6]，默认参数分别为16、8、16、8、0、0；</li>
+<li>N2级的nXtfs对应于tfy[1].tfs0、tfy[1].tfs1、tfy[1].tfs2，默认参数分别为31、0、0；</li>
+<li>N2级的nXtss对应于tfy[1].tss0、tfy[1].tss1、tfy[1].tss2，默认参数分别为0、10、10；</li>
+<li>N2级的nXtfr0对应于tfy[1].tfr0[6]，默认参数分别为16、8、16、8、0、0；</li>
+<li>N2级的nXtfr1对应于tfy[1].tfr1[6]，默认参数分别为16、8、16、8、0、0。</li>
+</ul>
+<p>【3DNR_N1接口与MPI接口的对应关系】</p>
+<ul>
+<li>n1tfs0_mot对应于tfy[0].tfs0_mot[17];</li>
+<li>n1tfs1_mot对应于tfy[0].tfs1_mot[17]。</li>
+</ul>
+<p>【3DNR_N2接口与MPI接口的对应关系】</p>
+<ul>
+<li>n2tfs0_mot对应于tfy[1].tfs0_mot[17];</li>
+<li>n2tfs1_mot对应于tfy[1].tfs1_mot[17]。</li>
+</ul>
+<h4 id="ot_nr_v2_sfy_lut">ot_nr_v2_sfy_lut<a name="ZH-CN_TOPIC_0000001828374300"></a></h4>
+<p>【说明】</p>
+<p>3DNR空域滤波曲线参数。</p>
+<p>【定义】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>typedef struct { 
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    td_u8 sf_var_f[17], sf_var_b[17];
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    td_u8 sf_dir_f[17], sf_dir_b[17];
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    td_u8 sf_bri_f[17], sf_bri_b[17];
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    td_u8 sf5_var_f[17], sf5_var_b[17];
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    td_u8 sf5_dir_f[17], sf5_dir_b[17];
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    td_u8 sf5_bri_f[17], sf5_bri_b[17];
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    td_u8 sf5_sad_f[17];
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    td_u8 sf_cor[17], sf5_cor[17];
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    td_u8 sf_mot[17], sf5_mot[17];
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    td_u8 var_by_bri[17];
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>    td_u8 sf_bld[17];
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>} ot_nr_v2_sfy_lut;
+</span></code></pre></div>
+<p>【成员】</p>
+<p><a name="table693mcpsimp"></a></p>
+<table><thead align="left"><tr id="row698mcpsimp"><th class="cellrowborder" valign="top" width="35%" id="mcps1.1.3.1.1"><p id="p700mcpsimp"><a name="p700mcpsimp"></a><a name="p700mcpsimp"></a>成员名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="65%" id="mcps1.1.3.1.2"><p id="p702mcpsimp"><a name="p702mcpsimp"></a><a name="p702mcpsimp"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row704mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p706mcpsimp"><a name="p706mcpsimp"></a><a name="p706mcpsimp"></a>sf_var_f[17], sf_var_b[17],</p>
+<p id="p707mcpsimp"><a name="p707mcpsimp"></a><a name="p707mcpsimp"></a>sf5_var_f[17], sf5_var_b[17]</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p709mcpsimp"><a name="p709mcpsimp"></a><a name="p709mcpsimp"></a>表示3~5号滤波器根据图像边缘强度调整滤波强度的曲线（f表示前景，b表示背景。曲线仅用于N2、N3级）。3号、4号滤波器共用sf_var_f和sf_var_b。</p>
+<p id="p710mcpsimp"><a name="p710mcpsimp"></a><a name="p710mcpsimp"></a>取值范围：[0, 63]</p>
+</td>
+</tr>
+<tr id="row711mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p713mcpsimp"><a name="p713mcpsimp"></a><a name="p713mcpsimp"></a>sf_dir_f[17], sf_dir_b[17],</p>
+<p id="p714mcpsimp"><a name="p714mcpsimp"></a><a name="p714mcpsimp"></a>sf5_dir_f[17], sf5_dir_b[17]</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p716mcpsimp"><a name="p716mcpsimp"></a><a name="p716mcpsimp"></a>表示3~5号滤波器根据边缘方向性调整滤波强度的曲线（f表示前景，b表示背景。曲线仅用于N2、N3级）。3号、4号滤波器共用sf_dir_f和sf_dir_b。</p>
+<p id="p717mcpsimp"><a name="p717mcpsimp"></a><a name="p717mcpsimp"></a>取值范围：[0, 63]</p>
+</td>
+</tr>
+<tr id="row718mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p720mcpsimp"><a name="p720mcpsimp"></a><a name="p720mcpsimp"></a>sf_bri_f[17], sf_bri_b[17],</p>
+<p id="p721mcpsimp"><a name="p721mcpsimp"></a><a name="p721mcpsimp"></a>sf5_bri_f[17], sf5_bri_b[17]</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p723mcpsimp"><a name="p723mcpsimp"></a><a name="p723mcpsimp"></a>表示3~5号滤波器根据亮度调整滤波强度的曲线（f表示前景，b表示背景。曲线仅用于N2、N3级）。3号、4号滤波器共用sf_bri_f和sf_bri_b。</p>
+<p id="p724mcpsimp"><a name="p724mcpsimp"></a><a name="p724mcpsimp"></a>取值范围：[0, 63]</p>
+</td>
+</tr>
+<tr id="row725mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p727mcpsimp"><a name="p727mcpsimp"></a><a name="p727mcpsimp"></a>sf5_sad_f[17]</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p729mcpsimp"><a name="p729mcpsimp"></a><a name="p729mcpsimp"></a>表示5号滤波器根据运动图像边缘强度调整滤波强度的曲线（曲线仅用于前景以及仅用于N2级）。</p>
+<p id="p730mcpsimp"><a name="p730mcpsimp"></a><a name="p730mcpsimp"></a>取值范围：[0, 63]</p>
+</td>
+</tr>
+<tr id="row731mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p733mcpsimp"><a name="p733mcpsimp"></a><a name="p733mcpsimp"></a>sf_cor[17],</p>
+<p id="p734mcpsimp"><a name="p734mcpsimp"></a><a name="p734mcpsimp"></a>sf5_cor[17]</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p736mcpsimp"><a name="p736mcpsimp"></a><a name="p736mcpsimp"></a>表示3~5号滤波结果回叠原信号的强度。（3、4号滤波器仅回叠前景部分，5号滤波器回叠全图）。</p>
+<p id="p737mcpsimp"><a name="p737mcpsimp"></a><a name="p737mcpsimp"></a>取值范围：[0, 63]。3号、4号滤波器共用sf_cor。</p>
+</td>
+</tr>
+<tr id="row738mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p740mcpsimp"><a name="p740mcpsimp"></a><a name="p740mcpsimp"></a>sf_mot[17],</p>
+<p id="p77741742135110"><a name="p77741742135110"></a><a name="p77741742135110"></a>sf5_mot[17]</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p742mcpsimp"><a name="p742mcpsimp"></a><a name="p742mcpsimp"></a>表示3~5号滤波器前景背景区域划分曲线。3号、4号滤波器共用sf_mot。</p>
+<p id="p743mcpsimp"><a name="p743mcpsimp"></a><a name="p743mcpsimp"></a>取值范围：[0, 16]</p>
+</td>
+</tr>
+<tr id="row744mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p746mcpsimp"><a name="p746mcpsimp"></a><a name="p746mcpsimp"></a>var_by_bri[17]</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p748mcpsimp"><a name="p748mcpsimp"></a><a name="p748mcpsimp"></a>用于控制[nXsth/nX2sth]接口最后一个值sth3的区域选择。</p>
+<p id="p749mcpsimp"><a name="p749mcpsimp"></a><a name="p749mcpsimp"></a>取值范围：[0, 63]</p>
+</td>
+</tr>
+<tr id="row750mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p752mcpsimp"><a name="p752mcpsimp"></a><a name="p752mcpsimp"></a>sf_bld [17]</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p754mcpsimp"><a name="p754mcpsimp"></a><a name="p754mcpsimp"></a>表示6号、7号、8号滤波器的混合比例。</p>
+<p id="p755mcpsimp"><a name="p755mcpsimp"></a><a name="p755mcpsimp"></a>取值范围：[0, 63]</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>【3DNR_N2 接口与MPI接口的对应关系】</p>
+<ul>
+<li>n2sf_var_f 对应于luty[0].sf_var_f [17]；</li>
+<li>n2sf_var_b 对应于luty[0].sf_var_b [17]；</li>
+<li>n2sf_bri_f 对应于luty[0].sf_bri_f [17]；</li>
+<li>n2sf_bri_b 对应于luty[0].sf_bri_b [17]；</li>
+<li>n2sf_dir_f 对应于luty[0].sf_dir_f [17]；</li>
+<li>n2sf_dir_b 对应于luty[0].sf_dir_b [17]；</li>
+<li>n2sf_cor对应于luty[0].sf_cor [17]；</li>
+<li>n2sf_mot对应于luty[0].sf_mot [17]；</li>
+<li>n2sf5_var_f 对应于luty[0].sf5_var_f [17]；</li>
+<li>n2sf5_var_b 对应于luty[0].sf5_var_b [17]；</li>
+<li>n2sf5_bri_f 对应于luty[0].sf5_bri_f [17]；</li>
+<li>n2sf5_bri_b 对应于luty[0].sf5_bri_b [17]；</li>
+<li>n2sf5_dir_f 对应于luty[0].sf5_dir_f [17]；</li>
+<li>n2sf5_dir_b 对应于luty[0].sf5_dir_b [17]；</li>
+<li>n2sf5_sad_f 对应于luty[0].sf5_sad_f [17]；</li>
+<li>n2sf5_cor对应于luty[0].sf5_cor [17]；</li>
+<li>n2sf5_mot对应于luty[0].sf5_mot [17]；</li>
+<li>n2var_by_bri 对应于luty[0].var_by_bri[17]；</li>
+<li>n2sf_bld 对应于luty[0].sf_bld[17]。</li>
+</ul>
+<p>【3DNR_N3 接口与MPI接口的对应关系】</p>
+<ul>
+<li>n3sf_var_f 对应于luty[1].sf_var_f [17]；</li>
+<li>n3sf_var_b 对应于luty[1].sf_var_b [17]；</li>
+<li>n3sf_bri_f 对应于luty[1].sf_bri_f [17]；</li>
+<li>n3sf_bri_b 对应于luty[1].sf_bri_b [17]；</li>
+<li>n3sf_dir_f 对应于luty[1].sf_dir_f [17]；</li>
+<li>n3sf_dir_b 对应于luty[1].sf_dir_b [17]；</li>
+<li>n3sf_cor对应于luty[1].sf_cor [17]；</li>
+<li>n3sf_mot对应于luty[1].sf_mot [17]；</li>
+<li>n3var_by_bri 对应于luty[1].var_by_bri[17]；</li>
+<li>n3sf_bld 对应于luty[1].sf_bld[17]。</li>
+</ul>
+<h4 id="ot_nr_v2_nrc0">ot_nr_v2_nrc0<a name="ZH-CN_TOPIC_0000001875213797"></a></h4>
+<p>【说明】</p>
+<p>3DNR视频色度滤波C0级参数。</p>
+<p>【定义】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>typedef struct { 
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    td_u8 trc;
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    td_u8 sfc;
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    td_u8 tfc;
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    td_u8 tfs;
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    td_u8 tfs_mot[17];
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>} ot_nr_v2_nrc0;
+</span></code></pre></div>
+<p>【成员】</p>
+<p><a name="table800mcpsimp"></a></p>
+<table><thead align="left"><tr id="row805mcpsimp"><th class="cellrowborder" valign="top" width="35%" id="mcps1.1.3.1.1"><p id="p807mcpsimp"><a name="p807mcpsimp"></a><a name="p807mcpsimp"></a>成员名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="65%" id="mcps1.1.3.1.2"><p id="p809mcpsimp"><a name="p809mcpsimp"></a><a name="p809mcpsimp"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row811mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p813mcpsimp"><a name="p813mcpsimp"></a><a name="p813mcpsimp"></a>sfc</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p815mcpsimp"><a name="p815mcpsimp"></a><a name="p815mcpsimp"></a>空域强度参数。</p>
+<p id="p816mcpsimp"><a name="p816mcpsimp"></a><a name="p816mcpsimp"></a>取值范围：[0, 255]</p>
+</td>
+</tr>
+<tr id="row817mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p819mcpsimp"><a name="p819mcpsimp"></a><a name="p819mcpsimp"></a>trc</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p821mcpsimp"><a name="p821mcpsimp"></a><a name="p821mcpsimp"></a>用于抑制运动区域的色彩侵染现象。</p>
+<p id="p822mcpsimp"><a name="p822mcpsimp"></a><a name="p822mcpsimp"></a>取值范围：[0, 255]</p>
+</td>
+</tr>
+<tr id="row823mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p825mcpsimp"><a name="p825mcpsimp"></a><a name="p825mcpsimp"></a>tfc</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p827mcpsimp"><a name="p827mcpsimp"></a><a name="p827mcpsimp"></a>表示色度时域滤波强度。</p>
+<p id="p828mcpsimp"><a name="p828mcpsimp"></a><a name="p828mcpsimp"></a>取值范围：[0, 63]</p>
+</td>
+</tr>
+<tr id="row829mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p831mcpsimp"><a name="p831mcpsimp"></a><a name="p831mcpsimp"></a>tfs</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p833mcpsimp"><a name="p833mcpsimp"></a><a name="p833mcpsimp"></a>表示色度时域滤波强度。</p>
+<p id="p834mcpsimp"><a name="p834mcpsimp"></a><a name="p834mcpsimp"></a>取值范围：[0, 15]</p>
+</td>
+</tr>
+<tr id="row835mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p837mcpsimp"><a name="p837mcpsimp"></a><a name="p837mcpsimp"></a>tfs_mot[17]</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p839mcpsimp"><a name="p839mcpsimp"></a><a name="p839mcpsimp"></a>表示时域滤波中使用到运动检测曲线。</p>
+<p id="p840mcpsimp"><a name="p840mcpsimp"></a><a name="p840mcpsimp"></a>取值范围：[0, 16]</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>【3DNR X接口与MPI接口的对应关系】</p>
+<ul>
+<li>sfc 对应于nrc0.sfc，默认参数为80；</li>
+<li>tfc对应于nrc0.tfc，默认参数为20；</li>
+<li>trc 对应于 nrc0.trc，默认参数为100；</li>
+<li>nCtfs对应于nrc0.tfs，默认参数为15。</li>
+</ul>
+<p>【3DNR_nc接口与MPI接口的对应关系】</p>
+<p>nc0tfs_mot对应于nrc0.tfs_mot[17]。</p>
+<h4 id="ot_nr_v2_nrc1">ot_nr_v2_nrc1<a name="ZH-CN_TOPIC_0000001828214552"></a></h4>
+<p>【说明】</p>
+<p>3DNR视频色度滤波C1级参数。</p>
+<p>【定义】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>typedef struct { 
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    td_u8 pre_sfs;
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>    td_u8 sfs1;
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>    td_u8 sfs2_coarse;
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>    td_u8 sfs2_coarse_f;
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>    td_u8 sfs2_fine_f;
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>    td_u8 sfs2_fine_b;
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    td_u8 sfs1_mot[17];
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    td_u8 sfs2_mot[16];
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>    td_u16 sfs2_sat[20];
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>    td_u8 sfs2_mode;
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>} ot_nr_v2_nrc1;
+</span></code></pre></div>
+<p>【成员】</p>
+<p><a name="table864mcpsimp"></a></p>
+<table><thead align="left"><tr id="row869mcpsimp"><th class="cellrowborder" valign="top" width="35%" id="mcps1.1.3.1.1"><p id="p871mcpsimp"><a name="p871mcpsimp"></a><a name="p871mcpsimp"></a>成员名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="65%" id="mcps1.1.3.1.2"><p id="p873mcpsimp"><a name="p873mcpsimp"></a><a name="p873mcpsimp"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row875mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p877mcpsimp"><a name="p877mcpsimp"></a><a name="p877mcpsimp"></a>pre_sfs</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p879mcpsimp"><a name="p879mcpsimp"></a><a name="p879mcpsimp"></a>表示色度0号空域滤波去噪强度。</p>
+<p id="p880mcpsimp"><a name="p880mcpsimp"></a><a name="p880mcpsimp"></a>取值范围：[0, 16]</p>
+</td>
+</tr>
+<tr id="row881mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p883mcpsimp"><a name="p883mcpsimp"></a><a name="p883mcpsimp"></a>sfs1</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p885mcpsimp"><a name="p885mcpsimp"></a><a name="p885mcpsimp"></a>表示色度1号空域滤波去噪强度。</p>
+<p id="p886mcpsimp"><a name="p886mcpsimp"></a><a name="p886mcpsimp"></a>取值范围：[0, 255]</p>
+</td>
+</tr>
+<tr id="row887mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p889mcpsimp"><a name="p889mcpsimp"></a><a name="p889mcpsimp"></a>sfs2_coarse</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p891mcpsimp"><a name="p891mcpsimp"></a><a name="p891mcpsimp"></a>表示2号空域滤波器粗调整体强度。</p>
+<p id="p892mcpsimp"><a name="p892mcpsimp"></a><a name="p892mcpsimp"></a>取值范围：[0, 31]</p>
+</td>
+</tr>
+<tr id="row893mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p895mcpsimp"><a name="p895mcpsimp"></a><a name="p895mcpsimp"></a>sfs2_coarse_f</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p897mcpsimp"><a name="p897mcpsimp"></a><a name="p897mcpsimp"></a>表示2号空域滤波器粗调前景强度。在sfs2_coarse的基础上可以进一步调整前景的去噪强度。</p>
+<p id="p898mcpsimp"><a name="p898mcpsimp"></a><a name="p898mcpsimp"></a>取值范围：[0, 31]</p>
+</td>
+</tr>
+<tr id="row899mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p901mcpsimp"><a name="p901mcpsimp"></a><a name="p901mcpsimp"></a>sfs2_fine_f</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p903mcpsimp"><a name="p903mcpsimp"></a><a name="p903mcpsimp"></a>表示2号空域滤波器细调前景强度。</p>
+<p id="p904mcpsimp"><a name="p904mcpsimp"></a><a name="p904mcpsimp"></a>取值范围：[0, 16]</p>
+</td>
+</tr>
+<tr id="row905mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p907mcpsimp"><a name="p907mcpsimp"></a><a name="p907mcpsimp"></a>sfs2_fine_b</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p909mcpsimp"><a name="p909mcpsimp"></a><a name="p909mcpsimp"></a>表示2号空域滤波器细调背景强度。</p>
+<p id="p910mcpsimp"><a name="p910mcpsimp"></a><a name="p910mcpsimp"></a>取值范围：[0, 16]</p>
+</td>
+</tr>
+<tr id="row911mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p913mcpsimp"><a name="p913mcpsimp"></a><a name="p913mcpsimp"></a>sfs1_mot[17]</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p915mcpsimp"><a name="p915mcpsimp"></a><a name="p915mcpsimp"></a>表示色度空域去噪中1号滤波器前景背景区域去噪强度曲线。</p>
+<p id="p916mcpsimp"><a name="p916mcpsimp"></a><a name="p916mcpsimp"></a>取值范围：[0, 16]</p>
+</td>
+</tr>
+<tr id="row122563503498"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p1325695017498"><a name="p1325695017498"></a><a name="p1325695017498"></a>sfs2_mot[16]</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p625645016493"><a name="p625645016493"></a><a name="p625645016493"></a>表示色度空域去噪中2号滤波器不同区域选择前景去噪强度（sfs2_fine_f）还是背景去噪强度（sfs2_fine_b）的曲线，需配合sfs2_fine_f以及sfs2_fine_b使用。</p>
+<p id="p74871426145215"><a name="p74871426145215"></a><a name="p74871426145215"></a>取值范围：[0, 16]</p>
+</td>
+</tr>
+<tr id="row08676539494"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p68671853114912"><a name="p68671853114912"></a><a name="p68671853114912"></a>sfs2_sat[20]</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p1986725394917"><a name="p1986725394917"></a><a name="p1986725394917"></a>表示2号滤波器根据饱和度调整去噪强度的曲线。</p>
+<p id="p155751653145418"><a name="p155751653145418"></a><a name="p155751653145418"></a>取值范围：[0, 1023]</p>
+</td>
+</tr>
+<tr id="row193661716555"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.1.3.1.1 "><p id="p12367147135514"><a name="p12367147135514"></a><a name="p12367147135514"></a>sfs2_mode</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.3.1.2 "><p id="p036710711553"><a name="p036710711553"></a><a name="p036710711553"></a>表示2号滤波器强度调整的模式选择。</p>
+<p id="p1399713515511"><a name="p1399713515511"></a><a name="p1399713515511"></a>0：使用sfs2_coarse进行2号滤波器的强度调节，此时sfs2_sat[20]失效。</p>
+<p id="p24932151565"><a name="p24932151565"></a><a name="p24932151565"></a>1：使用sfs2_sat[20]进行2号滤波器的强度调节，此时sfs2_coarse失效。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>【3DNR X接口与MPI接口的对应关系】</p>
+<ul>
+<li>nc1_pre_sfs对应于nrc1.pre_sfs，默认参数为16；</li>
+<li>nCsfs1对应于nrc1.sfs1，默认参数为10；</li>
+<li>sfs2_c_f对应于nrc1.sfs2_coarse_f，默认参数为16；</li>
+<li>sfs2_c对应于nrc1.sfs2_coarse，默认参数为16；</li>
+<li>sfs2_fine_f对应于nrc1.sfs2_fine_f，默认参数为16；</li>
+<li>sfs2_fine_b对应于nrc1.sfs2_fine_b，默认参数为16。</li>
+<li>sfs2_mode对应于nrc1.sfs2_mode，默认参数为0。</li>
+</ul>
+<p>【3DNR_nc接口与MPI接口的对应关系】</p>
+<p>nc1sfs1_mot对应于nrc1.sfs1_mot[17]；</p>
+<p>nc1sfs2_mot对应于nrc1.sfs2_mot[16]；</p>
+<p>nc1sfs2_sat对应于nrc1.sfs2_sat[20]。</p>
+<h4 id="ot_nr_v2_pp">ot_nr_v2_pp<a name="ZH-CN_TOPIC_0000001888868217"></a></h4>
+<p>【说明】</p>
+<p>3DNR视频后处理参数。</p>
+<p>【定义】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>typedef struct { 
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    td_u16 gamma_lut[33];
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    td_u8 gamma_en;
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    td_u8 ca_lut[33];
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>    td_u8 ca_en;
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>} ot_nr_v2_pp;
+</span></code></pre></div>
+<p>【成员】</p>
+<p><a name="table7118205952211"></a></p>
+<table><thead align="left"><tr id="row181577599223"><th class="cellrowborder" valign="top" width="35.35%" id="mcps1.1.3.1.1"><p id="p161571059192217"><a name="p161571059192217"></a><a name="p161571059192217"></a>成员名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="64.64999999999999%" id="mcps1.1.3.1.2"><p id="p15157205962210"><a name="p15157205962210"></a><a name="p15157205962210"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row20157155920227"><td class="cellrowborder" valign="top" width="35.35%" headers="mcps1.1.3.1.1 "><p id="p19157105982214"><a name="p19157105982214"></a><a name="p19157105982214"></a>gamma_en</p>
+</td>
+<td class="cellrowborder" valign="top" width="64.64999999999999%" headers="mcps1.1.3.1.2 "><p id="p1115715920222"><a name="p1115715920222"></a><a name="p1115715920222"></a>表示后处理gamma开关。</p>
+<p id="p715775911228"><a name="p715775911228"></a><a name="p715775911228"></a>取值范围：[0,1]</p>
+</td>
+</tr>
+<tr id="row1157859102212"><td class="cellrowborder" valign="top" width="35.35%" headers="mcps1.1.3.1.1 "><p id="p915795911224"><a name="p915795911224"></a><a name="p915795911224"></a>gamma_lut[33]</p>
+</td>
+<td class="cellrowborder" valign="top" width="64.64999999999999%" headers="mcps1.1.3.1.2 "><p id="p7157059102215"><a name="p7157059102215"></a><a name="p7157059102215"></a>表示后处理gamma曲线。</p>
+<p id="p18157155910224"><a name="p18157155910224"></a><a name="p18157155910224"></a>取值范围：[0,255]</p>
+</td>
+</tr>
+<tr id="row101575594226"><td class="cellrowborder" valign="top" width="35.35%" headers="mcps1.1.3.1.1 "><p id="p215795912216"><a name="p215795912216"></a><a name="p215795912216"></a>ca_en</p>
+</td>
+<td class="cellrowborder" valign="top" width="64.64999999999999%" headers="mcps1.1.3.1.2 "><p id="p181577598227"><a name="p181577598227"></a><a name="p181577598227"></a>表示后处理ca开关。</p>
+<p id="p131574597223"><a name="p131574597223"></a><a name="p131574597223"></a>取值范围：[0,1]</p>
+</td>
+</tr>
+<tr id="row815715962216"><td class="cellrowborder" valign="top" width="35.35%" headers="mcps1.1.3.1.1 "><p id="p1515755914225"><a name="p1515755914225"></a><a name="p1515755914225"></a>ca_lut[33]</p>
+</td>
+<td class="cellrowborder" valign="top" width="64.64999999999999%" headers="mcps1.1.3.1.2 "><p id="p16157105918220"><a name="p16157105918220"></a><a name="p16157105918220"></a>表示后处理ca曲线。</p>
+<p id="p515755992212"><a name="p515755992212"></a><a name="p515755992212"></a>取值范围：[0,63]</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>【3DNR X接口与MPI接口的对应关系】</p>
+<ul>
+<li>gamma_en对应于pp.gamma_en，默认参数为0；</li>
+<li>ca_en对应于pp.ca_en，默认参数为0；</li>
+</ul>
+<p>【3DNR NC接口与MPI接口的对应关系】</p>
+<ul>
+<li>post_gamma_lut对应于pp.gamma_lut数组;</li>
+<li>post_ca_lut对应于pp.ca_lut[33]。</li>
+</ul>
+<h3 id="默认参数">默认参数<a name="ZH-CN_TOPIC_0000001875094001"></a></h3>
+<p>Hi3516CV610 YUV 3DNR参数的接口默认参数，如<a href="#fig4364151824715">图1</a>所示。</p>
+<p><strong>图 1</strong>  3DNR参数的接口参数界面<a name="fig4364151824715"></a><br />
+<img alt="" src="../figures/3DNR%E5%8F%82%E6%95%B0%E7%9A%84%E6%8E%A5%E5%8F%A3%E5%8F%82%E6%95%B0%E7%95%8C%E9%9D%A2.png" title="3DNR参数的接口参数界面" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+-   nX**,mX**参数里面的X的均指级数，代指第n级。<br />
+-   <strong>[en]</strong>  使能该级去噪功能，0时表示此级功能关闭，1则表示此级功能生效。<br />
+-   色度分为NC0和NC1两级，由 nCen开关控制。<br />
+-   如果亮度有剧烈变化，3dnr时域可能出现重新收敛的情况。</p>
+</blockquote>
+<p>3DNR的亮度去噪（NRy）由五级串联去噪功能组成，按如下分为5级，编号为N0，N1，N2，N3，N4，不同级之间的同样编号、类型滤波器效果由于实现差异、串联效应等，导致不同级结果并不完全一样。色彩滤波器独立于亮度滤波器，分为两级NC0和NC1。在亮度去噪和色度去噪操作后，还可以进行后处理（Post Processing（PP）），即亮度调整（gamma）和饱和度调整（Ca）。如<a href="#fig11762192992114">图2</a>所示。</p>
+<ul>
+<li>N0级为纯时域滤波器。</li>
+<li>N1，N2可以选择时域滤波和空域滤波。</li>
+<li>N3为纯空域滤波器（带时域辅助）。</li>
+<li>N4为空域增强模块（带时域辅助）。</li>
+</ul>
+<p><strong>图 2</strong>  3DNR流程图<a name="fig11762192992114"></a><br />
+<img alt="" src="../figures/3DNR%E6%B5%81%E7%A8%8B%E5%9B%BE.png" title="3DNR流程图" /></p>
+<p>【3DNR约束说明】</p>
+<p><a name="table52359652914"></a></p>
+<table><thead align="left"><tr id="row925226122917"><th class="cellrowborder" valign="top" width="15.651565156515652%" id="mcps1.1.4.1.1"><p id="p1725218617297"><a name="p1725218617297"></a><a name="p1725218617297"></a>参数选择</p>
+</th>
+<th class="cellrowborder" valign="top" width="59.285928592859285%" id="mcps1.1.4.1.2"><p id="p102527612915"><a name="p102527612915"></a><a name="p102527612915"></a>Norm模式</p>
+</th>
+<th class="cellrowborder" valign="top" width="25.06250625062506%" id="mcps1.1.4.1.3"><p id="p625217692910"><a name="p625217692910"></a><a name="p625217692910"></a>Advance模式</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row17252196182912"><td class="cellrowborder" valign="top" width="15.651565156515652%" headers="mcps1.1.4.1.1 "><p id="p2252360293"><a name="p2252360293"></a><a name="p2252360293"></a>ref_en=0</p>
+</td>
+<td class="cellrowborder" valign="top" width="59.285928592859285%" headers="mcps1.1.4.1.2 "><p id="p192521612918"><a name="p192521612918"></a><a name="p192521612918"></a>亮度色度时域均无效；亮度空域均有效。</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.06250625062506%" headers="mcps1.1.4.1.3 "><p id="p17252464294"><a name="p17252464294"></a><a name="p17252464294"></a>不支持Advance 模式。</p>
+</td>
+</tr>
+<tr id="row142528632913"><td class="cellrowborder" valign="top" width="15.651565156515652%" headers="mcps1.1.4.1.1 "><p id="p14252146132918"><a name="p14252146132918"></a><a name="p14252146132918"></a>ref_en=1</p>
+</td>
+<td class="cellrowborder" valign="top" width="59.285928592859285%" headers="mcps1.1.4.1.2 "><p id="p2252166112919"><a name="p2252166112919"></a><a name="p2252166112919"></a>亮度色度空域均有效；亮度N2级时域无效，空域有效（若需要看到明显空域效果，可以将N2级tss0调大），N1、N3、N4级空域均有效；</p>
+<p id="p125219632917"><a name="p125219632917"></a><a name="p125219632917"></a>色度sfs2无效。</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.06250625062506%" headers="mcps1.1.4.1.3 "><p id="p225218602913"><a name="p225218602913"></a><a name="p225218602913"></a>亮度、色度时域空域均有效。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="空域滤波器参数说明">空域滤波器参数说明<a name="ZH-CN_TOPIC_0000001828374304"></a></h2>
+<p>N1~N3级包含0~5号基础空域滤波器，即nXsf0、nXsf1、nXsf2、nXsf3、nXsf4、nXsf5。不同的基础滤波器有不同的特性，nXsf1和nXsf2主要针对冲击噪点的去除，但保边能力较弱。而nXsf3~ nXsf5有较强的保边能力。可根据不同的图像特性灵活使用。（注：nX**参数里面的X均指级数，代指第n级。）</p>
+<ul>
+<li><strong>[nXsf0]</strong>零号滤波器为该级输入的原始像素。</li>
+<li>
+<p><strong>[nXsf1][nXsf2]</strong>分别用于调试1号，2号滤波器。</p>
+<p>1号和2号滤波器[nXsf1][nXsf2]的特点对于图像强边缘的去噪能力较强，可以去除冲击噪点，但是对于平坦区域的去噪能力较弱（相对于nXsf3~ nXsf5滤波器，平坦区域的颗粒感强一些），1，2号滤波器效果类似，但2号的滤波强度更强一些。</p>
+</li>
+<li>
+<p>每级的<strong>[nXsf1] </strong>有两个参数, 依次为sfs和sbr,   <strong>[nXsf2]</strong>和<strong>[nXsf4] </strong>接口有三个参数, 依次为sfs、sft和sbr，具体如<a href="#fig53287311012">图1</a>和<a href="#fig188801419310">图2</a>所示。</p>
+<p><strong>图 1</strong> <strong>nXsf1</strong>参数示例图<a name="fig53287311012"></a><br />
+<img alt="" src="../figures/nXsf1%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B%E5%9B%BE.jpg" title="nXsf1参数示例图" /></p>
+<p><strong>图 2</strong> <strong>nXsf2</strong>和<strong>nXsf4</strong>参数示例图<a name="fig188801419310"></a><br />
+<img alt="" src="../figures/nXsf2%E5%92%8CnXsf4%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B%E5%9B%BE.jpg" title="nXsf2和nXsf4参数示例图" /></p>
+<ul>
+<li>参数sfs用于调节滤波器强度，设置范围均为[0, 255]。参数sft为滤波强度的补充。通常只需要调节sfs（sft设置为0）；然而在sfs设定较大的时候，仍需要加强去噪强度，可调节sft作为补充，sft越大，滤波器越接近均值滤波器。</li>
+<li>参数sbr用于调试“亮暗不对称”去噪模式：设置为128时表示亮暗对称去噪模式（默认模式）；设置为小于128时倾向去亮噪声，设置为大于128时倾向去暗噪声。该参数偏离128值越大，表示不对称强度越大。取值范围：[0, 255]。</li>
+</ul>
+</li>
+<li>
+<p><strong>[nXsf3] </strong>用于调试3号滤波器。有两个参数可调，分别用于设置前景和背景的强度。取值范围：[0, 31]。</p>
+<p><strong>图 3</strong> <strong>nXsf3</strong>调试参数示例图<a name="fig85963169820"></a><br />
+<img alt="" src="../figures/nXsf3%E8%B0%83%E8%AF%95%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B%E5%9B%BE.jpg" title="nXsf3调试参数示例图" /></p>
+<ul>
+<li>3号滤波器在N2和N3级生效。</li>
+<li>3号滤波器效果保边性能强，可以保护较弱的边缘不被模糊，但是对于冲击噪声的抑制能力相对较弱。</li>
+<li>前景和背景的区分由nXsf_mot决定。</li>
+</ul>
+</li>
+<li>
+<p><strong>[nXsf4] </strong>用于调试4号滤波器的滤波强度，前三个接口取值范围：[0, 255]，后两个接口取值范围：[0, 31]。该处仅为N1~N3级的[nXsf4],在N4级的[nXsf4]参数将在<a href="#li1017mcpsimp">•[nXsf1][nXsf2][nXsf3]...</a>处详细介绍。</p>
+<ul>
+<li>4号滤波器在N1~ N3级生效。</li>
+<li>[nXsf4] 接口前三个参数, 依次为sfs、sft和sbr。参数的意义可以参考[nXsf2]滤波器<strong>。</strong></li>
+<li>[nXsf4] 接口后两个参数用于设置前景和背景的强度，在N2和N3级生效。</li>
+<li>4号滤波器的滤波效果类似3号滤波器。相比3号滤波器，噪声去除强度较强，但保边效果相对弱。</li>
+</ul>
+</li>
+<li>
+<p><strong>[nXsf5] </strong>用于调试5号滤波器的滤波强度，取值范围：[0, 255]。</p>
+<p><strong>图 4</strong> <strong>nXsf5</strong>调试参数示例图<a name="fig1476454251120"></a><br />
+<img alt="" src="../figures/nXsf5%E8%B0%83%E8%AF%95%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B%E5%9B%BE.jpg" title="nXsf5调试参数示例图" /></p>
+<ul>
+<li>5号滤波器仅在N2级生效。</li>
+<li>相对与其他基础滤波器，5号滤波器的滤波去噪强度最强，可以有效去除平坦区域噪声，同时保护强边缘，但是比较容易丢失弱纹理细节。</li>
+</ul>
+<p>如<a href="#fig1247824104619">图5</a>所示（1号2号滤波器对比效果类似，本文档不再展示），该效果图仅为展示不同滤波器对效果的影响，并非最终的效果。</p>
+<p><strong>图 5</strong>  常用的基础滤波器效果对比图<a name="fig1247824104619"></a><br />
+<img alt="" src="../figures/%E5%B8%B8%E7%94%A8%E7%9A%84%E5%9F%BA%E7%A1%80%E6%BB%A4%E6%B3%A2%E5%99%A8%E6%95%88%E6%9E%9C%E5%AF%B9%E6%AF%94%E5%9B%BE.png" title="常用的基础滤波器效果对比图" /></p>
+<ul>
+<li>从<a href="#fig1247824104619">图5</a>可以看出，相较于2号滤波器，3、4、5号滤波器的保边效果比较明显。对大边缘保边效果最明显的是5号滤波器，但是该滤波器也可能会保留一些非边缘噪声。</li>
+<li>各种基础滤波器具有不同特性，因此，可以通过混合滤波器（6、7、8号滤波器）选择不同滤波器进行混合，实现不同区域使用不同滤波器的目的。</li>
+</ul>
+</li>
+<li>
+<p><strong>[nXsf6]</strong>该接口配置6号滤波器结果，为两组滤波器的混合结果。</p>
+<ul>
+<li>
+<p>N1级该接口的前两个参数（sfn6_0和sfn6_1）分别表示混合滤波器号码，取值范围：[0, 5]；第三个参数（bld6）表示混合比例，取值范围：[0, 16], 混合权重越大，越倾向于第二个参数（sfn6_1）选择的滤波器结果。N1级中的3号滤波器的强度由<strong>[nXsf4]</strong>决定。5号滤波器为输入。</p>
+<p><strong>图 6</strong>  N1级sf6参数示例图<a name="fig48618084411"></a><br />
+<img alt="" src="../figures/N1%E7%BA%A7sf6%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B%E5%9B%BE.jpg" title="N1级sf6参数示例图" /></p>
+<p>如<a href="#fig48618084411">图6</a>所示：当前N1级sf6参数示例为2,4,0，其中2,4表示sfn6_0选择2号滤波器，sfn6_1选择4号滤波器，bld6为0，表示sf6混合滤波器倾向于sfn6_0，也即2号滤波器；</p>
+</li>
+<li>
+<p>N2级和N3该接口的两个参数（sfn6_0和sfn6_1）表示混合滤波器号码，取值范围：[0, 5]；混合权重分别由表格<strong>[n2sf_bld]</strong>和<strong>[n3sf_bld]</strong>决定，混合指标为图像边缘强度<strong>。</strong></p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>[nXsf7] [nXsf8]</strong>该接口配置7号和8号滤波器选择，为两组滤波器的混合结果。</p>
+<p><strong>图 7</strong> <strong>nXsf7</strong>和<strong>nXsf8</strong>参数调试示例截图<a name="fig748813631512"></a><br />
+<img alt="" src="../figures/nXsf7%E5%92%8CnXsf8%E5%8F%82%E6%95%B0%E8%B0%83%E8%AF%95%E7%A4%BA%E4%BE%8B%E6%88%AA%E5%9B%BE.jpg" title="nXsf7和nXsf8参数调试示例截图" /></p>
+<ul>
+<li>在N2、N3级中，该两组接口的两个参数（sfn7_0和sfn7_1以及sfn8_0和sfn8_1）表示混合滤波器号码，取值范围：[0, 5]；混合权重分别由表格<strong>[n2sf_bld]</strong>,  <strong>[n3sf_bld]</strong>决定。7号滤波器的混合指标是边缘方向性，数值越大说明该区域方向性越强。8号滤波器的混合指标也是图像边缘强度。选择0号滤波器结果时，则为输入N2/N3级的原始像素。</li>
+<li>在N4级，该接口的两个参数表示混合滤波器号码，取值范围：[0, 4]；混合权重分别由表格<strong>[n4sf_bld]</strong>决定。7号滤波器混合指标为边缘方向性，8号滤波器混合指标为亮度。选择0号滤波器结果时，则为输入N4级的原始像素。</li>
+</ul>
+</li>
+<li>
+<p><strong>[nXsf_bld] </strong>该表格用于配置N2和N3级中6，7或者8号混合滤波器的混合比例。</p>
+<ul>
+<li>
+<p>N2、N3级中，横坐标的定义参考6，7或者8号的图像指标（三个混合滤波器的混合指标分别为图像边缘强度，边缘方向性，局部相似度）。纵坐标的值表示混合比例，值越大，6，7或者8号接口中的第二组滤波器所占的比例就越高。</p>
+<p>以N2级n2sf_bld举例，当前曲线形状调试如<a href="#fig12207313181">图8</a>所示：在横坐标前12个点，纵坐标数值较大，当前第二组滤波器所占的比较较高，在横坐标后12个点，纵坐标数值接近为0，第一组滤波器所占的比例就高。</p>
+<p><strong>图 8</strong>  n2sf_bld调试示例图<a name="fig12207313181"></a><br />
+<img alt="" src="../figures/n2sf_bld%E8%B0%83%E8%AF%95%E7%A4%BA%E4%BE%8B%E5%9B%BE.jpg" title="n2sf_bld调试示例图" /></p>
+</li>
+<li>
+<p>N4级中，横坐标为7或者8号的图像指标（两个混合滤波器的混合指标分别为边缘方向性，亮度）。纵坐标的值表示混合比例，值越大，7或者8号接口中的第二组滤波器所占的比例就越高。</p>
+</li>
+</ul>
+<p><strong>表 1</strong> <strong>6号、7号、8号滤波器具体用于混合的指标（横坐标）</strong></p>
+<p><a name="table660115270333"></a><br />
+<table><thead align="left"><tr id="row11600172723310"><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.6.1.1"><p id="p15981127163313"><a name="p15981127163313"></a><a name="p15981127163313"></a>混合指标</p><br />
+</th><br />
+<th class="cellrowborder" valign="top" width="14.32%" id="mcps1.2.6.1.2"><p id="p14599102783311"><a name="p14599102783311"></a><a name="p14599102783311"></a>N1</p><br />
+</th><br />
+<th class="cellrowborder" valign="top" width="25.679999999999996%" id="mcps1.2.6.1.3"><p id="p660022715331"><a name="p660022715331"></a><a name="p660022715331"></a>N2</p><br />
+</th><br />
+<th class="cellrowborder" valign="top" width="20%" id="mcps1.2.6.1.4"><p id="p14600142783314"><a name="p14600142783314"></a><a name="p14600142783314"></a>N3</p><br />
+</th><br />
+<th class="cellrowborder" valign="top" width="20%" id="mcps1.2.6.1.5"><p id="p11600927163316"><a name="p11600927163316"></a><a name="p11600927163316"></a>N4</p><br />
+</th><br />
+</tr><br />
+</thead><br />
+<tbody><tr id="row10600527143314"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.1 "><p id="p1960052711333"><a name="p1960052711333"></a><a name="p1960052711333"></a>sf6</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="14.32%" headers="mcps1.2.6.1.2 "><p id="p20600122713317"><a name="p20600122713317"></a><a name="p20600122713317"></a>线性（bld6）</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="25.679999999999996%" headers="mcps1.2.6.1.3 "><p id="p206006274338"><a name="p206006274338"></a><a name="p206006274338"></a>边缘强度</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.4 "><p id="p1260018270336"><a name="p1260018270336"></a><a name="p1260018270336"></a>边缘强度</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.5 "><p id="p136003273339"><a name="p136003273339"></a><a name="p136003273339"></a>无</p><br />
+</td><br />
+</tr><br />
+<tr id="row96001627193311"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.1 "><p id="p660012753311"><a name="p660012753311"></a><a name="p660012753311"></a>sf7</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="14.32%" headers="mcps1.2.6.1.2 "><p id="p1960016272335"><a name="p1960016272335"></a><a name="p1960016272335"></a>无</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="25.679999999999996%" headers="mcps1.2.6.1.3 "><p id="p15600727153311"><a name="p15600727153311"></a><a name="p15600727153311"></a>边缘方向性</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.4 "><p id="p146002278338"><a name="p146002278338"></a><a name="p146002278338"></a>边缘方向性</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.5 "><p id="p5600127153312"><a name="p5600127153312"></a><a name="p5600127153312"></a>边缘方向性</p><br />
+</td><br />
+</tr><br />
+<tr id="row56015275331"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.1 "><p id="p5600172733310"><a name="p5600172733310"></a><a name="p5600172733310"></a>sf8</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="14.32%" headers="mcps1.2.6.1.2 "><p id="p96001127123320"><a name="p96001127123320"></a><a name="p96001127123320"></a>无</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="25.679999999999996%" headers="mcps1.2.6.1.3 "><p id="p18600227163313"><a name="p18600227163313"></a><a name="p18600227163313"></a>边缘强度（相比6号边缘的响应更强）</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.4 "><p id="p46012273334"><a name="p46012273334"></a><a name="p46012273334"></a>边缘强度（和6号表现一致）</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.6.1.5 "><p id="p46011427113312"><a name="p46011427113312"></a><a name="p46011427113312"></a>亮度</p><br />
+</td><br />
+</tr><br />
+</tbody><br />
+</table></p>
+</li>
+<li>
+<p><strong>[nXsfn/nX2sfn] [nXsth/nX2sth]</strong>：[nXsfn/ nX2sfn]表示不同图像特征区域选择不同滤波器的类型，取值[0,8]，与 [nXsth/nX2sth] 接口配合使用，nXsth/nX2sth则表示不同区域的特征区分阈值的上下限，取值为[0,511]。N0~N2级中的nXsfn, nXsth和nX2sfn, nX2sth分别对应前景和背景的滤波器和阈值的选择。<strong>注意，背景的滤波依赖于时域的开启，若使用纯空域模式，nX2sfn, nX2sth将不生效，强度也同时由[nXtss]接口决定，该接口取值越大，背景滤波强度越大。</strong></p>
+<p><strong>图 9</strong> <strong>nXsfn/nX2sfn</strong>和<strong>nXsth/nX2sth</strong>调试参数示例<a name="fig06121329124111"></a><br />
+<img alt="" src="../figures/nXsfn-nX2sfn%E5%92%8CnXsth-nX2sth%E8%B0%83%E8%AF%95%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B.jpg" title="nXsfn-nX2sfn和nXsth-nX2sth调试参数示例" /></p>
+<p>nXsfn /nXsth 参数分别为 sfn0、sfn1、sfn2、sfn3和sth1、sth2、sth3，按照以下方式混合：</p>
+<ul>
+<li>第三个特征小于sth3 时选择sfn3的结果；</li>
+<li>大于等于sth3且第二个特征小于sth2时则选择sfn2结果；</li>
+<li>大于等于sth2且第一个特征小于sth1时则选择sfn1结果；</li>
+<li>第一个特征大于sth1选择sfn0的结果。</li>
+</ul>
+<p>此方法可实现在不同区域进行不同处理效果。sth1、sth2、sth3分别使用不同滤波器的特征阈值，度量存在差异，不能直接进行对比。</p>
+<p>如<a href="#fig1093921816537">图10</a>所示，sth1区域对边缘划分较细，但容易出现断线；sth2区域边缘划分相对sth1更粗更实；sth3边缘划分最粗最实。</p>
+<p><strong>图 10</strong>  sth1、sth2、sth3指标示意图（划分指标均为120）<a name="fig1093921816537"></a><br />
+<img alt="" src="../figures/sth1-sth2-sth3%E6%8C%87%E6%A0%87%E7%A4%BA%E6%84%8F%E5%9B%BE%EF%BC%88%E5%88%92%E5%88%86%E6%8C%87%E6%A0%87%E5%9D%87%E4%B8%BA120%EF%BC%89.png" title="sth1-sth2-sth3指标示意图（划分指标均为120）" /></p>
+<p><strong>图 11</strong>  N1级<strong>nXsfn</strong>调试参数示例<a name="fig2951136124319"></a><br />
+<img alt="" src="../figures/N1%E7%BA%A7nXsfn%E8%B0%83%E8%AF%95%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B.jpg" title="N1级nXsfn调试参数示例" /></p>
+<p>如<a href="#fig2951136124319">图11</a>所示，从右往左描述如下：</p>
+<ul>
+<li>第三个特征小于50时选择0号滤波器结果；</li>
+<li>大于等于50且第二个特征小于100时则选择2号滤波器结果；</li>
+<li>大于等于100且第一个特征小于40时则选择2号滤波器结果；</li>
+<li>第一个特征大于40选择2滤波器结果。</li>
+</ul>
+<p>注意：N4级的sfn和sth依赖N3级，关闭N3级可能会导致N4级sth参数调试失效。因此在使用N4级时，需要将N3级打开。若需要关闭N3级去噪，可将滤波器强度设置为0或者将sfn设置为0。</p>
+</li>
+</ul>
+<p>N4主要用于图像增强。包含0~5号分频增强器，即nXsf0、nXsf1、nXsf2、nXsf3、nXsf4、nXsf5。其中nXsf0、nXsf5为输入。</p>
+<ul>
+<li>
+<p><a name="li1017mcpsimp"></a><strong>[nXsf1] [nXsf2] [nXsf3] [nXsf4] </strong>该接口在N4级别用于调试增强器，具体如<a href="#fig668545417240">图12</a>所示。</p>
+<p><strong>图 12</strong> <strong>nXsf1/nXsf2</strong>/<strong>nXsf3</strong>/<strong>nXsf4参数示例图</strong><a name="fig668545417240"></a><br />
+<img alt="" src="../figures/nXsf1-nXsf2-nXsf3-nXsf4%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B%E5%9B%BE.jpg" title="nXsf1-nXsf2-nXsf3-nXsf4参数示例图" /></p>
+<ul>
+<li>该接口的两个参数分别用于不同图像特性的增强力度，第一个参数用于增强图像的中频纹理，第二个参数用于增强图像的高频细节。</li>
+<li>[nXsf1] [nXsf2]可以根据表格[n4shp_ctl_mean]和[n4shp_ctl_dir]表示不同区域增强强度控制，主要用于抑制噪声不被增强。</li>
+</ul>
+</li>
+<li>
+<p><strong>[nXsht] </strong>该接口仅作用于N4级，用于抑制图像中的出现的黑白边。前两个参数（o_sht_f、u_sht_f）分别作用于运动前景的白边和黑边，而后两个参数（o_sht_b、u_sht_b）作用于背景的白边和黑边。取值范围：[0, 255]。数值越小，抑制强度越强，即增强越弱。设置为0时，即不增强。</p>
+</li>
+</ul>
+<p><strong>曲线说明：</strong></p>
+<ul>
+<li><strong>[nXsf_var_f] [nXsf_var_b]</strong>  两个表格的纵坐标分别用于配置3、4号滤波器的前景和背景的强度增益（32为增益1倍，63约为2倍；<strong>注：设置0时，则滤波器强度为0</strong>），表格的横坐标表示<strong>图像边缘强度</strong>的指标。</li>
+<li><strong>[nXsf_bri_f] [nXsf_bri_b]</strong>  两个表格的纵坐标分别用于配置3、4号滤波器的前景和背景的强度增益（32为增益1倍，63约为2倍；<strong>注：设置0时，则滤波器强度为0</strong>），表格的横坐标表示<strong>图像亮度</strong>的指标。</li>
+<li><strong>[nXsf_dir_f] [nXsf_dir_b]</strong>  两个表格的纵坐标分别用于配置3、4号滤波器的前景和背景的强度增益（32为增益1倍，63约为2倍；<strong>注：设置0时，则滤波器强度为0</strong>），表格的横坐标表示<strong>图像边缘方向性</strong>的指标。从图2-2图像指标对比可以看出在一些具有一定方向性的弱边缘的地方，图像边缘方向性较图像边缘强度表现会更好。</li>
+<li><strong>[nXsf_cor]</strong>该表格的纵坐标用于配置回叠原始信号的强度，表格的横坐标表示图像边缘方向性的指标。注意3、4号滤波器的回叠效果仅作用于前景区域。</li>
+<li><strong>[nXsf5_var_f] [nXsf5_var_b] [nXsf5_bri_f] [nXsf5_bri_b] [nXsf5_dir_f] [nXsf5_dir_b] </strong>表格用于配置5号滤波器的强度增益（32为增益1倍，63约为2倍；<strong>注：设置0时，则滤波器强度为0</strong>）。表格的意义可参考3、4号滤波器表格的配置。</li>
+<li>
+<p><strong>[nXsf5_sad_f]</strong>  该表格的纵坐标用于配置5号滤波器的前景的去噪强度增益，表格的横坐标表示<strong>运动图像边缘强度</strong>的指标。</p>
+<p><strong>图 13</strong>  图像指标对比图<a name="fig20612229187"></a><br />
+<img alt="" src="../figures/%E5%9B%BE%E5%83%8F%E6%8C%87%E6%A0%87%E5%AF%B9%E6%AF%94%E5%9B%BE.png" title="图像指标对比图" /></p>
+</li>
+<li>
+<p><strong>[nXsf5_cor]</strong>  该表格的纵坐标用于配置回叠原始信号的强度，表格的横坐标表示图像边缘方向性的指标。5号滤波器的回叠效果作用于全图。</p>
+</li>
+<li><strong>[nXsf_mot] </strong>表格横坐标表示运动指数，数值越大运动可能性越大。纵坐标用于配置3~4号滤波器前景和背景的混合比例。值越大越倾向于使用<strong>背景</strong>的滤波器强度，比如<strong>[nXsf_var_b]；</strong>反之，越倾向于<strong>前景</strong>的滤波器强度，比如<strong>[nXsf_var_f]。</strong></li>
+<li><strong>[nXsf5_mot] </strong>表格横坐标表示运动指数，数值越大运动可能性越大。纵坐标用于配置5号滤波器前景和背景的混合比例。值越大越倾向于使用<strong>背景</strong>的滤波器强度，比如<strong>[nXsf5_var_b]；</strong>反之，越倾向于<strong>前景</strong>的滤波器强度，比如<strong>[nXsf5_var_f]。</strong></li>
+<li><strong>[nXvar_by_bri]</strong>该表格配合[nXsfn/nX2sfn] [nXsth/nX2sth]接口使用，表格横坐标表示亮度指标，表格的竖坐标用于控制[nXsth/nX2sth]接口最后一个值sth3的区域选择，竖坐标的值配置为32，则保持原始sth3的区域不变。配置的值越大，则更少的区域选择sfn3的结果，反之更多区域选择sfn3的结果。</li>
+<li><strong>[n4shp_ctl_mean]</strong>该表格的横坐标表示检测图像坏点的可能性（数值最大不说明一定是坏点），纵坐标表示增强强度增益。一般来说该曲线横坐标的值越大，说明是坏点的可能性越大，则需要增强的强度越小（即纵坐标越小），防止增强坏点。</li>
+<li><strong>[n4shp_ctl_dir]</strong>该表格的横坐标表示图像边缘方向性，纵坐标表示增强强度增益。一般来说方向性强的地方，需要增强强度越大（即纵坐标越大），为了增强边缘区域。</li>
+</ul>
+<h2 id="时域接口参数说明">时域接口参数说明<a name="ZH-CN_TOPIC_0000001875213801"></a></h2>
+<p>每一级均包含了时域的信息用于图像处理。N1、N2级的时域可采用分层处理结构（第0层、第1层和第2层），其中每个时域的接口都有三套分别对应于三层（如果接口有多个参数，接口带上后缀0,1,2来区分层级）。</p>
+<ul>
+<li>
+<p><strong>[ref]：</strong>该接口表示参考帧开关。ref 为时域参考的总开关。</p>
+<ul>
+<li>设置为0时参考帧不载入，时域滤波无效；</li>
+<li>设置为1时，时域滤波参数才能生效。</li>
+</ul>
+</li>
+<li>
+<p><strong>[pretfs]：</strong>N0级时域滤波强度。利用premath和premathd动静判断信息，在N1级运行前进行时域滤波。取值范围：[0, 15]。</p>
+<p><strong>注意：tfs1、tfs2和pretfs不宜同时设置过大，否则可能导致背景噪声无法有效去除的效果。math0调较小时，tfs0不宜设置过大，否则可能出现拖尾现象。</strong></p>
+<p><strong>如<a href="#fig5770121116481">图1</a>所示，该效果图仅用于展示不同Pretfs对效果的影响。并非最终的结果。</strong></p>
+<p><strong>图 1</strong>  Pretfs调整效果对比图<a name="fig5770121116481"></a><br />
+<img alt="" src="../figures/Pretfs%E8%B0%83%E6%95%B4%E6%95%88%E6%9E%9C%E5%AF%B9%E6%AF%94%E5%9B%BE.png" title="Pretfs调整效果对比图" /></p>
+</li>
+<li>
+<p><strong>[n0tfs_mot]</strong>：N0级精细控制时域强度的曲线（与pretfs配合使用），曲线横坐标为运动指数（数值越大，运动概率越高），纵坐标为时域强度。该曲线有助于调整运动后的收敛速度，可用于优化运动拖尾现象。</p>
+<p><strong>图 2</strong> <strong>n0tfs_mot</strong>调试示例图<a name="fig12771161114489"></a><br />
+<img alt="" src="../figures/n0tfs_mot%E8%B0%83%E8%AF%95%E7%A4%BA%E4%BE%8B%E5%9B%BE.jpg" title="n0tfs_mot调试示例图" /></p>
+</li>
+<li>
+<p><strong>[nXtfs0_mot/nXtfs1_mot]</strong>：N1和N2级精细控制运动和静止不同区域的时域强度的曲线（与N1级和N2级的tfs配合使用，nXtfs0_mot与nXtfs1_mot分别对应tfs0与tfs1）。曲线横坐标为运动指数（数值越大，运动概率越高），纵坐标为时域强度。该曲线有助于优化运动后收敛速度。以N1级为例，具体参考<a href="#fig8771121174811">图3</a>和<a href="#fig77721511104816">图4</a>。</p>
+<p><strong>图 3</strong>  n1tfs0_mot调试示例图<a name="fig8771121174811"></a><br />
+<img alt="" src="../figures/n1tfs0_mot%E8%B0%83%E8%AF%95%E7%A4%BA%E4%BE%8B%E5%9B%BE.jpg" title="n1tfs0_mot调试示例图" /></p>
+<p><strong>图 4</strong>  n1tfs1_mot调试示例图<a name="fig77721511104816"></a><br />
+<img alt="" src="../figures/n1tfs1_mot%E8%B0%83%E8%AF%95%E7%A4%BA%E4%BE%8B%E5%9B%BE.jpg" title="n1tfs1_mot调试示例图" /></p>
+</li>
+<li>
+<p><strong>[premath] [premathd]：</strong>N0级动静判决修正。取值范围[0，255]。premath主要修正静止区域，数值越大，背景区域越安静，判定为静止区域越多，但是也可能同时引起运动边缘区域的缺失；premathd主要修正运动区域，数值越小，判定为运动区域越多。建议premath设置值为BNR中的md_static_ratio的4倍，premathd设置为BNR中的md_motion_ratio的4倍。</p>
+<p><strong>图 5</strong> <strong>室内人物运动图像</strong><a name="fig49131120124812"></a><br />
+<img alt="" src="../figures/%E5%AE%A4%E5%86%85%E4%BA%BA%E7%89%A9%E8%BF%90%E5%8A%A8%E5%9B%BE%E5%83%8F.jpg" title="室内人物运动图像" /></p>
+<p><strong>图 6</strong> <strong>室内人物运动图像对应的运动MAP信息</strong><a name="fig436651416494"></a><br />
+<img alt="" src="../figures/%E5%AE%A4%E5%86%85%E4%BA%BA%E7%89%A9%E8%BF%90%E5%8A%A8%E5%9B%BE%E5%83%8F%E5%AF%B9%E5%BA%94%E7%9A%84%E8%BF%90%E5%8A%A8MAP%E4%BF%A1%E6%81%AF.png" title="室内人物运动图像对应的运动MAP信息" /></p>
+<p><strong>BNR中</strong>md_static_ratio、md_motion_ratio、md_static_fine_strength参数会影响BNR的运动MAP信息；需要注意：BNR运动MAP信息的显示需要在业务通路配置为离线模式。</p>
+</li>
+<li>
+<p><strong>[premabw]：</strong>N0级运动检测内容窗口大小的选择，值越大选用的窗口越大。取值范围：[0, 2]</p>
+</li>
+<li>
+<p><strong>[pretdz]：</strong>N0级静止和运动区域精细比例调节，值越大，判断为静止区域越多。取值范围：[0, 255]</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+<strong>pre系列参数与tss2、tfs2配合使用。</strong></p>
+</blockquote>
+</li>
+<li>
+<p><strong>[mXmath]</strong>：动静判决阈值。其值越大，被运动检测单元判定为“静止”的像素越多，因而被实施时域滤波的像素也越多，画面当然也越安静，一般情况下，将nXtfs调最大，将mXmath调到刚好抑制雨点现象，这时再适当调低nXtfs，直到没有雨点；N1级采用分层应用，系统会先根据该接口的第二个值划分出图像的静止区域，作为图像的背景层（即绝对静止区域）。剩余图像作为前景层，将会根据第一个参数继续划分出相对静止区域和运动区域，做分别处理。math0主要为了分出前景区域。math1主要为了分出背景区域。</p>
+<p><strong>图 7</strong>  mXmath区域划分示意图<a name="fig655112601517"></a><br />
+<img alt="" src="../figures/mXmath%E5%8C%BA%E5%9F%9F%E5%88%92%E5%88%86%E7%A4%BA%E6%84%8F%E5%9B%BE.png" title="mXmath区域划分示意图" /></p>
+<p><a href="#fig655112601517">图7</a>所示，mXmath进行了两级的运动区分，即通过两个math将图像分成三部分。其中math1将图像分成前景和背景，math0再进一步将前景区域（红色框内）分为运动可能性更大的区域（黄色圆内）以及运动过度区域（红色框内，黄色圆外）。</p>
+<p><strong>图 8</strong>  mXmath调试参数示例<a name="fig18752975118"></a><br />
+<img alt="" src="../figures/mXmath%E8%B0%83%E8%AF%95%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B.jpg" title="mXmath调试参数示例" /></p>
+<p><strong>图 9</strong>  mXmath调试合理时室外池塘效果图<a name="fig16487101103710"></a><br />
+<img alt="" src="../figures/mXmath%E8%B0%83%E8%AF%95%E5%90%88%E7%90%86%E6%97%B6%E5%AE%A4%E5%A4%96%E6%B1%A0%E5%A1%98%E6%95%88%E6%9E%9C%E5%9B%BE.jpg" title="mXmath调试合理时室外池塘效果图" /></p>
+<p><strong>图 10</strong>  mXmath调小示例图<a name="fig9457445135716"></a><br />
+<img alt="" src="../figures/mXmath%E8%B0%83%E5%B0%8F%E7%A4%BA%E4%BE%8B%E5%9B%BE.jpg" title="mXmath调小示例图" /></p>
+<p><strong>图 11</strong>  mXmath调小时对应室外池塘效果图<a name="fig951241723716"></a><br />
+<img alt="" src="../figures/mXmath%E8%B0%83%E5%B0%8F%E6%97%B6%E5%AF%B9%E5%BA%94%E5%AE%A4%E5%A4%96%E6%B1%A0%E5%A1%98%E6%95%88%E6%9E%9C%E5%9B%BE.jpg" title="mXmath调小时对应室外池塘效果图" /></p>
+<p>从<a href="#fig16487101103710">图9</a>和<a href="#fig951241723716">图11</a>对比可以发现，mXmath调试较小，容易导致背景区域噪声压制不住和部分背景区域判断成运动选择空域导致画面模糊的问题。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+<strong>当premath生效的时候，N1级和N2级选择的背景区域由math1和premath共同决定。当math1判断的背景区域比premath的背景区域大时，则以math1判断的背景区域为准，否则由premath决定。（注：如果math1调0时，背景区域则全部由premath计算得到，时域和空域滤波强度由tss2、tfs2控制）</strong>。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>[mXmate]：</strong>表示平坦区域运动检测指数，其值越大，被平坦运动检测单元判定为“静止”的像素越多，因而被实施时域滤波的像素也越多，画面当然也越安静；一般需要先将math调试到合适，再微调mate，以平衡雨点噪声和运动拖尾为合适，其取值范围为[0, 8]。</p>
+</li>
+<li><strong>[mXmabw]：</strong>运动检测内容窗口大小的选择，主要配合math使用，值越大，窗口越大。当在低照度下math调大还不能抑制雨点，建议将mabw调试到7以上，从而可以减轻math抑制雨点的负担，降低时域滤波的副作用。其取值范围为[5, 9]。</li>
+<li><strong>[tfs_mode]</strong>：静止区域的计算模式的选择。当该值设置为0时，静止区域为premath和math1共同决定，此时可参照[mXmath]须知对静止区域调整。当该值设置为1时，静止区域仅由math1决定，此时tfs2与tss2失效。</li>
+<li>
+<p><strong>[nXtss]：</strong>值越大静止区域越光滑，但静止区域图像内容可能越模糊。取值范围为[0,31]。该参数的两个值表示分别作用不同区域。</p>
+<ul>
+<li>如果采取分区处理模式，可以适当调大第一个参数，作用于在运动相对不明显的区域防止前景的虚化问题。第二个参数作用于背景。</li>
+<li>当tss0表示math0决定的<strong>前景区域</strong>的空域强度，tss1表示math1决定的<strong>背景区域</strong>的空域强度，tss2表示premath决定的<strong>背景区域</strong>的空域强度。</li>
+<li>在NORM模式中，N2级仅支持空域滤波，空域滤波整体强度由tss0控制。</li>
+</ul>
+</li>
+<li>
+<p><strong>[nXtfs]</strong>：时域滤波强度，当前滤波区域使用时域时，此参数表示时域作用强度，值越大强度越大。该接口的取值范围是[0, 15]。tfs0表示math0决定的前景区域的时域强度，tfs1表示math1决定的背景区域的时域强度，tfs2表示premath决定的背景区域的时域强度。（math1和premath的背景选择可以参考mXmath接口）。注意：前景的tfs0和math0不宜过强，容易产生拖尾或者毛刺等副作用。</p>
+<p><strong>建议tss1与tss2设置一样的数值，tfs1和tfs2设置一样的数值，可较好地调节背景强度。</strong></p>
+<p><strong>图 12</strong>  nXtfs调试合理时参数示例<a name="fig39393409511"></a><br />
+<img alt="" src="../figures/nXtfs%E8%B0%83%E8%AF%95%E5%90%88%E7%90%86%E6%97%B6%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B.jpg" title="nXtfs调试合理时参数示例" /></p>
+<p><strong>图 13</strong>  nXtfs调试合理时对应室外池塘效果图<a name="fig1018513513398"></a><br />
+<img alt="" src="../figures/nXtfs%E8%B0%83%E8%AF%95%E5%90%88%E7%90%86%E6%97%B6%E5%AF%B9%E5%BA%94%E5%AE%A4%E5%A4%96%E6%B1%A0%E5%A1%98%E6%95%88%E6%9E%9C%E5%9B%BE.jpg" title="nXtfs调试合理时对应室外池塘效果图" /></p>
+<p><strong>图 14</strong>  nXtfs调小时参数示例图<a name="fig567414157918"></a><br />
+<img alt="" src="../figures/nXtfs%E8%B0%83%E5%B0%8F%E6%97%B6%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B%E5%9B%BE.jpg" title="nXtfs调小时参数示例图" /></p>
+<p><strong>图 15</strong>  nXtfs调小时对应的室外池塘效果图<a name="fig32181526104011"></a><br />
+<img alt="" src="../figures/nXtfs%E8%B0%83%E5%B0%8F%E6%97%B6%E5%AF%B9%E5%BA%94%E7%9A%84%E5%AE%A4%E5%A4%96%E6%B1%A0%E5%A1%98%E6%95%88%E6%9E%9C%E5%9B%BE.jpg" title="nXtfs调小时对应的室外池塘效果图" /></p>
+<p>从<a href="#fig1018513513398">图13</a>和<a href="#fig32181526104011">图15</a>对比可以发现，nXtfs调试较小，容易导致静止画面噪声跳动问题；</p>
+</li>
+<li>
+<p><strong>[nXtfr0/nXtfr1]</strong>：拖尾、去噪平衡控制参数。总共6种处理方式，每个值越小表示可以控制拖尾的能力越强，但去噪能力减弱。结果取6种方式中去噪效果最明显的一种。取值范围均为[0,31]。当前nXtfr0/nXtfr1一般采用推荐的默认参数，画面出现运动拖尾，优先调试tfs和math。</p>
+<p><strong>图 16</strong>  nXtfr0/nXtfr1调试参数示例<a name="fig1922574717172"></a><br />
+<img alt="" src="../figures/nXtfr0-nXtfr1%E8%B0%83%E8%AF%95%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B.jpg" title="nXtfr0-nXtfr1调试参数示例" /></p>
+</li>
+</ul>
+<h2 id="色度去噪参数说明">色度去噪参数说明<a name="ZH-CN_TOPIC_0000001828214556"></a></h2>
+<p>色度去噪分为两级，NRc0和NRc1，开关为nCen。NRc0为时空域处理；NRc1为空域处理。</p>
+<ul>
+<li><strong>[nC0mode]：</strong>该接口表示NRc0的模式选择。<strong>当nC0mode为0时，NRc0仅使用时域去噪（NRc0中仅有tfs参数生效）。当nC0mode为1时，NRc0使用旧接口（NRc0中的tfs、sfc、tfc、trc均生效），但此时NRc1中空域滤波器sfs2无效。</strong></li>
+<li>
+<p><strong>[nCtfs]：</strong>该接口为NRc0级的时域去噪强度。取值范围：[0, 15]</p>
+<p><strong>图 1</strong>  nCtfs=4调试效果图<a name="fig1287613611412"></a><br />
+<img alt="" src="../figures/nCtfs-4%E8%B0%83%E8%AF%95%E6%95%88%E6%9E%9C%E5%9B%BE.png" title="nCtfs-4调试效果图" /></p>
+<p><strong>图 2</strong>  nCtfs=15调试效果图<a name="fig962282441513"></a><br />
+<img alt="" src="../figures/nCtfs-15%E8%B0%83%E8%AF%95%E6%95%88%E6%9E%9C%E5%9B%BE.jpg" title="nCtfs-15调试效果图" /></p>
+<p>从<a href="#fig1287613611412">图1</a>和<a href="#fig962282441513">图2</a>可以发现<strong>nCtfs</strong>调试越大，去色噪能力越强，同时颜色也会有一定的损失。</p>
+</li>
+<li>
+<p><strong>[sfc]：</strong>表示3DNR去色噪的第0级的空域滤波的混合强度，取值范围：[0, 255]。调试越大，画面去低频的色噪能力越强，对整体画面的颜色损失就越大。</p>
+</li>
+<li>
+<p><strong>[tfc]：</strong>表示3DNR去色噪的时域滤波混合强度，取值范围：[0, 63]。该参数调试去色噪强度（如<a href="#fig157966471567">图3</a>所示），调试过程中，需权衡色噪的去除程度与色彩拖尾和画面色调变化。</p>
+<ul>
+<li>在[0, 16]时，随着tfc增大，去色噪越强；</li>
+<li>在[17, 48]时，随着tfc增大，去色噪会变弱；</li>
+<li>在[49, 63]时，随着tfc增大，去色噪越强。</li>
+</ul>
+<p><strong>图 3</strong>  TFC参数控制去色噪强度图<a name="fig157966471567"></a><br />
+<img alt="" src="../figures/TFC%E5%8F%82%E6%95%B0%E6%8E%A7%E5%88%B6%E5%8E%BB%E8%89%B2%E5%99%AA%E5%BC%BA%E5%BA%A6%E5%9B%BE.png" title="TFC参数控制去色噪强度图" /></p>
+</li>
+<li>
+<p><strong>[trc]：</strong>时域强度参数，用于抑制运动区域的色噪，但调大容易发生色彩浸染现象。</p>
+</li>
+<li><strong>[nc0tfs_mot]：</strong>该接口为控制时域处理的前景背景区域去噪强度，横坐标表示运动强度（强度为0则为静止区域），纵坐标表示去噪强度。一般情况下，时域处理主要作用于背景区域，因此曲线设置一般为左边高右边低，否则有可能会出现颜色拖尾的现象。</li>
+<li><strong>[nCen]：</strong>该接口表示色度去噪的总开关。</li>
+<li><strong>[nc1_pre_sfs]：</strong>该接口为NRc1级的预滤波器去噪强度，去噪处理作用于全局。取值范围：[0, 16]。在某些偏色场景下，该参数变化可能不线性。</li>
+<li><strong>[nCsfs1]：</strong>该接口为NRc1级的1号滤波器去噪强度，可与曲线nc1sfs1_mot配合使用。取值范围：[0, 255]。</li>
+<li><strong>[sfs2_c_f]：</strong>该接口为NRc1级的2号滤波器前景补充去噪强度。参数sfs2_c_f的变化对效果的影响并非是线性变化的。sfs2_c_f 参数是在sfs2_c 参数的基础上对前景再调节降噪强弱。当sfs2_c较小时，sfs2_c_f在低数值调整，对前景降噪无法再减弱，可能会出现效果不变的情况。同理，在sfs2_c较大时，sfs2_c_f在高数值调整，对前景降噪无法再加强，也可能会出现效果不变的情况。取值范围：[0, 31]。</li>
+<li><strong>[sfs2_mode]</strong>：该接口为色度2号滤波器调整强度的模式选择。当该值为0时，sfs2_c接口生效，可通过调整该数值粗略地改变去噪强度，此时sfs2_sat失效；当该值为1时，sfs2_sat接口生效，可通过调整该曲线精细地改变去噪强度，此时sfs2_c失效。</li>
+<li><strong>[sfs2_c]：</strong>该接口为NRc1级的2号滤波器总体去噪强度。取值范围：[0, 31]。若sfs2_c调0，则调整sfs2_c_f无效，若sfs2_c调大，则调整sfs2_c_f可进一步调整前景区域去噪强度。整体的强度不宜调的过大，否则可能会出现颜色晕出以及颜色损失的现象。</li>
+<li><strong>[nc1sfs2_sat]</strong>：该曲线可根据饱和度精细调整去噪强度，横坐标为饱和度，纵坐标为去噪强度。取值范围：[0, 1023]。</li>
+<li><strong>[sfs2_fine_f]：</strong>该接口为NRc1级的2号滤波器前景精调去噪强度，作为[sfs2_c_f]的补充。取值范围：[0, 16]。</li>
+<li>
+<p><strong>[sfs2_fine_b]：</strong>该接口为NRc1级的2号滤波器背景精调去噪强度，作为[sfs2_c_b]的补充。取值范围：[0, 16]。</p>
+<p>在调整好sfs2_c_f 以及sfs2_c参数的基础上，可以进一步调整sfs2_fine_f以及sfs2_fine_b对前景区域和背景区域的去噪强度分别进行调整，二者互不影响。</p>
+</li>
+<li>
+<p><strong>[nc1sfs2_mot]</strong>：该曲线可调整不同区域使用前景强度（sfs2_fine_f）还是背景强度（sfs2_fine_b）。横坐标为运动指数，纵坐标为使用背景强度的比例，越倾向于使用背景强度（sfs2_fine_b）的比例越高。</p>
+</li>
+<li>
+<p><strong>[nc1sfs1_mot]：</strong>该接口为控制sfs1空域滤波器的前景背景区域去噪强度，横坐标表示运动强度（强度为0则为静止区域），纵坐标表示去噪强度。一般情况下，空域处理主要作用于前景区域（背景区域具有时域去噪），因此曲线设置一般为左边低右边高，否则有可能会对背景的颜色造成损伤。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+<strong>色度去噪中使用的运动判决均由NRc0级的运动判决决定。</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="后处理参数说明">后处理参数说明<a name="ZH-CN_TOPIC_0000001842600438"></a></h2>
+<p>后处理可以分别对亮度（gamma）以及饱和度（Ca）进行调整。</p>
+<ul>
+<li>[gamma_en]：该接口为后gamma 的开关，<strong>该开关依赖于N4级开关，即在N4级开时，后处理才生效</strong>。</li>
+<li>[post_gamma_lut]：该接口为调整的gamma曲线。横坐标与纵坐标均为亮度，取值范围为[0,255]。</li>
+<li>[ca_en]：该接口为后ca的开关。</li>
+<li>[post_ca_lut]：该接口为调整的ca曲线。横坐标为饱和度，纵坐标为增强的强度（32为不改变饱和度，小于32为衰减，大于32为增强），取值范围：[0, 63]。</li>
+</ul>
+<h2 id="典型场景下的3DNR接口调试指南">典型场景下的3DNR接口调试指南<a name="ZH-CN_TOPIC_0000001875094005"></a></h2>
+<p>与之前芯片调优类似，主要依赖时域去噪，空域去噪作为补充。和之前主要区别在于亮度去噪和色度去噪的第零级支持时域处理，可以与BNR配合调试动静判决和时域降噪。</p>
+<p><strong>图 1</strong>  3DNR调试总体流程<a name="fig1896864417312"></a><br />
+<img alt="" src="../figures/3DNR%E8%B0%83%E8%AF%95%E6%80%BB%E4%BD%93%E6%B5%81%E7%A8%8B.png" title="3DNR调试总体流程" /></p>
+<ol>
+<li>
+<p>调整时域参数，抑制背景画面噪声，使背景区域安静，同时抑制运动区域出现拖尾效应。</p>
+<ul>
+<li>调试3DNR N0级，调大pretfs。同时可适当调试premath、premathd、premabw以及pretdz，初步控制背景噪声，运动没有拖尾现象。此外，还可以精细调整N0级tfs_mot曲线来抑制拖尾的现象。</li>
+<li>接着配合调试整体时域强度。N1、N2的第0,1层可以分别作为前景层和背景层。调试背景层的mXmath1，以抑制背景画面的雨点噪声为合适程度。然后调试前景层的mXmath0, 控制一部分前景运动的噪声。</li>
+<li>调试第一级的n1tfs以抑制画面的整体噪声水平为合适，需要兼顾时域去噪效果和画面运动的拖尾；通常前景层的tfs需要调的比背景小，防止运动物体的拖尾现象。</li>
+<li>调试第二级的m2math 和 n2tfs，控制整体噪声的安静水平和噪声的幅度。第二级的m2math通常要比第一级的m1math配置的小，来防止拖尾现象。</li>
+<li>若拖尾现象比较严重，可调小mXtfs0（减少前景使用的时域强度），或者调小mXmath（减少运动边缘被判定为背景的区域），同时也可以调整tfr0和tfr1减少拖尾现象。</li>
+<li>低照度下，为了减轻math的负担，可以适当调试mabw参数，极低照度下，可以适当调试mate参数来获得画面整体噪声的抑制。</li>
+</ul>
+<p>具体如<a href="#fig75075395426">图2</a>所示。</p>
+<p><strong>图 2</strong>  3DNR时域部分调试流程图<a name="fig75075395426"></a><br />
+<img alt="" src="../figures/3DNR%E6%97%B6%E5%9F%9F%E9%83%A8%E5%88%86%E8%B0%83%E8%AF%95%E6%B5%81%E7%A8%8B%E5%9B%BE.png" title="3DNR时域部分调试流程图" /></p>
+</li>
+<li>
+<p>调整空域参数，进一步抑制背景雨点噪声，同时保留背景区域细节。</p>
+<ul>
+<li>对于背景区域，主要利用时域进行去噪，空域进行补充去噪。在低噪度下，时域背景中仍可能出现较严重的雨点噪声，此时可以增强nXtss1，同时配合nX2sfn以及nX2sth对不同背景区域进行不同强度的去噪。</li>
+<li>对于N1、N2级的分层模式，可以通过调高前景层的n1tss0在前景层混入一定比例的空域滤波结果，来增强运动物体的去噪效果。</li>
+<li>根据nX2sfn与nX2sth来调整背景不同区域使用不同强度的滤波器。N2中的3号、4号和5号滤波器均可根据3DNR_n2中的曲线进行不同区域不同强度的调整。</li>
+<li>建议操作步骤为，先调大基础滤波器的去噪强度以及nXtss1，调整nXsfn为0号滤波器和基础滤波器的组合，再调整nX2sth的数值，找出不同阈值控制的区域。对不同区域选择适合的滤波器，最后再调整滤波器强度以及tss1到适合，以及对3DNR_n2中的曲线进行精调，尽可能保留背景区域细节信息。</li>
+<li>以同样的方法调整N3级的背景空域参数，作为N2级去噪结果的补充。</li>
+</ul>
+</li>
+<li>
+<p>调整空域参数，抑制前景噪声，同时保留前景细节。</p>
+<ul>
+<li>调试N2、N3的空域参数，每一级均可以分开前景和背景，分别调试空域效果。可以调试6、7、8号滤波器作为混合滤波器。根据当前噪声特性，通过调节基础滤波器的混合权重，做到尽量不损失细节的前提下压低噪声。</li>
+<li>建议运动区域主要利用N2级的空域滤波器组合进行去噪，前景区域利用5号滤波器压制爆点噪声和强边缘噪声，同时配合3号滤波器（例如使用6号混合滤波器对5号和3号滤波器进行混合）在压制噪声的同时保留更多细节。前景区域可以通过Coring的功能保留细节合入细碎噪声。再利用N3级的3号和4号滤波器对噪声做进一步的压制处理。前景区域的处理，可以通过曲线的调节来达到细节、边缘和噪声平衡的强度。在低噪度的情况下，可以通过Coring保留一定的细碎噪声和细节，让图像更加自然。</li>
+<li>以同样的方法调整N3级的前景空域参数，作为N2级去噪结果的补充。</li>
+</ul>
+</li>
+<li>
+<p>最后一级为增强滤波器，就是post sharpen，用来进行细节增强的。该级可以对静止区域和运动区域分开调试，分别配置不同的增强参数。</p>
+</li>
+<li>
+<p>在亮噪调试合理的基础上，最后调试色度去噪<strong>NRc</strong>接口。</p>
+<p>打开Nc0中的tfs进行时域去噪，同时调整3DNR_nc中的nctfsMot，一般曲线左端数值调整更大，右端数值更小，目的是让静止区域尽可能使用时域滤波，同时减少运动区域使用时域滤波，防止出现色度的拖尾现象。</p>
+</li>
+<li>
+<p>调试色噪N1级参数，进一步减少色噪。</p>
+<p>先调整presfs减少色噪的大小。再调整ncsfs1以及sfs2进行色噪去除。ncsfs1可配合3DNR_nc中的ncsfs1Mot控制sfs1空域去噪的区域，一般曲线左端数值较大，右端数值较小，目的是尽可能减少静止区域使用空域去噪，空域去噪有可能对小块颜色造成损伤。若sfs1仍不能满足去噪效果，可接着调试sfs2，先调整整体强度sfs2_c，再在此基础上调整前景的强度sfs2_c_f。若此时颜色损失比较严重，可以分别减小sfs2_fine_f和sfs2_fine_b，减小sfs2对前景和背景区域的损伤。若需要更加精细地对不同区域使用不同的去噪强度，可调整sfs2_mot曲线进行前景区域和背景区域的区分，或者调整sfs2_sat曲线控制不同饱和度的去噪强度。</p>
+</li>
+</ol>
+<h2 id="调试3dnr过程中常见问题解答">调试3dnr过程中常见问题解答<a name="ZH-CN_TOPIC_0000001842759322"></a></h2>
+<ol>
+<li>
+<p>调节基础滤波器强度，图像效果不明显？</p>
+<p>答：应在sfn参数中选择调节的滤波器号，同时调整对应通路的tss的强度。</p>
+</li>
+<li>
+<p>调节tfs2和tss2效果不明显？</p>
+<p>答：当math1调节较大时，背景区域由math1决定的区域为主，此时调节tfs1和tss1可达到调整背景的效果。若希望使用tfs2和tss2来调整背景，需将math1尽可能调小，甚至调为0。</p>
+</li>
+<li>
+<p>发现ISP其他模块的参数或3dnr中的空域参数调节改变过大时，图像会出现延时反应？</p>
+<p>答：可以查看3dnr中的时域强度参数：亮度相关的可以查看pretfs、nXtfs。色度相关的可以查看nctfs。若上述参数过大时，可适当调小上述参数，此时图像延时反应现象会有所减弱。</p>
+</li>
+<li>
+<p>使用混合滤波器时，调整混合选择的滤波器强度，图像效果不明显？</p>
+<p>答：除了问题1的方法外，还需要检查曲线sf_bld，查看调整的滤波器混合比例是否过小。</p>
+</li>
+<li>
+<p>增加时域强度，背景去噪效果反而更差？</p>
+<p>答：检查调整的时域强度是否过强，时域强化过强，可能会导致信息无法更新，去噪效果变差。此时调小时域强度，可能去噪效果更好。</p>
+<p><strong>注意：3dnr具有N0、N1、N2三级时域去噪，同时调得过大就可能出现该问题。</strong></p>
+</li>
+<li>
+<p>Norm模式下，N2级不生效？</p>
+<p>答：Norm模式下，N2级时域不生效，仅空域滤波器生效，此时tss0控制空域滤波器的整体强度，可调大tss0，查看N2是否生效。</p>
+</li>
+<li>
+<p>sharpen、3dnr中均具有运动区域（前景区域）和静止区域（背景区域）分别使用不同强度的能力。若运动区域和静止区域增益或去噪强度差异较大时，可能会出现画面部分区域清晰和模糊跳变的情况。</p>
+<p>答：该现象出现的原因：运动map计算不够准确，部分静止区域有时被认为是静止区域，有时被认为是运动区域。此时运动区域和静止区域的处理差异较大，则会出现部分区域时而清晰时而模糊。因此缓解该现象可以通过调整运动map（调大BNR中md_static_ratio、md_motion_ratio、md_static_fine_strength以及3dnr X中premath、premathd、pretdz等参数，使得被误判为运动区域的静止区域被判定为静止区域）；或通过减少运动区域和静止区域的处理差异；或调整3dnr Attr中的n2sf_mot、n3sf_mot（亮噪相关）和nc0tfs_mot、nc1sfs1_mot、nc1sfs2_mot（色噪相关），使得运动区域和静止区域过度平滑。</p>
+</li>
+<li>
+<p>pretfs调0后，调整premath、premathd、pretdz等参数也会对图像效果造成影响。</p>
+<p>答：不仅pretfs使用了premath等参数控制的运动map，在N1、N2、N3、N4级中也都使用了premath等参数控制的运动map，所以即使pretfs调0，再调整这些参数也会影响到图像效果。</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+
+  <div class="footer-box">
+    <div class="footer-list">
+      
+      
+      <div class="footer-list-child">
+        <a href="https://www.hisilicon.com/cn" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/home" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开发者网站</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://gitcode.com/HiSpark" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开源社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developer.huawei.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">华为开发者官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hikunpeng.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">鲲鹏社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hiascend.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">昇腾社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/aboutus" target="_blank" class="footer-nav-first" rel="noopener noreferrer">关于我们</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/login" target="_blank" class="footer-nav-first" rel="noopener noreferrer">投诉举报</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      
+    </div>
+    <div class="footer-fix">
+      <div class="footer-fix-content">
+        <div>
+          <span class="footer-copyright">&nbsp;&copy;2024 华为技术有限公司</span>
+          <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer">粤A2-20044005号</a>
+          <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702004153"
+            target="_blank" rel="noopener noreferrer">粤公网安备44030702004153号</a>
+        </div>
+        <div class="footer-name-list">
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/legalNotices" target="_blank" class="footer-name" rel="noopener noreferrer">法律声明</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/cookie-policy" target="_blank" class="footer-name" rel="noopener noreferrer">关于Cookie</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/privacyPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">隐私政策</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/userPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">用户协议</a>
+          
+          
+          
+          <a href="javascript:void(0);" onclick="openDisclaimerDialog()" class="footer-name">免责声明</a>
+          
+          
+          
+        </div>
+      </div>
+
+
+      <!-- 免责声明弹窗 -->
+      <div id="disclaimerDialog" class="disclaimer-overlay" style="display: none;">
+        <div class="disclaimer-dialog">
+          <div class="disclaimer-dialog__header">
+            <span class="disclaimer-dialog__title">免责声明</span>
+            <button class="disclaimer-dialog__close" onclick="closeDisclaimerDialog()">×</button>
+          </div>
+          <div class="disclaimer-dialog__body">
+            <p class="disclaimer-dialog__text-center"><strong>海思开发者网站免责声明</strong></p>
+            <p>尊敬的用户，您好：</p>
+            <p>&nbsp; &nbsp;
+              请确保您通过本平台向海思提供或反馈的任何信息或意见不侵犯第三方知识产权和/或合法权益。如您提供或反馈的上述任何信息或意见侵犯第三方知识产权和/或合法权益，和/或给第三方造成损害的，您将承担全部法律及赔偿责任。
+            </p>
+          </div>
+          <div class="disclaimer-dialog__footer">
+            <button class="disclaimer-dialog__btn" onclick="closeDisclaimerDialog()">关闭</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function openDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'flex';
+        }
+        function closeDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'none';
+        }
+        // 点击弹窗背景关闭
+        document.getElementById('disclaimerDialog').addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeDisclaimerDialog();
+          }
+        });
+      </script>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../static/js/custom.js"></script>
+      
+        <script src="../../../../../static/js/version-selector.js"></script>
+      
+        <script src="../../../../../static/js/code-highlight.js"></script>
+      
+        <script src="../../../../../static/js/wavedrom-skin.js"></script>
+      
+        <script src="../../../../../static/js/wavedrom.min.js"></script>
+      
+        <script src="../../../../../static/js/wavedrom-init.js"></script>
+      
+        <script src="../../../../../static/js/no-flash.js"></script>
+      
+    
+  </body>
+</html>
+
