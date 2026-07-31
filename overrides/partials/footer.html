@@ -1,0 +1,120 @@
+{#-
+Custom footer template for HiSilicon developer center style
+-#}
+<footer class="md-footer">
+  {% if "navigation.footer" in features %}
+  {% if page.previous_page or page.next_page %}
+  {% if page.meta and page.meta.hide %}
+  {% set hidden = "hidden" if "footer" in page.meta.hide %}
+  {% endif %}
+  <nav class="md-footer__inner md-grid" aria-label="{{ lang.t('footer') }}" {{ hidden }}>
+    {% if page.previous_page %}
+    {% set direction = lang.t("footer.previous") %}
+    <a href="{{ page.previous_page.url | url }}" class="md-footer__link md-footer__link--prev"
+      aria-label="{{ direction }}: {{ page.previous_page.title | e }}">
+      <div class="md-footer__button md-icon">
+        {% set icon = config.theme.icon.previous or "material/arrow-left" %}
+        {% include ".icons/" ~ icon ~ ".svg" %}
+      </div>
+      <div class="md-footer__title">
+        <span class="md-footer__direction">
+          {{ direction }}
+        </span>
+        <div class="md-ellipsis">
+          {{ page.previous_page.title }}
+        </div>
+      </div>
+    </a>
+    {% endif %}
+    {% if page.next_page %}
+    {% set direction = lang.t("footer.next") %}
+    <a href="{{ page.next_page.url | url }}" class="md-footer__link md-footer__link--next"
+      aria-label="{{ direction }}: {{ page.next_page.title | e }}">
+      <div class="md-footer__title">
+        <span class="md-footer__direction">
+          {{ direction }}
+        </span>
+        <div class="md-ellipsis">
+          {{ page.next_page.title }}
+        </div>
+      </div>
+      <div class="md-footer__button md-icon">
+        {% set icon = config.theme.icon.next or "material/arrow-right" %}
+        {% include ".icons/" ~ icon ~ ".svg" %}
+      </div>
+    </a>
+    {% endif %}
+  </nav>
+  {% endif %}
+  {% endif %}
+
+  <div class="footer-box">
+    <div class="footer-list">
+      {% if config.extra.footer_links %}
+      {% for link in config.extra.footer_links %}
+      <div class="footer-list-child">
+        <a href="{{ link.link }}" target="_blank" class="footer-nav-first">{{ link.name }}</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+    <div class="footer-fix">
+      <div class="footer-fix-content">
+        <div>
+          <span class="footer-copyright">&nbsp;&copy;2024 华为技术有限公司</span>
+          <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank">粤A2-20044005号</a>
+          <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702004153"
+            target="_blank">粤公网安备44030702004153号</a>
+        </div>
+        <div class="footer-name-list">
+          {% if config.extra.footer_legal %}
+          {% for link in config.extra.footer_legal %}
+          {% if link.name == '免责声明' %}
+          <a href="javascript:void(0);" onclick="openDisclaimerDialog()" class="footer-name">{{ link.name }}</a>
+          {% else %}
+          <a href="{{ link.link }}" target="_blank" class="footer-name">{{ link.name }}</a>
+          {% endif %}
+          {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+
+
+      <!-- 免责声明弹窗 -->
+      <div id="disclaimerDialog" class="disclaimer-overlay" style="display: none;">
+        <div class="disclaimer-dialog">
+          <div class="disclaimer-dialog__header">
+            <span class="disclaimer-dialog__title">免责声明</span>
+            <button class="disclaimer-dialog__close" onclick="closeDisclaimerDialog()">×</button>
+          </div>
+          <div class="disclaimer-dialog__body">
+            <p class="disclaimer-dialog__text-center"><strong>海思开发者网站免责声明</strong></p>
+            <p>尊敬的用户，您好：</p>
+            <p>&nbsp; &nbsp;
+              请确保您通过本平台向海思提供或反馈的任何信息或意见不侵犯第三方知识产权和/或合法权益。如您提供或反馈的上述任何信息或意见侵犯第三方知识产权和/或合法权益，和/或给第三方造成损害的，您将承担全部法律及赔偿责任。
+            </p>
+          </div>
+          <div class="disclaimer-dialog__footer">
+            <button class="disclaimer-dialog__btn" onclick="closeDisclaimerDialog()">关闭</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function openDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'flex';
+        }
+        function closeDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'none';
+        }
+        // 点击弹窗背景关闭
+        document.getElementById('disclaimerDialog').addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeDisclaimerDialog();
+          }
+        });
+      </script>
+    </div>
+  </div>
+</footer>

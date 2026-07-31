@@ -1,0 +1,186 @@
+use_directory_urls: false
+
+theme:
+  name: material
+  custom_dir: overrides
+  favicon: static/images/favicon.ico
+  # language is set dynamically by the i18n plugin
+  # 启用主题切换
+  palette:
+    - scheme: default
+      primary: white
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: 切换到暗色主题
+    - scheme: slate
+      primary: black
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到亮色主题
+  # font:
+  #   text: Helvetica Neue, PingFang SC, Microsoft YaHei
+  #   code: Consolas, Roboto Mono
+  features:
+    - announce.dismiss
+    # - content.action.edit  # 上传开源仓后再开启
+    # - content.action.view
+    - content.code.annotate
+    - content.code.copy
+    # - content.code.select
+    - content.tabs.link
+    - content.tooltips
+    # - header.autohide
+    - navigation.instant          # SPA 无刷新导航（仅 zh-CN 时与 i18n 无冲突）
+    - navigation.instant.progress # 导航时显示进度条，掩盖内容交换的白屏闪烁
+    - navigation.instant.preview  # 鼠标悬停预加载，点击瞬间完成交换
+    - navigation.tracking         # update URL on scroll
+    # - navigation.tabs          # 第一级目录横向展示
+    # - navigation.tabs.sticky   # 开启后导致右侧菜单选中效果异常
+    # - navigation.sections         # sections in side nav
+    # - navigation.expand           # expand sidebar sections (disabled; use JS expandNavToLevel2 instead)
+    - navigation.indexes          # section index pages
+    - navigation.top              # back-to-top button
+    - navigation.footer
+    - navigation.path             # breadcrumbs
+    # - navigation.prune            # smaller nav payload (disabled to allow full nav expansion)
+    - search.highlight
+    - search.share
+    - search.suggest
+    - toc.follow
+  icon:
+    edit: fontawesome/solid/edit
+
+# plugins:
+#   - i18n:
+#       docs_structure: folder
+#       languages:
+#         - locale: zh-CN
+#           name: 中文
+#           default: true
+#           link: /
+#           site_name: WS63 开发者中心
+#           theme:
+#             language: zh
+        # 取消注释开启英文文档
+        # - locale: en-US
+        #   name: English
+        #   site_name: ws63 Developer Center
+        #   theme:
+        #     language: en
+  # - search:
+  #     lang:
+  #       - zh
+        # - en
+
+hooks:
+  - hooks/_fix_heading_levels.py  # 修复IDP文档标题层级问题
+  - hooks/_strip_md_links.py  # 移除IDP文档中的无效MD链接
+  - hooks/_slugify.py  # 自定义 toc 锚点 slugify（仅空格转-，其余原样）
+  - hooks/_slugify_links.py  # 自动规整正文锚点链接 fragment（与标题 id 规则同步）
+  - hooks/_external_links.py  # 外部链接自动新标签页打开并补 rel=noopener noreferrer
+  - hooks/_homepage.py  # 将指定md文件转换为首页（默认首页为index.md）
+
+markdown_extensions:
+  - nl2br
+  - abbr
+  - admonition
+  - tables
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      # permalink: true  # 标题右侧锚点生成开关
+      toc_depth: 3
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {}  # 支持中文标题生成锚点
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      # auto_title: true  # 显示代码块语言标签
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.smartsymbols:
+      fractions: false  # 关闭自动分数替换（1/2→½），避免误伤 QoS 0/1/2 等文本
+  - pymdownx.caret
+  - pymdownx.critic
+#   - pymdownx.betterem:
+#       smart_enable: all
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.magiclink
+
+extra:
+  favicon: assets/images/favicon.ico
+  # 意见反馈链接（从YAML动态读取，点击直接跳转GitCode Issues）
+  feedback_url: https://gitcode.com/HiSpark/fbb_ws63/issues
+  footer_links:
+    - link: https://www.hisilicon.com/cn
+      name: 海思官网
+    - link: https://developers.hisilicon.com/home
+      name: 海思开发者网站
+    - link: https://gitcode.com/HiSpark
+      name: 海思开源社区
+    - link: https://developer.huawei.com/
+      name: 华为开发者官网
+    - link: https://www.hikunpeng.com/
+      name: 鲲鹏社区
+    - link: https://www.hiascend.com/
+      name: 昇腾社区
+    - link: https://developers.hisilicon.com/aboutus
+      name: 关于我们
+      # 这个网址要修改-目前没登陆获取不了
+    - link: https://developers.hisilicon.com/login
+      name: 投诉举报
+  footer_legal:
+    - link: https://developers.hisilicon.com/legalNotices/legalNotices
+      name: 法律声明
+    - link: https://developers.hisilicon.com/legalNotices/cookie-policy
+      name: 关于Cookie
+    - link: https://developers.hisilicon.com/legalNotices/privacyPolicy
+      name: 隐私政策
+    - link: https://developers.hisilicon.com/legalNotices/userPolicy
+      name: 用户协议
+    - link: https://developers.hisilicon.com/legalNotices/disclaimer
+      name: 免责声明
+  generator: false
+  # 暂时禁用cookie弹窗，后续根据需求开启或者删除
+  # consent:
+  #   title: Cookie 同意
+  #   description: 我们使用cookie来确保您的高速浏览体验。继续浏览本站，即表示您同意我们使用cookie。<a target="_blank" href="https://developers.hisilicon.com/legalNotices/cookie-policy">详情</a>
+  #   actions:
+  #     - accept
+  #     - reject
+  homepage: https://developers.hisilicon.com
+  version_selector:
+    js_url: https://docs.hisilicon.com/projects/version/hispark_version.js
+    root_url: https://docs.hisilicon.com/projects
+
+extra_css:
+  - static/css/extra.css
+  - static/css/version-selector.css
+  # - static/css/no-flash.css   # 消除 instant 导航白屏（淡入淡出），需在 extra.css 之后加载-已删除伪元素
+extra_javascript:
+  - static/js/custom.js
+  - static/js/version-selector.js
+  - static/js/code-highlight.js
+  - static/js/wavedrom-skin.js
+  - static/js/wavedrom.min.js
+  - static/js/wavedrom-init.js
+  - static/js/no-flash.js     # 必须最后加载：接管 instant 生命周期、提前渲染波形，覆盖前述脚本带来的视觉延迟
