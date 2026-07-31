@@ -1,0 +1,1390 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hi3516CV610 超高清智慧视觉 SoC 文档中心">
+      
+      
+        <meta name="author" content="HiSpark">
+      
+      
+        <link rel="canonical" href="https://hivsdev.github.io/Hi3516CV610_doc/04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/%E8%B0%83%E8%AF%95%E8%B0%83%E4%BC%98/PQ/%E8%A1%8C%E8%BD%A6%E8%AE%B0%E5%BD%95%E4%BB%AA%E5%92%8C%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%BA%94%E7%94%A8%E5%9B%BE%E5%83%8F%E8%B0%83%E8%AF%95FAQ/%E8%A1%8C%E8%BD%A6%E8%AE%B0%E5%BD%95%E4%BB%AA%E5%92%8C%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%BA%94%E7%94%A8%E5%9B%BE%E5%83%8F%E8%B0%83%E8%AF%95FAQ.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../static/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>前言 - Hi3516CV610 开发者中心</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+    
+    
+      <link rel="stylesheet" href="../../../../static/css/extra.css">
+    
+      <link rel="stylesheet" href="../../../../static/css/version-selector.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+      <meta name="gitcode-issues-url" content="https://gitcode.com/HiSpark/fbb_ws63/issues">
+      
+      <link rel="dns-prefetch" href="https://docs.hisilicon.com">
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://docs.hisilicon.com" crossorigin>
+      <link rel="preload" href="../../../../assets/stylesheets/main.484c7ddc.min.css" as="style">
+      <link rel="preload" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" as="style">
+      <link rel="preload" href="../../../../static/css/extra.css" as="style">
+      <link rel="preload" href="../../../../assets/javascripts/bundle.79ae519e.min.js" as="script">
+      <link rel="preload" href="../../../../static/js/custom.js" as="script">
+
+      
+      
+        
+        
+      
+      <style>:root{--md-text-font:"Helvetica Neue, PingFang SC, Microsoft YaHei";--md-code-font:"Consolas, Roboto Mono"}</style>
+      <script>
+        // 防止宽窄屏刷新闪烁 — 在 body 解析前就读取 localStorage 标记 <html>
+        // 配合 CSS: html.prefer-narrow .md-grid 在首帧即应用 76%
+        if (localStorage.getItem('wideScreen') === 'false') {
+          document.documentElement.classList.add('prefer-narrow');
+        }
+      </script>
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#前言" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="https://developers.hisilicon.com" title="Hi3516CV610 开发者中心" class="md-header__button md-logo" aria-label="Hi3516CV610 开发者中心" data-md-component="logo" target="_blank" rel="noopener noreferrer">
+      <img 
+  src="../../../../static/images/light-icon.png" 
+  class="md-logo__img md-logo__img--light"
+  alt="Hi3516CV610 开发者中心" 
+/>
+<img 
+  src="../../../../static/images/dark-icon.png" 
+  class="md-logo__img md-logo__img--dark"
+  alt="Hi3516CV610 开发者中心" 
+/>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+      </div>
+    </div>
+    
+      
+      
+        <label class="md-header__button md-icon md-header__button--search" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+      
+    
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="切换到暗色主题"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色主题" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="切换到亮色主题"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色主题" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <div class="md-header__source">
+        <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="前往仓库" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+      </div>
+    
+  </nav>
+  
+  
+    
+    
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        <!-- 
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+         -->
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+</header>
+
+
+<script>
+  var USER_DEFINED_OPTIONS = {
+    REPO_PATH: "Hi3516CV610_doc",
+    ROOT_URL: "https://docs.hisilicon.com/projects"
+  };
+  var DOCUMENTATION_OPTIONS = {
+    VERSION: "master",
+    // 构建时声明主题的语言
+    LANGUAGE: "zh"
+  };
+</script>
+<script src="https://docs.hisilicon.com/projects/version/hispark_version.js"></script>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="sidebar-selectors">
+                  <div class="repo-select custom-select">
+                    <span class="select-label">芯片</span>
+                    <div class="repo-selector" title="">
+                      <span class="repo-readOnly"></span>
+                      <select id="repo-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="repo-options" style="display:none"></ul>
+                  </div>
+                  <div class="version-select custom-select">
+                    <span class="select-label">版本</span>
+                    <div class="version-selector" title="">
+                      <span class="version-readOnly"></span>
+                      <select id="version-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="version-options" style="display:none"></ul>
+                  </div>
+                  
+                    
+                    
+                      <div class="sidebar-search">
+                        <label class="sidebar-search__button" for="__search">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+                          <span>全文检索</span>
+                        </label>
+                      </div>
+                    
+                  
+                </div>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  
+    <div class="md-nav__source">
+      <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="前往仓库" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../00%E6%A6%82%E8%A7%88/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整体架构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../03API%E5%8F%82%E8%80%83/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考案例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../05%E7%A1%AC%E4%BB%B6%E6%8C%87%E5%8D%97/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具中心
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../07FAQ/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../08%E5%85%B6%E4%BB%96/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#前言_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#行车记录仪和无人机应用图像调优" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        行车记录仪和无人机应用图像调优
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="行车记录仪和无人机应用图像调优">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#概述" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#行车记录仪和无人机应用图像质量调优" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        行车记录仪和无人机应用图像质量调优
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#常用问题FAQ" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        常用问题FAQ
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="前言">前言<a name="ZH-CN_TOPIC_0000002078810812"></a></h1>
+<h2 id="前言_1">前言<a name="ZH-CN_TOPIC_0000002078810812"></a></h2>
+<p><strong>概述<a name="section4537382116410"></a></strong></p>
+<p>本文档详细描述了行车记录仪和无人机应用图像调试，同时提供了常见的问题处理方法。</p>
+<p><strong>产品版本<a name="section3091mcpsimp"></a></strong></p>
+<p>与本文档相对应的产品版本如下。</p>
+<p><a name="table3094mcpsimp"></a></p>
+<table><thead align="left"><tr id="row3099mcpsimp"><th class="cellrowborder" valign="top" width="32%" id="mcps1.1.3.1.1"><p id="p3101mcpsimp"><a name="p3101mcpsimp"></a><a name="p3101mcpsimp"></a>产品名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="68%" id="mcps1.1.3.1.2"><p id="p3103mcpsimp"><a name="p3103mcpsimp"></a><a name="p3103mcpsimp"></a>产品版本</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row68321519121116"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p13221556141815"><a name="p13221556141815"></a><a name="p13221556141815"></a>Hi3519D</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p324mcpsimp"><a name="p324mcpsimp"></a><a name="p324mcpsimp"></a>V500</p>
+</td>
+</tr>
+<tr id="row1725521121118"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p16117171192015"><a name="p16117171192015"></a><a name="p16117171192015"></a>Hi3516D</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p1711771112016"><a name="p1711771112016"></a><a name="p1711771112016"></a>V500</p>
+</td>
+</tr>
+<tr id="row14764610205313"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p63331555172315"><a name="p63331555172315"></a><a name="p63331555172315"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p141352132417"><a name="p141352132417"></a><a name="p141352132417"></a>V608</p>
+</td>
+</tr>
+<tr id="row1546433519454"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p268612131533"><a name="p268612131533"></a><a name="p268612131533"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p10686913135318"><a name="p10686913135318"></a><a name="p10686913135318"></a>V610</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>读者对象<a name="section4378592816410"></a></strong></p>
+<p>本文档（本指南）主要适用于以下工程师：</p>
+<ul>
+<li>技术支持工程师</li>
+<li>软件开发工程师</li>
+</ul>
+<p><strong>符号约定<a name="section133020216410"></a></strong></p>
+<p>在本文中可能出现下列标志，它们所代表的含义如下。</p>
+<p><a name="table2622507016410"></a></p>
+<table><thead align="left"><tr id="row1530720816410"><th class="cellrowborder" valign="top" width="20.560000000000002%" id="mcps1.1.3.1.1"><p id="p6450074116410"><a name="p6450074116410"></a><a name="p6450074116410"></a><strong id="b2136615816410"><a name="b2136615816410"></a><a name="b2136615816410"></a>符号</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="79.44%" id="mcps1.1.3.1.2"><p id="p5435366816410"><a name="p5435366816410"></a><a name="p5435366816410"></a><strong id="b5941558116410"><a name="b5941558116410"></a><a name="b5941558116410"></a>说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1372280416410"><td class="cellrowborder" valign="top" width="20.560000000000002%" headers="mcps1.1.3.1.1 "><p id="p3734547016410"><a name="p3734547016410"></a><a name="p3734547016410"></a><a name="image2670064316410"></a><a name="image2670064316410"></a><span><img class="" id="image2670064316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000002114415181.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.44%" headers="mcps1.1.3.1.2 "><p id="p1757432116410"><a name="p1757432116410"></a><a name="p1757432116410"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row466863216410"><td class="cellrowborder" valign="top" width="20.560000000000002%" headers="mcps1.1.3.1.1 "><p id="p1432579516410"><a name="p1432579516410"></a><a name="p1432579516410"></a><a name="image4895582316410"></a><a name="image4895582316410"></a><span><img class="" id="image4895582316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000002078810824.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.44%" headers="mcps1.1.3.1.2 "><p id="p959197916410"><a name="p959197916410"></a><a name="p959197916410"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row123863216410"><td class="cellrowborder" valign="top" width="20.560000000000002%" headers="mcps1.1.3.1.1 "><p id="p1232579516410"><a name="p1232579516410"></a><a name="p1232579516410"></a><a name="image1235582316410"></a><a name="image1235582316410"></a><span><img class="" id="image1235582316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000002114330169.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.44%" headers="mcps1.1.3.1.2 "><p id="p123197916410"><a name="p123197916410"></a><a name="p123197916410"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row5786682116410"><td class="cellrowborder" valign="top" width="20.560000000000002%" headers="mcps1.1.3.1.1 "><p id="p2204984716410"><a name="p2204984716410"></a><a name="p2204984716410"></a><a name="image4504446716410"></a><a name="image4504446716410"></a><span><img class="" id="image4504446716410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000002078816110.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.44%" headers="mcps1.1.3.1.2 "><p id="p4388861916410"><a name="p4388861916410"></a><a name="p4388861916410"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
+<p id="p1238861916410"><a name="p1238861916410"></a><a name="p1238861916410"></a>“须知”不涉及人身伤害。</p>
+</td>
+</tr>
+<tr id="row2856923116410"><td class="cellrowborder" valign="top" width="20.560000000000002%" headers="mcps1.1.3.1.1 "><p id="p5555360116410"><a name="p5555360116410"></a><a name="p5555360116410"></a><a name="image799324016410"></a><a name="image799324016410"></a><span><img class="" id="image799324016410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000002114415185.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.44%" headers="mcps1.1.3.1.2 "><p id="p4612588116410"><a name="p4612588116410"></a><a name="p4612588116410"></a>对正文中重点信息的补充说明。</p>
+<p id="p1232588116410"><a name="p1232588116410"></a><a name="p1232588116410"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>修改记录<a name="section2467512116410"></a></strong></p>
+<p><a name="table1557726816410"></a></p>
+<table><thead align="left"><tr id="row2942532716410"><th class="cellrowborder" valign="top" width="20.72%" id="mcps1.1.4.1.1"><p id="p3778275416410"><a name="p3778275416410"></a><a name="p3778275416410"></a><strong id="b5687322716410"><a name="b5687322716410"></a><a name="b5687322716410"></a>文档版本</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="26.119999999999997%" id="mcps1.1.4.1.2"><p id="p5627845516410"><a name="p5627845516410"></a><a name="p5627845516410"></a><strong id="b5800814916410"><a name="b5800814916410"></a><a name="b5800814916410"></a>发布日期</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="53.16%" id="mcps1.1.4.1.3"><p id="p2382284816410"><a name="p2382284816410"></a><a name="p2382284816410"></a><strong id="b3316380216410"><a name="b3316380216410"></a><a name="b3316380216410"></a>修改说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row5947359616410"><td class="cellrowborder" valign="top" width="20.72%" headers="mcps1.1.4.1.1 "><p id="p2149706016410"><a name="p2149706016410"></a><a name="p2149706016410"></a>00B01</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.119999999999997%" headers="mcps1.1.4.1.2 "><p id="p648803616410"><a name="p648803616410"></a><a name="p648803616410"></a>2026-06-30</p>
+</td>
+<td class="cellrowborder" valign="top" width="53.16%" headers="mcps1.1.4.1.3 "><p id="p1946537916410"><a name="p1946537916410"></a><a name="p1946537916410"></a>第一次临时版本发布。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="行车记录仪和无人机应用图像调优">行车记录仪和无人机应用图像调优<a name="ZH-CN_TOPIC_0000002114330157"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002078816098">概述</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002114415177">行车记录仪和无人机应用图像质量调优</a></strong>  </p>
+</li>
+</ul>
+<h3 id="概述">概述<a name="ZH-CN_TOPIC_0000002078816098"></a></h3>
+<p>当前Hi3519DV500/Hi3516CV610针对消费类应用场景主要包括：行车记录仪、无人机、运动DV等产品形态，该部分当前主要介绍行车记录仪和无人机两种产品形态的调试框架，运动DV当前可以参考无人机产品形态的调试。</p>
+<p>无人机航拍、运动相机作为近几年快速发展一种新的生活记录方式。图像效果主要追求真实、美和传统IPC使用场景和效果要求存在比较大差异。无人机一般使用在户外，白天和晚上都有使用，但是不追求极致黑光。对帧率要求较高，不会轻易降帧。无人机主要使用线性模式，对颜色亮度、清晰度噪声要求比较高。</p>
+<p>行车记录仪现在已经成为车主必备设备，主要用途是防止碰瓷、车祸取证等。另外随着云服务的流行，许多车主会把行车记录仪录下的视频上传到云端与其他车主共享。这要求行车记录仪不仅要保证车牌路标清晰，还要求整体画面风格要偏向消费类，颜色和对比度要给人一种眼前一亮甚至大片的感觉。</p>
+<h3 id="行车记录仪和无人机应用图像质量调优">行车记录仪和无人机应用图像质量调优<a name="ZH-CN_TOPIC_0000002114415177"></a></h3>
+<p>行车记录仪和无人机应用场景线性模式图像调试流程如<a href="#fig1963115715271">图1</a>所示，和录像应用场景基本一样。因为和传统IPC使用场景和对效果要求不一样，每个模块具体的调试策略会存在差异。</p>
+<p><strong>图 1</strong>  行车记录仪和无人机应用场景图像调优架构图<a name="fig1963115715271"></a><br />
+<img alt="" src="figures/%E8%A1%8C%E8%BD%A6%E8%AE%B0%E5%BD%95%E4%BB%AA%E5%92%8C%E6%97%A0%E4%BA%BA%E6%9C%BA%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF%E5%9B%BE%E5%83%8F%E8%B0%83%E4%BC%98%E6%9E%B6%E6%9E%84%E5%9B%BE.png" title="行车记录仪和无人机应用场景图像调优架构图" /></p>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002078810816">环境准备与通用参数标定</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002114330161">行车记录仪产品形态调试</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002078816102">无人机产品形态调试</a></strong>  </p>
+</li>
+</ul>
+<h4 id="环境准备与通用参数标定">环境准备与通用参数标定<a name="ZH-CN_TOPIC_0000002078810816"></a></h4>
+<p><strong>镜头选型<a name="section11755114614210"></a></strong></p>
+<p>镜头的好坏对图像质量有重要影响，非常建议选择一颗与使用的sensor价格档位相匹配的镜头。评估镜头时需要从进光量、清晰度、畸变、紫边、炫光、CRA匹配等维度考虑，这些因素直接影响图像质量。镜头引起的一些效果问题只能通过后端ISP改善，不能彻底解决。</p>
+<p><strong>通用标定参数<a name="section2845141919244"></a></strong></p>
+<p>Sensor对接完成确定好镜头之后，需要进行标定工作。消费类产品使用的镜头视场角一般比较大，镜头shading（包括color shading）比较严重，如<a href="#fig20279101212612">图1</a>所示，如果不进行shading矫正，除了shading本身带来的偏色问题，很可能会导致AWB标定结果不准确，进而产生AWB偏色问题。</p>
+<ol>
+<li>应当首先标定镜头的shading参数，如<a href="#fig387065510526">图2</a>所示。</li>
+<li>
+<p>用shading标定结果对采集好的不同色温下的24色卡进行矫正，如<a href="#fig61221918153120">图3</a>所示。</p>
+<ul>
+<li>红色框是shading矫正按钮;</li>
+<li>蓝色框是24色卡原始RAW数据；</li>
+<li>绿色框是矫正后24色卡的名称。</li>
+</ul>
+</li>
+<li>
+<p>最后，用矫正后的24色卡RAW数据进行AWB和CCM参数标定。详细参考《图像质量调试工具使用指南》“使用标定结果矫正其他 RAW 的功能”小节。如果使用MLSC还不能完全校准color shading，可以考虑使用ACS标定。</p>
+</li>
+</ol>
+<p><strong>图 1</strong>  shading现象的表现<a name="fig20279101212612"></a><br />
+<img alt="" src="figures/shading%E7%8E%B0%E8%B1%A1%E7%9A%84%E8%A1%A8%E7%8E%B0.png" title="shading现象的表现" /></p>
+<p><strong>图 2</strong>  标定MLSC<a name="fig387065510526"></a><br />
+<img alt="" src="figures/%E6%A0%87%E5%AE%9AMLSC.png" title="标定MLSC" /></p>
+<p><strong>图 3</strong>  利用LSC参数矫正24色卡RAW<a name="fig61221918153120"></a><br />
+<img alt="" src="figures/%E5%88%A9%E7%94%A8LSC%E5%8F%82%E6%95%B0%E7%9F%AB%E6%AD%A324%E8%89%B2%E5%8D%A1RAW.png" title="利用LSC参数矫正24色卡RAW" /></p>
+<p>在标定CCM参数时，可以为了风格，适当把绿色矫正往翠绿方向调试，绿色和蓝色的饱和度更高一些，这样在白天户外场景看上去会很通透，给人第一眼的主观效果很清晰舒爽。</p>
+<p>线性模式可以直接使用CCM标定出来的参数；WDR模式因为有DRC的影响，需要对标定的参数进行图像整体饱和度矫正，一般是通过DRC模块中global_color_ctrl参数降低饱和度，具体方法可以使用标定参数在灯箱环境下进行指标测试，然后通过调整saturation调整饱和度到适合的程度。</p>
+<p>WDR下颜色调试方法详细可以参考《ISP 图像调优指南》"WDR模式图像质量调优”章节。</p>
+<p>最后根据标定文档标定BayerNR的噪声模型参数。详细参考《图像质量调试工具使用指南》“NR 标定结果验证”章节，如<a href="#fig8460103212394">图4</a>所示。在线抓raw验证后，观察红色的采样点和蓝色的理论噪声标定曲线的吻合程度，如果红色点离偏离蓝线较远，说明标定参数可能存在问题。也可以参考工具计算出的最大相对误差比例，重新审视标定参数的正确性。详细参考《图像质量调试工具使用指南》“NR 标定结果验证”章节。</p>
+<p><strong>图 4</strong>  NR 标定结果验证<a name="fig8460103212394"></a><br />
+<img alt="" src="figures/NR-%E6%A0%87%E5%AE%9A%E7%BB%93%E6%9E%9C%E9%AA%8C%E8%AF%81.png" title="NR-标定结果验证" /></p>
+<p><strong>镜头对焦<a name="section1683026174114"></a></strong></p>
+<p>行车焦距一般在4mm左右，在对焦时一定要注意距离。行车固定镜头时，打胶也是一个技术活，因为硬件原因，所使用的镜头与底座经常不是很匹配，一般表现是镜头拧上去比较松，这样在打胶时稍不注意就容易把镜头碰糊。所以在遇到这种情况，可以先用胶枪固定住镜头，等胶完全凝固后，拧动镜头（注意不要把打上去的胶搞掉），这样镜头在原来打胶的作用下就不会那么松动。在这些操作完成后，再重新对焦打胶，可以相对保证图像清晰度。</p>
+<p>对打胶时，还需要注意：镜头漏光，因为镜头跟底座不匹配或者镜头质量不好等原因，很容易产生漏光，这对图像质量有很大的影响，比如不同光照环境下漏光的强弱也有不同，强的时候会把图像搞的很糊，弱的时候没有明显的影响，这样就会出现相同时间段不同光照环境图像表现差异很大。现在已经有了黑色热熔胶，在打胶固定镜头后，一定要在检查一遍sensor和镜头，把所有有可能产生漏光的地方全部打上黑色热熔胶，确保完全不会漏光。</p>
+<p><strong>总结<a name="section915381319438"></a></strong></p>
+<p>从软硬件各个角度，对效果调试相关的问题进行了汇总，建议参考<a href="#fig1832610308311">图5</a>进行逐项排查，先确认软硬件各方面都没有问题后再进行调试。</p>
+<p><strong>图 5</strong>  消费类调试检查总体框架<a name="fig1832610308311"></a><br />
+<img alt="" src="figures/%E6%B6%88%E8%B4%B9%E7%B1%BB%E8%B0%83%E8%AF%95%E6%A3%80%E6%9F%A5%E6%80%BB%E4%BD%93%E6%A1%86%E6%9E%B6.png" title="消费类调试检查总体框架" /></p>
+<h4 id="行车记录仪产品形态调试">行车记录仪产品形态调试<a name="ZH-CN_TOPIC_0000002114330161"></a></h4>
+<p><strong>亮度维度<a name="section9812351778"></a></strong></p>
+<p>亮度维度中的AE调试属于行车记录仪产品形态的调试关键模块之一，会直接影响静止和运动清晰度、收光等图像效果。</p>
+<ol>
+<li>
+<p>AE权重的调试和确认</p>
+<p>要确定AE Weight表设置，需要根据行车记录仪的典型应用场景来设置。如<a href="#fig1550694903018">图1</a>所示。可以看到下1/5蓝框部分，主要是车头，亮度与车身颜色有关，白车会偏亮一些，黑色会偏暗一些，上1/4蓝框部分主要是天空，明显可以看出白天天空很亮，晚上天空很黑，这些都不是行车关注部分，这些部分在不同环境下又会对整体亮度产生比较大的影响，因此建议这部分权重为0，避免非重点关注区域对AE产生影响；中间黄框部分，是行车最主要关注部分；左右绿框部分，虽然也有大量关注内容，但是相对于中间黄框部分，并没有那么重要，并且有一个特点，越靠近中间部分权重越高，越靠近两边权重越低。由此可以大致推断出AE Weight表：蓝框部分权重全部为0，黄框部分权重最高，绿框部分权重由中间向两边逐渐降低，如<a href="#fig733694117387">图2</a>所示。</p>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-caution.gif" /> <strong>注意：</strong> <br />
+在实际效果调试中，对于不同分辨率图像，车头和天空占比有些差异，比如16:9和4:3对应的车头和天空部分占比就有所不同，因此需要根据实际场景进行一些调整。</p>
+</blockquote>
+<p><strong>图 1</strong>  行车关注的区域<a name="fig1550694903018"></a><br />
+<img alt="" src="figures/%E8%A1%8C%E8%BD%A6%E5%85%B3%E6%B3%A8%E7%9A%84%E5%8C%BA%E5%9F%9F.png" title="行车关注的区域" /></p>
+<p><strong>图 2</strong>  AE 权重示例图<a name="fig733694117387"></a><br />
+<img alt="" src="figures/AE-%E6%9D%83%E9%87%8D%E7%A4%BA%E4%BE%8B%E5%9B%BE.png" title="AE-权重示例图" /></p>
+</li>
+<li>
+<p>AE目标值</p>
+<ul>
+<li>
+<p>线性模式曝光目标值</p>
+<p>AE Weight确定下来后，紧接着就是调试AE Compensation。设置AE Compensation最直接的要求就是保证亮度合理，这个主要由主观感受来决定，很难有一个明确值。但根据调试经验来看，最主要要求是优先保证重点关注区域（<a href="#fig1550694903018">图1</a><strong>中绿框和黄框部分</strong>）的亮度在合理水平，另外建议选择一个同档次的竞品作为参考。</p>
+<p>测试的主要场景有白天和晚上，白天场景主要有晴天和阴天的区别：</p>
+<ul>
+<li>晴天最主要的挑战是逆光场景，背光车牌很容易变的黑暗，此时需要设置相对较高的AE Compensation来保证亮度，否则背光车牌就很难看见；</li>
+<li>阴天整体都比较对比度低一些，此时也需要设置相对较高的AE Compensation来保证亮度，整体来说，白天的曝光目标值可以设置较高一些。</li>
+</ul>
+<p>晚上场景车牌亮度主要受路灯和车灯的影响，车灯的影响最大。尤其是远光灯照在前车身上反光时会非常亮；另外车灯亮度非常集中，除了车灯照射到的地方，其他地方都比较暗，所以夜晚场景曝光时间和ISO都会增加，输出信号信噪比会降低。根据上述特点，晚上的目标值应该设置相对低一些，在保证两旁（<a href="#fig1550694903018">图1</a><strong>中绿框和黄框部分中绿框区域</strong>）能够看到内容的前提下尽量的小，这样既可以保证重点关注区域（<a href="#fig1550694903018">图1</a><strong>中绿框和黄框部分中黄框区域</strong>）中的车牌尽量不过曝，又可以减少噪声表现。</p>
+<p>线性模式下曝光目标值大致如<a href="#fig272875212517">图3</a>所示，目标值随着曝光量的增加而减少，降低到一定程度保持不变。即白天使用比较高的曝光目标值，晚上使用小一些的曝光目标值。</p>
+<p><strong>图 3</strong>  线性模式AE目标亮度典型值<a name="fig272875212517"></a><br />
+<img alt="" src="figures/%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%BC%8FAE%E7%9B%AE%E6%A0%87%E4%BA%AE%E5%BA%A6%E5%85%B8%E5%9E%8B%E5%80%BC.png" title="线性模式AE目标亮度典型值" /></p>
+</li>
+<li>
+<p>WDR模式曝光目标值</p>
+<p>与线性有所不同，WDR有长短帧曝光，就可以同时兼顾亮区和暗区的亮度，因此为了保证暗区的亮度，可以把目标值设的相对线性高一些。如果遇到太阳光强烈的场景，可以通过调整曝光比来降低短帧的亮度（一般白天曝光比设置为4倍~9倍），这样可以保证高亮区不过曝。</p>
+</li>
+</ul>
+</li>
+<li>
+<p>AE Route设置</p>
+<ul>
+<li>
+<p>线性模式AE Route设置</p>
+<p>行车记录仪对曝光时间很敏感，在白天，曝光时间长一些就很有可能出现运动快导致车牌模糊问题；在晚上，曝光时间和增益设置的不合理，就有大部分场景就有可能出现工频闪或者运动模糊，因此合理设置AE Route很重要。</p>
+<p>感光度比较好的sensor，可以现在曝光优先使用比较高的增益；感光度比较差的sensor，由于噪声比较大，因此需要优先把曝光时间起的相对长一些。比如A sensor感光度相对较好，AE Route可以设置成<a href="#fig6337114153815">图4</a>的路径；B sensor感光度比较差，AE Route可以设置成<a href="#fig143388418385">图5</a>的路径。但还是要根据不同sensor和实际使用场景来调整。</p>
+<p><strong>图 4</strong>  A sensor AE Route示例<a name="fig6337114153815"></a><br />
+<img alt="" src="figures/A-sensor-AE-Route%E7%A4%BA%E4%BE%8B.png" title="A-sensor-AE-Route示例" /></p>
+<p><strong>图 5</strong>  B sensor  AE Route示例<a name="fig143388418385"></a><br />
+<img alt="" src="figures/B-sensor-AE-Route%E7%A4%BA%E4%BE%8B.png" title="B-sensor-AE-Route示例" /></p>
+<p>对比<a href="#fig6337114153815">图4</a>和<a href="#fig143388418385">图5</a>可以发现，曝光时间在10ms之前，也即白天时，两者差异相对不大，因为白天光照充分，信号充足。曝光时间大于10ms时，两者差异就很大了，B sensor 由于感光差会优先把曝光时间增加到20ms乃至30ms，而A sensor由于感光好 会优先把增益提高到32倍，然后才把曝光时间延长到30ms，这个差异主要是因为sensor噪声水平决定的。</p>
+<ul>
+<li>对比白天，两者都是为了保证运动清晰度，曝光时间没有直接起到10ms，而是时间和增益交替增加。</li>
+<li>对比晚上，曝光时间节点基本上都是10ms、20ms、30ms，再根据不同sensor的特定增益限制，这样就可以最大限度的避免工频闪的出现。</li>
+</ul>
+</li>
+<li>
+<p>WDR模式 AE Route设置</p>
+<p>WDR模式的AE Route在白天与线性模式没有很大区别，都是要争取尽可能短的曝光时间，这样才能尽最大可能避免车牌因为运动而模糊。</p>
+<p>在晚上，WDR模式的AE Route与线性模式就有很大的区别。尤其是现在WDR可以分别配置长短帧的AE Route，给了WDR更多的灵活性。</p>
+<p>WDR模式的AE Route有两种调试方式。</p>
+<p>第一种：跟线性一模一样，只控制长帧的AE Route，短帧路径通过长帧计算得到，可以参考线性AE Route设置。</p>
+<p>第二种：长短帧路径分别配置，这样可以更灵活控制长短帧的曝光时间和增益。使用第二种方式的主要原因：晚上时，因最小曝光比限制（现在晚上最小曝光比设置是4倍），如果不特殊处理，短帧曝光时间很难达到10ms，这样很容易出现工频闪，噪声也会比较大，画面体验感就不好，因此需要对短帧曝光进行“特殊”处理。这里说明此种方式如<a href="#fig16338241203815">图6</a>所示，这里是长帧优先原则。</p>
+<p><strong>图 6</strong>  WDR模式长短帧AE Route配置示例<a name="fig16338241203815"></a><br />
+<img alt="" src="figures/WDR%E6%A8%A1%E5%BC%8F%E9%95%BF%E7%9F%AD%E5%B8%A7AE-Route%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B.png" title="WDR模式长短帧AE-Route配置示例" /></p>
+<p>白天大部分场景，只有天空和高亮反光区才容易过曝，而车牌路标等标志物基本上都不会过曝，这些标志物都是由长帧数据来表达，因此白天一定要控制好长帧的曝光时间；晚上时，需要把长帧限制到20ms，这样绝大部分画面才不会出现工频闪。因此在设置AE Route时应该选择“长帧优先”的模式，如果选择“短帧优先”，则会因为算法内部限制，导致长帧在白天增益无法增加（因为短帧优先增加曝光时间到10ms从而限制了增益的增加），只能增加长帧曝光时间，就会产生运动模糊。</p>
+<p>如<a href="#fig16338241203815">图6</a>所示，“长帧优先”模式下，长帧在白天那一段会分的比较细，这样可以确保白天的运动清晰度，在晚上迅速达到10ms、20ms，保证夜晚长帧不会出现工频闪。短帧路径则比较简单，增益增加到2倍后，直接把曝光时间增加到10ms，然后曝光时间就不再改变，后面就只改变增益。短帧这样做的好处是可以优先增加曝光时间，改善短帧的信噪比，同时不会产生工频闪。</p>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-caution.gif" /> <strong>注意：</strong> <br />
+1.  使用这一模式最好是sensor支持长短帧的增益分别配置，这样更容易实现，并且信噪比也是最好的，sensor如果不支持长短帧增益分别配置，使用这一模式时，AE将会使用WDR的Gain分配增益。<br />
+2.  要协调长帧和短帧的节点控制，保证短帧的节点都能被取到。以上参数只是参考，不同sensor需要实际场景效果进行调整。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p>WDR模式曝光比调试</p>
+<p>在WDR模式下，如果曝光比过低，长短帧亮度差不多，这样体现不出WDR模式的优势；如果曝光比过高，由会因为短帧太暗导致画面整体都比较暗，因此需要合理设置曝光比。</p>
+<p>根据历史经验，白天和晚上场景最小曝光比设置到4倍比较合适，短帧亮度合适，但这个是推荐经验值，需要根据不同sensor和实际效果进行调整。</p>
+<ul>
+<li>最大曝光比在白天一般设置到9倍，这样可以保证在进出隧道时AE可以更快的收敛，尤其是在出隧道时（由暗到亮），短帧可以迅速达到合适的亮度值，保证亮区不过曝。</li>
+<li>晚上最大曝光比会限制到6倍，与白天相比会有所减少，主要因为晚上整体都比较暗，如果曝光比过大，合成后的图像会显得很黑。某sensor的曝光比限制如<a href="#fig143390414387">图7</a>所示。</li>
+</ul>
+<p><strong>图 7</strong>  曝光比限制示例<a name="fig143390414387"></a><br />
+<img alt="" src="figures/%E6%9B%9D%E5%85%89%E6%AF%94%E9%99%90%E5%88%B6%E7%A4%BA%E4%BE%8B.png" title="曝光比限制示例" /></p>
+</li>
+</ol>
+<p><strong>对比度颜色维度<a name="section460318264395"></a></strong></p>
+<p>调试对比度主要涉及到Gamma、DRC、Dehaze、LDCI等几个模块，颜色风格涉及到CCM、CLUT等模块，具体调试方法参考算法调试文档，这里只讲述主要风格。</p>
+<ul>
+<li>
+<p>行车线性模式</p>
+<p>如<a href="#fig676191615357">图8</a>所示，白天要有比较强的对比度，整体色调偏冷一些，颜色要艳丽，主要体现在蓝色要够蓝，绿色要翠绿，要让第一眼看上去有一种视觉冲击感，这样就比较吸引眼球，风格也比较讨喜。具体调试时，可以通过Gamma、Dehaze、LDCI把整体画面对比度提高，这个时候有可能暗区比较偏暗，然后再通过DRC适当增加一些暗区的亮度即可。</p>
+<p>在调试颜色时，可以先通过CCM把整体颜色的饱和度提高和主要颜色还原准确，针对Hi3519DV500芯片可以通过CLUT调到自己喜好色即可（如绿色和蓝色），针对Hi3516CV610芯片，当前没有CLUT模块，只能够通过color_sector模块调试。</p>
+<p><strong>图 8</strong>  行车白天风格<a name="fig676191615357"></a><br />
+<img alt="" src="figures/%E8%A1%8C%E8%BD%A6%E7%99%BD%E5%A4%A9%E9%A3%8E%E6%A0%BC.png" title="行车白天风格" /></p>
+</li>
+<li>
+<p>行车场景WDR模式</p>
+<p>WDR模式的风格与线性相似，白天要有比较强的对比度，整体色调偏冷一些，颜色要艳丽，主要体现在蓝色要够蓝，绿色要翠绿。夜晚主要是对光源色的不同处理。</p>
+<p>但是在调试上与线性有所区别，主要体现在DRC的调试，WDR的长帧已经足够亮，因此在调试DRC时，采用还原长帧的策略：高亮区选择短帧，其他区域与长帧保持一致即可。这需要用到DRC自定义曲线，并且在不同曝光比下使用不同的曲线，现在的做法是手动配置整数曝光比（4/5/6/7/8/9）的曲线，非整数曝光比的曲线进行差值。</p>
+<p>在确定好DRC的曲线后，调试Gamma、Dehaze和LDCI来调试画面整体的对比度和局部对比度，保证画面整体通透。调试颜色时也需要先DRC曲线，然后再调试CCM保证整体颜色和饱和度处在合理值，因为DRC很有可能提高饱和度，同时确定主要颜色还原准确，最后通过CLUT把个别颜色调到期望值。WDR下颜色调试方法可以参考《ISP 图像调优指南》“WDR模式图像质量调优”章节。</p>
+</li>
+</ul>
+<p><strong>清晰度噪声维度<a name="section1063325418494"></a></strong></p>
+<p>行车记录仪有以下两个特点：</p>
+<ul>
+<li>场景变化极其复杂而且快，受到写SD卡速度的限制，最大码率受到限制；</li>
+<li>
+<p>时域去噪强度不能开的很强，否则运动拖尾会很严重。因此，对于行车记录仪，不可能保证图像完全清晰的同时噪声完全没有，不能保证每一个细节都存在，在噪声和清晰度间要有所舍取。下面将分别从白天和晚上两个角度描述清晰度和噪声的调试方法（WDR和线性调试方法相似，只是强度不同）。</p>
+</li>
+<li>
+<p>白天场景清晰度噪声调试方案</p>
+<p>白天光照充足，曝光时间一般都很短，大概在1ms左右，此时信号也会很好，因此基本上不用担心噪声过大的问题，因此去噪强度不用很强。3DNR的时域去噪强度也很弱，不同芯片参数可能不同，但是方向是一致的，math和tfs调的都很弱，只要能压住大部分的大颗粒跳动的噪声即可。<a href="#fig8568131711571">图9</a>为Hi3516CV610 3DNR示例。</p>
+<p>时域去噪调完之后就是清晰度和空域去噪的调试，如<a href="#fig1732514283368">图10</a>所示。</p>
+<p>大部分场景：中间是道路，两旁是行道树，时不时右上方或者上方有路标牌，其他车辆主要出现在中间前方或者左右斜前方。</p>
+<p><strong>图 9</strong>  Hi3516CV610芯片 3DNR参数示例<a name="fig8568131711571"></a><br />
+<img alt="" src="figures/Hi3516CV610%E8%8A%AF%E7%89%87-3DNR%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B.png" title="Hi3516CV610芯片-3DNR参数示例" /></p>
+<p><strong>图 10</strong>  白天典型行车场景<a name="fig1732514283368"></a><br />
+<img alt="" src="figures/%E7%99%BD%E5%A4%A9%E5%85%B8%E5%9E%8B%E8%A1%8C%E8%BD%A6%E5%9C%BA%E6%99%AF.png" title="白天典型行车场景" /></p>
+<p>在这里，首先要明确行车重点关注的内容：即中间车辆的车牌和旁边的路牌；而行道树和路面并不是重点关注内容，如果清晰度好仅仅起到锦上添花的作用。</p>
+<p>在调试时，重点优先保证调试车牌和路标的清晰度，而这两者的边缘，大部分都属于强边缘范围，因此在调试sharpen时，要把强边缘适当的增强；同时为了保证边缘更加凸显锐利度，可以适当增加黑白边的锐度，这样，车牌和路牌看起来有较强的层次感， 也更清晰锐利。</p>
+<p>不要一味追求强边缘锐度而过度增强强度，过度的锐化强边缘，会导致边缘很粗，这样比较小的字会因为边缘过粗而导致看不出，在主观效果上也会很差。参数如<a href="#fig795718576419">图11</a>所示，具体数值大小可根据不同sensor上下调整。</p>
+<p><strong>图 11</strong>  YUV Sharpen EdgeStr参数示例<a name="fig795718576419"></a><br />
+<img alt="" src="figures/YUV-Sharpen-EdgeStr%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B.png" title="YUV-Sharpen-EdgeStr参数示例" /></p>
+<ul>
+<li>
+<p>调试完强边缘后，就是细节的调试，树叶和路面都有很多细节，如果全部锐化出来，会对编码造成很大的压力，码率不够用，会产生很多编码块，这样反而会更多的损失细节，同时主观效果也会很差；并且，因为车辆高速运行，其实很多细节即使能够锐化出来也会因为车速过快而看不清；同时也会带来很多的噪声，因此，不建议行车保留过多的细节。但也不能不留细节，如果树叶和路面全是模糊的，画面就会显的很平，没有层次感， 主观效果会很差。</p>
+<p>因此，建议保留适当的细节，主观效果大致可以归结为：</p>
+<ul>
+<li>如<a href="#fig1732514283368">图10</a>中黄色路面区域保留部分细节，其他部分的路面基本上是平的就行，粉红色的行道树区域部分有细节部分是糊的就可以。这样整体看上去会有一些细节的存在，给人一种有内容有层次感的感觉，同时磨平的区域又可以省一些码率给主要关注内容，而且也不会给空域降噪带来过多的压力。</li>
+<li>如<a href="#fig11328131511920">图12</a>所示，红框部分主要是细节，因此值可以设的比较低，蓝框部分有很多中频的强边缘，需要比较高的强度，黄框部分会增加黑白边，不需要那么强，可以适当降低。具体数值大小可根据不同sensor上下调整。</li>
+</ul>
+</li>
+<li>
+<p>清晰度确定之后，就是空域去噪的调试，其实空域去噪和清晰度是协同调试，主要目标都是为了增强强边缘，保留部分细节，去掉无用的噪声。当前3DNR的调试原则是可以用中间两级的运动区域空域去除相关的颗粒噪声，最后一级用于增强；<a href="#fig21871632201014">图13</a>为Hi3516CV610芯片3DNR空域相关参数示例。</p>
+</li>
+</ul>
+<p><strong>图 12</strong>  TextureStr参数示例<a name="fig11328131511920"></a><br />
+<img alt="" src="figures/TextureStr%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B.png" title="TextureStr参数示例" /></p>
+<p><strong>图 13</strong>  Hi3516CV610芯片3DNR空域相关参数示例<a name="fig21871632201014"></a><br />
+<img alt="" src="figures/Hi3516CV610%E8%8A%AF%E7%89%873DNR%E7%A9%BA%E5%9F%9F%E7%9B%B8%E5%85%B3%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B.png" title="Hi3516CV610芯片3DNR空域相关参数示例" /></p>
+</li>
+<li>
+<p>夜晚场景清晰度噪声调试方案</p>
+<p>夜晚主要特点：</p>
+<ul>
+<li>光照不充足，信噪比差，噪声大；</li>
+<li>亮度不均匀，有车灯的地方很亮，没有车灯或者路灯的地方就很暗，这样不同亮度区域的信噪比也不相同。</li>
+</ul>
+<p>针对第一个特点，需要随着曝光量的增加，来增加时域去噪的强度，保证画面没有明显大颗粒跳动的点即可，过强会有运动拖尾现象。这个需要随着ISO的增加而增强，如<a href="#fig16543175131219">图14</a>所示，是ISO1600的情况下时域去噪的参数，与图15（ISO100参数）比，黄框中的值都变大很多，即明显增强了时域去噪强度。</p>
+<p><strong>图 14</strong>  Hi3516CV610 iso1600时域相关参数<a name="fig16543175131219"></a><br />
+<img alt="" src="figures/Hi3516CV610-iso1600%E6%97%B6%E5%9F%9F%E7%9B%B8%E5%85%B3%E5%8F%82%E6%95%B0.png" title="Hi3516CV610-iso1600时域相关参数" /></p>
+<p>同白天一样，时域去噪确定好之后，就是清晰度的调试。晚上典型场景如<a href="#fig18524162015218">图15</a>所示，有灯照的地方就比较亮（红框、蓝框），没有灯照的就很暗（黄框）。</p>
+<p>首先对亮暗区域的锐化进行区分，亮区信噪比相对较好，锐化不出过多的噪声，暗区信噪比差，稍微锐化过强就全部是噪声。因此在锐化时，要对暗区锐化进行适当的减弱。在Hi3519DV500/Hi3516CV610上参数大致如<a href="#fig0961017132110">图16</a>所示，前半部分（暗区部分）适当降低锐化程度。具体参数值随曝光量和不同sensor而不同。</p>
+<p><strong>图 15</strong>  夜晚行车典型应用场景<a name="fig18524162015218"></a><br />
+<img alt="" src="figures/%E5%A4%9C%E6%99%9A%E8%A1%8C%E8%BD%A6%E5%85%B8%E5%9E%8B%E5%BA%94%E7%94%A8%E5%9C%BA%E6%99%AF.png" title="夜晚行车典型应用场景" /></p>
+<p><strong>图 16</strong>  LumaWgt参数示例<a name="fig0961017132110"></a><br />
+<img alt="" src="figures/LumaWgt%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B.png" title="LumaWgt参数示例" /></p>
+<p>从<a href="#fig18524162015218">图15</a>还可以看到，夜晚主要存在的都是强边缘，树叶、路面等细节基本上都看不到，这也成为夜晚的主要调试方向：夜晚主要增强大边，细节等都可以在一定程度上忽略不计。如<a href="#fig143605338249">图17</a>所示，是ISO1600下TextureStr和EdgeStr的值，TextureStr的值整体降低很多，EdgeStr的值稍微有些增加。降低TextureStr的值就是为了降低细节锐化强度，保证基本细节存在的前提下（保证主观看上去有一定的层次感，不会感觉画面是平的），尽可能减少细节的锐化，这样会降低很多噪声。EdgeStr稍微增强，是因为sensor输出信号上，夜晚里的强边缘不如白天明显，边缘去噪强度也会更强，但在主观感受上不能比白天差，因此需要适当增强EdgeStr来保证效果，同时还要稍微增加黑边的强度（一般比ISO100的值要大），不增强白边强度（与ISO100相当或者适当增加一些或者减少一些），是因为夜晚对白色噪点很敏感。在sharpen整体锐化上，都要往强边缘上倾斜，即DetilCtrl值会随着ISO的增加而小于128且越来越小。</p>
+<p><strong>图 17</strong>  ISO1600下TextureStr和EdgeStr参数示例<a name="fig143605338249"></a><br />
+<img alt="" src="figures/ISO1600%E4%B8%8BTextureStr%E5%92%8CEdgeStr%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B.png" title="ISO1600下TextureStr和EdgeStr参数示例" /></p>
+<p><img alt="" src="figures/zh-cn_image_0000002078810864.png" /></p>
+<p>锐化基本调完之后就是空域去噪的调试，与白天一样，去噪应该与清晰度协同调试。主要目标也是为了增强强边缘，保留基本细节，去掉绝大部分的细碎噪声。如<a href="#fig18145818152712">图18</a>所示，3DNR主要作用也是增强大边，去除细碎噪声。</p>
+<p><strong>图 18</strong>  Hi3516CV610 ISO1600 空域去噪参数示例<a name="fig18145818152712"></a><br />
+<img alt="" src="figures/Hi3516CV610-ISO1600-%E7%A9%BA%E5%9F%9F%E5%8E%BB%E5%99%AA%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B.png" title="Hi3516CV610-ISO1600-空域去噪参数示例" /></p>
+<p>与<a href="#fig21871632201014">图13</a>对比，可以看到去噪参数强度明显增加，边缘增强参数稍微增强·。</p>
+<p>最终的主观效果：</p>
+<ul>
+<li>天空和路面没有明显的噪声躁动，基本上都是抹平的；两旁的行道树、建筑物等细节可以没有，但是要有较为明显的边缘，会给人一种立体的感觉；</li>
+<li>车和路牌的边缘比较明显，尤其是有光照时，应该有很明显的边缘锐利感。</li>
+</ul>
+<p>以上参数只是其中一种调试风格，在实际调试中应该根据不同sensor特定进行调整。</p>
+</li>
+</ul>
+<h4 id="无人机产品形态调试">无人机产品形态调试<a name="ZH-CN_TOPIC_0000002078816102"></a></h4>
+<p>无人机产品形态的调试往往比较关注：色彩维度、对比度维度、清晰度噪声维度以及防抖相关的调试等。</p>
+<p>无人机的调试场景包括白天和夜晚航拍场景，如<a href="#fig20209124012286">图1</a>和<a href="#fig107911352132815">图2</a>所示。</p>
+<p><strong>图 1</strong>  白天海边无人机航拍场景<a name="fig20209124012286"></a><br />
+<img alt="" src="figures/%E7%99%BD%E5%A4%A9%E6%B5%B7%E8%BE%B9%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%88%AA%E6%8B%8D%E5%9C%BA%E6%99%AF.jpg" title="白天海边无人机航拍场景" /></p>
+<p><strong>图 2</strong>  夜晚无人机航拍场景<a name="fig107911352132815"></a><br />
+<img alt="" src="figures/%E5%A4%9C%E6%99%9A%E6%97%A0%E4%BA%BA%E6%9C%BA%E8%88%AA%E6%8B%8D%E5%9C%BA%E6%99%AF.jpg" title="夜晚无人机航拍场景" /></p>
+<p><strong>色彩维度<a name="section106851533164112"></a></strong></p>
+<ol>
+<li>
+<p>镜头Shading的确认，镜头和sensor的CRA不匹配会造成color shading现象，画面不同部位颜色存在差异，如<a href="#fig74618303424">图3</a>所示，一个典型存在颜色color shading的场景。在分析颜色问题之前一定要确认是否和color shading相关。如果传统的MLSC不能解决各个色温的下的Color shading问题，可以考虑使用ACS补偿。详细可以参考《图像质量调试工具使用指南》“ACS 标定”小节。当前由于标定ACS在产线量产存在一定的复杂性，优先推荐客户选择镜头和sensor的CRA进行匹配，避免产生color shading现象。</p>
+<p><strong>图 3</strong>  color shading导致偏色现象<a name="fig74618303424"></a><br />
+<img alt="" src="figures/color-shading%E5%AF%BC%E8%87%B4%E5%81%8F%E8%89%B2%E7%8E%B0%E8%B1%A1.png" title="color-shading导致偏色现象" /></p>
+<p><strong>图 4</strong>  ACS 标定示例<a name="fig117619754414"></a><br />
+<img alt="" src="figures/ACS-%E6%A0%87%E5%AE%9A%E7%A4%BA%E4%BE%8B.png" title="ACS-标定示例" /></p>
+</li>
+<li>
+<p>AWB调试：AWB调试主要包括静态白平衡系数和普朗克曲线的标定，当前需要针对抓取标定的数据进行标定得到，具体可以参考《ISP 图像调优指南》“线性模式图像质量调优”小节中色彩维度的步骤1，AWB当前调试的原则尽量保证白色和灰色在不同色温下都能够还原准确。</p>
+</li>
+<li>
+<p>CCM模块调试：标定完CCM矩阵后，可以使用Color Checker工具来检查24色卡的color error，重点关注肤色、蓝色、绿色、红色等色块的色调和饱和度的偏移方向。如<a href="#fig6881195154918">图5</a>所示，肤色色块1和2，饱和度偏高色调有些偏紫，红色色块15色调偏黄饱和度偏高。</p>
+<p>如果某个颜色色块偏差比较大，可以在标定CCM的时候，加大对应色块的权重，如<a href="#fig16997205819496">图6</a>黄色框所示。另外在CCM标定时有如下两点建议。</p>
+<ol>
+<li>Gamma导入使用当前场景使用的值，不要使用默认的sRGB、BT709 Gamma曲线。</li>
+<li>参考目标可以尝试使用竞品拍的色卡图片，不一定使用标准的D65色卡图，而且不同色温下的目标参考图可以使用不一样的。如<a href="#fig16997205819496">图6</a>红色框所示。</li>
+</ol>
+<p><strong>图 5</strong>  Color Checker测试颜色误差<a name="fig6881195154918"></a><br />
+<img alt="" src="figures/Color-Checker%E6%B5%8B%E8%AF%95%E9%A2%9C%E8%89%B2%E8%AF%AF%E5%B7%AE.png" title="Color-Checker测试颜色误差" /></p>
+<p><strong>图 6</strong>  CCM标定示例<a name="fig16997205819496"></a><br />
+<img alt="" src="figures/CCM%E6%A0%87%E5%AE%9A%E7%A4%BA%E4%BE%8B.png" title="CCM标定示例" /></p>
+<p>除了上面的离线标定工具外，还可以通过在线CCM调节工具可以调整特定颜色的色调和饱和度。如<a href="#fig186414362508">图7</a>界面，可以通过RGB和HSV两个颜色空间来设置原始颜色和目标颜色。</p>
+<p><strong>图 7</strong>  在线CCM调试示例<a name="fig186414362508"></a><br />
+<img alt="" src="figures/%E5%9C%A8%E7%BA%BFCCM%E8%B0%83%E8%AF%95%E7%A4%BA%E4%BE%8B.png" title="在线CCM调试示例" /></p>
+</li>
+<li>
+<p>Hi3519DV500当前可以通过CLUT调试喜好色，包括绿色和肤色等，而Hi3516CV610当前没有CLUT模块，当前主要通过color_sector模块进行调试；color_sector可以调节的色调和饱和度调节分区对应为：红色，肤色，黄色，绿色，蓝色，紫色等。另外饱和度偏高的话，也会导致偏色明显，需要降低整体的饱和度，涉及到模块有CCM饱和度，CA增益，CSC饱和度，Hi3516CV610芯片的3DNR模块还有CA模块也会影响饱和度；</p>
+</li>
+<li>
+<p>系统的颜色相关的模块主要有AWB、CCM、CLUT等。另外对比度相关的模块Gamma、DRC、dehaze、ldci等对比度模块也会影响颜色表现。黑电平、color shading，彩色噪声等模块也会影响颜色表现，不同模块对颜色影响会不一样。如果遇到局部颜色不合理，优先检查黑电平，color shading或者去彩噪等模块。黑电平偏移一般会导致暗处颜色偏紫或者偏绿。Color shading一般是在亮暗均匀场景的时候容易出现画面中不同部分颜色不一样，可以进行LSC或者ACS标定来补偿。Gamma、DRC、dehaze、ldci等对比度模块会调整灰阶的亮度，进而导致饱和度和色调的变化。</p>
+<p>在进行CCM标定时，只导入Gamma模块，但是其他模块DRC、dehaze、ldci等没法导入，这些模块对颜色的影响没有考虑进去。如果相关模块调试强度比较大，最终图像的饱和度或者色差和标定的结果相比会偏大。调试对比度的时候，建议使用Gamma将整体对比度调到接近程度，再使用DRC、dehaze、ldci等模块进行微调。</p>
+</li>
+<li>
+<p>CSC配置对颜色影响：针对颜色问题需要注意的是视频编码时候设置的颜色空间和full range/limit range 和播放器解码时候的配置需要匹配，如果不匹配也会造成颜色有差异。调试过程中遇到的一个比较典型的问题是不同播放器看同一段码流颜色和对比度存在差异。如果ISP处理设置YUV为full range，而播放器认为码流为Limited range，则会对图像进行亮度扩展和颜色空间转换操作，这些会造成肤色饱和度和对比度提高，肤色偏绿或者偏红。关于full range/limited range 设置问题，请参考《ISP开发参考》“ot_isp_csc_attr”介绍。比如Sharpen，LDCI，CA等模块，会对YUV数据进行处理。当开启这些模块时，VI输出端的YUV数据不会准确的在Full range或Limited range规定的值的范围内。建议limited_range_en配置为Full range。当需要系统最终输出的YUV数据在Limited range规定的数值范围内时，可以将CSC的limited_range_en配置为Full range。设置3DNR参数ot_nr_v1中的limited_range_en参数，在VPSS输出端得到Limited range的YUV数据。</p>
+</li>
+</ol>
+<p><strong>对比度维度<a name="section12960154075113"></a></strong></p>
+<p>无人机产品形态对比度维度调试主要涉及DRC、LDCI、Dehaze、Gamma模块，调试方法可以参考《ISP 图像调优指南》“线性模式图像质量调优”中对比度维度，但需要注意：无人机的应用场景一般往往在室外场景，因为需要补充室外的RAW的数据进行仿真调试，一般包括：白天场景、傍晚场景、夜景等场景。</p>
+<p><strong>图 8</strong>  白天场景示例<a name="fig1887257195217"></a><br />
+<img alt="" src="figures/%E7%99%BD%E5%A4%A9%E5%9C%BA%E6%99%AF%E7%A4%BA%E4%BE%8B.png" title="白天场景示例" /></p>
+<p><strong>图 9</strong>  傍晚场景示例<a name="fig07111324105210"></a><br />
+<img alt="" src="figures/%E5%82%8D%E6%99%9A%E5%9C%BA%E6%99%AF%E7%A4%BA%E4%BE%8B.png" title="傍晚场景示例" /></p>
+<p><strong>图 10</strong>  夜晚场景示例<a name="fig6807239155210"></a><br />
+<img alt="" src="figures/%E5%A4%9C%E6%99%9A%E5%9C%BA%E6%99%AF%E7%A4%BA%E4%BE%8B.png" title="夜晚场景示例" /></p>
+<p><strong>清晰度噪声维度<a name="section771124275317"></a></strong></p>
+<p>无人机航拍主要分为静止和运动两种场景，运动的时候主要特点是场景变化快而且场景复杂，时域去噪强度不能开的很强，否则运动拖尾会很严重，静止时候可以用稍强一些时域降噪去除噪声，在噪声和清晰度间要有所舍取。下面主要介绍夜晚场景下清晰度和噪声的调试方法。</p>
+<ol>
+<li>
+<p>噪声模型确认：清晰度噪声调试前，先确认噪声模型标定结果是否正确。详细参考《图像质量调试工具使用指南》“NR 标定结果验证”，如<a href="#fig160663115510">图11</a>所示。在线抓raw验证后，观察红色的采样点和蓝色的理论噪声标定曲线的吻合程度，如果红色点离偏离蓝线较远，说明标定参数可能存在问题。也可以参考工具计算出的最大相对误差比例，重新审视标定参数的正确性。</p>
+<p>另外如果竞品也能抓raw的话，建议在同一环境下设置同样的曝光和增益，拍摄色卡，通过看平坦区方差是否来判断噪声是否接近，确认sensor 的噪声差异。</p>
+<p><strong>图 11</strong>  噪声模型验证示例图<a name="fig160663115510"></a><br />
+<img alt="" src="figures/%E5%99%AA%E5%A3%B0%E6%A8%A1%E5%9E%8B%E9%AA%8C%E8%AF%81%E7%A4%BA%E4%BE%8B%E5%9B%BE.png" title="噪声模型验证示例图" /></p>
+</li>
+<li>
+<p>针对Hi3516CV610芯片，当前可以通过PQ调试工具增加NR dump功能，如果内存是128M版本，使用PQ调试工具增加NR dump功能，能把场景中运动区域和静止区域显示出来如<a href="#fig617513170589">图12</a>所示，具体使用方法请参考《图像质量调试工具使用指南》“原始数据（RAW）和YUV分析工具”小节。</p>
+<p>如果NR Debug功能显示的运动和静止区域和实际场景出现运动物体不匹配，需要调试BNR中md_static_ratio md_motion_ratio和 md_static_fine_strength等参数，直到运动区域和实际相符。3DNR的N0级时域的动静判决信息受到BNR的运动MAP影响。</p>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-caution.gif" /> <strong>注意：</strong> <br />
+Hi3519DV500芯片不涉及运动MAP的显示。</p>
+</blockquote>
+<p><strong>图 12</strong>  运动MAP的显示<a name="fig617513170589"></a><br />
+<img alt="" src="figures/%E8%BF%90%E5%8A%A8MAP%E7%9A%84%E6%98%BE%E7%A4%BA.png" title="运动MAP的显示" /></p>
+</li>
+<li>
+<p>在确认完噪声模型和运动MAP信息以后，接下来就是开展清晰度噪声的调试，无人机产品形态清晰度噪声模块涉及Demosaic、BayerNR、YUV Sharpen、3DNR等模块，无人机产品形态当前偏消费类喜好，</p>
+<p>当前对于清晰度噪声的要求主要是：锐化不能够有明显的黑白边的表现，不追求边缘过锐化，主要保证整体的风格偏柔和；3DNR模块的时域不能够调试太强，主要是为了防止无人机在转动过程中出现天空大面积蒙砂的问题；当前Hi3519DV500芯片当前有AIBNR模块可以提升无人机的夜视效果，往往在夜视场景，建议开启AIBNR模块进行调试，如<a href="#fig121601444135919">图13</a>所示。</p>
+<p><strong>图 13</strong>  夜景iso8500开启AIBNR的效果<a name="fig121601444135919"></a><br />
+<img alt="" src="figures/%E5%A4%9C%E6%99%AFiso8500%E5%BC%80%E5%90%AFAIBNR%E7%9A%84%E6%95%88%E6%9E%9C.png" title="夜景iso8500开启AIBNR的效果" /></p>
+<p><strong>图 14</strong>  夜晚公园iso20000 开启AIBNR的效果<a name="fig2017043016017"></a><br />
+<img alt="" src="figures/%E5%A4%9C%E6%99%9A%E5%85%AC%E5%9B%ADiso20000-%E5%BC%80%E5%90%AFAIBNR%E7%9A%84%E6%95%88%E6%9E%9C.png" title="夜晚公园iso20000-开启AIBNR的效果" /></p>
+<p>针对Hi3516CV610芯片，当前受限于内存的限制，在64M下无法使用AIBNR模块，只能调试BayerNR和3DNR模块进行去噪处理。传统3DNR在平坦区域噪声和运动蒙砂噪声存在一定的权衡，因此，建议在3DNR前的数据，尽量保证噪声跳动幅度不要太大，以免通过3DNR时域压制跳动噪声带来运动拖尾和蒙砂的问题。</p>
+</li>
+</ol>
+<h2 id="常用问题FAQ">常用问题FAQ<a name="ZH-CN_TOPIC_0000002079184676"></a></h2>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+本章节仅适用于Hi3516CV610/Hi3516CV608</p>
+</blockquote>
+<p><strong>行车场景线性夜晚工频闪优化问题<a name="section1362218587197"></a></strong></p>
+<p>在夜晚，不管AERoute怎么设置，线性都会遇到曝光时间介于10ms和20ms的场景，此时工频闪会比较严重，这里有两种方法来解决：</p>
+<ul>
+<li>
+<p>开启AE抗闪功能：需要合理设置开启抗闪的曝光量节点，保证只有大于10ms才会开启抗闪；同时AE抗闪做法是曝光时间是向下取整（10ms-20ms之间只会把曝光时间降到10ms），因此增益会增加，噪声会变大，有可能出现噪声突变问题。</p>
+</li>
+<li>
+<p>欺骗AE，等曝光量计算时间和增益：在cmos.c里，如果曝光时间介于10ms到20ms之间，就进行等曝光量切换，把曝光时间手动配置成20ms，重新计算增益。如果处理不好，有可能出现过曝问题，或者亮度闪烁问题，但是不会出现噪声突变。</p>
+</li>
+</ul>
+<p><strong>行车极低照度调试问题<a name="section528161652015"></a></strong></p>
+<p>有些客户功能有停车监控功能，就有了在极低照度下需要提高画面亮度的操作，有以下调试步骤。</p>
+<ol>
+<li>在很高曝光量时将AE目标值提高，并调试DRC拉伸图像暗区的亮度；</li>
+<li>调试Gamma的暗区曲线提升暗区图像亮度；</li>
+<li>增加时域去噪强度，保证静止画面的噪声的安静程度。</li>
+</ol>
+<p><strong>室外夜景无人机航拍出现运动拖尾模糊问题<a name="section15283114218201"></a></strong></p>
+<p>【现象】</p>
+<p>室外夜景下（iso3200以上），室外夜景无人机航拍出现运动拖尾模糊问题。</p>
+<p>【分析】</p>
+<p>室外夜景下，为了保证静止的噪声能够压制住，往往会开启时域去噪，导致的一个问题就是运动物体往往容易出现运动模糊和拖尾问题。出现该问题，首先需要查看3DNR的参数是否调试合理，包括曝光时间、时域去噪强度、运动判决阈值，以及空域相关的参数。为了提升运动的清晰度，当前给出了Demosaic、BayerNR、YUV Sharpen、3DNR等多模块联合调试方案。</p>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-caution.gif" /> <strong>注意：</strong> <br />
+由于不同sensor信噪比存在差异，不同增益下噪声水平不同，上述提供的参考参数需要根据实际效果及竞品的图像风格做调试。</p>
+</blockquote>
+<p>【解决】</p>
+<p>为了更多的边缘区域能够进入到YUV Sharpen模块提升Sharpen提取边缘的能力和在保证清晰度的基础上尽量减少运动模糊和拖尾，当前推荐的调试方案如下：</p>
+<p>稍微增强BNR空域去噪强度，让噪声得到适度压制，提升Sharpen提取边缘的能力，让纹理和边缘得到增强，而平坦区噪声没有被增强。3DNR时域去噪不要太强，防止拖尾。</p>
+<ol>
+<li>Demosaic模块，尽量减少锐化强度，保证清晰度即可，以免引入过多噪声，减轻后端降噪压力。  当前nddm_strength推荐为40-80之间、nddm_mf_detail_strength推荐为30-40之间、hf_detail_strength推荐为1-2；nddm_mf_detail_strength可以适当调小，该参数调大，噪声容易呈现颗粒状。</li>
+<li>
+<p>BNR参数调试风格主要是将噪声压制在一定水平，纹理和细节清晰度也得到保留，让后面Sharpen模块不把平坦区噪声提升起来，减轻后面3DNR去噪压力。调试思路多用BNR的空域降噪效果，稍微少混合原始信号，让BNR处理后保证清晰度的情况下噪声尽量少。相关的参数配置如下：</p>
+<ol>
+<li>将fine_strength配置为80~128左右，不同iso用不同强度，值越大，回叠原始信号越少，去噪效果越强；</li>
+<li>将空域滤波去噪强度sfm0_coarse_strength 设置为80左右，四个通道使用相同值；</li>
+<li>细节保留比例sfm0_detail_prot参数配置为16~24，值越大越保护边缘，细节越好；</li>
+<li>将静止区域的空域滤波强度tss配置为40~60左右，根据实际效果调整，去除静止区域颗粒噪声；</li>
+</ol>
+</li>
+<li>
+<p>Sharpen模块的调试思路在让更多的区域选择边缘，因此需要重点调试以下参数。</p>
+<p>Sharpen参数调试主要原则：亮暗部锐化强度做区分，以增强强边缘为主，尽量少增强纹理区域以免增加平坦区噪声。</p>
+<ol>
+<li>
+<p>对亮暗区域的锐化强度进行区分是因为亮区信噪比相对较好，锐化不会增加过多的噪声，暗区信噪比差，锐化强度稍过强就引起比较多的噪声。</p>
+<p>因此在调试锐化强度时，要对暗区锐化进行适当的减弱。LumaWgt参数大致如<a href="#fig26515328227">图1</a>所示，前半部分（暗区部分）适当降低锐化程度。具体参数值要随增益和sensor做调整。</p>
+<p><strong>图 1</strong>  LumaWgt参数示例<a name="fig26515328227"></a><br />
+<img alt="" src="figures/LumaWgt%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B-0.png" title="LumaWgt参数示例-0" /></p>
+</li>
+<li>
+<p>夜晚场景主要存在的都是建筑物等强边缘，树叶、路面等细节会少很多。</p>
+<p>使用夜晚场景调试方向：主要增强边缘为主，细节等都可以在一定程度上忽略。ISO6400下TextureStr和EdgeStr的值如<a href="#fig18466175618263">图2</a>所示，TextureStr的值整体降低很多，EdgeStr的值稍微有些增加。降低TextureStr的值就是为了降低细节锐化强度，保证树叶等纹理区域清晰度的前提下，尽可能减少细节的锐化强度，降低平坦区的噪声，比如天空部分。EdgeStr稍微增强，是因为夜晚里的强边缘不如白天明显，边缘去噪强度也会更强，因此需要适当增强EdgeStr来保证效果整体的清晰度，同时还要稍微增加黑边的强度，不增强白边强度，是因为夜晚暗区比较多，对白色噪点很敏感。</p>
+<p><strong>图 2</strong>  TextureStr和EdgeStr参数示例<a name="fig18466175618263"></a><br />
+<img alt="" src="figures/TextureStr%E5%92%8CEdgeStr%E5%8F%82%E6%95%B0%E7%A4%BA%E4%BE%8B.png" title="TextureStr和EdgeStr参数示例" /></p>
+<p><img alt="" src="figures/zh-cn_image_0000002081735152.png" /></p>
+</li>
+<li>
+<p>为了减少运动拖出来的噪声，可以调试HfGainByMot曲线，横轴表示运动强度，纵轴表示高频锐化强度。越靠左边运动程度越小，使用较强的锐化。越靠右边运动程度越大，使用较弱的锐化强度。</p>
+<p><strong>图 3</strong>  HfGainByMot曲线<a name="fig1710682721114"></a><br />
+<img alt="" src="figures/HfGainByMot%E6%9B%B2%E7%BA%BF.png" title="HfGainByMot曲线" /></p>
+</li>
+</ol>
+</li>
+<li>
+<p>3DNR模块</p>
+<ol>
+<li>
+<p>在BNR的运动MAP信息调试合理的基础上，当前主要调试N0级、N1级、N2级的时域参数；其中N0级时域的动静判决信息受到BNR的运动MAP影响较大，N0级时域调试参数如<a href="#fig486011216120">图4</a>所示。</p>
+<p><strong>图 4</strong>  N0级时域参数调试示意图<a name="fig486011216120"></a><br />
+<img alt="" src="figures/N0%E7%BA%A7%E6%97%B6%E5%9F%9F%E5%8F%82%E6%95%B0%E8%B0%83%E8%AF%95%E7%A4%BA%E6%84%8F%E5%9B%BE.png" title="N0级时域参数调试示意图" /></p>
+<p>n0tfs_mot参数可以与pretfs配合使用，能根据运动强度精细控制时域强度。横轴为为运动指数（数值越大，运动的可能性越大），纵坐标为时域强度。左右静止区域可以使用比较强的增益，即比较大的时域降噪，运动区域用弱的时域降噪，可优化运动拖尾；调试示例如<a href="#fig646615715125">图5</a>所示。</p>
+<p><strong>图 5</strong>  n0tfs_mot曲线<a name="fig646615715125"></a><br />
+<img alt="" src="figures/n0tfs_mot%E6%9B%B2%E7%BA%BF.png" title="n0tfs_mot曲线" /></p>
+</li>
+<li>
+<p>由于当前BNR的空域开启较强，因此3DNR的相关空域的调试可以适当减弱一些，从而提升整体的运动噪声处理的效果；空域相关的曲线推荐使用海思自适应曲线的默认值，3DNR的空域滤波器类型和强度的调试如<a href="#fig128952307137">图6</a>所示。</p>
+<p><strong>图 6</strong>  3DNR空域滤波器类型和强度调试示意图<a name="fig128952307137"></a><br />
+<img alt="" src="figures/3DNR%E7%A9%BA%E5%9F%9F%E6%BB%A4%E6%B3%A2%E5%99%A8%E7%B1%BB%E5%9E%8B%E5%92%8C%E5%BC%BA%E5%BA%A6%E8%B0%83%E8%AF%95%E7%A4%BA%E6%84%8F%E5%9B%BE.png" title="3DNR空域滤波器类型和强度调试示意图" /></p>
+</li>
+<li>
+<p>3DNR N4级往往用于增强运动区域和静止区域边缘，当前建议选择3号和4号用于运动和静止的增强，如<a href="#fig128952307137">图6</a>所示。3号滤波器和4号滤波器增强推荐只调试第一个参数，第二个参数推荐设置为64。抑制图像中的出现的黑白边强度sht根据实际效果做调整。</p>
+</li>
+</ol>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+
+  <div class="footer-box">
+    <div class="footer-list">
+      
+      
+      <div class="footer-list-child">
+        <a href="https://www.hisilicon.com/cn" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/home" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开发者网站</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://gitcode.com/HiSpark" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开源社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developer.huawei.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">华为开发者官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hikunpeng.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">鲲鹏社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hiascend.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">昇腾社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/aboutus" target="_blank" class="footer-nav-first" rel="noopener noreferrer">关于我们</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/login" target="_blank" class="footer-nav-first" rel="noopener noreferrer">投诉举报</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      
+    </div>
+    <div class="footer-fix">
+      <div class="footer-fix-content">
+        <div>
+          <span class="footer-copyright">&nbsp;&copy;2024 华为技术有限公司</span>
+          <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer">粤A2-20044005号</a>
+          <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702004153"
+            target="_blank" rel="noopener noreferrer">粤公网安备44030702004153号</a>
+        </div>
+        <div class="footer-name-list">
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/legalNotices" target="_blank" class="footer-name" rel="noopener noreferrer">法律声明</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/cookie-policy" target="_blank" class="footer-name" rel="noopener noreferrer">关于Cookie</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/privacyPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">隐私政策</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/userPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">用户协议</a>
+          
+          
+          
+          <a href="javascript:void(0);" onclick="openDisclaimerDialog()" class="footer-name">免责声明</a>
+          
+          
+          
+        </div>
+      </div>
+
+
+      <!-- 免责声明弹窗 -->
+      <div id="disclaimerDialog" class="disclaimer-overlay" style="display: none;">
+        <div class="disclaimer-dialog">
+          <div class="disclaimer-dialog__header">
+            <span class="disclaimer-dialog__title">免责声明</span>
+            <button class="disclaimer-dialog__close" onclick="closeDisclaimerDialog()">×</button>
+          </div>
+          <div class="disclaimer-dialog__body">
+            <p class="disclaimer-dialog__text-center"><strong>海思开发者网站免责声明</strong></p>
+            <p>尊敬的用户，您好：</p>
+            <p>&nbsp; &nbsp;
+              请确保您通过本平台向海思提供或反馈的任何信息或意见不侵犯第三方知识产权和/或合法权益。如您提供或反馈的上述任何信息或意见侵犯第三方知识产权和/或合法权益，和/或给第三方造成损害的，您将承担全部法律及赔偿责任。
+            </p>
+          </div>
+          <div class="disclaimer-dialog__footer">
+            <button class="disclaimer-dialog__btn" onclick="closeDisclaimerDialog()">关闭</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function openDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'flex';
+        }
+        function closeDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'none';
+        }
+        // 点击弹窗背景关闭
+        document.getElementById('disclaimerDialog').addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeDisclaimerDialog();
+          }
+        });
+      </script>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../static/js/custom.js"></script>
+      
+        <script src="../../../../static/js/version-selector.js"></script>
+      
+        <script src="../../../../static/js/code-highlight.js"></script>
+      
+        <script src="../../../../static/js/wavedrom-skin.js"></script>
+      
+        <script src="../../../../static/js/wavedrom.min.js"></script>
+      
+        <script src="../../../../static/js/wavedrom-init.js"></script>
+      
+        <script src="../../../../static/js/no-flash.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1528 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hi3516CV610 超高清智慧视觉 SoC 文档中心">
+      
+      
+        <meta name="author" content="HiSpark">
+      
+      
+        <link rel="canonical" href="https://hivsdev.github.io/Hi3516CV610_doc/00%E6%A6%82%E8%A7%88/Hi3516CV610%20%E8%B6%85%E9%AB%98%E6%B8%85%E6%99%BA%E6%85%A7%E8%A7%86%E8%A7%89%20SoC%20%E4%BA%A7%E5%93%81%E7%AE%80%E4%BB%8B/Hi3516CV610%20%E8%B6%85%E9%AB%98%E6%B8%85%E6%99%BA%E6%85%A7%E8%A7%86%E8%A7%89%20SoC%20%E4%BA%A7%E5%93%81%E7%AE%80%E4%BB%8B.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../static/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>总体介绍 - Hi3516CV610 开发者中心</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+    
+    
+      <link rel="stylesheet" href="../../static/css/extra.css">
+    
+      <link rel="stylesheet" href="../../static/css/version-selector.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+      <meta name="gitcode-issues-url" content="https://gitcode.com/HiSpark/fbb_ws63/issues">
+      
+      <link rel="dns-prefetch" href="https://docs.hisilicon.com">
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://docs.hisilicon.com" crossorigin>
+      <link rel="preload" href="../../assets/stylesheets/main.484c7ddc.min.css" as="style">
+      <link rel="preload" href="../../assets/stylesheets/palette.ab4e12ef.min.css" as="style">
+      <link rel="preload" href="../../static/css/extra.css" as="style">
+      <link rel="preload" href="../../assets/javascripts/bundle.79ae519e.min.js" as="script">
+      <link rel="preload" href="../../static/js/custom.js" as="script">
+
+      
+      
+        
+        
+      
+      <style>:root{--md-text-font:"Helvetica Neue, PingFang SC, Microsoft YaHei";--md-code-font:"Consolas, Roboto Mono"}</style>
+      <script>
+        // 防止宽窄屏刷新闪烁 — 在 body 解析前就读取 localStorage 标记 <html>
+        // 配合 CSS: html.prefer-narrow .md-grid 在首帧即应用 76%
+        if (localStorage.getItem('wideScreen') === 'false') {
+          document.documentElement.classList.add('prefer-narrow');
+        }
+      </script>
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#总体介绍" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="https://developers.hisilicon.com" title="Hi3516CV610 开发者中心" class="md-header__button md-logo" aria-label="Hi3516CV610 开发者中心" data-md-component="logo" target="_blank" rel="noopener noreferrer">
+      <img 
+  src="../../static/images/light-icon.png" 
+  class="md-logo__img md-logo__img--light"
+  alt="Hi3516CV610 开发者中心" 
+/>
+<img 
+  src="../../static/images/dark-icon.png" 
+  class="md-logo__img md-logo__img--dark"
+  alt="Hi3516CV610 开发者中心" 
+/>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+      </div>
+    </div>
+    
+      
+      
+        <label class="md-header__button md-icon md-header__button--search" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+      
+    
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="切换到暗色主题"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色主题" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="切换到亮色主题"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色主题" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <div class="md-header__source">
+        <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="前往仓库" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+      </div>
+    
+  </nav>
+  
+  
+    
+    
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        <!-- 
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+         -->
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+</header>
+
+
+<script>
+  var USER_DEFINED_OPTIONS = {
+    REPO_PATH: "Hi3516CV610_doc",
+    ROOT_URL: "https://docs.hisilicon.com/projects"
+  };
+  var DOCUMENTATION_OPTIONS = {
+    VERSION: "master",
+    // 构建时声明主题的语言
+    LANGUAGE: "zh"
+  };
+</script>
+<script src="https://docs.hisilicon.com/projects/version/hispark_version.js"></script>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="sidebar-selectors">
+                  <div class="repo-select custom-select">
+                    <span class="select-label">芯片</span>
+                    <div class="repo-selector" title="">
+                      <span class="repo-readOnly"></span>
+                      <select id="repo-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="repo-options" style="display:none"></ul>
+                  </div>
+                  <div class="version-select custom-select">
+                    <span class="select-label">版本</span>
+                    <div class="version-selector" title="">
+                      <span class="version-readOnly"></span>
+                      <select id="version-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="version-options" style="display:none"></ul>
+                  </div>
+                  
+                    
+                    
+                      <div class="sidebar-search">
+                        <label class="sidebar-search__button" for="__search">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+                          <span>全文检索</span>
+                        </label>
+                      </div>
+                    
+                  
+                </div>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  
+    <div class="md-nav__source">
+      <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="前往仓库" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整体架构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../03API%E5%8F%82%E8%80%83/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考案例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05%E7%A1%AC%E4%BB%B6%E6%8C%87%E5%8D%97/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具中心
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07FAQ/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../08%E5%85%B6%E4%BB%96/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#总体介绍_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        总体介绍
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#关键特性" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        关键特性
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#主要特点" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        主要特点
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="主要特点">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#处理器内核" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        处理器内核
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#智能引擎" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        智能引擎
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AI-ISP处理" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI ISP处理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#视频处理" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        视频处理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#视频编码" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        视频编码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#视频输入接口" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        视频输入接口
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#音频接口与处理" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        音频接口与处理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#安全隔离与引擎" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安全隔离与引擎
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#外围接口" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        外围接口
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#外部存储器接口" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        外部存储器接口
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SDK" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SDK
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#芯片物理规格" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        芯片物理规格
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#功能框图" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        功能框图
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#型号配置差异" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        型号配置差异
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="总体介绍">总体介绍<a name="ZH-CN_TOPIC_0000002526722092"></a></h1>
+<h2 id="总体介绍_1">总体介绍<a name="ZH-CN_TOPIC_0000002526722092"></a></h2>
+<p>Hi3516CV610是一颗应用在安防市场的IPC SoC。在开放操作系统、新一代视频编解码标准、网络安全和隐私保护、人工智能方面引领行业发展，主要面向室内外场景下的枪机、球机、半球机、海螺机、枪球一体机、双目长短焦机等产品形态，打造极具竞争力的方案与产品。</p>
+<blockquote>
+<p>说明：</p>
+<p>当前社区只支持Hi3516CV610 20S。</p>
+</blockquote>
+<h2 id="关键特性">关键特性<a name="ZH-CN_TOPIC_0000002557721973"></a></h2>
+<ul>
+<li>
+<p>4K@25，6M@30分辨率</p>
+</li>
+<li>
+<p>双目实时接入，支持枪球一体机等双目机型</p>
+</li>
+<li>
+<p>1T算力NPU，Transformer特性加速，大模型端侧部署</p>
+</li>
+<li>
+<p>智能编码2.0，像素升级，存储不加量，4MP@30产品一天存储5GB</p>
+</li>
+<li>
+<p>32倍曝光比宽动态，商铺/大堂逆光更清</p>
+</li>
+<li>
+<p>低照场景，清晰度、运动拖尾、人脸、车牌效果升级</p>
+</li>
+<li>
+<p>15米拾音，3~5米对讲，家庭场景哭声检测</p>
+</li>
+<li>
+<p>AOV低功耗方案</p>
+</li>
+<li>
+<p>OpenHarmony系统与生态：媒体子系统增强组件，图形子系统硬件加速，抗干扰低延时VTP网络传输协议，支持分布式能力，芯片解决方案提前预认证</p>
+</li>
+</ul>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-note.gif" /> <strong>说明：</strong><br />
+根据功能不同，将Hi3516CV610分为10B/00S/20S/00G/20G不同型号，正文描述以Hi3516CV610-20S为例，差异部分请见“<a href="#ZH-CN_TOPIC_0000002526722100">型号配置差异</a>”。</p>
+</blockquote>
+<h2 id="主要特点">主要特点<a name="ZH-CN_TOPIC_0000002557642005"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002526562158">处理器内核</a></strong></p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002526722094">智能引擎</a></strong></p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002557721975">AI ISP处理</a></strong></p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002557642007">视频处理</a></strong></p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002526562160">视频编码</a></strong></p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002526722096">视频输入接口</a></strong></p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002557721977">音频接口与处理</a></strong></p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002557642009">安全隔离与引擎</a></strong></p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002526562162">外围接口</a></strong></p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002526722098">外部存储器接口</a></strong></p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002557721979">SDK</a></strong></p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002557642011">芯片物理规格</a></strong></p>
+</li>
+</ul>
+<h3 id="处理器内核">处理器内核<a name="ZH-CN_TOPIC_0000002526562158"></a></h3>
+<ul>
+<li>
+<p>支持ARM Cortex-A7 MP2</p>
+</li>
+<li>
+<p>时钟速率950MHz</p>
+</li>
+<li>
+<p>支持32KB I-Cache、32KB D-Cache、128KB L2 cache</p>
+</li>
+<li>
+<p>支持Neon和FPU</p>
+</li>
+</ul>
+<h3 id="智能引擎">智能引擎<a name="ZH-CN_TOPIC_0000002526722094"></a></h3>
+<ul>
+<li>
+<p>神经网络处理器NPU</p>
+</li>
+<li>
+<p>支持1TOPS运算性能</p>
+</li>
+<li>
+<p>支持业界上百种主流算法，支撑客户快速商用</p>
+</li>
+<li>
+<p>支持Transformer特性加速，内置专属多模态大模型</p>
+</li>
+<li>
+<p>工具支撑模型高效生产和进化</p>
+</li>
+<li>
+<p>内置人脸人形车形检测/包裹检测/宠物检测等算法</p>
+</li>
+<li>
+<p>IVE2.5升级算子，支持运动侦测，周界防范，跟踪，透视变换，视频诊断及多种智能分析应用</p>
+</li>
+</ul>
+<h3 id="AI-ISP处理">AI ISP处理<a name="ZH-CN_TOPIC_0000002557721975"></a></h3>
+<ul>
+<li>
+<p>支持ISP基础功能</p>
+</li>
+<li>
+<p>支持动态坏点矫正</p>
+</li>
+<li>
+<p>支持3A(AE/AWB/AF)功能，参数用户可调节</p>
+</li>
+<li>
+<p>支持镜头阴影校正</p>
+</li>
+<li>
+<p>支持高动态范围</p>
+</li>
+<li>
+<p>支持两帧WDR融合</p>
+</li>
+<li>
+<p>支持Advanced Local Tone Mapping</p>
+</li>
+<li>
+<p>支持强光抑制和背光补偿</p>
+</li>
+<li>
+<p>清晰度与降噪</p>
+</li>
+<li>
+<p>支持去固定模式噪声（FPN）</p>
+</li>
+<li>
+<p>运动区域效果增强算法</p>
+</li>
+<li>
+<p>支持时域和空域降噪</p>
+</li>
+<li>
+<p>支持多级运动检测</p>
+</li>
+<li>
+<p>支持分区域增强</p>
+</li>
+<li>
+<p>支持去色噪2.0</p>
+</li>
+<li>
+<p>颜色管理与对比度增强</p>
+</li>
+<li>
+<p>支持去紫边2.0</p>
+</li>
+<li>
+<p>支持关键色增强</p>
+</li>
+<li>
+<p>支持local动态对比度增强</p>
+</li>
+<li>
+<p>支持去雾功能</p>
+</li>
+<li>
+<p>PQ Tool 1.2</p>
+</li>
+</ul>
+<h3 id="视频处理">视频处理<a name="ZH-CN_TOPIC_0000002557642007"></a></h3>
+<ul>
+<li>
+<p>支持图像1/15.5～16x缩放功能</p>
+</li>
+<li>
+<p>支持镜头畸变校正</p>
+</li>
+<li>
+<p>支持图像Mirror、Flip、90度/270度旋转</p>
+</li>
+</ul>
+<h3 id="视频编码">视频编码<a name="ZH-CN_TOPIC_0000002526562160"></a></h3>
+<ul>
+<li>
+<p>支持H.265 Main Profile Level 5</p>
+</li>
+<li>
+<p>支持H.264 BP/MP/HP Level 5.1</p>
+</li>
+<li>
+<p>编码最大分辨率为3840×2160</p>
+</li>
+<li>
+<p>支持I/P帧</p>
+</li>
+<li>
+<p>支持智能编码2.0</p>
+</li>
+<li>
+<p>支持隐私编码</p>
+</li>
+<li>
+<p>多码流编码典型性能如下：</p>
+</li>
+<li>
+<p>3200×1800@30fps+1280×720@30fps</p>
+</li>
+<li>
+<p>3840×2160@20fps+1280×720@20fps</p>
+</li>
+<li>
+<p>支持CBR/VBR/ABR/AVBR/CVBR/QVBR/FIXQP/QPMAP等多种码率控制模式</p>
+</li>
+<li>
+<p>输出码率最大值80Mbps</p>
+</li>
+<li>
+<p>支持8个区域的编码前OSD叠加</p>
+</li>
+<li>
+<p>支持8个感兴趣区域（ROI）编码</p>
+</li>
+<li>
+<p>支持JPEG Baseline编码</p>
+</li>
+<li>
+<p>JPEG编码最大分辨率4096x4096</p>
+</li>
+<li>
+<p>JPEG最大性能编码：</p>
+</li>
+<li>
+<p>3200×1800@30fps(YUV420)</p>
+</li>
+<li>
+<p>3840×2160@20fps(YUV420)</p>
+</li>
+</ul>
+<h3 id="视频输入接口">视频输入接口<a name="ZH-CN_TOPIC_0000002526722096"></a></h3>
+<ul>
+<li>
+<p>支持 MIPI/LVDS/Sub-LVDS/HiSPI多种接口</p>
+</li>
+<li>
+<p>支持2x2-Lane或4-Lane组合，最高支持2路sensor输入</p>
+</li>
+<li>
+<p>支持8/10/12 Bit RGB Bayer</p>
+</li>
+<li>
+<p>支持8/10/12 Bit DVP</p>
+</li>
+<li>
+<p>支持BT.601、BT.656、BT.1120视频输入接口</p>
+</li>
+</ul>
+<h3 id="音频接口与处理">音频接口与处理<a name="ZH-CN_TOPIC_0000002557721977"></a></h3>
+<ul>
+<li>
+<p>内置Audio codec，支持16bit双路差分语音输入和单路单端语音输出</p>
+</li>
+<li>
+<p>支持1路I2S接口，兼容多声道时分复用传输模式（TDM）</p>
+</li>
+<li>
+<p>支持多协议语音编解码</p>
+</li>
+<li>
+<p>支持3A（AEC/ANR/ALC）处理2.0</p>
+</li>
+<li>
+<p>支持降风噪算法</p>
+</li>
+<li>
+<p>支持哭声检测2.0，提升唤醒率</p>
+</li>
+</ul>
+<h3 id="安全隔离与引擎">安全隔离与引擎<a name="ZH-CN_TOPIC_0000002557642009"></a></h3>
+<ul>
+<li>
+<p>支持安全启动</p>
+</li>
+<li>
+<p>支持基于TrustZone的REE/TEE硬件隔离方案</p>
+</li>
+<li>
+<p>硬件实现AES/RSA/ECC/SHA等多种加解密算法</p>
+</li>
+<li>
+<p>硬件实现SM2/3/4国密算法</p>
+</li>
+</ul>
+<h3 id="外围接口">外围接口<a name="ZH-CN_TOPIC_0000002526562162"></a></h3>
+<ul>
+<li>
+<p>集成FEPHY；支持TSO网络加速</p>
+</li>
+<li>
+<p>2个SDIO2.0接口</p>
+</li>
+<li>
+<p>支持SDXC卡</p>
+</li>
+<li>
+<p>支持对接wifi模组</p>
+</li>
+<li>
+<p>1个USB2.0 Host/Device接口</p>
+</li>
+<li>
+<p>支持上电复位（POR）和外部输入复位</p>
+</li>
+<li>
+<p>集成独立供电RTC</p>
+</li>
+<li>
+<p>集成多通道LSADC</p>
+</li>
+<li>
+<p>多个UART、I2C、SPI、PWM、GPIO接口</p>
+</li>
+</ul>
+<h3 id="外部存储器接口">外部存储器接口<a name="ZH-CN_TOPIC_0000002526722098"></a></h3>
+<ul>
+<li>
+<p>SDRAM接口：内置1Gb DDR3/3L，最高速率2133Mbps</p>
+</li>
+<li>
+<p>SPI Nor Flash接口</p>
+</li>
+<li>
+<p>支持1、2、4线模式</p>
+</li>
+<li>
+<p>最大容量支持32MB</p>
+</li>
+<li>
+<p>SPI Nand Flash接口</p>
+</li>
+<li>
+<p>支持1、2、4线模式</p>
+</li>
+<li>
+<p>最大容量支持512MB</p>
+</li>
+<li>
+<p>eMMC4.5接口，4bit数据位宽</p>
+</li>
+<li>
+<p>可选择从eMMC、SPI Nor/SPI Nand Flash启动</p>
+</li>
+</ul>
+<h3 id="SDK">SDK<a name="ZH-CN_TOPIC_0000002557721979"></a></h3>
+<ul>
+<li>
+<p>支持Linux 5.10 SDK包</p>
+</li>
+<li>
+<p>支持OpenHarmony 4.1</p>
+</li>
+</ul>
+<h3 id="芯片物理规格">芯片物理规格<a name="ZH-CN_TOPIC_0000002557642011"></a></h3>
+<ul>
+<li>功耗</li>
+</ul>
+<p>典型功耗：1043mW</p>
+<ul>
+<li>
+<p>工作电压</p>
+</li>
+<li>
+<p>内核典型电压为0.9V</p>
+</li>
+<li>
+<p>IO电压为1.8/3.3V</p>
+</li>
+<li>
+<p>DDR3/3L接口电压分别为1.5V/1.35V</p>
+</li>
+<li>
+<p>工作温度：-20°C~70°C</p>
+</li>
+<li>
+<p>封装形式</p>
+</li>
+<li>
+<p>RoHS，QFN 9mm x 9mm封装</p>
+</li>
+<li>
+<p>管脚间距：0.35mm</p>
+</li>
+</ul>
+<h2 id="功能框图">功能框图<a name="ZH-CN_TOPIC_0000002526562164"></a></h2>
+<p><img alt="" src="figures/%E7%BB%98%E5%9B%BE2.png" /></p>
+<h2 id="型号配置差异">型号配置差异<a name="ZH-CN_TOPIC_0000002526722100"></a></h2>
+<p><a name="table106mcpsimp"></a></p>
+<table><thead align="left"><tr id="row115mcpsimp"><th class="cellrowborder" rowspan="2" valign="top" id="mcps1.1.7.1.1"><p id="p117mcpsimp"><a name="p117mcpsimp"></a><a name="p117mcpsimp"></a>分类</p>
+</th>
+<th class="cellrowborder" colspan="5" valign="top" id="mcps1.1.7.1.2"><p id="p119mcpsimp"><a name="p119mcpsimp"></a><a name="p119mcpsimp"></a>Hi3516CV610</p>
+</th>
+</tr>
+<tr id="row120mcpsimp"><th class="cellrowborder" valign="top" id="mcps1.1.7.2.1"><p id="p122mcpsimp"><a name="p122mcpsimp"></a><a name="p122mcpsimp"></a>10B</p>
+</th>
+<th class="cellrowborder" valign="top" id="mcps1.1.7.2.2"><p id="p124mcpsimp"><a name="p124mcpsimp"></a><a name="p124mcpsimp"></a>20S</p>
+</th>
+<th class="cellrowborder" valign="top" id="mcps1.1.7.2.3"><p id="p126mcpsimp"><a name="p126mcpsimp"></a><a name="p126mcpsimp"></a>20G</p>
+</th>
+<th class="cellrowborder" valign="top" id="mcps1.1.7.2.4"><p id="p128mcpsimp"><a name="p128mcpsimp"></a><a name="p128mcpsimp"></a>00S</p>
+</th>
+<th class="cellrowborder" valign="top" id="mcps1.1.7.2.5"><p id="p130mcpsimp"><a name="p130mcpsimp"></a><a name="p130mcpsimp"></a>00G</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row132mcpsimp"><td class="cellrowborder" valign="top" width="15.160000000000002%" headers="mcps1.1.7.1.1 mcps1.1.7.2.1 "><p id="p134mcpsimp"><a name="p134mcpsimp"></a><a name="p134mcpsimp"></a>最大性能</p>
+</td>
+<td class="cellrowborder" valign="top" width="22.84%" headers="mcps1.1.7.1.2 mcps1.1.7.2.2 "><p id="p136mcpsimp"><a name="p136mcpsimp"></a><a name="p136mcpsimp"></a>5M@30</p>
+</td>
+<td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.7.1.2 mcps1.1.7.2.3 "><p id="p138mcpsimp"><a name="p138mcpsimp"></a><a name="p138mcpsimp"></a>H.265/H.264: 4K@25</p>
+<p id="p139mcpsimp"><a name="p139mcpsimp"></a><a name="p139mcpsimp"></a>SVAC3: 6M@30</p>
+</td>
+<td class="cellrowborder" valign="top" width="15%" headers="mcps1.1.7.1.2 mcps1.1.7.2.4 "><p id="p141mcpsimp"><a name="p141mcpsimp"></a><a name="p141mcpsimp"></a>4K@25/6M@30</p>
+</td>
+<td class="cellrowborder" valign="top" width="16%" headers="mcps1.1.7.1.2 mcps1.1.7.2.5 "><p id="p143mcpsimp"><a name="p143mcpsimp"></a><a name="p143mcpsimp"></a>H.265/H.264: 4K@25</p>
+<p id="p144mcpsimp"><a name="p144mcpsimp"></a><a name="p144mcpsimp"></a>SVAC3: 6M@30</p>
+</td>
+<td class="cellrowborder" valign="top" width="13%" headers="mcps1.1.7.1.2 "><p id="p146mcpsimp"><a name="p146mcpsimp"></a><a name="p146mcpsimp"></a>4K@25/6M@30</p>
+</td>
+</tr>
+<tr id="row147mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.1.7.1.1 mcps1.1.7.2.1 "><p id="p149mcpsimp"><a name="p149mcpsimp"></a><a name="p149mcpsimp"></a>最大分辨率</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.2 "><p id="p151mcpsimp"><a name="p151mcpsimp"></a><a name="p151mcpsimp"></a>2880×1620</p>
+</td>
+<td class="cellrowborder" colspan="4" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.3 mcps1.1.7.2.4 mcps1.1.7.2.5 "><p id="p153mcpsimp"><a name="p153mcpsimp"></a><a name="p153mcpsimp"></a>3840×2160</p>
+</td>
+</tr>
+<tr id="row154mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.1.7.1.1 mcps1.1.7.2.1 "><p id="p156mcpsimp"><a name="p156mcpsimp"></a><a name="p156mcpsimp"></a>算力</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.2 "><p id="p158mcpsimp"><a name="p158mcpsimp"></a><a name="p158mcpsimp"></a>0.5TOPS</p>
+</td>
+<td class="cellrowborder" colspan="4" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.3 mcps1.1.7.2.4 mcps1.1.7.2.5 "><p id="p160mcpsimp"><a name="p160mcpsimp"></a><a name="p160mcpsimp"></a>1TOPS</p>
+</td>
+</tr>
+<tr id="row161mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.1.7.1.1 mcps1.1.7.2.1 "><p id="p163mcpsimp"><a name="p163mcpsimp"></a><a name="p163mcpsimp"></a>编码协议</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.2 "><p id="p165mcpsimp"><a name="p165mcpsimp"></a><a name="p165mcpsimp"></a>SVAC3.0/H.265/H.264 (SVAC不支持SmartCRR)</p>
+</td>
+<td class="cellrowborder" colspan="4" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.3 mcps1.1.7.2.4 mcps1.1.7.2.5 "><p id="p168mcpsimp"><a name="p168mcpsimp"></a><a name="p168mcpsimp"></a>SVAC3.0/H.265/H.264</p>
+</td>
+</tr>
+<tr id="row169mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.1.7.1.1 mcps1.1.7.2.1 "><p id="p171mcpsimp"><a name="p171mcpsimp"></a><a name="p171mcpsimp"></a>最大编码能力</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.2 "><p id="p173mcpsimp"><a name="p173mcpsimp"></a><a name="p173mcpsimp"></a>5M+D1</p>
+</td>
+<td class="cellrowborder" colspan="4" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.3 mcps1.1.7.2.4 mcps1.1.7.2.5 "><p id="p175mcpsimp"><a name="p175mcpsimp"></a><a name="p175mcpsimp"></a>6M+720P</p>
+</td>
+</tr>
+<tr id="row176mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.1.7.1.1 mcps1.1.7.2.1 "><p id="p178mcpsimp"><a name="p178mcpsimp"></a><a name="p178mcpsimp"></a>WDR</p>
+</td>
+<td class="cellrowborder" colspan="5" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.2 mcps1.1.7.2.3 mcps1.1.7.2.4 mcps1.1.7.2.5 "><p id="p180mcpsimp"><a name="p180mcpsimp"></a><a name="p180mcpsimp"></a>支持</p>
+</td>
+</tr>
+<tr id="row181mcpsimp"><td class="cellrowborder" rowspan="2" valign="top" headers="mcps1.1.7.1.1 mcps1.1.7.2.1 "><p id="p183mcpsimp"><a name="p183mcpsimp"></a><a name="p183mcpsimp"></a>DDR</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.2 "><p id="p185mcpsimp"><a name="p185mcpsimp"></a><a name="p185mcpsimp"></a>内置 DDR2 1333Mbps</p>
+</td>
+<td class="cellrowborder" colspan="2" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.3 mcps1.1.7.2.4 "><p id="p188mcpsimp"><a name="p188mcpsimp"></a><a name="p188mcpsimp"></a>内置 DDR3/3L 2133Mbps</p>
+</td>
+<td class="cellrowborder" colspan="2" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.5 "><p id="p190mcpsimp"><a name="p190mcpsimp"></a><a name="p190mcpsimp"></a>外置 DDR3/3L 2133Mbps</p>
+</td>
+</tr>
+<tr id="row191mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.1.7.1.1 mcps1.1.7.2.1 "><p id="p193mcpsimp"><a name="p193mcpsimp"></a><a name="p193mcpsimp"></a>512Mb</p>
+</td>
+<td class="cellrowborder" colspan="2" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.2 mcps1.1.7.2.3 "><p id="p195mcpsimp"><a name="p195mcpsimp"></a><a name="p195mcpsimp"></a>1Gb</p>
+</td>
+<td class="cellrowborder" colspan="2" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.4 mcps1.1.7.2.5 "><p id="p197mcpsimp"><a name="p197mcpsimp"></a><a name="p197mcpsimp"></a>最大4Gb</p>
+</td>
+</tr>
+<tr id="row198mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.1.7.1.1 mcps1.1.7.2.1 "><p id="p200mcpsimp"><a name="p200mcpsimp"></a><a name="p200mcpsimp"></a>eMMC</p>
+</td>
+<td class="cellrowborder" colspan="3" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.2 mcps1.1.7.2.3 mcps1.1.7.2.4 "><p id="p202mcpsimp"><a name="p202mcpsimp"></a><a name="p202mcpsimp"></a>eMMC4.5 4线</p>
+</td>
+<td class="cellrowborder" colspan="2" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.5 "><p id="p204mcpsimp"><a name="p204mcpsimp"></a><a name="p204mcpsimp"></a>eMMC5.0 8线</p>
+</td>
+</tr>
+<tr id="row205mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.1.7.1.1 mcps1.1.7.2.1 "><p id="p207mcpsimp"><a name="p207mcpsimp"></a><a name="p207mcpsimp"></a>封装</p>
+</td>
+<td class="cellrowborder" colspan="3" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.2 mcps1.1.7.2.3 mcps1.1.7.2.4 "><p id="p209mcpsimp"><a name="p209mcpsimp"></a><a name="p209mcpsimp"></a>QFN9×9 0.35mm</p>
+</td>
+<td class="cellrowborder" colspan="2" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.5 "><p id="p211mcpsimp"><a name="p211mcpsimp"></a><a name="p211mcpsimp"></a>TFBGA12×13.3 0.65mm</p>
+</td>
+</tr>
+<tr id="row212mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.1.7.1.1 mcps1.1.7.2.1 "><p id="p214mcpsimp"><a name="p214mcpsimp"></a><a name="p214mcpsimp"></a>安全规格</p>
+</td>
+<td class="cellrowborder" colspan="2" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.2 mcps1.1.7.2.3 "><p id="p216mcpsimp"><a name="p216mcpsimp"></a><a name="p216mcpsimp"></a>-</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.4 "><p id="p218mcpsimp"><a name="p218mcpsimp"></a><a name="p218mcpsimp"></a>支持GB35114</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.1.7.1.2 mcps1.1.7.2.5 "><p id="p220mcpsimp"><a name="p220mcpsimp"></a><a name="p220mcpsimp"></a>-</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.1.7.1.2 "><p id="p222mcpsimp"><a name="p222mcpsimp"></a><a name="p222mcpsimp"></a>支持GB35114</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+
+  <div class="footer-box">
+    <div class="footer-list">
+      
+      
+      <div class="footer-list-child">
+        <a href="https://www.hisilicon.com/cn" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/home" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开发者网站</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://gitcode.com/HiSpark" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开源社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developer.huawei.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">华为开发者官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hikunpeng.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">鲲鹏社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hiascend.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">昇腾社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/aboutus" target="_blank" class="footer-nav-first" rel="noopener noreferrer">关于我们</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/login" target="_blank" class="footer-nav-first" rel="noopener noreferrer">投诉举报</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      
+    </div>
+    <div class="footer-fix">
+      <div class="footer-fix-content">
+        <div>
+          <span class="footer-copyright">&nbsp;&copy;2024 华为技术有限公司</span>
+          <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer">粤A2-20044005号</a>
+          <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702004153"
+            target="_blank" rel="noopener noreferrer">粤公网安备44030702004153号</a>
+        </div>
+        <div class="footer-name-list">
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/legalNotices" target="_blank" class="footer-name" rel="noopener noreferrer">法律声明</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/cookie-policy" target="_blank" class="footer-name" rel="noopener noreferrer">关于Cookie</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/privacyPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">隐私政策</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/userPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">用户协议</a>
+          
+          
+          
+          <a href="javascript:void(0);" onclick="openDisclaimerDialog()" class="footer-name">免责声明</a>
+          
+          
+          
+        </div>
+      </div>
+
+
+      <!-- 免责声明弹窗 -->
+      <div id="disclaimerDialog" class="disclaimer-overlay" style="display: none;">
+        <div class="disclaimer-dialog">
+          <div class="disclaimer-dialog__header">
+            <span class="disclaimer-dialog__title">免责声明</span>
+            <button class="disclaimer-dialog__close" onclick="closeDisclaimerDialog()">×</button>
+          </div>
+          <div class="disclaimer-dialog__body">
+            <p class="disclaimer-dialog__text-center"><strong>海思开发者网站免责声明</strong></p>
+            <p>尊敬的用户，您好：</p>
+            <p>&nbsp; &nbsp;
+              请确保您通过本平台向海思提供或反馈的任何信息或意见不侵犯第三方知识产权和/或合法权益。如您提供或反馈的上述任何信息或意见侵犯第三方知识产权和/或合法权益，和/或给第三方造成损害的，您将承担全部法律及赔偿责任。
+            </p>
+          </div>
+          <div class="disclaimer-dialog__footer">
+            <button class="disclaimer-dialog__btn" onclick="closeDisclaimerDialog()">关闭</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function openDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'flex';
+        }
+        function closeDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'none';
+        }
+        // 点击弹窗背景关闭
+        document.getElementById('disclaimerDialog').addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeDisclaimerDialog();
+          }
+        });
+      </script>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../static/js/custom.js"></script>
+      
+        <script src="../../static/js/version-selector.js"></script>
+      
+        <script src="../../static/js/code-highlight.js"></script>
+      
+        <script src="../../static/js/wavedrom-skin.js"></script>
+      
+        <script src="../../static/js/wavedrom.min.js"></script>
+      
+        <script src="../../static/js/wavedrom-init.js"></script>
+      
+        <script src="../../static/js/no-flash.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2156 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hi3516CV610 超高清智慧视觉 SoC 文档中心">
+      
+      
+        <meta name="author" content="HiSpark">
+      
+      
+        <link rel="canonical" href="https://hivsdev.github.io/Hi3516CV610_doc/03API%E5%8F%82%E8%80%83/BSP/Hi35xxVxxx%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97/Hi35xxVxxx%20%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E7%94%A8%E6%88%B7%E6%8C%87%E5%8D%97.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../static/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>前言 - Hi3516CV610 开发者中心</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+    
+    
+      <link rel="stylesheet" href="../../../static/css/extra.css">
+    
+      <link rel="stylesheet" href="../../../static/css/version-selector.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+      <meta name="gitcode-issues-url" content="https://gitcode.com/HiSpark/fbb_ws63/issues">
+      
+      <link rel="dns-prefetch" href="https://docs.hisilicon.com">
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://docs.hisilicon.com" crossorigin>
+      <link rel="preload" href="../../../assets/stylesheets/main.484c7ddc.min.css" as="style">
+      <link rel="preload" href="../../../assets/stylesheets/palette.ab4e12ef.min.css" as="style">
+      <link rel="preload" href="../../../static/css/extra.css" as="style">
+      <link rel="preload" href="../../../assets/javascripts/bundle.79ae519e.min.js" as="script">
+      <link rel="preload" href="../../../static/js/custom.js" as="script">
+
+      
+      
+        
+        
+      
+      <style>:root{--md-text-font:"Helvetica Neue, PingFang SC, Microsoft YaHei";--md-code-font:"Consolas, Roboto Mono"}</style>
+      <script>
+        // 防止宽窄屏刷新闪烁 — 在 body 解析前就读取 localStorage 标记 <html>
+        // 配合 CSS: html.prefer-narrow .md-grid 在首帧即应用 76%
+        if (localStorage.getItem('wideScreen') === 'false') {
+          document.documentElement.classList.add('prefer-narrow');
+        }
+      </script>
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#前言" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="https://developers.hisilicon.com" title="Hi3516CV610 开发者中心" class="md-header__button md-logo" aria-label="Hi3516CV610 开发者中心" data-md-component="logo" target="_blank" rel="noopener noreferrer">
+      <img 
+  src="../../../static/images/light-icon.png" 
+  class="md-logo__img md-logo__img--light"
+  alt="Hi3516CV610 开发者中心" 
+/>
+<img 
+  src="../../../static/images/dark-icon.png" 
+  class="md-logo__img md-logo__img--dark"
+  alt="Hi3516CV610 开发者中心" 
+/>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+      </div>
+    </div>
+    
+      
+      
+        <label class="md-header__button md-icon md-header__button--search" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+      
+    
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="切换到暗色主题"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色主题" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="切换到亮色主题"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色主题" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <div class="md-header__source">
+        <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="前往仓库" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+      </div>
+    
+  </nav>
+  
+  
+    
+    
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        <!-- 
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+         -->
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+</header>
+
+
+<script>
+  var USER_DEFINED_OPTIONS = {
+    REPO_PATH: "Hi3516CV610_doc",
+    ROOT_URL: "https://docs.hisilicon.com/projects"
+  };
+  var DOCUMENTATION_OPTIONS = {
+    VERSION: "master",
+    // 构建时声明主题的语言
+    LANGUAGE: "zh"
+  };
+</script>
+<script src="https://docs.hisilicon.com/projects/version/hispark_version.js"></script>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="sidebar-selectors">
+                  <div class="repo-select custom-select">
+                    <span class="select-label">芯片</span>
+                    <div class="repo-selector" title="">
+                      <span class="repo-readOnly"></span>
+                      <select id="repo-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="repo-options" style="display:none"></ul>
+                  </div>
+                  <div class="version-select custom-select">
+                    <span class="select-label">版本</span>
+                    <div class="version-selector" title="">
+                      <span class="version-readOnly"></span>
+                      <select id="version-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="version-options" style="display:none"></ul>
+                  </div>
+                  
+                    
+                    
+                      <div class="sidebar-search">
+                        <label class="sidebar-search__button" for="__search">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+                          <span>全文检索</span>
+                        </label>
+                      </div>
+                    
+                  
+                </div>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  
+    <div class="md-nav__source">
+      <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="前往仓库" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../00%E6%A6%82%E8%A7%88/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整体架构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考案例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../05%E7%A1%AC%E4%BB%B6%E6%8C%87%E5%8D%97/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具中心
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../07FAQ/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../08%E5%85%B6%E4%BB%96/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#前言_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#开发环境" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        开发环境
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="开发环境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#嵌入式开发环境" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        嵌入式开发环境
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#开发环境_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        开发环境
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#搭建开发环境：docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        搭建开发环境：docker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#搭建开发环境：非docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        搭建开发环境：非docker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#安装交叉编译工具" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        安装交叉编译工具
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#U-Boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        U-Boot
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Linux内核" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux内核
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Linux内核">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#内核源代码" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        内核源代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#配置并编译内核" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        配置并编译内核
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#根文件系统" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        根文件系统
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="根文件系统">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#根文件系统简介" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        根文件系统简介
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#利用busybox制作根文件系统" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        利用busybox制作根文件系统
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#文件系统简介" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        文件系统简介
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#应用程序开发简介" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        应用程序开发简介
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="应用程序开发简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#编写代码" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        编写代码
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#运行应用程序" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        运行应用程序
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#附录：非docker版本软件清单" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附录：非docker版本软件清单
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#缩略语" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        缩略语
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="前言">前言<a name="ZH-CN_TOPIC_0000001775681044"></a></h1>
+<h2 id="前言_1">前言<a name="ZH-CN_TOPIC_0000001775681044"></a></h2>
+<p><strong>概述<a name="section512mcpsimp"></a></strong></p>
+<p>本文档介绍Linux开发环境。Linux开发环境的搭建、U-Boot、Linux内核、根文件系统以及内核和根文件系统的烧写，以及创建网络开发环境和如何启动Linux开发应用程序。</p>
+<p>本文档主要提供让客户更快地了解Linux开发环境指导。</p>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+本文以musl库工具链arm-openeuler-linux-musleabi-gcc描述为例，使用glibc库工具链时，请使用arm-v01c02-linux-gnueabi-gcc替换arm-v01c02-linux-musleabi-gcc即可。<br />
+Hi3516CV610/Hi3516CV608/Hi3511CV100 只支持 musl 工具链。<br />
+Hi3511CV100只支持SPI NAND和SPI NOR作为启动介质。<br />
+<strong>Hi3511CV100不支持optee。</strong></p>
+</blockquote>
+<p><strong>产品版本<a name="section516mcpsimp"></a></strong></p>
+<p>与本文档相对应的产品版本如下。</p>
+<p><a name="table519mcpsimp"></a></p>
+<table><thead align="left"><tr id="row524mcpsimp"><th class="cellrowborder" valign="top" width="32%" id="mcps1.1.3.1.1"><p id="p526mcpsimp"><a name="p526mcpsimp"></a><a name="p526mcpsimp"></a>产品名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="68%" id="mcps1.1.3.1.2"><p id="p528mcpsimp"><a name="p528mcpsimp"></a><a name="p528mcpsimp"></a>产品版本</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row08365146424"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p63331555172315"><a name="p63331555172315"></a><a name="p63331555172315"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p141352132417"><a name="p141352132417"></a><a name="p141352132417"></a>V608</p>
+</td>
+</tr>
+<tr id="row530mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p532mcpsimp"><a name="p532mcpsimp"></a><a name="p532mcpsimp"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p534mcpsimp"><a name="p534mcpsimp"></a><a name="p534mcpsimp"></a>V610</p>
+</td>
+</tr>
+<tr id="row15017171317"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p4808172911388"><a name="p4808172911388"></a><a name="p4808172911388"></a>Hi3511C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p98081629193812"><a name="p98081629193812"></a><a name="p98081629193812"></a>V100</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>读者对象<a name="section535mcpsimp"></a></strong></p>
+<p>本文档（本指南）主要适用于以下工程师：</p>
+<ul>
+<li>技术支持工程师</li>
+<li>软件开发工程师</li>
+</ul>
+<p><strong>符号约定<a name="section133020216410"></a></strong></p>
+<p>在本文中可能出现下列标志，它们所代表的含义如下。</p>
+<p><a name="table2622507016410"></a></p>
+<table><thead align="left"><tr id="row1530720816410"><th class="cellrowborder" valign="top" width="20.580000000000002%" id="mcps1.1.3.1.1"><p id="p6450074116410"><a name="p6450074116410"></a><a name="p6450074116410"></a><strong id="b2136615816410"><a name="b2136615816410"></a><a name="b2136615816410"></a>符号</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="79.42%" id="mcps1.1.3.1.2"><p id="p5435366816410"><a name="p5435366816410"></a><a name="p5435366816410"></a><strong id="b5941558116410"><a name="b5941558116410"></a><a name="b5941558116410"></a>说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1372280416410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p3734547016410"><a name="p3734547016410"></a><a name="p3734547016410"></a><a name="image2670064316410"></a><a name="image2670064316410"></a><span><img class="" id="image2670064316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001775840716.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p1757432116410"><a name="p1757432116410"></a><a name="p1757432116410"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row466863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1432579516410"><a name="p1432579516410"></a><a name="p1432579516410"></a><a name="image4895582316410"></a><a name="image4895582316410"></a><span><img class="" id="image4895582316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001822440661.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p959197916410"><a name="p959197916410"></a><a name="p959197916410"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row123863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1232579516410"><a name="p1232579516410"></a><a name="p1232579516410"></a><a name="image1235582316410"></a><a name="image1235582316410"></a><span><img class="" id="image1235582316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001775681080.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p123197916410"><a name="p123197916410"></a><a name="p123197916410"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row5786682116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p2204984716410"><a name="p2204984716410"></a><a name="p2204984716410"></a><a name="image4504446716410"></a><a name="image4504446716410"></a><span><img class="" id="image4504446716410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001822520685.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4388861916410"><a name="p4388861916410"></a><a name="p4388861916410"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
+<p id="p1238861916410"><a name="p1238861916410"></a><a name="p1238861916410"></a>“须知”不涉及人身伤害。</p>
+</td>
+</tr>
+<tr id="row2856923116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p5555360116410"><a name="p5555360116410"></a><a name="p5555360116410"></a><a name="image799324016410"></a><a name="image799324016410"></a><span><img class="" id="image799324016410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001775840720.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4612588116410"><a name="p4612588116410"></a><a name="p4612588116410"></a>对正文中重点信息的补充说明。</p>
+<p id="p1232588116410"><a name="p1232588116410"></a><a name="p1232588116410"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>修改记录<a name="section2467512116410"></a></strong></p>
+<p><a name="table1557726816410"></a></p>
+<table><thead align="left"><tr id="row2942532716410"><th class="cellrowborder" valign="top" width="20.72%" id="mcps1.1.4.1.1"><p id="p3778275416410"><a name="p3778275416410"></a><a name="p3778275416410"></a><strong id="b5687322716410"><a name="b5687322716410"></a><a name="b5687322716410"></a>文档版本</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="26.119999999999997%" id="mcps1.1.4.1.2"><p id="p5627845516410"><a name="p5627845516410"></a><a name="p5627845516410"></a><strong id="b5800814916410"><a name="b5800814916410"></a><a name="b5800814916410"></a>发布日期</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="53.16%" id="mcps1.1.4.1.3"><p id="p2382284816410"><a name="p2382284816410"></a><a name="p2382284816410"></a><strong id="b3316380216410"><a name="b3316380216410"></a><a name="b3316380216410"></a>修改说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row5947359616410"><td class="cellrowborder" valign="top" width="20.72%" headers="mcps1.1.4.1.1 "><p id="p571mcpsimp"><a name="p571mcpsimp"></a><a name="p571mcpsimp"></a>00B01</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.119999999999997%" headers="mcps1.1.4.1.2 "><p id="p569mcpsimp"><a name="p569mcpsimp"></a><a name="p569mcpsimp"></a><span id="ph5171141017175"><a name="ph5171141017175"></a><a name="ph5171141017175"></a>2026-03-20</span></p>
+</td>
+<td class="cellrowborder" valign="top" width="53.16%" headers="mcps1.1.4.1.3 "><p id="p573mcpsimp"><a name="p573mcpsimp"></a><a name="p573mcpsimp"></a>第1次临时版本发布。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="开发环境">开发环境<a name="ZH-CN_TOPIC_0000001775681056"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822520673">嵌入式开发环境</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775840712">开发环境</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001837836629">搭建开发环境：docker</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822440657">搭建开发环境：非docker</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775681068">安装交叉编译工具</a></strong>  </p>
+</li>
+</ul>
+<h3 id="嵌入式开发环境">嵌入式开发环境<a name="ZH-CN_TOPIC_0000001822520673"></a></h3>
+<p>由于嵌入式单板的资源有限，不能在单板上运行开发和调试工具，通常需要交叉编译调试的方式进行开发和调试，即“宿主机＋目标机（评估板）”的形式。宿主机和目标机一般采用串口连接，也可同时通过网口或者JTAG连接，如<a href="#fig101451547111811">图1</a>所示。</p>
+<p>宿主机和目标机的处理器一般不相同。宿主机需要建立适合于目标机的交叉编译环境。程序在宿主机上经过“编译－连接－定位”得到可执行文件。通过一定的方法将可执行文件烧写到目标机中，然后在目标机上运行。</p>
+<p>目标机上的Bootloader启动后，目标机中的操作信息通过串口或者网口输出到宿主机上显示。在宿主机上的控制台中输入命令，可以控制目标机。</p>
+<p><strong>图 1</strong>  嵌入式开发图例<a name="fig101451547111811"></a><br />
+<img alt="" src="figures/%E5%B5%8C%E5%85%A5%E5%BC%8F%E5%BC%80%E5%8F%91%E5%9B%BE%E4%BE%8B.png" title="嵌入式开发图例" /></p>
+<h3 id="开发环境_1">开发环境<a name="ZH-CN_TOPIC_0000001775840712"></a></h3>
+<p>SDK 开发环境通常包括Linux服务器、Windows工作台和单板，三者同处于一个网络中，如<a href="#fig701548206">图1</a>所示。</p>
+<p><strong>图 1</strong>  开发环境<a name="fig701548206"></a><br />
+<img alt="" src="figures/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83.png" title="开发环境" /></p>
+<p>在Linux服务器上建立交叉编译环境，Windows工作台通过串口和网口与单板连接，开发人员可以在Windows工作台中进行程序开发或者远程登录到Linux服务器进行程序开发。各部分具体软件介绍如<a href="#_Ref114912037">表1</a>所示。</p>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+开发环境中使用了Windows工作台，实际上很多工作也可以在Linux服务器上完成，如使用minicom代替超级终端等，用户可自行选择。</p>
+</blockquote>
+<p><strong>表 1</strong>  开发环境的各部分软件描述</p>
+<p><a name="_Ref114912037"></a></p>
+<table><thead align="left"><tr id="row420mcpsimp"><th class="cellrowborder" colspan="2" valign="top" id="mcps1.2.4.1.1"><p id="p422mcpsimp"><a name="p422mcpsimp"></a><a name="p422mcpsimp"></a>软件</p>
+</th>
+<th class="cellrowborder" valign="top" id="mcps1.2.4.1.2"><p id="p424mcpsimp"><a name="p424mcpsimp"></a><a name="p424mcpsimp"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row426mcpsimp"><td class="cellrowborder" rowspan="2" valign="top" width="27%" headers="mcps1.2.4.1.1 "><p id="p428mcpsimp"><a name="p428mcpsimp"></a><a name="p428mcpsimp"></a>Windows工作台</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.139999999999999%" headers="mcps1.2.4.1.1 "><p id="p430mcpsimp"><a name="p430mcpsimp"></a><a name="p430mcpsimp"></a>操作系统</p>
+</td>
+<td class="cellrowborder" valign="top" width="60.86%" headers="mcps1.2.4.1.2 "><p id="p432mcpsimp"><a name="p432mcpsimp"></a><a name="p432mcpsimp"></a>Windows10。</p>
+</td>
+</tr>
+<tr id="row433mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p435mcpsimp"><a name="p435mcpsimp"></a><a name="p435mcpsimp"></a>应用软件</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p437mcpsimp"><a name="p437mcpsimp"></a><a name="p437mcpsimp"></a>putty、超级终端、tftp服务器、DS-5等软件。</p>
+</td>
+</tr>
+<tr id="row438mcpsimp"><td class="cellrowborder" rowspan="2" valign="top" width="27%" headers="mcps1.2.4.1.1 "><p id="p440mcpsimp"><a name="p440mcpsimp"></a><a name="p440mcpsimp"></a>Linux服务器</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.139999999999999%" headers="mcps1.2.4.1.1 "><p id="p442mcpsimp"><a name="p442mcpsimp"></a><a name="p442mcpsimp"></a>操作系统</p>
+</td>
+<td class="cellrowborder" valign="top" width="60.86%" headers="mcps1.2.4.1.2 "><p id="p444mcpsimp"><a name="p444mcpsimp"></a><a name="p444mcpsimp"></a>无特别要求，可为Ubuntu、Redhat、Debian等。内核版本支持2.6.18及以上版本。安装时建议选择完全安装。</p>
+</td>
+</tr>
+<tr id="row445mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p447mcpsimp"><a name="p447mcpsimp"></a><a name="p447mcpsimp"></a>应用软件</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p449mcpsimp"><a name="p449mcpsimp"></a><a name="p449mcpsimp"></a>NFS、telnetd、samba、vim、编译环境（GCC版本4.9.3及以上）、arm交叉编译环境（GCC版本12.3.1）等。</p>
+<p id="p450mcpsimp"><a name="p450mcpsimp"></a><a name="p450mcpsimp"></a>其他应用软件根据具体开发需要而定，通常系统都已默认安装，只要适当配置即可。</p>
+</td>
+</tr>
+<tr id="row451mcpsimp"><td class="cellrowborder" rowspan="4" valign="top" width="27%" headers="mcps1.2.4.1.1 "><p id="p453mcpsimp"><a name="p453mcpsimp"></a><a name="p453mcpsimp"></a>版本包</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.139999999999999%" headers="mcps1.2.4.1.1 "><p id="p455mcpsimp"><a name="p455mcpsimp"></a><a name="p455mcpsimp"></a>引导程序</p>
+</td>
+<td class="cellrowborder" valign="top" width="60.86%" headers="mcps1.2.4.1.2 "><p id="p457mcpsimp"><a name="p457mcpsimp"></a><a name="p457mcpsimp"></a>U-Boot。</p>
+</td>
+</tr>
+<tr id="row458mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p460mcpsimp"><a name="p460mcpsimp"></a><a name="p460mcpsimp"></a>操作系统</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p462mcpsimp"><a name="p462mcpsimp"></a><a name="p462mcpsimp"></a>Linux：Linux内核基于Linux标准内核5.10.y版本移植开发，根文件系统基于busybox 1.34.1版本制作而成。</p>
+</td>
+</tr>
+<tr id="row463mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p465mcpsimp"><a name="p465mcpsimp"></a><a name="p465mcpsimp"></a>应用软件</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p467mcpsimp"><a name="p467mcpsimp"></a><a name="p467mcpsimp"></a>包含telnetd、gdb server等Linux常用命令。</p>
+</td>
+</tr>
+<tr id="row468mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p470mcpsimp"><a name="p470mcpsimp"></a><a name="p470mcpsimp"></a>程序开发库</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p472mcpsimp"><a name="p472mcpsimp"></a><a name="p472mcpsimp"></a>musl-1.2.3版本。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>Linux开发环境搭建可以选择使用docker容器或者非docker容器两种方式，非docker方式需要手动安装所有工具软件，因此建议优先使用docker容器搭建开发环境。</p>
+<h3 id="搭建开发环境：docker">搭建开发环境：docker<a name="ZH-CN_TOPIC_0000001837836629"></a></h3>
+<p>docker方式环境搭建请参考文档《使用docker容器搭建开发环境用户指南》，非docker方式请参考“<a href="#ZH-CN_TOPIC_0000001822440657">搭建开发环境：非docker</a>”章节。</p>
+<h3 id="搭建开发环境：非docker">搭建开发环境：非docker<a name="ZH-CN_TOPIC_0000001822440657"></a></h3>
+<p>推荐用户使用64位Linux服务器，本开发包在32位Linux服务器、较老版本的Linux服务器、偏冷门的Linux服务器上可能存在未知的兼容性问题。</p>
+<p>推荐的硬件配置如下：</p>
+<ul>
+<li>CPU Intel(R) Xeon(R) CPU E5-2450 @ 2.10GHz 或更好CPU</li>
+<li>DDR: &gt;= 16GB</li>
+<li>Hard disk &gt;= 600GB</li>
+<li>Gigabit Ethernet</li>
+<li>
+<p>OS: Ubuntu 22.04 LTS</p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775840684">发布包使用的Linux Server版本</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822520661">网络环境搭建</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822440649">软件包安装</a></strong>  </p>
+</li>
+</ul>
+<h4 id="发布包使用的Linux-Server版本">发布包使用的Linux Server版本<a name="ZH-CN_TOPIC_0000001775840684"></a></h4>
+<p>本示例安装如下版本Linux系统(英文版)，本开发包默认均以此Linux系统进行编译：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Ubuntu 22.04 LTS
+</span></code></pre></div>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+ubuntu系统安装步骤略。</p>
+</blockquote>
+<h4 id="网络环境搭建">网络环境搭建<a name="ZH-CN_TOPIC_0000001822520661"></a></h4>
+<p>请用户自行配置网络，并按需安装nfs，samba，ssh等网络组件。</p>
+<h4 id="软件包安装">软件包安装<a name="ZH-CN_TOPIC_0000001822440649"></a></h4>
+<p>操作系统安装好后，且用户已自行配置好网络环境，则可继续如下步骤完成相关软件包的安装。</p>
+<ol>
+<li>
+<p>配置默认使用bash</p>
+<p>执行 sudo dpkg-reconfigure dash  选择 no</p>
+</li>
+<li>
+<p>更新 ubuntu 系统索引信息</p>
+<p>执行 sudo apt update</p>
+</li>
+<li>
+<p>安装软件包</p>
+<p>执行：sudo apt-get install make libc6-i386 lib32z1 lib32stdc++6 libncurses5-dev ncurses-term libncursesw5-dev g++ u-boot-tools texinfo gawk libssl-dev openssl bc p7zip-full gperf bison flex diffutils git unzip libffi-dev libtool libfreetype6 fakeroot autopoint po4a python3-pip wget libmpc-dev mtd-utils zlib1g genromfs</p>
+</li>
+<li>
+<p>创建/etc/ld.so.preload 文件，并执行echo "" &gt; /etc/ld.so.preload，以解决64bit linux server上某些第三方库编译失败的问题。</p>
+</li>
+<li>
+<p>SDK开源组件依赖以下几个库，以ubuntu为例，安装方式请参考下面命令：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo apt-get install zlib1g-dev liblzo2-dev uuid-dev pkg-config automake
+</span></code></pre></div>
+<p>由于mtd-utils通过pkg-config工具检查各个库是否正常安装，因此请参考如下方式设置pkg-config工具搜索路径：</p>
+<p>export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/lib/x86_64-linux-gnu/pkgconfig"</p>
+</li>
+<li>
+<p>SDK开源组件e2fsprogs依赖texlive库，安装方式请参考如下命令：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo apt-get install texlive
+</span></code></pre></div>
+</li>
+<li>
+<p>SDK开源组件optee 模块依赖 python3.x.x、pip3、wheel、pycryptodome、pyelftools库</p>
+<p>下载安装并执行如下指令：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a># 如果以下pip3安装组件操作存在下载异常，可能需要配置下载源：先创建: mkdir ~/.pip，然后编辑:vim ~/.pip/pip.conf,若环境没有vim编辑器，请先安装：sudo apt-get install vim
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>sudo pip3 install wheel
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>sudo pip3 install pycryptodome
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>sudo pip3 install pyelftools
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>sudo pip3 install cryptography
+</span></code></pre></div>
+<p>创建python软链接</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>ln -s /usr/bin/python3 /usr/bin/python
+</span></code></pre></div>
+<p>备注：pycryptodome 依赖于python3.x.x 环境请先升级至python3.x.x 版本再安装 pycryptodome 库。</p>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+(1) 安装软件包前配置下载源或代理的步骤省略。<br />
+(2) 若步骤7中安装cryptography失败，可能是pip版本低导致，可以尝试按照告警提示升级pip包:pip3 install --upgrade pip ,然后再安装一次cryptography。<br />
+(3) 以上“apt-get install”所安装软件包版本建议与“附录：非docker镜像软件清单”中软件版本保持一致，否则可能存在兼容性问题，具体可通过“sudo apt-get install [软件包名]=[软件包版本]”指定安装版本操作。<br />
+(4) openssl 支持国密规格需使用 openssl-3.0.2 及以上版本. 如果版本不匹配，请从 <a href="https://www.openssl.org/" target="_blank" rel="noopener noreferrer">https://www.openssl.org/</a> 下载并安装 openssl 3.0.2 版本。</p>
+</blockquote>
+</li>
+<li>
+<p>检查以上软件包是否安装成功</p>
+<p>请使用安装检测脚本检测以上工具是否安装成功，检测脚本位置位于SDK版本包scripts目录：scripts/installed_package_check.sh；请注意，该脚本适用于Ubuntu环境。</p>
+</li>
+</ol>
+<h3 id="安装交叉编译工具">安装交叉编译工具<a name="ZH-CN_TOPIC_0000001775681068"></a></h3>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+使用从网络等渠道得到的交叉编译工具可能存在与使用的内核并不配套，造成开发过程中出现一些不可预料的问题。</p>
+</blockquote>
+<p>发布包提供编译工具链arm-openeuler-linux-musleabi- 。arm-openeuler-linux-musleabi-为基于32bit操作系统musl的工具链。</p>
+<p>安装步骤如下：</p>
+<ol>
+<li>
+<p>解压工具链。</p>
+<p>执行如下命令进行解压：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>tar xf gcc-xxxxxxxx-arm-vxxcxx-linux-musleabi.tgz
+</span></code></pre></div>
+</li>
+<li>
+<p>安装工具链。</p>
+<p>运行如下命令，即可完成此工具链的安装。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>cd gcc-xxxxxxxx-arm-vxxcxx-linux-musleabi
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>sudo ./install_gcc_toolchain.sh
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>source /etc/profile
+</span></code></pre></div>
+<p>其它工具链安装方法与上述描述类似。</p>
+</li>
+</ol>
+<h2 id="U-Boot">U-Boot<a name="ZH-CN_TOPIC_0000001822440653"></a></h2>
+<p>关于U-Boot的介绍与使用请参见《Hi35xxVxxx U-boot 移植应用开发指南》。</p>
+<h2 id="Linux内核">Linux内核<a name="ZH-CN_TOPIC_0000001775681064"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775681052">内核源代码</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822520681">配置并编译内核</a></strong>  </p>
+</li>
+</ul>
+<h3 id="内核源代码">内核源代码<a name="ZH-CN_TOPIC_0000001775681052"></a></h3>
+<p>由于开源工具整改，部分开源工具不再提供源码包，内核源码需要自行下载。</p>
+<h3 id="配置并编译内核">配置并编译内核<a name="ZH-CN_TOPIC_0000001822520681"></a></h3>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+如果对内核和芯片平台没有足够了解，请勿修改默认配置。但可增加需要的模块，下面步骤使用musl库工具链编译spi flash内核为例，若需编译其他介质内核，请参考boards/dmeb路径下的readme。</p>
+</blockquote>
+<p>配置并编译内核的操作步骤如下：</p>
+<ol>
+<li>进入third_party/linux目录</li>
+<li>
+<p>下载Linux内核源码（可以选择手动下载到third_party/linux 目录）：</p>
+<p>在  <a href="https://mirrors.edge.kernel.org/pub/linux/kernel" target="_blank" rel="noopener noreferrer">https://mirrors.edge.kernel.org/pub/linux/kernel</a>  下载对应版本 Linux Kernel 源码</p>
+</li>
+<li>
+<p>进入boards/dmeb路径下执行:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>make kernel BOOT_MEDIA=spi LIB_TYPE=musl DEBUG=0 -j
+</span></code></pre></div>
+</li>
+</ol>
+<h2 id="根文件系统">根文件系统<a name="ZH-CN_TOPIC_0000001775840696"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822440629">根文件系统简介</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822520657">利用busybox制作根文件系统</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822520677">文件系统简介</a></strong>  </p>
+</li>
+</ul>
+<h3 id="根文件系统简介">根文件系统简介<a name="ZH-CN_TOPIC_0000001822440629"></a></h3>
+<p>Linux的目录结构的最顶层是一个被称为“/”的根目录。系统加载Linux内核之后，就会挂载一个设备到根目录上。存在于这个设备中的文件系统被称为根文件系统。所有的系统命令、系统配置以及其他文件系统的挂载点都位于这个根文件系统中。</p>
+<p>根文件系统通常存放于内存和Flash中，或是基于网络的文件系统。根文件系统中存放了嵌入式系统使用的所有应用程序、库以及其他需要用到的服务。<a href="#fig91581123118">图1</a>列出了根文件系统的顶层目录。</p>
+<p><strong>图 1</strong>  根文件系统顶层目录结构图<a name="fig91581123118"></a><br />
+<img alt="" src="figures/%E6%A0%B9%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E9%A1%B6%E5%B1%82%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E5%9B%BE.png" title="根文件系统顶层目录结构图" /></p>
+<p>通用的Linux系统的根文件系统中会包括根文件系统顶层目录结构图中所有的目录，不过在嵌入式系统中，需要精简根文件系统。部分可以被忽略的目录如<a href="#_Ref136682590">表1</a>所示。</p>
+<p><strong>表 1</strong>  嵌入式系统中可忽略的目录说明</p>
+<p><a name="_Ref136682590"></a></p>
+<table><thead align="left"><tr id="row227mcpsimp"><th class="cellrowborder" valign="top" width="32%" id="mcps1.2.3.1.1"><p id="p229mcpsimp"><a name="p229mcpsimp"></a><a name="p229mcpsimp"></a>目录名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="68%" id="mcps1.2.3.1.2"><p id="p231mcpsimp"><a name="p231mcpsimp"></a><a name="p231mcpsimp"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row233mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p235mcpsimp"><a name="p235mcpsimp"></a><a name="p235mcpsimp"></a>/home、/mnt、/opt和/root</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p237mcpsimp"><a name="p237mcpsimp"></a><a name="p237mcpsimp"></a>所有适合提供给多用户扩展的目录，都可以被忽略。</p>
+</td>
+</tr>
+<tr id="row238mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p240mcpsimp"><a name="p240mcpsimp"></a><a name="p240mcpsimp"></a>/var和/tmp</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p242mcpsimp"><a name="p242mcpsimp"></a><a name="p242mcpsimp"></a>/var是存放系统日志或一些服务程序的临时文件。</p>
+<p id="p243mcpsimp"><a name="p243mcpsimp"></a><a name="p243mcpsimp"></a>/tmp是存放用户的一些临时文件，可以被忽略。</p>
+</td>
+</tr>
+<tr id="row244mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.2.3.1.1 "><p id="p246mcpsimp"><a name="p246mcpsimp"></a><a name="p246mcpsimp"></a>/boot</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.2.3.1.2 "><p id="p248mcpsimp"><a name="p248mcpsimp"></a><a name="p248mcpsimp"></a>/boot目录一般用于存放内核映像，PC机启动时一般会从该位置加载内核，但在嵌入式系统中，为了节省空间，内核映像存在于Flash或网络服务器中，而不是在根文件系统中。因此也可以忽略这个目录。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+空目录并不会增大文件系统的体积，如果没有特殊原因，建议保留这些目录。</p>
+</blockquote>
+<h3 id="利用busybox制作根文件系统">利用busybox制作根文件系统<a name="ZH-CN_TOPIC_0000001822520657"></a></h3>
+<p>利用busybox制作根文件系统需要先获取busybox源代码，然后配置、编译和安装busybox，操作成功后开始制作根文件系统。</p>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775681072">获取busybox源代码</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822440641">配置busybox</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822520669">编译和安装busybox</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775681048">制作根文件系统</a></strong>  </p>
+</li>
+</ul>
+<h4 id="获取busybox源代码">获取busybox源代码<a name="ZH-CN_TOPIC_0000001775681072"></a></h4>
+<p>成功安装SDK后，busybox源代码补丁就存放在third_party/busybox目录中。要获取busybox源代码也可以从网站<a href="https://busybox.net/" target="_blank" rel="noopener noreferrer">https://busybox.net/</a>下载。</p>
+<h4 id="配置busybox">配置busybox<a name="ZH-CN_TOPIC_0000001822440641"></a></h4>
+<p>进入busybox所在目录，进行配置操作需要输入如下命令：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>cd third_party/busybox/busybox-1.34.1
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a> cp ../../../boards/dmeb/tools/build_scripts/busybox/config_arm_a7_softfp_neon .config //指定配置文件
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a> make menuconfig
+</span></code></pre></div>
+<p>busybox的配置界面和内核配置相似，其功能选项容易理解，可以根据自己的需求选择配置。</p>
+<p>在 Settings ---&gt; Build Options中注意此选项：CONFIG_CROSS_COMPILER_PREFIX选项用于选择SDK推荐的交叉编译器，配置好后保存并退出。欲了解busybox各选项含义请参考busybox配置帮助。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>--- Build Options
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>[ ] Build static binary (no shared libs)
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>[ ] Build position independent executable
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>[ ] Force NOMMU build
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>[ ] Build shared libbusybox
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>(arm-openeuler-linux-musleabi-) Cross compiler prefix
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>()  Path to sysroot
+</span></code></pre></div>
+<h4 id="编译和安装busybox">编译和安装busybox<a name="ZH-CN_TOPIC_0000001822520669"></a></h4>
+<p>编译和安装busybox的具体操作如下：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>make
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>make install
+</span></code></pre></div>
+<p>编译并安装成功后，在busybox-1.34.1的_install目录下生成以下文件：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>drwxrwxr-x  2 xxx XXX 4096 Feb 13 11:41 bin
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>lrwxrwxrwx  1 xxx XXX   11 Feb 13 11:41 linuxrc -&gt; bin/busybox
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>drwxrwxr-x  2 xxx XXX 4096 Feb 13 11:41 sbin
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>drwxrwxr-x  4 xxx XXX 4096 Feb 13 11:41 usr
+</span></code></pre></div>
+<p>其中xxx表示用户；XXX表示组。</p>
+<h4 id="制作根文件系统">制作根文件系统<a name="ZH-CN_TOPIC_0000001775681048"></a></h4>
+<p>成功安装SDK后，在boards/dmeb/pub/目录中存放已制作好的根文件系统。</p>
+<p>用户如有需要可在busybox的基础上制作根文件系统，操作步骤如下。</p>
+<ol>
+<li>
+<p>创建文件夹，拷贝相应工具。</p>
+<ol>
+<li>创建rootbox目录；</li>
+<li>将third_party/busybox/busybox-1.34.1/_install/路径下的所有文件拷贝到rootbox；</li>
+<li>在rootbox中创建目录:etc dev lib tmp var mnt home proc。</li>
+</ol>
+</li>
+<li>
+<p>配置etc、lib、dev目录的必需文件。</p>
+<ul>
+<li>etc目录可参考系统/etc下的文件。其中最主要的文件包括inittab、fstab、init.d/rcS文件等，这些文件最好从busybox的examples目录下拷贝过来，根据需要自行修改。</li>
+<li>dev目录下的设备文件，可以直接从系统中拷贝过来或者使用mknod命令生成需要的设备文件。拷贝文件时请使用cp -r file。</li>
+<li>lib目录是存放应用程序所需要的库文件，请根据应用程序需要拷贝相应的库文件。</li>
+</ul>
+<p>完成以上两个步骤，一个完整的根文件系统就生成了。</p>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+SDK软件包中已经包括配置好的完整的根文件系统，如果无特别需求，可直接使用。要添加自己开发的应用程序，只需将应用程序和相应的库文件拷贝到根文件系统的对应目录即可。</p>
+<p><img alt="" src="public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+-   为了便于调试，默认发布的版本中没有设置root密码；<br />
+-   为了保证系统安全，请客户在产品中自行设置root密码。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="文件系统简介">文件系统简介<a name="ZH-CN_TOPIC_0000001822520677"></a></h3>
+<p>嵌入式系统中常用文件系统包括有cramfs、jffs2、NFS、initrd、ext4以及squashfs、ubifs。它们的特点如下：</p>
+<ul>
+<li>cramfs和jffs2具有好的空间特性，很适合嵌入式产品应用。</li>
+<li>squashfs压缩率最高。</li>
+<li>jffs2为可读写文件系统。</li>
+<li>NFS文件系统适用于开发初期的调试阶段。</li>
+<li>initrd采用cramfs文件系统，为只读。</li>
+<li>
+<p>ext4文件系统用于eMMC卡。</p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822520665">cramfs</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775840708">jffs2</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775840692">Ubifs</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775681060">Initrd</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822440645">Squashfs</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775840700">ext4</a></strong>  </p>
+</li>
+</ul>
+<h4 id="cramfs">cramfs<a name="ZH-CN_TOPIC_0000001822520665"></a></h4>
+<p>cramfs是针对Linux内核2.4之后的版本所设计的一种新型文件系统，使用简单，加载容易，速度快。</p>
+<p>cramfs的优缺点如下：</p>
+<ul>
+<li>优点：将文件数据以压缩形式存储，在需要运行时进行解压缩，能节省Flash存储空间。</li>
+<li>缺点：由于它存储的文件是压缩的格式，所以文件系统不能直接在Flash上运行。同时，文件系统运行时需要解压数据并拷贝至内存中，在一定程度上降低读取效率。另外cramfs文件系统是只读的。</li>
+</ul>
+<p>如果想要在单板运行的Linux中提供cramfs的能力，必须要在编译内核时把cramfs的选项加入。在make menuconfig后，进入“File systems”，选择“Miscellaneous filesystems”，最后选中其中的“Compressed ROM file system support (cramfs)”（SDK里面提供的内核默认已经选择了该文件系统的支持）。</p>
+<p>在boards/dmeb目录下编译完成后，在boards/dmeb/pub目录下将会生成rootfs的压缩包rootfs_musl_arm.tgz。解压后，使用rootfs下的mkimg.rootfs工具制作cramfs或cramfs-initrd。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>## ./mkimg.rootfs [文件系统源文件目录] [文件系统镜像目标文件目录] [文件系统镜像文件名] [文件系统类型]
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>./mkimg.rootfs . .. test cramfs-initrd
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>mv ../test.cramfs.initrd ../cramfs.initrd.img
+</span></code></pre></div>
+<p>执行上述命令后，在上级目录下将生成一个cramfs.initrd.img镜像文件。该镜像文件即为所需的文件系统镜像文件。</p>
+<h4 id="jffs2">jffs2<a name="ZH-CN_TOPIC_0000001775840708"></a></h4>
+<p>jffs2是RedHat的David Woodhouse在jffs基础上改进的文件系统，是用于微型嵌入式设备的原始闪存芯片的实际文件系统。jffs2文件系统是日志结构化的可读写的文件系统。</p>
+<p>jffs2的优缺点如下：</p>
+<ul>
+<li>优点：使用了压缩的文件格式。最重要的特性是可读写操作。</li>
+<li>缺点：jffs2文件系统挂载时需要扫描整个jffs2文件系统，因此当jffs2文件系统分区增大时，挂载时间也会相应的变长。使用jffs2格式可能带来少量的Flash空间的浪费。这主要是由于日志文件的过度开销和用于回收系统的无用存储单元，浪费的空间大小大致是若干个数据段。jffs2的另一缺点是当文件系统已满或接近满时，jffs2运行速度会迅速降低。这是因为垃圾收集的问题。</li>
+</ul>
+<p>加载jffs2文件系统时的步骤如下：</p>
+<ol>
+<li>扫描整个芯片，对日志节点进行校验，并且将日志节点全部装入内存缓存。</li>
+<li>对所有日志节点进行整理，抽取有效的节点并整理出文件目录信息。</li>
+<li>找出文件系统中无效节点并且将它们删除。</li>
+<li>
+<p>最后整理内存中的信息，将加载到缓存中的无效节点释放。</p>
+<p>由此可以看出虽然这样能有效地提高系统的可靠性，但是在一定程度上降低了系统的速度。尤其对于较大的闪存芯片，加载过程会更慢。</p>
+<p>为了使内核支持jffs2文件系统，必须在编译内核时加入jffs2的选项。在make menuconfig后，进入“File systems”，选择“Miscellaneous filesystems”，最后选中其中的“Journalling Flash File System v2 (JFFS2) support”选项（SDK里面提供的内核默认已经选择了该文件系统的支持）。</p>
+<p>jffs2的制作方法为：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>./mkfs.jffs2 -d ./rootbox -l -e 0x20000 -o  jffs2-root.img
+</span></code></pre></div>
+<p>其中，mkfs.jffs2工具可以从互联网中下载，也可以在SDK包中找到。rootbox为之前已经制作好的根文件系统。参数说明如<a href="#_Ref136682516">表1</a>所示。</p>
+<p><strong>表 1</strong>  JFFS2参数表</p>
+<p><a name="_Ref136682516"></a><br />
+<table><thead align="left"><tr id="row598mcpsimp"><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.3.1.1"><p id="p600mcpsimp"><a name="p600mcpsimp"></a><a name="p600mcpsimp"></a>参数</p><br />
+</th><br />
+<th class="cellrowborder" valign="top" width="80%" id="mcps1.2.3.1.2"><p id="p602mcpsimp"><a name="p602mcpsimp"></a><a name="p602mcpsimp"></a>说明</p><br />
+</th><br />
+</tr><br />
+</thead><br />
+<tbody><tr id="row604mcpsimp"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p606mcpsimp"><a name="p606mcpsimp"></a><a name="p606mcpsimp"></a>d</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p608mcpsimp"><a name="p608mcpsimp"></a><a name="p608mcpsimp"></a>指定根文件系统</p><br />
+</td><br />
+</tr><br />
+<tr id="row609mcpsimp"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p611mcpsimp"><a name="p611mcpsimp"></a><a name="p611mcpsimp"></a>l</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p613mcpsimp"><a name="p613mcpsimp"></a><a name="p613mcpsimp"></a>little-endian小端模式</p><br />
+</td><br />
+</tr><br />
+<tr id="row614mcpsimp"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p616mcpsimp"><a name="p616mcpsimp"></a><a name="p616mcpsimp"></a>e</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p618mcpsimp"><a name="p618mcpsimp"></a><a name="p618mcpsimp"></a>Flash的块大小</p><br />
+</td><br />
+</tr><br />
+<tr id="row619mcpsimp"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.3.1.1 "><p id="p621mcpsimp"><a name="p621mcpsimp"></a><a name="p621mcpsimp"></a>o</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="80%" headers="mcps1.2.3.1.2 "><p id="p623mcpsimp"><a name="p623mcpsimp"></a><a name="p623mcpsimp"></a>输出映像文件</p><br />
+</td><br />
+</tr><br />
+</tbody><br />
+</table></p>
+</li>
+</ol>
+<h4 id="Ubifs">Ubifs<a name="ZH-CN_TOPIC_0000001775840692"></a></h4>
+<p>ubifs是unsorted block images file system的简称，用于raw flash设备。ubifs通过ubi子系统处理与mtd设备之间动作。ubifs只能工作于ubi volume之上。ubifs涉及到的系统层次由下到上依次是：</p>
+<ul>
+<li>mtd 子系统：提供对flash 的访问接口；</li>
+<li>ubi 子系统：为flash device提供了wear-leveling和 volume management功能，ubi子系统工作在mtd设备之上，提供了ubi volume；ubi子系统是mtd设备的高层次表示，对上层屏蔽了一些直接使用mtd设备需要处理的问题，比如wearing-leveling以及坏块管理；ubifs 本身则工作在ubi子系统之上。</li>
+</ul>
+<p>ubifs 具有如下优缺点：</p>
+<ul>
+<li>
+<p>优点：</p>
+<ul>
+<li>ubifs对flash 尺寸有着很好的扩展性；</li>
+<li>回写(write-back)：同jffs2的write-through(立即写入)相比可以显著的提高文件系统的读写性能。</li>
+<li>异常unmount适应度：ubifs是一个日志文件系统可以容忍突然掉电以及unclean重启。</li>
+<li>on-the_flight compression存储在flash介质上的数据是压缩的，同时也可以灵活的针对单个文件来打开关闭压缩。</li>
+<li>ubifs可以从index破坏后恢复：ubifs中的每一片信息都用一个header来描述，因此可以通过扫描整个flash介质来重构文件系统</li>
+<li>完整性：ubifs通过把checksum写到flash 介质上来保证数据的完整性，文件数据或meta-data不会损坏；缺省的情况，ubifs仅仅检查meta-data的CRC 校验。</li>
+</ul>
+</li>
+<li>
+<p>缺点：</p>
+<ul>
+<li>ubifs文件系统所有数据结构都是使用tree，ubifs对flash尺寸大小在算法上是可扩展的。但是ubi子系统复杂度随着flash size线性增长，因此ubi子系统加ubifs整体上是线性增大的。</li>
+<li>制作ubifs 步骤可参考boards/dmeb/tools/pc/ubi_sh/mkubiimg.sh 脚本以及readme 文档。</li>
+</ul>
+</li>
+</ul>
+<h4 id="Initrd">Initrd<a name="ZH-CN_TOPIC_0000001775681060"></a></h4>
+<p>initrd相当于存储介质，它支持的文件系统格式有ext2、cramfs等，因此内核除了支持initrd之外，还要支持cramfs文件系统。内核需要做如下配置，initrd才可以正常工作：</p>
+<ul>
+<li>进入“Device Drivers-&gt;Block devices”，选择支持“RAM block device support”。</li>
+<li>进入“General setup”，选择支持“Initial RAM filesystem and RAM disk (initramfs/initrd) support”。</li>
+<li>进入“File systems”，选择“Miscellaneous filesystems”，最后选中其中的“Compressed ROM file system support (cramfs)”。</li>
+</ul>
+<p>制作initrd的步骤如下：</p>
+<ol>
+<li>制作cramfs镜像文件，具体制作方法请参见“<a href="#ZH-CN_TOPIC_0000001822520665">cramfs</a>”。</li>
+<li>以步骤1制作的镜像文件作为输入，制作initrd文件，制作命令为“mkimage -A arm -T ramdisk -C none -a 0 -e 0 -n cramfs-initrd -d ./cramfs-image cramfs-initrd”。</li>
+</ol>
+<h4 id="Squashfs">Squashfs<a name="ZH-CN_TOPIC_0000001822440645"></a></h4>
+<p>squashfs文件系统是一套基于Linux内核使用的压缩只读文件系统，压缩率高。</p>
+<p>squashfs具有如下特点：</p>
+<ul>
+<li>数据(data)、节点(inode)和目录(directories)都被压缩</li>
+<li>保存了全部的 32 位 UID/GIDS和文件的创建时间</li>
+<li>最大支持4G文件系统</li>
+<li>检测并删除重复文件</li>
+</ul>
+<p>使用squashfs文件系统步骤：</p>
+<ol>
+<li>
+<p>配置支持squashfs的内核镜像。进入linux-5.10.y目录下，执行以下命令：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>cp arch/arm/configs/hi35xxvxxx_defconfig .config
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>make ARCH=arm CROSS_COMPILE=arm-openeuler-linux-musleabi- menuconfig（保存退出即可）
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>打开支持xz压缩算法选项，或其他需要支持的压缩算法选项：
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>File systems  ---&gt;
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>[*] Miscellaneous filesystems  ---&gt;
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>&lt;*&gt;   SquashFS 4.0 - Squashed file system support
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>[*]     Include support for XZ compressed file systems
+</span></code></pre></div>
+</li>
+<li>
+<p>参考boards/dmeb路径下的readme中单独编译内核步骤。</p>
+</li>
+<li>
+<p>先在服务器上安装squashfs文件系统工具（命令参考：sudo apt-get install squashfs-tools），然后制作squashfs文件系统镜像。制作方法如下：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>mksquashfs rootfs ./rootfs.squashfs.img -b 64K -comp gzip
+</span></code></pre></div>
+<p>其中，rootfs是之前已经制作好的根文件系统，rootfs.squashfs.img是生成的squashfs文件系统映像文件。-b 64K指定squashfs文件系统的块大小为64K（决定于实际spi flash块大小）。-comp 指定文件系统压缩方式为gzip。请根据实际情况修改参数。</p>
+</li>
+</ol>
+<h4 id="ext4">ext4<a name="ZH-CN_TOPIC_0000001775840700"></a></h4>
+<p>ext4文件系统是一个高效的、优秀的、可靠的和极具特点的文件系统，相对于ext3的改进是更深层次的，是文件系统数据结构方面的优化。</p>
+<ol>
+<li>
+<p>编译ext4需要依赖服务器自身已安装的开源软件e2fsprogs。</p>
+<p>进入boards/dmeb/pub目录下，系统自带的mkfs.ext4为制作ext4文件系统工具。以制作96M非稀疏 ext4文件系统为例：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>dd if=/dev/zero of=rootfs_hi3516cv610_96M.ext4 bs=512 count=196608
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>fakeroot sh -c &quot;mkfs.ext4 -d rootfs_musl_arm rootfs_hi3516cv610_96M.ext4&quot;
+</span></code></pre></div>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+196608=96 * 1024 * 1024 / 512<br />
+使用ext4类型的文件系统使用打开支持ext4选项的内核镜像<br />
+rootfs是之前已经制作好的根文件系统目录。</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="应用程序开发简介">应用程序开发简介<a name="ZH-CN_TOPIC_0000001822520653"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775840704">编写代码</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775840688">运行应用程序</a></strong>  </p>
+</li>
+</ul>
+<h3 id="编写代码">编写代码<a name="ZH-CN_TOPIC_0000001775840704"></a></h3>
+<p>用户可根据个人习惯选择代码编写工具。通常在Windows环境下使用Source Insight，在Linux环境下使用Vim+ctags+cscope，功能也相当强大。</p>
+<h3 id="运行应用程序">运行应用程序<a name="ZH-CN_TOPIC_0000001775840688"></a></h3>
+<p>要运行编译好的应用程序，首先需要将其添加到目标机中，必须完成以下工作：</p>
+<ul>
+<li>将应用程序和需要的库文件（如果有）等添加到目标机的根文件系统相应的目录中。通常将应用程序放到/bin目录里，库文件放到/lib目录里，配置文件则放到/etc目录里。</li>
+<li>制作包含新应用程序的根文件系统。</li>
+</ul>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+如果执行应用程序，需要读写文件系统操作。请选择ubifs、jffs2文件系统。</p>
+</blockquote>
+<p>如果需要制作cramfs、ubifs或jffs2文件系统，请参见“<a href="#ZH-CN_TOPIC_0000001822520677">文件系统简介</a>”，然后烧写根文件系统到Flash指定位置，并设置相应的启动参数。同样，启动Linux后便可运行新的应用程序。</p>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+如果新添加的应用程序需要系统启动后自动运行，请编辑/etc/init.d/rcS文件，添加需要启动的应用程序路径。</p>
+</blockquote>
+<h2 id="附录：非docker版本软件清单">附录：非docker版本软件清单<a name="ZH-CN_TOPIC_0000001822440637"></a></h2>
+<p><strong>表 1</strong>  非docker版本软件清单</p>
+<p><a name="table183274215575"></a></p>
+<table><thead align="left"><tr id="row1447172135717"><th class="cellrowborder" valign="top" width="25.060606060606062%" id="mcps1.2.4.1.1"><p id="p124471825570"><a name="p124471825570"></a><a name="p124471825570"></a>序号</p>
+</th>
+<th class="cellrowborder" valign="top" width="31.09090909090909%" id="mcps1.2.4.1.2"><p id="p154471720578"><a name="p154471720578"></a><a name="p154471720578"></a>软件名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="43.848484848484844%" id="mcps1.2.4.1.3"><p id="p1644719295711"><a name="p1644719295711"></a><a name="p1644719295711"></a>软件版本</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1444782105711"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p204488210572"><a name="p204488210572"></a><a name="p204488210572"></a>1</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p114485255712"><a name="p114485255712"></a><a name="p114485255712"></a>Ubuntu</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p1393754551014"><a name="p1393754551014"></a><a name="p1393754551014"></a>22.04</p>
+</td>
+</tr>
+<tr id="row14481821570"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p124487265719"><a name="p124487265719"></a><a name="p124487265719"></a>2</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p5448102205719"><a name="p5448102205719"></a><a name="p5448102205719"></a>make</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p6937245141016"><a name="p6937245141016"></a><a name="p6937245141016"></a>4.3-4.1build1 amd64</p>
+</td>
+</tr>
+<tr id="row1744842165716"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p1744812213572"><a name="p1744812213572"></a><a name="p1744812213572"></a>3</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p194481127578"><a name="p194481127578"></a><a name="p194481127578"></a>libc6-i386</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p1393754519101"><a name="p1393754519101"></a><a name="p1393754519101"></a>2.35-0ubuntu3.9 amd64</p>
+</td>
+</tr>
+<tr id="row144485219572"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p4448192135713"><a name="p4448192135713"></a><a name="p4448192135713"></a>4</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p134488295720"><a name="p134488295720"></a><a name="p134488295720"></a>lib32z1</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p4937164571013"><a name="p4937164571013"></a><a name="p4937164571013"></a>1:1.2.11.dfsg-2ubuntu9.2 amd64</p>
+</td>
+</tr>
+<tr id="row9448132195714"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p1644816220578"><a name="p1644816220578"></a><a name="p1644816220578"></a>5</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p14448102135718"><a name="p14448102135718"></a><a name="p14448102135718"></a>lib32stdc++6</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p16937445101014"><a name="p16937445101014"></a><a name="p16937445101014"></a>12.3.0-1ubuntu1~22.04 amd64</p>
+</td>
+</tr>
+<tr id="row6448112175715"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p1044822135715"><a name="p1044822135715"></a><a name="p1044822135715"></a>6</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p7448825579"><a name="p7448825579"></a><a name="p7448825579"></a>zlib1g-dev</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p1293744581016"><a name="p1293744581016"></a><a name="p1293744581016"></a>1:1.2.11.dfsg-2ubuntu9.2 amd64</p>
+</td>
+</tr>
+<tr id="row7448152195714"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p1844812155714"><a name="p1844812155714"></a><a name="p1844812155714"></a>7</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p1448921579"><a name="p1448921579"></a><a name="p1448921579"></a>libncurses5-dev</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p1093794510106"><a name="p1093794510106"></a><a name="p1093794510106"></a>6.3-2ubuntu0.1 amd64</p>
+</td>
+</tr>
+<tr id="row04481023573"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p1544814255711"><a name="p1544814255711"></a><a name="p1544814255711"></a>8</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p13448172175717"><a name="p13448172175717"></a><a name="p13448172175717"></a>autopoint</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p79371045171012"><a name="p79371045171012"></a><a name="p79371045171012"></a>0.21-4ubuntu4</p>
+</td>
+</tr>
+<tr id="row94488245718"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p1944882105716"><a name="p1944882105716"></a><a name="p1944882105716"></a>9</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p944862115712"><a name="p944862115712"></a><a name="p944862115712"></a>ncurses-term</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p13937194571019"><a name="p13937194571019"></a><a name="p13937194571019"></a>6.3-2ubuntu0.1 amd64</p>
+</td>
+</tr>
+<tr id="row164483211575"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p1544932125715"><a name="p1544932125715"></a><a name="p1544932125715"></a>10</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p124494295714"><a name="p124494295714"></a><a name="p124494295714"></a>libncursesw5-dev</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p129376457101"><a name="p129376457101"></a><a name="p129376457101"></a>6.3-2ubuntu0.1 amd64</p>
+</td>
+</tr>
+<tr id="row344914212575"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p1044914255713"><a name="p1044914255713"></a><a name="p1044914255713"></a>11</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p12449182155711"><a name="p12449182155711"></a><a name="p12449182155711"></a>g++</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p993715457108"><a name="p993715457108"></a><a name="p993715457108"></a>4:11.2.0-1ubuntu1 amd64</p>
+</td>
+</tr>
+<tr id="row344915225718"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p144492213571"><a name="p144492213571"></a><a name="p144492213571"></a>12</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p94494216573"><a name="p94494216573"></a><a name="p94494216573"></a>u-boot-tools</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p99372458103"><a name="p99372458103"></a><a name="p99372458103"></a>2022.01+dfsg-2ubuntu2.6 amd64</p>
+</td>
+</tr>
+<tr id="row1644916235712"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p344913218579"><a name="p344913218579"></a><a name="p344913218579"></a>13</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p54496212575"><a name="p54496212575"></a><a name="p54496212575"></a>texinfo</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p13937114521019"><a name="p13937114521019"></a><a name="p13937114521019"></a>6.8-4build1 amd64</p>
+</td>
+</tr>
+<tr id="row8449182165715"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p174497219572"><a name="p174497219572"></a><a name="p174497219572"></a>14</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p19449822576"><a name="p19449822576"></a><a name="p19449822576"></a>gawk</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p139381457108"><a name="p139381457108"></a><a name="p139381457108"></a>1:5.1.0-1ubuntu0.1 amd64</p>
+</td>
+</tr>
+<tr id="row16449192145710"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p2449122185718"><a name="p2449122185718"></a><a name="p2449122185718"></a>15</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p744910210577"><a name="p744910210577"></a><a name="p744910210577"></a>libssl-dev</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p19381545131019"><a name="p19381545131019"></a><a name="p19381545131019"></a>3.0.2-0ubuntu1.19 amd64</p>
+</td>
+</tr>
+<tr id="row1844917215711"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p644992165711"><a name="p644992165711"></a><a name="p644992165711"></a>16</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p744992125712"><a name="p744992125712"></a><a name="p744992125712"></a>openssl</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p179387452100"><a name="p179387452100"></a><a name="p179387452100"></a>3.0.2-0ubuntu1.19 amd64</p>
+</td>
+</tr>
+<tr id="row14498214576"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p114492210575"><a name="p114492210575"></a><a name="p114492210575"></a>17</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p844910225711"><a name="p844910225711"></a><a name="p844910225711"></a>bc</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p49386452108"><a name="p49386452108"></a><a name="p49386452108"></a>1.07.1-3build1 amd64</p>
+</td>
+</tr>
+<tr id="row16449429574"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p15449122115713"><a name="p15449122115713"></a><a name="p15449122115713"></a>18</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p1449425571"><a name="p1449425571"></a><a name="p1449425571"></a>p7zip-full</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p5938184513102"><a name="p5938184513102"></a><a name="p5938184513102"></a>16.02+dfsg-8 amd64</p>
+</td>
+</tr>
+<tr id="row154491323578"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p1244918235712"><a name="p1244918235712"></a><a name="p1244918235712"></a>19</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p345017275716"><a name="p345017275716"></a><a name="p345017275716"></a>gperf</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p3938345191018"><a name="p3938345191018"></a><a name="p3938345191018"></a>3.1-1build1 amd64</p>
+</td>
+</tr>
+<tr id="row1445020265713"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p16450102115711"><a name="p16450102115711"></a><a name="p16450102115711"></a>20</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p1450122573"><a name="p1450122573"></a><a name="p1450122573"></a>bison</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p1993864511014"><a name="p1993864511014"></a><a name="p1993864511014"></a>2:3.8.2+dfsg-1build1 amd64</p>
+</td>
+</tr>
+<tr id="row545010218576"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p104507245713"><a name="p104507245713"></a><a name="p104507245713"></a>21</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p8450520573"><a name="p8450520573"></a><a name="p8450520573"></a>flex</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p169388457104"><a name="p169388457104"></a><a name="p169388457104"></a>2.6.4-8build2 amd64</p>
+</td>
+</tr>
+<tr id="row545092105711"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p14450102195712"><a name="p14450102195712"></a><a name="p14450102195712"></a>22</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p1245032195719"><a name="p1245032195719"></a><a name="p1245032195719"></a>diffutils</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p79381345131014"><a name="p79381345131014"></a><a name="p79381345131014"></a>1:3.8-0ubuntu2</p>
+</td>
+</tr>
+<tr id="row945092165714"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p20450102145714"><a name="p20450102145714"></a><a name="p20450102145714"></a>23</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p84507215573"><a name="p84507215573"></a><a name="p84507215573"></a>git</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p16938104541013"><a name="p16938104541013"></a><a name="p16938104541013"></a>1:2.34.1-1ubuntu1.12 amd64</p>
+</td>
+</tr>
+<tr id="row34505265714"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p44509275714"><a name="p44509275714"></a><a name="p44509275714"></a>24</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p11450192165717"><a name="p11450192165717"></a><a name="p11450192165717"></a>unzip</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p18938945191011"><a name="p18938945191011"></a><a name="p18938945191011"></a>6.0-26ubuntu3.2 amd64</p>
+</td>
+</tr>
+<tr id="row154501295719"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p24501628573"><a name="p24501628573"></a><a name="p24501628573"></a>25</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p11450326572"><a name="p11450326572"></a><a name="p11450326572"></a>libffi-dev</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p893844521013"><a name="p893844521013"></a><a name="p893844521013"></a>3.4.2-4</p>
+</td>
+</tr>
+<tr id="row194501210578"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p7450162195717"><a name="p7450162195717"></a><a name="p7450162195717"></a>26</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p74502213570"><a name="p74502213570"></a><a name="p74502213570"></a>libtool</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p11939545141016"><a name="p11939545141016"></a><a name="p11939545141016"></a>2.4.6-15build2 amd64</p>
+</td>
+</tr>
+<tr id="row34504212578"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p1845015235711"><a name="p1845015235711"></a><a name="p1845015235711"></a>27</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p4450152125712"><a name="p4450152125712"></a><a name="p4450152125712"></a>libfreetype6</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p29391345121011"><a name="p29391345121011"></a><a name="p29391345121011"></a>2.11.1+dfsg-1ubuntu0.3 amd64</p>
+</td>
+</tr>
+<tr id="row645115211577"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p114516295714"><a name="p114516295714"></a><a name="p114516295714"></a>28</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p845111255719"><a name="p845111255719"></a><a name="p845111255719"></a>liblzo2-dev</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p1693984511018"><a name="p1693984511018"></a><a name="p1693984511018"></a>2.10-2build3 amd64</p>
+</td>
+</tr>
+<tr id="row194515213573"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p16451192135714"><a name="p16451192135714"></a><a name="p16451192135714"></a>29</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p14511624571"><a name="p14511624571"></a><a name="p14511624571"></a>uuid-dev</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p2939145141016"><a name="p2939145141016"></a><a name="p2939145141016"></a>2.37.2-4ubuntu3.4 amd64</p>
+</td>
+</tr>
+<tr id="row16451623577"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p1145115205719"><a name="p1145115205719"></a><a name="p1145115205719"></a>30</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p745192175714"><a name="p745192175714"></a><a name="p745192175714"></a>pkg-config</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p20939134511101"><a name="p20939134511101"></a><a name="p20939134511101"></a>0.29.2-1ubuntu3 amd64</p>
+</td>
+</tr>
+<tr id="row745113295716"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p1645116218574"><a name="p1645116218574"></a><a name="p1645116218574"></a>31</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p164515295714"><a name="p164515295714"></a><a name="p164515295714"></a>automake</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p7939945161015"><a name="p7939945161015"></a><a name="p7939945161015"></a>1:1.16.5-1.3</p>
+</td>
+</tr>
+<tr id="row15451323578"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p145119215578"><a name="p145119215578"></a><a name="p145119215578"></a>32</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p545120216573"><a name="p545120216573"></a><a name="p545120216573"></a>texlive</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p17939545111011"><a name="p17939545111011"></a><a name="p17939545111011"></a>2021.20220204-1</p>
+</td>
+</tr>
+<tr id="row645120211572"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p3451112145719"><a name="p3451112145719"></a><a name="p3451112145719"></a>33</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p144518265720"><a name="p144518265720"></a><a name="p144518265720"></a>vim</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p19391345131015"><a name="p19391345131015"></a><a name="p19391345131015"></a>2:8.2.3995-1ubuntu2.23 amd64</p>
+</td>
+</tr>
+<tr id="row34511212574"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p445112145713"><a name="p445112145713"></a><a name="p445112145713"></a>34</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p1445111255712"><a name="p1445111255712"></a><a name="p1445111255712"></a>sudo</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p4939174511019"><a name="p4939174511019"></a><a name="p4939174511019"></a>1.9.9-1ubuntu2.4 amd64</p>
+</td>
+</tr>
+<tr id="row34515210577"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p5451925576"><a name="p5451925576"></a><a name="p5451925576"></a>35</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p54516215719"><a name="p54516215719"></a><a name="p54516215719"></a>fakeroot</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p1293914453104"><a name="p1293914453104"></a><a name="p1293914453104"></a>1.28-1ubuntu1 amd64</p>
+</td>
+</tr>
+<tr id="row114528245710"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p174521125579"><a name="p174521125579"></a><a name="p174521125579"></a>36</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p745213265717"><a name="p745213265717"></a><a name="p745213265717"></a>python3</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p2939164511102"><a name="p2939164511102"></a><a name="p2939164511102"></a>3.10.12</p>
+</td>
+</tr>
+<tr id="row1245213213570"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p10452025576"><a name="p10452025576"></a><a name="p10452025576"></a>37</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p1245218285719"><a name="p1245218285719"></a><a name="p1245218285719"></a>wheel</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p199391545181012"><a name="p199391545181012"></a><a name="p199391545181012"></a>0.36.2</p>
+</td>
+</tr>
+<tr id="row34521325577"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p945210265717"><a name="p945210265717"></a><a name="p945210265717"></a>38</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p154521927577"><a name="p154521927577"></a><a name="p154521927577"></a>pycryptodome</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p129401345101014"><a name="p129401345101014"></a><a name="p129401345101014"></a>3.9.8</p>
+</td>
+</tr>
+<tr id="row164526219574"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p20452112105714"><a name="p20452112105714"></a><a name="p20452112105714"></a>39</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p124528213574"><a name="p124528213574"></a><a name="p124528213574"></a>pyelftools</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p16940154591011"><a name="p16940154591011"></a><a name="p16940154591011"></a>0.27</p>
+</td>
+</tr>
+<tr id="row3452126575"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p11452162135717"><a name="p11452162135717"></a><a name="p11452162135717"></a>40</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p2452112155717"><a name="p2452112155717"></a><a name="p2452112155717"></a>cryptography</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p13940145121017"><a name="p13940145121017"></a><a name="p13940145121017"></a>3.4.8</p>
+</td>
+</tr>
+<tr id="row15452527577"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p154526218575"><a name="p154526218575"></a><a name="p154526218575"></a>41</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p445214213576"><a name="p445214213576"></a><a name="p445214213576"></a>po4a</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p945216218570"><a name="p945216218570"></a><a name="p945216218570"></a>0.66-1</p>
+</td>
+</tr>
+<tr id="row1074115218291"><td class="cellrowborder" valign="top" width="25.060606060606062%" headers="mcps1.2.4.1.1 "><p id="p87421921112913"><a name="p87421921112913"></a><a name="p87421921112913"></a>42</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.09090909090909%" headers="mcps1.2.4.1.2 "><p id="p37421521182912"><a name="p37421521182912"></a><a name="p37421521182912"></a>genromfs</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.848484848484844%" headers="mcps1.2.4.1.3 "><p id="p5742132116292"><a name="p5742132116292"></a><a name="p5742132116292"></a>0.5.2</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="缩略语">缩略语<a name="ZH-CN_TOPIC_0000001822520649"></a></h2>
+<p><a name="table7651953607"></a></p>
+<table><tbody><tr id="row1414605310012"><td class="cellrowborder" colspan="3" valign="top"><p id="p111463531014"><a name="p111463531014"></a><a name="p111463531014"></a><strong id="b727016151019"><a name="b727016151019"></a><a name="b727016151019"></a>A</strong></p>
+</td>
+</tr>
+<tr id="row01461653700"><td class="cellrowborder" valign="top" width="33.33333333333333%"><p id="p17146853300"><a name="p17146853300"></a><a name="p17146853300"></a>ARM</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.3033303330333%"><p id="p141464538014"><a name="p141464538014"></a><a name="p141464538014"></a>Advanced RISC Machine</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.36333633363336%"><p id="p3146155320017"><a name="p3146155320017"></a><a name="p3146155320017"></a>ARM公司指令集</p>
+</td>
+</tr>
+<tr id="row2147155310019"><td class="cellrowborder" colspan="3" valign="top"><p id="p20147135317011"><a name="p20147135317011"></a><a name="p20147135317011"></a><strong id="b115411175118"><a name="b115411175118"></a><a name="b115411175118"></a>C</strong></p>
+</td>
+</tr>
+<tr id="row141478531903"><td class="cellrowborder" valign="top" width="33.33333333333333%"><p id="p814717536018"><a name="p814717536018"></a><a name="p814717536018"></a>CRAMFS</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.3033303330333%"><p id="p214715537011"><a name="p214715537011"></a><a name="p214715537011"></a>Compressed RAM file system</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.36333633363336%"><p id="p0147105317014"><a name="p0147105317014"></a><a name="p0147105317014"></a>压缩RAM文件系统</p>
+</td>
+</tr>
+<tr id="row714710537020"><td class="cellrowborder" colspan="3" valign="top"><p id="p414745310011"><a name="p414745310011"></a><a name="p414745310011"></a><strong id="b930917183111"><a name="b930917183111"></a><a name="b930917183111"></a>D</strong></p>
+</td>
+</tr>
+<tr id="row11147153504"><td class="cellrowborder" valign="top" width="33.33333333333333%"><p id="p16147853004"><a name="p16147853004"></a><a name="p16147853004"></a>DMS</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.3033303330333%"><p id="p01474537014"><a name="p01474537014"></a><a name="p01474537014"></a>Digital Media Solution</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.36333633363336%"><p id="p21476531302"><a name="p21476531302"></a><a name="p21476531302"></a>媒体解决方案平台</p>
+</td>
+</tr>
+<tr id="row61470536019"><td class="cellrowborder" colspan="3" valign="top"><p id="p151476531203"><a name="p151476531203"></a><a name="p151476531203"></a><strong id="b189888191016"><a name="b189888191016"></a><a name="b189888191016"></a>E</strong></p>
+</td>
+</tr>
+<tr id="row914714531807"><td class="cellrowborder" valign="top" width="33.33333333333333%"><p id="p01471953908"><a name="p01471953908"></a><a name="p01471953908"></a>ELF</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.3033303330333%"><p id="p14147135313014"><a name="p14147135313014"></a><a name="p14147135313014"></a>Executable and Linkable Format</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.36333633363336%"><p id="p12147145311018"><a name="p12147145311018"></a><a name="p12147145311018"></a>可执行连接格式文件</p>
+</td>
+</tr>
+<tr id="row17147953709"><td class="cellrowborder" colspan="3" valign="top"><p id="p17147853408"><a name="p17147853408"></a><a name="p17147853408"></a><strong id="b17114216120"><a name="b17114216120"></a><a name="b17114216120"></a>G</strong></p>
+</td>
+</tr>
+<tr id="row1014755313014"><td class="cellrowborder" valign="top" width="33.33333333333333%"><p id="p151481532015"><a name="p151481532015"></a><a name="p151481532015"></a>GCC</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.3033303330333%"><p id="p2014812531707"><a name="p2014812531707"></a><a name="p2014812531707"></a>GNU Complier Collection</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.36333633363336%"><p id="p111481253102"><a name="p111481253102"></a><a name="p111481253102"></a>GNU编译器集合</p>
+</td>
+</tr>
+<tr id="row314814531106"><td class="cellrowborder" valign="top" width="33.33333333333333%"><p id="p814811531602"><a name="p814811531602"></a><a name="p814811531602"></a>GNU</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.3033303330333%"><p id="p614816531011"><a name="p614816531011"></a><a name="p614816531011"></a>GNU’s Not UNIX</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.36333633363336%"><p id="p614875317012"><a name="p614875317012"></a><a name="p614875317012"></a>GNU</p>
+</td>
+</tr>
+<tr id="row111485531303"><td class="cellrowborder" colspan="3" valign="top"><p id="p4148135310012"><a name="p4148135310012"></a><a name="p4148135310012"></a><strong id="b188125234114"><a name="b188125234114"></a><a name="b188125234114"></a>I</strong></p>
+</td>
+</tr>
+<tr id="row91481553409"><td class="cellrowborder" valign="top" width="33.33333333333333%"><p id="p1214810537011"><a name="p1214810537011"></a><a name="p1214810537011"></a>IP</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.3033303330333%"><p id="p671441915452"><a name="p671441915452"></a><a name="p671441915452"></a>Internet Protocol</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.36333633363336%"><p id="p12148753305"><a name="p12148753305"></a><a name="p12148753305"></a>Internet协议</p>
+</td>
+</tr>
+<tr id="row51481531904"><td class="cellrowborder" colspan="3" valign="top"><p id="p714814532012"><a name="p714814532012"></a><a name="p714814532012"></a><strong id="b854822613115"><a name="b854822613115"></a><a name="b854822613115"></a>J</strong></p>
+</td>
+</tr>
+<tr id="row51481531604"><td class="cellrowborder" valign="top" width="33.33333333333333%"><p id="p17148953305"><a name="p17148953305"></a><a name="p17148953305"></a>jffs2</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.3033303330333%"><p id="p191484531301"><a name="p191484531301"></a><a name="p191484531301"></a>Journalling FLASH File System v2</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.36333633363336%"><p id="p1214812531402"><a name="p1214812531402"></a><a name="p1214812531402"></a>一种Flash文件系统</p>
+</td>
+</tr>
+<tr id="row141481453802"><td class="cellrowborder" valign="top" width="33.33333333333333%"><p id="p171488532012"><a name="p171488532012"></a><a name="p171488532012"></a>JTAG</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.3033303330333%"><p id="p11480531901"><a name="p11480531901"></a><a name="p11480531901"></a>Joint Test Action Group</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.36333633363336%"><p id="p1714835313011"><a name="p1714835313011"></a><a name="p1714835313011"></a>联合测试行动组</p>
+</td>
+</tr>
+<tr id="row81482531017"><td class="cellrowborder" colspan="3" valign="top"><p id="p15148195311017"><a name="p15148195311017"></a><a name="p15148195311017"></a><strong id="b155711627814"><a name="b155711627814"></a><a name="b155711627814"></a>P</strong></p>
+</td>
+</tr>
+<tr id="row19149175311014"><td class="cellrowborder" valign="top" width="33.33333333333333%"><p id="p11149453801"><a name="p11149453801"></a><a name="p11149453801"></a>PC</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.3033303330333%"><p id="p5149195311010"><a name="p5149195311010"></a><a name="p5149195311010"></a>Personal Computer</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.36333633363336%"><p id="p3149653804"><a name="p3149653804"></a><a name="p3149653804"></a>个人计算机</p>
+</td>
+</tr>
+<tr id="row201491253808"><td class="cellrowborder" colspan="3" valign="top"><p id="p191498530015"><a name="p191498530015"></a><a name="p191498530015"></a><strong id="b62672291011"><a name="b62672291011"></a><a name="b62672291011"></a>S</strong></p>
+</td>
+</tr>
+<tr id="row19149153205"><td class="cellrowborder" valign="top" width="33.33333333333333%"><p id="p1114913531907"><a name="p1114913531907"></a><a name="p1114913531907"></a>SDRAM</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.3033303330333%"><p id="p2149053704"><a name="p2149053704"></a><a name="p2149053704"></a>Synchronous Dynamic Random Access Memory</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.36333633363336%"><p id="p41496531406"><a name="p41496531406"></a><a name="p41496531406"></a>同步动态随机存储器</p>
+</td>
+</tr>
+<tr id="row414913538019"><td class="cellrowborder" valign="top" width="33.33333333333333%"><p id="p214914531304"><a name="p214914531304"></a><a name="p214914531304"></a>SDK</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.3033303330333%"><p id="p18149453508"><a name="p18149453508"></a><a name="p18149453508"></a>Software Development Kit</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.36333633363336%"><p id="p12149553307"><a name="p12149553307"></a><a name="p12149553307"></a>软件开发工具集</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+
+  <div class="footer-box">
+    <div class="footer-list">
+      
+      
+      <div class="footer-list-child">
+        <a href="https://www.hisilicon.com/cn" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/home" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开发者网站</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://gitcode.com/HiSpark" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开源社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developer.huawei.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">华为开发者官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hikunpeng.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">鲲鹏社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hiascend.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">昇腾社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/aboutus" target="_blank" class="footer-nav-first" rel="noopener noreferrer">关于我们</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/login" target="_blank" class="footer-nav-first" rel="noopener noreferrer">投诉举报</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      
+    </div>
+    <div class="footer-fix">
+      <div class="footer-fix-content">
+        <div>
+          <span class="footer-copyright">&nbsp;&copy;2024 华为技术有限公司</span>
+          <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer">粤A2-20044005号</a>
+          <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702004153"
+            target="_blank" rel="noopener noreferrer">粤公网安备44030702004153号</a>
+        </div>
+        <div class="footer-name-list">
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/legalNotices" target="_blank" class="footer-name" rel="noopener noreferrer">法律声明</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/cookie-policy" target="_blank" class="footer-name" rel="noopener noreferrer">关于Cookie</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/privacyPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">隐私政策</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/userPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">用户协议</a>
+          
+          
+          
+          <a href="javascript:void(0);" onclick="openDisclaimerDialog()" class="footer-name">免责声明</a>
+          
+          
+          
+        </div>
+      </div>
+
+
+      <!-- 免责声明弹窗 -->
+      <div id="disclaimerDialog" class="disclaimer-overlay" style="display: none;">
+        <div class="disclaimer-dialog">
+          <div class="disclaimer-dialog__header">
+            <span class="disclaimer-dialog__title">免责声明</span>
+            <button class="disclaimer-dialog__close" onclick="closeDisclaimerDialog()">×</button>
+          </div>
+          <div class="disclaimer-dialog__body">
+            <p class="disclaimer-dialog__text-center"><strong>海思开发者网站免责声明</strong></p>
+            <p>尊敬的用户，您好：</p>
+            <p>&nbsp; &nbsp;
+              请确保您通过本平台向海思提供或反馈的任何信息或意见不侵犯第三方知识产权和/或合法权益。如您提供或反馈的上述任何信息或意见侵犯第三方知识产权和/或合法权益，和/或给第三方造成损害的，您将承担全部法律及赔偿责任。
+            </p>
+          </div>
+          <div class="disclaimer-dialog__footer">
+            <button class="disclaimer-dialog__btn" onclick="closeDisclaimerDialog()">关闭</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function openDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'flex';
+        }
+        function closeDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'none';
+        }
+        // 点击弹窗背景关闭
+        document.getElementById('disclaimerDialog').addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeDisclaimerDialog();
+          }
+        });
+      </script>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../static/js/custom.js"></script>
+      
+        <script src="../../../static/js/version-selector.js"></script>
+      
+        <script src="../../../static/js/code-highlight.js"></script>
+      
+        <script src="../../../static/js/wavedrom-skin.js"></script>
+      
+        <script src="../../../static/js/wavedrom.min.js"></script>
+      
+        <script src="../../../static/js/wavedrom-init.js"></script>
+      
+        <script src="../../../static/js/no-flash.js"></script>
+      
+    
+  </body>
+</html>

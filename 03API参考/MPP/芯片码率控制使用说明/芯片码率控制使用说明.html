@@ -1,0 +1,3152 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hi3516CV610 超高清智慧视觉 SoC 文档中心">
+      
+      
+        <meta name="author" content="HiSpark">
+      
+      
+        <link rel="canonical" href="https://hivsdev.github.io/Hi3516CV610_doc/03API%E5%8F%82%E8%80%83/MPP/%E8%8A%AF%E7%89%87%E7%A0%81%E7%8E%87%E6%8E%A7%E5%88%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/%E8%8A%AF%E7%89%87%E7%A0%81%E7%8E%87%E6%8E%A7%E5%88%B6%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../static/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>前言 - Hi3516CV610 开发者中心</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+    
+    
+      <link rel="stylesheet" href="../../../static/css/extra.css">
+    
+      <link rel="stylesheet" href="../../../static/css/version-selector.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+      <meta name="gitcode-issues-url" content="https://gitcode.com/HiSpark/fbb_ws63/issues">
+      
+      <link rel="dns-prefetch" href="https://docs.hisilicon.com">
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://docs.hisilicon.com" crossorigin>
+      <link rel="preload" href="../../../assets/stylesheets/main.484c7ddc.min.css" as="style">
+      <link rel="preload" href="../../../assets/stylesheets/palette.ab4e12ef.min.css" as="style">
+      <link rel="preload" href="../../../static/css/extra.css" as="style">
+      <link rel="preload" href="../../../assets/javascripts/bundle.79ae519e.min.js" as="script">
+      <link rel="preload" href="../../../static/js/custom.js" as="script">
+
+      
+      
+        
+        
+      
+      <style>:root{--md-text-font:"Helvetica Neue, PingFang SC, Microsoft YaHei";--md-code-font:"Consolas, Roboto Mono"}</style>
+      <script>
+        // 防止宽窄屏刷新闪烁 — 在 body 解析前就读取 localStorage 标记 <html>
+        // 配合 CSS: html.prefer-narrow .md-grid 在首帧即应用 76%
+        if (localStorage.getItem('wideScreen') === 'false') {
+          document.documentElement.classList.add('prefer-narrow');
+        }
+      </script>
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#前言" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="https://developers.hisilicon.com" title="Hi3516CV610 开发者中心" class="md-header__button md-logo" aria-label="Hi3516CV610 开发者中心" data-md-component="logo" target="_blank" rel="noopener noreferrer">
+      <img 
+  src="../../../static/images/light-icon.png" 
+  class="md-logo__img md-logo__img--light"
+  alt="Hi3516CV610 开发者中心" 
+/>
+<img 
+  src="../../../static/images/dark-icon.png" 
+  class="md-logo__img md-logo__img--dark"
+  alt="Hi3516CV610 开发者中心" 
+/>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+      </div>
+    </div>
+    
+      
+      
+        <label class="md-header__button md-icon md-header__button--search" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+      
+    
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="切换到暗色主题"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色主题" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="切换到亮色主题"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色主题" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <div class="md-header__source">
+        <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="前往仓库" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+      </div>
+    
+  </nav>
+  
+  
+    
+    
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        <!-- 
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+         -->
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+</header>
+
+
+<script>
+  var USER_DEFINED_OPTIONS = {
+    REPO_PATH: "Hi3516CV610_doc",
+    ROOT_URL: "https://docs.hisilicon.com/projects"
+  };
+  var DOCUMENTATION_OPTIONS = {
+    VERSION: "master",
+    // 构建时声明主题的语言
+    LANGUAGE: "zh"
+  };
+</script>
+<script src="https://docs.hisilicon.com/projects/version/hispark_version.js"></script>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="sidebar-selectors">
+                  <div class="repo-select custom-select">
+                    <span class="select-label">芯片</span>
+                    <div class="repo-selector" title="">
+                      <span class="repo-readOnly"></span>
+                      <select id="repo-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="repo-options" style="display:none"></ul>
+                  </div>
+                  <div class="version-select custom-select">
+                    <span class="select-label">版本</span>
+                    <div class="version-selector" title="">
+                      <span class="version-readOnly"></span>
+                      <select id="version-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="version-options" style="display:none"></ul>
+                  </div>
+                  
+                    
+                    
+                      <div class="sidebar-search">
+                        <label class="sidebar-search__button" for="__search">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+                          <span>全文检索</span>
+                        </label>
+                      </div>
+                    
+                  
+                </div>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  
+    <div class="md-nav__source">
+      <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="前往仓库" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../00%E6%A6%82%E8%A7%88/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整体架构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考案例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../05%E7%A1%AC%E4%BB%B6%E6%8C%87%E5%8D%97/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具中心
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../07FAQ/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../08%E5%85%B6%E4%BB%96/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#前言_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#码率控制参数的意义和使用方法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        码率控制参数的意义和使用方法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="码率控制参数的意义和使用方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#CBR参数说明及使用方法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CBR参数说明及使用方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#VBR参数说明及使用方法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VBR参数说明及使用方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ABR参数说明及使用方法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ABR参数说明及使用方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AVBR参数说明及使用方法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AVBR参数说明及使用方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#QVBR参数说明及使用方法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        QVBR参数说明及使用方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#CVBR参数说明及使用方法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CVBR参数说明及使用方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#宏块级码率控制参数说明及使用方法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        宏块级码率控制参数说明及使用方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#码率过高丢帧参数及使用说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        码率过高丢帧参数及使用说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#超大帧策略高级参数及使用说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        超大帧策略高级参数及使用说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#GOP结构参数的意义和使用方法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GOP结构参数的意义和使用方法
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="GOP结构参数的意义和使用方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#单参考P帧GOP结构属性说明及使用方法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        单参考P帧GOP结构属性说明及使用方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#双参考P帧GOP结构属性说明及使用方法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        双参考P帧GOP结构属性说明及使用方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#智能P帧GOP结构属性说明及使用方法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        智能P帧GOP结构属性说明及使用方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#B帧GOP结构参数说明及使用方法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        B帧GOP结构参数说明及使用方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#码率控制专题" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        码率控制专题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="码率控制专题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#码率更稳定" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        码率更稳定
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#图像质量提升" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        图像质量提升
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#调节呼吸效应" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        调节呼吸效应
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#限制I帧幅度" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        限制I帧幅度
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#减少运动拖影和色度拖影" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        减少运动拖影和色度拖影
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#码率控制的起始QP" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        码率控制的起始QP
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#VBR、AVBR、CVBR和QVBR的运行机制" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VBR、AVBR、CVBR和QVBR的运行机制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#VBR、AVBR、CBR和CVBR的差异" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VBR、AVBR、CBR和CVBR的差异
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#低码率场景" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        低码率场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#注意事项" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        注意事项
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="前言">前言<a name="ZH-CN_TOPIC_0000001476692669"></a></h1>
+<h2 id="前言_1">前言<a name="ZH-CN_TOPIC_0000001476692669"></a></h2>
+<p><strong>概述<a name="section143mcpsimp"></a></strong></p>
+<p>本文档主要介绍芯片码率控制的参数意义和使用方法。对码率控制中常见的问题，特别是低码率场景的参数调节方法做了专题介绍。</p>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+未有特殊说明，Hi3516DV500、Hi3516CV610、Hi3511CV100与Hi3519DV500内容完全一致。</p>
+</blockquote>
+<p><strong>产品版本<a name="section146mcpsimp"></a></strong></p>
+<p>与本文档相对应的产品版本如下。</p>
+<p><a name="table149mcpsimp"></a></p>
+<table><thead align="left"><tr id="row154mcpsimp"><th class="cellrowborder" valign="top" width="32%" id="mcps1.1.3.1.1"><p id="p156mcpsimp"><a name="p156mcpsimp"></a><a name="p156mcpsimp"></a>产品名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="68%" id="mcps1.1.3.1.2"><p id="p158mcpsimp"><a name="p158mcpsimp"></a><a name="p158mcpsimp"></a>产品版本</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row160mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p162mcpsimp"><a name="p162mcpsimp"></a><a name="p162mcpsimp"></a>Hi3519D</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p xml:lang="fr-FR" id="p164mcpsimp"><a name="p164mcpsimp"></a><a name="p164mcpsimp"></a>V500</p>
+</td>
+</tr>
+<tr id="row208622017173912"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p2190mcpsimp"><a name="p2190mcpsimp"></a><a name="p2190mcpsimp"></a>Hi3516D</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p2192mcpsimp"><a name="p2192mcpsimp"></a><a name="p2192mcpsimp"></a>V500</p>
+</td>
+</tr>
+<tr id="row124471035111613"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p63331555172315"><a name="p63331555172315"></a><a name="p63331555172315"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p141352132417"><a name="p141352132417"></a><a name="p141352132417"></a>V608</p>
+</td>
+</tr>
+<tr id="row1568682511310"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p668672510138"><a name="p668672510138"></a><a name="p668672510138"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p66862258133"><a name="p66862258133"></a><a name="p66862258133"></a>V610</p>
+</td>
+</tr>
+<tr id="row1642813910810"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p7428198810"><a name="p7428198810"></a><a name="p7428198810"></a>Hi3511C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p9428091683"><a name="p9428091683"></a><a name="p9428091683"></a>V100</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>读者对象<a name="section170mcpsimp"></a></strong></p>
+<p>本文档（本指南）主要适用于以下工程师：</p>
+<ul>
+<li>技术支持工程师</li>
+<li>软件开发工程师</li>
+</ul>
+<p><strong>修订记录<a name="section176mcpsimp"></a></strong></p>
+<p>修订记录累积了每次文档更新的说明。最新版本的文档包含以前所有文档版本的更新内容。</p>
+<p><a name="table126443203200"></a></p>
+<table><thead align="left"><tr id="row264516207203"><th class="cellrowborder" valign="top" width="20.7%" id="mcps1.1.4.1.1"><p id="p146456203200"><a name="p146456203200"></a><a name="p146456203200"></a><strong id="b8645172022010"><a name="b8645172022010"></a><a name="b8645172022010"></a>文档版本</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="26.14%" id="mcps1.1.4.1.2"><p id="p364512062019"><a name="p364512062019"></a><a name="p364512062019"></a><strong id="b1464512200200"><a name="b1464512200200"></a><a name="b1464512200200"></a>发布日期</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="53.16%" id="mcps1.1.4.1.3"><p id="p664522018206"><a name="p664522018206"></a><a name="p664522018206"></a><strong id="b156451420152010"><a name="b156451420152010"></a><a name="b156451420152010"></a>修改说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row56451520182017"><td class="cellrowborder" valign="top" width="20.7%" headers="mcps1.1.4.1.1 "><p id="p1564572014209"><a name="p1564572014209"></a><a name="p1564572014209"></a>00B01</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.14%" headers="mcps1.1.4.1.2 "><p id="p126451920132014"><a name="p126451920132014"></a><a name="p126451920132014"></a><span id="ph9498541201913"><a name="ph9498541201913"></a><a name="ph9498541201913"></a>2026-06-30</span></p>
+</td>
+<td class="cellrowborder" valign="top" width="53.16%" headers="mcps1.1.4.1.3 "><p id="p1664582017209"><a name="p1664582017209"></a><a name="p1664582017209"></a>第1次临时版本发布。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="码率控制参数的意义和使用方法">码率控制参数的意义和使用方法<a name="ZH-CN_TOPIC_0000001476373173"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001476373165">CBR参数说明及使用方法</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001476373169">VBR参数说明及使用方法</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001688106409">ABR参数说明及使用方法</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001476532897">AVBR参数说明及使用方法</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001476812621">QVBR参数说明及使用方法</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001426773182">CVBR参数说明及使用方法</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001426296320">宏块级码率控制参数说明及使用方法</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001426773186">码率过高丢帧参数及使用说明</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001476532893">超大帧策略高级参数及使用说明</a></strong>  </p>
+</li>
+</ul>
+<h3 id="CBR参数说明及使用方法">CBR参数说明及使用方法<a name="ZH-CN_TOPIC_0000001476373165"></a></h3>
+<p>CBR参数说明如<a href="#_Ref435623600">表1</a>和<a href="#_Ref435623628">表2</a>所示。</p>
+<p><strong>表 1</strong>  CBR属性</p>
+<p><a name="_Ref435623600"></a></p>
+<table><thead align="left"><tr id="row196mcpsimp"><th class="cellrowborder" valign="top" width="24%" id="mcps1.2.5.1.1"><p id="p198mcpsimp"><a name="p198mcpsimp"></a><a name="p198mcpsimp"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="24%" id="mcps1.2.5.1.2"><p id="p200mcpsimp"><a name="p200mcpsimp"></a><a name="p200mcpsimp"></a>说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="39%" id="mcps1.2.5.1.3"><p id="p202mcpsimp"><a name="p202mcpsimp"></a><a name="p202mcpsimp"></a>应用场景</p>
+</th>
+<th class="cellrowborder" valign="top" width="13%" id="mcps1.2.5.1.4"><p id="p204mcpsimp"><a name="p204mcpsimp"></a><a name="p204mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row205mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p id="p207mcpsimp"><a name="p207mcpsimp"></a><a name="p207mcpsimp"></a>gop</p>
+</td>
+<td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.2 "><p id="p209mcpsimp"><a name="p209mcpsimp"></a><a name="p209mcpsimp"></a>I帧间隔。</p>
+</td>
+<td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.5.1.3 "><p id="p211mcpsimp"><a name="p211mcpsimp"></a><a name="p211mcpsimp"></a>一般设置为输出帧率的整数倍</p>
+</td>
+<td class="cellrowborder" valign="top" width="13%" headers="mcps1.2.5.1.4 "><p id="p213mcpsimp"><a name="p213mcpsimp"></a><a name="p213mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row214mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p id="p216mcpsimp"><a name="p216mcpsimp"></a><a name="p216mcpsimp"></a>stats_time</p>
+</td>
+<td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.2 "><p id="p218mcpsimp"><a name="p218mcpsimp"></a><a name="p218mcpsimp"></a>统计时间, 以秒为单位。</p>
+</td>
+<td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.5.1.3 "><p id="p220mcpsimp"><a name="p220mcpsimp"></a><a name="p220mcpsimp"></a>一般场景设置为（GOP/输出帧率）即可；关注长期码率稳定,短期波动不在意的可以设置大一些，例：DVR存盘。设大可以提高重编码判决的门槛, 重编码次数会减少，但是码率波动会加大。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13%" headers="mcps1.2.5.1.4 "><p id="p222mcpsimp"><a name="p222mcpsimp"></a><a name="p222mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row223mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p id="p225mcpsimp"><a name="p225mcpsimp"></a><a name="p225mcpsimp"></a>src_frame_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.2 "><p id="p227mcpsimp"><a name="p227mcpsimp"></a><a name="p227mcpsimp"></a>输入帧率。</p>
+</td>
+<td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.5.1.3 "><p id="p229mcpsimp"><a name="p229mcpsimp"></a><a name="p229mcpsimp"></a>帧率控制</p>
+</td>
+<td class="cellrowborder" valign="top" width="13%" headers="mcps1.2.5.1.4 "><p id="p231mcpsimp"><a name="p231mcpsimp"></a><a name="p231mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row232mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p id="p234mcpsimp"><a name="p234mcpsimp"></a><a name="p234mcpsimp"></a>dst_frame_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.2 "><p id="p236mcpsimp"><a name="p236mcpsimp"></a><a name="p236mcpsimp"></a>输出帧率。</p>
+</td>
+<td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.5.1.3 "><p id="p238mcpsimp"><a name="p238mcpsimp"></a><a name="p238mcpsimp"></a>帧率控制</p>
+</td>
+<td class="cellrowborder" valign="top" width="13%" headers="mcps1.2.5.1.4 "><p id="p240mcpsimp"><a name="p240mcpsimp"></a><a name="p240mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row241mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p id="p243mcpsimp"><a name="p243mcpsimp"></a><a name="p243mcpsimp"></a>bit_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.2 "><p id="p245mcpsimp"><a name="p245mcpsimp"></a><a name="p245mcpsimp"></a>目标码率。</p>
+</td>
+<td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.5.1.3 "><p id="p247mcpsimp"><a name="p247mcpsimp"></a><a name="p247mcpsimp"></a>略</p>
+</td>
+<td class="cellrowborder" valign="top" width="13%" headers="mcps1.2.5.1.4 "><p id="p249mcpsimp"><a name="p249mcpsimp"></a><a name="p249mcpsimp"></a>略</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>表 2</strong>  CBR高级参数—帧级</p>
+<p><a name="_Ref435623628"></a></p>
+<table><thead align="left"><tr id="row257mcpsimp"><th class="cellrowborder" valign="top" width="23.762376237623766%" id="mcps1.2.5.1.1"><p id="p259mcpsimp"><a name="p259mcpsimp"></a><a name="p259mcpsimp"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="23.762376237623766%" id="mcps1.2.5.1.2"><p id="p261mcpsimp"><a name="p261mcpsimp"></a><a name="p261mcpsimp"></a>说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="39.603960396039604%" id="mcps1.2.5.1.3"><p id="p263mcpsimp"><a name="p263mcpsimp"></a><a name="p263mcpsimp"></a>应用场景</p>
+</th>
+<th class="cellrowborder" valign="top" width="12.871287128712872%" id="mcps1.2.5.1.4"><p id="p265mcpsimp"><a name="p265mcpsimp"></a><a name="p265mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row267mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p269mcpsimp"><a name="p269mcpsimp"></a><a name="p269mcpsimp"></a>min_i_proportion</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p271mcpsimp"><a name="p271mcpsimp"></a><a name="p271mcpsimp"></a>最小IP比，默认1</p>
+</td>
+<td class="cellrowborder" valign="top" width="39.603960396039604%" headers="mcps1.2.5.1.3 "><p id="p273mcpsimp"><a name="p273mcpsimp"></a><a name="p273mcpsimp"></a>接口暂不生效</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p275mcpsimp"><a name="p275mcpsimp"></a><a name="p275mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row276mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p278mcpsimp"><a name="p278mcpsimp"></a><a name="p278mcpsimp"></a>max_i_proportion</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p280mcpsimp"><a name="p280mcpsimp"></a><a name="p280mcpsimp"></a>最大IP比，默认20</p>
+</td>
+<td class="cellrowborder" valign="top" width="39.603960396039604%" headers="mcps1.2.5.1.3 "><p id="p282mcpsimp"><a name="p282mcpsimp"></a><a name="p282mcpsimp"></a>控制I帧占比，限制静止场景I帧过大，可能会引起呼吸效应。如果I帧大小超出<span xml:lang="pt-BR" id="ph283mcpsimp"><a name="ph283mcpsimp"></a><a name="ph283mcpsimp"></a>max_i_proportion</span>倍P帧，则I帧QP会增加，从而限制I帧大小。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p285mcpsimp"><a name="p285mcpsimp"></a><a name="p285mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row286mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p288mcpsimp"><a name="p288mcpsimp"></a><a name="p288mcpsimp"></a>max_qp</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p290mcpsimp"><a name="p290mcpsimp"></a><a name="p290mcpsimp"></a>最大QP 建议值: [40, 51]</p>
+</td>
+<td class="cellrowborder" valign="top" width="39.603960396039604%" headers="mcps1.2.5.1.3 "><p id="p292mcpsimp"><a name="p292mcpsimp"></a><a name="p292mcpsimp"></a>限制最差的图像质量，当QP调整到这个值的时候，不会再往上调，可能会导致码率上冲。关注码率的场景设置成51，关注质量的场景根据需要设置。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p294mcpsimp"><a name="p294mcpsimp"></a><a name="p294mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row295mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p297mcpsimp"><a name="p297mcpsimp"></a><a name="p297mcpsimp"></a>min_qp</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p299mcpsimp"><a name="p299mcpsimp"></a><a name="p299mcpsimp"></a>最小QP 建议值：[10, 20]</p>
+</td>
+<td class="cellrowborder" valign="top" width="39.603960396039604%" headers="mcps1.2.5.1.3 "><p id="p301mcpsimp"><a name="p301mcpsimp"></a><a name="p301mcpsimp"></a>限制最好的图像质量，当QP调整到这个值的时候，不会再往下调，可能会导致码率不足；主要用于节省简单静止场景下的码率。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p303mcpsimp"><a name="p303mcpsimp"></a><a name="p303mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row304mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p306mcpsimp"><a name="p306mcpsimp"></a><a name="p306mcpsimp"></a>max_i_qp</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p308mcpsimp"><a name="p308mcpsimp"></a><a name="p308mcpsimp"></a>最大I帧QP</p>
+<p id="p309mcpsimp"><a name="p309mcpsimp"></a><a name="p309mcpsimp"></a>建议值：[35, 45]</p>
+</td>
+<td class="cellrowborder" valign="top" width="39.603960396039604%" headers="mcps1.2.5.1.3 "><p id="p311mcpsimp"><a name="p311mcpsimp"></a><a name="p311mcpsimp"></a>对于静止场景，I帧QP对于图像质量影响很大，限制I帧QP的最大值，对于保持图像静止部分的图像质量有帮助。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p313mcpsimp"><a name="p313mcpsimp"></a><a name="p313mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row314mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p316mcpsimp"><a name="p316mcpsimp"></a><a name="p316mcpsimp"></a>min_i_qp</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p318mcpsimp"><a name="p318mcpsimp"></a><a name="p318mcpsimp"></a>I帧最小QP 静止纹理非常复杂场景，建议[20,25] 正常场景建议等于<span xml:lang="pt-BR" id="ph319mcpsimp"><a name="ph319mcpsimp"></a><a name="ph319mcpsimp"></a>min_qp</span></p>
+</td>
+<td class="cellrowborder" valign="top" width="39.603960396039604%" headers="mcps1.2.5.1.3 "><p id="p321mcpsimp"><a name="p321mcpsimp"></a><a name="p321mcpsimp"></a>限制I帧的最小QP，主要为了控制I帧占比</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p323mcpsimp"><a name="p323mcpsimp"></a><a name="p323mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row324mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p326mcpsimp"><a name="p326mcpsimp"></a><a name="p326mcpsimp"></a>max_reencode_times</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p328mcpsimp"><a name="p328mcpsimp"></a><a name="p328mcpsimp"></a>最大重编次数，取值范围[0,3]，默认2 建议不要关闭重编码，对保证码率稳定十分有效</p>
+</td>
+<td class="cellrowborder" valign="top" width="39.603960396039604%" headers="mcps1.2.5.1.3 "><p id="p330mcpsimp"><a name="p330mcpsimp"></a><a name="p330mcpsimp"></a>一般场景默认值就足够</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p332mcpsimp"><a name="p332mcpsimp"></a><a name="p332mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row333mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p335mcpsimp"><a name="p335mcpsimp"></a><a name="p335mcpsimp"></a>qpmap_en</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p337mcpsimp"><a name="p337mcpsimp"></a><a name="p337mcpsimp"></a>QpMap使用相对QP方式，用于AdaptiveROI方式使能。</p>
+</td>
+<td class="cellrowborder" valign="top" width="39.603960396039604%" headers="mcps1.2.5.1.3 "><p id="p339mcpsimp"><a name="p339mcpsimp"></a><a name="p339mcpsimp"></a>使用智能分析和编码结合，通过QpMap设置相对QP的方式，根据智能分析的结果调节CU级码率控制。</p>
+<p id="p340mcpsimp"><a name="p340mcpsimp"></a><a name="p340mcpsimp"></a>此标志有效时，编码器解析MPI发送图像接口中的QpMap并配置给编码逻辑。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p342mcpsimp"><a name="p342mcpsimp"></a><a name="p342mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row343mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p345mcpsimp"><a name="p345mcpsimp"></a><a name="p345mcpsimp"></a><span xml:lang="pt-BR" id="ph346mcpsimp"><a name="ph346mcpsimp"></a><a name="ph346mcpsimp"></a>qpmap_mode</span>（仅H.265编码）</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p348mcpsimp"><a name="p348mcpsimp"></a><a name="p348mcpsimp"></a>在编码CU块大于16x16且对应多个QP时，编码QP的选择方式。</p>
+<p id="p349mcpsimp"><a name="p349mcpsimp"></a><a name="p349mcpsimp"></a>qpmap_en为TD_TRUE时有效。</p>
+</td>
+<td class="cellrowborder" valign="top" width="39.603960396039604%" headers="mcps1.2.5.1.3 "><p id="p351mcpsimp"><a name="p351mcpsimp"></a><a name="p351mcpsimp"></a>对于一个CU对应多个QP的情况，编码CU使用的QP支持最大、最小、平均值三种选择方式。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p353mcpsimp"><a name="p353mcpsimp"></a><a name="p353mcpsimp"></a>略</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="VBR参数说明及使用方法">VBR参数说明及使用方法<a name="ZH-CN_TOPIC_0000001476373169"></a></h3>
+<p>VBR参数如<a href="#_Ref435623421">表1</a>和<a href="#_Ref435623655">表2</a>所示。</p>
+<p><strong>表 1</strong>  VBR属性</p>
+<p><a name="_Ref435623421"></a></p>
+<table><thead align="left"><tr id="row365mcpsimp"><th class="cellrowborder" valign="top" width="23.762376237623766%" id="mcps1.2.5.1.1"><p id="p367mcpsimp"><a name="p367mcpsimp"></a><a name="p367mcpsimp"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="31.683168316831683%" id="mcps1.2.5.1.2"><p id="p369mcpsimp"><a name="p369mcpsimp"></a><a name="p369mcpsimp"></a>说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="31.683168316831683%" id="mcps1.2.5.1.3"><p id="p371mcpsimp"><a name="p371mcpsimp"></a><a name="p371mcpsimp"></a>应用场景</p>
+</th>
+<th class="cellrowborder" valign="top" width="12.871287128712872%" id="mcps1.2.5.1.4"><p id="p373mcpsimp"><a name="p373mcpsimp"></a><a name="p373mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row375mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p377mcpsimp"><a name="p377mcpsimp"></a><a name="p377mcpsimp"></a>gop</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p379mcpsimp"><a name="p379mcpsimp"></a><a name="p379mcpsimp"></a>I帧间隔</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p381mcpsimp"><a name="p381mcpsimp"></a><a name="p381mcpsimp"></a>一般设置为输出帧率的整数倍</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p383mcpsimp"><a name="p383mcpsimp"></a><a name="p383mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row384mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p386mcpsimp"><a name="p386mcpsimp"></a><a name="p386mcpsimp"></a>stats_time</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p388mcpsimp"><a name="p388mcpsimp"></a><a name="p388mcpsimp"></a>统计时间，以秒为单位。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p390mcpsimp"><a name="p390mcpsimp"></a><a name="p390mcpsimp"></a>与CBR一致</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p392mcpsimp"><a name="p392mcpsimp"></a><a name="p392mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row393mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p395mcpsimp"><a name="p395mcpsimp"></a><a name="p395mcpsimp"></a>src_frame_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p397mcpsimp"><a name="p397mcpsimp"></a><a name="p397mcpsimp"></a>输入帧率</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p399mcpsimp"><a name="p399mcpsimp"></a><a name="p399mcpsimp"></a>帧率控制</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p401mcpsimp"><a name="p401mcpsimp"></a><a name="p401mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row402mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p404mcpsimp"><a name="p404mcpsimp"></a><a name="p404mcpsimp"></a>dst_frame_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p406mcpsimp"><a name="p406mcpsimp"></a><a name="p406mcpsimp"></a>输出帧率</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p408mcpsimp"><a name="p408mcpsimp"></a><a name="p408mcpsimp"></a>帧率控制</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p410mcpsimp"><a name="p410mcpsimp"></a><a name="p410mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row411mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p413mcpsimp"><a name="p413mcpsimp"></a><a name="p413mcpsimp"></a>max_bit_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p415mcpsimp"><a name="p415mcpsimp"></a><a name="p415mcpsimp"></a>最大码率</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p417mcpsimp"><a name="p417mcpsimp"></a><a name="p417mcpsimp"></a>略</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p419mcpsimp"><a name="p419mcpsimp"></a><a name="p419mcpsimp"></a>略</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>表 2</strong>  VBR高级参数—帧级</p>
+<p><a name="_Ref435623655"></a></p>
+<table><thead align="left"><tr id="row427mcpsimp"><th class="cellrowborder" valign="top" width="23.762376237623766%" id="mcps1.2.5.1.1"><p id="p429mcpsimp"><a name="p429mcpsimp"></a><a name="p429mcpsimp"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="31.683168316831683%" id="mcps1.2.5.1.2"><p id="p431mcpsimp"><a name="p431mcpsimp"></a><a name="p431mcpsimp"></a>说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="31.683168316831683%" id="mcps1.2.5.1.3"><p id="p433mcpsimp"><a name="p433mcpsimp"></a><a name="p433mcpsimp"></a>应用场景</p>
+</th>
+<th class="cellrowborder" valign="top" width="12.871287128712872%" id="mcps1.2.5.1.4"><p id="p435mcpsimp"><a name="p435mcpsimp"></a><a name="p435mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row437mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p439mcpsimp"><a name="p439mcpsimp"></a><a name="p439mcpsimp"></a>chg_pos</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p441mcpsimp"><a name="p441mcpsimp"></a><a name="p441mcpsimp"></a>开始调节的码率 [80,90]如果对码率超出很敏感,建议设置80，对码率超出不敏感，建议设置90</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p443mcpsimp"><a name="p443mcpsimp"></a><a name="p443mcpsimp"></a>略</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p445mcpsimp"><a name="p445mcpsimp"></a><a name="p445mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row446mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p448mcpsimp"><a name="p448mcpsimp"></a><a name="p448mcpsimp"></a>min_i_proportion</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p450mcpsimp"><a name="p450mcpsimp"></a><a name="p450mcpsimp"></a>最小IP比，默认1</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p452mcpsimp"><a name="p452mcpsimp"></a><a name="p452mcpsimp"></a>与CBR用法一致</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p454mcpsimp"><a name="p454mcpsimp"></a><a name="p454mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row455mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p457mcpsimp"><a name="p457mcpsimp"></a><a name="p457mcpsimp"></a>max_i_proportion</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p459mcpsimp"><a name="p459mcpsimp"></a><a name="p459mcpsimp"></a>最大IP比，默认20</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p461mcpsimp"><a name="p461mcpsimp"></a><a name="p461mcpsimp"></a>与CBR用法一致</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p463mcpsimp"><a name="p463mcpsimp"></a><a name="p463mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row464mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p466mcpsimp"><a name="p466mcpsimp"></a><a name="p466mcpsimp"></a>max_reencode_times</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p468mcpsimp"><a name="p468mcpsimp"></a><a name="p468mcpsimp"></a>最大重编次数, 取值范围[0,3] 默认2</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p470mcpsimp"><a name="p470mcpsimp"></a><a name="p470mcpsimp"></a>与CBR用法一致</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p472mcpsimp"><a name="p472mcpsimp"></a><a name="p472mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row473mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p475mcpsimp"><a name="p475mcpsimp"></a><a name="p475mcpsimp"></a>qpmap_en</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p477mcpsimp"><a name="p477mcpsimp"></a><a name="p477mcpsimp"></a>QpMap使用相对QP方式，用于AdaptiveROI方式使能。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p479mcpsimp"><a name="p479mcpsimp"></a><a name="p479mcpsimp"></a>使用智能分析和编码结合，通过QpMap设置相对QP的方式，根据智能分析的结果调节CU级码率控制。</p>
+<p id="p480mcpsimp"><a name="p480mcpsimp"></a><a name="p480mcpsimp"></a>此标志有效时，编码器解析MPI发送图像接口中的QpMap并配置给编码逻辑。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p482mcpsimp"><a name="p482mcpsimp"></a><a name="p482mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row483mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p485mcpsimp"><a name="p485mcpsimp"></a><a name="p485mcpsimp"></a>qpmap_mode<span xml:lang="en-US" id="ph486mcpsimp"><a name="ph486mcpsimp"></a><a name="ph486mcpsimp"></a>（仅H265编码）</span></p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p488mcpsimp"><a name="p488mcpsimp"></a><a name="p488mcpsimp"></a>在编码CU块大于16x16且对应多个QP时，编码QP的选择方式。</p>
+<p id="p489mcpsimp"><a name="p489mcpsimp"></a><a name="p489mcpsimp"></a>qpmap_en为TD_TRUE时有效。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p491mcpsimp"><a name="p491mcpsimp"></a><a name="p491mcpsimp"></a>对于一个CU对应多个QP的情况，编码CU使用的QP支持最大、最小、平均值三种选择方式。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p493mcpsimp"><a name="p493mcpsimp"></a><a name="p493mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row494mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p496mcpsimp"><a name="p496mcpsimp"></a><a name="p496mcpsimp"></a>max_qp</p>
+<p xml:lang="pt-BR" id="p497mcpsimp"><a name="p497mcpsimp"></a><a name="p497mcpsimp"></a>max_i_qp</p>
+<p xml:lang="pt-BR" id="p498mcpsimp"><a name="p498mcpsimp"></a><a name="p498mcpsimp"></a>min_qp</p>
+<p xml:lang="pt-BR" id="p499mcpsimp"><a name="p499mcpsimp"></a><a name="p499mcpsimp"></a>min_i_qp</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p501mcpsimp"><a name="p501mcpsimp"></a><a name="p501mcpsimp"></a>根据不同码率和场景设置合适的QP。</p>
+<p id="p502mcpsimp"><a name="p502mcpsimp"></a><a name="p502mcpsimp"></a><span xml:lang="pt-BR" id="ph503mcpsimp"><a name="ph503mcpsimp"></a><a name="ph503mcpsimp"></a>min_i_qp</span>限制I帧最小Qp；<span xml:lang="pt-BR" id="ph504mcpsimp"><a name="ph504mcpsimp"></a><a name="ph504mcpsimp"></a>min_qp</span>限制其他帧类型的最小Qp。</p>
+<p xml:lang="pt-BR" id="p505mcpsimp"><a name="p505mcpsimp"></a><a name="p505mcpsimp"></a>建议值： min_qp [24,32] max_qp <span xml:lang="en-US" id="ph506mcpsimp"><a name="ph506mcpsimp"></a><a name="ph506mcpsimp"></a>[40,51]</span></p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p508mcpsimp"><a name="p508mcpsimp"></a><a name="p508mcpsimp"></a>最大QP影响图像质量；最小QP影响VBR最低码率。</p>
+<p id="p509mcpsimp"><a name="p509mcpsimp"></a><a name="p509mcpsimp"></a>设置最大QP来平衡编码压力上升的时候图像质量优先还是限制最大码率优先。</p>
+<p id="p510mcpsimp"><a name="p510mcpsimp"></a><a name="p510mcpsimp"></a>设置最小QP来平衡编码压力下降时图像质量优先还是降低码率优先。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p512mcpsimp"><a name="p512mcpsimp"></a><a name="p512mcpsimp"></a>略</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="ABR参数说明及使用方法">ABR参数说明及使用方法<a name="ZH-CN_TOPIC_0000001688106409"></a></h3>
+<p>ABR参数如<a href="#_Ref435623600">表1</a>和<a href="#_Ref435623628">表2</a>所示。</p>
+<p><strong>表 1</strong>  ABR属性</p>
+<p><a name="_Ref435623600"></a></p>
+<table><thead align="left"><tr id="row196mcpsimp"><th class="cellrowborder" valign="top" width="24%" id="mcps1.2.5.1.1"><p id="p198mcpsimp"><a name="p198mcpsimp"></a><a name="p198mcpsimp"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="24%" id="mcps1.2.5.1.2"><p id="p200mcpsimp"><a name="p200mcpsimp"></a><a name="p200mcpsimp"></a>说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="39%" id="mcps1.2.5.1.3"><p id="p202mcpsimp"><a name="p202mcpsimp"></a><a name="p202mcpsimp"></a>应用场景</p>
+</th>
+<th class="cellrowborder" valign="top" width="13%" id="mcps1.2.5.1.4"><p id="p204mcpsimp"><a name="p204mcpsimp"></a><a name="p204mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row205mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p id="p207mcpsimp"><a name="p207mcpsimp"></a><a name="p207mcpsimp"></a>gop</p>
+</td>
+<td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.2 "><p id="p209mcpsimp"><a name="p209mcpsimp"></a><a name="p209mcpsimp"></a>I帧间隔。</p>
+</td>
+<td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.5.1.3 "><p id="p211mcpsimp"><a name="p211mcpsimp"></a><a name="p211mcpsimp"></a>一般设置为输出帧率的整数倍</p>
+</td>
+<td class="cellrowborder" valign="top" width="13%" headers="mcps1.2.5.1.4 "><p id="p213mcpsimp"><a name="p213mcpsimp"></a><a name="p213mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row214mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p id="p216mcpsimp"><a name="p216mcpsimp"></a><a name="p216mcpsimp"></a>stats_time</p>
+</td>
+<td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.2 "><p id="p218mcpsimp"><a name="p218mcpsimp"></a><a name="p218mcpsimp"></a>统计时间，以秒为单位。</p>
+</td>
+<td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.5.1.3 "><p id="p220mcpsimp"><a name="p220mcpsimp"></a><a name="p220mcpsimp"></a>一般场景设置为（GOP/输出帧率）即可；关注长期码率稳定,短期波动不在意的可以设置大一些，例：DVR存盘。设大可以提高重编码判决的门槛，重编码次数会减少，但是码率波动会加大。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13%" headers="mcps1.2.5.1.4 "><p id="p222mcpsimp"><a name="p222mcpsimp"></a><a name="p222mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row223mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p id="p225mcpsimp"><a name="p225mcpsimp"></a><a name="p225mcpsimp"></a>src_frame_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.2 "><p id="p227mcpsimp"><a name="p227mcpsimp"></a><a name="p227mcpsimp"></a>输入帧率。</p>
+</td>
+<td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.5.1.3 "><p id="p229mcpsimp"><a name="p229mcpsimp"></a><a name="p229mcpsimp"></a>帧率控制</p>
+</td>
+<td class="cellrowborder" valign="top" width="13%" headers="mcps1.2.5.1.4 "><p id="p231mcpsimp"><a name="p231mcpsimp"></a><a name="p231mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row232mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p id="p234mcpsimp"><a name="p234mcpsimp"></a><a name="p234mcpsimp"></a>dst_frame_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.2 "><p id="p236mcpsimp"><a name="p236mcpsimp"></a><a name="p236mcpsimp"></a>输出帧率。</p>
+</td>
+<td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.5.1.3 "><p id="p238mcpsimp"><a name="p238mcpsimp"></a><a name="p238mcpsimp"></a>帧率控制</p>
+</td>
+<td class="cellrowborder" valign="top" width="13%" headers="mcps1.2.5.1.4 "><p id="p240mcpsimp"><a name="p240mcpsimp"></a><a name="p240mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row241mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p id="p243mcpsimp"><a name="p243mcpsimp"></a><a name="p243mcpsimp"></a>bit_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.2 "><p id="p245mcpsimp"><a name="p245mcpsimp"></a><a name="p245mcpsimp"></a>目标码率。</p>
+</td>
+<td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.5.1.3 "><p id="p247mcpsimp"><a name="p247mcpsimp"></a><a name="p247mcpsimp"></a>略</p>
+</td>
+<td class="cellrowborder" valign="top" width="13%" headers="mcps1.2.5.1.4 "><p id="p249mcpsimp"><a name="p249mcpsimp"></a><a name="p249mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row18951101812313"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p id="p89518182311"><a name="p89518182311"></a><a name="p89518182311"></a>vbv_buf_delay</p>
+</td>
+<td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.2 "><p id="p895231833117"><a name="p895231833117"></a><a name="p895231833117"></a>bit_rate* vbv_buf_delay为视频缓冲区校验器的大小</p>
+</td>
+<td class="cellrowborder" valign="top" width="39%" headers="mcps1.2.5.1.3 "><p id="p1395221810315"><a name="p1395221810315"></a><a name="p1395221810315"></a>vbv_buf_delay用于平衡瞬时码率波动与编码图像质量稳定性的矛盾：减小vbv_buf_delay可以减小瞬时码率波动，但会增加编码图像质量波动；相反，增加vbv_buf_delay可以减少编码图像质量波动，但会增大瞬时码率波动。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13%" headers="mcps1.2.5.1.4 "><p id="p5952181813116"><a name="p5952181813116"></a><a name="p5952181813116"></a>略</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>表 2</strong>  ABR高级参数一帧级</p>
+<p><a name="_Ref435623628"></a></p>
+<table><thead align="left"><tr id="row257mcpsimp"><th class="cellrowborder" valign="top" width="23.762376237623766%" id="mcps1.2.5.1.1"><p id="p259mcpsimp"><a name="p259mcpsimp"></a><a name="p259mcpsimp"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="23.762376237623766%" id="mcps1.2.5.1.2"><p id="p261mcpsimp"><a name="p261mcpsimp"></a><a name="p261mcpsimp"></a>说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="39.603960396039604%" id="mcps1.2.5.1.3"><p id="p263mcpsimp"><a name="p263mcpsimp"></a><a name="p263mcpsimp"></a>应用场景</p>
+</th>
+<th class="cellrowborder" valign="top" width="12.871287128712872%" id="mcps1.2.5.1.4"><p id="p265mcpsimp"><a name="p265mcpsimp"></a><a name="p265mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row286mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p288mcpsimp"><a name="p288mcpsimp"></a><a name="p288mcpsimp"></a>max_qp</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p290mcpsimp"><a name="p290mcpsimp"></a><a name="p290mcpsimp"></a>最大QP 建议值: [40, 51]</p>
+</td>
+<td class="cellrowborder" valign="top" width="39.603960396039604%" headers="mcps1.2.5.1.3 "><p id="p292mcpsimp"><a name="p292mcpsimp"></a><a name="p292mcpsimp"></a>限制最差的图像质量，当QP调整到这个值的时候，不会再往上调，可能会导致码率上冲。关注码率的场景设置成51，关注质量的场景根据需要设置。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p294mcpsimp"><a name="p294mcpsimp"></a><a name="p294mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row295mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p297mcpsimp"><a name="p297mcpsimp"></a><a name="p297mcpsimp"></a>min_qp</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p299mcpsimp"><a name="p299mcpsimp"></a><a name="p299mcpsimp"></a>最小QP 建议值：[10, 20]</p>
+</td>
+<td class="cellrowborder" valign="top" width="39.603960396039604%" headers="mcps1.2.5.1.3 "><p id="p301mcpsimp"><a name="p301mcpsimp"></a><a name="p301mcpsimp"></a>限制最好的图像质量，当QP调整到这个值的时候，不会再往下调，可能会导致码率不足；主要用于节省简单静止场景下的码率。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p303mcpsimp"><a name="p303mcpsimp"></a><a name="p303mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row304mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p306mcpsimp"><a name="p306mcpsimp"></a><a name="p306mcpsimp"></a>max_i_qp</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p308mcpsimp"><a name="p308mcpsimp"></a><a name="p308mcpsimp"></a>最大I帧QP</p>
+<p id="p309mcpsimp"><a name="p309mcpsimp"></a><a name="p309mcpsimp"></a>建议值：[35, 45]</p>
+</td>
+<td class="cellrowborder" valign="top" width="39.603960396039604%" headers="mcps1.2.5.1.3 "><p id="p311mcpsimp"><a name="p311mcpsimp"></a><a name="p311mcpsimp"></a>对于静止场景，I帧QP对于图像质量影响很大，限制I帧QP的最大值，对于保持图像静止部分的图像质量有帮助。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p313mcpsimp"><a name="p313mcpsimp"></a><a name="p313mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row314mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p316mcpsimp"><a name="p316mcpsimp"></a><a name="p316mcpsimp"></a>min_i_qp</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p318mcpsimp"><a name="p318mcpsimp"></a><a name="p318mcpsimp"></a>I帧最小QP 静止纹理非常复杂场景，建议[20,25] 正常场景建议等于<span xml:lang="pt-BR" id="ph319mcpsimp"><a name="ph319mcpsimp"></a><a name="ph319mcpsimp"></a>min_qp</span></p>
+</td>
+<td class="cellrowborder" valign="top" width="39.603960396039604%" headers="mcps1.2.5.1.3 "><p id="p321mcpsimp"><a name="p321mcpsimp"></a><a name="p321mcpsimp"></a>限制I帧的最小QP，主要为了控制I帧占比</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p323mcpsimp"><a name="p323mcpsimp"></a><a name="p323mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row324mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p326mcpsimp"><a name="p326mcpsimp"></a><a name="p326mcpsimp"></a>max_reencode_times</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p328mcpsimp"><a name="p328mcpsimp"></a><a name="p328mcpsimp"></a>最大重编次数，取值范围[0,3]，默认2 建议不要关闭重编码，对保证码率稳定十分有效</p>
+</td>
+<td class="cellrowborder" valign="top" width="39.603960396039604%" headers="mcps1.2.5.1.3 "><p id="p330mcpsimp"><a name="p330mcpsimp"></a><a name="p330mcpsimp"></a>一般场景默认值就足够</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p332mcpsimp"><a name="p332mcpsimp"></a><a name="p332mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row333mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p335mcpsimp"><a name="p335mcpsimp"></a><a name="p335mcpsimp"></a>qpmap_en</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p337mcpsimp"><a name="p337mcpsimp"></a><a name="p337mcpsimp"></a>QpMap使用相对QP方式，用于AdaptiveROI方式使能。</p>
+</td>
+<td class="cellrowborder" valign="top" width="39.603960396039604%" headers="mcps1.2.5.1.3 "><p id="p339mcpsimp"><a name="p339mcpsimp"></a><a name="p339mcpsimp"></a>使用智能分析和编码结合，通过QpMap设置相对QP的方式，根据智能分析的结果调节CU级码率控制。</p>
+<p id="p340mcpsimp"><a name="p340mcpsimp"></a><a name="p340mcpsimp"></a>此标志有效时，编码器解析MPI发送图像接口中的QpMap并配置给编码逻辑。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p342mcpsimp"><a name="p342mcpsimp"></a><a name="p342mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row343mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p345mcpsimp"><a name="p345mcpsimp"></a><a name="p345mcpsimp"></a><span xml:lang="pt-BR" id="ph346mcpsimp"><a name="ph346mcpsimp"></a><a name="ph346mcpsimp"></a>qpmap_mode</span>（仅H.265编码）</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p348mcpsimp"><a name="p348mcpsimp"></a><a name="p348mcpsimp"></a>在编码CU块大于16x16且对应多个QP时，编码QP的选择方式。</p>
+<p id="p349mcpsimp"><a name="p349mcpsimp"></a><a name="p349mcpsimp"></a>qpmap_en为TD_TRUE时有效。</p>
+</td>
+<td class="cellrowborder" valign="top" width="39.603960396039604%" headers="mcps1.2.5.1.3 "><p id="p351mcpsimp"><a name="p351mcpsimp"></a><a name="p351mcpsimp"></a>对于一个CU对应多个QP的情况，编码CU使用的QP支持最大、最小、平均值三种选择方式。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p353mcpsimp"><a name="p353mcpsimp"></a><a name="p353mcpsimp"></a>略</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="AVBR参数说明及使用方法">AVBR参数说明及使用方法<a name="ZH-CN_TOPIC_0000001476532897"></a></h3>
+<p>AVBR参数如<a href="#_Toc464047364">表1</a>和<a href="#_Toc464047365">表2</a>所示。</p>
+<p><strong>表 1</strong>  AVBR属性</p>
+<p><a name="_Toc464047364"></a></p>
+<table><thead align="left"><tr id="row524mcpsimp"><th class="cellrowborder" valign="top" width="23.762376237623766%" id="mcps1.2.5.1.1"><p id="p526mcpsimp"><a name="p526mcpsimp"></a><a name="p526mcpsimp"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="29.7029702970297%" id="mcps1.2.5.1.2"><p id="p528mcpsimp"><a name="p528mcpsimp"></a><a name="p528mcpsimp"></a>说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="33.663366336633665%" id="mcps1.2.5.1.3"><p id="p530mcpsimp"><a name="p530mcpsimp"></a><a name="p530mcpsimp"></a>应用场景</p>
+</th>
+<th class="cellrowborder" valign="top" width="12.871287128712872%" id="mcps1.2.5.1.4"><p id="p532mcpsimp"><a name="p532mcpsimp"></a><a name="p532mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row534mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p536mcpsimp"><a name="p536mcpsimp"></a><a name="p536mcpsimp"></a>gop</p>
+</td>
+<td class="cellrowborder" valign="top" width="29.7029702970297%" headers="mcps1.2.5.1.2 "><p id="p538mcpsimp"><a name="p538mcpsimp"></a><a name="p538mcpsimp"></a>I帧间隔。</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.2.5.1.3 "><p id="p540mcpsimp"><a name="p540mcpsimp"></a><a name="p540mcpsimp"></a>一般设置为输出帧率的整数倍</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p542mcpsimp"><a name="p542mcpsimp"></a><a name="p542mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row543mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p545mcpsimp"><a name="p545mcpsimp"></a><a name="p545mcpsimp"></a>stats_time</p>
+</td>
+<td class="cellrowborder" valign="top" width="29.7029702970297%" headers="mcps1.2.5.1.2 "><p id="p547mcpsimp"><a name="p547mcpsimp"></a><a name="p547mcpsimp"></a>统计时间，以秒为单位。</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.2.5.1.3 "><p id="p549mcpsimp"><a name="p549mcpsimp"></a><a name="p549mcpsimp"></a>与CBR一致</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p551mcpsimp"><a name="p551mcpsimp"></a><a name="p551mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row552mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p554mcpsimp"><a name="p554mcpsimp"></a><a name="p554mcpsimp"></a>src_frame_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="29.7029702970297%" headers="mcps1.2.5.1.2 "><p id="p556mcpsimp"><a name="p556mcpsimp"></a><a name="p556mcpsimp"></a>输入帧率。</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.2.5.1.3 "><p id="p558mcpsimp"><a name="p558mcpsimp"></a><a name="p558mcpsimp"></a>帧率控制</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p560mcpsimp"><a name="p560mcpsimp"></a><a name="p560mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row561mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p563mcpsimp"><a name="p563mcpsimp"></a><a name="p563mcpsimp"></a>dst_frame_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="29.7029702970297%" headers="mcps1.2.5.1.2 "><p id="p565mcpsimp"><a name="p565mcpsimp"></a><a name="p565mcpsimp"></a>输出帧率。</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.2.5.1.3 "><p id="p567mcpsimp"><a name="p567mcpsimp"></a><a name="p567mcpsimp"></a>帧率控制</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p569mcpsimp"><a name="p569mcpsimp"></a><a name="p569mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row570mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p572mcpsimp"><a name="p572mcpsimp"></a><a name="p572mcpsimp"></a>max_bit_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="29.7029702970297%" headers="mcps1.2.5.1.2 "><p id="p574mcpsimp"><a name="p574mcpsimp"></a><a name="p574mcpsimp"></a>最大码率。</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.2.5.1.3 "><p id="p576mcpsimp"><a name="p576mcpsimp"></a><a name="p576mcpsimp"></a>略</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p578mcpsimp"><a name="p578mcpsimp"></a><a name="p578mcpsimp"></a>略</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>表 2</strong>  AVBR高级参数—帧级</p>
+<p><a name="_Toc464047365"></a></p>
+<table><thead align="left"><tr id="row586mcpsimp"><th class="cellrowborder" valign="top" width="23.762376237623766%" id="mcps1.2.5.1.1"><p id="p588mcpsimp"><a name="p588mcpsimp"></a><a name="p588mcpsimp"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="31.683168316831683%" id="mcps1.2.5.1.2"><p id="p590mcpsimp"><a name="p590mcpsimp"></a><a name="p590mcpsimp"></a>说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="31.683168316831683%" id="mcps1.2.5.1.3"><p id="p592mcpsimp"><a name="p592mcpsimp"></a><a name="p592mcpsimp"></a>应用场景</p>
+</th>
+<th class="cellrowborder" valign="top" width="12.871287128712872%" id="mcps1.2.5.1.4"><p id="p594mcpsimp"><a name="p594mcpsimp"></a><a name="p594mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row596mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p598mcpsimp"><a name="p598mcpsimp"></a><a name="p598mcpsimp"></a>chg_pos</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p600mcpsimp"><a name="p600mcpsimp"></a><a name="p600mcpsimp"></a>开始调节的码率，建议范围：[80, 90]</p>
+<p id="p601mcpsimp"><a name="p601mcpsimp"></a><a name="p601mcpsimp"></a>如果对码率超出很敏感，建议设置80</p>
+<p id="p602mcpsimp"><a name="p602mcpsimp"></a><a name="p602mcpsimp"></a>对码率超出不敏感，建议设置90</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p604mcpsimp"><a name="p604mcpsimp"></a><a name="p604mcpsimp"></a>略</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p606mcpsimp"><a name="p606mcpsimp"></a><a name="p606mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row607mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p609mcpsimp"><a name="p609mcpsimp"></a><a name="p609mcpsimp"></a>min_i_proportion</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p611mcpsimp"><a name="p611mcpsimp"></a><a name="p611mcpsimp"></a>最小IP比，默认1</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p613mcpsimp"><a name="p613mcpsimp"></a><a name="p613mcpsimp"></a>与CBR用法一致</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p615mcpsimp"><a name="p615mcpsimp"></a><a name="p615mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row616mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p618mcpsimp"><a name="p618mcpsimp"></a><a name="p618mcpsimp"></a>max_i_proportion</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p620mcpsimp"><a name="p620mcpsimp"></a><a name="p620mcpsimp"></a>最大IP比，默认100</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p622mcpsimp"><a name="p622mcpsimp"></a><a name="p622mcpsimp"></a>与CBR用法一致</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p624mcpsimp"><a name="p624mcpsimp"></a><a name="p624mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row625mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p627mcpsimp"><a name="p627mcpsimp"></a><a name="p627mcpsimp"></a>max_reencode_times</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p629mcpsimp"><a name="p629mcpsimp"></a><a name="p629mcpsimp"></a>最大重编次数，取值范围[0, 3]，默认2</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p631mcpsimp"><a name="p631mcpsimp"></a><a name="p631mcpsimp"></a>与CBR用法一致</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p633mcpsimp"><a name="p633mcpsimp"></a><a name="p633mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row634mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p636mcpsimp"><a name="p636mcpsimp"></a><a name="p636mcpsimp"></a>qpmap_en</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p638mcpsimp"><a name="p638mcpsimp"></a><a name="p638mcpsimp"></a>QpMap使用相对QP方式，用于AdaptiveROI方式使能。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p640mcpsimp"><a name="p640mcpsimp"></a><a name="p640mcpsimp"></a>使用智能分析和编码结合，通过QpMap设置相对QP的方式，根据智能分析的结果调节CU级码率控制。</p>
+<p id="p641mcpsimp"><a name="p641mcpsimp"></a><a name="p641mcpsimp"></a>此标志有效时，编码器解析MPI发送图像接口中的QpMap并配置给编码逻辑。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p643mcpsimp"><a name="p643mcpsimp"></a><a name="p643mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row644mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p646mcpsimp"><a name="p646mcpsimp"></a><a name="p646mcpsimp"></a>qpmap_mode<span xml:lang="en-US" id="ph647mcpsimp"><a name="ph647mcpsimp"></a><a name="ph647mcpsimp"></a>（仅H265编码）</span></p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p649mcpsimp"><a name="p649mcpsimp"></a><a name="p649mcpsimp"></a>在编码CU块大于16x16且对应多个QP时，编码QP的选择方式。</p>
+<p id="p650mcpsimp"><a name="p650mcpsimp"></a><a name="p650mcpsimp"></a>qpmap_en为TD_TRUE时有效。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p652mcpsimp"><a name="p652mcpsimp"></a><a name="p652mcpsimp"></a>对于一个CU对应多个QP的情况，编码CU使用的QP支持最大、最小、平均值三种选择方式。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p654mcpsimp"><a name="p654mcpsimp"></a><a name="p654mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row655mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p657mcpsimp"><a name="p657mcpsimp"></a><a name="p657mcpsimp"></a>min_still_percent</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p659mcpsimp"><a name="p659mcpsimp"></a><a name="p659mcpsimp"></a>场景静止时，最小目标码率的百分比；</p>
+<p id="p660mcpsimp"><a name="p660mcpsimp"></a><a name="p660mcpsimp"></a>建议值：[5, 50]</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p662mcpsimp"><a name="p662mcpsimp"></a><a name="p662mcpsimp"></a>设置越小，静止场景码率下降越显著；</p>
+<p id="p663mcpsimp"><a name="p663mcpsimp"></a><a name="p663mcpsimp"></a>设置为100时不启动内部码率调节机制，码率控制效果与VBR相同</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p665mcpsimp"><a name="p665mcpsimp"></a><a name="p665mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row666mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p668mcpsimp"><a name="p668mcpsimp"></a><a name="p668mcpsimp"></a>max_still_qp</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p670mcpsimp"><a name="p670mcpsimp"></a><a name="p670mcpsimp"></a>静止场景I帧QP的最大值；</p>
+<p id="p671mcpsimp"><a name="p671mcpsimp"></a><a name="p671mcpsimp"></a>建议值：[30, 40]</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p673mcpsimp"><a name="p673mcpsimp"></a><a name="p673mcpsimp"></a>目标码率降低过大会带来静止场景QP升高，图像质量变差，此时可以使用这个变量限制静止场景I帧QP的最大值；</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p675mcpsimp"><a name="p675mcpsimp"></a><a name="p675mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row676mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p678mcpsimp"><a name="p678mcpsimp"></a><a name="p678mcpsimp"></a>min_still_psnr</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p680mcpsimp"><a name="p680mcpsimp"></a><a name="p680mcpsimp"></a>保留，暂不使用</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p682mcpsimp"><a name="p682mcpsimp"></a><a name="p682mcpsimp"></a>略</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p684mcpsimp"><a name="p684mcpsimp"></a><a name="p684mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row685mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p687mcpsimp"><a name="p687mcpsimp"></a><a name="p687mcpsimp"></a>max_qp</p>
+<p xml:lang="pt-BR" id="p688mcpsimp"><a name="p688mcpsimp"></a><a name="p688mcpsimp"></a>min_qp</p>
+<p xml:lang="pt-BR" id="p689mcpsimp"><a name="p689mcpsimp"></a><a name="p689mcpsimp"></a>max_i_qp min_i_qp</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p691mcpsimp"><a name="p691mcpsimp"></a><a name="p691mcpsimp"></a>根据不同码率和场景设置合适的QP。</p>
+<p id="p692mcpsimp"><a name="p692mcpsimp"></a><a name="p692mcpsimp"></a><span xml:lang="pt-BR" id="ph693mcpsimp"><a name="ph693mcpsimp"></a><a name="ph693mcpsimp"></a>min_i_qp</span>限制I帧最小Qp；</p>
+<p id="p694mcpsimp"><a name="p694mcpsimp"></a><a name="p694mcpsimp"></a><span xml:lang="pt-BR" id="ph695mcpsimp"><a name="ph695mcpsimp"></a><a name="ph695mcpsimp"></a>max_i_qp</span>限制I帧最大Qp；</p>
+<p id="p696mcpsimp"><a name="p696mcpsimp"></a><a name="p696mcpsimp"></a><span xml:lang="pt-BR" id="ph697mcpsimp"><a name="ph697mcpsimp"></a><a name="ph697mcpsimp"></a>min_qp</span>限制其他帧类型的最小Qp；</p>
+<p id="p698mcpsimp"><a name="p698mcpsimp"></a><a name="p698mcpsimp"></a><span xml:lang="pt-BR" id="ph699mcpsimp"><a name="ph699mcpsimp"></a><a name="ph699mcpsimp"></a>max_qp</span>限制其他帧类型的最大Qp。</p>
+<p id="p700mcpsimp"><a name="p700mcpsimp"></a><a name="p700mcpsimp"></a>建议值：</p>
+<p id="p701mcpsimp"><a name="p701mcpsimp"></a><a name="p701mcpsimp"></a>min_qp [24,32]</p>
+<p id="p702mcpsimp"><a name="p702mcpsimp"></a><a name="p702mcpsimp"></a>max_qp [40,51]</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p704mcpsimp"><a name="p704mcpsimp"></a><a name="p704mcpsimp"></a>最大QP影响图像质量；最小QP影响VBR最低码率。</p>
+<p id="p705mcpsimp"><a name="p705mcpsimp"></a><a name="p705mcpsimp"></a>设置最大QP来平衡编码压力上升的时候图像质量优先还是限制最大码率优先。</p>
+<p id="p706mcpsimp"><a name="p706mcpsimp"></a><a name="p706mcpsimp"></a>设置最小QP来平衡编码压力下降时图像质量优先还是降低码率优先。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p708mcpsimp"><a name="p708mcpsimp"></a><a name="p708mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row709mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p711mcpsimp"><a name="p711mcpsimp"></a><a name="p711mcpsimp"></a>min_qp_delta</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p713mcpsimp"><a name="p713mcpsimp"></a><a name="p713mcpsimp"></a>用于调节帧级最小Qp和宏块级最小Qp的差值。例如P帧：frame_level_min_qp = min_qp_delta + min_qp。</p>
+<p id="p714mcpsimp"><a name="p714mcpsimp"></a><a name="p714mcpsimp"></a>取值范围[0, 4]。</p>
+<p id="p715mcpsimp"><a name="p715mcpsimp"></a><a name="p715mcpsimp"></a>建议有需要调节的客户在[1，4]范围内调节。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p717mcpsimp"><a name="p717mcpsimp"></a><a name="p717mcpsimp"></a>在图像内容比较简单时，码控会降低Qp值，当帧级Qp调节到frame_level_min_qp，帧级码率控制就不再下调Qp，但是CU/宏块级码率控制依然生效，图像中平坦区域Qp能够下调到更小值。min_qp_delta默认为0，表示帧级和CU/宏块级码率控制采用相同的最小Qp。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p719mcpsimp"><a name="p719mcpsimp"></a><a name="p719mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row720mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p722mcpsimp"><a name="p722mcpsimp"></a><a name="p722mcpsimp"></a>motion_sensitivity</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p724mcpsimp"><a name="p724mcpsimp"></a><a name="p724mcpsimp"></a>运动敏感度，该值越大表示码率控制对运动的变化反应更快，但同时对噪声也更敏感。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p726mcpsimp"><a name="p726mcpsimp"></a><a name="p726mcpsimp"></a>略</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p728mcpsimp"><a name="p728mcpsimp"></a><a name="p728mcpsimp"></a>略</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="QVBR参数说明及使用方法">QVBR参数说明及使用方法<a name="ZH-CN_TOPIC_0000001476812621"></a></h3>
+<p>QVBR参数如<a href="#_Ref529451118">表1</a>和<a href="#_Ref529451123">表2</a>所示。</p>
+<p><strong>表 1</strong>  QVBR属性</p>
+<p><a name="_Ref529451118"></a></p>
+<table><thead align="left"><tr id="row740mcpsimp"><th class="cellrowborder" valign="top" width="23.762376237623766%" id="mcps1.2.5.1.1"><p id="p742mcpsimp"><a name="p742mcpsimp"></a><a name="p742mcpsimp"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="31.683168316831683%" id="mcps1.2.5.1.2"><p id="p744mcpsimp"><a name="p744mcpsimp"></a><a name="p744mcpsimp"></a>说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="31.683168316831683%" id="mcps1.2.5.1.3"><p id="p746mcpsimp"><a name="p746mcpsimp"></a><a name="p746mcpsimp"></a>应用场景</p>
+</th>
+<th class="cellrowborder" valign="top" width="12.871287128712872%" id="mcps1.2.5.1.4"><p id="p748mcpsimp"><a name="p748mcpsimp"></a><a name="p748mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row750mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p752mcpsimp"><a name="p752mcpsimp"></a><a name="p752mcpsimp"></a>gop</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p754mcpsimp"><a name="p754mcpsimp"></a><a name="p754mcpsimp"></a>I帧间隔。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p756mcpsimp"><a name="p756mcpsimp"></a><a name="p756mcpsimp"></a>一般设置为输出帧率的整数倍</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p758mcpsimp"><a name="p758mcpsimp"></a><a name="p758mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row759mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p761mcpsimp"><a name="p761mcpsimp"></a><a name="p761mcpsimp"></a>stat_time</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p763mcpsimp"><a name="p763mcpsimp"></a><a name="p763mcpsimp"></a>统计时间，以秒为单位。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p765mcpsimp"><a name="p765mcpsimp"></a><a name="p765mcpsimp"></a>与CBR一致</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p767mcpsimp"><a name="p767mcpsimp"></a><a name="p767mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row768mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p770mcpsimp"><a name="p770mcpsimp"></a><a name="p770mcpsimp"></a>src_frame_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p772mcpsimp"><a name="p772mcpsimp"></a><a name="p772mcpsimp"></a>输入帧率。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p774mcpsimp"><a name="p774mcpsimp"></a><a name="p774mcpsimp"></a>帧率控制</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p776mcpsimp"><a name="p776mcpsimp"></a><a name="p776mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row777mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p779mcpsimp"><a name="p779mcpsimp"></a><a name="p779mcpsimp"></a>dst_frame_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p781mcpsimp"><a name="p781mcpsimp"></a><a name="p781mcpsimp"></a>输出帧率。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p783mcpsimp"><a name="p783mcpsimp"></a><a name="p783mcpsimp"></a>帧率控制</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p785mcpsimp"><a name="p785mcpsimp"></a><a name="p785mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row786mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p788mcpsimp"><a name="p788mcpsimp"></a><a name="p788mcpsimp"></a>target_bit_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p790mcpsimp"><a name="p790mcpsimp"></a><a name="p790mcpsimp"></a>目标码率。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p792mcpsimp"><a name="p792mcpsimp"></a><a name="p792mcpsimp"></a>略</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p794mcpsimp"><a name="p794mcpsimp"></a><a name="p794mcpsimp"></a>略</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>表 2</strong>  QVBR高级参数—帧级</p>
+<p><a name="_Ref529451123"></a></p>
+<table><thead align="left"><tr id="row802mcpsimp"><th class="cellrowborder" valign="top" width="24%" id="mcps1.2.5.1.1"><p id="p804mcpsimp"><a name="p804mcpsimp"></a><a name="p804mcpsimp"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="28.999999999999996%" id="mcps1.2.5.1.2"><p id="p806mcpsimp"><a name="p806mcpsimp"></a><a name="p806mcpsimp"></a>说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="30%" id="mcps1.2.5.1.3"><p id="p808mcpsimp"><a name="p808mcpsimp"></a><a name="p808mcpsimp"></a>应用场景</p>
+</th>
+<th class="cellrowborder" valign="top" width="17%" id="mcps1.2.5.1.4"><p id="p810mcpsimp"><a name="p810mcpsimp"></a><a name="p810mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row812mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p814mcpsimp"><a name="p814mcpsimp"></a><a name="p814mcpsimp"></a>min_i_proportion</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.2.5.1.2 "><p id="p816mcpsimp"><a name="p816mcpsimp"></a><a name="p816mcpsimp"></a>最小IP比，默认1</p>
+</td>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.5.1.3 "><p id="p818mcpsimp"><a name="p818mcpsimp"></a><a name="p818mcpsimp"></a>与CBR用法一致</p>
+</td>
+<td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.5.1.4 "><p id="p820mcpsimp"><a name="p820mcpsimp"></a><a name="p820mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row821mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p823mcpsimp"><a name="p823mcpsimp"></a><a name="p823mcpsimp"></a>max_i_proportion</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.2.5.1.2 "><p id="p825mcpsimp"><a name="p825mcpsimp"></a><a name="p825mcpsimp"></a>最大IP比，默认100</p>
+</td>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.5.1.3 "><p id="p827mcpsimp"><a name="p827mcpsimp"></a><a name="p827mcpsimp"></a>与CBR用法一致</p>
+</td>
+<td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.5.1.4 "><p id="p829mcpsimp"><a name="p829mcpsimp"></a><a name="p829mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row830mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p832mcpsimp"><a name="p832mcpsimp"></a><a name="p832mcpsimp"></a>max_reencode_times</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.2.5.1.2 "><p id="p834mcpsimp"><a name="p834mcpsimp"></a><a name="p834mcpsimp"></a>最大重编次数，取值范围[0, 3]，默认2</p>
+</td>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.5.1.3 "><p id="p836mcpsimp"><a name="p836mcpsimp"></a><a name="p836mcpsimp"></a>与CBR用法一致</p>
+</td>
+<td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.5.1.4 "><p id="p838mcpsimp"><a name="p838mcpsimp"></a><a name="p838mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row839mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p841mcpsimp"><a name="p841mcpsimp"></a><a name="p841mcpsimp"></a>qpmap_en</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.2.5.1.2 "><p id="p843mcpsimp"><a name="p843mcpsimp"></a><a name="p843mcpsimp"></a>QpMap使用相对QP方式，用于AdaptiveROI方式使能。</p>
+</td>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.5.1.3 "><p id="p845mcpsimp"><a name="p845mcpsimp"></a><a name="p845mcpsimp"></a>使用智能分析和编码结合，通过QpMap设置相对QP的方式，根据智能分析的结果调节CU级码率控制。</p>
+<p id="p846mcpsimp"><a name="p846mcpsimp"></a><a name="p846mcpsimp"></a>此标志有效时，编码器解析MPI发送图像接口中的QpMap并配置给编码逻辑。</p>
+</td>
+<td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.5.1.4 "><p id="p848mcpsimp"><a name="p848mcpsimp"></a><a name="p848mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row849mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p851mcpsimp"><a name="p851mcpsimp"></a><a name="p851mcpsimp"></a>qpmap_mode<span xml:lang="en-US" id="ph852mcpsimp"><a name="ph852mcpsimp"></a><a name="ph852mcpsimp"></a>（仅H265编码）</span></p>
+</td>
+<td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.2.5.1.2 "><p id="p854mcpsimp"><a name="p854mcpsimp"></a><a name="p854mcpsimp"></a>在编码CU块大于16x16且对应多个QP时，编码QP的选择方式。</p>
+<p id="p855mcpsimp"><a name="p855mcpsimp"></a><a name="p855mcpsimp"></a>qpmap_en为TD_TRUE时有效。</p>
+</td>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.5.1.3 "><p id="p858mcpsimp"><a name="p858mcpsimp"></a><a name="p858mcpsimp"></a>对于一个CU对应多个QP的情况，编码CU使用的QP支持最大、最小、平均值三种选择方式。</p>
+</td>
+<td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.5.1.4 "><p id="p860mcpsimp"><a name="p860mcpsimp"></a><a name="p860mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row861mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p863mcpsimp"><a name="p863mcpsimp"></a><a name="p863mcpsimp"></a>max_qp</p>
+<p xml:lang="pt-BR" id="p864mcpsimp"><a name="p864mcpsimp"></a><a name="p864mcpsimp"></a>min_qp</p>
+<p xml:lang="pt-BR" id="p865mcpsimp"><a name="p865mcpsimp"></a><a name="p865mcpsimp"></a>max_i_qp min_i_qp</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.2.5.1.2 "><p id="p867mcpsimp"><a name="p867mcpsimp"></a><a name="p867mcpsimp"></a>根据不同码率和场景设置合适的QP。</p>
+<p id="p868mcpsimp"><a name="p868mcpsimp"></a><a name="p868mcpsimp"></a>min_i_qp限制I帧最小Qp；</p>
+<p id="p870mcpsimp"><a name="p870mcpsimp"></a><a name="p870mcpsimp"></a>max_i_qp限制I帧最大Qp；</p>
+<p id="p872mcpsimp"><a name="p872mcpsimp"></a><a name="p872mcpsimp"></a>min_qp限制其他帧类型的最小Qp；</p>
+<p id="p874mcpsimp"><a name="p874mcpsimp"></a><a name="p874mcpsimp"></a>max_qp限制其他帧类型的最大Qp。</p>
+<p id="p876mcpsimp"><a name="p876mcpsimp"></a><a name="p876mcpsimp"></a>建议值：</p>
+<p id="p877mcpsimp"><a name="p877mcpsimp"></a><a name="p877mcpsimp"></a>min_qp [24,32]</p>
+<p id="p879mcpsimp"><a name="p879mcpsimp"></a><a name="p879mcpsimp"></a>max_qp [40,51]</p>
+</td>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.5.1.3 "><p id="p882mcpsimp"><a name="p882mcpsimp"></a><a name="p882mcpsimp"></a>最大QP影响图像质量；最小QP影响VBR最低码率。</p>
+<p id="p883mcpsimp"><a name="p883mcpsimp"></a><a name="p883mcpsimp"></a>设置最大QP来平衡编码压力上升的时候图像质量优先还是限制最大码率优先。</p>
+<p id="p884mcpsimp"><a name="p884mcpsimp"></a><a name="p884mcpsimp"></a>设置最小QP来平衡编码压力下降时图像质量优先还是降低码率优先。</p>
+</td>
+<td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.5.1.4 "><p id="p886mcpsimp"><a name="p886mcpsimp"></a><a name="p886mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row887mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p889mcpsimp"><a name="p889mcpsimp"></a><a name="p889mcpsimp"></a>max_bit_percent min_bit_percent</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.2.5.1.2 "><p id="p891mcpsimp"><a name="p891mcpsimp"></a><a name="p891mcpsimp"></a>设置码率动态浮动的范围。</p>
+<p xml:lang="pt-BR" id="p892mcpsimp"><a name="p892mcpsimp"></a><a name="p892mcpsimp"></a>最大码率=target_bit_rate* max_bit_percent /100</p>
+<p xml:lang="pt-BR" id="p896mcpsimp"><a name="p896mcpsimp"></a><a name="p896mcpsimp"></a>最小码率target_bit_rate* min_bit_percent/100</p>
+<p id="p900mcpsimp"><a name="p900mcpsimp"></a><a name="p900mcpsimp"></a>建议值：</p>
+<p xml:lang="pt-BR" id="p901mcpsimp"><a name="p901mcpsimp"></a><a name="p901mcpsimp"></a>max_bit_percent [100,125]</p>
+<p xml:lang="pt-BR" id="p903mcpsimp"><a name="p903mcpsimp"></a><a name="p903mcpsimp"></a>min_bit_percent [45,100]</p>
+</td>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.5.1.3 "><p id="p906mcpsimp"><a name="p906mcpsimp"></a><a name="p906mcpsimp"></a>QVBR码控算法会实时判断当前场景的图像复杂程度，主动调整目标码率；这组参数将动态码率限制在一个范围，在场景简单时向下调整目标码率，在场景复杂时向上调整目标码率。</p>
+</td>
+<td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.5.1.4 "><p id="p908mcpsimp"><a name="p908mcpsimp"></a><a name="p908mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row909mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p xml:lang="pt-BR" id="p911mcpsimp"><a name="p911mcpsimp"></a><a name="p911mcpsimp"></a>max_psnr_fluctuate min_psnr_fluctuate</p>
+</td>
+<td class="cellrowborder" valign="top" width="28.999999999999996%" headers="mcps1.2.5.1.2 "><p id="p913mcpsimp"><a name="p913mcpsimp"></a><a name="p913mcpsimp"></a>触发动态调整码率的PSNR（图像质量客观评价指标）范围参数。</p>
+<p id="p914mcpsimp"><a name="p914mcpsimp"></a><a name="p914mcpsimp"></a>建议值：</p>
+<p xml:lang="pt-BR" id="p915mcpsimp"><a name="p915mcpsimp"></a><a name="p915mcpsimp"></a>max_psnr_fluctuate [30,37]</p>
+<p xml:lang="pt-BR" id="p917mcpsimp"><a name="p917mcpsimp"></a><a name="p917mcpsimp"></a>min_psnr_fluctuate [21,27]</p>
+</td>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.5.1.3 "><p xml:lang="pt-BR" id="p920mcpsimp"><a name="p920mcpsimp"></a><a name="p920mcpsimp"></a>当实时统计的PSNR值大于等于max_psnr_fluctuate时，认为当前图像质量较好，可以向下调整码率；</p>
+<p id="p923mcpsimp"><a name="p923mcpsimp"></a><a name="p923mcpsimp"></a>当实时统计的PSNR值小于等于min_psnr_fluctuate时，认为当前图像质量较差，可以向上调整码率；</p>
+<p id="p925mcpsimp"><a name="p925mcpsimp"></a><a name="p925mcpsimp"></a>在实时统计的PSNR值在这两个参数区间，不调整码率。</p>
+</td>
+<td class="cellrowborder" valign="top" width="17%" headers="mcps1.2.5.1.4 "><p id="p927mcpsimp"><a name="p927mcpsimp"></a><a name="p927mcpsimp"></a>当PSNR值范围超过[min_psnr_fluctuate-4, max_psnr_fluctuate+4]∩ [20,40]时PSNR不再起作用，码率会在最大码率和最小码率间调整。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="CVBR参数说明及使用方法">CVBR参数说明及使用方法<a name="ZH-CN_TOPIC_0000001426773182"></a></h3>
+<p>CVBR参数如<a href="#_Ref531614451">表1</a>和<a href="#_Ref531614454">表2</a>所示。</p>
+<p><strong>表 1</strong>  CVBR属性</p>
+<p><a name="_Ref531614451"></a></p>
+<table><thead align="left"><tr id="row941mcpsimp"><th class="cellrowborder" valign="top" width="23.762376237623766%" id="mcps1.2.5.1.1"><p id="p943mcpsimp"><a name="p943mcpsimp"></a><a name="p943mcpsimp"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="31.683168316831683%" id="mcps1.2.5.1.2"><p id="p945mcpsimp"><a name="p945mcpsimp"></a><a name="p945mcpsimp"></a>说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="31.683168316831683%" id="mcps1.2.5.1.3"><p id="p947mcpsimp"><a name="p947mcpsimp"></a><a name="p947mcpsimp"></a>应用场景</p>
+</th>
+<th class="cellrowborder" valign="top" width="12.871287128712872%" id="mcps1.2.5.1.4"><p id="p949mcpsimp"><a name="p949mcpsimp"></a><a name="p949mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row951mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p953mcpsimp"><a name="p953mcpsimp"></a><a name="p953mcpsimp"></a>gop</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p955mcpsimp"><a name="p955mcpsimp"></a><a name="p955mcpsimp"></a>I帧间隔。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p957mcpsimp"><a name="p957mcpsimp"></a><a name="p957mcpsimp"></a>一般设置为输出帧率的整数倍</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p959mcpsimp"><a name="p959mcpsimp"></a><a name="p959mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row960mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p962mcpsimp"><a name="p962mcpsimp"></a><a name="p962mcpsimp"></a>stats_time</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p964mcpsimp"><a name="p964mcpsimp"></a><a name="p964mcpsimp"></a>统计时间，以秒为单位。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p966mcpsimp"><a name="p966mcpsimp"></a><a name="p966mcpsimp"></a>与CBR一致</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p968mcpsimp"><a name="p968mcpsimp"></a><a name="p968mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row969mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p971mcpsimp"><a name="p971mcpsimp"></a><a name="p971mcpsimp"></a>src_frame_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p973mcpsimp"><a name="p973mcpsimp"></a><a name="p973mcpsimp"></a>输入帧率。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p975mcpsimp"><a name="p975mcpsimp"></a><a name="p975mcpsimp"></a>帧率控制</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p977mcpsimp"><a name="p977mcpsimp"></a><a name="p977mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row978mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p980mcpsimp"><a name="p980mcpsimp"></a><a name="p980mcpsimp"></a>dst_frame_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p982mcpsimp"><a name="p982mcpsimp"></a><a name="p982mcpsimp"></a>输出帧率。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p984mcpsimp"><a name="p984mcpsimp"></a><a name="p984mcpsimp"></a>帧率控制</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p986mcpsimp"><a name="p986mcpsimp"></a><a name="p986mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row987mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p989mcpsimp"><a name="p989mcpsimp"></a><a name="p989mcpsimp"></a>max_bit_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p991mcpsimp"><a name="p991mcpsimp"></a><a name="p991mcpsimp"></a>最大短期码率（单位：kbps）。</p>
+<p id="p992mcpsimp"><a name="p992mcpsimp"></a><a name="p992mcpsimp"></a>建议值：1.5倍长期最大码率</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p994mcpsimp"><a name="p994mcpsimp"></a><a name="p994mcpsimp"></a>增加该值可改善大运动场景的质量</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p996mcpsimp"><a name="p996mcpsimp"></a><a name="p996mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row997mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p999mcpsimp"><a name="p999mcpsimp"></a><a name="p999mcpsimp"></a>short_term_stats_time</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p1001mcpsimp"><a name="p1001mcpsimp"></a><a name="p1001mcpsimp"></a>短期码率的统计时间（单位：秒）。</p>
+<p id="p1002mcpsimp"><a name="p1002mcpsimp"></a><a name="p1002mcpsimp"></a>建议值：3</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p1004mcpsimp"><a name="p1004mcpsimp"></a><a name="p1004mcpsimp"></a>较小值可以让图像质量对码率的反应更加迅速，反之则图像质量变化更加平稳。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1006mcpsimp"><a name="p1006mcpsimp"></a><a name="p1006mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1007mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1009mcpsimp"><a name="p1009mcpsimp"></a><a name="p1009mcpsimp"></a>long_term_stats_time</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p1011mcpsimp"><a name="p1011mcpsimp"></a><a name="p1011mcpsimp"></a>长期码率的统计时间：最大值1440，单位由高级属性long_term_stats_time_unit确定，默认为分钟（即60秒），算法尽量使该统计时间内的平均码率不超过long_term_max_bit_rate。</p>
+<p id="p1012mcpsimp"><a name="p1012mcpsimp"></a><a name="p1012mcpsimp"></a>建议值：1440</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p1014mcpsimp"><a name="p1014mcpsimp"></a><a name="p1014mcpsimp"></a>如需长期统计时间小于1440秒，则降低该值</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1016mcpsimp"><a name="p1016mcpsimp"></a><a name="p1016mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1017mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1019mcpsimp"><a name="p1019mcpsimp"></a><a name="p1019mcpsimp"></a>long_term_max_bit_rate</p>
+<p id="p1020mcpsimp"><a name="p1020mcpsimp"></a><a name="p1020mcpsimp"></a>long_term_min_bit_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p1022mcpsimp"><a name="p1022mcpsimp"></a><a name="p1022mcpsimp"></a>长期统计时间内最大码率和最小码率（单位：kbps）：编码器尽可能使长期统计时间内的平均码率在该范围内。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p1024mcpsimp"><a name="p1024mcpsimp"></a><a name="p1024mcpsimp"></a>如果需要尽量节省码率，long_term_min_bit_rate可设为0。如果需要最终平均码率为固定植，可将long_term_max_bit_rate</p>
+<p id="p1025mcpsimp"><a name="p1025mcpsimp"></a><a name="p1025mcpsimp"></a>和long_term_min_bit_rate同时设为该固定植</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1027mcpsimp"><a name="p1027mcpsimp"></a><a name="p1027mcpsimp"></a>略</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>表 2</strong>  CVBR高级参数—帧级</p>
+<p><a name="_Ref531614454"></a></p>
+<table><thead align="left"><tr id="row1035mcpsimp"><th class="cellrowborder" valign="top" width="23.762376237623766%" id="mcps1.2.5.1.1"><p id="p1037mcpsimp"><a name="p1037mcpsimp"></a><a name="p1037mcpsimp"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="31.683168316831683%" id="mcps1.2.5.1.2"><p id="p1039mcpsimp"><a name="p1039mcpsimp"></a><a name="p1039mcpsimp"></a>说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="31.683168316831683%" id="mcps1.2.5.1.3"><p id="p1041mcpsimp"><a name="p1041mcpsimp"></a><a name="p1041mcpsimp"></a>应用场景</p>
+</th>
+<th class="cellrowborder" valign="top" width="12.871287128712872%" id="mcps1.2.5.1.4"><p id="p1043mcpsimp"><a name="p1043mcpsimp"></a><a name="p1043mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1045mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1047mcpsimp"><a name="p1047mcpsimp"></a><a name="p1047mcpsimp"></a>min_i_proportion</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p1049mcpsimp"><a name="p1049mcpsimp"></a><a name="p1049mcpsimp"></a>最小IP比，默认1</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p1051mcpsimp"><a name="p1051mcpsimp"></a><a name="p1051mcpsimp"></a>与CBR用法一致</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1053mcpsimp"><a name="p1053mcpsimp"></a><a name="p1053mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1054mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1056mcpsimp"><a name="p1056mcpsimp"></a><a name="p1056mcpsimp"></a>max_i_proportion</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p1058mcpsimp"><a name="p1058mcpsimp"></a><a name="p1058mcpsimp"></a>最大IP比，默认100</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p1060mcpsimp"><a name="p1060mcpsimp"></a><a name="p1060mcpsimp"></a>与CBR用法一致</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1062mcpsimp"><a name="p1062mcpsimp"></a><a name="p1062mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1063mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1065mcpsimp"><a name="p1065mcpsimp"></a><a name="p1065mcpsimp"></a>max_reencode_times</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p1067mcpsimp"><a name="p1067mcpsimp"></a><a name="p1067mcpsimp"></a>最大重编次数，取值范围[0, 3]，默认2</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p1069mcpsimp"><a name="p1069mcpsimp"></a><a name="p1069mcpsimp"></a>与CBR用法一致</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1071mcpsimp"><a name="p1071mcpsimp"></a><a name="p1071mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1072mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1074mcpsimp"><a name="p1074mcpsimp"></a><a name="p1074mcpsimp"></a>qpmap_en</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p1076mcpsimp"><a name="p1076mcpsimp"></a><a name="p1076mcpsimp"></a>QpMap使用相对QP方式，用于AdaptiveROI方式使能。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p1078mcpsimp"><a name="p1078mcpsimp"></a><a name="p1078mcpsimp"></a>使用智能分析和编码结合，通过QpMap设置相对QP的方式，根据智能分析的结果调节CU级码率控制。</p>
+<p id="p1079mcpsimp"><a name="p1079mcpsimp"></a><a name="p1079mcpsimp"></a>此标志有效时，编码器解析MPI发送图像接口中的QpMap并配置给编码逻辑。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1081mcpsimp"><a name="p1081mcpsimp"></a><a name="p1081mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1082mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1084mcpsimp"><a name="p1084mcpsimp"></a><a name="p1084mcpsimp"></a>qpmap_mode</p>
+<p id="p1085mcpsimp"><a name="p1085mcpsimp"></a><a name="p1085mcpsimp"></a>（仅H265编码）</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p1087mcpsimp"><a name="p1087mcpsimp"></a><a name="p1087mcpsimp"></a>在编码CU块大于16x16且对应多个QP时，编码QP的选择方式。</p>
+<p id="p1088mcpsimp"><a name="p1088mcpsimp"></a><a name="p1088mcpsimp"></a>qpmap_en为TD_TRUE时有效。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p1090mcpsimp"><a name="p1090mcpsimp"></a><a name="p1090mcpsimp"></a>对于一个CU对应多个QP的情况，编码CU使用的QP支持最大、最小、平均值三种选择方式。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1092mcpsimp"><a name="p1092mcpsimp"></a><a name="p1092mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1093mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1095mcpsimp"><a name="p1095mcpsimp"></a><a name="p1095mcpsimp"></a>max_qp</p>
+<p id="p1096mcpsimp"><a name="p1096mcpsimp"></a><a name="p1096mcpsimp"></a>min_qp</p>
+<p id="p1097mcpsimp"><a name="p1097mcpsimp"></a><a name="p1097mcpsimp"></a>max_i_qp</p>
+<p id="p1098mcpsimp"><a name="p1098mcpsimp"></a><a name="p1098mcpsimp"></a>min_i_qp</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p1100mcpsimp"><a name="p1100mcpsimp"></a><a name="p1100mcpsimp"></a>根据不同码率和场景设置合适的QP。</p>
+<p id="p1101mcpsimp"><a name="p1101mcpsimp"></a><a name="p1101mcpsimp"></a>min_i_qp限制I帧最小Qp；</p>
+<p id="p1102mcpsimp"><a name="p1102mcpsimp"></a><a name="p1102mcpsimp"></a>max_i_qp限制I帧最大Qp；</p>
+<p id="p1103mcpsimp"><a name="p1103mcpsimp"></a><a name="p1103mcpsimp"></a>min_qp限制其他帧类型的最小Qp；</p>
+<p id="p1104mcpsimp"><a name="p1104mcpsimp"></a><a name="p1104mcpsimp"></a>max_qp限制其他帧类型的最大Qp。</p>
+<p id="p1105mcpsimp"><a name="p1105mcpsimp"></a><a name="p1105mcpsimp"></a>建议值：</p>
+<p id="p1106mcpsimp"><a name="p1106mcpsimp"></a><a name="p1106mcpsimp"></a>min_qp [24,32]</p>
+<p id="p1107mcpsimp"><a name="p1107mcpsimp"></a><a name="p1107mcpsimp"></a>max_qp [40,51]</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p1109mcpsimp"><a name="p1109mcpsimp"></a><a name="p1109mcpsimp"></a>最大QP影响图像质量；最小QP影响VBR最低码率。</p>
+<p id="p1110mcpsimp"><a name="p1110mcpsimp"></a><a name="p1110mcpsimp"></a>设置最大QP来平衡编码压力上升的时候图像质量优先还是限制最大码率优先。</p>
+<p id="p1111mcpsimp"><a name="p1111mcpsimp"></a><a name="p1111mcpsimp"></a>设置最小QP来平衡编码压力下降时图像质量优先还是降低码率优先。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1113mcpsimp"><a name="p1113mcpsimp"></a><a name="p1113mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1114mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1116mcpsimp"><a name="p1116mcpsimp"></a><a name="p1116mcpsimp"></a>min_qp_delta</p>
+<p id="p1117mcpsimp"><a name="p1117mcpsimp"></a><a name="p1117mcpsimp"></a>max_qp_delta</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p1119mcpsimp"><a name="p1119mcpsimp"></a><a name="p1119mcpsimp"></a>min_qp_delta用于调节帧级最小Qp和宏块级最小Qp的差值。例如P帧：frame_level_min_qp =  min_qp+ min_qp_delta。</p>
+<p id="p1120mcpsimp"><a name="p1120mcpsimp"></a><a name="p1120mcpsimp"></a>取值范围[0, 4]。</p>
+<p id="p1121mcpsimp"><a name="p1121mcpsimp"></a><a name="p1121mcpsimp"></a>建议有需要调节的客户在[1，4]范围内调节。</p>
+<p id="p1122mcpsimp"><a name="p1122mcpsimp"></a><a name="p1122mcpsimp"></a>max_qp_delta</p>
+<p id="p1123mcpsimp"><a name="p1123mcpsimp"></a><a name="p1123mcpsimp"></a>用于调节帧级最大Qp和宏块级最大Qp的差值。例如P帧：frame_level_max_qp = max_qp- max_qp_delta。</p>
+<p id="p1124mcpsimp"><a name="p1124mcpsimp"></a><a name="p1124mcpsimp"></a>取值范围[0, 4]。</p>
+<p id="p1125mcpsimp"><a name="p1125mcpsimp"></a><a name="p1125mcpsimp"></a>建议有需要调节的客户在[1，4]范围内调节。</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p1127mcpsimp"><a name="p1127mcpsimp"></a><a name="p1127mcpsimp"></a>在图像内容比较简单时，码控会降低Qp值，当帧级Qp调节到frame_level_min_qp，帧级码率控制就不再下调Qp，但是CU/宏块级码率控制依然生效，图像中平坦区域Qp能够下调到更小值。min_qp_delta默认为0，表示帧级和CU/宏块级码率控制采用相同的最小Qp。</p>
+<p id="p1128mcpsimp"><a name="p1128mcpsimp"></a><a name="p1128mcpsimp"></a>在图像内容比较复杂时，码控会升高Qp值，当帧级Qp调节到frame_level_max_qp，帧级码率控制就不再升高Qp，但是CU/宏块级码率控制依然生效，图像中强纹理区域Qp能够升高到更大值。max_qp_delta默认为0，表示帧级和CU/宏块级码率控制采用相同的最大Qp。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1130mcpsimp"><a name="p1130mcpsimp"></a><a name="p1130mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1131mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1133mcpsimp"><a name="p1133mcpsimp"></a><a name="p1133mcpsimp"></a>extra_bit_percent</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p id="p1135mcpsimp"><a name="p1135mcpsimp"></a><a name="p1135mcpsimp"></a>编码器输出码率最大透支bit数相对于长期最大码率的百分比。</p>
+<p id="p1136mcpsimp"><a name="p1136mcpsimp"></a><a name="p1136mcpsimp"></a>在码率不足时，为保证图像质量，编码器会通过透支一定的bit数以提升图像质量，这部分透支的码率会在编码压力较小时进行偿还。</p>
+<p id="p1137mcpsimp"><a name="p1137mcpsimp"></a><a name="p1137mcpsimp"></a>取值范围[0, 1000]</p>
+<p id="p1138mcpsimp"><a name="p1138mcpsimp"></a><a name="p1138mcpsimp"></a>默认值：5</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p id="p1140mcpsimp"><a name="p1140mcpsimp"></a><a name="p1140mcpsimp"></a>客户可以根据实际存储设备的情况，配置该透支百分比。</p>
+<p id="p1141mcpsimp"><a name="p1141mcpsimp"></a><a name="p1141mcpsimp"></a>extra_bits（允许透支总bit数）= extra_bit_percent *long_term_max_bit_rate*long_term_stats_time *long_term_stats_time_unit</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1143mcpsimp"><a name="p1143mcpsimp"></a><a name="p1143mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1144mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1146mcpsimp"><a name="p1146mcpsimp"></a><a name="p1146mcpsimp"></a>long_term_stats_time_unit</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.2 "><p xml:lang="pt-BR" id="p1148mcpsimp"><a name="p1148mcpsimp"></a><a name="p1148mcpsimp"></a>码率长期统计时间参数（long_term_stats_time）的单位，本变量单位是秒（s）,如配置long_term_stats_time_unit = 60，long_term_stats_time =3，代表长期统计时间为3分钟。</p>
+<p xml:lang="pt-BR" id="p1149mcpsimp"><a name="p1149mcpsimp"></a><a name="p1149mcpsimp"></a>取值范围：[1, 1800]；</p>
+<p xml:lang="pt-BR" id="p1150mcpsimp"><a name="p1150mcpsimp"></a><a name="p1150mcpsimp"></a>默认值：60</p>
+</td>
+<td class="cellrowborder" valign="top" width="31.683168316831683%" headers="mcps1.2.5.1.3 "><p xml:lang="pt-BR" id="p1152mcpsimp"><a name="p1152mcpsimp"></a><a name="p1152mcpsimp"></a>long_term_stats_time_unit 的默认值为60，即客户配置的long_term_stats_time单位为分钟(60秒)，如客户长期统计时间较长，可以把单位适配成 半小时（1800秒）。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1156mcpsimp"><a name="p1156mcpsimp"></a><a name="p1156mcpsimp"></a>略</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="宏块级码率控制参数说明及使用方法">宏块级码率控制参数说明及使用方法<a name="ZH-CN_TOPIC_0000001426296320"></a></h3>
+<p>宏块级码率控制参数如<a href="#_Ref435623698">表1</a>所示。</p>
+<p><strong>表 1</strong>  宏块级码率控制参数</p>
+<p><a name="_Ref435623698"></a></p>
+<table><thead align="left"><tr id="row1167mcpsimp"><th class="cellrowborder" valign="top" width="24%" id="mcps1.2.5.1.1"><p id="p1169mcpsimp"><a name="p1169mcpsimp"></a><a name="p1169mcpsimp"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="33%" id="mcps1.2.5.1.2"><p id="p1171mcpsimp"><a name="p1171mcpsimp"></a><a name="p1171mcpsimp"></a>说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="30%" id="mcps1.2.5.1.3"><p id="p1173mcpsimp"><a name="p1173mcpsimp"></a><a name="p1173mcpsimp"></a>应用场景</p>
+</th>
+<th class="cellrowborder" valign="top" width="13%" id="mcps1.2.5.1.4"><p id="p1175mcpsimp"><a name="p1175mcpsimp"></a><a name="p1175mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1177mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p id="p1179mcpsimp"><a name="p1179mcpsimp"></a><a name="p1179mcpsimp"></a>threshold_i [16]</p>
+<p id="p1180mcpsimp"><a name="p1180mcpsimp"></a><a name="p1180mcpsimp"></a>threshold_p [16]</p>
+<p id="p1181mcpsimp"><a name="p1181mcpsimp"></a><a name="p1181mcpsimp"></a>threshold_b[16]</p>
+</td>
+<td class="cellrowborder" valign="top" width="33%" headers="mcps1.2.5.1.2 "><p id="p1183mcpsimp"><a name="p1183mcpsimp"></a><a name="p1183mcpsimp"></a>基于纹理的宏块级码率控制参数：I、P、B帧madi阈值。</p>
+<p id="p1184mcpsimp"><a name="p1184mcpsimp"></a><a name="p1184mcpsimp"></a>H264默认值：</p>
+<p id="p1185mcpsimp"><a name="p1185mcpsimp"></a><a name="p1185mcpsimp"></a>I：[0, 0, 0, 0, 3, 3, 5, 5, 8, 8, 8, 15, 15, 20, 25, 25]；</p>
+<p id="p1186mcpsimp"><a name="p1186mcpsimp"></a><a name="p1186mcpsimp"></a>P：[0, 0, 0, 0, 3, 3, 5, 5, 8, 8, 8, 15, 15, 20, 25, 25]；</p>
+<p id="p1187mcpsimp"><a name="p1187mcpsimp"></a><a name="p1187mcpsimp"></a>B：[0, 0, 0, 0, 3, 3, 5, 5, 8, 8, 8, 15, 15, 20, 25, 25]。</p>
+<p id="p1188mcpsimp"><a name="p1188mcpsimp"></a><a name="p1188mcpsimp"></a>H265默认值：</p>
+<p id="p1189mcpsimp"><a name="p1189mcpsimp"></a><a name="p1189mcpsimp"></a>I：[0, 0, 0, 0, 3, 3, 5, 5, 8, 8, 8, 15, 15, 20, 25, 25]；</p>
+<p id="p1190mcpsimp"><a name="p1190mcpsimp"></a><a name="p1190mcpsimp"></a>P：[0, 0, 0, 0, 3, 3, 5, 5, 8, 8, 8, 15, 15, 20, 25, 25]；</p>
+<p id="p1191mcpsimp"><a name="p1191mcpsimp"></a><a name="p1191mcpsimp"></a>B：[0, 0, 0, 0, 3, 3, 5, 5, 8, 8, 8, 15, 15, 20, 25, 25]。</p>
+</td>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.5.1.3 "><p id="p1193mcpsimp"><a name="p1193mcpsimp"></a><a name="p1193mcpsimp"></a>纹理级码率控制使平坦区域QP减少，细节区域QP增加，使主观图像质量更好。</p>
+<p id="p1194mcpsimp"><a name="p1194mcpsimp"></a><a name="p1194mcpsimp"></a>前8级为减QP方向；后8级为加QP方向：</p>
+<p id="p1195mcpsimp"><a name="p1195mcpsimp"></a><a name="p1195mcpsimp"></a>对于减QP方向，设置为0表示关闭当前级；</p>
+<p id="p1196mcpsimp"><a name="p1196mcpsimp"></a><a name="p1196mcpsimp"></a>对于加QP方向，设置255表示关闭当前级。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13%" headers="mcps1.2.5.1.4 "><p id="p1198mcpsimp"><a name="p1198mcpsimp"></a><a name="p1198mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1199mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p id="p1201mcpsimp"><a name="p1201mcpsimp"></a><a name="p1201mcpsimp"></a>direction</p>
+</td>
+<td class="cellrowborder" valign="top" width="33%" headers="mcps1.2.5.1.2 "><p id="p1203mcpsimp"><a name="p1203mcpsimp"></a><a name="p1203mcpsimp"></a>在基于纹理宏块级码率控制时，用于控制加减方向。</p>
+<p id="p1204mcpsimp"><a name="p1204mcpsimp"></a><a name="p1204mcpsimp"></a>取值范围：[0，16]。</p>
+</td>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.5.1.3 "><p id="p1206mcpsimp"><a name="p1206mcpsimp"></a><a name="p1206mcpsimp"></a>例如：direction =7表示：threshold的前7个参数用于QP减方向；后9个参数用于QP加方向。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13%" headers="mcps1.2.5.1.4 "><p id="p1208mcpsimp"><a name="p1208mcpsimp"></a><a name="p1208mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1209mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p id="p1211mcpsimp"><a name="p1211mcpsimp"></a><a name="p1211mcpsimp"></a>row_qp_delta</p>
+</td>
+<td class="cellrowborder" valign="top" width="33%" headers="mcps1.2.5.1.2 "><p id="p1213mcpsimp"><a name="p1213mcpsimp"></a><a name="p1213mcpsimp"></a>基于行的宏块级码率控制，默认值为2。行级码率控制增加码率稳定性。设置为0表示关闭基于行的宏块级码率控制。</p>
+</td>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.5.1.3 "><p id="p1215mcpsimp"><a name="p1215mcpsimp"></a><a name="p1215mcpsimp"></a>行级码率控制，设置越大一帧之内QP调整的幅度越大，码率也更稳定。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13%" headers="mcps1.2.5.1.4 "><p id="p1217mcpsimp"><a name="p1217mcpsimp"></a><a name="p1217mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1218mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p id="p1220mcpsimp"><a name="p1220mcpsimp"></a><a name="p1220mcpsimp"></a>first_frame_start_qp</p>
+</td>
+<td class="cellrowborder" valign="top" width="33%" headers="mcps1.2.5.1.2 "><p id="p1222mcpsimp"><a name="p1222mcpsimp"></a><a name="p1222mcpsimp"></a>第一帧的起始Qp值。</p>
+</td>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.5.1.3 "><p id="p1224mcpsimp"><a name="p1224mcpsimp"></a><a name="p1224mcpsimp"></a>第一帧的起始QP，编码器内部会根据经验值推算一个合适的QP，但是客户可以根据产品的实际场景调整。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13%" headers="mcps1.2.5.1.4 "><p id="p1226mcpsimp"><a name="p1226mcpsimp"></a><a name="p1226mcpsimp"></a>略</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="码率过高丢帧参数及使用说明">码率过高丢帧参数及使用说明<a name="ZH-CN_TOPIC_0000001426773186"></a></h3>
+<p>码率过高丢帧参数如<a href="#_Ref435622987">表1</a>所示。</p>
+<p><strong>表 1</strong>  码率过高丢帧参数</p>
+<p><a name="_Ref435622987"></a></p>
+<table><thead align="left"><tr id="row1237mcpsimp"><th class="cellrowborder" valign="top" width="23.762376237623766%" id="mcps1.2.5.1.1"><p id="p1239mcpsimp"><a name="p1239mcpsimp"></a><a name="p1239mcpsimp"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="30.693069306930692%" id="mcps1.2.5.1.2"><p id="p1241mcpsimp"><a name="p1241mcpsimp"></a><a name="p1241mcpsimp"></a>说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="32.67326732673268%" id="mcps1.2.5.1.3"><p id="p1243mcpsimp"><a name="p1243mcpsimp"></a><a name="p1243mcpsimp"></a>应用场景</p>
+</th>
+<th class="cellrowborder" valign="top" width="12.871287128712872%" id="mcps1.2.5.1.4"><p id="p1245mcpsimp"><a name="p1245mcpsimp"></a><a name="p1245mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1246mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1248mcpsimp"><a name="p1248mcpsimp"></a><a name="p1248mcpsimp"></a>enable</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.2.5.1.2 "><p id="p1250mcpsimp"><a name="p1250mcpsimp"></a><a name="p1250mcpsimp"></a>码率过冲丢帧开关</p>
+</td>
+<td class="cellrowborder" valign="top" width="32.67326732673268%" headers="mcps1.2.5.1.3 "><p id="p1252mcpsimp"><a name="p1252mcpsimp"></a><a name="p1252mcpsimp"></a>当码率超过阈值时开启丢帧，保证码率平稳。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1254mcpsimp"><a name="p1254mcpsimp"></a><a name="p1254mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1255mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1257mcpsimp"><a name="p1257mcpsimp"></a><a name="p1257mcpsimp"></a>bit_rate_threshold</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.2.5.1.2 "><p id="p1259mcpsimp"><a name="p1259mcpsimp"></a><a name="p1259mcpsimp"></a>码率过冲阈值：</p>
+<p id="p1260mcpsimp"><a name="p1260mcpsimp"></a><a name="p1260mcpsimp"></a>丢帧阈值建议设为目标码率的1.2倍或最大码率</p>
+</td>
+<td class="cellrowborder" valign="top" width="32.67326732673268%" headers="mcps1.2.5.1.3 "><p id="p1262mcpsimp"><a name="p1262mcpsimp"></a><a name="p1262mcpsimp"></a>略</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1264mcpsimp"><a name="p1264mcpsimp"></a><a name="p1264mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1265mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1267mcpsimp"><a name="p1267mcpsimp"></a><a name="p1267mcpsimp"></a>mode</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.2.5.1.2 "><p id="p1269mcpsimp"><a name="p1269mcpsimp"></a><a name="p1269mcpsimp"></a>丢帧方式选择，丢帧方式可以选择正常丢帧或者编码为PSkip帧。</p>
+</td>
+<td class="cellrowborder" valign="top" width="32.67326732673268%" headers="mcps1.2.5.1.3 "><p id="p1271mcpsimp"><a name="p1271mcpsimp"></a><a name="p1271mcpsimp"></a>当码率过冲时丢帧或编PSkip帧</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1273mcpsimp"><a name="p1273mcpsimp"></a><a name="p1273mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1274mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1276mcpsimp"><a name="p1276mcpsimp"></a><a name="p1276mcpsimp"></a>frame_gap</p>
+</td>
+<td class="cellrowborder" valign="top" width="30.693069306930692%" headers="mcps1.2.5.1.2 "><p id="p1278mcpsimp"><a name="p1278mcpsimp"></a><a name="p1278mcpsimp"></a>非0值表示连续丢帧最大个数。</p>
+<p id="p1279mcpsimp"><a name="p1279mcpsimp"></a><a name="p1279mcpsimp"></a>设置为0时表示连续丢帧，不计算个数。</p>
+</td>
+<td class="cellrowborder" valign="top" width="32.67326732673268%" headers="mcps1.2.5.1.3 "><p id="p1281mcpsimp"><a name="p1281mcpsimp"></a><a name="p1281mcpsimp"></a>保证连续丢帧时的流畅度。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1283mcpsimp"><a name="p1283mcpsimp"></a><a name="p1283mcpsimp"></a>略</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="超大帧策略高级参数及使用说明">超大帧策略高级参数及使用说明<a name="ZH-CN_TOPIC_0000001476532893"></a></h3>
+<p>超大帧策略高级参数如<a href="#_Ref435622831">表1</a>所示。</p>
+<p><strong>表 1</strong>  超大帧策略高级参数</p>
+<p><a name="_Ref435622831"></a></p>
+<table><thead align="left"><tr id="row1294mcpsimp"><th class="cellrowborder" valign="top" width="28.712871287128717%" id="mcps1.2.5.1.1"><p id="p1296mcpsimp"><a name="p1296mcpsimp"></a><a name="p1296mcpsimp"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="35.64356435643564%" id="mcps1.2.5.1.2"><p id="p1298mcpsimp"><a name="p1298mcpsimp"></a><a name="p1298mcpsimp"></a>说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="22.772277227722775%" id="mcps1.2.5.1.3"><p id="p1300mcpsimp"><a name="p1300mcpsimp"></a><a name="p1300mcpsimp"></a>应用场景</p>
+</th>
+<th class="cellrowborder" valign="top" width="12.871287128712872%" id="mcps1.2.5.1.4"><p id="p1302mcpsimp"><a name="p1302mcpsimp"></a><a name="p1302mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1304mcpsimp"><td class="cellrowborder" valign="top" width="28.712871287128717%" headers="mcps1.2.5.1.1 "><p id="p1306mcpsimp"><a name="p1306mcpsimp"></a><a name="p1306mcpsimp"></a>super_frame_mode</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.64356435643564%" headers="mcps1.2.5.1.2 "><p id="p1308mcpsimp"><a name="p1308mcpsimp"></a><a name="p1308mcpsimp"></a>超大帧策略</p>
+</td>
+<td class="cellrowborder" valign="top" width="22.772277227722775%" headers="mcps1.2.5.1.3 "><p id="p1310mcpsimp"><a name="p1310mcpsimp"></a><a name="p1310mcpsimp"></a>三种模式可以选择：</p>
+<p id="p1311mcpsimp"><a name="p1311mcpsimp"></a><a name="p1311mcpsimp"></a>重编、丢帧、正常输出</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1313mcpsimp"><a name="p1313mcpsimp"></a><a name="p1313mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1314mcpsimp"><td class="cellrowborder" valign="top" width="28.712871287128717%" headers="mcps1.2.5.1.1 "><p id="p1316mcpsimp"><a name="p1316mcpsimp"></a><a name="p1316mcpsimp"></a>i_frame_bits_threshold</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.64356435643564%" headers="mcps1.2.5.1.2 "><p id="p1318mcpsimp"><a name="p1318mcpsimp"></a><a name="p1318mcpsimp"></a>I帧编码bit数阈值</p>
+</td>
+<td class="cellrowborder" valign="top" width="22.772277227722775%" headers="mcps1.2.5.1.3 "><p id="p1320mcpsimp"><a name="p1320mcpsimp"></a><a name="p1320mcpsimp"></a>略</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1322mcpsimp"><a name="p1322mcpsimp"></a><a name="p1322mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1323mcpsimp"><td class="cellrowborder" valign="top" width="28.712871287128717%" headers="mcps1.2.5.1.1 "><p id="p1325mcpsimp"><a name="p1325mcpsimp"></a><a name="p1325mcpsimp"></a>p_frame_bits_threshold</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.64356435643564%" headers="mcps1.2.5.1.2 "><p id="p1327mcpsimp"><a name="p1327mcpsimp"></a><a name="p1327mcpsimp"></a>P帧编码bit数阈值</p>
+</td>
+<td class="cellrowborder" valign="top" width="22.772277227722775%" headers="mcps1.2.5.1.3 "><p id="p1329mcpsimp"><a name="p1329mcpsimp"></a><a name="p1329mcpsimp"></a>略</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1331mcpsimp"><a name="p1331mcpsimp"></a><a name="p1331mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1332mcpsimp"><td class="cellrowborder" valign="top" width="28.712871287128717%" headers="mcps1.2.5.1.1 "><p id="p1334mcpsimp"><a name="p1334mcpsimp"></a><a name="p1334mcpsimp"></a>b_frame_bits_threshold</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.64356435643564%" headers="mcps1.2.5.1.2 "><p id="p1336mcpsimp"><a name="p1336mcpsimp"></a><a name="p1336mcpsimp"></a>B帧编码bit数阈值</p>
+</td>
+<td class="cellrowborder" valign="top" width="22.772277227722775%" headers="mcps1.2.5.1.3 "><p id="p1338mcpsimp"><a name="p1338mcpsimp"></a><a name="p1338mcpsimp"></a>略</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1340mcpsimp"><a name="p1340mcpsimp"></a><a name="p1340mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1341mcpsimp"><td class="cellrowborder" valign="top" width="28.712871287128717%" headers="mcps1.2.5.1.1 "><p id="p1343mcpsimp"><a name="p1343mcpsimp"></a><a name="p1343mcpsimp"></a>reencode_priority</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.64356435643564%" headers="mcps1.2.5.1.2 "><p id="p1345mcpsimp"><a name="p1345mcpsimp"></a><a name="p1345mcpsimp"></a>超大帧重编优先级</p>
+<p id="p1346mcpsimp"><a name="p1346mcpsimp"></a><a name="p1346mcpsimp"></a>1：按照目标码率分配重编码bit数；</p>
+<p id="p1347mcpsimp"><a name="p1347mcpsimp"></a><a name="p1347mcpsimp"></a>2：按照超大帧阈值分配重编码bit数。</p>
+</td>
+<td class="cellrowborder" valign="top" width="22.772277227722775%" headers="mcps1.2.5.1.3 "><p id="p1349mcpsimp"><a name="p1349mcpsimp"></a><a name="p1349mcpsimp"></a>略</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1351mcpsimp"><a name="p1351mcpsimp"></a><a name="p1351mcpsimp"></a>略</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="GOP结构参数的意义和使用方法">GOP结构参数的意义和使用方法<a name="ZH-CN_TOPIC_0000001426613908"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001426613912">单参考P帧GOP结构属性说明及使用方法</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001426456264">双参考P帧GOP结构属性说明及使用方法</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001426296328">智能P帧GOP结构属性说明及使用方法</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001426456268">B帧GOP结构参数说明及使用方法</a></strong>  </p>
+</li>
+</ul>
+<h3 id="单参考P帧GOP结构属性说明及使用方法">单参考P帧GOP结构属性说明及使用方法<a name="ZH-CN_TOPIC_0000001426613912"></a></h3>
+<p>单参考P帧编码GOP结构参数如<a href="#_Ref435622899">表1</a>所示。</p>
+<p><strong>表 1</strong>  单参考P帧编码GOP结构参数</p>
+<p><a name="_Ref435622899"></a></p>
+<table><thead align="left"><tr id="row1363mcpsimp"><th class="cellrowborder" valign="top" width="24%" id="mcps1.2.5.1.1"><p id="p1365mcpsimp"><a name="p1365mcpsimp"></a><a name="p1365mcpsimp"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="33%" id="mcps1.2.5.1.2"><p id="p1367mcpsimp"><a name="p1367mcpsimp"></a><a name="p1367mcpsimp"></a>说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="30%" id="mcps1.2.5.1.3"><p id="p1369mcpsimp"><a name="p1369mcpsimp"></a><a name="p1369mcpsimp"></a>应用场景</p>
+</th>
+<th class="cellrowborder" valign="top" width="13%" id="mcps1.2.5.1.4"><p id="p1371mcpsimp"><a name="p1371mcpsimp"></a><a name="p1371mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1372mcpsimp"><td class="cellrowborder" valign="top" width="24%" headers="mcps1.2.5.1.1 "><p id="p1374mcpsimp"><a name="p1374mcpsimp"></a><a name="p1374mcpsimp"></a>ip_qp_delta</p>
+</td>
+<td class="cellrowborder" valign="top" width="33%" headers="mcps1.2.5.1.2 "><p id="p1376mcpsimp"><a name="p1376mcpsimp"></a><a name="p1376mcpsimp"></a>IP帧QP差值,用于调节呼吸效应</p>
+<p id="p1377mcpsimp"><a name="p1377mcpsimp"></a><a name="p1377mcpsimp"></a>建议值：[2, 6]</p>
+</td>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.5.1.3 "><p id="p1379mcpsimp"><a name="p1379mcpsimp"></a><a name="p1379mcpsimp"></a>用于调节呼吸效应及控制I帧大小。</p>
+</td>
+<td class="cellrowborder" valign="top" width="13%" headers="mcps1.2.5.1.4 "><p id="p1381mcpsimp"><a name="p1381mcpsimp"></a><a name="p1381mcpsimp"></a>略</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="双参考P帧GOP结构属性说明及使用方法">双参考P帧GOP结构属性说明及使用方法<a name="ZH-CN_TOPIC_0000001426456264"></a></h3>
+<p>双参考P帧编码GOP结构参数如<a href="#_Ref435622961">表1</a>所示。</p>
+<p><strong>表 1</strong>  双参考P帧编码GOP结构参数</p>
+<p><a name="_Ref435622961"></a></p>
+<table><thead align="left"><tr id="row1392mcpsimp"><th class="cellrowborder" valign="top" width="23.762376237623766%" id="mcps1.2.5.1.1"><p id="p1394mcpsimp"><a name="p1394mcpsimp"></a><a name="p1394mcpsimp"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="27.722772277227726%" id="mcps1.2.5.1.2"><p id="p1396mcpsimp"><a name="p1396mcpsimp"></a><a name="p1396mcpsimp"></a>说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="35.64356435643564%" id="mcps1.2.5.1.3"><p id="p1398mcpsimp"><a name="p1398mcpsimp"></a><a name="p1398mcpsimp"></a>应用场景</p>
+</th>
+<th class="cellrowborder" valign="top" width="12.871287128712872%" id="mcps1.2.5.1.4"><p id="p1400mcpsimp"><a name="p1400mcpsimp"></a><a name="p1400mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1402mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1404mcpsimp"><a name="p1404mcpsimp"></a><a name="p1404mcpsimp"></a>sp_interval</p>
+</td>
+<td class="cellrowborder" valign="top" width="27.722772277227726%" headers="mcps1.2.5.1.2 "><p id="p1406mcpsimp"><a name="p1406mcpsimp"></a><a name="p1406mcpsimp"></a>Special P帧间隔。</p>
+<p id="p1407mcpsimp"><a name="p1407mcpsimp"></a><a name="p1407mcpsimp"></a>建议值：[4, 10]</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.64356435643564%" headers="mcps1.2.5.1.3 "><p id="p1409mcpsimp"><a name="p1409mcpsimp"></a><a name="p1409mcpsimp"></a>在一个GOP中，按照固定间隔编码一些质量更好的P帧，称为Special P帧。通过时域参考的相关性，提升编码整体图像质量。</p>
+<p id="p1410mcpsimp"><a name="p1410mcpsimp"></a><a name="p1410mcpsimp"></a>使用双参考P帧模式将在编码端和解码端各增加一个帧存DDR，但不增加系统端到端延时。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1412mcpsimp"><a name="p1412mcpsimp"></a><a name="p1412mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1413mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1415mcpsimp"><a name="p1415mcpsimp"></a><a name="p1415mcpsimp"></a>sp_qp_delta</p>
+</td>
+<td class="cellrowborder" valign="top" width="27.722772277227726%" headers="mcps1.2.5.1.2 "><p id="p1417mcpsimp"><a name="p1417mcpsimp"></a><a name="p1417mcpsimp"></a>Special P帧相对普通P帧的QP差值,用于优化图像质量。</p>
+<p id="p1418mcpsimp"><a name="p1418mcpsimp"></a><a name="p1418mcpsimp"></a>建议值：[2, 4]</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.64356435643564%" headers="mcps1.2.5.1.3 "><p id="p1420mcpsimp"><a name="p1420mcpsimp"></a><a name="p1420mcpsimp"></a>略</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1422mcpsimp"><a name="p1422mcpsimp"></a><a name="p1422mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1423mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1425mcpsimp"><a name="p1425mcpsimp"></a><a name="p1425mcpsimp"></a>ip_qp_delta</p>
+</td>
+<td class="cellrowborder" valign="top" width="27.722772277227726%" headers="mcps1.2.5.1.2 "><p id="p1427mcpsimp"><a name="p1427mcpsimp"></a><a name="p1427mcpsimp"></a>I帧相对普通P帧的QP差值,用于调节呼吸效应。</p>
+<p id="p1428mcpsimp"><a name="p1428mcpsimp"></a><a name="p1428mcpsimp"></a>建议值：[2, 6]</p>
+</td>
+<td class="cellrowborder" valign="top" width="35.64356435643564%" headers="mcps1.2.5.1.3 "><p id="p1430mcpsimp"><a name="p1430mcpsimp"></a><a name="p1430mcpsimp"></a>用于调节呼吸效应及控制I帧大小。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1432mcpsimp"><a name="p1432mcpsimp"></a><a name="p1432mcpsimp"></a>略</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="智能P帧GOP结构属性说明及使用方法">智能P帧GOP结构属性说明及使用方法<a name="ZH-CN_TOPIC_0000001426296328"></a></h3>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+Hi3519DV500/Hi3516CV610/Hi3511CV100不支持adv_smart_p。</p>
+</blockquote>
+<p>smart_p/adv_smart_p智能P帧编码GOP结构参数如<a href="#_Ref435629576">表1</a>所示。</p>
+<p><strong>表 1</strong>  smart_p/adv_smart_p智能P帧编码GOP结构参数</p>
+<p><a name="_Ref435629576"></a></p>
+<table><thead align="left"><tr id="row1444mcpsimp"><th class="cellrowborder" valign="top" width="23.762376237623766%" id="mcps1.2.5.1.1"><p id="p1446mcpsimp"><a name="p1446mcpsimp"></a><a name="p1446mcpsimp"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="23.762376237623766%" id="mcps1.2.5.1.2"><p id="p1448mcpsimp"><a name="p1448mcpsimp"></a><a name="p1448mcpsimp"></a>说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="41.584158415841586%" id="mcps1.2.5.1.3"><p id="p1450mcpsimp"><a name="p1450mcpsimp"></a><a name="p1450mcpsimp"></a>应用场景</p>
+</th>
+<th class="cellrowborder" valign="top" width="10.891089108910892%" id="mcps1.2.5.1.4"><p id="p1452mcpsimp"><a name="p1452mcpsimp"></a><a name="p1452mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1454mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1456mcpsimp"><a name="p1456mcpsimp"></a><a name="p1456mcpsimp"></a>bg_interval</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p1458mcpsimp"><a name="p1458mcpsimp"></a><a name="p1458mcpsimp"></a>长期参考帧间隔。</p>
+<p id="p1459mcpsimp"><a name="p1459mcpsimp"></a><a name="p1459mcpsimp"></a>建议值：</p>
+<p id="p1460mcpsimp"><a name="p1460mcpsimp"></a><a name="p1460mcpsimp"></a>GOP的10 ~ 30倍</p>
+</td>
+<td class="cellrowborder" valign="top" width="41.584158415841586%" headers="mcps1.2.5.1.3 "><p id="p1462mcpsimp"><a name="p1462mcpsimp"></a><a name="p1462mcpsimp"></a>在码流中周期性的插入长期参考帧，利用时域相关性提升编码图像质量。</p>
+<p id="p1463mcpsimp"><a name="p1463mcpsimp"></a><a name="p1463mcpsimp"></a>对于镜头固定安装，相对静止的场景可以提升编码性能。</p>
+<p id="p1464mcpsimp"><a name="p1464mcpsimp"></a><a name="p1464mcpsimp"></a>一般设置为GOP的整数倍，并与码率统计时间相匹配。</p>
+<p id="p1465mcpsimp"><a name="p1465mcpsimp"></a><a name="p1465mcpsimp"></a>使用<span>smart_p</span>帧模式将在编码端和解码端各增加一个帧存DDR，但不增加系统端到端延时。</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.891089108910892%" headers="mcps1.2.5.1.4 "><p id="p1467mcpsimp"><a name="p1467mcpsimp"></a><a name="p1467mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1468mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1470mcpsimp"><a name="p1470mcpsimp"></a><a name="p1470mcpsimp"></a>bg_qp_delta</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p1472mcpsimp"><a name="p1472mcpsimp"></a><a name="p1472mcpsimp"></a>长期参考帧相对于普通P帧的QP差值。建议值：[2, 10]</p>
+</td>
+<td class="cellrowborder" valign="top" width="41.584158415841586%" headers="mcps1.2.5.1.3 "><p id="p1475mcpsimp"><a name="p1475mcpsimp"></a><a name="p1475mcpsimp"></a>用于调节长期参考帧的质量及调节长期参考帧的大小。</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.891089108910892%" headers="mcps1.2.5.1.4 "><p id="p1477mcpsimp"><a name="p1477mcpsimp"></a><a name="p1477mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1478mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1480mcpsimp"><a name="p1480mcpsimp"></a><a name="p1480mcpsimp"></a>vi_qp_delta</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p1482mcpsimp"><a name="p1482mcpsimp"></a><a name="p1482mcpsimp"></a>虚拟I帧相对于普通P帧的QP差值。</p>
+<p id="p1483mcpsimp"><a name="p1483mcpsimp"></a><a name="p1483mcpsimp"></a>建议值：[2, 4]</p>
+</td>
+<td class="cellrowborder" valign="top" width="41.584158415841586%" headers="mcps1.2.5.1.3 "><p id="p1485mcpsimp"><a name="p1485mcpsimp"></a><a name="p1485mcpsimp"></a>虚拟I帧仅参考长期参考帧，可以独立解码。用于错误恢复或播放器Seek。在<span>smart_p</span>帧编码模式下，虚拟I帧的间隔等于gop。</p>
+<p id="p1486mcpsimp"><a name="p1486mcpsimp"></a><a name="p1486mcpsimp"></a>vi_qp_delta用于调节虚拟I帧的质量及调节虚拟I帧的大小，将虚拟I帧采用更好的图像质量编码，可以提升编码性能。</p>
+</td>
+<td class="cellrowborder" valign="top" width="10.891089108910892%" headers="mcps1.2.5.1.4 "><p id="p1488mcpsimp"><a name="p1488mcpsimp"></a><a name="p1488mcpsimp"></a>略</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="B帧GOP结构参数说明及使用方法">B帧GOP结构参数说明及使用方法<a name="ZH-CN_TOPIC_0000001426456268"></a></h3>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+此小节 Hi3519DV500/Hi3516CV610/Hi3511CV100不支持。</p>
+</blockquote>
+<p>B帧编码GOP结构参数如<a href="#_Ref435625167">表1</a>所示。</p>
+<p><strong>表 1</strong>  B帧编码GOP结构参数</p>
+<p><a name="_Ref435625167"></a></p>
+<table><thead align="left"><tr id="row1500mcpsimp"><th class="cellrowborder" valign="top" width="23.762376237623766%" id="mcps1.2.5.1.1"><p id="p1502mcpsimp"><a name="p1502mcpsimp"></a><a name="p1502mcpsimp"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="23.762376237623766%" id="mcps1.2.5.1.2"><p id="p1504mcpsimp"><a name="p1504mcpsimp"></a><a name="p1504mcpsimp"></a>说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="39.603960396039604%" id="mcps1.2.5.1.3"><p id="p1506mcpsimp"><a name="p1506mcpsimp"></a><a name="p1506mcpsimp"></a>应用场景</p>
+</th>
+<th class="cellrowborder" valign="top" width="12.871287128712872%" id="mcps1.2.5.1.4"><p id="p1508mcpsimp"><a name="p1508mcpsimp"></a><a name="p1508mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1509mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1511mcpsimp"><a name="p1511mcpsimp"></a><a name="p1511mcpsimp"></a>b_frame_num</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p1513mcpsimp"><a name="p1513mcpsimp"></a><a name="p1513mcpsimp"></a>相邻两个P帧之间插入B帧个数。</p>
+<p id="p1514mcpsimp"><a name="p1514mcpsimp"></a><a name="p1514mcpsimp"></a>建议值：[1, 2]</p>
+</td>
+<td class="cellrowborder" valign="top" width="39.603960396039604%" headers="mcps1.2.5.1.3 "><p id="p1516mcpsimp"><a name="p1516mcpsimp"></a><a name="p1516mcpsimp"></a>B帧采用双向参考方式，能够最大限度的利用前后两帧的相关性，提升编码性能，降低码率；</p>
+<p id="p1517mcpsimp"><a name="p1517mcpsimp"></a><a name="p1517mcpsimp"></a>使用B帧将在编码端和解码端各增加一个帧存DDR；</p>
+<p id="p1518mcpsimp"><a name="p1518mcpsimp"></a><a name="p1518mcpsimp"></a>编码端和解码端各增加b_frame_num个帧间隔的延迟。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1520mcpsimp"><a name="p1520mcpsimp"></a><a name="p1520mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1521mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1523mcpsimp"><a name="p1523mcpsimp"></a><a name="p1523mcpsimp"></a>b_qp_delta</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p1525mcpsimp"><a name="p1525mcpsimp"></a><a name="p1525mcpsimp"></a>B帧相对P帧的QP差值,用于降低码率。</p>
+<p id="p1526mcpsimp"><a name="p1526mcpsimp"></a><a name="p1526mcpsimp"></a>建议值：[-4, -2]</p>
+</td>
+<td class="cellrowborder" valign="top" width="39.603960396039604%" headers="mcps1.2.5.1.3 "><p id="p1528mcpsimp"><a name="p1528mcpsimp"></a><a name="p1528mcpsimp"></a>B帧本身不被其他帧参考，所以B帧可以适当降低图像质量。建议这个变量设置为负值，适当增加B帧QP，以达到节约码率的作用。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1530mcpsimp"><a name="p1530mcpsimp"></a><a name="p1530mcpsimp"></a>略</p>
+</td>
+</tr>
+<tr id="row1531mcpsimp"><td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.1 "><p id="p1533mcpsimp"><a name="p1533mcpsimp"></a><a name="p1533mcpsimp"></a>ip_qp_delta</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.762376237623766%" headers="mcps1.2.5.1.2 "><p id="p1535mcpsimp"><a name="p1535mcpsimp"></a><a name="p1535mcpsimp"></a>I帧相对普通P帧的QP差值,用于调节呼吸效应。</p>
+<p id="p1536mcpsimp"><a name="p1536mcpsimp"></a><a name="p1536mcpsimp"></a>建议值：[2, 6]</p>
+</td>
+<td class="cellrowborder" valign="top" width="39.603960396039604%" headers="mcps1.2.5.1.3 "><p id="p1538mcpsimp"><a name="p1538mcpsimp"></a><a name="p1538mcpsimp"></a>用于调节呼吸效应及控制I帧大小。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.871287128712872%" headers="mcps1.2.5.1.4 "><p id="p1540mcpsimp"><a name="p1540mcpsimp"></a><a name="p1540mcpsimp"></a>略</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="码率控制专题">码率控制专题<a name="ZH-CN_TOPIC_0000001476532901"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001426613920">码率更稳定</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001426613916">图像质量提升</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001426773178">调节呼吸效应</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001476812617">限制I帧幅度</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001426456272">减少运动拖影和色度拖影</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001476812613">码率控制的起始QP</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001426296324">VBR、AVBR、CVBR和QVBR的运行机制</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001476812625">VBR、AVBR、CBR和CVBR的差异</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001476692677">低码率场景</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001476692673">注意事项</a></strong>  </p>
+</li>
+</ul>
+<h3 id="码率更稳定">码率更稳定<a name="ZH-CN_TOPIC_0000001426613920"></a></h3>
+<p>码率更稳定方法参见<a href="#_Ref394326103">表1</a>。</p>
+<p><strong>表 1</strong>  码率更稳定方法</p>
+<p><a name="_Ref394326103"></a></p>
+<table><thead align="left"><tr id="row1551mcpsimp"><th class="cellrowborder" valign="top" width="21%" id="mcps1.2.4.1.1"><p id="p1553mcpsimp"><a name="p1553mcpsimp"></a><a name="p1553mcpsimp"></a>方法</p>
+</th>
+<th class="cellrowborder" valign="top" width="44%" id="mcps1.2.4.1.2"><p id="p1555mcpsimp"><a name="p1555mcpsimp"></a><a name="p1555mcpsimp"></a>对应参数设置</p>
+</th>
+<th class="cellrowborder" valign="top" width="35%" id="mcps1.2.4.1.3"><p id="p1557mcpsimp"><a name="p1557mcpsimp"></a><a name="p1557mcpsimp"></a>副作用</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1558mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.4.1.1 "><p id="p1560mcpsimp"><a name="p1560mcpsimp"></a><a name="p1560mcpsimp"></a>增加行级码率控制调整幅度</p>
+</td>
+<td class="cellrowborder" valign="top" width="44%" headers="mcps1.2.4.1.2 "><p xml:lang="pt-BR" id="p1562mcpsimp"><a name="p1562mcpsimp"></a><a name="p1562mcpsimp"></a>ot_venc_rc_param::row_qp_delta<span xml:lang="en-US" id="ph1563mcpsimp"><a name="ph1563mcpsimp"></a><a name="ph1563mcpsimp"></a>，从默认值2增加到3~5</span></p>
+</td>
+<td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.4.1.3 "><p id="p1565mcpsimp"><a name="p1565mcpsimp"></a><a name="p1565mcpsimp"></a>qp_delta设置过大，虽然静止或小运动场景码率会看起来十分平稳，但是大运动场景会让调整QP的反应变慢，大运动码率波动反而变大, 建议设置不要超过5。</p>
+</td>
+</tr>
+<tr id="row1566mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.2.4.1.1 "><p id="p1568mcpsimp"><a name="p1568mcpsimp"></a><a name="p1568mcpsimp"></a>设置码率超出阈值丢帧，设置连续丢帧个数</p>
+</td>
+<td class="cellrowborder" valign="top" width="44%" headers="mcps1.2.4.1.2 "><p id="p1570mcpsimp"><a name="p1570mcpsimp"></a><a name="p1570mcpsimp"></a>ot_venc_frame_lost_strategy::enable= TD_TRUE；</p>
+<p id="p1571mcpsimp"><a name="p1571mcpsimp"></a><a name="p1571mcpsimp"></a>ot_venc_frame_lost_strategy::bit_rate_threshold = 丢帧阈值；</p>
+<p id="p1572mcpsimp"><a name="p1572mcpsimp"></a><a name="p1572mcpsimp"></a>ot_venc_frame_lost_strategy::mode = OT_VENC_FRAME_LOST_NORMAL 或 OT_VENC_FRAME_LOST_P_SKIP；</p>
+<p id="p1573mcpsimp"><a name="p1573mcpsimp"></a><a name="p1573mcpsimp"></a>ot_venc_frame_lost_strategy::frame_gap = 连续丢帧间隔</p>
+</td>
+<td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.4.1.3 "><p id="p1575mcpsimp"><a name="p1575mcpsimp"></a><a name="p1575mcpsimp"></a>当码率控制不住时通过丢帧来降低码率，视频流畅性降低；丢帧阈值建议为目标码率的1.1倍~1.2倍；连续丢帧间隔建议为2或3。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="图像质量提升">图像质量提升<a name="ZH-CN_TOPIC_0000001426613916"></a></h3>
+<p>提升图像质量方法参见<a href="#_Ref394326196">表1</a>所示。</p>
+<p><strong>表 1</strong>  提升图像质量方法</p>
+<p><a name="_Ref394326196"></a></p>
+<table><thead align="left"><tr id="row1585mcpsimp"><th class="cellrowborder" valign="top" width="20%" id="mcps1.2.4.1.1"><p id="p1587mcpsimp"><a name="p1587mcpsimp"></a><a name="p1587mcpsimp"></a>方法</p>
+</th>
+<th class="cellrowborder" valign="top" width="43%" id="mcps1.2.4.1.2"><p id="p1589mcpsimp"><a name="p1589mcpsimp"></a><a name="p1589mcpsimp"></a>对应参数设置</p>
+</th>
+<th class="cellrowborder" valign="top" width="37%" id="mcps1.2.4.1.3"><p id="p1591mcpsimp"><a name="p1591mcpsimp"></a><a name="p1591mcpsimp"></a>副作用</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1592mcpsimp"><td class="cellrowborder" valign="top" width="20%" headers="mcps1.2.4.1.1 "><p id="p1594mcpsimp"><a name="p1594mcpsimp"></a><a name="p1594mcpsimp"></a>设置最大QP</p>
+</td>
+<td class="cellrowborder" valign="top" width="43%" headers="mcps1.2.4.1.2 "><p xml:lang="pt-BR" id="p1596mcpsimp"><a name="p1596mcpsimp"></a><a name="p1596mcpsimp"></a>ot_venc_h264_cbr_param<span xml:lang="en-US" id="ph1597mcpsimp"><a name="ph1597mcpsimp"></a><a name="ph1597mcpsimp"></a>::max_qp</span></p>
+<p xml:lang="pt-BR" id="p1598mcpsimp"><a name="p1598mcpsimp"></a><a name="p1598mcpsimp"></a>ot_venc_h265_cbr_param<span xml:lang="en-US" id="ph1599mcpsimp"><a name="ph1599mcpsimp"></a><a name="ph1599mcpsimp"></a>::max_qp</span></p>
+<p xml:lang="pt-BR" id="p1600mcpsimp"><a name="p1600mcpsimp"></a><a name="p1600mcpsimp"></a>ot_venc_h264_vbr_param<span xml:lang="en-US" id="ph1601mcpsimp"><a name="ph1601mcpsimp"></a><a name="ph1601mcpsimp"></a>::max_qp</span></p>
+<p xml:lang="pt-BR" id="p1602mcpsimp"><a name="p1602mcpsimp"></a><a name="p1602mcpsimp"></a>ot_venc_h265_vbr_param<span xml:lang="en-US" id="ph1603mcpsimp"><a name="ph1603mcpsimp"></a><a name="ph1603mcpsimp"></a>::max_qp</span></p>
+</td>
+<td class="cellrowborder" valign="top" width="37%" headers="mcps1.2.4.1.3 "><p id="p1605mcpsimp"><a name="p1605mcpsimp"></a><a name="p1605mcpsimp"></a>限制最大QP能够有效的保护图像质量, 但是容易产生码率过冲。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="调节呼吸效应">调节呼吸效应<a name="ZH-CN_TOPIC_0000001426773178"></a></h3>
+<p>调节呼吸效应方法参见<a href="#_Ref394326303">表1</a>。</p>
+<p><strong>表 1</strong>  调节呼吸效应方法</p>
+<p><a name="_Ref394326303"></a></p>
+<table><thead align="left"><tr id="row1615mcpsimp"><th class="cellrowborder" valign="top" width="19%" id="mcps1.2.4.1.1"><p id="p1617mcpsimp"><a name="p1617mcpsimp"></a><a name="p1617mcpsimp"></a>方法</p>
+</th>
+<th class="cellrowborder" valign="top" width="43%" id="mcps1.2.4.1.2"><p id="p1619mcpsimp"><a name="p1619mcpsimp"></a><a name="p1619mcpsimp"></a>对应参数设置</p>
+</th>
+<th class="cellrowborder" valign="top" width="38%" id="mcps1.2.4.1.3"><p id="p1621mcpsimp"><a name="p1621mcpsimp"></a><a name="p1621mcpsimp"></a>副作用</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1622mcpsimp"><td class="cellrowborder" valign="top" width="19%" headers="mcps1.2.4.1.1 "><p id="p1624mcpsimp"><a name="p1624mcpsimp"></a><a name="p1624mcpsimp"></a>设置IP帧之间的QP差值，正数表示I帧QP小于P帧QP</p>
+</td>
+<td class="cellrowborder" valign="top" width="43%" headers="mcps1.2.4.1.2 "><p id="p1626mcpsimp"><a name="p1626mcpsimp"></a><a name="p1626mcpsimp"></a>ot_venc_gop_normal_p::ip_qp_delta</p>
+<p id="p1627mcpsimp"><a name="p1627mcpsimp"></a><a name="p1627mcpsimp"></a>ot_venc_gop_dual_p::ip_qp_delta</p>
+<p id="p1628mcpsimp"><a name="p1628mcpsimp"></a><a name="p1628mcpsimp"></a>ot_venc_gop_bipred_b::ip_qp_delta</p>
+</td>
+<td class="cellrowborder" valign="top" width="38%" headers="mcps1.2.4.1.3 "><p id="p1630mcpsimp"><a name="p1630mcpsimp"></a><a name="p1630mcpsimp"></a>ip_qp_delta的默认值与纹理级码率控制有一定关联, 当纹理级打开时默认值为6；当纹理级关闭时默认值为2; 调节呼吸效应ip_qp_delta应在默认值的基础上适当增加或减少。</p>
+</td>
+</tr>
+<tr id="row1631mcpsimp"><td class="cellrowborder" valign="top" width="19%" headers="mcps1.2.4.1.1 "><p id="p1633mcpsimp"><a name="p1633mcpsimp"></a><a name="p1633mcpsimp"></a>设置去除呼吸效应参数</p>
+</td>
+<td class="cellrowborder" valign="top" width="43%" headers="mcps1.2.4.1.2 "><p id="p1635mcpsimp"><a name="p1635mcpsimp"></a><a name="p1635mcpsimp"></a>ot_venc_debreath_effect::strength0</p>
+<p id="p1636mcpsimp"><a name="p1636mcpsimp"></a><a name="p1636mcpsimp"></a>ot_venc_debreath_effect::strength1</p>
+</td>
+<td class="cellrowborder" valign="top" width="38%" headers="mcps1.2.4.1.3 "><p id="p1638mcpsimp"><a name="p1638mcpsimp"></a><a name="p1638mcpsimp"></a>原则上，对不同的场景，呼吸效应的改善要做到最佳，需要同时调节参数strength0和strength1。但是考虑到多场景的适应性，建议客户使用默认值。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="限制I帧幅度">限制I帧幅度<a name="ZH-CN_TOPIC_0000001476812617"></a></h3>
+<p>限制I帧幅度参见<a href="#_Ref394326465">表1</a>。</p>
+<p><strong>表 1</strong>  限制I帧幅度方法</p>
+<p><a name="_Ref394326465"></a></p>
+<table><thead align="left"><tr id="row1648mcpsimp"><th class="cellrowborder" valign="top" width="25%" id="mcps1.2.4.1.1"><p id="p1650mcpsimp"><a name="p1650mcpsimp"></a><a name="p1650mcpsimp"></a>方法</p>
+</th>
+<th class="cellrowborder" valign="top" width="37%" id="mcps1.2.4.1.2"><p id="p1652mcpsimp"><a name="p1652mcpsimp"></a><a name="p1652mcpsimp"></a>对应参数设置</p>
+</th>
+<th class="cellrowborder" valign="top" width="38%" id="mcps1.2.4.1.3"><p id="p1654mcpsimp"><a name="p1654mcpsimp"></a><a name="p1654mcpsimp"></a>副作用</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1656mcpsimp"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.4.1.1 "><p id="p1658mcpsimp"><a name="p1658mcpsimp"></a><a name="p1658mcpsimp"></a>置IP帧比例的最大值，当IP帧比例超出这个值的时候内部会有算法限制I帧大小</p>
+</td>
+<td class="cellrowborder" valign="top" width="37%" headers="mcps1.2.4.1.2 "><p xml:lang="pt-BR" id="p1660mcpsimp"><a name="p1660mcpsimp"></a><a name="p1660mcpsimp"></a>ot_venc_h264_cbr_param::max_i_proportion</p>
+<p xml:lang="pt-BR" id="p1662mcpsimp"><a name="p1662mcpsimp"></a><a name="p1662mcpsimp"></a>ot_venc_h265_cbr_param::max_i_proportion</p>
+</td>
+<td class="cellrowborder" valign="top" width="38%" headers="mcps1.2.4.1.3 "><p id="p1665mcpsimp"><a name="p1665mcpsimp"></a><a name="p1665mcpsimp"></a>通常情况下静止场景I帧多分配一些码流可以改善图像质量，IP帧比例的最大值设置过大会降低图像质量。</p>
+</td>
+</tr>
+<tr id="row1666mcpsimp"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.4.1.1 "><p id="p1668mcpsimp"><a name="p1668mcpsimp"></a><a name="p1668mcpsimp"></a>设置I帧最小QP</p>
+</td>
+<td class="cellrowborder" valign="top" width="37%" headers="mcps1.2.4.1.2 "><p xml:lang="pt-BR" id="p1670mcpsimp"><a name="p1670mcpsimp"></a><a name="p1670mcpsimp"></a>ot_venc_h264_cbr_param::min_i_qp</p>
+<p xml:lang="pt-BR" id="p1672mcpsimp"><a name="p1672mcpsimp"></a><a name="p1672mcpsimp"></a>ot_venc_h265_cbr_param::min_i_qp</p>
+</td>
+<td class="cellrowborder" valign="top" width="38%" headers="mcps1.2.4.1.3 "><p id="p1675mcpsimp"><a name="p1675mcpsimp"></a><a name="p1675mcpsimp"></a>这种方法对I帧的限制较强，容易产生码率不足，而且不同场景下合适的I帧QP不同，<span xml:lang="pt-BR" id="ph1676mcpsimp"><a name="ph1676mcpsimp"></a><a name="ph1676mcpsimp"></a>min_i_qp</span>经验值不容易得到。</p>
+</td>
+</tr>
+<tr id="row1677mcpsimp"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.4.1.1 "><p id="p1679mcpsimp"><a name="p1679mcpsimp"></a><a name="p1679mcpsimp"></a>设置超大帧重编，一般I帧阈值设置为能容忍的最大值, P帧阈值设置成I帧的一半</p>
+</td>
+<td class="cellrowborder" valign="top" width="37%" headers="mcps1.2.4.1.2 "><p id="p1681mcpsimp"><a name="p1681mcpsimp"></a><a name="p1681mcpsimp"></a>ot_venc_super_frame_strategy::super_frame_mode = OT_VENC_SUPER_FRAME_REENCODE;</p>
+<p id="p1683mcpsimp"><a name="p1683mcpsimp"></a><a name="p1683mcpsimp"></a>ot_venc_super_frame_strategy::i_frame_bits_threshold</p>
+<p id="p1684mcpsimp"><a name="p1684mcpsimp"></a><a name="p1684mcpsimp"></a>ot_venc_super_frame_strategy::p_frame_bits_threshold</p>
+<p id="p147815160368"><a name="p147815160368"></a><a name="p147815160368"></a>i_frame_bits_threshold的建议值：在CBR和ABR码控中，设bit_rate代表目标码率，i_frame_bits_threshold设置为“2秒*bit_rate”，同时，码流的缓存大小（buf_size）设置为1.5*i_frame_bits_threshold。</p>
+</td>
+<td class="cellrowborder" valign="top" width="38%" headers="mcps1.2.4.1.3 "><p id="p1686mcpsimp"><a name="p1686mcpsimp"></a><a name="p1686mcpsimp"></a>重编次数过多会浪费芯片性能和带宽。</p>
+<p id="p262134917365"><a name="p262134917365"></a><a name="p262134917365"></a>i_frame_bits_threshold设置的值如果明显小于建议值，会降低视频压缩率。</p>
+<p id="p1062114963613"><a name="p1062114963613"></a><a name="p1062114963613"></a>buf_size设置的值如果明显小于建议值，会造成丢帧风险增加。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="减少运动拖影和色度拖影">减少运动拖影和色度拖影<a name="ZH-CN_TOPIC_0000001426456272"></a></h3>
+<p>运动拖影主要发生在纹理比较平坦的区域，减少运动拖影可以调整纹理级宏块码率控制参数。减少色度拖影可以调整色度量化参数偏移，参见<a href="#_Ref420419755">表1</a>。</p>
+<p><strong>表 1</strong>  减少运动拖影和色度拖影的方法</p>
+<p><a name="_Ref420419755"></a></p>
+<table><thead align="left"><tr id="row1696mcpsimp"><th class="cellrowborder" valign="top" width="25%" id="mcps1.2.4.1.1"><p id="p1698mcpsimp"><a name="p1698mcpsimp"></a><a name="p1698mcpsimp"></a>方法</p>
+</th>
+<th class="cellrowborder" valign="top" width="37%" id="mcps1.2.4.1.2"><p id="p1700mcpsimp"><a name="p1700mcpsimp"></a><a name="p1700mcpsimp"></a>对应参数设置</p>
+</th>
+<th class="cellrowborder" valign="top" width="38%" id="mcps1.2.4.1.3"><p id="p1702mcpsimp"><a name="p1702mcpsimp"></a><a name="p1702mcpsimp"></a>副作用</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1704mcpsimp"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.4.1.1 "><p id="p1706mcpsimp"><a name="p1706mcpsimp"></a><a name="p1706mcpsimp"></a>调整宏块级码率控制参数</p>
+</td>
+<td class="cellrowborder" valign="top" width="37%" headers="mcps1.2.4.1.2 "><p id="p1708mcpsimp"><a name="p1708mcpsimp"></a><a name="p1708mcpsimp"></a>ot_venc_rc_param::threshold_p[16]</p>
+</td>
+<td class="cellrowborder" valign="top" width="38%" headers="mcps1.2.4.1.3 "><p id="p1710mcpsimp"><a name="p1710mcpsimp"></a><a name="p1710mcpsimp"></a>通常情况纹理简单的静止区域更容易出现拖影，通过纹理级码率控制可以降低简单区域的QP，减少拖影，但是纹理复杂的区域会相应减少比特分配，降低图像质量。</p>
+</td>
+</tr>
+<tr id="row1711mcpsimp"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.4.1.1 "><p id="p1713mcpsimp"><a name="p1713mcpsimp"></a><a name="p1713mcpsimp"></a>减小chroma_qp_offset，对色度拖影问题适用</p>
+</td>
+<td class="cellrowborder" valign="top" width="37%" headers="mcps1.2.4.1.2 "><p id="p1715mcpsimp"><a name="p1715mcpsimp"></a><a name="p1715mcpsimp"></a>ot_venc_h264_trans::chroma_qp_index_offset</p>
+<p id="p1716mcpsimp"><a name="p1716mcpsimp"></a><a name="p1716mcpsimp"></a>ot_venc_h265_trans::cb_qp_offset</p>
+<p id="p1718mcpsimp"><a name="p1718mcpsimp"></a><a name="p1718mcpsimp"></a>ot_venc_h265_trans::cr_qp_offset</p>
+</td>
+<td class="cellrowborder" valign="top" width="38%" headers="mcps1.2.4.1.3 "><p id="p1721mcpsimp"><a name="p1721mcpsimp"></a><a name="p1721mcpsimp"></a>降低色度QP，使色度质量更好；副作用是色度分配更多比特必然导致亮度少分配比特数。</p>
+</td>
+</tr>
+<tr id="row1722mcpsimp"><td class="cellrowborder" valign="top" width="25%" headers="mcps1.2.4.1.1 "><p id="p1724mcpsimp"><a name="p1724mcpsimp"></a><a name="p1724mcpsimp"></a>增加3DNR去噪强度</p>
+</td>
+<td class="cellrowborder" valign="top" width="37%" headers="mcps1.2.4.1.2 "><p id="p1726mcpsimp"><a name="p1726mcpsimp"></a><a name="p1726mcpsimp"></a>-</p>
+</td>
+<td class="cellrowborder" valign="top" width="38%" headers="mcps1.2.4.1.3 "><p id="p1728mcpsimp"><a name="p1728mcpsimp"></a><a name="p1728mcpsimp"></a>对图像细节的保留程度会减弱。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="码率控制的起始QP">码率控制的起始QP<a name="ZH-CN_TOPIC_0000001476812613"></a></h3>
+<p>当前码率控制算法内部包含起始QP的经验算法。该算法选择典型场景根据码率、分辨率等计算合适的起始QP，但是不能得到适应每个场景的绝对合适的起始QP值。</p>
+<ul>
+<li>如果起始QP选择偏大，会导致编码的最初一段时间内码率不足，图像质量稍差；</li>
+<li>如果起始QP选择偏小，会导致编码的最初一段时间码率超出。</li>
+<li>如果客户觉得我们算法计算的经验值不合适，可以通过ot_venc_rc_param::first_frame_start_qp配置合适的起始QP值。该接口在创建通道后，开始第一帧编码之前调用有效。</li>
+</ul>
+<h3 id="VBR、AVBR、CVBR和QVBR的运行机制">VBR、AVBR、CVBR和QVBR的运行机制<a name="ZH-CN_TOPIC_0000001426296324"></a></h3>
+<ul>
+<li>VBR的运行机制：运动场景等编码压力大的时候，通过调节start_qp使码率不超出最大码率；静止等编码压力小的时候，start_qp钳位到min_qp，此时码率会低于最大码率，达到节省码率的目的；</li>
+<li>AVBR的运行机制：编码增加运动检测方法，在运动时调高目标码率，并控制start_qp使码率不超出最大码率；静止时调低目标码率，达到节省码率的目的；但降码率会在某些场景下轻微损失一些图像细节。</li>
+<li>QVBR的运行机制：利用PSNR客观图像评价指标，动态调整码率，在PSNR较小时主动升高目标码率，PSNR较大时主动降低目标码率，达到节省码率和保证图像质量的双重目的。</li>
+<li>CVBR的运行机制：设置了瞬时，短期与长期码率的限制，在场景简单时存储码率，存储的码率用于提升复杂场景的图像质量，从而保证图像质量的长期平稳。</li>
+</ul>
+<h3 id="VBR、AVBR、CBR和CVBR的差异">VBR、AVBR、CBR和CVBR的差异<a name="ZH-CN_TOPIC_0000001476812625"></a></h3>
+<ul>
+<li>VBR和AVBR的差异：VBR是被动节省码率而AVBR是主动节省码率；在静止时AVBR使用的QP可以高于min_qp，从而在静止时节省更多码率。AVBR可主动向上向下双向动态调整码率，从而保证编码图像质量平稳。</li>
+<li>CVBR和VBR的差异：CVBR与VBR一样追求较平稳的图像质量，但增加了在不同统计时间内的码率限制，以分别满足传输带宽和储存空间的限制。</li>
+<li>CVBR和AVBR的差异：CVBR输出码率的变化不依赖于运动检测，而是根据场景情况带来的编码压力自动变化；同时，CVBR追求在编码压力变化时达到较平稳的图像质量，使用长期码率的统计，并在长期码率满足用户要求的前提下，对目标码率进行调整，以尽量满足图像质量平稳的要求。</li>
+<li>CVBR和CBR的差异：CBR的输出不区分场景，即在场景简单时不会降低码率，场景复杂时不能使用额外码率。而CVBR的码率根据场景而自动变化，即在场景简单时会降低码率，场景复杂时能使用额外码率，最终达到更稳定质量，且平均码率不超过目标码率的效果。</li>
+</ul>
+<h3 id="低码率场景">低码率场景<a name="ZH-CN_TOPIC_0000001476692677"></a></h3>
+<ul>
+<li>
+<p>降低ISP模块AE的灵敏度，增大AE反应延迟，避免光线明暗变化后AE的频繁调节。</p>
+<p>建议参数：</p>
+<p>适当增加AE从亮到暗及从暗到亮调节的延迟。</p>
+<p>适当降低AE变化敏感度。</p>
+</li>
+<li>
+<p>增加3DNR去噪强度，适当增加TF和SF强度；适当降低Sharpen强度，降低图像细节。</p>
+<p>建议参数：</p>
+<p>适当增大SF（空域滤波强度）和TF（时域滤波强度）；调整的时候注意保持SF大约是TF的4倍。</p>
+</li>
+<li>
+<p>设置较大的GOP，同时码率统计时间stats_time与GOP值设置相匹配。使用SmartP/AdvSmartP模式，bg_interval应该与stats_time相匹配。</p>
+<p>建议参数：</p>
+<p>GOP设置为帧率的4～10倍，例如帧率30fps，GOP设置为120～300，stats_time设置为4～10秒。</p>
+</li>
+<li>
+<p>适当降低帧率，或者设置编码PSkip的方式降低帧率。</p>
+<p>建议参数：</p>
+<p>目标帧率设置为15fps；</p>
+<p>ot_venc_frame_lost_strategy::mode= OT_VENC_FRAME_LOST_P_SKIP；</p>
+<p>ot_venc_frame_lost_strategy::frame_gap = 2。</p>
+</li>
+<li>
+<p>打开基于纹理的宏块级码率控制，设置推荐参数即可。</p>
+</li>
+<li>对于固定安装_录像机_等偏静止场景，建议使用SmartP/AdvSmartP模式编码；对于镜头有运动但对延时要求不高的场景建议使用BipredB模式编码；对于其他场景建议使用DualP模式编码。</li>
+</ul>
+<h3 id="注意事项">注意事项<a name="ZH-CN_TOPIC_0000001476692673"></a></h3>
+<p>注意事项如下：</p>
+<ul>
+<li>gop：最好设置为编码帧率的整数倍，如果不是整数倍，I帧的分布在时间上会不均匀，导致瞬时码率波动；中高码率下GOP可以等于编码帧率；低码率下 g需要适当加大。</li>
+<li>stats_time：设置为（GOP/编码帧率）的整数倍，例如帧率25fps，GOP50，统计时间应该设为2秒、4秒等；统计时间与GOP不匹配会导致瞬时码率不稳定，导致图像质量也不稳定；一般场景设置为GOP的1倍即可，关注长期码率稳定，短期波动不在意的可以设置大一些。点播场景如果使用请求I帧接口会造成短时间码率过冲，增加统计时间可以减少码率过冲造成的QP变化，使图像质量更稳定。</li>
+<li>src_frame_rate：设置为VI的帧率，编码内部帧率控制会校验时间戳来计算是否丢帧，时间戳是VI采集的时候打上的，因此src_frame_rate要与VI实际的帧率保持一致；src_frame_rate如果与VI实际帧率不一致，实际码率与目标码率会不一致。</li>
+<li>max_i_proportion：对超出P帧大小max_i_proportion倍的I帧进行限制，这个功能可以有效抑制静止场景下I帧的大小；</li>
+<li>max_qp、max_i_qp：对最大QP进行限制。偏重码率,不在意质量的建议值51；关注质量,不在意码率上冲的可以设置为[40,51]；</li>
+<li>min_qp、min_i_qp：对最小QP进行限制。希望在图像静止或小运动的时候节省码率，CBR建议设置为[10，20]；VBR建议设置为[24,32]。</li>
+<li>超大帧丢帧是丢弃已经编码的当前帧；码率过冲丢帧是丢弃下一帧。两种丢帧方法不矛盾，可以配合使用。</li>
+<li>ROI和OSD保护可能会影响到码率控制，如果在低码率场景设置了面积较大、QP值较小的ROI或OSD保护，会降低整体图像质量；也可能会造成码率过冲。</li>
+<li>CVBR模式中，对于较简单场景，最终码率有可能低于long_term_min_bit_rate。</li>
+<li>CVBR的min_i_qp和min_qp对码率控制的效果有影响。如果min_i_qp和min_qp设置过小，则简单静止场景码率始终无法节省，复杂运动场景也无法使用更多码率编码，导致CVBR的效果接近CBR。如果min_i_qp和min_qp设置过大，会影响图像质量，码率始终低于long_term_max_bit_rate，不能完全使用码率额度，造成图像质量不够好。min_i_qp和min_qp的一组推荐值如<a href="#_Ref14178112">表1</a>，具体针对不同场景使用时客户可以在此基础上调整。</li>
+<li>ABR码控的适用场景：监控场景（动静结合）、瞬时运动场景、云台转动场景。</li>
+<li>ABR码控的副作用：对于一段时间内有长期较为复杂的场景时，ABR码控存在码率耗尽过快的情况，后期一段时间内的瞬时码率相对CBR一段时期恒定平稳的瞬时码率少，会存在一些运动过后糊、缺块等图像质量质量问题。</li>
+<li>ABR码控GOP配置注意：由于ABR的码率控制需要统计P帧的码率，因此无法适配GOP=1的参数配置，当GOP=1时，ABR码控调节机制失效。</li>
+</ul>
+<p><strong>表 1</strong>  CVBR的min_i_qp和min_qp参数推荐值</p>
+<p><a name="_Ref14178112"></a></p>
+<table><thead align="left"><tr id="row1797mcpsimp"><th class="cellrowborder" valign="top" width="14.000000000000002%" id="mcps1.2.6.1.1"><p id="p1799mcpsimp"><a name="p1799mcpsimp"></a><a name="p1799mcpsimp"></a>协议</p>
+</th>
+<th class="cellrowborder" valign="top" width="20%" id="mcps1.2.6.1.2"><p id="p1801mcpsimp"><a name="p1801mcpsimp"></a><a name="p1801mcpsimp"></a>分辨率</p>
+</th>
+<th class="cellrowborder" valign="top" width="30%" id="mcps1.2.6.1.3"><p id="p1803mcpsimp"><a name="p1803mcpsimp"></a><a name="p1803mcpsimp"></a>码率区间（Mbps）</p>
+</th>
+<th class="cellrowborder" valign="top" width="18%" id="mcps1.2.6.1.4"><p xml:lang="pt-BR" id="p1805mcpsimp"><a name="p1805mcpsimp"></a><a name="p1805mcpsimp"></a>min_i_qp</p>
+</th>
+<th class="cellrowborder" valign="top" width="18%" id="mcps1.2.6.1.5"><p xml:lang="pt-BR" id="p1807mcpsimp"><a name="p1807mcpsimp"></a><a name="p1807mcpsimp"></a>min_qp</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1809mcpsimp"><td class="cellrowborder" rowspan="6" valign="top" width="14.000000000000002%" headers="mcps1.2.6.1.1 "><p id="p1811mcpsimp"><a name="p1811mcpsimp"></a><a name="p1811mcpsimp"></a>H.264</p>
+</td>
+<td class="cellrowborder" rowspan="3" valign="top" width="20%" headers="mcps1.2.6.1.2 "><p id="p1813mcpsimp"><a name="p1813mcpsimp"></a><a name="p1813mcpsimp"></a>1920x1080</p>
+</td>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.6.1.3 "><p id="p1815mcpsimp"><a name="p1815mcpsimp"></a><a name="p1815mcpsimp"></a>[6, 7]</p>
+</td>
+<td class="cellrowborder" valign="top" width="18%" headers="mcps1.2.6.1.4 "><p id="p1817mcpsimp"><a name="p1817mcpsimp"></a><a name="p1817mcpsimp"></a>23</p>
+</td>
+<td class="cellrowborder" valign="top" width="18%" headers="mcps1.2.6.1.5 "><p id="p1819mcpsimp"><a name="p1819mcpsimp"></a><a name="p1819mcpsimp"></a>25</p>
+</td>
+</tr>
+<tr id="row1820mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p1822mcpsimp"><a name="p1822mcpsimp"></a><a name="p1822mcpsimp"></a>[4, 6]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p1824mcpsimp"><a name="p1824mcpsimp"></a><a name="p1824mcpsimp"></a>25</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p1826mcpsimp"><a name="p1826mcpsimp"></a><a name="p1826mcpsimp"></a>27</p>
+</td>
+</tr>
+<tr id="row1827mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p1829mcpsimp"><a name="p1829mcpsimp"></a><a name="p1829mcpsimp"></a>[2, 4]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p1831mcpsimp"><a name="p1831mcpsimp"></a><a name="p1831mcpsimp"></a>27</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p1833mcpsimp"><a name="p1833mcpsimp"></a><a name="p1833mcpsimp"></a>29</p>
+</td>
+</tr>
+<tr id="row2531192913380"><td class="cellrowborder" rowspan="3" valign="top" headers="mcps1.2.6.1.1 "><p id="p1269918513397"><a name="p1269918513397"></a><a name="p1269918513397"></a>3840x2160</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p1453182953811"><a name="p1453182953811"></a><a name="p1453182953811"></a>[18, 24]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p17531192993812"><a name="p17531192993812"></a><a name="p17531192993812"></a>23</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p953162910386"><a name="p953162910386"></a><a name="p953162910386"></a>25</p>
+</td>
+</tr>
+<tr id="row14901753183810"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p17901195313386"><a name="p17901195313386"></a><a name="p17901195313386"></a>[12, 18]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p2090195393812"><a name="p2090195393812"></a><a name="p2090195393812"></a>25</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p1901165311386"><a name="p1901165311386"></a><a name="p1901165311386"></a>27</p>
+</td>
+</tr>
+<tr id="row17540448163812"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p18540748203810"><a name="p18540748203810"></a><a name="p18540748203810"></a>[6, 12]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p754094816385"><a name="p754094816385"></a><a name="p754094816385"></a>27</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p10540154818383"><a name="p10540154818383"></a><a name="p10540154818383"></a>29</p>
+</td>
+</tr>
+<tr id="row1834mcpsimp"><td class="cellrowborder" rowspan="9" valign="top" width="14.000000000000002%" headers="mcps1.2.6.1.1 "><p id="p1836mcpsimp"><a name="p1836mcpsimp"></a><a name="p1836mcpsimp"></a>H.265</p>
+</td>
+<td class="cellrowborder" rowspan="3" valign="top" width="20%" headers="mcps1.2.6.1.2 "><p id="p1838mcpsimp"><a name="p1838mcpsimp"></a><a name="p1838mcpsimp"></a>1920x1080</p>
+</td>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.6.1.3 "><p id="p1840mcpsimp"><a name="p1840mcpsimp"></a><a name="p1840mcpsimp"></a>[4, 6]</p>
+</td>
+<td class="cellrowborder" valign="top" width="18%" headers="mcps1.2.6.1.4 "><p id="p1842mcpsimp"><a name="p1842mcpsimp"></a><a name="p1842mcpsimp"></a>23</p>
+</td>
+<td class="cellrowborder" valign="top" width="18%" headers="mcps1.2.6.1.5 "><p id="p1844mcpsimp"><a name="p1844mcpsimp"></a><a name="p1844mcpsimp"></a>25</p>
+</td>
+</tr>
+<tr id="row1845mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p1847mcpsimp"><a name="p1847mcpsimp"></a><a name="p1847mcpsimp"></a>[2, 4]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p1849mcpsimp"><a name="p1849mcpsimp"></a><a name="p1849mcpsimp"></a>25</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p1851mcpsimp"><a name="p1851mcpsimp"></a><a name="p1851mcpsimp"></a>27</p>
+</td>
+</tr>
+<tr id="row1852mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p1854mcpsimp"><a name="p1854mcpsimp"></a><a name="p1854mcpsimp"></a>[1, 2]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p1856mcpsimp"><a name="p1856mcpsimp"></a><a name="p1856mcpsimp"></a>27</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p1858mcpsimp"><a name="p1858mcpsimp"></a><a name="p1858mcpsimp"></a>29</p>
+</td>
+</tr>
+<tr id="row1859mcpsimp"><td class="cellrowborder" rowspan="3" valign="top" headers="mcps1.2.6.1.1 "><p id="p1861mcpsimp"><a name="p1861mcpsimp"></a><a name="p1861mcpsimp"></a>2560x1440</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p1863mcpsimp"><a name="p1863mcpsimp"></a><a name="p1863mcpsimp"></a>[9, 11]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p1865mcpsimp"><a name="p1865mcpsimp"></a><a name="p1865mcpsimp"></a>23</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p1867mcpsimp"><a name="p1867mcpsimp"></a><a name="p1867mcpsimp"></a>25</p>
+</td>
+</tr>
+<tr id="row1868mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p1870mcpsimp"><a name="p1870mcpsimp"></a><a name="p1870mcpsimp"></a>[6, 9]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p1872mcpsimp"><a name="p1872mcpsimp"></a><a name="p1872mcpsimp"></a>25</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p1874mcpsimp"><a name="p1874mcpsimp"></a><a name="p1874mcpsimp"></a>27</p>
+</td>
+</tr>
+<tr id="row1875mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p1877mcpsimp"><a name="p1877mcpsimp"></a><a name="p1877mcpsimp"></a>[3, 6]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p1879mcpsimp"><a name="p1879mcpsimp"></a><a name="p1879mcpsimp"></a>27</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p1881mcpsimp"><a name="p1881mcpsimp"></a><a name="p1881mcpsimp"></a>29</p>
+</td>
+</tr>
+<tr id="row1491111282402"><td class="cellrowborder" rowspan="3" valign="top" headers="mcps1.2.6.1.1 "><p id="p657114497401"><a name="p657114497401"></a><a name="p657114497401"></a>3840x2160</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p109121028184020"><a name="p109121028184020"></a><a name="p109121028184020"></a>[12, 16]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p139121328194014"><a name="p139121328194014"></a><a name="p139121328194014"></a>23</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p1691282814401"><a name="p1691282814401"></a><a name="p1691282814401"></a>25</p>
+</td>
+</tr>
+<tr id="row17332933144010"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p43328331401"><a name="p43328331401"></a><a name="p43328331401"></a>[8, 12]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p83325331407"><a name="p83325331407"></a><a name="p83325331407"></a>25</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p9332733124013"><a name="p9332733124013"></a><a name="p9332733124013"></a>27</p>
+</td>
+</tr>
+<tr id="row491937164011"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p691163714403"><a name="p691163714403"></a><a name="p691163714403"></a>[4, 8]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p291163712406"><a name="p291163712406"></a><a name="p291163712406"></a>27</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p169133724017"><a name="p169133724017"></a><a name="p169133724017"></a>29</p>
+</td>
+</tr>
+<tr id="row1229414710560"><td class="cellrowborder" rowspan="9" valign="top" width="14.000000000000002%" headers="mcps1.2.6.1.1 "><p id="p746151515566"><a name="p746151515566"></a><a name="p746151515566"></a>SVAC3.0</p>
+</td>
+<td class="cellrowborder" rowspan="3" valign="top" width="20%" headers="mcps1.2.6.1.2 "><p id="p1017514450564"><a name="p1017514450564"></a><a name="p1017514450564"></a>1920x1080</p>
+</td>
+<td class="cellrowborder" valign="top" width="30%" headers="mcps1.2.6.1.3 "><p id="p113931727195612"><a name="p113931727195612"></a><a name="p113931727195612"></a>[4, 6]</p>
+</td>
+<td class="cellrowborder" valign="top" width="18%" headers="mcps1.2.6.1.4 "><p id="p6294878564"><a name="p6294878564"></a><a name="p6294878564"></a>25</p>
+</td>
+<td class="cellrowborder" valign="top" width="18%" headers="mcps1.2.6.1.5 "><p id="p2029411795616"><a name="p2029411795616"></a><a name="p2029411795616"></a>28</p>
+</td>
+</tr>
+<tr id="row32942715562"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p1439322711560"><a name="p1439322711560"></a><a name="p1439322711560"></a>[2, 4]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p92955719561"><a name="p92955719561"></a><a name="p92955719561"></a>28</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p162951876564"><a name="p162951876564"></a><a name="p162951876564"></a>31</p>
+</td>
+</tr>
+<tr id="row92956725611"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p163931627125615"><a name="p163931627125615"></a><a name="p163931627125615"></a>[1, 2]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p182958718569"><a name="p182958718569"></a><a name="p182958718569"></a>31</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p129527155617"><a name="p129527155617"></a><a name="p129527155617"></a>37</p>
+</td>
+</tr>
+<tr id="row22950716562"><td class="cellrowborder" rowspan="3" valign="top" headers="mcps1.2.6.1.1 "><p id="p350054910566"><a name="p350054910566"></a><a name="p350054910566"></a>2560x1440</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p1239372765619"><a name="p1239372765619"></a><a name="p1239372765619"></a>[9, 11]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p18144191620583"><a name="p18144191620583"></a><a name="p18144191620583"></a>25</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p1714411166585"><a name="p1714411166585"></a><a name="p1714411166585"></a>28</p>
+</td>
+</tr>
+<tr id="row1629527155613"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p3393227175618"><a name="p3393227175618"></a><a name="p3393227175618"></a>[6, 9]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p51441816205817"><a name="p51441816205817"></a><a name="p51441816205817"></a>28</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p6144916155819"><a name="p6144916155819"></a><a name="p6144916155819"></a>31</p>
+</td>
+</tr>
+<tr id="row16295127125616"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p539310277569"><a name="p539310277569"></a><a name="p539310277569"></a>[3, 6]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p31441816125815"><a name="p31441816125815"></a><a name="p31441816125815"></a>31</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p2144216165817"><a name="p2144216165817"></a><a name="p2144216165817"></a>37</p>
+</td>
+</tr>
+<tr id="row5296677568"><td class="cellrowborder" rowspan="3" valign="top" headers="mcps1.2.6.1.1 "><p id="p7694155310561"><a name="p7694155310561"></a><a name="p7694155310561"></a>3840x2160</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p5393827155616"><a name="p5393827155616"></a><a name="p5393827155616"></a>[12, 16]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p94066187582"><a name="p94066187582"></a><a name="p94066187582"></a>25</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.4 "><p id="p94061118115810"><a name="p94061118115810"></a><a name="p94061118115810"></a>28</p>
+</td>
+</tr>
+<tr id="row15296107135611"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p8393142719562"><a name="p8393142719562"></a><a name="p8393142719562"></a>[8, 12]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p440651818585"><a name="p440651818585"></a><a name="p440651818585"></a>28</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p16406181817585"><a name="p16406181817585"></a><a name="p16406181817585"></a>31</p>
+</td>
+</tr>
+<tr id="row029610785616"><td class="cellrowborder" valign="top" headers="mcps1.2.6.1.1 "><p id="p1539392735614"><a name="p1539392735614"></a><a name="p1539392735614"></a>[4, 8]</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.2 "><p id="p140620188589"><a name="p140620188589"></a><a name="p140620188589"></a>31</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.6.1.3 "><p id="p12406111816582"><a name="p12406111816582"></a><a name="p12406111816582"></a>37</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+
+  <div class="footer-box">
+    <div class="footer-list">
+      
+      
+      <div class="footer-list-child">
+        <a href="https://www.hisilicon.com/cn" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/home" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开发者网站</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://gitcode.com/HiSpark" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开源社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developer.huawei.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">华为开发者官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hikunpeng.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">鲲鹏社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hiascend.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">昇腾社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/aboutus" target="_blank" class="footer-nav-first" rel="noopener noreferrer">关于我们</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/login" target="_blank" class="footer-nav-first" rel="noopener noreferrer">投诉举报</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      
+    </div>
+    <div class="footer-fix">
+      <div class="footer-fix-content">
+        <div>
+          <span class="footer-copyright">&nbsp;&copy;2024 华为技术有限公司</span>
+          <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer">粤A2-20044005号</a>
+          <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702004153"
+            target="_blank" rel="noopener noreferrer">粤公网安备44030702004153号</a>
+        </div>
+        <div class="footer-name-list">
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/legalNotices" target="_blank" class="footer-name" rel="noopener noreferrer">法律声明</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/cookie-policy" target="_blank" class="footer-name" rel="noopener noreferrer">关于Cookie</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/privacyPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">隐私政策</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/userPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">用户协议</a>
+          
+          
+          
+          <a href="javascript:void(0);" onclick="openDisclaimerDialog()" class="footer-name">免责声明</a>
+          
+          
+          
+        </div>
+      </div>
+
+
+      <!-- 免责声明弹窗 -->
+      <div id="disclaimerDialog" class="disclaimer-overlay" style="display: none;">
+        <div class="disclaimer-dialog">
+          <div class="disclaimer-dialog__header">
+            <span class="disclaimer-dialog__title">免责声明</span>
+            <button class="disclaimer-dialog__close" onclick="closeDisclaimerDialog()">×</button>
+          </div>
+          <div class="disclaimer-dialog__body">
+            <p class="disclaimer-dialog__text-center"><strong>海思开发者网站免责声明</strong></p>
+            <p>尊敬的用户，您好：</p>
+            <p>&nbsp; &nbsp;
+              请确保您通过本平台向海思提供或反馈的任何信息或意见不侵犯第三方知识产权和/或合法权益。如您提供或反馈的上述任何信息或意见侵犯第三方知识产权和/或合法权益，和/或给第三方造成损害的，您将承担全部法律及赔偿责任。
+            </p>
+          </div>
+          <div class="disclaimer-dialog__footer">
+            <button class="disclaimer-dialog__btn" onclick="closeDisclaimerDialog()">关闭</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function openDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'flex';
+        }
+        function closeDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'none';
+        }
+        // 点击弹窗背景关闭
+        document.getElementById('disclaimerDialog').addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeDisclaimerDialog();
+          }
+        });
+      </script>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../static/js/custom.js"></script>
+      
+        <script src="../../../static/js/version-selector.js"></script>
+      
+        <script src="../../../static/js/code-highlight.js"></script>
+      
+        <script src="../../../static/js/wavedrom-skin.js"></script>
+      
+        <script src="../../../static/js/wavedrom.min.js"></script>
+      
+        <script src="../../../static/js/wavedrom-init.js"></script>
+      
+        <script src="../../../static/js/no-flash.js"></script>
+      
+    
+  </body>
+</html>

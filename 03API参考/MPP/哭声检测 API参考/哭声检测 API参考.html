@@ -1,0 +1,1526 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hi3516CV610 超高清智慧视觉 SoC 文档中心">
+      
+      
+        <meta name="author" content="HiSpark">
+      
+      
+        <link rel="canonical" href="https://hivsdev.github.io/Hi3516CV610_doc/03API%E5%8F%82%E8%80%83/MPP/%E5%93%AD%E5%A3%B0%E6%A3%80%E6%B5%8B%20API%E5%8F%82%E8%80%83/%E5%93%AD%E5%A3%B0%E6%A3%80%E6%B5%8B%20API%E5%8F%82%E8%80%83.html">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../static/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>前言 - Hi3516CV610 开发者中心</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+    
+    
+      <link rel="stylesheet" href="../../../static/css/extra.css">
+    
+      <link rel="stylesheet" href="../../../static/css/version-selector.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+      <meta name="gitcode-issues-url" content="https://gitcode.com/HiSpark/fbb_ws63/issues">
+      
+      <link rel="dns-prefetch" href="https://docs.hisilicon.com">
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://docs.hisilicon.com" crossorigin>
+      <link rel="preload" href="../../../assets/stylesheets/main.484c7ddc.min.css" as="style">
+      <link rel="preload" href="../../../assets/stylesheets/palette.ab4e12ef.min.css" as="style">
+      <link rel="preload" href="../../../static/css/extra.css" as="style">
+      <link rel="preload" href="../../../assets/javascripts/bundle.79ae519e.min.js" as="script">
+      <link rel="preload" href="../../../static/js/custom.js" as="script">
+
+      
+      
+        
+        
+      
+      <style>:root{--md-text-font:"Helvetica Neue, PingFang SC, Microsoft YaHei";--md-code-font:"Consolas, Roboto Mono"}</style>
+      <script>
+        // 防止宽窄屏刷新闪烁 — 在 body 解析前就读取 localStorage 标记 <html>
+        // 配合 CSS: html.prefer-narrow .md-grid 在首帧即应用 76%
+        if (localStorage.getItem('wideScreen') === 'false') {
+          document.documentElement.classList.add('prefer-narrow');
+        }
+      </script>
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#前言" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="https://developers.hisilicon.com" title="Hi3516CV610 开发者中心" class="md-header__button md-logo" aria-label="Hi3516CV610 开发者中心" data-md-component="logo" target="_blank" rel="noopener noreferrer">
+      <img 
+  src="../../../static/images/light-icon.png" 
+  class="md-logo__img md-logo__img--light"
+  alt="Hi3516CV610 开发者中心" 
+/>
+<img 
+  src="../../../static/images/dark-icon.png" 
+  class="md-logo__img md-logo__img--dark"
+  alt="Hi3516CV610 开发者中心" 
+/>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+      </div>
+    </div>
+    
+      
+      
+        <label class="md-header__button md-icon md-header__button--search" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+      
+    
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="切换到暗色主题"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色主题" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="切换到亮色主题"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色主题" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <div class="md-header__source">
+        <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="前往仓库" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+      </div>
+    
+  </nav>
+  
+  
+    
+    
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        <!-- 
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+         -->
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+</header>
+
+
+<script>
+  var USER_DEFINED_OPTIONS = {
+    REPO_PATH: "Hi3516CV610_doc",
+    ROOT_URL: "https://docs.hisilicon.com/projects"
+  };
+  var DOCUMENTATION_OPTIONS = {
+    VERSION: "master",
+    // 构建时声明主题的语言
+    LANGUAGE: "zh"
+  };
+</script>
+<script src="https://docs.hisilicon.com/projects/version/hispark_version.js"></script>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="sidebar-selectors">
+                  <div class="repo-select custom-select">
+                    <span class="select-label">芯片</span>
+                    <div class="repo-selector" title="">
+                      <span class="repo-readOnly"></span>
+                      <select id="repo-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="repo-options" style="display:none"></ul>
+                  </div>
+                  <div class="version-select custom-select">
+                    <span class="select-label">版本</span>
+                    <div class="version-selector" title="">
+                      <span class="version-readOnly"></span>
+                      <select id="version-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="version-options" style="display:none"></ul>
+                  </div>
+                  
+                    
+                    
+                      <div class="sidebar-search">
+                        <label class="sidebar-search__button" for="__search">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+                          <span>全文检索</span>
+                        </label>
+                      </div>
+                    
+                  
+                </div>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  
+    <div class="md-nav__source">
+      <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="前往仓库" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../00%E6%A6%82%E8%A7%88/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整体架构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考案例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../05%E7%A1%AC%E4%BB%B6%E6%8C%87%E5%8D%97/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具中心
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../07FAQ/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../08%E5%85%B6%E4%BB%96/index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#前言_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#概述" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#重要概念" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        重要概念
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#API参考" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API参考
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API参考">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ss_baby_crying_detection_init" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ss_baby_crying_detection_init
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ss_baby_crying_detection_process" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ss_baby_crying_detection_process
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ss_baby_crying_detection_deinit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ss_baby_crying_detection_deinit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#数据类型" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据类型
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="数据类型">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ot_bcd_mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ot_bcd_mode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ot_bcd_config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ot_bcd_config
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ot_bcd_process_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ot_bcd_process_data
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#错误码" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        错误码
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="前言">前言<a name="ZH-CN_TOPIC_0000001847217057"></a></h1>
+<h2 id="前言_1">前言<a name="ZH-CN_TOPIC_0000001847217057"></a></h2>
+<p><strong>概述<a name="section4537382116410"></a></strong></p>
+<p>本文档为使用媒体处理芯片的哭声检测进行智能分析方案开发的程序员而写，目的是供您在开发过程中查阅哭声检测支持的各种参考信息，包括API、错误码等。</p>
+<p><strong>产品版本<a name="section4378592816410"></a></strong></p>
+<p>与本文档相对应的产品版本如下。</p>
+<p><a name="table152142335911"></a></p>
+<table><thead align="left"><tr id="row7576162395917"><th class="cellrowborder" valign="top" width="31.759999999999998%" id="mcps1.1.3.1.1"><p id="p757682325918"><a name="p757682325918"></a><a name="p757682325918"></a>产品名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="68.24%" id="mcps1.1.3.1.2"><p id="p10576172375912"><a name="p10576172375912"></a><a name="p10576172375912"></a>产品版本</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row31981050154514"><td class="cellrowborder" valign="top" width="31.759999999999998%" headers="mcps1.1.3.1.1 "><p id="p63331555172315"><a name="p63331555172315"></a><a name="p63331555172315"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.24%" headers="mcps1.1.3.1.2 "><p id="p141352132417"><a name="p141352132417"></a><a name="p141352132417"></a>V608</p>
+</td>
+</tr>
+<tr id="row1576192335913"><td class="cellrowborder" valign="top" width="31.759999999999998%" headers="mcps1.1.3.1.1 "><p id="p1857619232599"><a name="p1857619232599"></a><a name="p1857619232599"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.24%" headers="mcps1.1.3.1.2 "><p id="p45761523195911"><a name="p45761523195911"></a><a name="p45761523195911"></a>V610</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>读者对象<a name="section164mcpsimp"></a></strong></p>
+<p>本文档主要适用于以下工程师：</p>
+<ul>
+<li>技术支持工程师</li>
+<li>软件开发工程师</li>
+</ul>
+<p><strong>符号约定<a name="section133020216410"></a></strong></p>
+<p>在本文中可能出现下列标志，它们所代表的含义如下。</p>
+<p><a name="table2622507016410"></a></p>
+<table><thead align="left"><tr id="row1530720816410"><th class="cellrowborder" valign="top" width="20.580000000000002%" id="mcps1.1.3.1.1"><p id="p6450074116410"><a name="p6450074116410"></a><a name="p6450074116410"></a><strong id="b2136615816410"><a name="b2136615816410"></a><a name="b2136615816410"></a>符号</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="79.42%" id="mcps1.1.3.1.2"><p id="p5435366816410"><a name="p5435366816410"></a><a name="p5435366816410"></a><strong id="b5941558116410"><a name="b5941558116410"></a><a name="b5941558116410"></a>说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1372280416410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p3734547016410"><a name="p3734547016410"></a><a name="p3734547016410"></a><a name="image2670064316410"></a><a name="image2670064316410"></a><span><img class="" id="image2670064316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001847217077.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p1757432116410"><a name="p1757432116410"></a><a name="p1757432116410"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row466863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1432579516410"><a name="p1432579516410"></a><a name="p1432579516410"></a><a name="image4895582316410"></a><a name="image4895582316410"></a><span><img class="" id="image4895582316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001800338242.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p959197916410"><a name="p959197916410"></a><a name="p959197916410"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row123863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1232579516410"><a name="p1232579516410"></a><a name="p1232579516410"></a><a name="image1235582316410"></a><a name="image1235582316410"></a><span><img class="" id="image1235582316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001847137149.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p123197916410"><a name="p123197916410"></a><a name="p123197916410"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row5786682116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p2204984716410"><a name="p2204984716410"></a><a name="p2204984716410"></a><a name="image4504446716410"></a><a name="image4504446716410"></a><span><img class="" id="image4504446716410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001847137137.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4388861916410"><a name="p4388861916410"></a><a name="p4388861916410"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
+<p id="p1238861916410"><a name="p1238861916410"></a><a name="p1238861916410"></a>“须知”不涉及人身伤害。</p>
+</td>
+</tr>
+<tr id="row2856923116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p5555360116410"><a name="p5555360116410"></a><a name="p5555360116410"></a><a name="image799324016410"></a><a name="image799324016410"></a><span><img class="" id="image799324016410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001800497986.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4612588116410"><a name="p4612588116410"></a><a name="p4612588116410"></a>对正文中重点信息的补充说明。</p>
+<p id="p1232588116410"><a name="p1232588116410"></a><a name="p1232588116410"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>修改记录<a name="section2467512116410"></a></strong></p>
+<p><a name="table1557726816410"></a></p>
+<table><thead align="left"><tr id="row2942532716410"><th class="cellrowborder" valign="top" width="20.72%" id="mcps1.1.4.1.1"><p id="p3778275416410"><a name="p3778275416410"></a><a name="p3778275416410"></a><strong id="b5687322716410"><a name="b5687322716410"></a><a name="b5687322716410"></a>文档版本</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="26.119999999999997%" id="mcps1.1.4.1.2"><p id="p5627845516410"><a name="p5627845516410"></a><a name="p5627845516410"></a><strong id="b5800814916410"><a name="b5800814916410"></a><a name="b5800814916410"></a>发布日期</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="53.16%" id="mcps1.1.4.1.3"><p id="p2382284816410"><a name="p2382284816410"></a><a name="p2382284816410"></a><strong id="b3316380216410"><a name="b3316380216410"></a><a name="b3316380216410"></a>修改说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row5947359616410"><td class="cellrowborder" valign="top" width="20.72%" headers="mcps1.1.4.1.1 "><p id="p2149706016410"><a name="p2149706016410"></a><a name="p2149706016410"></a>00B01</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.119999999999997%" headers="mcps1.1.4.1.2 "><p id="p648803616410"><a name="p648803616410"></a><a name="p648803616410"></a><span id="ph12765229315"><a name="ph12765229315"></a><a name="ph12765229315"></a>2026-06-30</span></p>
+</td>
+<td class="cellrowborder" valign="top" width="53.16%" headers="mcps1.1.4.1.3 "><p id="p1946537916410"><a name="p1946537916410"></a><a name="p1946537916410"></a>第1次临时版本发布</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="概述">概述<a name="ZH-CN_TOPIC_0000001800497978"></a></h2>
+<p>哭声检测提供了婴幼儿哭声检测（Baby Crying Detection，简称：BCD）功能。</p>
+<h2 id="重要概念">重要概念<a name="ZH-CN_TOPIC_0000001800497974"></a></h2>
+<ul>
+<li>
+<p>哭声检测功能</p>
+<p>婴幼儿哭声检测功能基于独立封装的哭声检测库，可对婴幼儿哭声进行识别检测，并提供回调函数接口。</p>
+</li>
+<li>
+<p>适用场景</p>
+<p>哭声检测功能仅适用于家居场景。</p>
+</li>
+</ul>
+<blockquote>
+<p><img alt="" src="public_sys-resources/icon-caution.gif" /> <strong>注意：</strong> <br />
+仅Hi3516CV610支持哭声检测功能。</p>
+</blockquote>
+<h2 id="API参考">API参考<a name="ZH-CN_TOPIC_0000001800338222"></a></h2>
+<p>哭声检测相关API如下：</p>
+<ul>
+<li><a href="#ZH-CN_TOPIC_0000001800338230">ss_baby_crying_detection_init</a>：初始化哭声检测模块。</li>
+<li><a href="#ZH-CN_TOPIC_0000001847217061">ss_baby_crying_detection_process</a>：哭声检测处理。</li>
+<li><a href="#ZH-CN_TOPIC_0000001847217065">ss_baby_crying_detection_deinit</a>：去初始化哭声检测模块。</li>
+</ul>
+<h3 id="ss_baby_crying_detection_init">ss_baby_crying_detection_init<a name="ZH-CN_TOPIC_0000001800338230"></a></h3>
+<p>【描述】</p>
+<p>初始化哭声检测模块。</p>
+<p>【语法】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>td_s32 ss_baby_crying_detection_init(ot_bcd_handle *bcd, td_s32 sample_rate, const ot_bcd_config *bcd_config);
+</span></code></pre></div>
+<p>【参数】</p>
+<p><a name="table132mcpsimp"></a></p>
+<table><thead align="left"><tr id="row138mcpsimp"><th class="cellrowborder" valign="top" width="18%" id="mcps1.1.4.1.1"><p id="p140mcpsimp"><a name="p140mcpsimp"></a><a name="p140mcpsimp"></a>参数名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="65%" id="mcps1.1.4.1.2"><p id="p142mcpsimp"><a name="p142mcpsimp"></a><a name="p142mcpsimp"></a>描述</p>
+</th>
+<th class="cellrowborder" valign="top" width="17%" id="mcps1.1.4.1.3"><p id="p144mcpsimp"><a name="p144mcpsimp"></a><a name="p144mcpsimp"></a>输入/输出</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row146mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.4.1.1 "><p xml:lang="it-IT" id="p148mcpsimp"><a name="p148mcpsimp"></a><a name="p148mcpsimp"></a>bcd</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.4.1.2 "><p id="p150mcpsimp"><a name="p150mcpsimp"></a><a name="p150mcpsimp"></a>哭声检测句柄。</p>
+</td>
+<td class="cellrowborder" valign="top" width="17%" headers="mcps1.1.4.1.3 "><p id="p152mcpsimp"><a name="p152mcpsimp"></a><a name="p152mcpsimp"></a>输出</p>
+</td>
+</tr>
+<tr id="row153mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.4.1.1 "><p xml:lang="it-IT" id="p155mcpsimp"><a name="p155mcpsimp"></a><a name="p155mcpsimp"></a>sample_rate</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.4.1.2 "><p id="p157mcpsimp"><a name="p157mcpsimp"></a><a name="p157mcpsimp"></a>待处理音频数据的采样率，仅支持16kHz。</p>
+</td>
+<td class="cellrowborder" valign="top" width="17%" headers="mcps1.1.4.1.3 "><p id="p159mcpsimp"><a name="p159mcpsimp"></a><a name="p159mcpsimp"></a>输入</p>
+</td>
+</tr>
+<tr id="row160mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.4.1.1 "><p xml:lang="it-IT" id="p162mcpsimp"><a name="p162mcpsimp"></a><a name="p162mcpsimp"></a>bcd_config</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.1.4.1.2 "><p id="p164mcpsimp"><a name="p164mcpsimp"></a><a name="p164mcpsimp"></a>哭声检测属性结构体的指针。</p>
+</td>
+<td class="cellrowborder" valign="top" width="17%" headers="mcps1.1.4.1.3 "><p id="p166mcpsimp"><a name="p166mcpsimp"></a><a name="p166mcpsimp"></a>输入</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>【返回值】</p>
+<p><a name="table168mcpsimp"></a></p>
+<table><thead align="left"><tr id="row173mcpsimp"><th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.1"><p id="p175mcpsimp"><a name="p175mcpsimp"></a><a name="p175mcpsimp"></a>返回值</p>
+</th>
+<th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.2"><p id="p177mcpsimp"><a name="p177mcpsimp"></a><a name="p177mcpsimp"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row179mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p181mcpsimp"><a name="p181mcpsimp"></a><a name="p181mcpsimp"></a>0</p>
+</td>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p183mcpsimp"><a name="p183mcpsimp"></a><a name="p183mcpsimp"></a>成功。</p>
+</td>
+</tr>
+<tr id="row184mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p186mcpsimp"><a name="p186mcpsimp"></a><a name="p186mcpsimp"></a>非0</p>
+</td>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p188mcpsimp"><a name="p188mcpsimp"></a><a name="p188mcpsimp"></a>失败，其值为<a href="#ZH-CN_TOPIC_0000001847137133">错误码</a>。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>【需求】</p>
+<ul>
+<li>头文件：ss_audio_bcd.h</li>
+<li>库文件：libss_bcd.a</li>
+</ul>
+<p>【注意】</p>
+<p>用户通过传入哭声检测属性结构体，初始化一个哭声检测模块，并返回哭声检测句柄，可以最后通过哭声检测句柄来注销该哭声检测模块。</p>
+<p>【举例】</p>
+<p>下面代码举例哭声检测模块的初始化：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>td_s32 ret;
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ot_bcd_config bcd_cfg;
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>ot_bcd_handle bcd = TD_NULL;
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>td_s32 sample_rate = 16000;
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>bcd_cfg.usr_mode = TD_TRUE;
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>bcd_cfg.bypass = TD_FALSE;
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>bcd_cfg.alarm_sensitivity = 80;
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>bcd_cfg.alarm_period = 3000;
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>bcd_cfg.alarm_count_threshold = 1;
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>bcd_cfg.alarm_interval = 0;
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>bcd_cfg.callback = (fn_bcd_callback)cry_callback;
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>ret = ss_baby_crying_detection_init(&amp;bcd, sample_rate, &amp;bcd_cfg);
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>if (ret != TD_SUCCESS) {
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>    return ret;
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>}
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>return TD_SUCCESS;
+</span></code></pre></div>
+<p>【相关主题】</p>
+<p>无。</p>
+<h3 id="ss_baby_crying_detection_process">ss_baby_crying_detection_process<a name="ZH-CN_TOPIC_0000001847217061"></a></h3>
+<p>【描述】</p>
+<p>哭声检测处理。</p>
+<p>【语法】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>td_s32 ss_baby_crying_detection_process(ot_bcd_handle bcd, ot_bcd_process_data *input_data, ot_bcd_process_data *output_data);
+</span></code></pre></div>
+<p>【参数】</p>
+<p><a name="table227mcpsimp"></a></p>
+<table><thead align="left"><tr id="row233mcpsimp"><th class="cellrowborder" valign="top" width="17.82%" id="mcps1.1.4.1.1"><p id="p235mcpsimp"><a name="p235mcpsimp"></a><a name="p235mcpsimp"></a>参数名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="60.480000000000004%" id="mcps1.1.4.1.2"><p id="p237mcpsimp"><a name="p237mcpsimp"></a><a name="p237mcpsimp"></a>描述</p>
+</th>
+<th class="cellrowborder" valign="top" width="21.7%" id="mcps1.1.4.1.3"><p id="p239mcpsimp"><a name="p239mcpsimp"></a><a name="p239mcpsimp"></a>输入/输出</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row241mcpsimp"><td class="cellrowborder" valign="top" width="17.82%" headers="mcps1.1.4.1.1 "><p xml:lang="it-IT" id="p243mcpsimp"><a name="p243mcpsimp"></a><a name="p243mcpsimp"></a>bcd</p>
+</td>
+<td class="cellrowborder" valign="top" width="60.480000000000004%" headers="mcps1.1.4.1.2 "><p id="p245mcpsimp"><a name="p245mcpsimp"></a><a name="p245mcpsimp"></a>哭声检测句柄（初始化哭声检测模块时获得的句柄）。</p>
+</td>
+<td class="cellrowborder" valign="top" width="21.7%" headers="mcps1.1.4.1.3 "><p id="p247mcpsimp"><a name="p247mcpsimp"></a><a name="p247mcpsimp"></a>输入</p>
+</td>
+</tr>
+<tr id="row248mcpsimp"><td class="cellrowborder" valign="top" width="17.82%" headers="mcps1.1.4.1.1 "><p xml:lang="it-IT" id="p250mcpsimp"><a name="p250mcpsimp"></a><a name="p250mcpsimp"></a>input_data</p>
+</td>
+<td class="cellrowborder" valign="top" width="60.480000000000004%" headers="mcps1.1.4.1.2 "><p id="p252mcpsimp"><a name="p252mcpsimp"></a><a name="p252mcpsimp"></a>输入数据的指针。</p>
+</td>
+<td class="cellrowborder" valign="top" width="21.7%" headers="mcps1.1.4.1.3 "><p id="p254mcpsimp"><a name="p254mcpsimp"></a><a name="p254mcpsimp"></a>输入</p>
+</td>
+</tr>
+<tr id="row255mcpsimp"><td class="cellrowborder" valign="top" width="17.82%" headers="mcps1.1.4.1.1 "><p xml:lang="it-IT" id="p257mcpsimp"><a name="p257mcpsimp"></a><a name="p257mcpsimp"></a>output_data</p>
+</td>
+<td class="cellrowborder" valign="top" width="60.480000000000004%" headers="mcps1.1.4.1.2 "><p id="p259mcpsimp"><a name="p259mcpsimp"></a><a name="p259mcpsimp"></a>输出数据的指针。</p>
+</td>
+<td class="cellrowborder" valign="top" width="21.7%" headers="mcps1.1.4.1.3 "><p id="p261mcpsimp"><a name="p261mcpsimp"></a><a name="p261mcpsimp"></a>输出</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>【返回值】</p>
+<p><a name="table263mcpsimp"></a></p>
+<table><thead align="left"><tr id="row268mcpsimp"><th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.1"><p id="p270mcpsimp"><a name="p270mcpsimp"></a><a name="p270mcpsimp"></a>返回值</p>
+</th>
+<th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.2"><p id="p272mcpsimp"><a name="p272mcpsimp"></a><a name="p272mcpsimp"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row274mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p276mcpsimp"><a name="p276mcpsimp"></a><a name="p276mcpsimp"></a>0</p>
+</td>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p278mcpsimp"><a name="p278mcpsimp"></a><a name="p278mcpsimp"></a>成功。</p>
+</td>
+</tr>
+<tr id="row279mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p281mcpsimp"><a name="p281mcpsimp"></a><a name="p281mcpsimp"></a>非0</p>
+</td>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p283mcpsimp"><a name="p283mcpsimp"></a><a name="p283mcpsimp"></a>失败，其值为<a href="#ZH-CN_TOPIC_0000001847137133">错误码</a>。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>【需求】</p>
+<ul>
+<li>头文件：ss_audio_bcd.h</li>
+<li>库文件：libss_bcd.a</li>
+</ul>
+<p>【注意】</p>
+<ul>
+<li>哭声检测仅支持对单声道16bit位宽的音频数据进行处理，并输出单声道16bit位宽的音频数据。</li>
+<li>哭声检测仅支持采样率为16kHz的音频数据，不支持低采样率的数据上采样到16kHz。</li>
+<li>单次传入的输入数据长度必须为10ms，当采样率为16kHz、位宽为16bit时则该数据长度为320字节。</li>
+<li>
+<p>哭声检测的处理流程如<a href="#fig170424914313">图1</a>所示。</p>
+<p><strong>图 1</strong>  哭声检测的处理流程<a name="fig170424914313"></a><br />
+<img alt="" src="figures/%E5%93%AD%E5%A3%B0%E6%A3%80%E6%B5%8B%E7%9A%84%E5%A4%84%E7%90%86%E6%B5%81%E7%A8%8B.png" title="哭声检测的处理流程" /></p>
+</li>
+</ul>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<p>无。</p>
+<h3 id="ss_baby_crying_detection_deinit">ss_baby_crying_detection_deinit<a name="ZH-CN_TOPIC_0000001847217065"></a></h3>
+<p>【描述】</p>
+<p>去初始化哭声检测模块。</p>
+<p>【语法】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>td_s32 ss_baby_crying_detection_deinit(ot_bcd_handle bcd);
+</span></code></pre></div>
+<p>【参数】</p>
+<p><a name="table304mcpsimp"></a></p>
+<table><thead align="left"><tr id="row310mcpsimp"><th class="cellrowborder" valign="top" width="18%" id="mcps1.1.4.1.1"><p id="p312mcpsimp"><a name="p312mcpsimp"></a><a name="p312mcpsimp"></a>参数名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="59.45%" id="mcps1.1.4.1.2"><p id="p314mcpsimp"><a name="p314mcpsimp"></a><a name="p314mcpsimp"></a>描述</p>
+</th>
+<th class="cellrowborder" valign="top" width="22.55%" id="mcps1.1.4.1.3"><p id="p316mcpsimp"><a name="p316mcpsimp"></a><a name="p316mcpsimp"></a>输入/输出</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row318mcpsimp"><td class="cellrowborder" valign="top" width="18%" headers="mcps1.1.4.1.1 "><p xml:lang="it-IT" id="p320mcpsimp"><a name="p320mcpsimp"></a><a name="p320mcpsimp"></a>bcd</p>
+</td>
+<td class="cellrowborder" valign="top" width="59.45%" headers="mcps1.1.4.1.2 "><p id="p322mcpsimp"><a name="p322mcpsimp"></a><a name="p322mcpsimp"></a>哭声检测句柄（初始化哭声检测模块时获得的句柄）。</p>
+</td>
+<td class="cellrowborder" valign="top" width="22.55%" headers="mcps1.1.4.1.3 "><p id="p324mcpsimp"><a name="p324mcpsimp"></a><a name="p324mcpsimp"></a>输入</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>【返回值】</p>
+<p><a name="table326mcpsimp"></a></p>
+<table><thead align="left"><tr id="row331mcpsimp"><th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.1"><p id="p333mcpsimp"><a name="p333mcpsimp"></a><a name="p333mcpsimp"></a>返回值</p>
+</th>
+<th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.2"><p id="p335mcpsimp"><a name="p335mcpsimp"></a><a name="p335mcpsimp"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row337mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p339mcpsimp"><a name="p339mcpsimp"></a><a name="p339mcpsimp"></a>0</p>
+</td>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p341mcpsimp"><a name="p341mcpsimp"></a><a name="p341mcpsimp"></a>成功。</p>
+</td>
+</tr>
+<tr id="row342mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p344mcpsimp"><a name="p344mcpsimp"></a><a name="p344mcpsimp"></a>非0</p>
+</td>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p346mcpsimp"><a name="p346mcpsimp"></a><a name="p346mcpsimp"></a>失败，其值为<a href="#ZH-CN_TOPIC_0000001847137133">错误码</a>。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>【需求】</p>
+<ul>
+<li>头文件：ss_audio_bcd.h</li>
+<li>库文件：libss_bcd.a</li>
+</ul>
+<p>【注意】</p>
+<p>对于同一个哭声检测句柄，不能重复调用去初始化接口，否则会出现异常。</p>
+<p>【举例】</p>
+<p>无。</p>
+<p>【相关主题】</p>
+<p>无。</p>
+<h2 id="数据类型">数据类型<a name="ZH-CN_TOPIC_0000001800338226"></a></h2>
+<p>哭声检测相关数据类型、数据结构定义如下：</p>
+<ul>
+<li><a href="#ZH-CN_TOPIC_0000002141827377">ot_bcd_mode</a>：定义哭声检测模式。</li>
+<li><a href="#ZH-CN_TOPIC_0000001847137129">ot_bcd_config</a>：定义哭声检测属性结构体。</li>
+<li><a href="#ZH-CN_TOPIC_0000001800497982">ot_bcd_process_data</a>：定义哭声检测处理数据结构体。</li>
+</ul>
+<h3 id="ot_bcd_mode">ot_bcd_mode<a name="ZH-CN_TOPIC_0000002141827377"></a></h3>
+<p>【说明】</p>
+<p>定义哭声检测模式。</p>
+<p>【定义】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>typedef enum {
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    OT_BCD_MODE_NORMAL = 0,
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    OT_BCD_MODE_FAST,
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    OT_BCD_MODE_BUTT,
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>} ot_bcd_mode;
+</span></code></pre></div>
+<p>【成员】</p>
+<p><a name="table6466mcpsimp"></a></p>
+<table><thead align="left"><tr id="row6471mcpsimp"><th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.1"><p id="p6473mcpsimp"><a name="p6473mcpsimp"></a><a name="p6473mcpsimp"></a>成员名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="50%" id="mcps1.1.3.1.2"><p id="p6475mcpsimp"><a name="p6475mcpsimp"></a><a name="p6475mcpsimp"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row6477mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p6479mcpsimp"><a name="p6479mcpsimp"></a><a name="p6479mcpsimp"></a>OT_BCD_MODE_NORMAL</p>
+</td>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p6481mcpsimp"><a name="p6481mcpsimp"></a><a name="p6481mcpsimp"></a>Normal模式。</p>
+</td>
+</tr>
+<tr id="row6482mcpsimp"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.1 "><p id="p6484mcpsimp"><a name="p6484mcpsimp"></a><a name="p6484mcpsimp"></a>OT_BCD_MODE_FAST</p>
+</td>
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.1.3.1.2 "><p id="p6486mcpsimp"><a name="p6486mcpsimp"></a><a name="p6486mcpsimp"></a>Fast模式。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>【注意事项】</p>
+<p>无</p>
+<p>【相关数据类型及接口】</p>
+<ul>
+<li><a href="#ZH-CN_TOPIC_0000001847137129">ot_bcd_config</a></li>
+<li><a href="#ZH-CN_TOPIC_0000001800338230">ss_baby_crying_detection_init</a></li>
+</ul>
+<h3 id="ot_bcd_config">ot_bcd_config<a name="ZH-CN_TOPIC_0000001847137129"></a></h3>
+<p>【说明】</p>
+<p>定义哭声检测属性结构体。</p>
+<p><strong>【</strong>定义<strong>】</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>typedef struct {
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>    td_bool usr_mode;
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    td_bool bypass;
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    td_u32 alarm_sensitivity;
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    td_u32 alarm_period;
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    td_u32 alarm_count_threshold;
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    td_u32 alarm_interval;
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    fn_bcd_callback callback;
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    ot_bcd_mode detect_mode;
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>} ot_bcd_config;
+</span></code></pre></div>
+<p>【成员】</p>
+<p><a name="table384mcpsimp"></a></p>
+<table><thead align="left"><tr id="row389mcpsimp"><th class="cellrowborder" valign="top" width="34.04%" id="mcps1.1.3.1.1"><p id="p391mcpsimp"><a name="p391mcpsimp"></a><a name="p391mcpsimp"></a>成员名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="65.96%" id="mcps1.1.3.1.2"><p id="p393mcpsimp"><a name="p393mcpsimp"></a><a name="p393mcpsimp"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row395mcpsimp"><td class="cellrowborder" valign="top" width="34.04%" headers="mcps1.1.3.1.1 "><p xml:lang="fr-FR" id="p397mcpsimp"><a name="p397mcpsimp"></a><a name="p397mcpsimp"></a>usr_mode</p>
+</td>
+<td class="cellrowborder" valign="top" width="65.96%" headers="mcps1.1.3.1.2 "><p id="p399mcpsimp"><a name="p399mcpsimp"></a><a name="p399mcpsimp"></a>是否采用用户模式：</p>
+<p id="p400mcpsimp"><a name="p400mcpsimp"></a><a name="p400mcpsimp"></a>0：自动模式</p>
+<p id="p401mcpsimp"><a name="p401mcpsimp"></a><a name="p401mcpsimp"></a>1：用户模式</p>
+<p id="p402mcpsimp"><a name="p402mcpsimp"></a><a name="p402mcpsimp"></a>默认值：0。</p>
+</td>
+</tr>
+<tr id="row403mcpsimp"><td class="cellrowborder" valign="top" width="34.04%" headers="mcps1.1.3.1.1 "><p xml:lang="fr-FR" id="p405mcpsimp"><a name="p405mcpsimp"></a><a name="p405mcpsimp"></a>bypass</p>
+</td>
+<td class="cellrowborder" valign="top" width="65.96%" headers="mcps1.1.3.1.2 "><p id="p407mcpsimp"><a name="p407mcpsimp"></a><a name="p407mcpsimp"></a>是否开启旁路功能。</p>
+<p id="p408mcpsimp"><a name="p408mcpsimp"></a><a name="p408mcpsimp"></a>0：不开启旁路功能，即使能哭声检测</p>
+<p id="p409mcpsimp"><a name="p409mcpsimp"></a><a name="p409mcpsimp"></a>1：开启旁路功能，即不使能哭声检测</p>
+<p id="p410mcpsimp"><a name="p410mcpsimp"></a><a name="p410mcpsimp"></a>默认值：0。</p>
+</td>
+</tr>
+<tr id="row411mcpsimp"><td class="cellrowborder" valign="top" width="34.04%" headers="mcps1.1.3.1.1 "><p xml:lang="fr-FR" id="p413mcpsimp"><a name="p413mcpsimp"></a><a name="p413mcpsimp"></a>alarm_sensitivity</p>
+</td>
+<td class="cellrowborder" valign="top" width="65.96%" headers="mcps1.1.3.1.2 "><p id="p415mcpsimp"><a name="p415mcpsimp"></a><a name="p415mcpsimp"></a>告警阈值，即哭声检测的灵敏度。该值越小，误报率越高，漏检率越低。取值范围为[0,100]。</p>
+<p id="p416mcpsimp"><a name="p416mcpsimp"></a><a name="p416mcpsimp"></a>默认值：80。</p>
+</td>
+</tr>
+<tr id="row417mcpsimp"><td class="cellrowborder" valign="top" width="34.04%" headers="mcps1.1.3.1.1 "><p xml:lang="fr-FR" id="p419mcpsimp"><a name="p419mcpsimp"></a><a name="p419mcpsimp"></a>alarm_period</p>
+</td>
+<td class="cellrowborder" valign="top" width="65.96%" headers="mcps1.1.3.1.2 "><p id="p421mcpsimp"><a name="p421mcpsimp"></a><a name="p421mcpsimp"></a>告警时限，以ms为单位。取值范围为大于或等于1000。</p>
+<p id="p422mcpsimp"><a name="p422mcpsimp"></a><a name="p422mcpsimp"></a>默认值：3000。</p>
+</td>
+</tr>
+<tr id="row423mcpsimp"><td class="cellrowborder" valign="top" width="34.04%" headers="mcps1.1.3.1.1 "><p xml:lang="fr-FR" id="p425mcpsimp"><a name="p425mcpsimp"></a><a name="p425mcpsimp"></a>alarm_count_threshold</p>
+</td>
+<td class="cellrowborder" valign="top" width="65.96%" headers="mcps1.1.3.1.2 "><p id="p427mcpsimp"><a name="p427mcpsimp"></a><a name="p427mcpsimp"></a>告警次数阈值，在告警时限内若告警次数大于该值则判定为检测到哭声。取值范围为大于或等于1。</p>
+<p id="p428mcpsimp"><a name="p428mcpsimp"></a><a name="p428mcpsimp"></a>默认值：1。</p>
+</td>
+</tr>
+<tr id="row429mcpsimp"><td class="cellrowborder" valign="top" width="34.04%" headers="mcps1.1.3.1.1 "><p xml:lang="fr-FR" id="p431mcpsimp"><a name="p431mcpsimp"></a><a name="p431mcpsimp"></a>alarm_interval</p>
+</td>
+<td class="cellrowborder" valign="top" width="65.96%" headers="mcps1.1.3.1.2 "><p id="p433mcpsimp"><a name="p433mcpsimp"></a><a name="p433mcpsimp"></a>告警间隔，即两次告警之间的最小时间间隔。取值范围为大于或等于0。</p>
+<p id="p434mcpsimp"><a name="p434mcpsimp"></a><a name="p434mcpsimp"></a>默认值：0。</p>
+</td>
+</tr>
+<tr id="row1219245054215"><td class="cellrowborder" valign="top" width="34.04%" headers="mcps1.1.3.1.1 "><p id="p31921750194213"><a name="p31921750194213"></a><a name="p31921750194213"></a>detect_mode</p>
+</td>
+<td class="cellrowborder" valign="top" width="65.96%" headers="mcps1.1.3.1.2 "><p id="p19411344318"><a name="p19411344318"></a><a name="p19411344318"></a>检测模式：</p>
+<p id="p179413139438"><a name="p179413139438"></a><a name="p179413139438"></a>0：Normal模式</p>
+<p id="p10941213154313"><a name="p10941213154313"></a><a name="p10941213154313"></a>1：Fast模式</p>
+<p id="p5951313134315"><a name="p5951313134315"></a><a name="p5951313134315"></a>默认值：0。</p>
+</td>
+</tr>
+<tr id="row435mcpsimp"><td class="cellrowborder" valign="top" width="34.04%" headers="mcps1.1.3.1.1 "><p xml:lang="fr-FR" id="p437mcpsimp"><a name="p437mcpsimp"></a><a name="p437mcpsimp"></a>callback</p>
+</td>
+<td class="cellrowborder" valign="top" width="65.96%" headers="mcps1.1.3.1.2 "><p id="p439mcpsimp"><a name="p439mcpsimp"></a><a name="p439mcpsimp"></a>检测到哭声时执行的回调函数。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>【注意事项】</p>
+<ul>
+<li>当用户模式开启时，其余参数（回调函数除外）的配置才生效，否则按照默认值来配置。</li>
+<li>在初始化哭声检测模块时，当开启用户模式后才会对其余参数（回调函数除外）做正确性检查，只有所有参数正确才能配置成功。</li>
+<li>回调函数仅在开启旁路功能的时候可设置为NULL，其余情况下须保证其地址有效，否则会导致异常。</li>
+<li>Fast模式相比Normal模式检测时延更小，但是虚警率相比偏大，可以适量提高告警阈值。</li>
+</ul>
+<p>【相关数据类型及接口】</p>
+<p><a href="#ZH-CN_TOPIC_0000001800338230">ss_baby_crying_detection_init</a></p>
+<h3 id="ot_bcd_process_data">ot_bcd_process_data<a name="ZH-CN_TOPIC_0000001800497982"></a></h3>
+<p>【说明】</p>
+<p>定义哭声检测处理数据结构体。</p>
+<p>【定义】</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>typedef struct {
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    td_s16 *data;
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    td_s32 data_size;
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>} ot_bcd_process_data;
+</span></code></pre></div>
+<p>【成员】</p>
+<p><a name="table458mcpsimp"></a></p>
+<table><thead align="left"><tr id="row463mcpsimp"><th class="cellrowborder" valign="top" width="43%" id="mcps1.1.3.1.1"><p id="p465mcpsimp"><a name="p465mcpsimp"></a><a name="p465mcpsimp"></a>成员名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="56.99999999999999%" id="mcps1.1.3.1.2"><p id="p467mcpsimp"><a name="p467mcpsimp"></a><a name="p467mcpsimp"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row469mcpsimp"><td class="cellrowborder" valign="top" width="43%" headers="mcps1.1.3.1.1 "><p xml:lang="fr-FR" id="p471mcpsimp"><a name="p471mcpsimp"></a><a name="p471mcpsimp"></a>data</p>
+</td>
+<td class="cellrowborder" valign="top" width="56.99999999999999%" headers="mcps1.1.3.1.2 "><p id="p473mcpsimp"><a name="p473mcpsimp"></a><a name="p473mcpsimp"></a>数据缓冲区的指针。</p>
+</td>
+</tr>
+<tr id="row474mcpsimp"><td class="cellrowborder" valign="top" width="43%" headers="mcps1.1.3.1.1 "><p xml:lang="fr-FR" id="p476mcpsimp"><a name="p476mcpsimp"></a><a name="p476mcpsimp"></a>data_size</p>
+</td>
+<td class="cellrowborder" valign="top" width="56.99999999999999%" headers="mcps1.1.3.1.2 "><p id="p478mcpsimp"><a name="p478mcpsimp"></a><a name="p478mcpsimp"></a>数据大小，以byte为单位。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>【注意事项】</p>
+<p>在进行哭声检测时，须保证data的地址有效，且对应数据缓存区的有效长度不小于data_size，否则会导致处理异常。</p>
+<p>【相关数据类型及接口】</p>
+<p><a href="#ZH-CN_TOPIC_0000001847217061">ss_baby_crying_detection_process</a></p>
+<h2 id="错误码">错误码<a name="ZH-CN_TOPIC_0000001847137133"></a></h2>
+<p>哭声检测API错误码如<a href="#_Ref268526500">表 1</a>所示。</p>
+<p><strong>表 1</strong>  哭声检测API错误码</p>
+<p><a name="_Ref268526500"></a></p>
+<table><thead align="left"><tr id="row496mcpsimp"><th class="cellrowborder" valign="top" width="20.792079207920793%" id="mcps1.2.4.1.1"><p id="p498mcpsimp"><a name="p498mcpsimp"></a><a name="p498mcpsimp"></a>错误代码</p>
+</th>
+<th class="cellrowborder" valign="top" width="45.54455445544555%" id="mcps1.2.4.1.2"><p id="p500mcpsimp"><a name="p500mcpsimp"></a><a name="p500mcpsimp"></a>宏定义</p>
+</th>
+<th class="cellrowborder" valign="top" width="33.663366336633665%" id="mcps1.2.4.1.3"><p id="p502mcpsimp"><a name="p502mcpsimp"></a><a name="p502mcpsimp"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row504mcpsimp"><td class="cellrowborder" valign="top" width="20.792079207920793%" headers="mcps1.2.4.1.1 "><p id="p506mcpsimp"><a name="p506mcpsimp"></a><a name="p506mcpsimp"></a>0xA0148100</p>
+</td>
+<td class="cellrowborder" valign="top" width="45.54455445544555%" headers="mcps1.2.4.1.2 "><p id="p508mcpsimp"><a name="p508mcpsimp"></a><a name="p508mcpsimp"></a>OT_ERR_BCD_INVALID_HANDLE</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.2.4.1.3 "><p id="p510mcpsimp"><a name="p510mcpsimp"></a><a name="p510mcpsimp"></a>句柄无效。</p>
+</td>
+</tr>
+<tr id="row511mcpsimp"><td class="cellrowborder" valign="top" width="20.792079207920793%" headers="mcps1.2.4.1.1 "><p id="p513mcpsimp"><a name="p513mcpsimp"></a><a name="p513mcpsimp"></a>0xA0148101</p>
+</td>
+<td class="cellrowborder" valign="top" width="45.54455445544555%" headers="mcps1.2.4.1.2 "><p id="p515mcpsimp"><a name="p515mcpsimp"></a><a name="p515mcpsimp"></a>OT_ERR_BCD_MEMORY_ERROR</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.2.4.1.3 "><p id="p517mcpsimp"><a name="p517mcpsimp"></a><a name="p517mcpsimp"></a>系统内存不足。</p>
+</td>
+</tr>
+<tr id="row518mcpsimp"><td class="cellrowborder" valign="top" width="20.792079207920793%" headers="mcps1.2.4.1.1 "><p id="p520mcpsimp"><a name="p520mcpsimp"></a><a name="p520mcpsimp"></a>0xA0148102</p>
+</td>
+<td class="cellrowborder" valign="top" width="45.54455445544555%" headers="mcps1.2.4.1.2 "><p id="p522mcpsimp"><a name="p522mcpsimp"></a><a name="p522mcpsimp"></a>OT_ERR_BCD_ILLEGAL_PARAM</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.2.4.1.3 "><p id="p524mcpsimp"><a name="p524mcpsimp"></a><a name="p524mcpsimp"></a>输入参数非法。</p>
+</td>
+</tr>
+<tr id="row525mcpsimp"><td class="cellrowborder" valign="top" width="20.792079207920793%" headers="mcps1.2.4.1.1 "><p id="p527mcpsimp"><a name="p527mcpsimp"></a><a name="p527mcpsimp"></a>0xA0148103</p>
+</td>
+<td class="cellrowborder" valign="top" width="45.54455445544555%" headers="mcps1.2.4.1.2 "><p id="p529mcpsimp"><a name="p529mcpsimp"></a><a name="p529mcpsimp"></a>OT_ERR_BCD_NULL_PTR</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.2.4.1.3 "><p id="p531mcpsimp"><a name="p531mcpsimp"></a><a name="p531mcpsimp"></a>输入参数空指针错误。</p>
+</td>
+</tr>
+<tr id="row532mcpsimp"><td class="cellrowborder" valign="top" width="20.792079207920793%" headers="mcps1.2.4.1.1 "><p id="p534mcpsimp"><a name="p534mcpsimp"></a><a name="p534mcpsimp"></a>0xA0148104</p>
+</td>
+<td class="cellrowborder" valign="top" width="45.54455445544555%" headers="mcps1.2.4.1.2 "><p id="p536mcpsimp"><a name="p536mcpsimp"></a><a name="p536mcpsimp"></a>OT_ERR_BCD_NOT_PERM</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.2.4.1.3 "><p id="p538mcpsimp"><a name="p538mcpsimp"></a><a name="p538mcpsimp"></a>操作不允许。</p>
+</td>
+</tr>
+<tr id="row765265312457"><td class="cellrowborder" valign="top" width="20.792079207920793%" headers="mcps1.2.4.1.1 "><p id="p71501027465"><a name="p71501027465"></a><a name="p71501027465"></a>0xA0148105</p>
+</td>
+<td class="cellrowborder" valign="top" width="45.54455445544555%" headers="mcps1.2.4.1.2 "><p id="p10150172164612"><a name="p10150172164612"></a><a name="p10150172164612"></a>OT_ERR_BCD_PROCESS_ERROR</p>
+</td>
+<td class="cellrowborder" valign="top" width="33.663366336633665%" headers="mcps1.2.4.1.3 "><p id="p51513244612"><a name="p51513244612"></a><a name="p51513244612"></a>检测处理出错。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+
+  <div class="footer-box">
+    <div class="footer-list">
+      
+      
+      <div class="footer-list-child">
+        <a href="https://www.hisilicon.com/cn" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/home" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开发者网站</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://gitcode.com/HiSpark" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开源社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developer.huawei.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">华为开发者官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hikunpeng.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">鲲鹏社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hiascend.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">昇腾社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/aboutus" target="_blank" class="footer-nav-first" rel="noopener noreferrer">关于我们</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/login" target="_blank" class="footer-nav-first" rel="noopener noreferrer">投诉举报</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      
+    </div>
+    <div class="footer-fix">
+      <div class="footer-fix-content">
+        <div>
+          <span class="footer-copyright">&nbsp;&copy;2024 华为技术有限公司</span>
+          <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer">粤A2-20044005号</a>
+          <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702004153"
+            target="_blank" rel="noopener noreferrer">粤公网安备44030702004153号</a>
+        </div>
+        <div class="footer-name-list">
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/legalNotices" target="_blank" class="footer-name" rel="noopener noreferrer">法律声明</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/cookie-policy" target="_blank" class="footer-name" rel="noopener noreferrer">关于Cookie</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/privacyPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">隐私政策</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/userPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">用户协议</a>
+          
+          
+          
+          <a href="javascript:void(0);" onclick="openDisclaimerDialog()" class="footer-name">免责声明</a>
+          
+          
+          
+        </div>
+      </div>
+
+
+      <!-- 免责声明弹窗 -->
+      <div id="disclaimerDialog" class="disclaimer-overlay" style="display: none;">
+        <div class="disclaimer-dialog">
+          <div class="disclaimer-dialog__header">
+            <span class="disclaimer-dialog__title">免责声明</span>
+            <button class="disclaimer-dialog__close" onclick="closeDisclaimerDialog()">×</button>
+          </div>
+          <div class="disclaimer-dialog__body">
+            <p class="disclaimer-dialog__text-center"><strong>海思开发者网站免责声明</strong></p>
+            <p>尊敬的用户，您好：</p>
+            <p>&nbsp; &nbsp;
+              请确保您通过本平台向海思提供或反馈的任何信息或意见不侵犯第三方知识产权和/或合法权益。如您提供或反馈的上述任何信息或意见侵犯第三方知识产权和/或合法权益，和/或给第三方造成损害的，您将承担全部法律及赔偿责任。
+            </p>
+          </div>
+          <div class="disclaimer-dialog__footer">
+            <button class="disclaimer-dialog__btn" onclick="closeDisclaimerDialog()">关闭</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function openDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'flex';
+        }
+        function closeDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'none';
+        }
+        // 点击弹窗背景关闭
+        document.getElementById('disclaimerDialog').addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeDisclaimerDialog();
+          }
+        });
+      </script>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../static/js/custom.js"></script>
+      
+        <script src="../../../static/js/version-selector.js"></script>
+      
+        <script src="../../../static/js/code-highlight.js"></script>
+      
+        <script src="../../../static/js/wavedrom-skin.js"></script>
+      
+        <script src="../../../static/js/wavedrom.min.js"></script>
+      
+        <script src="../../../static/js/wavedrom-init.js"></script>
+      
+        <script src="../../../static/js/no-flash.js"></script>
+      
+    
+  </body>
+</html>
