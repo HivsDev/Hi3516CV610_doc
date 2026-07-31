@@ -1,0 +1,1703 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hi3516CV610 超高清智慧视觉 SoC 文档中心">
+      
+      
+        <meta name="author" content="HiSpark">
+      
+      
+        <link rel="canonical" href="https://hivsdev.github.io/Hi3516CV610_doc/zh-CN/03API%E5%8F%82%E8%80%83/BSP/UBI%20%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/UBI%20%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../static/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>前言 - Hi3516CV610 开发者中心</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+    
+    
+      <link rel="stylesheet" href="../../../../../static/css/extra.css">
+    
+      <link rel="stylesheet" href="../../../../../static/css/version-selector.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+      <meta name="gitcode-issues-url" content="https://gitcode.com/HiSpark/fbb_ws63/issues">
+      
+      <link rel="dns-prefetch" href="https://docs.hisilicon.com">
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://docs.hisilicon.com" crossorigin>
+      <link rel="preload" href="../../../../../assets/stylesheets/main.484c7ddc.min.css" as="style">
+      <link rel="preload" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css" as="style">
+      <link rel="preload" href="../../../../../static/css/extra.css" as="style">
+      <link rel="preload" href="../../../../../assets/javascripts/bundle.79ae519e.min.js" as="script">
+      <link rel="preload" href="../../../../../static/js/custom.js" as="script">
+
+      
+      
+        
+        
+      
+      <style>:root{--md-text-font:"Helvetica Neue, PingFang SC, Microsoft YaHei";--md-code-font:"Consolas, Roboto Mono"}</style>
+      <script>
+        // 防止宽窄屏刷新闪烁 — 在 body 解析前就读取 localStorage 标记 <html>
+        // 配合 CSS: html.prefer-narrow .md-grid 在首帧即应用 76%
+        if (localStorage.getItem('wideScreen') === 'false') {
+          document.documentElement.classList.add('prefer-narrow');
+        }
+      </script>
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#前言" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://developers.hisilicon.com" title="Hi3516CV610 开发者中心" class="md-header__button md-logo" aria-label="Hi3516CV610 开发者中心" data-md-component="logo" target="_blank" rel="noopener noreferrer">
+      <img 
+  src="../../../../../static/images/light-icon.png" 
+  class="md-logo__img md-logo__img--light"
+  alt="Hi3516CV610 开发者中心" 
+/>
+<img 
+  src="../../../../../static/images/dark-icon.png" 
+  class="md-logo__img md-logo__img--dark"
+  alt="Hi3516CV610 开发者中心" 
+/>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+      </div>
+    </div>
+    
+      
+      
+        <label class="md-header__button md-icon md-header__button--search" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+      
+    
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="切换到暗色主题"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色主题" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="切换到亮色主题"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色主题" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <div class="md-header__source">
+        <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="Go to repository" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+      </div>
+    
+  </nav>
+  
+  
+    
+    
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        <!-- 
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+         -->
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+</header>
+
+
+<script>
+  var USER_DEFINED_OPTIONS = {
+    REPO_PATH: "Hi3516CV610_doc",
+    ROOT_URL: "https://docs.hisilicon.com/projects"
+  };
+  var DOCUMENTATION_OPTIONS = {
+    VERSION: "master",
+    // 构建时声明主题的语言
+    LANGUAGE: "en"
+  };
+</script>
+<script src="https://docs.hisilicon.com/projects/version/hispark_version.js"></script>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="sidebar-selectors">
+                  <div class="repo-select custom-select">
+                    <span class="select-label">芯片</span>
+                    <div class="repo-selector" title="">
+                      <span class="repo-readOnly"></span>
+                      <select id="repo-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="repo-options" style="display:none"></ul>
+                  </div>
+                  <div class="version-select custom-select">
+                    <span class="select-label">版本</span>
+                    <div class="version-selector" title="">
+                      <span class="version-readOnly"></span>
+                      <select id="version-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="version-options" style="display:none"></ul>
+                  </div>
+                  
+                    
+                    
+                      <div class="sidebar-search">
+                        <label class="sidebar-search__button" for="__search">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+                          <span>全文检索</span>
+                        </label>
+                      </div>
+                    
+                  
+                </div>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+    <div class="md-nav__source">
+      <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="Go to repository" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../00%E6%A6%82%E8%A7%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整体架构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考案例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../05%E7%A1%AC%E4%BB%B6%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具中心
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../07FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../08%E5%85%B6%E4%BB%96/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#前言_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#内核中使能UBI" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        内核中使能UBI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="内核中使能UBI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#内核配置UBI选项" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        内核配置UBI选项
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#UBI-设备驱动配置选项说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UBI 设备驱动配置选项说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#UBIFS-应用样例" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UBIFS 应用样例
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="UBIFS 应用样例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mount-一个空-UBIFS-文件系统" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        mount 一个空 UBIFS 文件系统
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#制作-UBIFS-根文件系统UBI镜像" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        制作 UBIFS 根文件系统UBI镜像
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#空UBIFS文件系统升级为根文件系统" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        空UBIFS文件系统升级为根文件系统
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#UBI镜像的转换格式和烧录" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UBI镜像的转换格式和烧录
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#使用mkubiimg.sh脚本一键式制作UBI镜像" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        使用mkubiimg.sh脚本一键式制作UBI镜像
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#附录" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附录
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="附录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#UBI-和-MTD-相关的接口和命令" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UBI 和 MTD 相关的接口和命令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#UBI常见问题" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UBI常见问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="前言">前言<a name="ZH-CN_TOPIC_0000001495246873"></a></h1>
+<h2 id="前言_1">前言<a name="ZH-CN_TOPIC_0000001495246873"></a></h2>
+<p><strong>概述<a name="section142mcpsimp"></a></strong></p>
+<p>linux-2.6.27后，内核加入了一种新型的FLASH文件系统UBI (Unsorted Block Images)。主要针对FLASH的特有属性，通过软件的方式来实现日志管理、坏块管理、损益均衡等技术。</p>
+<p>本文主要介绍如何在内核中配置使用UBI文件系统以及制作对应的UBI文件系统根文件系统镜像。同时还介绍了如何转换镜像格式以便于在u-boot上进行烧录。</p>
+<p><strong>产品版本<a name="section146mcpsimp"></a></strong></p>
+<p>与本文档相对应的产品版本如下。</p>
+<p><a name="table149mcpsimp"></a></p>
+<table><thead align="left"><tr id="row154mcpsimp"><th class="cellrowborder" valign="top" width="32%" id="mcps1.1.3.1.1"><p id="p156mcpsimp"><a name="p156mcpsimp"></a><a name="p156mcpsimp"></a>产品名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="68%" id="mcps1.1.3.1.2"><p id="p158mcpsimp"><a name="p158mcpsimp"></a><a name="p158mcpsimp"></a>产品版本</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1040219917153"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p4201195415576"><a name="p4201195415576"></a><a name="p4201195415576"></a>Hi3519D</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p101982545573"><a name="p101982545573"></a><a name="p101982545573"></a>V500</p>
+</td>
+</tr>
+<tr id="row11756169201810"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p622791210186"><a name="p622791210186"></a><a name="p622791210186"></a>Hi3516D</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p4227412101815"><a name="p4227412101815"></a><a name="p4227412101815"></a>V500</p>
+</td>
+</tr>
+<tr id="row281573610243"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p63331555172315"><a name="p63331555172315"></a><a name="p63331555172315"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p141352132417"><a name="p141352132417"></a><a name="p141352132417"></a>V608</p>
+</td>
+</tr>
+<tr id="row1649413411233"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p1649516342233"><a name="p1649516342233"></a><a name="p1649516342233"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p349513422315"><a name="p349513422315"></a><a name="p349513422315"></a>V610</p>
+</td>
+</tr>
+<tr id="row16117122881617"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p15446142103519"><a name="p15446142103519"></a><a name="p15446142103519"></a>Hi3511C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p1944617217351"><a name="p1944617217351"></a><a name="p1944617217351"></a>V100</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>读者对象<a name="section170mcpsimp"></a></strong></p>
+<p>本文档（本指南）主要适用于技术支持工程师。</p>
+<p><strong>符号约定<a name="section133020216410"></a></strong></p>
+<p>在本文中可能出现下列标志，它们所代表的含义如下。</p>
+<p><a name="table2622507016410"></a></p>
+<table><thead align="left"><tr id="row1530720816410"><th class="cellrowborder" valign="top" width="20.580000000000002%" id="mcps1.1.3.1.1"><p id="p6450074116410"><a name="p6450074116410"></a><a name="p6450074116410"></a><strong id="b2136615816410"><a name="b2136615816410"></a><a name="b2136615816410"></a>符号</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="79.42%" id="mcps1.1.3.1.2"><p id="p5435366816410"><a name="p5435366816410"></a><a name="p5435366816410"></a><strong id="b5941558116410"><a name="b5941558116410"></a><a name="b5941558116410"></a>说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1372280416410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p3734547016410"><a name="p3734547016410"></a><a name="p3734547016410"></a><a name="image2670064316410"></a><a name="image2670064316410"></a><span><img class="" id="image2670064316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001444767070.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p1757432116410"><a name="p1757432116410"></a><a name="p1757432116410"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row466863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1432579516410"><a name="p1432579516410"></a><a name="p1432579516410"></a><a name="image4895582316410"></a><a name="image4895582316410"></a><span><img class="" id="image4895582316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001494967489.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p959197916410"><a name="p959197916410"></a><a name="p959197916410"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row123863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1232579516410"><a name="p1232579516410"></a><a name="p1232579516410"></a><a name="image1235582316410"></a><a name="image1235582316410"></a><span><img class="" id="image1235582316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001445086954.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p123197916410"><a name="p123197916410"></a><a name="p123197916410"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row5786682116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p2204984716410"><a name="p2204984716410"></a><a name="p2204984716410"></a><a name="image4504446716410"></a><a name="image4504446716410"></a><span><img class="" id="image4504446716410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001495246881.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4388861916410"><a name="p4388861916410"></a><a name="p4388861916410"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
+<p id="p1238861916410"><a name="p1238861916410"></a><a name="p1238861916410"></a>“须知”不涉及人身伤害。</p>
+</td>
+</tr>
+<tr id="row2856923116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p5555360116410"><a name="p5555360116410"></a><a name="p5555360116410"></a><a name="image799324016410"></a><a name="image799324016410"></a><span><img class="" id="image799324016410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001445246902.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4612588116410"><a name="p4612588116410"></a><a name="p4612588116410"></a>对正文中重点信息的补充说明。</p>
+<p id="p1232588116410"><a name="p1232588116410"></a><a name="p1232588116410"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>修改记录<a name="section2467512116410"></a></strong></p>
+<p><a name="table1557726816410"></a></p>
+<table><thead align="left"><tr id="row2942532716410"><th class="cellrowborder" valign="top" width="20.72%" id="mcps1.1.4.1.1"><p id="p3778275416410"><a name="p3778275416410"></a><a name="p3778275416410"></a>文档版本</p>
+</th>
+<th class="cellrowborder" valign="top" width="26.119999999999997%" id="mcps1.1.4.1.2"><p id="p5627845516410"><a name="p5627845516410"></a><a name="p5627845516410"></a>发布日期</p>
+</th>
+<th class="cellrowborder" valign="top" width="53.16%" id="mcps1.1.4.1.3"><p id="p2382284816410"><a name="p2382284816410"></a><a name="p2382284816410"></a>修改说明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row5947359616410"><td class="cellrowborder" valign="top" width="20.72%" headers="mcps1.1.4.1.1 "><p id="p2149706016410"><a name="p2149706016410"></a><a name="p2149706016410"></a>00B01</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.119999999999997%" headers="mcps1.1.4.1.2 "><p id="p648803616410"><a name="p648803616410"></a><a name="p648803616410"></a><span id="ph4400192524217"><a name="ph4400192524217"></a><a name="ph4400192524217"></a>2026-03-20</span></p>
+</td>
+<td class="cellrowborder" valign="top" width="53.16%" headers="mcps1.1.4.1.3 "><p id="p1946537916410"><a name="p1946537916410"></a><a name="p1946537916410"></a>第1次临时版本发布。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="内核中使能UBI">内核中使能UBI<a name="ZH-CN_TOPIC_0000001494967485"></a></h2>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+本文档中以单板上的内核版本linux5.10.y为例，使用 UBIFS 文件系统，可以按以下配置。</p>
+</blockquote>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001445246894">内核配置UBI选项</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001444767062">UBI 设备驱动配置选项说明</a></strong>  </p>
+</li>
+</ul>
+<h3 id="内核配置UBI选项">内核配置UBI选项<a name="ZH-CN_TOPIC_0000001445246894"></a></h3>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001495086985">使能UBI设备驱动</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001494967481">使能UBIFS文件系统</a></strong>  </p>
+</li>
+</ul>
+<h4 id="使能UBI设备驱动">使能UBI设备驱动<a name="ZH-CN_TOPIC_0000001495086985"></a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Device Drivers  ---&gt;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&lt;*&gt; Memory Technology Device (MTD) support  ---&gt;
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    &lt;*&gt; Enable UBI - Unsorted block images  ---&gt;
+</span></code></pre></div>
+<p><img alt="" src="../figures/zh-cn_image_0000001495086989.png" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+必须先使能UBI设备驱动，才能找到UBIFS文件系统选项。</p>
+</blockquote>
+<h4 id="使能UBIFS文件系统">使能UBIFS文件系统<a name="ZH-CN_TOPIC_0000001494967481"></a></h4>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>File systems  ---&gt;
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>-*- Miscellaneous filesystems  ---&gt;
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>&lt;*&gt;   UBIFS file system support
+</span></code></pre></div>
+<p><img alt="" src="../figures/zh-cn_image_0000001444926982.png" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+所有配置按以上图中所示, 其它 UBI/UBIFS 配置选项使用系统默认值, 不要随意选择配置, 如果选择不慎, UBI 文件系统可能无法正常工作。</p>
+</blockquote>
+<h3 id="UBI-设备驱动配置选项说明">UBI 设备驱动配置选项说明<a name="ZH-CN_TOPIC_0000001444767062"></a></h3>
+<ul>
+<li>
+<p>UBI wear-leveling threshold</p>
+<p>UBI 系统记录每个擦除块发生擦除操作的次数。此选项表示所有擦除操作次数中, 最小值和最大值之间允许的最大间隔。此值默认为4096，对于寿命比较短的 MLC 器件，此值应该配置相对小一点，比如256。</p>
+</li>
+<li>
+<p>MTD devices emulation driver (gluebi)</p>
+<p>模拟MTD驱动，选择此选项，当创建一个卷时，UBI 将同时模拟一个 MTD设备。这个功能提供了一个接口，供其它文件系统使用UBI。</p>
+</li>
+</ul>
+<h2 id="UBIFS-应用样例">UBIFS 应用样例<a name="ZH-CN_TOPIC_0000001495086981"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001495246877">mount 一个空 UBIFS 文件系统</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001445086950">制作 UBIFS 根文件系统UBI镜像</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001494846873">空UBIFS文件系统升级为根文件系统</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001494846877">UBI镜像的转换格式和烧录</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001445086946">使用mkubiimg.sh脚本一键式制作UBI镜像</a></strong>  </p>
+</li>
+</ul>
+<h3 id="mount-一个空-UBIFS-文件系统">mount 一个空 UBIFS 文件系统<a name="ZH-CN_TOPIC_0000001495246877"></a></h3>
+<p>单板在uboot下配置环境变量时，需要多划分一个ubi分区作为文件系统升级分区。</p>
+<p>示例：单板当前有5个分区，分区的情况如下。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>## cat /proc/mtd
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>dev:    size   erasesize  name
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>mtd0: 01000000 00020000 &quot;boot&quot;
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>mtd1: 00100000 00020000 &quot;atf&quot;
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>mtd2: 00d00000 00020000 &quot;kernel&quot;
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>mtd3: 02000000 00020000 &quot;rootfs&quot;
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>mtd4: 04000000 00020000 &quot;ubi&quot;
+</span></code></pre></div>
+<p>通过以下几步, 就可以把mtd4分区映射成ubi卷，做为 ubi 分区使用。</p>
+<ol>
+<li>
+<p>使用以下命令格式化 ubi 分区。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a># ubiformat /dev/mtd4
+</span></code></pre></div>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+-   boards/dmeb目录下编译完成后，生成的UBI工具放在boards/dmeb/pub/bin/board_xxx/目录下，board_xxx路径的命名与编译时选择的工具链以及产品相关。<br />
+-   需将UBI工具下载到单板，通过命令“chmod  +x ‘ubi工具’”加可执行权限。<br />
+-   不推荐擦除(如:用命令 flash_eraseall )分区, 擦除分区后，可以正常 mount 到 ubifs。 但是擦除分区操作, 将使UBI系统丢失记录的每个擦除块的擦除次数。</p>
+</blockquote>
+</li>
+<li>
+<p>绑定 UBI到MTD分区</p>
+<p>绑定 UBI 到 mtd4 分区，使用以下命令。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a># ubiattach /dev/ubi_ctrl -m 4 -b n
+</span></code></pre></div>
+<p>参数”-m 4”表示使用 mtd4 分区，“-b n”表示保留n个块用于坏块处理。只有绑定了ubi 到 mtd 分区以后，才能在 /dev/ 下找到 ubi设备“ubi1”。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+因为内核启动过程中首次绑定到mtd3，已经创建设备“/dev/ubi0”，对应卷标“/dev/ubi0_0”,所以当绑定到mtd4以后，会自动创建另外一个设备“/dev/ubi1”,对应卷标“/dev/ubi1_0”,如果内核从mtd4启动，此时ubi 设备编号会从 0 开始。</p>
+</blockquote>
+<p>命令执行成功, 显示信息如下。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a># ubiattach /dev/ubi_ctrl -m 4
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>UBI: attaching mtd4 
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>UBI: scanning is finished
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>UBI: attached mtd4 (name &quot;ubi&quot;, size 64 MiB) 
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>UBI: PEB size: 131072 bytes (128 KiB), LEB size: 126976 bytes
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>UBI: min./max. I/O unit sizes: 2048/2048, sub-page size 2048
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>UBI: VID header offset: 2048 (aligned 2048), data offset: 4096
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>UBI: good PEBs: 511, bad PEBs: 0, corrupted PEBs: 0
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>UBI: user volume: 0, internal volumes: 1, max. volumes count: 128
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>UBI: max/mean erase counter:19/11, WL threshold: 4096, image sequence number: 1841457603 
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>UBI: available PEBs: 488, total reserved PEBs: 44, PEBs reserved for bad PEB handling: 40
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>UBI: background thread &quot;ubi_bgt1d&quot; started, PID 1201
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>UBI device number 1, total 511 LEBs (64884736 bytes, 61.8 MiB), available 488 LEBs (61964288 bytes, 59.0 MiB), LEB size 126976 bytes (124.0 KiB)
+</span></code></pre></div>
+<p>最后一行打印“ubi_bgt1d”表示成功创建设备ubi1，查看所有设备“ls /dev/ubi*”，将发现多一个设备“/dev/ubi1”。</p>
+</li>
+<li>
+<p>创建 UBI 卷</p>
+<p>UBI卷可以理解为UBI设备的分区。创建 ubi 卷命令如下：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a># ubimkvol /dev/ubi1 -N ubifs -s  SIZE
+</span></code></pre></div>
+<p>命令参数含义如<a href="#table638741941911">表1</a>所示。</p>
+<p><strong>表 1</strong>  参数含义 (1)</p>
+<p><a name="table638741941911"></a><br />
+<table><thead align="left"><tr id="row640971951918"><th class="cellrowborder" valign="top" width="50%" id="mcps1.2.3.1.1"><p id="p1740961951912"><a name="p1740961951912"></a><a name="p1740961951912"></a>参数</p><br />
+</th><br />
+<th class="cellrowborder" valign="top" width="50%" id="mcps1.2.3.1.2"><p id="p940911919192"><a name="p940911919192"></a><a name="p940911919192"></a>描述</p><br />
+</th><br />
+</tr><br />
+</thead><br />
+<tbody><tr id="row124096196198"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p24092195196"><a name="p24092195196"></a><a name="p24092195196"></a>/dev/ubi1</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p175265271213"><a name="p175265271213"></a><a name="p175265271213"></a>上一步骤创建的ubi 设备。</p><br />
+</td><br />
+</tr><br />
+<tr id="row14091319181916"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p184094195199"><a name="p184094195199"></a><a name="p184094195199"></a>-N ubifs</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p1274236172118"><a name="p1274236172118"></a><a name="p1274236172118"></a>表示创建的卷名为“ubifs”。</p><br />
+</td><br />
+</tr><br />
+<tr id="row184098193191"><td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.1 "><p id="p6409519131912"><a name="p6409519131912"></a><a name="p6409519131912"></a>-s SIZE</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="50%" headers="mcps1.2.3.1.2 "><p id="p440921921910"><a name="p440921921910"></a><a name="p440921921910"></a>表示创建的分区大小。</p><br />
+</td><br />
+</tr><br />
+</tbody><br />
+</table></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+-   SIZE值应小于“/dev/ubi1”设备能提供的空间大小。<br />
+-   可以使用命令“ubinfo”查看当前可使用的LEBs大小。当UBI设备提供的空间为50 MiB时，可使用的空间大小为43.1MiB。所以，应该保证所创建的卷的SIZE值小于可使用的LEBs空间大小。</p>
+</blockquote>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a># ubinfo /dev/ubi1
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Ubi1
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Volumes count:                           1
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Logical eraseblock size:                 126976 bytes, 124.0 KiB
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>Total amount of logical eraseblocks:     511 (64884736 bytes, 61.8 MiB)
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>Amount of available logical eraseblocks:  75 (9523200 bytes, 9.0 MiB)
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>Maximum count of volumes                 128
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>Count of bad physical eraseblocks:       1
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>Count of reserved physical eraseblocks:  19
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>Current maximum erase counter value:     1
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>Minimum input/output unit size:          2048 bytes
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>Character device major/minor:            249:0
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>Present volumes:                  0
+</span></code></pre></div>
+<p>从上面打印信息可知，参数Total amount of logical eraseblocks: 后对应值即为卷/dev/ubi1的总大小。</p>
+<p>故如需创建50MiB大小的ubi卷，可使用以下命令：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a># ubimkvol /dev/ubi1 -N ubifs -s 50MiB
+</span></code></pre></div>
+<p>此时再查看所有设备“ls /dev/ubi*”, 将发现多一个设备“/dev/ubi1_0”。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+针对某一个mtd分区，卷只用创建一次，创建后，卷信息将被记录在UBI设备上，下一次启动，不用再次创建卷。删除卷，用命令 “ubirmvol”. 如果使用此命令删除卷，卷上所有数据，也将被删除。</p>
+</blockquote>
+</li>
+<li>
+<p>挂载空UBIFS文件系统</p>
+<p>此时就可以将创建的卷挂载到指定的目录上去了，命令如下：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a># mount -t ubifs /dev/ubi1_0 /mnt/
+</span></code></pre></div>
+<p>参数“/dev/ubi1_0”表示mount到卷 “ubi1_0”，也可以使用参数“ubi1:ubifs”。某些版本的内核，不支持“/dev/ubi1_0”形式的参数，只能使用“ubi1:ubifs”形式的参数. “ubi1:ubifs”中的“ubifs”表示卷的名称, 在创建ubi卷时设置。</p>
+<p>Mount 成功，将显示如下信息：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a># mount -t ubifs /dev/ubi1_0 /mnt/
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>UBIFS (ubi1:0): default file-system created
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>UBIFS (ubi1:0): background thread &quot;ubifs_bgt1_0&quot; started, PID 1225
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>UBIFS (ubi1:0): UBIFS: mounted UBI device 1, volume 0, name &quot;ubifs&quot;
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>UBIFS (ubi1:0): LEB size: 126976 bytes (124 KiB), min./max. I/O unit sizes: 2048 bytes/2048 bytes
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>UBIFS (ubi1:0): FS size: 43933696 bytes (41 MiB, 346 LEBs), journal size 2158592 bytes (2 MiB, 17 LEBs)
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>UBIFS (ubi1:0): reserved for root: 2075096 bytes (2026 KiB)
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>UBIFS (ubi1:0): media format: w5/r0 (latest is w5/r0), UUID D2E4E92D-2F7D-412F-95E5-25CBECF172EB, small LPT model
+</span></code></pre></div>
+<p>查看分区信息，将显示如下内容：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a># df -h
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Filesystem               Size      Used    Available   Use% Mounted on
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>ubi0:ubifs               44.5M     20.0K     42.1M   0% /mnt
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>devtmpfs                 58.0M       0       58.0M    0% /dev
+</span></code></pre></div>
+<p>由于UBIFS文件系统自身管理开销，日志占用，root区域保留，导致显示的分区大小比创建的空间要小，显示空间大小为FS size 减去journal size和reserved for root后的值。但UBIFS文件系统保存的是文件压缩后的内容，实际存储文件能力要比所显示的可用空间要大，压缩比率与文件内容相关。例如可能剩余空间显示只有2M, 但是可以将一个4M的文件完整保存。</p>
+</li>
+</ol>
+<h3 id="制作-UBIFS-根文件系统UBI镜像">制作 UBIFS 根文件系统UBI镜像<a name="ZH-CN_TOPIC_0000001445086950"></a></h3>
+<p>制作 ubifs 文件系统镜像，需要使用mtd-utils工具，命令如下：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>$./mkfs.ubifs -F -d rootfs_uclibc -m 2KiB -o rootfs.ubiimg -e 126976 -c 256 -v
+</span></code></pre></div>
+<p>命令参数含义如<a href="#table198118551112">表1</a>所示。</p>
+<p><strong>表 1</strong>  参数含义 (2)</p>
+<p><a name="table198118551112"></a></p>
+<table><thead align="left"><tr id="row188324513117"><th class="cellrowborder" valign="top" width="20.599999999999998%" id="mcps1.2.3.1.1"><p id="p18322515110"><a name="p18322515110"></a><a name="p18322515110"></a>参数</p>
+</th>
+<th class="cellrowborder" valign="top" width="79.4%" id="mcps1.2.3.1.2"><p id="p8832205151113"><a name="p8832205151113"></a><a name="p8832205151113"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row38321256117"><td class="cellrowborder" valign="top" width="20.599999999999998%" headers="mcps1.2.3.1.1 "><p id="p18832195111111"><a name="p18832195111111"></a><a name="p18832195111111"></a>-F</p>
+</td>
+<td class="cellrowborder" valign="top" width="79.4%" headers="mcps1.2.3.1.2 "><p id="p347014951617"><a name="p347014951617"></a><a name="p347014951617"></a>使能“white-space-fixup”，如果是通过 u-boot 烧写需要使能此功能。</p>
+</td>
+</tr>
+<tr id="row18832125101115"><td class="cellrowborder" valign="top" width="20.599999999999998%" headers="mcps1.2.3.1.1 "><p id="p168324521115"><a name="p168324521115"></a><a name="p168324521115"></a>-d rootfs_uclibc</p>
+</td>
+<td class="cellrowborder" valign="top" width="79.4%" headers="mcps1.2.3.1.2 "><p id="p283312561117"><a name="p283312561117"></a><a name="p283312561117"></a>表示将要被制作为UBIFS镜像的根目录为“rootfs_uclibc”, 这个参数也可以写为 “-r rootfs_uclibc”。</p>
+</td>
+</tr>
+<tr id="row98338515111"><td class="cellrowborder" valign="top" width="20.599999999999998%" headers="mcps1.2.3.1.1 "><p id="p18339561119"><a name="p18339561119"></a><a name="p18339561119"></a>-m 2KiB</p>
+</td>
+<td class="cellrowborder" valign="top" width="79.4%" headers="mcps1.2.3.1.2 "><p id="p874219254161"><a name="p874219254161"></a><a name="p874219254161"></a>表示最小读写单元是 2KiB，这个参数也可以写为“-m 2048”。这里使用的NAND芯片页大小为2KiB。最小读写单元是指FLASH器件一次读写操作, 最小操作的字节数，对NAND器件，是页大小，如2K/4K/8K；对于NOR器件，是1个字节。</p>
+</td>
+</tr>
+<tr id="row98336512117"><td class="cellrowborder" valign="top" width="20.599999999999998%" headers="mcps1.2.3.1.1 "><p id="p1583355121115"><a name="p1583355121115"></a><a name="p1583355121115"></a>-o rootfs.ubiimg</p>
+</td>
+<td class="cellrowborder" valign="top" width="79.4%" headers="mcps1.2.3.1.2 "><p id="p9667136191619"><a name="p9667136191619"></a><a name="p9667136191619"></a>表示制作出来的镜像名称为“rootfs.ubiimg”。</p>
+</td>
+</tr>
+<tr id="row1583315141120"><td class="cellrowborder" valign="top" width="20.599999999999998%" headers="mcps1.2.3.1.1 "><p id="p19833145161119"><a name="p19833145161119"></a><a name="p19833145161119"></a>-e 126976</p>
+</td>
+<td class="cellrowborder" valign="top" width="79.4%" headers="mcps1.2.3.1.2 "><p id="p193514446163"><a name="p193514446163"></a><a name="p193514446163"></a>表示逻辑擦除块大小。</p>
+</td>
+</tr>
+<tr id="row88335516115"><td class="cellrowborder" valign="top" width="20.599999999999998%" headers="mcps1.2.3.1.1 "><p id="p148331458113"><a name="p148331458113"></a><a name="p148331458113"></a>-c 256</p>
+</td>
+<td class="cellrowborder" valign="top" width="79.4%" headers="mcps1.2.3.1.2 "><p id="p983313561117"><a name="p983313561117"></a><a name="p983313561117"></a>表示此文件系统最多使用“256”个逻辑擦除块。计算“256 * LEB”得到此文件系统的最大可使用空间。</p>
+</td>
+</tr>
+<tr id="row128331561115"><td class="cellrowborder" valign="top" width="20.599999999999998%" headers="mcps1.2.3.1.1 "><p id="p88331056112"><a name="p88331056112"></a><a name="p88331056112"></a>-v</p>
+</td>
+<td class="cellrowborder" valign="top" width="79.4%" headers="mcps1.2.3.1.2 "><p id="p148331151119"><a name="p148331151119"></a><a name="p148331151119"></a>显示制作UBIFS过程中的详细信息。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>最小读写单元和逻辑擦除块大小可以通过读MTD和UBI系统信息获得，也可以通过计算获得。读MTD信息命令以及显示内容如下：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>## mtdinfo /dev/mtd4
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>mtd4
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>Name:                           ubi
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>Type:                           nand
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>Eraseblock size:                131072 bytes, 128.0 KiB
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>Amount of eraseblocks:          512 (67108864 bytes, 64.0 MiB)
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>Minimum input/output unit size:  2048 bytes
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>Sub-page size:                  2048 bytes
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>OOB size:                       60 bytes
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>Character device major/minor:   90:6
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>Bad blocks are allowed:         true
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>Device is writable:             true
+</span></code></pre></div>
+<p>读UBI信息命令（此命令需要先绑定UBI见<a href="#li7655165315476">4</a>）以及显示内容如下：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>## ubinfo /dev/ubi1
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>ubi1
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>Volumes count:                           1
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>Logical eraseblock size:                 126976 bytes, 124.0 KiB
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>Total amount of logical eraseblocks:     511 (64884736 bytes, 61.8 MiB)（表示此芯片的逻辑擦除块大小）
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>Amount of available logical eraseblocks: 0 (0 bytes)
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>Maximum count of volumes                 128
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>Count of bad physical eraseblocks:        0
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>Count of reserved physical eraseblocks:   40
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>Current maximum erase counter value:      20
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>Minimum input/output unit size:          2048 bytes
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>Character device major/minor:            249:0
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>Present volumes:                         0
+</span></code></pre></div>
+<p>逻辑擦除块大小也可以通过计算得到，计算方法如<a href="#table470mcpsimp">表2</a>所示。</p>
+<p><strong>表 2</strong>  逻辑擦除块大小的计算方法</p>
+<p><a name="table470mcpsimp"></a></p>
+<table><thead align="left"><tr id="row475mcpsimp"><th class="cellrowborder" valign="top" width="23%" id="mcps1.2.3.1.1"><p id="p477mcpsimp"><a name="p477mcpsimp"></a><a name="p477mcpsimp"></a>FLASH 种类</p>
+</th>
+<th class="cellrowborder" valign="top" width="77%" id="mcps1.2.3.1.2"><p id="p479mcpsimp"><a name="p479mcpsimp"></a><a name="p479mcpsimp"></a>逻辑擦除块(LEB)大小</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row481mcpsimp"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.3.1.1 "><p id="p483mcpsimp"><a name="p483mcpsimp"></a><a name="p483mcpsimp"></a>NOR</p>
+</td>
+<td class="cellrowborder" valign="top" width="77%" headers="mcps1.2.3.1.2 "><p id="p485mcpsimp"><a name="p485mcpsimp"></a><a name="p485mcpsimp"></a>LEB = blocksize – 128</p>
+</td>
+</tr>
+<tr id="row486mcpsimp"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.3.1.1 "><p id="p488mcpsimp"><a name="p488mcpsimp"></a><a name="p488mcpsimp"></a>NAND 无子页</p>
+</td>
+<td class="cellrowborder" valign="top" width="77%" headers="mcps1.2.3.1.2 "><p id="p490mcpsimp"><a name="p490mcpsimp"></a><a name="p490mcpsimp"></a>LEB = blocksize – pagesize * 2</p>
+</td>
+</tr>
+<tr id="row491mcpsimp"><td class="cellrowborder" valign="top" width="23%" headers="mcps1.2.3.1.1 "><p id="p493mcpsimp"><a name="p493mcpsimp"></a><a name="p493mcpsimp"></a>NAND 有子页</p>
+</td>
+<td class="cellrowborder" valign="top" width="77%" headers="mcps1.2.3.1.2 "><p id="p495mcpsimp"><a name="p495mcpsimp"></a><a name="p495mcpsimp"></a>LEB = blocksize – pagesize * 1</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+Blocksize: flash 物理擦除块大小<br />
+Pagesize: flash 读写页大小</p>
+</blockquote>
+<p>以下为制作成功后, “mkfs.ubifs”的详细打印。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>$ ./mkfs.ubifs –F -d rootfs_uclibc -m 2KiB -o rootfs.ubiimg -e 126976 -c 256 -v
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>mkfs.ubifs
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>        root:         rootfs_uclibc/
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>        min_io_size:  2048
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>        leb_size:     126976
+</span><span id="__span-15-6"><a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>        max_leb_cnt:  256
+</span><span id="__span-15-7"><a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>        output:       rootfs.ubiimg
+</span><span id="__span-15-8"><a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>        jrn_size:     3936256
+</span><span id="__span-15-9"><a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>        reserved:     0
+</span><span id="__span-15-10"><a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>        compr:        lzo
+</span><span id="__span-15-11"><a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a>        keyhash:      r5
+</span><span id="__span-15-12"><a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a>        fanout:       8
+</span><span id="__span-15-13"><a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>        orph_lebs:    1
+</span><span id="__span-15-14"><a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a>        space_fixup:  1
+</span><span id="__span-15-15"><a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a>        selinux file:   (null)
+</span><span id="__span-15-16"><a id="__codelineno-15-16" name="__codelineno-15-16" href="#__codelineno-15-16"></a>        super lebs:   1
+</span><span id="__span-15-17"><a id="__codelineno-15-17" name="__codelineno-15-17" href="#__codelineno-15-17"></a>        master lebs:  2
+</span><span id="__span-15-18"><a id="__codelineno-15-18" name="__codelineno-15-18" href="#__codelineno-15-18"></a>        log_lebs:     4
+</span><span id="__span-15-19"><a id="__codelineno-15-19" name="__codelineno-15-19" href="#__codelineno-15-19"></a>        lpt_lebs:     2
+</span><span id="__span-15-20"><a id="__codelineno-15-20" name="__codelineno-15-20" href="#__codelineno-15-20"></a>        orph_lebs:    1
+</span><span id="__span-15-21"><a id="__codelineno-15-21" name="__codelineno-15-21" href="#__codelineno-15-21"></a>        main_lebs:    42
+</span><span id="__span-15-22"><a id="__codelineno-15-22" name="__codelineno-15-22" href="#__codelineno-15-22"></a>        gc lebs:      1
+</span><span id="__span-15-23"><a id="__codelineno-15-23" name="__codelineno-15-23" href="#__codelineno-15-23"></a>        index lebs:   1
+</span><span id="__span-15-24"><a id="__codelineno-15-24" name="__codelineno-15-24" href="#__codelineno-15-24"></a>        leb_cnt:      52
+</span></code></pre></div>
+<p>这里需要注意, 制作成功的UBIFS根文件系统镜像为 UBI镜像，可以在内核下对空UBIFS文件系统进行升级（update）操作，详见“<a href="#ZH-CN_TOPIC_0000001494846873">空UBIFS文件系统升级为根文件系统</a>”。</p>
+<p>该镜像不能直接烧录到MTD分区上使用，但是可以通过格式转换,转换成能直接烧录MTD分区上的格式。详见“<a href="#ZH-CN_TOPIC_0000001494846877">UBI镜像的转换格式和烧录</a>”。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+做 UBI 镜像需要专用工具和内核版本必须搭配使用，UBI工具版本号和单板内核版本如果不配套,制作的镜像无法在单板上mount。</p>
+</blockquote>
+<h3 id="空UBIFS文件系统升级为根文件系统">空UBIFS文件系统升级为根文件系统<a name="ZH-CN_TOPIC_0000001494846873"></a></h3>
+<p>在内核(区别u-boot)下建立好UBI卷后, 可以使用应用程序, 直接对卷进行升级。升级步骤如下：</p>
+<ol>
+<li>创建UBI卷，详见<a href="#li1865515535475">3</a>。</li>
+<li>制作 UBIFS 根文件系统UBI镜像，详见 “<a href="#ZH-CN_TOPIC_0000001445086950">制作 UBIFS 根文件系统UBI镜像</a>”。</li>
+<li>
+<p>tftp下载根文件系统UBI镜像到内核</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a># tftp -g -r rootfs.ubiimg 10.xx.xxx.xxx
+</span></code></pre></div>
+</li>
+<li>
+<p>在内核下升级 UBIFS 文件系统，使用以下命令：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a># ubiupdatevol /dev/ubi1_0  rootfs.ubiimg
+</span></code></pre></div>
+<p>参数“/dev/ubi1_0”表示需要升级的卷，这个卷需要预先创建, 升级前, 卷上的内容可以不用擦除。</p>
+<p>清除卷内容，使用命令“ubiupdatevol /dev/ubi1_0 -t”。</p>
+<p>在执行这一步之前，如果执行了2.1的<a href="#li7655165315476">4</a>，需要先umount /mnt，将创建的卷释放出来，才能执行该步骤。</p>
+</li>
+<li>
+<p>设置u-boot启动参数</p>
+<p>UBIFS 下 u-boot的启动参数bootargs配置形式如下（仅为示例，具体按照实际项目来修改配置）：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>setenv bootargs &#39;mem=128M console=ttyAMA0,115200 clk_ignore_unused root=ubi0:ubifs rootfstype=ubifs rw ubi.mtd=4 mtdparts=nand:512K(boot),512K(env),4M(kernel),32M(rootfs),64M(ubi)&#39;; sa
+</span></code></pre></div>
+<p>命令参数含义如<a href="#table131471542620">表1</a>所示。</p>
+<p><strong>表 1</strong>  参数含义 (3)</p>
+<p><a name="table131471542620"></a><br />
+<table><thead align="left"><tr id="row1416014220212"><th class="cellrowborder" valign="top" width="35.17%" id="mcps1.2.3.1.1"><p id="p181606428213"><a name="p181606428213"></a><a name="p181606428213"></a>参数</p><br />
+</th><br />
+<th class="cellrowborder" valign="top" width="64.83%" id="mcps1.2.3.1.2"><p id="p2016016421428"><a name="p2016016421428"></a><a name="p2016016421428"></a>描述</p><br />
+</th><br />
+</tr><br />
+</thead><br />
+<tbody><tr id="row14160104219217"><td class="cellrowborder" valign="top" width="35.17%" headers="mcps1.2.3.1.1 "><p id="p716074217211"><a name="p716074217211"></a><a name="p716074217211"></a>ubi.mtd=4</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="64.83%" headers="mcps1.2.3.1.2 "><p id="p131391110384"><a name="p131391110384"></a><a name="p131391110384"></a>表示UBI绑定到“/dev/mtd4”分区，通过内核打印信息可确认加载的根文件系统是否为mtd4分区的ubifs。</p><br />
+</td><br />
+</tr><br />
+<tr id="row1216134214215"><td class="cellrowborder" valign="top" width="35.17%" headers="mcps1.2.3.1.1 "><p id="p101615422025"><a name="p101615422025"></a><a name="p101615422025"></a>root=ubi0:ubifs</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="64.83%" headers="mcps1.2.3.1.2 "><p id="p17260202712818"><a name="p17260202712818"></a><a name="p17260202712818"></a>“ubi0”表示使用UBI绑定后的UBI分区, 其中“ubifs”为创建UBI卷时定义的卷名。某些内核版本不识别“root=/dev/ ubi0_0”形式的参数。</p><br />
+</td><br />
+</tr><br />
+<tr id="row81615426216"><td class="cellrowborder" valign="top" width="35.17%" headers="mcps1.2.3.1.1 "><p id="p1016164219210"><a name="p1016164219210"></a><a name="p1016164219210"></a>rootfstype=ubifs</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="64.83%" headers="mcps1.2.3.1.2 "><p id="p175398367818"><a name="p175398367818"></a><a name="p175398367818"></a>表示使用 ubifs文件。</p><br />
+</td><br />
+</tr><br />
+</tbody><br />
+</table></p>
+</li>
+</ol>
+<h3 id="UBI镜像的转换格式和烧录">UBI镜像的转换格式和烧录<a name="ZH-CN_TOPIC_0000001494846877"></a></h3>
+<ol>
+<li>制作 UBIFS 根文件系统UBI镜像，详见“<a href="#ZH-CN_TOPIC_0000001445086950">制作 UBIFS 根文件系统UBI镜像</a>” 。</li>
+<li>
+<p>制作 UBI 镜像转换配置文件</p>
+<p>UBI镜像转换格式时, 需要创建一个配置文件ubi.cfg作为第（3）步的输入。内容如下所示：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>[ubifs-volumn]
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>mode=ubi
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>image=./rootfs_xxxx_2k_128k_32M.ubiimg
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>vol_id=0
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>vol_type=dynamic
+</span><span id="__span-19-6"><a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>vol_alignment=1
+</span><span id="__span-19-7"><a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>vol_name=ubifs
+</span><span id="__span-19-8"><a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>vol_flags=autoresize
+</span></code></pre></div>
+<p>命令参数含义如<a href="#table20462446191212">表1</a>所示。</p>
+<p><strong>表 1</strong>  参数含义 (4)</p>
+<p><a name="table20462446191212"></a><br />
+<table><thead align="left"><tr id="row0482046111210"><th class="cellrowborder" valign="top" width="25.44%" id="mcps1.2.3.1.1"><p id="p4462124215135"><a name="p4462124215135"></a><a name="p4462124215135"></a>参数</p><br />
+</th><br />
+<th class="cellrowborder" valign="top" width="74.56%" id="mcps1.2.3.1.2"><p id="p114839462127"><a name="p114839462127"></a><a name="p114839462127"></a>描述</p><br />
+</th><br />
+</tr><br />
+</thead><br />
+<tbody><tr id="row648374681219"><td class="cellrowborder" valign="top" width="25.44%" headers="mcps1.2.3.1.1 "><p id="p1648364671214"><a name="p1648364671214"></a><a name="p1648364671214"></a>mode=ubi</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="74.56%" headers="mcps1.2.3.1.2 "><p id="p15483746201218"><a name="p15483746201218"></a><a name="p15483746201218"></a>是强制参数, 当前不能输入别的值, 保留为以后扩展功能；</p><br />
+</td><br />
+</tr><br />
+<tr id="row848316464124"><td class="cellrowborder" valign="top" width="25.44%" headers="mcps1.2.3.1.1 "><p id="p4483746131212"><a name="p4483746131212"></a><a name="p4483746131212"></a>image=./rootfs*.ubiimg</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="74.56%" headers="mcps1.2.3.1.2 "><p id="p616771141414"><a name="p616771141414"></a><a name="p616771141414"></a>表示卷对应的 UBIFS 文件系统镜像文件名称，此文件即“<a href="#ZH-CN_TOPIC_0000001445086950">制作 UBIFS 根文件系统UBI镜像</a>”。</p><br />
+</td><br />
+</tr><br />
+<tr id="row14839466122"><td class="cellrowborder" valign="top" width="25.44%" headers="mcps1.2.3.1.1 "><p id="p19483154691212"><a name="p19483154691212"></a><a name="p19483154691212"></a>vol_id=0</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="74.56%" headers="mcps1.2.3.1.2 "><p id="p1572397151413"><a name="p1572397151413"></a><a name="p1572397151413"></a>表示卷的ID号, UBI镜像可能包含多个卷, 这个用来区别不同的卷。</p><br />
+</td><br />
+</tr><br />
+<tr id="row24831346121215"><td class="cellrowborder" valign="top" width="25.44%" headers="mcps1.2.3.1.1 "><p id="p164834464125"><a name="p164834464125"></a><a name="p164834464125"></a>vol_type=dynamic</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="74.56%" headers="mcps1.2.3.1.2 "><p id="p369114138148"><a name="p369114138148"></a><a name="p369114138148"></a>表示当前卷类型是可读写的。如果此卷为只读，对应的参数应该为“vol_type=static”；</p><br />
+</td><br />
+</tr><br />
+<tr id="row10483446101216"><td class="cellrowborder" valign="top" width="25.44%" headers="mcps1.2.3.1.1 "><p id="p1748316466127"><a name="p1748316466127"></a><a name="p1748316466127"></a>vol_name=ubifs</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="74.56%" headers="mcps1.2.3.1.2 "><p id="p105549184147"><a name="p105549184147"></a><a name="p105549184147"></a>表示卷的名称, UBIFS 做根文件系统时, 将用到卷名称。</p><br />
+</td><br />
+</tr><br />
+<tr id="row8483154613124"><td class="cellrowborder" valign="top" width="25.44%" headers="mcps1.2.3.1.1 "><p id="p164831646171212"><a name="p164831646171212"></a><a name="p164831646171212"></a>vol_flags=autoresize</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="74.56%" headers="mcps1.2.3.1.2 "><p id="p69124171418"><a name="p69124171418"></a><a name="p69124171418"></a>表示卷大小是可以动态扩展。</p><br />
+</td><br />
+</tr><br />
+</tbody><br />
+</table></p>
+</li>
+<li>
+<p>转换UBI镜像格式， 使用以下命令：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>$ ./ubinize -o rootfs.ubifs -m 2KiB -p 128KiB ubi.cfg -v
+</span></code></pre></div>
+<p>命令参数含义如<a href="#table19221338172110">表2</a>所示。</p>
+<p><strong>表 2</strong>  参数含义 (5)</p>
+<p><a name="table19221338172110"></a><br />
+<table><thead align="left"><tr id="row9242153810215"><th class="cellrowborder" valign="top" width="17.77%" id="mcps1.2.3.1.1"><p id="p17636175232113"><a name="p17636175232113"></a><a name="p17636175232113"></a>参数</p><br />
+</th><br />
+<th class="cellrowborder" valign="top" width="82.23%" id="mcps1.2.3.1.2"><p id="p1163625215212"><a name="p1163625215212"></a><a name="p1163625215212"></a>描述</p><br />
+</th><br />
+</tr><br />
+</thead><br />
+<tbody><tr id="row17242183822115"><td class="cellrowborder" valign="top" width="17.77%" headers="mcps1.2.3.1.1 "><p id="p42426384217"><a name="p42426384217"></a><a name="p42426384217"></a>-o rootfs.ubifs</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="82.23%" headers="mcps1.2.3.1.2 "><p id="p162421938122116"><a name="p162421938122116"></a><a name="p162421938122116"></a>输出的UBI镜像转换后的名称为“rootfs.ubifs”，输入的UBI镜像文件名由ubi.cfg配置文件输入。</p><br />
+</td><br />
+</tr><br />
+<tr id="row1024314384211"><td class="cellrowborder" valign="top" width="17.77%" headers="mcps1.2.3.1.1 "><p id="p32431738112114"><a name="p32431738112114"></a><a name="p32431738112114"></a>-m 2KiB</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="82.23%" headers="mcps1.2.3.1.2 "><p id="p8243143872115"><a name="p8243143872115"></a><a name="p8243143872115"></a>最小读写单元是“2KiB” 。</p><br />
+</td><br />
+</tr><br />
+<tr id="row192431338192110"><td class="cellrowborder" valign="top" width="17.77%" headers="mcps1.2.3.1.1 "><p id="p162438385214"><a name="p162438385214"></a><a name="p162438385214"></a>-p 128KiB</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="82.23%" headers="mcps1.2.3.1.2 "><p id="p724315382218"><a name="p724315382218"></a><a name="p724315382218"></a>flash的擦除块大小。注意这是物理擦除大小, 不是逻辑擦除块大小。</p><br />
+</td><br />
+</tr><br />
+<tr id="row1324315383212"><td class="cellrowborder" valign="top" width="17.77%" headers="mcps1.2.3.1.1 "><p id="p10243183816217"><a name="p10243183816217"></a><a name="p10243183816217"></a>ubi.cfg</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="82.23%" headers="mcps1.2.3.1.2 "><p id="p024320380215"><a name="p024320380215"></a><a name="p024320380215"></a>是一个配置文件, 第（2）步已经详细讲解过此文件。</p><br />
+</td><br />
+</tr><br />
+<tr id="row1624343892119"><td class="cellrowborder" valign="top" width="17.77%" headers="mcps1.2.3.1.1 "><p id="p15243238172116"><a name="p15243238172116"></a><a name="p15243238172116"></a>-v</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="82.23%" headers="mcps1.2.3.1.2 "><p id="p124393812114"><a name="p124393812114"></a><a name="p124393812114"></a>显示制件过程的详细信息。</p><br />
+</td><br />
+</tr><br />
+</tbody><br />
+</table></p>
+<p>以下为制作成功后的详细打印。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>$ ./ubinize -o rootfs.ubifs -m 2KiB -p 128KiB ubi.cfg -v                    
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>ubinize: LEB size:                  126976
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>ubinize: PEB size:                  131072
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>ubinize: min. I/O size:             2048
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>ubinize: sub-page size:             2048
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>ubinize: VID offset:                2048
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>ubinize: data offset:               4096
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>ubinize: UBI image sequence number: 2067745235
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>ubinize: loaded the ini-file &quot;ubi.cfg&quot;
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>ubinize: count of sections: 1
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>ubinize: parsing section &quot;ubifs-volumn&quot;
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>ubinize: mode=ubi, keep parsing
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>ubinize: volume type: dynamic
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>ubinize: volume ID: 0
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>ubinize: volume size was not specified in section &quot;ubifs-volumn&quot;, assume minimum to fit image &quot;./rootfs_xxxx_2k_128k_32M.ubiimg&quot;6983680 bytes (6.7 MiB)
+</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>ubinize: volume name: ubifs
+</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>ubinize: volume alignment: 1
+</span><span id="__span-21-18"><a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a>ubinize: autoresize flags found
+</span><span id="__span-21-19"><a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>ubinize: adding volume 0
+</span><span id="__span-21-20"><a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>ubinize: writing volume 0
+</span><span id="__span-21-21"><a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a>ubinize: image file: ./rootfs_xxxx_2k_128k_32M.ubiimg
+</span><span id="__span-21-22"><a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a>ubinize: writing layout volume
+</span><span id="__span-21-23"><a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a>ubinize: done
+</span></code></pre></div>
+</li>
+<li>
+<p>U-BOOT 下 ubi 镜像转换文件的烧写</p>
+<p>U-BOOT 下，烧写UBI镜像转换文件和烧写内核的方法一样。 命令如下所示：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a># nand erase [offset] [len] 
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a># mw.b [ddr_addr] 0xff [len]
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a># tftp [ddr_addr] rootfs.ubifs
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a># nand write [ddr_addr] [flash_start_addr] [ubi_len]
+</span></code></pre></div>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+-   offset即进行flash操作的开始地址，例nand erase 0x800000 0x720000，即flash从8MB开始擦除，擦除7296KB长度。<br />
+-   len是UBIFS根文件系统分区大小长度。<br />
+-   ddr_addr即内存地址，要选用可使用的ddr地址进行操作，否则可能会造成系统挂死。具体项目ddr地址请参考《Hi35xxVxxx U-boot 移植应用开发指南》中烧写方法。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="使用mkubiimg.sh脚本一键式制作UBI镜像">使用mkubiimg.sh脚本一键式制作UBI镜像<a name="ZH-CN_TOPIC_0000001445086946"></a></h3>
+<p>针对<a href="#ZH-CN_TOPIC_0000001495246877">mount 一个空 UBIFS 文件系统</a>至<a href="#ZH-CN_TOPIC_0000001494846877">UBI镜像的转换格式和烧录</a>繁琐的UBI镜像和UBIFS根文件系统镜像制作步骤，在boards/dmeb/tools/pc/ubi_sh/目录下提供了mkubiimg.sh脚本，专门用于制作无子页Nand Flash使用的UBI镜像和UBIFS根文件系统镜像。</p>
+<p>使用以下命令：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>$./mkubiimg.sh  Chip Pagesize  Blocksize  Dir  Size  Tool_Path  Res
+</span></code></pre></div>
+<p>参数说明：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Chip.          产品名称：如xxxx
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>Pagesize       NAND page size. 2k/4k/8k.
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>Blocksize      NAND block size. 128k/256k/1M
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>Dir            将要被制作为UBIFS镜像的根目录
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>Size           UBIFS根文件系统分区的大小.
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>Tool_Path      制作UBI镜像所需mkfs.ubifs和ubinize工具的存放目录，一般放于osdrv/pub/bin/pc/目录
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>Res            是否保留UBI镜像和ubicfg配置文件 (1:Yes 0:No(默认))
+</span></code></pre></div>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+举个例子，执行完命令：./mkubiimg.sh xxxx 2k 128k osdrv/pub/rootfs 50M osdrv/pub/bin/pc 1<br />
+之后会生成三个文件：<br />
+-   rootfs_xxxx_2k_128k_50M.ubiimg：该镜像不能直接烧录到MTD分区，但是可以使用ubiupdate命令在内核下对空UBIFS文件系统进行升级操作，详见“<a href="#ZH-CN_TOPIC_0000001494846873">空UBIFS文件系统升级为根文件系统</a>  ”。<br />
+-   rootfs_xxxx_2k_128k_50M.ubicfg：UBI镜像转换格式时, 需要一个配置文件。这个配置文件主要指明根文件系统的卷名，卷类型和扩展属性等内容。<br />
+-   rootfs_xxxx_2k_128k_50M.ubifs：该镜像可以直接烧录到Nand Flash，是.ubiimg转换格式的最终镜像。</p>
+</blockquote>
+<h2 id="附录">附录<a name="ZH-CN_TOPIC_0000001445246898"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001444926978">UBI 和 MTD 相关的接口和命令</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001444767066">UBI常见问题</a></strong>  </p>
+</li>
+</ul>
+<h3 id="UBI-和-MTD-相关的接口和命令">UBI 和 MTD 相关的接口和命令<a name="ZH-CN_TOPIC_0000001444926978"></a></h3>
+<p>UBI 和 MTD 相关的接口和命令含义如<a href="#table2287511113814">表1</a>所示。</p>
+<p><strong>表 1</strong>  命令含义</p>
+<p><a name="table2287511113814"></a></p>
+<table><thead align="left"><tr id="row10301111183817"><th class="cellrowborder" valign="top" width="41.69%" id="mcps1.2.3.1.1"><p id="p3301171183816"><a name="p3301171183816"></a><a name="p3301171183816"></a><strong id="b89611284401"><a name="b89611284401"></a><a name="b89611284401"></a>命令</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="58.309999999999995%" id="mcps1.2.3.1.2"><p id="p16301181118388"><a name="p16301181118388"></a><a name="p16301181118388"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1930111133813"><td class="cellrowborder" valign="top" width="41.69%" headers="mcps1.2.3.1.1 "><p id="p630111117389"><a name="p630111117389"></a><a name="p630111117389"></a>cat /proc/mtd</p>
+</td>
+<td class="cellrowborder" valign="top" width="58.309999999999995%" headers="mcps1.2.3.1.2 "><p id="p17219152514393"><a name="p17219152514393"></a><a name="p17219152514393"></a>可以看到当前系统的各个mtd情况。</p>
+</td>
+</tr>
+<tr id="row73011511173818"><td class="cellrowborder" valign="top" width="41.69%" headers="mcps1.2.3.1.1 "><p id="p1430111133817"><a name="p1430111133817"></a><a name="p1430111133817"></a>mtdinfo /dev/mtd3</p>
+</td>
+<td class="cellrowborder" valign="top" width="58.309999999999995%" headers="mcps1.2.3.1.2 "><p id="p3570183115394"><a name="p3570183115394"></a><a name="p3570183115394"></a>查看MTD分区信息。</p>
+</td>
+</tr>
+<tr id="row93025114384"><td class="cellrowborder" valign="top" width="41.69%" headers="mcps1.2.3.1.1 "><p id="p1830211183811"><a name="p1830211183811"></a><a name="p1830211183811"></a>ubinfo -a</p>
+</td>
+<td class="cellrowborder" valign="top" width="58.309999999999995%" headers="mcps1.2.3.1.2 "><p id="p16857335143913"><a name="p16857335143913"></a><a name="p16857335143913"></a>显示当前所有 UBI 分区信息</p>
+</td>
+</tr>
+<tr id="row0302121114387"><td class="cellrowborder" valign="top" width="41.69%" headers="mcps1.2.3.1.1 "><p id="p730241183820"><a name="p730241183820"></a><a name="p730241183820"></a>ls /dev/ubi*</p>
+</td>
+<td class="cellrowborder" valign="top" width="58.309999999999995%" headers="mcps1.2.3.1.2 "><p id="p130211114385"><a name="p130211114385"></a><a name="p130211114385"></a>查看UBI设备节点和UBI卷</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="UBI常见问题">UBI常见问题<a name="ZH-CN_TOPIC_0000001444767066"></a></h3>
+<ul>
+<li>
+<p>为什么第一次能mount上ubifs，重启以后会挂载失败?</p>
+<p>在内核版本在3.0以上，需要在制作UBIFS根文件系统UBI镜像的时候，增加“-F”参数，这个参数会设置修正空白区域的标志，在第一次mount的时候对空白区域进行修正，以便后续能正常使用。</p>
+</li>
+<li>
+<p>为什么对UBI分区进行裸写操作后，下次重启后直接执行attach命令会出现ECC报错？</p>
+<p>UBIFS对分区数据格式有严格要求，若对分区进行了裸写操作会破坏数据的格式。所以下次如果想要执行attach命令，必须先执行ubiformat（或flash_erase）命令，格式化分区，裸写后进行UBI操作必须先擦除。</p>
+</li>
+<li>
+<p>为什么当MTD分区较小时 ubiattach 工具不使用 –b 选项会失败，如果使用 –b 选项怎么确定 –b 选项的值？</p>
+<p>基于flash 构建 UBI 或 UBIFS需要保留一定的块用于坏块处理。内核默认的保留总块数的 1.9% 个块用于坏块处理（CONFIG_MTD_UBI_BEB_LIMIT 选项设置）。当绑定 UBI到 MTD 分区时内核按照chipsize的大小保留块导致该MTD分区空间不足而失败，因此当分区较小时我们需要使用 –b 选项并按照mtdsize的大小指定保留的用于坏块处理的块的数量，具体操作可参考以下公式： n=(mtdsize/eraseblock)* 1.9%</p>
+</li>
+<li>
+<p>如何适当增加根文件系统容量？</p>
+<p>由于内核加载ubifs根文件系统，ubiattach参数由CONFIG_MTD_UBI_BEB_LIMIT参数配置，默认比例为每1024个块保留20个,默认总数为flash chip总块数，如果需要适当提升根文件系统容量，可以按MTD实际块数重新配置参数, 具体操作可参考以下公式：CONFIG_MTD_UBI_BEB_LIMIT = (mtdsize/eraseblock)* 1.9%</p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+
+  <div class="footer-box">
+    <div class="footer-list">
+      
+      
+      <div class="footer-list-child">
+        <a href="https://www.hisilicon.com/cn" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/home" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开发者网站</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://gitcode.com/HiSpark" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开源社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developer.huawei.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">华为开发者官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hikunpeng.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">鲲鹏社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hiascend.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">昇腾社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/aboutus" target="_blank" class="footer-nav-first" rel="noopener noreferrer">关于我们</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/login" target="_blank" class="footer-nav-first" rel="noopener noreferrer">投诉举报</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      
+    </div>
+    <div class="footer-fix">
+      <div class="footer-fix-content">
+        <div>
+          <span class="footer-copyright">&nbsp;&copy;2024 华为技术有限公司</span>
+          <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer">粤A2-20044005号</a>
+          <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702004153"
+            target="_blank" rel="noopener noreferrer">粤公网安备44030702004153号</a>
+        </div>
+        <div class="footer-name-list">
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/legalNotices" target="_blank" class="footer-name" rel="noopener noreferrer">法律声明</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/cookie-policy" target="_blank" class="footer-name" rel="noopener noreferrer">关于Cookie</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/privacyPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">隐私政策</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/userPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">用户协议</a>
+          
+          
+          
+          <a href="javascript:void(0);" onclick="openDisclaimerDialog()" class="footer-name">免责声明</a>
+          
+          
+          
+        </div>
+      </div>
+
+
+      <!-- 免责声明弹窗 -->
+      <div id="disclaimerDialog" class="disclaimer-overlay" style="display: none;">
+        <div class="disclaimer-dialog">
+          <div class="disclaimer-dialog__header">
+            <span class="disclaimer-dialog__title">免责声明</span>
+            <button class="disclaimer-dialog__close" onclick="closeDisclaimerDialog()">×</button>
+          </div>
+          <div class="disclaimer-dialog__body">
+            <p class="disclaimer-dialog__text-center"><strong>海思开发者网站免责声明</strong></p>
+            <p>尊敬的用户，您好：</p>
+            <p>&nbsp; &nbsp;
+              请确保您通过本平台向海思提供或反馈的任何信息或意见不侵犯第三方知识产权和/或合法权益。如您提供或反馈的上述任何信息或意见侵犯第三方知识产权和/或合法权益，和/或给第三方造成损害的，您将承担全部法律及赔偿责任。
+            </p>
+          </div>
+          <div class="disclaimer-dialog__footer">
+            <button class="disclaimer-dialog__btn" onclick="closeDisclaimerDialog()">关闭</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function openDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'flex';
+        }
+        function closeDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'none';
+        }
+        // 点击弹窗背景关闭
+        document.getElementById('disclaimerDialog').addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeDisclaimerDialog();
+          }
+        });
+      </script>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../static/js/custom.js"></script>
+      
+        <script src="../../../../../static/js/version-selector.js"></script>
+      
+        <script src="../../../../../static/js/code-highlight.js"></script>
+      
+        <script src="../../../../../static/js/wavedrom-skin.js"></script>
+      
+        <script src="../../../../../static/js/wavedrom.min.js"></script>
+      
+        <script src="../../../../../static/js/wavedrom-init.js"></script>
+      
+        <script src="../../../../../static/js/no-flash.js"></script>
+      
+    
+  </body>
+</html>

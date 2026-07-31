@@ -1,0 +1,1621 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hi3516CV610 超高清智慧视觉 SoC 文档中心">
+      
+      
+        <meta name="author" content="HiSpark">
+      
+      
+        <link rel="canonical" href="https://hivsdev.github.io/Hi3516CV610_doc/zh-CN/03API%E5%8F%82%E8%80%83/BSP/%E8%A3%B8%E7%83%A7%E5%8F%8A%E9%9D%9E%E8%A3%B8%E7%83%A7%E5%8D%87%E7%BA%A7%20%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/%E8%A3%B8%E7%83%A7%E5%8F%8A%E9%9D%9E%E8%A3%B8%E7%83%A7%E5%8D%87%E7%BA%A7%20%E4%BD%BF%E7%94%A8%E6%89%8B%E5%86%8C/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../static/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>前言 - Hi3516CV610 开发者中心</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+    
+    
+      <link rel="stylesheet" href="../../../../../static/css/extra.css">
+    
+      <link rel="stylesheet" href="../../../../../static/css/version-selector.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+      <meta name="gitcode-issues-url" content="https://gitcode.com/HiSpark/fbb_ws63/issues">
+      
+      <link rel="dns-prefetch" href="https://docs.hisilicon.com">
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://docs.hisilicon.com" crossorigin>
+      <link rel="preload" href="../../../../../assets/stylesheets/main.484c7ddc.min.css" as="style">
+      <link rel="preload" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css" as="style">
+      <link rel="preload" href="../../../../../static/css/extra.css" as="style">
+      <link rel="preload" href="../../../../../assets/javascripts/bundle.79ae519e.min.js" as="script">
+      <link rel="preload" href="../../../../../static/js/custom.js" as="script">
+
+      
+      
+        
+        
+      
+      <style>:root{--md-text-font:"Helvetica Neue, PingFang SC, Microsoft YaHei";--md-code-font:"Consolas, Roboto Mono"}</style>
+      <script>
+        // 防止宽窄屏刷新闪烁 — 在 body 解析前就读取 localStorage 标记 <html>
+        // 配合 CSS: html.prefer-narrow .md-grid 在首帧即应用 76%
+        if (localStorage.getItem('wideScreen') === 'false') {
+          document.documentElement.classList.add('prefer-narrow');
+        }
+      </script>
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#前言" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://developers.hisilicon.com" title="Hi3516CV610 开发者中心" class="md-header__button md-logo" aria-label="Hi3516CV610 开发者中心" data-md-component="logo" target="_blank" rel="noopener noreferrer">
+      <img 
+  src="../../../../../static/images/light-icon.png" 
+  class="md-logo__img md-logo__img--light"
+  alt="Hi3516CV610 开发者中心" 
+/>
+<img 
+  src="../../../../../static/images/dark-icon.png" 
+  class="md-logo__img md-logo__img--dark"
+  alt="Hi3516CV610 开发者中心" 
+/>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+      </div>
+    </div>
+    
+      
+      
+        <label class="md-header__button md-icon md-header__button--search" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+      
+    
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="切换到暗色主题"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色主题" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="切换到亮色主题"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色主题" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <div class="md-header__source">
+        <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="Go to repository" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+      </div>
+    
+  </nav>
+  
+  
+    
+    
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        <!-- 
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+         -->
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+</header>
+
+
+<script>
+  var USER_DEFINED_OPTIONS = {
+    REPO_PATH: "Hi3516CV610_doc",
+    ROOT_URL: "https://docs.hisilicon.com/projects"
+  };
+  var DOCUMENTATION_OPTIONS = {
+    VERSION: "master",
+    // 构建时声明主题的语言
+    LANGUAGE: "en"
+  };
+</script>
+<script src="https://docs.hisilicon.com/projects/version/hispark_version.js"></script>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="sidebar-selectors">
+                  <div class="repo-select custom-select">
+                    <span class="select-label">芯片</span>
+                    <div class="repo-selector" title="">
+                      <span class="repo-readOnly"></span>
+                      <select id="repo-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="repo-options" style="display:none"></ul>
+                  </div>
+                  <div class="version-select custom-select">
+                    <span class="select-label">版本</span>
+                    <div class="version-selector" title="">
+                      <span class="version-readOnly"></span>
+                      <select id="version-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="version-options" style="display:none"></ul>
+                  </div>
+                  
+                    
+                    
+                      <div class="sidebar-search">
+                        <label class="sidebar-search__button" for="__search">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+                          <span>全文检索</span>
+                        </label>
+                      </div>
+                    
+                  
+                </div>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+    <div class="md-nav__source">
+      <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="Go to repository" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../00%E6%A6%82%E8%A7%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整体架构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考案例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../05%E7%A1%AC%E4%BB%B6%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具中心
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../07FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../08%E5%85%B6%E4%BB%96/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#前言_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#裸烧使用说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        裸烧使用说明
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="裸烧使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#操作准备" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        操作准备
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#裸烧流程" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        裸烧流程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#操作过程" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        操作过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#操作示例" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        操作示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#操作中需要注意的问题" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        操作中需要注意的问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#设置eMMC扩展CSD寄存器" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        设置eMMC扩展CSD寄存器
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#非裸烧升级使用说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        非裸烧升级使用说明
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="非裸烧升级使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#操作准备_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        操作准备
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#升级流程" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        升级流程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#操作过程_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        操作过程
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#操作示例_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        操作示例
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#操作中需要注意的问题_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        操作中需要注意的问题
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="前言">前言<a name="ZH-CN_TOPIC_0000001877656473"></a></h1>
+<h2 id="前言_1">前言<a name="ZH-CN_TOPIC_0000001877656473"></a></h2>
+<p><strong>概述<a name="section296mcpsimp"></a></strong></p>
+<p>本文档用于指导调试裸烧及非裸烧升级。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+本文仅支持 musl 工具链arm-openeuler-linux-musleabi。本文以Hi3516CV610为例，未有特殊说明，Hi3516CV608与Hi3516CV610内容一致。</p>
+</blockquote>
+<p><strong>产品版本<a name="section300mcpsimp"></a></strong></p>
+<p>与本文档相对应的产品版本如下。</p>
+<p><a name="table303mcpsimp"></a></p>
+<table><thead align="left"><tr id="row308mcpsimp"><th class="cellrowborder" valign="top" width="45%" id="mcps1.1.3.1.1"><p id="p310mcpsimp"><a name="p310mcpsimp"></a><a name="p310mcpsimp"></a>产品名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="55.00000000000001%" id="mcps1.1.3.1.2"><p id="p312mcpsimp"><a name="p312mcpsimp"></a><a name="p312mcpsimp"></a>产品版本</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row17192643104220"><td class="cellrowborder" valign="top" width="45%" headers="mcps1.1.3.1.1 "><p id="p63331555172315"><a name="p63331555172315"></a><a name="p63331555172315"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="55.00000000000001%" headers="mcps1.1.3.1.2 "><p id="p141352132417"><a name="p141352132417"></a><a name="p141352132417"></a>V608</p>
+</td>
+</tr>
+<tr id="row175071103918"><td class="cellrowborder" valign="top" width="45%" headers="mcps1.1.3.1.1 "><p id="p185071808919"><a name="p185071808919"></a><a name="p185071808919"></a>HI3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="55.00000000000001%" headers="mcps1.1.3.1.2 "><p id="p13507205914"><a name="p13507205914"></a><a name="p13507205914"></a>V610</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>读者对象<a name="section673315410274"></a></strong></p>
+<p>本文档（本指南）主要适用于以下工程师：</p>
+<ul>
+<li>技术支持工程师</li>
+<li>软件开发工程师</li>
+</ul>
+<p><strong>符号约定<a name="section133020216410"></a></strong></p>
+<p>在本文中可能出现下列标志，它们所代表的含义如下。</p>
+<p><a name="table2622507016410"></a></p>
+<table><thead align="left"><tr id="row1530720816410"><th class="cellrowborder" valign="top" width="20.580000000000002%" id="mcps1.1.3.1.1"><p id="p6450074116410"><a name="p6450074116410"></a><a name="p6450074116410"></a><strong id="b2136615816410"><a name="b2136615816410"></a><a name="b2136615816410"></a>符号</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="79.42%" id="mcps1.1.3.1.2"><p id="p5435366816410"><a name="p5435366816410"></a><a name="p5435366816410"></a><strong id="b5941558116410"><a name="b5941558116410"></a><a name="b5941558116410"></a>说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1372280416410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p3734547016410"><a name="p3734547016410"></a><a name="p3734547016410"></a><a name="image2670064316410"></a><a name="image2670064316410"></a><span><img class="" id="image2670064316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001830896906.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p1757432116410"><a name="p1757432116410"></a><a name="p1757432116410"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row466863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1432579516410"><a name="p1432579516410"></a><a name="p1432579516410"></a><a name="image4895582316410"></a><a name="image4895582316410"></a><span><img class="" id="image4895582316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001877576289.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p959197916410"><a name="p959197916410"></a><a name="p959197916410"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row123863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1232579516410"><a name="p1232579516410"></a><a name="p1232579516410"></a><a name="image1235582316410"></a><a name="image1235582316410"></a><span><img class="" id="image1235582316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001877656489.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p123197916410"><a name="p123197916410"></a><a name="p123197916410"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row5786682116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p2204984716410"><a name="p2204984716410"></a><a name="p2204984716410"></a><a name="image4504446716410"></a><a name="image4504446716410"></a><span><img class="" id="image4504446716410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001877576297.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4388861916410"><a name="p4388861916410"></a><a name="p4388861916410"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
+<p id="p1238861916410"><a name="p1238861916410"></a><a name="p1238861916410"></a>“须知”不涉及人身伤害。</p>
+</td>
+</tr>
+<tr id="row2856923116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p5555360116410"><a name="p5555360116410"></a><a name="p5555360116410"></a><a name="image799324016410"></a><a name="image799324016410"></a><span><img class="" id="image799324016410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000001830737090.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4612588116410"><a name="p4612588116410"></a><a name="p4612588116410"></a>对正文中重点信息的补充说明。</p>
+<p id="p1232588116410"><a name="p1232588116410"></a><a name="p1232588116410"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>修改记录<a name="section2467512116410"></a></strong></p>
+<p><a name="table1557726816410"></a></p>
+<table><thead align="left"><tr id="row2942532716410"><th class="cellrowborder" valign="top" width="20.72%" id="mcps1.1.4.1.1"><p id="p3778275416410"><a name="p3778275416410"></a><a name="p3778275416410"></a><strong id="b5687322716410"><a name="b5687322716410"></a><a name="b5687322716410"></a>文档版本</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="26.119999999999997%" id="mcps1.1.4.1.2"><p id="p5627845516410"><a name="p5627845516410"></a><a name="p5627845516410"></a><strong id="b5800814916410"><a name="b5800814916410"></a><a name="b5800814916410"></a>发布日期</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="53.16%" id="mcps1.1.4.1.3"><p id="p2382284816410"><a name="p2382284816410"></a><a name="p2382284816410"></a><strong id="b3316380216410"><a name="b3316380216410"></a><a name="b3316380216410"></a>修改说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row5947359616410"><td class="cellrowborder" valign="top" width="20.72%" headers="mcps1.1.4.1.1 "><p id="p359mcpsimp"><a name="p359mcpsimp"></a><a name="p359mcpsimp"></a>00B01</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.119999999999997%" headers="mcps1.1.4.1.2 "><p id="p357mcpsimp"><a name="p357mcpsimp"></a><a name="p357mcpsimp"></a><span id="ph724918174230"><a name="ph724918174230"></a><a name="ph724918174230"></a>2026-03-20</span></p>
+</td>
+<td class="cellrowborder" valign="top" width="53.16%" headers="mcps1.1.4.1.3 "><p id="p361mcpsimp"><a name="p361mcpsimp"></a><a name="p361mcpsimp"></a>第1次临时版本发布</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="裸烧使用说明">裸烧使用说明<a name="ZH-CN_TOPIC_0000001877576281"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001830896890">操作准备</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001877576277">裸烧流程</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001877576285">操作过程</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001830896898">操作示例</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001830737074">操作中需要注意的问题</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001877656485">设置eMMC扩展CSD寄存器</a></strong>  </p>
+</li>
+</ul>
+<h3 id="操作准备">操作准备<a name="ZH-CN_TOPIC_0000001830896890"></a></h3>
+<p>操作准备如下：</p>
+<ul>
+<li>编译镜像，如<a href="#_Ref67494299">表1</a>所示；</li>
+<li>制作升级包；</li>
+<li>存储介质准备（FAT32格式的SD卡）。</li>
+</ul>
+<p><strong>表 1</strong>  升级所需的镜像</p>
+<p><a name="_Ref67494299"></a></p>
+<table><thead align="left"><tr id="row227mcpsimp"><th class="cellrowborder" valign="top" width="35%" id="mcps1.2.3.1.1"><p id="p229mcpsimp"><a name="p229mcpsimp"></a><a name="p229mcpsimp"></a>启动方案</p>
+</th>
+<th class="cellrowborder" valign="top" width="65%" id="mcps1.2.3.1.2"><p id="p231mcpsimp"><a name="p231mcpsimp"></a><a name="p231mcpsimp"></a>镜像</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row238mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.3.1.1 "><p id="p240mcpsimp"><a name="p240mcpsimp"></a><a name="p240mcpsimp"></a>非安全启动</p>
+</td>
+<td class="cellrowborder" rowspan="2" valign="top" width="65%" headers="mcps1.2.3.1.2 "><p id="p242mcpsimp"><a name="p242mcpsimp"></a><a name="p242mcpsimp"></a>boot_image、env、uImage(kernel)、rootfs</p>
+</td>
+</tr>
+<tr id="row243mcpsimp"><td class="cellrowborder" valign="top" headers="mcps1.2.3.1.1 "><p id="p245mcpsimp"><a name="p245mcpsimp"></a><a name="p245mcpsimp"></a>Non-TEE安全启动</p>
+</td>
+</tr>
+<tr id="row246mcpsimp"><td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.3.1.1 "><p id="p248mcpsimp"><a name="p248mcpsimp"></a><a name="p248mcpsimp"></a>TEE安全启动</p>
+</td>
+<td class="cellrowborder" valign="top" width="65%" headers="mcps1.2.3.1.2 "><p id="p250mcpsimp"><a name="p250mcpsimp"></a><a name="p250mcpsimp"></a>boot_image、env、uImage(kernel)、rootfs、tee_image</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="裸烧流程">裸烧流程<a name="ZH-CN_TOPIC_0000001877576277"></a></h3>
+<p>裸烧流程如<a href="#fig9770124917379">图1</a>所示。</p>
+<p><strong>图 1</strong>  裸烧流程图<a name="fig9770124917379"></a><br />
+<img alt="" src="../figures/%E8%A3%B8%E7%83%A7%E6%B5%81%E7%A8%8B%E5%9B%BE.png" title="裸烧流程图" /></p>
+<h3 id="操作过程">操作过程<a name="ZH-CN_TOPIC_0000001877576285"></a></h3>
+<ol>
+<li>
+<p>根据<a href="#_Ref67494299">表1</a>，安全启动或非安全启动镜像编译，具体编译方法请参考《Hi35xxVxxx 安全启动使用指南》，有如下注意事项。</p>
+<p>eMMC启动的uboot中SDIO驱动默认是开启的，其他启动介质编译uboot镜像时，需进入SDK版本包third_party/u-boot目录中的u-boot-xxx源码目录下，使用make ARCH=arm CROSS_COMPILE=arm-openeuler-linux-musleabi- menuconfig打开下面的宏开关。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Device Drivers  ---&gt;
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    MMC Host controller Support  ---&gt;
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        [*] MMC/SD/SDIO card support   ---&gt;
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        [*] Secure Digital Host Controller Interface support
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        [*]   Support SDHCI ADMA2
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    Vendor driver support  ---&gt;
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        [*] SDHCI support for the Soct SD/SDIO/eMMC controller
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Product  ---&gt;
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    [*] auto update
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        [*] auto sd update
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>                [*]     auto sd update is in sdio0
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        [*] auto usb update
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        [*] auto update adaptation
+</span></code></pre></div>
+<p>eMMC启动的单板会被限制为只能使用的sdio1作为sd卡升级端口，auto sd update is in sdio0这个宏不会显示在menuconfig下，因为sdio0已经被emmc占用了，无法使用；如果使用的是其他启动介质单板，uboot下默认使用sdio0作为sd卡升级端口；如果需要使用sdio1，则关闭下面的宏开关：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Product  ---&gt;
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    [*] auto update
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        [*] auto sd update
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>                [ ]     auto sd update is in sdio0
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        [*] auto usb update
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        [*] auto update adaptation
+</span></code></pre></div>
+</li>
+<li>
+<p>根据使用的启动方案制作升级包。</p>
+<ul>
+<li>
+<p>非安全启动和Non-TEE安全启动升级包制作方法</p>
+<p>创建config文本文件，并把和镜像匹配的bootargs和bootcmd拷贝至其中，分区大小单位需要大写，格式如下：</p>
+<ul>
+<li>
+<p>SPI NOR Flash</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>setenv bootargs &#39;mem=96M console=ttyAMA0,115200 clk_ignore_unused root=/dev/mtdblock3 rootfstype=jffs2 rw mtdparts=sfc:512K(u-boot.bin),512K(env),4M(kernel),10M(rootfs.jffs2)&#39;;
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>setenv bootcmd &#39;sf probe 0; sf read 0x47000000 0x100000 0x400000; bootm 0x47000000&#39;; sa
+</span></code></pre></div>
+</li>
+<li>
+<p>SPI NAND Flash:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>setenv bootargs &#39;mem=96M console=ttyAMA0,115200 clk_ignore_unused root=ubi0:ubifs rootfstype=ubifs rw ubi.mtd=3 mtdparts=nand:512K(u-boot.bin),512K(env),4M(kernel),32M(rootfs.ubifs)&#39;; sa
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>setenv bootcmd &#39;nand read 0x47000000 0x100000 0x400000; bootm 0x47000000&#39;; sa
+</span></code></pre></div>
+</li>
+<li>
+<p>eMMC:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>setenv bootargs &#39;mem=96M console=ttyAMA0,115200 clk_ignore_unused root=/dev/mmcblk0p4 rootfstype=ext4 rw rootwait blkdevparts=mmcblk0:512K(u-boot.bin),512K(env),4M(kernel),96M(rootfs.ext4)&#39;;
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>setenv bootcmd &#39;mmc read 0 0x47000000 0x800 0x2000; bootm 0x47000000&#39;; sa
+</span></code></pre></div>
+</li>
+</ul>
+<p>升级包参考如下：</p>
+<p><img alt="" src="../figures/1.png" /></p>
+<ul>
+<li>u-boot.bin为image_map脚本生成的boot_image.bin镜像；</li>
+<li>env为XXX_env.bin镜像；</li>
+<li>kernel为Linux Kernel镜像；</li>
+<li>对于非安全启动和Non-TEE安全启动，u-boot.bin为image_map脚本生成的boot_image.bin镜像。</li>
+</ul>
+</li>
+<li>
+<p>TEE安全启动升级包制作方法</p>
+<p>创建config文本文件，并把和镜像匹配的bootargs和bootcmd拷贝至其中，格式如下：</p>
+<ul>
+<li>
+<p>SPI NOR Flash</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>setenv bootargs &#39;mem=96M console=ttyAMA0,115200 clk_ignore_unused root=/dev/mtdblock3 rootfstype=jffs2 rw mtdparts=sfc:512K(u-boot.bin),512K(env),4M(kernel),10M(rootfs.jffs2),1M(tee)&#39;;
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>setenv bootcmd &#39;sf probe 0; sf read 0x47000000 0xf00000 0x100000; dcache flush; smc 0xc2fffa00 0x47000000; sf read 0x50000000 0x100000 0x400000; bootm 0x50000000&#39;; sa
+</span></code></pre></div>
+</li>
+<li>
+<p>SPI NAND Flash:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>setenv bootargs &#39;mem=96M console=ttyAMA0,115200 clk_ignore_unused root=ubi0:ubifs rootfstype=ubifs rw ubi.mtd=3 mtdparts=nand:512K(u-boot.bin),512K(env),4M(kernel),32M(rootfs.ubifs),1M(tee)&#39;; sa
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>setenv bootcmd &#39;nand read 0x47000000 0x2500000 0x100000; dcache flush; smc 0xc2fffa00 0x47000000; nand read 0x50000000 0x100000 0x400000; bootm 0x50000000&#39;; sa
+</span></code></pre></div>
+</li>
+<li>
+<p>eMMC:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>setenv bootargs &#39;mem=96M console=ttyAMA0,115200 clk_ignore_unused root=/dev/mmcblk0p4 rootfstype=ext4 rw rootwait blkdevparts=mmcblk0:512K(u-boot.bin),512K(env),4M(kernel),96M(rootfs.ext4),1M(tee)&#39;;
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>setenv bootcmd &#39;mmc read 0 0x47000000 0x32800 0x800; dcache flush; smc 0xc2fffa00 0x47000000; mmc read 0 0x50000000 0x800 0x2000; bootm 0x50000000&#39;; sa
+</span></code></pre></div>
+</li>
+</ul>
+<p>升级包参考如下：</p>
+<p><img alt="" src="../figures/1-0.png" /></p>
+<ul>
+<li>u-boot.bin为image_map脚本生成的boot_image.bin镜像；</li>
+<li>env为xxx_tee_env.bin镜像；</li>
+<li>kernel为Linux Kernel镜像；</li>
+<li>tee为image_map脚本生成的tee_image.bin镜像。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>插入存放有升级包的FAT32格式的SD卡至SDIO0卡槽，按住UPDATE按键，启动单板。</p>
+<p>进入u-boot升级流程时，松开UPDATE按键即可，例如，当出现类似<a href="#ZH-CN_TOPIC_0000001830896898">操作示例</a>打印log，即代表已进入u-boot升级流程。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+-   把升级包放置在SD卡前，请先把SD卡进行格式化操作。<br />
+-   升级包里的u-boot或boot_image镜像名必须为u-boot.bin，升级包里的镜像名必须和bootargs一致，如4M(kernel)，则Linux内核镜像名应为kernel；<br />
+-   可烧写多个文件系统镜像；<br />
+-   ubifs文件系统镜像的文件名中必须包含ubifs字符串，其他镜像的文件名中必须不能包含ubifs字符串。<br />
+-   ext4文件系统镜像的文件名中必须包含ext4字符串，其他镜像的文件名中必须不能包含ext4字符串。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="操作示例">操作示例<a name="ZH-CN_TOPIC_0000001830896898"></a></h3>
+<ul>
+<li>格式化SD卡为FAT32格式；</li>
+<li>将<a href="#ZH-CN_TOPIC_0000001877576285">操作过程</a>中制作的升级包拷贝到格式化好的SD卡中。格式化SD卡具体方法请参考《外围设备驱动 操作指南》附录；</li>
+<li>
+<p>裸烧打印以及打印说明如下（以SPI NOR Flash非安全启动举例）：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>//bootrom读取u-boot.bin至内存并执行
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>//读取升级配置文件
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>[0]=u-boot.bin       start=0x00000000 end=0x0007ffff size=0x00080000
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>[1]=env              start=0x00080000 end=0x000fffff size=0x00080000
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>[2]=kernel           start=0x00180000 end=0x00e7ffff size=0x00d00000
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>[3]=rootfs.jffs2     start=0x00e80000 end=0x0167ffff size=0x00800000
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>//读取并烧写u-boot.bin
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>spinor erase...
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>spinor write...
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>//读取并烧写env
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>spinor erase...
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>spinor write...
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>//读取并烧写kernel
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>spinor erase...
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>spinor write...
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>//读取并烧写rootfs.jffs2
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>spinor erase...
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>spinor write...
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>//保存环境变量
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>Saving Environment to SPI Flash... Erasing SPI flash...Writing to SPI flash...done
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>OK
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>//接下来将自动启动新系统
+</span></code></pre></div>
+</li>
+</ul>
+<h3 id="操作中需要注意的问题">操作中需要注意的问题<a name="ZH-CN_TOPIC_0000001830737074"></a></h3>
+<ul>
+<li>SD卡必须格式化成FAT32格式；</li>
+<li>若SD卡有多个分区时，升级包必须放在第一个分区，否则扫描不到升级包；</li>
+<li>u-boot或boot_image镜像名称必须为u-boot.bin；</li>
+<li>裸烧会自动保存config中的bootargs和bootcmd环境变量；</li>
+<li>没有config文件时，仅会烧写bootrom读取的u-boot.bin镜像。</li>
+</ul>
+<h3 id="设置eMMC扩展CSD寄存器">设置eMMC扩展CSD寄存器<a name="ZH-CN_TOPIC_0000001877656485"></a></h3>
+<p>如果用SD卡裸烧的方式烧写，u-boot会利用自带的eMMC驱动对eMMC扩展CSD寄存器进行设置，不需要额外设置。但如果使用烧录器方式进行烧写，则需要烧录器配置eMMC扩展CSD寄存器。此部分主要说明在烧录器操作界面上，需要配置 eMMC 的哪些寄存器及寄存器的值。</p>
+<p>eMMC 器件包含有BOOT1、BOOT2和 USER DATA分区，同时支持 n_RST 管脚和下电复位。boot 从 USER DATA分区启动，所有镜像数据都烧录到 USER DATA分区，同时只支持 n_RST 管脚复位器件，因此，烧录器必须按下表配置寄存器的值，否则单板无法启动。</p>
+<p><a name="table427mcpsimp"></a></p>
+<table><thead align="left"><tr id="row433mcpsimp"><th class="cellrowborder" valign="top" width="19%" id="mcps1.1.4.1.1"><p id="p435mcpsimp"><a name="p435mcpsimp"></a><a name="p435mcpsimp"></a>寄存器编号</p>
+</th>
+<th class="cellrowborder" valign="top" width="14.000000000000002%" id="mcps1.1.4.1.2"><p id="p437mcpsimp"><a name="p437mcpsimp"></a><a name="p437mcpsimp"></a>寄存器值</p>
+</th>
+<th class="cellrowborder" valign="top" width="67%" id="mcps1.1.4.1.3"><p id="p439mcpsimp"><a name="p439mcpsimp"></a><a name="p439mcpsimp"></a>说明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row440mcpsimp"><td class="cellrowborder" valign="top" width="19%" headers="mcps1.1.4.1.1 "><p id="p442mcpsimp"><a name="p442mcpsimp"></a><a name="p442mcpsimp"></a>179</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.000000000000002%" headers="mcps1.1.4.1.2 "><p id="p444mcpsimp"><a name="p444mcpsimp"></a><a name="p444mcpsimp"></a>0x38</p>
+</td>
+<td class="cellrowborder" valign="top" width="67%" headers="mcps1.1.4.1.3 "><p id="p446mcpsimp"><a name="p446mcpsimp"></a><a name="p446mcpsimp"></a>此寄存器用于配置 boot分区，默认从 USER DATA区开始配置。</p>
+</td>
+</tr>
+<tr id="row1034915471012"><td class="cellrowborder" valign="top" width="19%" headers="mcps1.1.4.1.1 "><p id="p1311121781010"><a name="p1311121781010"></a><a name="p1311121781010"></a>177</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.000000000000002%" headers="mcps1.1.4.1.2 "><p id="p143117173108"><a name="p143117173108"></a><a name="p143117173108"></a>0x2</p>
+</td>
+<td class="cellrowborder" valign="top" width="67%" headers="mcps1.1.4.1.3 "><p id="p1931171718103"><a name="p1931171718103"></a><a name="p1931171718103"></a>此寄存器用于配置 eMMC 在 boot 模式下的总线宽度。用户需要根据硬件设计使用的总线宽度进行设置（0x1：4-bit  0x2：8-bit）。</p>
+</td>
+</tr>
+<tr id="row447mcpsimp"><td class="cellrowborder" valign="top" width="19%" headers="mcps1.1.4.1.1 "><p id="p449mcpsimp"><a name="p449mcpsimp"></a><a name="p449mcpsimp"></a>167</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.000000000000002%" headers="mcps1.1.4.1.2 "><p id="p451mcpsimp"><a name="p451mcpsimp"></a><a name="p451mcpsimp"></a>0x1f</p>
+</td>
+<td class="cellrowborder" valign="top" width="67%" headers="mcps1.1.4.1.3 "><p id="p453mcpsimp"><a name="p453mcpsimp"></a><a name="p453mcpsimp"></a>此寄存器用于配置 eMMC 器件的写可靠性。该寄存器需配置成 0x1f。</p>
+</td>
+</tr>
+<tr id="row454mcpsimp"><td class="cellrowborder" valign="top" width="19%" headers="mcps1.1.4.1.1 "><p id="p456mcpsimp"><a name="p456mcpsimp"></a><a name="p456mcpsimp"></a>162</p>
+</td>
+<td class="cellrowborder" valign="top" width="14.000000000000002%" headers="mcps1.1.4.1.2 "><p id="p458mcpsimp"><a name="p458mcpsimp"></a><a name="p458mcpsimp"></a>0x1</p>
+</td>
+<td class="cellrowborder" valign="top" width="67%" headers="mcps1.1.4.1.3 "><p id="p460mcpsimp"><a name="p460mcpsimp"></a><a name="p460mcpsimp"></a>此寄存器用于配置 eMMC 器件的 n_RST 管脚是否有效。默认使用 n_RST 管脚，该寄存器必须配置成 0x1。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>177寄存器配置如<a href="#_Ref19884834">表1</a>所示。</p>
+<p><strong>表 1</strong>  177寄存器配置说明</p>
+<p><a name="_Ref19884834"></a></p>
+<table><thead align="left"><tr id="row469mcpsimp"><th class="cellrowborder" valign="top" width="14.000000000000002%" id="mcps1.2.4.1.1"><p id="p471mcpsimp"><a name="p471mcpsimp"></a><a name="p471mcpsimp"></a>寄存器域</p>
+</th>
+<th class="cellrowborder" valign="top" width="51%" id="mcps1.2.4.1.2"><p id="p473mcpsimp"><a name="p473mcpsimp"></a><a name="p473mcpsimp"></a>寄存器域说明</p>
+</th>
+<th class="cellrowborder" valign="top" width="35%" id="mcps1.2.4.1.3"><p id="p475mcpsimp"><a name="p475mcpsimp"></a><a name="p475mcpsimp"></a>配置值</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row477mcpsimp"><td class="cellrowborder" valign="top" width="14.000000000000002%" headers="mcps1.2.4.1.1 "><p id="p479mcpsimp"><a name="p479mcpsimp"></a><a name="p479mcpsimp"></a>Bit[4:3]</p>
+</td>
+<td class="cellrowborder" valign="top" width="51%" headers="mcps1.2.4.1.2 "><p id="p15267833114712"><a name="p15267833114712"></a><a name="p15267833114712"></a>BOOT_MODE(nonvolatile)</p>
+<p id="p187712369473"><a name="p187712369473"></a><a name="p187712369473"></a>00：单沿 DS模式；</p>
+<p id="p481mcpsimp"><a name="p481mcpsimp"></a><a name="p481mcpsimp"></a>01：单沿 HS模式；</p>
+<p id="p17572638104711"><a name="p17572638104711"></a><a name="p17572638104711"></a>10：双沿boot模式；</p>
+<p id="p482mcpsimp"><a name="p482mcpsimp"></a><a name="p482mcpsimp"></a>11：保留。</p>
+</td>
+<td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.4.1.3 "><p id="p484mcpsimp"><a name="p484mcpsimp"></a><a name="p484mcpsimp"></a>0x0</p>
+</td>
+</tr>
+<tr id="row485mcpsimp"><td class="cellrowborder" valign="top" width="14.000000000000002%" headers="mcps1.2.4.1.1 "><p id="p487mcpsimp"><a name="p487mcpsimp"></a><a name="p487mcpsimp"></a>Bit[2]</p>
+</td>
+<td class="cellrowborder" valign="top" width="51%" headers="mcps1.2.4.1.2 "><p id="p489mcpsimp"><a name="p489mcpsimp"></a><a name="p489mcpsimp"></a>RESET_BOOT_BUS_CONDITIONS(nonvolatile)</p>
+<p id="p490mcpsimp"><a name="p490mcpsimp"></a><a name="p490mcpsimp"></a>0：boot之后，复位BOOT_BUS_WIDTH为x1，单沿，DS模式；</p>
+<p id="p491mcpsimp"><a name="p491mcpsimp"></a><a name="p491mcpsimp"></a>1：boot之后，保留BOOT_BUS_WIDTH。</p>
+</td>
+<td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.4.1.3 "><p id="p493mcpsimp"><a name="p493mcpsimp"></a><a name="p493mcpsimp"></a>默认值：0；</p>
+<p id="p494mcpsimp"><a name="p494mcpsimp"></a><a name="p494mcpsimp"></a>必须配置为默认值</p>
+</td>
+</tr>
+<tr id="row495mcpsimp"><td class="cellrowborder" valign="top" width="14.000000000000002%" headers="mcps1.2.4.1.1 "><p id="p497mcpsimp"><a name="p497mcpsimp"></a><a name="p497mcpsimp"></a>Bit[1:0]</p>
+</td>
+<td class="cellrowborder" valign="top" width="51%" headers="mcps1.2.4.1.2 "><p id="p499mcpsimp"><a name="p499mcpsimp"></a><a name="p499mcpsimp"></a>BOOT_BUS_WIDTH</p>
+<p id="p1980384324718"><a name="p1980384324718"></a><a name="p1980384324718"></a>00：x1 (单沿) or x4 (双沿)总线boot；</p>
+<p id="p10348194654718"><a name="p10348194654718"></a><a name="p10348194654718"></a>01：x4 (单沿/双沿)总线boot；</p>
+<p id="p135201715485"><a name="p135201715485"></a><a name="p135201715485"></a>10：x8 (单沿/双沿)总线boot；</p>
+<p id="p500mcpsimp"><a name="p500mcpsimp"></a><a name="p500mcpsimp"></a>11：保留。</p>
+</td>
+<td class="cellrowborder" valign="top" width="35%" headers="mcps1.2.4.1.3 "><p id="p502mcpsimp"><a name="p502mcpsimp"></a><a name="p502mcpsimp"></a>用户需要根据硬件设计使用的总线宽度进行设置：</p>
+<p id="p503mcpsimp"><a name="p503mcpsimp"></a><a name="p503mcpsimp"></a>单板4线：0x1</p>
+<p id="p504mcpsimp"><a name="p504mcpsimp"></a><a name="p504mcpsimp"></a>单板8线：0x2</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+-   必须在烧录之前完成eMMC 扩展寄存器的配置。<br />
+-   部分烧录器可能不支持设置扩展CSD寄存器的功能，需烧录器厂家支持。</p>
+</blockquote>
+<p>具体的设置由于各厂家的eMMC烧录器不同而存在差异，请参考烧录器手册来配置。</p>
+<h2 id="非裸烧升级使用说明">非裸烧升级使用说明<a name="ZH-CN_TOPIC_0000001830896894"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001830737070">操作准备</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001877656477">升级流程</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001830737078">操作过程</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001830896886">操作示例</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001830737066">操作中需要注意的问题</a></strong>  </p>
+</li>
+</ul>
+<h3 id="操作准备_1">操作准备<a name="ZH-CN_TOPIC_0000001830737070"></a></h3>
+<p>升级操作准备如下：</p>
+<ul>
+<li>编译镜像，参考<a href="#_Ref67494299">表1</a>；</li>
+<li>制作升级包；</li>
+<li>存储介质准备（FAT32格式的SD卡或U盘）；</li>
+</ul>
+<h3 id="升级流程">升级流程<a name="ZH-CN_TOPIC_0000001877656477"></a></h3>
+<p>升级流程如<a href="#fig389214715210">图1</a>所示。</p>
+<p><strong>图 1</strong>  升级流程图<a name="fig389214715210"></a><br />
+<img alt="" src="../figures/%E5%8D%87%E7%BA%A7%E6%B5%81%E7%A8%8B%E5%9B%BE.png" title="升级流程图" /></p>
+<h3 id="操作过程_1">操作过程<a name="ZH-CN_TOPIC_0000001830737078"></a></h3>
+<ol>
+<li>
+<p>根据<a href="#_Ref67494299">表1</a>编译镜像，安全启动或非安全启动镜像编译，具体编译方法请参考《Hi35xxVxxx 安全启动使用指南》，有如下注意事项。</p>
+<ul>
+<li>
+<p>编译u-boot镜像时，需进入u-boot源码目录下，使用make ARCH=arm CROSS_COMPILE=arm-openeuler-linux-musleabi- menuconfig打开宏开关。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Device Drivers  ---&gt;
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    MMC Host controller Support  ---&gt;
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>        [*] MMC/SD/SDIO card support   ---&gt;
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>        [*] Secure Digital Host Controller Interface support
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>        [*]   Support SDHCI ADMA2
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    Vendor driver support  ---&gt;
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>        [*] SDHCI support for the Soct SD/SDIO/eMMC controller
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>Product  ---&gt;
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>    [*] auto update
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>        [*] auto sd update
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>                [*]     auto sd update is in sdio0
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>        [*] auto usb update
+</span><span id="__span-9-13"><a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>        [*] auto update adaptation
+</span></code></pre></div>
+<p>uboot下默认使用sdio0，如果需要使用sdio1，需要关闭下面的宏开关：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Product  ---&gt;
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    [*] auto update
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>        [*] auto sd update
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>                [ ]     auto sd update is in sdio0
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>        [*] auto usb update
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>        [*] auto update adaptation
+</span></code></pre></div>
+</li>
+<li>
+<p>对于非裸烧场景，如果不希望使用UPDATE按键，可以屏蔽u-boot按键识别代码，修改board/vendor/hi3516cv610/hi3516cv610.c中函数is_auto_update为：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>int is_auto_update(void)  {
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>        writel(0x11f1, 0x10260028);
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>        writel(0x11e1, 0x1026002c);
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>        writel(0x11e1, 0x10260030);
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>        writel(0x12a1, 0x10260034);
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>        writel(0x11e1, 0x10260038);
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>        writel(0x11e1, 0x1026003c);
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>        writel(0x11e1, 0x10260040);
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>        writel(0x11f1, 0x10260044);
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>        return 1;
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>}
+</span></code></pre></div>
+<p>配置完成后，即u-boot启动默认会进入sd（sdio0）升级流程。</p>
+<p>或者将函数is_auto_update为：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>int is_auto_update(void)  {
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>        writel(0x11f1, 0x11130038);
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>        writel(0x11e1, 0x1113003c);
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>        writel(0x11e1, 0x11130040);
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>        writel(0x12a1, 0x11130044);
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        writel(0x11e1, 0x11130048);
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>        writel(0x11e1, 0x1113004c);
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>        writel(0x11e1, 0x11130050);
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>        writel(0x11f1, 0x11130054);
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>        return 1;
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>}
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>即u-boot启动默认会进入sd（sdio1）升级流程。
+</span></code></pre></div>
+</li>
+</ul>
+</li>
+<li>
+<p>根据使用的启动方案制作升级包。</p>
+<ul>
+<li>
+<p>非安全启动和Non-TEE安全启动升级包制作方法。</p>
+<p>创建config文本文件，并把和镜像匹配的bootargs和bootcmd拷贝至其中，分区大小单位（K、M）需要大写，格式如下：</p>
+<ul>
+<li>
+<p>SPI NOR Flash</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>setenv bootargs &#39;mem=96M console=ttyAMA0,115200 clk_ignore_unused root=/dev/mtdblock3 rootfstype=jffs2 rw mtdparts=sfc:512K(u-boot.bin),512K(env),4M(kernel),10M(rootfs.jffs2)&#39;;
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>setenv bootcmd &#39;sf probe 0; sf read 0x47000000 0x100000 0x400000; bootm 0x47000000&#39;; sa
+</span></code></pre></div>
+</li>
+<li>
+<p>SPI NAND Flash</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>setenv bootargs &#39;mem=96M console=ttyAMA0,115200 clk_ignore_unused root=ubi0:ubifs rootfstype=ubifs rw ubi.mtd=3 mtdparts=nand:512K(u-boot.bin),512K(env),4M(kernel),32M(rootfs.ubifs)&#39;; sa
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>setenv bootcmd &#39;nand read 0x47000000 0x100000 0x400000; bootm 0x47000000&#39;; sa
+</span></code></pre></div>
+</li>
+<li>
+<p>eMMC</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>setenv bootargs &#39;mem=96M console=ttyAMA0,115200 clk_ignore_unused root=/dev/mmcblk0p4 rootfstype=ext4 rw rootwait blkdevparts=mmcblk0:512K(u-boot.bin),512K(env),4M(kernel),96M(rootfs.ext4)&#39;;
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>setenv bootcmd &#39;mmc read 0 0x47000000 0x800 0x2000; bootm 0x47000000&#39;; sa
+</span></code></pre></div>
+</li>
+</ul>
+<p>升级包参考如下：</p>
+<p><img alt="" src="../figures/1-1.png" /></p>
+<ul>
+<li>u-boot.bin为image_map脚本生成的boot_image.bin镜像；</li>
+<li>
+<p>env为XXX_env.bin镜像</p>
+</li>
+<li>
+<p>kernel为Linux Kernel镜像；</p>
+</li>
+<li>对于非安全启动和Non-TEE安全启动，u-boot.bin为image_map脚本生成的boot_image.bin镜像。</li>
+</ul>
+</li>
+<li>
+<p>TEE安全启动升级包制作方法</p>
+<p>创建config文本文件，并把和镜像匹配的bootargs和bootcmd拷贝至其中，格式如下：</p>
+<ul>
+<li>
+<p>SPI NOR Flash</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>setenv bootargs &#39;mem=96M console=ttyAMA0,115200 clk_ignore_unused root=/dev/mtdblock3 rootfstype=jffs2 rw mtdparts=sfc:512K(u-boot.bin),512K(env),4M(kernel),10M(rootfs.jffs2),1M(tee)&#39;;
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>setenv bootcmd &#39;sf probe 0; sf read 0x47000000 0xf00000 0x100000; dcache flush; smc 0xc2fffa00 0x47000000; sf read 0x50000000 0x100000 0x400000; bootm 0x50000000&#39;; sa
+</span></code></pre></div>
+</li>
+<li>
+<p>SPI NAND Flash</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>setenv bootargs &#39;mem=96M console=ttyAMA0,115200 clk_ignore_unused root=ubi0:ubifs rootfstype=ubifs rw ubi.mtd=3 mtdparts=nand:512K(u-boot.bin),512K(env),4M(kernel),32M(rootfs.ubifs),1M(tee)&#39;; sa
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>setenv bootcmd &#39;nand read 0x47000000 0x2500000 0x100000; dcache flush; smc 0xc2fffa00 0x47000000; nand read 0x50000000 0x100000 0x400000; bootm 0x50000000&#39;; sa
+</span></code></pre></div>
+</li>
+<li>
+<p>eMMC</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>setenv bootargs &#39;mem=96M console=ttyAMA0,115200 clk_ignore_unused root=/dev/mmcblk0p4 rootfstype=ext4 rw rootwait blkdevparts=mmcblk0:512K(u-boot.bin),512K(env),4M(kernel),96M(rootfs.ext4),1M(tee)&#39;;
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>setenv bootcmd &#39;mmc read 0 0x47000000 0x32800 0x800; dcache flush; smc 0xc2fffa00 0x47000000; mmc read 0 0x50000000 0x800 0x2000; bootm 0x50000000&#39;; sa
+</span></code></pre></div>
+</li>
+</ul>
+<p>升级包参考如下：</p>
+<p><img alt="" src="../figures/1-2.png" /></p>
+<ul>
+<li>u-boot.bin为image_map脚本生成的boot_image.bin镜像；</li>
+<li>env为xxx_tee_env.bin镜像；</li>
+<li>kernel为Linux Kernel镜像；</li>
+<li>tee为image_map脚本生成的tee_image.bin镜像。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>插入存放有升级包的FAT32格式的SD卡（SDIO0）或U盘，按住UPDATE按键，启动单板，升级系统。</p>
+<p>进入u-boot升级流程时，松开UPDATE按键即可。例如：当出现类似<a href="#ZH-CN_TOPIC_0000001877656481">升级示例</a>打印log，即代表已进入u-boot升级流程。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+-   把升级包放置在SD卡或U盘前，请先把SD卡或U盘进行格式化操作。<br />
+-   升级包里的u-boot或boot_image镜像名必须为u-boot.bin，升级包里的镜像名必须和bootargs一致，如4M(kernel)，则Linux内核镜像名应为kernel；<br />
+-   如果镜像文件不存在则不升级对应项；<br />
+-   支持升级多个文件系统镜像；<br />
+-   如果想继续使用u-boot中的环境变量bootargs和bootcmd，则不需要准备config文件；<br />
+-   ubifs文件系统镜像的文件名中必须包含ubifs字符串，其他镜像的文件名中必须不能包含ubifs字符串。<br />
+-   ext4文件系统镜像的文件名中必须包含ext4字符串，其他镜像的文件名中必须不能包含ext4字符串。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="操作示例_1">操作示例<a name="ZH-CN_TOPIC_0000001830896886"></a></h3>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001877576273">分段升级</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001877656481">升级示例</a></strong>  </p>
+</li>
+</ul>
+<h4 id="分段升级">分段升级<a name="ZH-CN_TOPIC_0000001877576273"></a></h4>
+<p>分段升级适用于低内存芯片平台，当内存较小且升级的文件系统较大时可考虑打开此选项，打开此选项时只需要使用16M大小的内存 buffer，反之升级文件将占用文件大小的内存。</p>
+<p>操作过程如下：</p>
+<ol>
+<li>
+<p>打开分段升级宏(CONFIG_VENDOR_UPGRADE_BY_SEGMENT)</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>ARM architecture ---&gt;
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>    vendor_setup ---&gt;
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>    [*] Upgrade by segment write
+</span></code></pre></div>
+</li>
+<li>
+<p>打开升级开关和识别sd卡、usb所需要的宏开关，和<a href="#ZH-CN_TOPIC_0000001830737078">操作过程</a>步骤1一致。</p>
+</li>
+</ol>
+<h4 id="升级示例">升级示例<a name="ZH-CN_TOPIC_0000001877656481"></a></h4>
+<ul>
+<li>将u-boot镜像烧写到flash（spinor或nand）中或直接下载到内存中运行；</li>
+<li>格式化SD卡或U盘为FAT格式；</li>
+<li>将<a href="#ZH-CN_TOPIC_0000001830737078">操作过程</a>中制作的升级包拷贝到格式化好的SD卡或U盘中。格式化SD卡或U盘具体方法请参考《外围设备驱动 操作指南》附录；</li>
+<li>开发板上电，u-boot启动，开始自动升级。</li>
+<li>
+<p>升级打印以及打印说明如下（以SPI NOR Flash非安全启动举例）：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>//读取升级配置文件
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>[0]=u-boot.bin       start=0x00000000 end=0x0007ffff size=0x00080000
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>[1]=env              start=0x00080000 end=0x000fffff size=0x00080000
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>[2]=kernel           start=0x00180000 end=0x00e7ffff size=0x00d00000
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>[3]=rootfs.jffs2     start=0x00e80000 end=0x0167ffff size=0x00800000
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>//读取并烧写u-boot.bin
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>spinor erase...
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>spinor write...
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>//读取并烧写env
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>spinor erase...
+</span><span id="__span-21-11"><a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a>spinor write...
+</span><span id="__span-21-12"><a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a>//读取并烧写kernel
+</span><span id="__span-21-13"><a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>spinor erase...
+</span><span id="__span-21-14"><a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a>spinor write...
+</span><span id="__span-21-15"><a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a>//读取并烧写rootfs.jffs2
+</span><span id="__span-21-16"><a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a>spinor erase...
+</span><span id="__span-21-17"><a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>spinor write...
+</span><span id="__span-21-18"><a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a>//保存环境变量
+</span><span id="__span-21-19"><a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a>Saving Environment to SPI Flash... Erasing SPI flash...Writing to SPI flash...done
+</span><span id="__span-21-20"><a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a>OK
+</span><span id="__span-21-21"><a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a>//接下来将自动启动新系统
+</span></code></pre></div>
+</li>
+</ul>
+<h3 id="操作中需要注意的问题_1">操作中需要注意的问题<a name="ZH-CN_TOPIC_0000001830737066"></a></h3>
+<ul>
+<li>SD卡或U盘必须格式化成FAT格式；</li>
+<li>若SD卡或U盘有多个分区时，升级包必须放在第一个分区，否则扫描不到升级包；</li>
+<li>升级u-boot会自动保存config中的bootargs和bootcmd环境变量。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+
+  <div class="footer-box">
+    <div class="footer-list">
+      
+      
+      <div class="footer-list-child">
+        <a href="https://www.hisilicon.com/cn" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/home" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开发者网站</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://gitcode.com/HiSpark" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开源社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developer.huawei.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">华为开发者官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hikunpeng.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">鲲鹏社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hiascend.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">昇腾社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/aboutus" target="_blank" class="footer-nav-first" rel="noopener noreferrer">关于我们</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/login" target="_blank" class="footer-nav-first" rel="noopener noreferrer">投诉举报</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      
+    </div>
+    <div class="footer-fix">
+      <div class="footer-fix-content">
+        <div>
+          <span class="footer-copyright">&nbsp;&copy;2024 华为技术有限公司</span>
+          <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer">粤A2-20044005号</a>
+          <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702004153"
+            target="_blank" rel="noopener noreferrer">粤公网安备44030702004153号</a>
+        </div>
+        <div class="footer-name-list">
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/legalNotices" target="_blank" class="footer-name" rel="noopener noreferrer">法律声明</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/cookie-policy" target="_blank" class="footer-name" rel="noopener noreferrer">关于Cookie</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/privacyPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">隐私政策</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/userPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">用户协议</a>
+          
+          
+          
+          <a href="javascript:void(0);" onclick="openDisclaimerDialog()" class="footer-name">免责声明</a>
+          
+          
+          
+        </div>
+      </div>
+
+
+      <!-- 免责声明弹窗 -->
+      <div id="disclaimerDialog" class="disclaimer-overlay" style="display: none;">
+        <div class="disclaimer-dialog">
+          <div class="disclaimer-dialog__header">
+            <span class="disclaimer-dialog__title">免责声明</span>
+            <button class="disclaimer-dialog__close" onclick="closeDisclaimerDialog()">×</button>
+          </div>
+          <div class="disclaimer-dialog__body">
+            <p class="disclaimer-dialog__text-center"><strong>海思开发者网站免责声明</strong></p>
+            <p>尊敬的用户，您好：</p>
+            <p>&nbsp; &nbsp;
+              请确保您通过本平台向海思提供或反馈的任何信息或意见不侵犯第三方知识产权和/或合法权益。如您提供或反馈的上述任何信息或意见侵犯第三方知识产权和/或合法权益，和/或给第三方造成损害的，您将承担全部法律及赔偿责任。
+            </p>
+          </div>
+          <div class="disclaimer-dialog__footer">
+            <button class="disclaimer-dialog__btn" onclick="closeDisclaimerDialog()">关闭</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function openDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'flex';
+        }
+        function closeDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'none';
+        }
+        // 点击弹窗背景关闭
+        document.getElementById('disclaimerDialog').addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeDisclaimerDialog();
+          }
+        });
+      </script>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../static/js/custom.js"></script>
+      
+        <script src="../../../../../static/js/version-selector.js"></script>
+      
+        <script src="../../../../../static/js/code-highlight.js"></script>
+      
+        <script src="../../../../../static/js/wavedrom-skin.js"></script>
+      
+        <script src="../../../../../static/js/wavedrom.min.js"></script>
+      
+        <script src="../../../../../static/js/wavedrom-init.js"></script>
+      
+        <script src="../../../../../static/js/no-flash.js"></script>
+      
+    
+  </body>
+</html>

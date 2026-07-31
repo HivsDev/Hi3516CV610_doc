@@ -1,0 +1,3841 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hi3516CV610 超高清智慧视觉 SoC 文档中心">
+      
+      
+        <meta name="author" content="HiSpark">
+      
+      
+        <link rel="canonical" href="https://hivsdev.github.io/Hi3516CV610_doc/zh-CN/04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/Sample%E6%8C%87%E5%AF%BC%E8%AF%B4%E6%98%8E/Sample%E6%8C%87%E5%AF%BC%E8%AF%B4%E6%98%8E/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../static/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>前言 - Hi3516CV610 开发者中心</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+    
+    
+      <link rel="stylesheet" href="../../../../static/css/extra.css">
+    
+      <link rel="stylesheet" href="../../../../static/css/version-selector.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+      <meta name="gitcode-issues-url" content="https://gitcode.com/HiSpark/fbb_ws63/issues">
+      
+      <link rel="dns-prefetch" href="https://docs.hisilicon.com">
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://docs.hisilicon.com" crossorigin>
+      <link rel="preload" href="../../../../assets/stylesheets/main.484c7ddc.min.css" as="style">
+      <link rel="preload" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css" as="style">
+      <link rel="preload" href="../../../../static/css/extra.css" as="style">
+      <link rel="preload" href="../../../../assets/javascripts/bundle.79ae519e.min.js" as="script">
+      <link rel="preload" href="../../../../static/js/custom.js" as="script">
+
+      
+      
+        
+        
+      
+      <style>:root{--md-text-font:"Helvetica Neue, PingFang SC, Microsoft YaHei";--md-code-font:"Consolas, Roboto Mono"}</style>
+      <script>
+        // 防止宽窄屏刷新闪烁 — 在 body 解析前就读取 localStorage 标记 <html>
+        // 配合 CSS: html.prefer-narrow .md-grid 在首帧即应用 76%
+        if (localStorage.getItem('wideScreen') === 'false') {
+          document.documentElement.classList.add('prefer-narrow');
+        }
+      </script>
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#前言" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://developers.hisilicon.com" title="Hi3516CV610 开发者中心" class="md-header__button md-logo" aria-label="Hi3516CV610 开发者中心" data-md-component="logo" target="_blank" rel="noopener noreferrer">
+      <img 
+  src="../../../../static/images/light-icon.png" 
+  class="md-logo__img md-logo__img--light"
+  alt="Hi3516CV610 开发者中心" 
+/>
+<img 
+  src="../../../../static/images/dark-icon.png" 
+  class="md-logo__img md-logo__img--dark"
+  alt="Hi3516CV610 开发者中心" 
+/>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+      </div>
+    </div>
+    
+      
+      
+        <label class="md-header__button md-icon md-header__button--search" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+      
+    
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="切换到暗色主题"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色主题" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="切换到亮色主题"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色主题" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <div class="md-header__source">
+        <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="Go to repository" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+      </div>
+    
+  </nav>
+  
+  
+    
+    
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        <!-- 
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+         -->
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+</header>
+
+
+<script>
+  var USER_DEFINED_OPTIONS = {
+    REPO_PATH: "Hi3516CV610_doc",
+    ROOT_URL: "https://docs.hisilicon.com/projects"
+  };
+  var DOCUMENTATION_OPTIONS = {
+    VERSION: "master",
+    // 构建时声明主题的语言
+    LANGUAGE: "en"
+  };
+</script>
+<script src="https://docs.hisilicon.com/projects/version/hispark_version.js"></script>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="sidebar-selectors">
+                  <div class="repo-select custom-select">
+                    <span class="select-label">芯片</span>
+                    <div class="repo-selector" title="">
+                      <span class="repo-readOnly"></span>
+                      <select id="repo-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="repo-options" style="display:none"></ul>
+                  </div>
+                  <div class="version-select custom-select">
+                    <span class="select-label">版本</span>
+                    <div class="version-selector" title="">
+                      <span class="version-readOnly"></span>
+                      <select id="version-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="version-options" style="display:none"></ul>
+                  </div>
+                  
+                    
+                    
+                      <div class="sidebar-search">
+                        <label class="sidebar-search__button" for="__search">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+                          <span>全文检索</span>
+                        </label>
+                      </div>
+                    
+                  
+                </div>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+    <div class="md-nav__source">
+      <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="Go to repository" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../00%E6%A6%82%E8%A7%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整体架构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03API%E5%8F%82%E8%80%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考案例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../05%E7%A1%AC%E4%BB%B6%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具中心
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../07FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../08%E5%85%B6%E4%BB%96/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#前言_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#Sample使用注意事项" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sample使用注意事项
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sample使用注意事项">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#MMZ-buffer进程隔离" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MMZ buffer进程隔离
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Sensor适配说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensor适配说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#快速入门指导" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快速入门指导
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="快速入门指导">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aiisp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        aiisp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        audio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#awb_online_calibration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        awb_online_calibration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bcd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        bcd
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calcflicker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        calcflicker
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fast_ae" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        fast_ae
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ir_auto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ir_auto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lsc_online_cali" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        lsc_online_cali
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        kol
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quick_start_demo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        quick_start_demo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#region" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        region
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scene_auto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        scene_auto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security_subsys" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        security_subsys
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#smart_ae" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        smart_ae
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spi_lcd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        spi_lcd
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#svp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        svp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#svc_venc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        svc_venc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        uvc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#venc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        venc
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vgs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vgs
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        vie
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#加载KO卡住" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        加载KO卡住
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#工具链问题" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        工具链问题
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="前言">前言<a name="ZH-CN_TOPIC_0000001942665126"></a></h1>
+<h2 id="前言_1">前言<a name="ZH-CN_TOPIC_0000001942665126"></a></h2>
+<p><strong>概述<a name="section210mcpsimp"></a></strong></p>
+<p>本文描述了各个sample要展示的场景/数据流，应用场景、功能特性等以及相关注意事项，供开发者参考，方便客户快速适配修改和运行sample。</p>
+<p><strong>产品版本<a name="section213mcpsimp"></a></strong></p>
+<p>与本文档相对应的产品版本如下。</p>
+<p><a name="table216mcpsimp"></a></p>
+<table><thead align="left"><tr id="row221mcpsimp"><th class="cellrowborder" valign="top" width="32%" id="mcps1.1.3.1.1"><p id="p223mcpsimp"><a name="p223mcpsimp"></a><a name="p223mcpsimp"></a>产品名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="68%" id="mcps1.1.3.1.2"><p id="p225mcpsimp"><a name="p225mcpsimp"></a><a name="p225mcpsimp"></a>产品版本</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row227mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p63331555172315"><a name="p63331555172315"></a><a name="p63331555172315"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p141352132417"><a name="p141352132417"></a><a name="p141352132417"></a>V608</p>
+</td>
+</tr>
+<tr id="row232mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p234mcpsimp"><a name="p234mcpsimp"></a><a name="p234mcpsimp"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p236mcpsimp"><a name="p236mcpsimp"></a><a name="p236mcpsimp"></a>V610</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>读者对象<a name="section237mcpsimp"></a></strong></p>
+<p>本文档（本指南）主要适用于以下工程师：</p>
+<ul>
+<li>技术支持工程师</li>
+<li>软硬件开发工程师</li>
+</ul>
+<p><strong>符号约定<a name="section243mcpsimp"></a></strong></p>
+<p>在本文中可能出现下列标志，它们所代表的含义如下。</p>
+<p><a name="table246mcpsimp"></a></p>
+<table><thead align="left"><tr id="row251mcpsimp"><th class="cellrowborder" valign="top" width="21%" id="mcps1.1.3.1.1"><p id="p253mcpsimp"><a name="p253mcpsimp"></a><a name="p253mcpsimp"></a><strong id="b254mcpsimp"><a name="b254mcpsimp"></a><a name="b254mcpsimp"></a>符号</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="79%" id="mcps1.1.3.1.2"><p id="p256mcpsimp"><a name="p256mcpsimp"></a><a name="p256mcpsimp"></a><strong id="b257mcpsimp"><a name="b257mcpsimp"></a><a name="b257mcpsimp"></a>说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row259mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p261mcpsimp"><a name="p261mcpsimp"></a><a name="p261mcpsimp"></a><a name="image106"></a><a name="image106"></a><span><img id="image106" src="figures/zh-cn_image_0000001969743629.png" height="23.94" width="67.83"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="p263mcpsimp"><a name="p263mcpsimp"></a><a name="p263mcpsimp"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row264mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p266mcpsimp"><a name="p266mcpsimp"></a><a name="p266mcpsimp"></a><a name="image107"></a><a name="image107"></a><span><img id="image107" src="figures/zh-cn_image_0000001942665150.png" height="23.94" width="67.83"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="p268mcpsimp"><a name="p268mcpsimp"></a><a name="p268mcpsimp"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row269mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p271mcpsimp"><a name="p271mcpsimp"></a><a name="p271mcpsimp"></a><a name="image108"></a><a name="image108"></a><span><img id="image108" src="figures/zh-cn_image_0000001969863397.png" height="23.94" width="67.83"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="p273mcpsimp"><a name="p273mcpsimp"></a><a name="p273mcpsimp"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row274mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p276mcpsimp"><a name="p276mcpsimp"></a><a name="p276mcpsimp"></a><a name="image109"></a><a name="image109"></a><span><img id="image109" src="figures/zh-cn_image_0000001969743633.png" height="23.94" width="67.83"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="p278mcpsimp"><a name="p278mcpsimp"></a><a name="p278mcpsimp"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
+<p id="p279mcpsimp"><a name="p279mcpsimp"></a><a name="p279mcpsimp"></a>“须知”不涉及人身伤害。</p>
+</td>
+</tr>
+<tr id="row280mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="p282mcpsimp"><a name="p282mcpsimp"></a><a name="p282mcpsimp"></a><a name="image110"></a><a name="image110"></a><span><img id="image110" src="figures/zh-cn_image_0000001942665146.png" height="23.94" width="67.83"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="p284mcpsimp"><a name="p284mcpsimp"></a><a name="p284mcpsimp"></a>对正文中重点信息的补充说明。</p>
+<p id="p285mcpsimp"><a name="p285mcpsimp"></a><a name="p285mcpsimp"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>修订记录<a name="section286mcpsimp"></a></strong></p>
+<p>修订记录累积了每次文档更新的说明。最新版本的文档包含以前所有文档版本的更新内容。</p>
+<p><a name="table1581764818129"></a></p>
+<table><thead align="left"><tr id="row1381884812127"><th class="cellrowborder" valign="top" width="11.18%" id="mcps1.1.4.1.1"><p id="p1781884871215"><a name="p1781884871215"></a><a name="p1781884871215"></a>版本</p>
+</th>
+<th class="cellrowborder" valign="top" width="19.89%" id="mcps1.1.4.1.2"><p id="p88189482122"><a name="p88189482122"></a><a name="p88189482122"></a>修订日期</p>
+</th>
+<th class="cellrowborder" valign="top" width="68.93%" id="mcps1.1.4.1.3"><p id="p681884810121"><a name="p681884810121"></a><a name="p681884810121"></a>修订说明</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1881894851213"><td class="cellrowborder" valign="top" width="11.18%" headers="mcps1.1.4.1.1 "><p id="p88181248151211"><a name="p88181248151211"></a><a name="p88181248151211"></a>00B01</p>
+</td>
+<td class="cellrowborder" valign="top" width="19.89%" headers="mcps1.1.4.1.2 "><p id="p781811487127"><a name="p781811487127"></a><a name="p781811487127"></a>2026-06-30</p>
+</td>
+<td class="cellrowborder" valign="top" width="68.93%" headers="mcps1.1.4.1.3 "><p id="p1881834810121"><a name="p1881834810121"></a><a name="p1881834810121"></a>第一次临时版本发布</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="Sample使用注意事项">Sample使用注意事项<a name="ZH-CN_TOPIC_0000001942665134"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001969743609">MMZ buffer进程隔离</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001942824450">Sensor适配说明</a></strong>  </p>
+</li>
+</ul>
+<h3 id="MMZ-buffer进程隔离">MMZ buffer进程隔离<a name="ZH-CN_TOPIC_0000001969743609"></a></h3>
+<p>mmz buffer进程隔离特性介绍参见《MPP 媒体处理软件 V6.0 开发参考》的“1.4 mmz buffer进程隔离”章节。</p>
+<p><a name="table313mcpsimp"></a></p>
+<table><thead align="left"><tr id="row320mcpsimp"><th class="cellrowborder" valign="top" width="8.91%" id="mcps1.1.5.1.1"><p xml:lang="zh-CN" id="p322mcpsimp"><a name="p322mcpsimp"></a><a name="p322mcpsimp"></a>序号</p>
+</th>
+<th class="cellrowborder" valign="top" width="25.480000000000004%" id="mcps1.1.5.1.2"><p xml:lang="zh-CN" id="p324mcpsimp"><a name="p324mcpsimp"></a><a name="p324mcpsimp"></a>简要描述</p>
+</th>
+<th class="cellrowborder" valign="top" width="52.739999999999995%" id="mcps1.1.5.1.3"><p xml:lang="zh-CN" id="p326mcpsimp"><a name="p326mcpsimp"></a><a name="p326mcpsimp"></a>详细描述</p>
+</th>
+<th class="cellrowborder" valign="top" width="12.870000000000001%" id="mcps1.1.5.1.4"><p xml:lang="zh-CN" id="p328mcpsimp"><a name="p328mcpsimp"></a><a name="p328mcpsimp"></a>备注</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row330mcpsimp"><td class="cellrowborder" valign="top" width="8.91%" headers="mcps1.1.5.1.1 "><p id="entry331mcpsimpp0"><a name="entry331mcpsimpp0"></a><a name="entry331mcpsimpp0"></a>1</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.480000000000004%" headers="mcps1.1.5.1.2 "><p xml:lang="zh-CN" id="p333mcpsimp"><a name="p333mcpsimp"></a><a name="p333mcpsimp"></a>PQ工具使用前需关闭进程隔离</p>
+</td>
+<td class="cellrowborder" valign="top" width="52.739999999999995%" headers="mcps1.1.5.1.3 "><p xml:lang="zh-CN" id="p335mcpsimp"><a name="p335mcpsimp"></a><a name="p335mcpsimp"></a>PQ工具作为调试工具，使用前需通过加载ot_mmz.ko时设置模块参数mem_process_isolation=0关闭mmz buffer的进程隔离属性。</p>
+</td>
+<td class="cellrowborder" valign="top" width="12.870000000000001%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+<tr id="row337mcpsimp"><td class="cellrowborder" valign="top" width="8.91%" headers="mcps1.1.5.1.1 "><p id="entry338mcpsimpp0"><a name="entry338mcpsimpp0"></a><a name="entry338mcpsimpp0"></a>2</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.480000000000004%" headers="mcps1.1.5.1.2 "><p xml:lang="zh-CN" id="p340mcpsimp"><a name="p340mcpsimp"></a><a name="p340mcpsimp"></a>mpp/tools使用注意事项</p>
+</td>
+<td class="cellrowborder" valign="top" width="52.739999999999995%" headers="mcps1.1.5.1.3 "><p xml:lang="zh-CN" id="p342mcpsimp"><a name="p342mcpsimp"></a><a name="p342mcpsimp"></a>mpp/tools是单独的进程，dump图像数据时会受制于mmz buffer进程隔离机制。</p>
+<a name="ul163233722513"></a><a name="ul163233722513"></a><ul id="ul163233722513"><li>dump sample进程或者其它业务进程的图像数据时，需要按《MPP 媒体处理软件 V6.0 开发参考》的“mmz buffer进程隔离”章节里描述的三种方式之一操作。</li><li>对于dump sample进程图像数据，已经写好了部分示例，可按sample目录的《readme》操作。</li></ul>
+</td>
+<td class="cellrowborder" valign="top" width="12.870000000000001%" headers="mcps1.1.5.1.4 ">&nbsp;&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="Sensor适配说明">Sensor适配说明<a name="ZH-CN_TOPIC_0000001942824450"></a></h3>
+<p>由于版本默认sensor为HY006-3814-0011，如需适配新sensor，主要涉及以下适配改动：</p>
+<ol>
+<li>
+<p>修改sensor时钟，相关寄存器配置说明参考《Hi3516CV610 超高清智慧视觉 SoC 用户指南》的“3.2.4 CRG寄存器概览”小节（基址是 0x1101_0000）。</p>
+<p><a name="table20273135818548"></a><br />
+<table><thead align="left"><tr id="row1129035818547"><th class="cellrowborder" valign="top" width="15.310000000000002%" id="mcps1.1.4.1.1"><p id="p82901589543"><a name="p82901589543"></a><a name="p82901589543"></a>偏移地址</p><br />
+</th><br />
+<th class="cellrowborder" valign="top" width="29.59%" id="mcps1.1.4.1.2"><p id="p9290958125419"><a name="p9290958125419"></a><a name="p9290958125419"></a>名称</p><br />
+</th><br />
+<th class="cellrowborder" valign="top" width="55.1%" id="mcps1.1.4.1.3"><p id="p1229035811544"><a name="p1229035811544"></a><a name="p1229035811544"></a>描述</p><br />
+</th><br />
+</tr><br />
+</thead><br />
+<tbody><tr id="row42909582547"><td class="cellrowborder" valign="top" width="15.310000000000002%" headers="mcps1.1.4.1.1 "><p id="p1829018583543"><a name="p1829018583543"></a><a name="p1829018583543"></a>0x8440</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="29.59%" headers="mcps1.1.4.1.2 "><p id="p1729075818546"><a name="p1729075818546"></a><a name="p1729075818546"></a>PERI_CRG8464</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="55.1%" headers="mcps1.1.4.1.3 "><p id="p16290115820549"><a name="p16290115820549"></a><a name="p16290115820549"></a>SENSOR0时钟复位配置寄存器</p><br />
+</td><br />
+</tr><br />
+<tr id="row729145817544"><td class="cellrowborder" valign="top" width="15.310000000000002%" headers="mcps1.1.4.1.1 "><p id="p1529185812546"><a name="p1529185812546"></a><a name="p1529185812546"></a>0x8460</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="29.59%" headers="mcps1.1.4.1.2 "><p id="p229115835416"><a name="p229115835416"></a><a name="p229115835416"></a>PERI_CRG8472</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="55.1%" headers="mcps1.1.4.1.3 "><p id="p5291558195413"><a name="p5291558195413"></a><a name="p5291558195413"></a>SENSOR1时钟复位配置寄存器</p><br />
+</td><br />
+</tr><br />
+</tbody><br />
+</table></p>
+<p>适配sys_config，参考SENSOR_NAME_HY006_3814_0011宏定义适配新增新sensor宏定义SENSOR_NAME_xxx和对应代码流程，以下以sensor时钟24M为例：</p>
+<ol>
+<li>
+<p>sys_config修改</p>
+<p>位置：SDK包/smp/a7_linux/source/interdrv/sysconfig/</p>
+<p>修改点：</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002232412844.png" /></p>
+</li>
+<li>
+<p>load3516cv610_xx适配传参</p>
+<p>位置：SDK包/smp/a7_linux_source/out/ko/load3516cv610</p>
+<p>修改点：</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002267290785.png" /></p>
+</li>
+</ol>
+</li>
+<li>
+<p>适配sample</p>
+<p>编译sample前，需要确定使用哪种sensor，默认为HY006_3814_0011_MIPI_4M_30FPS_10BIT，如新增sensor，可搜索参考HY006_3814_0011_MIPI_4M_30FPS_10BIT宏定义相关修改适配，确定下来后才能对sample进行编译，并在加载ko前修改load脚本或通过传入命令参数的方式进行加载。</p>
+<p>修改的文件：Makefile.param</p>
+<p>位置：SDK包/soc/drivers/mpp/sample/</p>
+<p>修改点：</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002267295221.png" /></p>
+</li>
+</ol>
+<h2 id="快速入门指导">快速入门指导<a name="ZH-CN_TOPIC_0000001969863373"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002201038664">aiisp</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002200878876">audio</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002235745161">awb_online_calibration</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002235919101">bcd</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002235785329">calcflicker</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002200745070">fast_ae</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002235745165">ir_auto</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002200904886">lsc_online_cali</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002236038945">kol</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002200878880">quick_start_demo</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002222119801">region</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002235919105">scene_auto</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002236038949">security_subsys</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002235785333">smart_ae</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002201038672">spi_lcd</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002200878884">svp</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002235919109">svc_venc</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002236038953">uvc</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002235919113">venc</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002200803672">vgs</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001969863381">vie</a></strong>  </p>
+</li>
+</ul>
+<h3 id="aiisp">aiisp<a name="ZH-CN_TOPIC_0000002201038664"></a></h3>
+<p>本章介绍如何使用aibnr模型，实现低照度降噪的效果。</p>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002238282873">代码流程</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002238203033">sample用例介绍</a></strong>  </p>
+</li>
+</ul>
+<h4 id="代码流程">代码流程<a name="ZH-CN_TOPIC_0000002238282873"></a></h4>
+<ol>
+<li>启动数据流通路，从前往后分别启动各媒体模块（VI、VPSS、VENC......）。</li>
+<li>初始化aibnr模块，详细使用参考接口ss_mpi_aibnr_init。</li>
+<li>加载aibnr的模型文件，详细使用参考接口ss_mpi_aibnr_load_model。</li>
+<li>设置aibnr的算法相关配置参数，详细使用请参考接口ss_mpi_aibnr_set_cfg。</li>
+<li>使能aibnr的数据流开关，详细使用请参考接口ss_mpi_aibnr_enable。</li>
+<li>设置aibnr的属性，详细使用请参考接口ss_mpi_aibnr_set_attr。</li>
+<li>
+<p>停止业务时，需要先关闭aibnr数据流开关，再卸载aibnr的模型文件，最后去初始化aibnr模块，详细使用请参考接口ss_mpi_aibnr_disable、ss_mpi_aibnr_unload_model、ss_mpi_aibnr_exit。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+本章节涉及的相关接口均参考《AIISP 开发参考》“AIBNR API参考”章节。<br />
+加载ko脚本时需要指定模块参数-profile 0或者-profile 2。<br />
+线性普通模型推荐在12帧场景下应用，线性时域pro模型推荐在5帧场景下应用。</p>
+</blockquote>
+</li>
+</ol>
+<p>具体操作流程如<a href="#fig2341207137">图1</a>所示。</p>
+<p><strong>图 1</strong>  代码操作流程图<a name="fig2341207137"></a><br />
+<img alt="" src="../figures/%E4%BB%A3%E7%A0%81%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B%E5%9B%BE.png" title="代码操作流程图" /></p>
+<h4 id="sample用例介绍">sample用例介绍<a name="ZH-CN_TOPIC_0000002238203033"></a></h4>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002203282640">AIBNR线性普通模式</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002203122860">AIBNR线性时域模式</a></strong>  </p>
+</li>
+</ul>
+<h5 id="AIBNR线性普通模式">AIBNR线性普通模式<a name="ZH-CN_TOPIC_0000002203282640"></a></h5>
+<ol>
+<li>应用场景：AIBNR线性普通场景。</li>
+<li>用例功能：线性普通模式下，通过高ISO模型和低ISO模型的切换，实现不同照度下的图像清晰度提升。</li>
+<li>
+<p>操作流程</p>
+<p>可参考<a href="#ZH-CN_TOPIC_0000002238282873">代码流程</a>章节，其中加载的aibnr模型包含高ISO和低ISO两种模型，既可以手动指定使用高ISO模型或低ISO模型，又可以根据配置的ISO段自动选择模型，参考接口ss_mpi_aibnr_set_model_attr。</p>
+</li>
+<li>
+<p>数据流图如<a href="#fig122011362354">图1</a>所示。</p>
+</li>
+</ol>
+<p><strong>图 1</strong>  数据流图<a name="fig122011362354"></a><br />
+<img alt="" src="../figures/%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE.png" title="数据流图" /></p>
+<h5 id="AIBNR线性时域模式">AIBNR线性时域模式<a name="ZH-CN_TOPIC_0000002203122860"></a></h5>
+<ol>
+<li>应用场景：时域降噪场景。</li>
+<li>用例功能：时域模型细节表现更好，可以优化普通模型细节粗的问题。</li>
+<li>
+<p>操作流程</p>
+<p>可参考<a href="#ZH-CN_TOPIC_0000002238282873">代码流程</a>章节，其中加载的aibnr模型是pro时域模型。</p>
+</li>
+<li>
+<p>数据流图如<a href="#fig3821184993512">图1</a>所示。</p>
+</li>
+</ol>
+<p><strong>图 1</strong>  数据流图<a name="fig3821184993512"></a><br />
+<img alt="" src="../figures/%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE-0.png" title="数据流图-0" /></p>
+<h3 id="audio">audio<a name="ZH-CN_TOPIC_0000002200878876"></a></h3>
+<p>audio总共提供了6个sample用例，主要包括AI、AENC、ADEC、AO四大模块的接口调用流程，以下对各个用例分别进行介绍。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+本节涉及的相关接口参考《MPP 媒体处理软件 V6.0 开发参考》的“音频”章节。</p>
+</blockquote>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002250550597">sample_audio_ai_ao</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002250470509">sample_audio_ai_aenc</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002215630610">sample_audio_adec_ao</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002215470810">sample_audio_ai_vqe_process_ao</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002250550601">sample_audio_ai_to_ao_sys_chn</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002250470513">sample_audio_ai_to_ext_resample</a></strong>  </p>
+</li>
+</ul>
+<h4 id="sample_audio_ai_ao">sample_audio_ai_ao<a name="ZH-CN_TOPIC_0000002250550597"></a></h4>
+<ol>
+<li>用例功能：主要演示AI录音，AO播放相关接口调用流程。一般没有AI录音送AO播放的实际应用场景。</li>
+<li>
+<p>代码流程</p>
+</li>
+<li>
+<p>音频模块初始化，参考ss_mpi_audio_init接口。</p>
+</li>
+<li>设置AI设备属性，使能AI设备和通道，参考ss_mpi_ai_set_pub_attr、ss_mpi_ai_enable、ss_mpi_ai_enable_chn等接口。</li>
+<li>设置AO设备属性，使能AO设备和通道，参考ss_mpi_ao_set_pub_attr、ss_mpi_ao_enable、ss_mpi_ao_enable_chn等接口。</li>
+<li>配置内置ACODEC的采样率、输入方式、输入输出音量，参考OT_ACODEC_SET_I2S1_FS、OT_ACODEC_SET_MIXER_MIC、OT_ACODEC_SET_INPUT_VOLUME、OT_ACODEC_SET_OUTPUT_VOLUME等ioctl接口。</li>
+<li>
+<p>绑定AO通道到AI通道，或者创建线程从AI获取音频帧送往AO进行播放，参考ss_mpi_sys_bind、ss_mpi_ai_get_frame、ss_mpi_ao_send_frame等接口。</p>
+</li>
+<li>
+<p>数据流图</p>
+</li>
+</ol>
+<p><img alt="" src="../figures/zh-cn_image_0000002250477057.png" /></p>
+<h4 id="sample_audio_ai_aenc">sample_audio_ai_aenc<a name="ZH-CN_TOPIC_0000002250470509"></a></h4>
+<ol>
+<li>用例功能：主要演示AI录音，AENC编码相关接口调用流程。</li>
+<li>
+<p>代码流程</p>
+</li>
+<li>
+<p>音频模块初始化，参考ss_mpi_audio_init接口。</p>
+</li>
+<li>设置AI设备属性，使能AI设备和通道，参考ss_mpi_ai_set_pub_attr、ss_mpi_ai_enable、ss_mpi_ai_enable_chn等接口。</li>
+<li>配置内置ACODEC的采样率、输入方式、输入输出音量，参考OT_ACODEC_SET_I2S1_FS、OT_ACODEC_SET_MIXER_MIC、OT_ACODEC_SET_INPUT_VOLUME、OT_ACODEC_SET_OUTPUT_VOLUME等ioctl接口。</li>
+<li>创建编码通道，参考ss_mpi_aenc_create_chn接口。</li>
+<li>
+<p>绑定AI通道到AENC通道，或者创建线程从AI获取音频帧送往AENC进行编码，参考ss_mpi_sys_bind、ss_mpi_ai_get_frame、ss_mpi_aenc_send_frame等接口。</p>
+</li>
+<li>
+<p>数据流图</p>
+</li>
+</ol>
+<p><img alt="" src="../figures/zh-cn_image_0000002215477370.png" /></p>
+<h4 id="sample_audio_adec_ao">sample_audio_adec_ao<a name="ZH-CN_TOPIC_0000002215630610"></a></h4>
+<ol>
+<li>用例功能：主要演示ADEC解码，AO播放相关接口调用流程。</li>
+<li>
+<p>代码流程</p>
+</li>
+<li>
+<p>音频模块初始化，参考ss_mpi_audio_init接口。</p>
+</li>
+<li>创建解码通道，参考ss_mpi_adec_create_chn接口。</li>
+<li>设置AO设备属性，使能AO设备和通道，参考ss_mpi_ao_set_pub_attr、ss_mpi_ao_enable、ss_mpi_ao_enable_chn等接口。</li>
+<li>配置内置ACODEC的采样率、输入方式、输入输出音量，参考OT_ACODEC_SET_I2S1_FS、OT_ACODEC_SET_MIXER_MIC、OT_ACODEC_SET_INPUT_VOLUME、OT_ACODEC_SET_OUTPUT_VOLUME等ioctl接口。</li>
+<li>绑定ADEC通道到AO通道，参考ss_mpi_sys_bind接口。</li>
+<li>
+<p>创建线程从码流文件中读取数据送往解码通道进行解码，参考ss_mpi_adec_send_end_of_stream接口。</p>
+</li>
+<li>
+<p>数据流图</p>
+</li>
+</ol>
+<p><img alt="" src="../figures/zh-cn_image_0000002215637178.png" /></p>
+<h4 id="sample_audio_ai_vqe_process_ao">sample_audio_ai_vqe_process_ao<a name="ZH-CN_TOPIC_0000002215470810"></a></h4>
+<ol>
+<li>用例功能：主要演示AI录音并开启声音质量增强（VQE）功能，AO播放相关接口调用流程。</li>
+<li>
+<p>代码流程</p>
+</li>
+<li>
+<p>音频模块初始化，参考ss_mpi_audio_init接口。</p>
+</li>
+<li>设置AI设备属性，使能AI设备和通道，参考ss_mpi_ai_set_pub_attr、ss_mpi_ai_enable、ss_mpi_ai_enable_chn等接口。</li>
+<li>设置AI通道VQE属性，使能通道VQE，参考ss_mpi_ai_set_record_vqe_attr、ss_mpi_ai_set_talk_vqe_attr、ss_mpi_ai_set_talk_vqe_v2_attr、ss_mpi_ai_enable_vqe等接口。</li>
+<li>设置AO设备属性，使能AO设备和通道，参考ss_mpi_ao_set_pub_attr、ss_mpi_ao_enable、ss_mpi_ao_enable_chn等接口。</li>
+<li>配置内置ACODEC的采样率、输入方式、输入输出音量，参考OT_ACODEC_SET_I2S1_FS、OT_ACODEC_SET_MIXER_MIC、OT_ACODEC_SET_INPUT_VOLUME、OT_ACODEC_SET_OUTPUT_VOLUME等ioctl接口。</li>
+<li>
+<p>绑定AO通道到AI通道，或者创建线程从AI获取音频帧送往AO进行播放，参考ss_mpi_sys_bind、ss_mpi_ai_get_frame、ss_mpi_ao_send_frame等接口。</p>
+</li>
+<li>
+<p>数据流图</p>
+</li>
+</ol>
+<p><img alt="" src="../figures/zh-cn_image_0000002250557181.png" /></p>
+<h4 id="sample_audio_ai_to_ao_sys_chn">sample_audio_ai_to_ao_sys_chn<a name="ZH-CN_TOPIC_0000002250550601"></a></h4>
+<ol>
+<li>用例功能：主要演示AI录音，AO系统音通道播放相关接口调用流程。</li>
+<li>
+<p>代码流程</p>
+</li>
+<li>
+<p>音频模块初始化，参考ss_mpi_audio_init接口。</p>
+</li>
+<li>设置AI设备属性，使能AI设备和通道，参考ss_mpi_ai_set_pub_attr、ss_mpi_ai_enable、ss_mpi_ai_enable_chn等接口。</li>
+<li>设置AO设备属性，使能AO设备和通道，参考ss_mpi_ao_set_pub_attr、ss_mpi_ao_enable、ss_mpi_ao_enable_chn等接口。</li>
+<li>使能AO系统音通道，系统音通道号为OT_AO_SYS_CHN_ID，参考ss_mpi_ao_enable_chn接口。</li>
+<li>配置内置ACODEC的采样率、输入方式、输入输出音量，参考OT_ACODEC_SET_I2S1_FS、OT_ACODEC_SET_MIXER_MIC、OT_ACODEC_SET_INPUT_VOLUME、OT_ACODEC_SET_OUTPUT_VOLUME等ioctl接口。</li>
+<li>
+<p>绑定AO通道到AI通道，或者创建线程从AI获取音频帧送往AO进行播放，参考ss_mpi_sys_bind、ss_mpi_ai_get_frame、ss_mpi_ao_send_frame等接口。</p>
+</li>
+<li>
+<p>数据流图</p>
+</li>
+</ol>
+<p><img alt="" src="../figures/zh-cn_image_0000002250477061.png" /></p>
+<h4 id="sample_audio_ai_to_ext_resample">sample_audio_ai_to_ext_resample<a name="ZH-CN_TOPIC_0000002250470513"></a></h4>
+<ol>
+<li>用例功能：主要演示AI录音，使用vqe_res重采样功能库进行重采样相关接口调用流程。</li>
+<li>
+<p>代码流程</p>
+</li>
+<li>
+<p>音频模块初始化，参考ss_mpi_audio_init接口。</p>
+</li>
+<li>设置AI设备属性，使能AI设备和通道，参考ss_mpi_ai_set_pub_attr、ss_mpi_ai_enable、ss_mpi_ai_enable_chn等接口。</li>
+<li>配置内置ACODEC的采样率、输入方式、输入输出音量，参考OT_ACODEC_SET_I2S1_FS、OT_ACODEC_SET_MIXER_MIC、OT_ACODEC_SET_INPUT_VOLUME、OT_ACODEC_SET_OUTPUT_VOLUME等ioctl接口。</li>
+<li>获取vqe_res库对外接口符号，可以使用静态注册方式，也可以使用动态加载的方式，参考OT_VQE_USE_STATIC_MODULE_REGISTER功能宏的使用。</li>
+<li>
+<p>创建线程从AI获取帧，送vqe_res库处理接口进行重采样，将重采样后的数据存为文件，参考ss_mpi_ai_get_frame、ss_resample_process接口。</p>
+</li>
+<li>
+<p>数据流图</p>
+</li>
+</ol>
+<p><img alt="" src="../figures/zh-cn_image_0000002215477374.png" /></p>
+<h3 id="awb_online_calibration">awb_online_calibration<a name="ZH-CN_TOPIC_0000002235745161"></a></h3>
+<ol>
+<li>应用场景：量产标定AWB静态系数。</li>
+<li>用例功能：通过修正AWB的静态白平衡系数实现个体差异校正。</li>
+<li>
+<p>操作流程</p>
+</li>
+<li>
+<p>初始化vio模块，参考函数sample_vio_sys_init。</p>
+</li>
+<li>启动vi模块，参考函数sample_vio_start_vi。</li>
+<li>vi绑定venc，参考函数sample_comm_vi_bind_venc。</li>
+<li>等待ae状态稳定，参考函数awb_calib_check_ae_status。</li>
+<li>标定AWB静态系数，参考函数awb_calib_get_corr_gain，参考接口ss_mpi_isp_get_lightbox_gain。</li>
+<li>获取标定结果，参考接口ot_isp_awb_calibration_gain。</li>
+<li>去初始化vi模块，参考函数sample_awb_cali_stop_prev。</li>
+</ol>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+以上操作流程的接口均参考《ISP开发参考》文档。</p>
+</blockquote>
+<ol>
+<li>
+<p>数据流图</p>
+<p>详细数据流图请参考《ISP开发参考》“AWB量产标定工具”章节。</p>
+</li>
+</ol>
+<h3 id="bcd">bcd<a name="ZH-CN_TOPIC_0000002235919101"></a></h3>
+<p>bcd sample用于演示婴儿哭声检测算法BCD相关接口调用流程。</p>
+<ul>
+<li><strong><a href="#ZH-CN_TOPIC_0000002215643210">代码流程</a></strong>  </li>
+</ul>
+<h4 id="代码流程_1">代码流程<a name="ZH-CN_TOPIC_0000002215643210"></a></h4>
+<ol>
+<li>初始化哭声检测模块，配置算法参数，参考ss_baby_crying_detection_init接口。</li>
+<li>从哭声码流文件循环读取数据送算法处理接口进行检测，算法检测到哭声后会调用配置的回调函数，参考ss_baby_crying_detection_process接口。</li>
+<li>去初始化哭声检测模块，参考ss_baby_crying_detection_deinit接口。</li>
+</ol>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+本节涉及的相关接口参考《哭声检测 API参考》。</p>
+</blockquote>
+<h3 id="calcflicker">calcflicker<a name="ZH-CN_TOPIC_0000002235785329"></a></h3>
+<p>应用场景：本用例针对如电视机，电脑显示屏等有固定频率频闪的显示设备设计的频闪检测算法。对这种大屏幕进行频闪检测，并设置对应的曝光时间，进行自动抗闪。</p>
+<p>说明：</p>
+<p>详细功能描述及相关接口请参考《ISP开发参考》“Auto Flicker Type Detection”章节。</p>
+<p>本章节介绍如果使用频闪检测sample检测画面中出现的工频闪。具体请参考《ISP开发参考》“工频闪类型自适应Sample用例处理流程”章节。</p>
+<h3 id="fast_ae">fast_ae<a name="ZH-CN_TOPIC_0000002200745070"></a></h3>
+<p>本章节介绍如何使用fast_ae做通路快启，快速收敛曝光。</p>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002210369450">代码流程</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002245449317">sample使用指南</a></strong>  </p>
+</li>
+</ul>
+<h4 id="代码流程_2">代码流程<a name="ZH-CN_TOPIC_0000002210369450"></a></h4>
+<ol>
+<li>使用sample_comm_vi_start_sensor启动mipi_rx和时钟。</li>
+<li>调用sensor接口pfn_set_init配置sensor初始化序列和曝光，以及ae快速收敛使能。</li>
+<li>通路初始化(不包含sensor)。</li>
+<li>待通路收敛后，调用hi_mpi_isp_query_exposure_info，获取并打印收敛后曝光参数。</li>
+<li>保存码流，退出通路。</li>
+</ol>
+<h4 id="sample使用指南">sample使用指南<a name="ZH-CN_TOPIC_0000002245449317"></a></h4>
+<p>快速收敛曝光需区分有光敏快速收敛和无光敏快速收敛。</p>
+<ul>
+<li>有光敏快速收敛包含曝光初始值的查询和AE快速收敛算法。</li>
+<li>
+<p>无光敏快速收敛只包含AE快速收敛算法。</p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002210529262">有光敏快速收敛</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002245369465">无光敏快速收敛</a></strong>  </p>
+</li>
+</ul>
+<h5 id="有光敏快速收敛">有光敏快速收敛<a name="ZH-CN_TOPIC_0000002210529262"></a></h5>
+<ol>
+<li>不同照度下，执行fast_ae获取收敛后状态，将光敏输出与fast_ae结果绑定，绘制成曝光表。</li>
+<li>使用快启时，通过光敏值输出，查询曝光表中对应的曝光结果。</li>
+<li>将曝光结果作为初始值用于fast_ae的输入实现快速收敛。</li>
+</ol>
+<h5 id="无光敏快速收敛">无光敏快速收敛<a name="ZH-CN_TOPIC_0000002245369465"></a></h5>
+<p>在最常用的场景下，执行fast_ae获取收敛后状态，将该结果作为fast_ae初始值。</p>
+<h3 id="ir_auto">ir_auto<a name="ZH-CN_TOPIC_0000002235745165"></a></h3>
+<p>在光照条件不好（如夜晚）的场景，白天使用的滤光片成像效果不好，需要切换到红外滤光片，提升成像效果。本章节介绍如何实现自动切换滤光片的功能。</p>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002203965674">代码流程</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002204125510">sample用例介绍</a></strong>  </p>
+</li>
+</ul>
+<h4 id="代码流程_3">代码流程<a name="ZH-CN_TOPIC_0000002203965674"></a></h4>
+<ol>
+<li>配置ir_auto管脚复用，参考《SYS_CONFIG 配置指南》"IR_AUTO管脚复用”章节。</li>
+<li>启动数据通路，从前往后分别启动各媒体模型（VI、VPSS、VENC）。</li>
+<li>启动切换滤光片的线程。</li>
+<li>获取切换状态（ir_switch），详细使用请参考ss_mpi_isp_ir_auto接口（具体参考《ISP开发参考》文档）。</li>
+<li>根据切换状态（ir_switch），切换滤光片并调整颜色参数（饱和度、WB和CCM的参数，红外场景为黑白场景，不需要调整颜色）。</li>
+</ol>
+<p>代码流程如<a href="#fig14257199569">图1</a>所示。</p>
+<p><strong>图 1</strong>  ir_auto代码流程<a name="fig14257199569"></a><br />
+<img alt="" src="../figures/ir_auto%E4%BB%A3%E7%A0%81%E6%B5%81%E7%A8%8B.png" title="ir_auto代码流程" /></p>
+<h4 id="sample用例介绍_1">sample用例介绍<a name="ZH-CN_TOPIC_0000002204125510"></a></h4>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+请将ir calibaration中获取到的Rgain和Bgain范围值作为ir auto的参数输入。</p>
+</blockquote>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002238885873">ir calibration</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002239045713">ir auto</a></strong>  </p>
+</li>
+</ul>
+<h5 id="ir-calibration">ir calibration<a name="ZH-CN_TOPIC_0000002238885873"></a></h5>
+<ol>
+<li>应用场景：ss_mpi_isp_ir_auto参数标定：获取红外场景下的WB的Rgain和Bgain范围，此范围为自动切换滤光片的判断标准。</li>
+<li>用例功能：红外滤光片下，输出ss_mpi_isp_ir_auto参数中WB的Rgain和Bgain范围：rg_max、rg_min、bg_max、bg_min。</li>
+<li>
+<p>操作流程</p>
+</li>
+<li>
+<p>启动切换滤光片的线程</p>
+</li>
+<li>滤光片切换到红外滤光片</li>
+<li>获取WB统计信息，计算出相关阈值并输出</li>
+</ol>
+<h5 id="ir-auto">ir auto<a name="ZH-CN_TOPIC_0000002239045713"></a></h5>
+<ol>
+<li>应用场景：根据当前场景以及对应的参数范围，自动切换滤光片。</li>
+<li>用例功能：传入对应的ISO阈值、WB参数范围，获取到当前是否需要进行切换的状态。如果需要切换，则调度GPIO的接口，控制对应的管脚，从而控制滤光片开关。</li>
+<li>
+<p>操作流程</p>
+</li>
+<li>
+<p>启动切换滤光片的线程</p>
+</li>
+<li>传入对应的ISO阈值、WB参数范围，获取切换状态(ir_switch)，详细使用参考ss_mpi_isp_ir_auto接口（具体请参考《ISP开发参考》文档）</li>
+<li>
+<p>切换状态为OT_ISP_IR_SWITCH_TO_IR时，切换到ir(红外)状态</p>
+<ol>
+<li>调节饱和度为0、不做WB增益、调节CCM为线性</li>
+<li>通过GPIO控制滤光片，切换到ir(红外)状态</li>
+</ol>
+</li>
+<li>
+<p>切换状态为OT_ISP_IR_SWITCH_TO_NORMAL时，切换到normal(自然光)状态</p>
+<ol>
+<li>通过GPIO控制滤光片，切换到normal(自然光)状态</li>
+<li>调节饱和度、WB、CCM为自动模式</li>
+</ol>
+</li>
+</ol>
+<h3 id="lsc_online_cali">lsc_online_cali<a name="ZH-CN_TOPIC_0000002200904886"></a></h3>
+<p>lsc标定旨在减少由于镜头光学特性导致的图像边缘暗角现象。lsc可通过Mesh网格或Radial同心圆的方式统计图像亮度分布，计算校正增益，并对其进行补偿，进而提升图像质量。</p>
+<p>当前提供离线工具与在线sample两种标定方式，本章节将介绍对单一光源的在线sample Mesh LSC标定功能，运行sample程序后即可得到标定参数及校正后数据。离线工具部分可参考《图像质量调试工具使用指南》“MLSC标定”章节。</p>
+<p><strong>实现流程<a name="section1222571620473"></a></strong></p>
+<p>在lsc_online_cali目录下编译完成后即可得到可执行文件，执行./sample_lsc_online_cali -h可查看各sample执行指令，如./sample_lsc_online_cali 0 6，6表示标定精度。sample执行完成后即可得到标定参数及校正后数据。</p>
+<ol>
+<li>见lsc_online_cali.c文件，sample_lsc_usage函数查看sample执行指令格式。</li>
+<li>sample_lsc_cali_start_prev函数表示起整个通路，包括会获取sensor的一些配置，初始化vi及vpss等相关的一些配置。</li>
+<li>sample_lsc_run函数即做一些vi相关的配置，在线抓取一帧raw数据，准备进行标定。</li>
+<li>mesh_calibration_proc函数表示开始执行lsc标定算法，保存校正后的raw数据。</li>
+<li>最终调用mpi接口ss_mpi_isp_mesh_shading_calibration完成标定，涉及算法的描述可参考《ISP开发参考》“Mesh Shading”章节和《ISP图像调优指南》“Mesh Lens Shading”章节。</li>
+<li>sample_lsc_cali_stop_prev函数表示退出整个通路。</li>
+</ol>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+详细功能描述及相关接口请参考《ISP开发参考》“MeshShading量产标定工具”章节。<br />
+MLSC标定原理、标定序列采集要求、PQTools标定工具使用说明请参考《图像质量调试工具使用指南》“MLSC标定”章节。</p>
+</blockquote>
+<h3 id="kol">kol<a name="ZH-CN_TOPIC_0000002236038945"></a></h3>
+<p>kol sample的使用，详细请参考文档《KOL模式使用指南》。</p>
+<h3 id="quick_start_demo">quick_start_demo<a name="ZH-CN_TOPIC_0000002200878880"></a></h3>
+<p>请参考《Hi35xxVxxx 快速启动优化指南》的“快启sample说明”小节。</p>
+<h3 id="region">region<a name="ZH-CN_TOPIC_0000002222119801"></a></h3>
+<p>本章节将介绍如何在VI（chn）、VPSS（grp、chn）、VENC（chn）上叠加不同类型的区域，达到显示位图、色块、线框、线条的效果。</p>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002195725970">代码流程</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002231170957">sample用例介绍</a></strong>  </p>
+</li>
+</ul>
+<h4 id="代码流程_4">代码流程<a name="ZH-CN_TOPIC_0000002195725970"></a></h4>
+<ol>
+<li>启动数据流通路，从前往后分别启动各媒体模块（VI、VPSS、VENC......）</li>
+<li>创建所需的区域（overlay、cover、line......），详细使用参考接口ss_mpi_rgn_create</li>
+<li>
+<p>设置区域的相关属性，并将其绑定到媒体模块上（VI的chn、VPSS的grp、chn、VENC的chn......），详细使用请参考接口 ss_mpi_rgn_attach_to_chn/ss_mpi_rgn_attach_to_dev。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+本文涉及的相关接口均参考《MPP 媒体处理软件 V6.0 开发参考》“区域管理”章节。</p>
+</blockquote>
+</li>
+<li>
+<p>停止业务时，需要先对绑定在媒体模块上的所有区域解绑 (Detach region)，才能开始对媒体模块进行后续的销毁操作 (Destroy region)。</p>
+</li>
+</ol>
+<p>具体操作流程如<a href="#fig14475102220596">图1</a>所示。</p>
+<p><strong>图 1</strong>  代码流程图<a name="fig14475102220596"></a><br />
+<img alt="" src="../figures/%E4%BB%A3%E7%A0%81%E6%B5%81%E7%A8%8B%E5%9B%BE.png" title="代码流程图" /></p>
+<h4 id="sample用例介绍_2">sample用例介绍<a name="ZH-CN_TOPIC_0000002231170957"></a></h4>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002195765644">VI COVEREX</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002195925244">VENC OVERLAY</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002231285461">VPSS GRP COVER</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002231170961">VPSS CHN COVER</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002195765648">VPSS CHN CORNER_RECT</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002195925248">VPSS CHN CORNER_RECTEX</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002231285465">VPSS CHN LINEEX</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002231170965">VENC OVERLAY DRAW LINE</a></strong>  </p>
+</li>
+</ul>
+<h5 id="VI-COVEREX">VI COVEREX<a name="ZH-CN_TOPIC_0000002195765644"></a></h5>
+<ol>
+<li>
+<p>应用场景：在VI的输出码流上操作。</p>
+<ul>
+<li>对画面的某块区域进行遮挡时，可以对指定区域叠加纯色块。</li>
+<li>重点突出画面的某块区域或某个目标，可以使用空心框圈出来。例如人脸识别时，有一线框框住人脸。</li>
+</ul>
+</li>
+<li>
+<p>用例功能：在VI的码流上显示1个实心矩形，1个空心矩形，1个空心四边形，如<a href="#fig14287350152813">图1</a>所示。</p>
+</li>
+</ol>
+<p><strong>图 1</strong>  效果示例图<a name="fig14287350152813"></a><br />
+<img alt="" src="../figures/%E6%95%88%E6%9E%9C%E7%A4%BA%E4%BE%8B%E5%9B%BE.png" title="效果示例图" /></p>
+<ol>
+<li>
+<p>操作流程</p>
+</li>
+<li>
+<p>创建 COVEREX 区域，参考接口 ss_mpi_rgn_create</p>
+</li>
+<li>设置 COVEREX 相关属性（坐标、大小、形状），参考接口 ss_mpi_rgn_attach_to_chn 中的属性 ss_rgn_chn_attr</li>
+<li>将 COVEREX 绑定到 VI chn上，参考接口 ss_mpi_rgn_attach_to_chn</li>
+<li>将 COVEREX 从 VI chn 上解绑，参考接口 ss_mpi_rgn_detach_from_chn</li>
+<li>
+<p>销毁 COVEREX，参考接口 ss_mpi_rgn_destroy</p>
+</li>
+<li>
+<p>COVEREX的数据流图如<a href="#fig64931037182510">图2</a>所示。</p>
+<p><strong>图 2</strong>  COVEREX的数据流图<a name="fig64931037182510"></a><br />
+<img alt="" src="../figures/COVEREX%E7%9A%84%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE.png" title="COVEREX的数据流图" /></p>
+</li>
+</ol>
+<h5 id="VENC-OVERLAY">VENC OVERLAY<a name="ZH-CN_TOPIC_0000002195925244"></a></h5>
+<ol>
+<li>
+<p>应用场景：在VENC的码流上操作。</p>
+<ul>
+<li>可以在画面上显示中文、英文、数字，例如在每一帧画面显示时间戳，1秒或10秒更新一次。</li>
+<li>可以对叠加在画面上的图片进行整体或局部更新，对于特定像素格式的图片，还可以分别设置图片的前景和后景的透明度，以达到需要的显示效果。</li>
+</ul>
+</li>
+<li>
+<p>用例功能：在VENC的码流上显示8个位图。这8个位图的原图是同一个，通过转换为不同像素格式进行呈现。像素格式分别为 ARGB1555、ARGB4444、CLUT2、CLUT4、CLUT2_2X2、CLUT4_2X2、CLUT2_4X4、CLUT4_4X4</p>
+</li>
+<li>
+<p>位图使用</p>
+<ul>
+<li>SDK包提供了根据不同像素格式将BMP图转化为相应内存形式的方法，具体可参考如下文件：SDK包/soc/drivers/mpp/sample/common/loadbmp.c</li>
+<li>只有将位图转化为内存形式后，才能对位图进行叠加、更新等相应的操作</li>
+<li>位图更新的方法有两种，通过调用相应接口来实现：set_bmp 或 get_canvas + update_canvas。其中要实现局部更新，只能使用接口 get_canvas + update_canvas</li>
+</ul>
+</li>
+<li>
+<p>效果呈现</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002195935602.png" /></p>
+</li>
+<li>
+<p>操作流程</p>
+</li>
+<li>
+<p>创建 OVERLAY 区域，参考接口 ss_mpi_rgn_create（overlay的像素格式、背景色、大小等属性也在此接口设置）</p>
+</li>
+<li>设置 OVERLAY 属性，参考接口 ss_mpi_rgn_attach_to_chn 中的属性 ss_rgn_chn_attr</li>
+<li>将 OVERLAY 绑定到 VENC chn 上，参考接口 ss_mpi_rgn_attach_to_chn</li>
+<li>将位图读入内存，参考 sample 中的 region_mst_load_bmp</li>
+<li>将位图载入 OVERLAY，参考接口ss_mpi_rgn_set_bmp/ss_mpi_rgn_get_canvas_info + ss_mpi_rgn_update_canvas</li>
+<li>将 OVERLAY 从 VENC chn 上解绑，参考接口 ss_mpi_rgn_detach_from_chn</li>
+<li>
+<p>销毁 OVERLAY，参考接口 ss_mpi_rgn_destroy</p>
+</li>
+<li>
+<p>OVERLAY的数据流图如<a href="#fig5738018204616">图1</a>所示。</p>
+</li>
+</ol>
+<p><strong>图 1</strong>  OVERLAY的数据流图<a name="fig5738018204616"></a><br />
+<img alt="" src="../figures/OVERLAY%E7%9A%84%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE.png" title="OVERLAY的数据流图" /></p>
+<h5 id="VPSS-GRP-COVER">VPSS GRP COVER<a name="ZH-CN_TOPIC_0000002231285461"></a></h5>
+<ol>
+<li>应用场景：在VPSS GRP的码流上操作，VPSS的一个GRP能够对接多个chn，也就是多个chn能同时出一样的码流，这就是VPSS GRP的一出多。如果希望多个chn上的码流在相同位置增加遮挡效果，可直接在 GRP上叠加 COVER。而无需对每一个chn进行同样的操作。</li>
+<li>用例功能：在VPSS GRP的码流上叠加一个COVER，实现遮挡效果，如<a href="#fig14672832109">图1</a>所示。</li>
+</ol>
+<p><strong>图 1</strong>  GRP COVER效果图<a name="fig14672832109"></a><br />
+<img alt="" src="../figures/GRP-COVER%E6%95%88%E6%9E%9C%E5%9B%BE.png" title="GRP-COVER效果图" /></p>
+<ol>
+<li>
+<p>操作流程</p>
+</li>
+<li>
+<p>创建 COVER 区域，参考接口 ss_mpi_rgn_create</p>
+</li>
+<li>设置 COVER 相关属性（坐标、大小、形状），参考接口 ss_mpi_rgn_attach_to_dev 中的属性 ss_rgn_chn_attr</li>
+<li>将 COVER 绑定到 VPSS grp 上，参考接口 ss_mpi_rgn_attach_to_dev</li>
+<li>将 COVER 从 VPSS grp 上解绑，参考接口 ss_mpi_rgn_detach_from_dev</li>
+<li>
+<p>销毁 COVER，参考接口 ss_mpi_rgn_destroy</p>
+</li>
+<li>
+<p>GRP COVER数据流图如<a href="#fig51974541487">图2</a>所示。</p>
+</li>
+</ol>
+<p><strong>图 2</strong>  GRP COVER数据流图<a name="fig51974541487"></a><br />
+<img alt="" src="../figures/GRP-COVER%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE.png" title="GRP-COVER数据流图" /></p>
+<h5 id="VPSS-CHN-COVER">VPSS CHN COVER<a name="ZH-CN_TOPIC_0000002231170961"></a></h5>
+<ol>
+<li>应用场景：在VPSS chn的码流上操作，如果VPSS的一个grp只对接一个chn，那么无论在grp上还是在chn的码流上实现遮挡功能，都一样。但是如果是一个grp对接多个chn，而且想分别在每个chn的码流上实现位置、大小不同的遮挡效果，那么只能分别对每个chn进行叠加自定义的COVER。</li>
+<li>用例功能：在VPSS chn的码流上叠加一个实心COVER，一个空心COVER，效果如<a href="#fig1163011395338">图1</a>所示。</li>
+</ol>
+<p><strong>图 1</strong>  效果图<a name="fig1163011395338"></a><br />
+<img alt="" src="../figures/%E6%95%88%E6%9E%9C%E5%9B%BE.png" title="效果图" /></p>
+<ol>
+<li>
+<p>操作流程</p>
+</li>
+<li>
+<p>创建 COVER 区域，参考接口 ss_mpi_rgn_create</p>
+</li>
+<li>设置 COVER 相关属性（坐标、大小、形状），参考接口 ss_mpi_rgn_attach_to_chn 中的属性 ss_rgn_chn_attr</li>
+<li>将 COVER 绑定到 VPSS chn 上，参考接口 ss_mpi_rgn_attach_to_chn</li>
+<li>将 COVER 从 VPSS chn 上解绑，参考接口 ss_mpi_rgn_detach_from_chn</li>
+<li>
+<p>销毁 COVER，参考接口 ss_mpi_rgn_destroy</p>
+</li>
+<li>
+<p>COVER数据流图如<a href="#fig162711635164419">图2</a>所示。</p>
+</li>
+</ol>
+<p><strong>图 2</strong>  COVER数据流图<a name="fig162711635164419"></a><br />
+<img alt="" src="../figures/COVER%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE.png" title="COVER数据流图" /></p>
+<h5 id="VPSS-CHN-CORNER_RECT">VPSS CHN CORNER_RECT<a name="ZH-CN_TOPIC_0000002195765648"></a></h5>
+<ol>
+<li>应用场景：在VPSS chn的码流上操作，如果需要在码流上需要专门突出某个目标或某块区域，可以使用角框或线框对其进行标记。例如人脸识别。</li>
+<li>用例功能：在VPSS chn的码流上叠加一个CORNER_RECT，实现使用角框对画面中某个区域进行标记的效果。如<a href="#fig19682134518147">图1</a>所示。</li>
+</ol>
+<p><strong>图 1</strong>  CORNER_RECT效果图<a name="fig19682134518147"></a><br />
+<img alt="" src="../figures/CORNER_RECT%E6%95%88%E6%9E%9C%E5%9B%BE.png" title="CORNER_RECT效果图" /></p>
+<ol>
+<li>
+<p>操作流程</p>
+</li>
+<li>
+<p>创建 CORNER_RECT 区域，参考接口 ss_mpi_rgn_create</p>
+</li>
+<li>设置 CORNER_RECT 相关属性（坐标、大小、形状），参考接口 ss_mpi_rgn_attach_to_chn 中的属性 ss_rgn_chn_attr</li>
+<li>将 CORNER_RECT 绑定到 VPSS chn 上，参考接口 ss_mpi_rgn_attach_to_chn</li>
+<li>将 CORNER_RECT 从 VPSS chn 上解绑，参考接口 ss_mpi_rgn_detach_from_chn</li>
+<li>
+<p>销毁 CORNER_RECT ，参考接口 ss_mpi_rgn_destroy</p>
+</li>
+<li>
+<p>CORNER_RECT数据流图如<a href="#fig619413211462">图2</a>所示。</p>
+</li>
+</ol>
+<p><strong>图 2</strong>  CORNER_RECT数据流图<a name="fig619413211462"></a><br />
+<img alt="" src="../figures/CORNER_RECT%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE.png" title="CORNER_RECT数据流图" /></p>
+<h5 id="VPSS-CHN-CORNER_RECTEX">VPSS CHN CORNER_RECTEX<a name="ZH-CN_TOPIC_0000002195925248"></a></h5>
+<ol>
+<li>应用场景：在VPSS chn的码流上操作，如果需要在码流上需要专门突出某个目标或某块区域，可以使用角框或线框对其进行标记，例如人脸识别。</li>
+<li>用例功能：在VPSS chn的码流上叠加一个CORNER_RECTEX，实现使用角框对画面中某个区域进行标记的效果。如<a href="#fig48714142915">图1</a>所示。</li>
+</ol>
+<p><strong>图 1</strong>  CORNER_RECTEX效果图<a name="fig48714142915"></a><br />
+<img alt="" src="../figures/CORNER_RECTEX%E6%95%88%E6%9E%9C%E5%9B%BE.png" title="CORNER_RECTEX效果图" /></p>
+<ol>
+<li>
+<p>操作流程</p>
+</li>
+<li>
+<p>创建 CORNER_RECTEX 区域，参考接口 ss_mpi_rgn_create</p>
+</li>
+<li>设置 CORNER_RECTEX 相关属性（坐标、大小、形状），参考接口 ss_mpi_rgn_attach_to_chn 中的属性 ss_rgn_chn_attr</li>
+<li>将 CORNER_RECTEX 绑定到 VPSS chn 上，参考接口 ss_mpi_rgn_attach_to_chn</li>
+<li>将 CORNER_RECTEX 从 VPSS chn 上解绑，参考接口 ss_mpi_rgn_detach_from_chn</li>
+<li>
+<p>销毁 CORNER_RECTEX ，参考接口 ss_mpi_rgn_destroy</p>
+</li>
+<li>
+<p>CORNER_RECTEX数据流图如<a href="#fig92119547344">图2</a>所示。</p>
+</li>
+</ol>
+<p><strong>图 2</strong>  CORNER_RECTEX数据流图<a name="fig92119547344"></a><br />
+<img alt="" src="../figures/CORNER_RECTEX%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE.png" title="CORNER_RECTEX数据流图" /></p>
+<h5 id="VPSS-CHN-LINEEX">VPSS CHN LINEEX<a name="ZH-CN_TOPIC_0000002231285465"></a></h5>
+<ol>
+<li>应用场景：VPSS chn的码流上操作，在码流上实现画直线段的功能。根据自身需求，能够通过多次画线来实现任意多边形的效果。但线段数量有限制，具体可查看《MPP 媒体处理软件 V6.0 开发参考》“区域管理”章节。</li>
+<li>用例功能：在VPSS chn的码流上叠加4条长度不同的直线段。效果如<a href="#fig123101903817">图1</a>所示。</li>
+</ol>
+<p><strong>图 1</strong>  LINEEX效果图<a name="fig123101903817"></a><br />
+<img alt="" src="../figures/LINEEX%E6%95%88%E6%9E%9C%E5%9B%BE.png" title="LINEEX效果图" /></p>
+<ol>
+<li>
+<p>操作流程</p>
+</li>
+<li>
+<p>创建 LINEEX 区域，参考接口 ss_mpi_rgn_create</p>
+</li>
+<li>设置 LINEEX 相关属性（坐标、大小、形状），参考接口 ss_mpi_rgn_attach_to_chn 中的属性 ss_rgn_chn_attr</li>
+<li>将 LINEEX 绑定到 VPSS chn 上，参考接口 ss_mpi_rgn_attach_to_chn</li>
+<li>将 LINEEX 从 VPSS chn 上解绑，参考接口 ss_mpi_rgn_detach_from_chn</li>
+<li>
+<p>销毁 LINEEX ，参考接口 ss_mpi_rgn_destroy</p>
+</li>
+<li>
+<p>LINEEX数据流图如<a href="#fig857934755112">图2</a>所示。</p>
+</li>
+</ol>
+<p><strong>图 2</strong>  LINEEX数据流图<a name="fig857934755112"></a><br />
+<img alt="" src="../figures/LINEEX%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE.png" title="LINEEX数据流图" /></p>
+<h5 id="VENC-OVERLAY-DRAW-LINE">VENC OVERLAY DRAW LINE<a name="ZH-CN_TOPIC_0000002231170965"></a></h5>
+<ol>
+<li>应用场景：在VENC的码流上操作，并实现画直线段的功能，而且没有数量的限制。可用在人脸识别数量较多的场景，弥补COVER、CORNER_RECT数量不够用的情况。</li>
+<li>用例功能：分别创建像素格式为 ARGB1555、ARGB4444、CLUT2、CLUT4、CLUT2_2X2、CLUT4_2X2、CLUT2_4X4、CLUT4_4X4，背景色透明的 OVERLAY 区域，叠加到码流上，在各个 OVERLAY 上画多条直线段。效果如<a href="#fig882718389544">图1</a>所示。</li>
+</ol>
+<p><strong>图 1</strong>  OVERLAY DRAW LINE效果图<a name="fig882718389544"></a><br />
+<img alt="" src="../figures/OVERLAY-DRAW-LINE%E6%95%88%E6%9E%9C%E5%9B%BE.png" title="OVERLAY-DRAW-LINE效果图" /></p>
+<ol>
+<li>
+<p>操作流程</p>
+</li>
+<li>
+<p>创建 OVERLAY 区域，参考接口 ss_mpi_rgn_create（overlay的像素格式、背景色、大小等属性也在此接口设置）</p>
+</li>
+<li>设置 OVERLAY 属性，参考接口 ss_mpi_rgn_attach_to_chn 中的属性 ss_rgn_chn_attr</li>
+<li>将 OVERLAY 绑定到 VENC chn 上，参考接口 ss_mpi_rgn_attach_to_chn</li>
+<li>将位图读入内存，参考 sample 中的 region_mst_load_bmp</li>
+<li>将位图载入 OVERLAY，参考接口 ss_mpi_rgn_set_bmp/ss_mpi_rgn_get_canvas_info + ss_mpi_rgn_update_canvas</li>
+<li>分别在各个 OVERLAY 上画直线段，参考 sample 中的 sample_region_do_osd_drawline</li>
+<li>将 OVERLAY 从 VENC  chn 上解绑，参考接口 ss_mpi_rgn_detach_from_chn</li>
+<li>
+<p>销毁 OVERLAY，参考接口 ss_mpi_rgn_destroy</p>
+</li>
+<li>
+<p>OVERLAY DRAW LINE数据流图<a href="#fig147313118113">图2</a>所示。</p>
+</li>
+</ol>
+<p><strong>图 2</strong>  OVERLAY DRAW LINE数据流图<a name="fig147313118113"></a><br />
+<img alt="" src="../figures/OVERLAY-DRAW-LINE%E6%95%B0%E6%8D%AE%E6%B5%81%E5%9B%BE.png" title="OVERLAY-DRAW-LINE数据流图" /></p>
+<h3 id="scene_auto">scene_auto<a name="ZH-CN_TOPIC_0000002235919105"></a></h3>
+<p>详细内容请参考《图像自适应 使用说明》文档。</p>
+<p>scene_auto的运行依赖业务进程先创建的媒体通路，所以先运行业务进程。默认与scene_auto搭配运行的sample是vie，在运行之前将vie和scene_auto进行编译，sample_vie，sample_scene，param/sensor_xxx一起放在板上。</p>
+<ol>
+<li>
+<p>先运行sample_vie 0并选择一个mode，选择0后如图所示。</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002238920417.png" /></p>
+</li>
+<li>
+<p>用telnet再打开一个命令窗口，运行scene_auto，根据提示先选择1进行初始化并加载ini参数，然后选择videomode index 0或1即可运行，按4可退出。运行过程中可以输入2暂停，输入3重新选择videomode index 0或1后继续运行。</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002210470384.png" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+前面所选择的videomode index 0/1，代表了不同的图像参数，对应于config_cfgaccess_hd.ini中的scene_param_N。</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="security_subsys">security_subsys<a name="ZH-CN_TOPIC_0000002236038949"></a></h3>
+<p>本章节介绍在linux平台中，sample对多个安全模块中的用例演示。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-caution.gif" /> <strong>注意：</strong> <br />
+index为1-11，index为7时会失败，需要在sample_rsa.c文件中，添加公私钥priv_key与pub_key。</p>
+</blockquote>
+<ol>
+<li>
+<p>sample编译</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cd source/mpp/sample/security_subsys
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>make -j
+</span></code></pre></div>
+<p>sample_cipher目录 source/mpp/sample/security_subsys/</p>
+<p>ko文件夹目录source/out/ko/</p>
+</li>
+<li>
+<p>sample运行描述</p>
+</li>
+<li>
+<p>加载ko示例</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cd ko/load3516cv610/
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>./load3516cv610_20g_debug -mmz_start 0x44000000 -i
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>cd ..
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>insmod ot_otp.ko
+</span></code></pre></div>
+</li>
+<li>
+<p>执行用例</p>
+<p>./sample_cipher &lt;index&gt;</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002217976044.png" /></p>
+</li>
+<li>
+<p>用例描述</p>
+<p>REE侧与TEE侧都支持，执行用例相关接口详见《安全子系统 API 参考》。</p>
+<p><strong>表 1</strong>  算法对应列表</p>
+<p><a name="table789455003311"></a><br />
+<table><thead align="left"><tr id="row589417505339"><th class="cellrowborder" valign="top" width="22.99%" id="mcps1.2.3.1.1"><p id="p589475053312"><a name="p589475053312"></a><a name="p589475053312"></a>算法名称</p><br />
+</th><br />
+<th class="cellrowborder" valign="top" width="77.01%" id="mcps1.2.3.1.2"><p id="p1389418508332"><a name="p1389418508332"></a><a name="p1389418508332"></a>算法描述</p><br />
+</th><br />
+</tr><br />
+</thead><br />
+<tbody><tr id="row1489495003315"><td class="cellrowborder" valign="top" width="22.99%" headers="mcps1.2.3.1.1 "><p id="p14894250203312"><a name="p14894250203312"></a><a name="p14894250203312"></a>sample_symc_clearkey</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="77.01%" headers="mcps1.2.3.1.2 "><p id="p118947503338"><a name="p118947503338"></a><a name="p118947503338"></a>aes算法cbc,ofb,cfb,ctr,ccm和gcm模式使用明文key进行加解密运算</p><br />
+</td><br />
+</tr><br />
+<tr id="row1689415011338"><td class="cellrowborder" valign="top" width="22.99%" headers="mcps1.2.3.1.1 "><p id="p9274191823615"><a name="p9274191823615"></a><a name="p9274191823615"></a>sample_symc_rootkey</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="77.01%" headers="mcps1.2.3.1.2 "><p id="p158940501337"><a name="p158940501337"></a><a name="p158940501337"></a>aes算法cbc,ofb,cfb,ctr模式使用roottkey进行加解密运算</p><br />
+</td><br />
+</tr><br />
+<tr id="row118943503331"><td class="cellrowborder" valign="top" width="22.99%" headers="mcps1.2.3.1.1 "><p id="p02731418183619"><a name="p02731418183619"></a><a name="p02731418183619"></a>sample_symc_mac</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="77.01%" headers="mcps1.2.3.1.2 "><p id="p1689416502336"><a name="p1689416502336"></a><a name="p1689416502336"></a>基于对称秘钥分组加密算法的消息认证码</p><br />
+</td><br />
+</tr><br />
+<tr id="row158940508331"><td class="cellrowborder" valign="top" width="22.99%" headers="mcps1.2.3.1.1 "><p id="p227301812369"><a name="p227301812369"></a><a name="p227301812369"></a>sample_hash</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="77.01%" headers="mcps1.2.3.1.2 "><p id="p58941950173319"><a name="p58941950173319"></a><a name="p58941950173319"></a>hash克隆，单包数据计算，多次update，hmac计算</p><br />
+</td><br />
+</tr><br />
+<tr id="row108941850173310"><td class="cellrowborder" valign="top" width="22.99%" headers="mcps1.2.3.1.1 "><p id="p427341843618"><a name="p427341843618"></a><a name="p427341843618"></a>sample_pbkdf2</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="77.01%" headers="mcps1.2.3.1.2 "><p id="p38942505333"><a name="p38942505333"></a><a name="p38942505333"></a>使用sha224，sha256，sm3派生密钥</p><br />
+</td><br />
+</tr><br />
+<tr id="row1489435023317"><td class="cellrowborder" valign="top" width="22.99%" headers="mcps1.2.3.1.1 "><p id="p22731518183615"><a name="p22731518183615"></a><a name="p22731518183615"></a>sample_trng</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="77.01%" headers="mcps1.2.3.1.2 "><p id="p108945507339"><a name="p108945507339"></a><a name="p108945507339"></a>生成随机数</p><br />
+</td><br />
+</tr><br />
+<tr id="row4894155063311"><td class="cellrowborder" valign="top" width="22.99%" headers="mcps1.2.3.1.1 "><p id="p16272818103611"><a name="p16272818103611"></a><a name="p16272818103611"></a>sample_rsa</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="77.01%" headers="mcps1.2.3.1.2 "><p id="p6894115083312"><a name="p6894115083312"></a><a name="p6894115083312"></a>rsa公钥加密、私钥解密，私钥签名、公钥验证</p><br />
+</td><br />
+</tr><br />
+<tr id="row15894185073313"><td class="cellrowborder" valign="top" width="22.99%" headers="mcps1.2.3.1.1 "><p id="p1327291853616"><a name="p1327291853616"></a><a name="p1327291853616"></a>sample_ecc</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="77.01%" headers="mcps1.2.3.1.2 "><p id="p689475063316"><a name="p689475063316"></a><a name="p689475063316"></a>ECC公私钥对生成，检查点在ECC曲线上，ECDH密钥交换，私钥签名、公钥验证</p><br />
+</td><br />
+</tr><br />
+<tr id="row189418504334"><td class="cellrowborder" valign="top" width="22.99%" headers="mcps1.2.3.1.1 "><p id="p2272818133617"><a name="p2272818133617"></a><a name="p2272818133617"></a>sample_sm4</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="77.01%" headers="mcps1.2.3.1.2 "><p id="p8894115017331"><a name="p8894115017331"></a><a name="p8894115017331"></a>sm4算法使用clearkey和rootkey进行加解密</p><br />
+</td><br />
+</tr><br />
+<tr id="row158941350103312"><td class="cellrowborder" valign="top" width="22.99%" headers="mcps1.2.3.1.1 "><p id="p425611853618"><a name="p425611853618"></a><a name="p425611853618"></a>sample_sm3</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="77.01%" headers="mcps1.2.3.1.2 "><p id="p3894135093315"><a name="p3894135093315"></a><a name="p3894135093315"></a>hash克隆，单包数据计算，多次update，hmac-sm3计算</p><br />
+</td><br />
+</tr><br />
+<tr id="row9894185083313"><td class="cellrowborder" valign="top" width="22.99%" headers="mcps1.2.3.1.1 "><p id="p6894350123319"><a name="p6894350123319"></a><a name="p6894350123319"></a>sample_sm2</p><br />
+</td><br />
+<td class="cellrowborder" valign="top" width="77.01%" headers="mcps1.2.3.1.2 "><p id="p9894175011331"><a name="p9894175011331"></a><a name="p9894175011331"></a>SM2公钥加密、私钥解密，签名验证、检查点在ECC曲线上</p><br />
+</td><br />
+</tr><br />
+</tbody><br />
+</table></p>
+</li>
+</ol>
+<h3 id="smart_ae">smart_ae<a name="ZH-CN_TOPIC_0000002235785333"></a></h3>
+<p>本章节介绍如何使用目标检测算法，实现智能ae功能。接口文档参考《智能PQ 使用指导》</p>
+<p><strong>图 1</strong>  智能AE的作用流程<a name="fig10317154445417"></a><br />
+<img alt="" src="../figures/%E6%99%BA%E8%83%BDAE%E7%9A%84%E4%BD%9C%E7%94%A8%E6%B5%81%E7%A8%8B.png" title="智能AE的作用流程" /></p>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002245671073">代码流程</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002210631016">数据流图</a></strong>  </p>
+</li>
+</ul>
+<h4 id="代码流程_5">代码流程<a name="ZH-CN_TOPIC_0000002245671073"></a></h4>
+<ol>
+<li>启动数据通路</li>
+<li>启动目标检测算法线程</li>
+<li>调用hi_mpi_smartae_update_roi_info将检测结果配置到isp中，收敛ae曝光</li>
+<li>将检测结果配置到region，在最终画面绘制人脸/人形框</li>
+</ol>
+<h4 id="数据流图">数据流图<a name="ZH-CN_TOPIC_0000002210631016"></a></h4>
+<p><img alt="" src="../figures/zh-cn_image_0000002245807357.png" /></p>
+<h3 id="spi_lcd">spi_lcd<a name="ZH-CN_TOPIC_0000002201038672"></a></h3>
+<p>硬件环境搭建适配参考：</p>
+<p>以Hi3516CV610-20S单板为例，lcd屏幕管脚与单板连接管脚对应关系如<a href="#table7551151173711">表1</a>所示。详细的硬件设计指导，请参考《Hi3516CV610 硬件设计用户指南（QFN）》。</p>
+<p><strong>表 1</strong>  硬件环境搭建适配</p>
+<p><a name="table7551151173711"></a></p>
+<table><thead align="left"><tr id="row1855121153710"><th class="cellrowborder" valign="top" width="30.103010301030103%" id="mcps1.2.4.1.1"><p id="p161341422103717"><a name="p161341422103717"></a><a name="p161341422103717"></a>PIN</p>
+</th>
+<th class="cellrowborder" valign="top" width="26.042604260426046%" id="mcps1.2.4.1.2"><p id="p181341822163713"><a name="p181341822163713"></a><a name="p181341822163713"></a>LCD模组端</p>
+</th>
+<th class="cellrowborder" valign="top" width="43.85438543854385%" id="mcps1.2.4.1.3"><p id="p181344229377"><a name="p181344229377"></a><a name="p181344229377"></a>接主板</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row175521211183710"><td class="cellrowborder" valign="top" width="30.103010301030103%" headers="mcps1.2.4.1.1 "><p id="p15135112211372"><a name="p15135112211372"></a><a name="p15135112211372"></a>1</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.042604260426046%" headers="mcps1.2.4.1.2 "><p id="p181351522103713"><a name="p181351522103713"></a><a name="p181351522103713"></a>VDD-2.8V</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.85438543854385%" headers="mcps1.2.4.1.3 "><p id="p20135622143718"><a name="p20135622143718"></a><a name="p20135622143718"></a>主板连接Sensor板后，接到Sensor板2.8V</p>
+</td>
+</tr>
+<tr id="row145521611143713"><td class="cellrowborder" valign="top" width="30.103010301030103%" headers="mcps1.2.4.1.1 "><p id="p313532203716"><a name="p313532203716"></a><a name="p313532203716"></a>2</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.042604260426046%" headers="mcps1.2.4.1.2 "><p id="p6135132243716"><a name="p6135132243716"></a><a name="p6135132243716"></a>GND</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.85438543854385%" headers="mcps1.2.4.1.3 "><p id="p1135422183715"><a name="p1135422183715"></a><a name="p1135422183715"></a>GND</p>
+</td>
+</tr>
+<tr id="row655241116374"><td class="cellrowborder" valign="top" width="30.103010301030103%" headers="mcps1.2.4.1.1 "><p id="p1513518226377"><a name="p1513518226377"></a><a name="p1513518226377"></a>3</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.042604260426046%" headers="mcps1.2.4.1.2 "><p id="p21355228370"><a name="p21355228370"></a><a name="p21355228370"></a>RST</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.85438543854385%" headers="mcps1.2.4.1.3 "><p id="p61351922173719"><a name="p61351922173719"></a><a name="p61351922173719"></a>GPIO6_5，复用为GPIO，RST信号接到R814</p>
+</td>
+</tr>
+<tr id="row17552161193714"><td class="cellrowborder" valign="top" width="30.103010301030103%" headers="mcps1.2.4.1.1 "><p id="p14135132233715"><a name="p14135132233715"></a><a name="p14135132233715"></a>4</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.042604260426046%" headers="mcps1.2.4.1.2 "><p id="p1013517221377"><a name="p1013517221377"></a><a name="p1013517221377"></a>CS</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.85438543854385%" headers="mcps1.2.4.1.3 "><p id="p1113502283720"><a name="p1113502283720"></a><a name="p1113502283720"></a>GPIO7_0，复用为SPI0_CSN，下件R802和R803、R848</p>
+</td>
+</tr>
+<tr id="row2552161193718"><td class="cellrowborder" valign="top" width="30.103010301030103%" headers="mcps1.2.4.1.1 "><p id="p1135132263720"><a name="p1135132263720"></a><a name="p1135132263720"></a>5</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.042604260426046%" headers="mcps1.2.4.1.2 "><p id="p1013511229372"><a name="p1013511229372"></a><a name="p1013511229372"></a>GND</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.85438543854385%" headers="mcps1.2.4.1.3 "><p id="p213552215376"><a name="p213552215376"></a><a name="p213552215376"></a>GND</p>
+</td>
+</tr>
+<tr id="row195531211133710"><td class="cellrowborder" valign="top" width="30.103010301030103%" headers="mcps1.2.4.1.1 "><p id="p9135422113714"><a name="p9135422113714"></a><a name="p9135422113714"></a>6</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.042604260426046%" headers="mcps1.2.4.1.2 "><p id="p8135172220375"><a name="p8135172220375"></a><a name="p8135172220375"></a>SCL</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.85438543854385%" headers="mcps1.2.4.1.3 "><p id="p51351922183718"><a name="p51351922183718"></a><a name="p51351922183718"></a>GPIO6_7，复用为SPI0_SCLK，下件R845和R803、R807</p>
+</td>
+</tr>
+<tr id="row1655381113372"><td class="cellrowborder" valign="top" width="30.103010301030103%" headers="mcps1.2.4.1.1 "><p id="p1513542293710"><a name="p1513542293710"></a><a name="p1513542293710"></a>7</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.042604260426046%" headers="mcps1.2.4.1.2 "><p id="p9135202214374"><a name="p9135202214374"></a><a name="p9135202214374"></a>GND</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.85438543854385%" headers="mcps1.2.4.1.3 "><p id="p12135152293713"><a name="p12135152293713"></a><a name="p12135152293713"></a>GND</p>
+</td>
+</tr>
+<tr id="row145532112372"><td class="cellrowborder" valign="top" width="30.103010301030103%" headers="mcps1.2.4.1.1 "><p id="p10135182219377"><a name="p10135182219377"></a><a name="p10135182219377"></a>8</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.042604260426046%" headers="mcps1.2.4.1.2 "><p id="p71351222153710"><a name="p71351222153710"></a><a name="p71351222153710"></a>SDA</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.85438543854385%" headers="mcps1.2.4.1.3 "><p id="p11135152212373"><a name="p11135152212373"></a><a name="p11135152212373"></a>GPIO6_6，复用为SPI0_SDO，下件R805和R806</p>
+</td>
+</tr>
+<tr id="row855331116371"><td class="cellrowborder" valign="top" width="30.103010301030103%" headers="mcps1.2.4.1.1 "><p id="p1213520224379"><a name="p1213520224379"></a><a name="p1213520224379"></a>9</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.042604260426046%" headers="mcps1.2.4.1.2 "><p id="p1213552203712"><a name="p1213552203712"></a><a name="p1213552203712"></a>GND</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.85438543854385%" headers="mcps1.2.4.1.3 "><p id="p11135142217379"><a name="p11135142217379"></a><a name="p11135142217379"></a>GND</p>
+</td>
+</tr>
+<tr id="row4553101115376"><td class="cellrowborder" valign="top" width="30.103010301030103%" headers="mcps1.2.4.1.1 "><p id="p413516229371"><a name="p413516229371"></a><a name="p413516229371"></a>10</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.042604260426046%" headers="mcps1.2.4.1.2 "><p id="p171351822173710"><a name="p171351822173710"></a><a name="p171351822173710"></a>TE</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.85438543854385%" headers="mcps1.2.4.1.3 "><p id="p1913542243714"><a name="p1913542243714"></a><a name="p1913542243714"></a>GPIO7_1，复用为GPIO，下件R846和R847</p>
+</td>
+</tr>
+<tr id="row2055471153712"><td class="cellrowborder" valign="top" width="30.103010301030103%" headers="mcps1.2.4.1.1 "><p id="p913511221375"><a name="p913511221375"></a><a name="p913511221375"></a>11</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.042604260426046%" headers="mcps1.2.4.1.2 "><p id="p113517226372"><a name="p113517226372"></a><a name="p113517226372"></a>RS</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.85438543854385%" headers="mcps1.2.4.1.3 "><p id="p111351822193718"><a name="p111351822193718"></a><a name="p111351822193718"></a>GPIO7_3，复用为GPIO，下件R3和R4</p>
+</td>
+</tr>
+<tr id="row195541115371"><td class="cellrowborder" valign="top" width="30.103010301030103%" headers="mcps1.2.4.1.1 "><p id="p613582263712"><a name="p613582263712"></a><a name="p613582263712"></a>12</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.042604260426046%" headers="mcps1.2.4.1.2 "><p id="p131361122103717"><a name="p131361122103717"></a><a name="p131361122103717"></a>K</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.85438543854385%" headers="mcps1.2.4.1.3 "><p id="p413642263710"><a name="p413642263710"></a><a name="p413642263710"></a>接4.3欧姆电阻到地</p>
+</td>
+</tr>
+<tr id="row105541711103710"><td class="cellrowborder" valign="top" width="30.103010301030103%" headers="mcps1.2.4.1.1 "><p id="p13136132203711"><a name="p13136132203711"></a><a name="p13136132203711"></a>13</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.042604260426046%" headers="mcps1.2.4.1.2 "><p id="p3136182210376"><a name="p3136182210376"></a><a name="p3136182210376"></a>A</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.85438543854385%" headers="mcps1.2.4.1.3 "><p id="p01365225376"><a name="p01365225376"></a><a name="p01365225376"></a>接到主板3.3V</p>
+</td>
+</tr>
+<tr id="row8554141163720"><td class="cellrowborder" valign="top" width="30.103010301030103%" headers="mcps1.2.4.1.1 "><p id="p11136172223718"><a name="p11136172223718"></a><a name="p11136172223718"></a>14</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.042604260426046%" headers="mcps1.2.4.1.2 "><p id="p71361122123717"><a name="p71361122123717"></a><a name="p71361122123717"></a>IOVCC</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.85438543854385%" headers="mcps1.2.4.1.3 "><p id="p1513662263711"><a name="p1513662263711"></a><a name="p1513662263711"></a>接到主板1.8V</p>
+</td>
+</tr>
+<tr id="row115542110374"><td class="cellrowborder" rowspan="5" valign="top" width="30.103010301030103%" headers="mcps1.2.4.1.1 "><p id="p131361422183720"><a name="p131361422183720"></a><a name="p131361422183720"></a>Sensor配置</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.042604260426046%" headers="mcps1.2.4.1.2 "><p id="p713616228372"><a name="p713616228372"></a><a name="p713616228372"></a>GPIO7_2</p>
+</td>
+<td class="cellrowborder" valign="top" width="43.85438543854385%" headers="mcps1.2.4.1.3 "><p id="p713632213716"><a name="p713632213716"></a><a name="p713632213716"></a>复用为Sensor0_rstn,上件R801</p>
+</td>
+</tr>
+<tr id="row18555151123716"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p19136822103718"><a name="p19136822103718"></a><a name="p19136822103718"></a>GPIO6_4</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="p413672216376"><a name="p413672216376"></a><a name="p413672216376"></a>复用为Sensor0_clk</p>
+</td>
+</tr>
+<tr id="row1555531115377"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p11136622133718"><a name="p11136622133718"></a><a name="p11136622133718"></a>GPIO0_7</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="p113615228377"><a name="p113615228377"></a><a name="p113615228377"></a>复用为I2C0_SDA，用于配置Sensor，上件R1106，下件R1119</p>
+</td>
+</tr>
+<tr id="row75554116375"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p161361122113713"><a name="p161361122113713"></a><a name="p161361122113713"></a>GPIO0_6</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="p613614227374"><a name="p613614227374"></a><a name="p613614227374"></a>复用为I2C0_SCL，用于配置Sensor，上件R1105，下件R1120</p>
+</td>
+</tr>
+<tr id="row19555141183717"><td class="cellrowborder" valign="top" headers="mcps1.2.4.1.1 "><p id="p6136142219374"><a name="p6136142219374"></a><a name="p6136142219374"></a>跳线帽</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.4.1.2 "><p id="p2136162203715"><a name="p2136162203715"></a><a name="p2136162203715"></a>J1302接跳线帽</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<ol>
+<li>
+<p>注意事项</p>
+<ol>
+<li>sample spi_lcd的功能是用spi_lcd屏幕显示输出图像。</li>
+<li>首先准备好一块spi_lcd屏幕，spi_lcd屏幕按照<a href="#table7551151173711">表1</a>连接。spi_lcd sample不能直接运行，需要手动去编译相应的spi_lcd屏幕驱动，加载屏幕驱动和ot_spi_dma_transfer.ko之后才可验证。</li>
+<li>灌码流作为输入源时，需要适配软解码ffmpeg，详见sample中readme.txt文件。</li>
+</ol>
+</li>
+<li>
+<p>执行选项</p>
+<p>sample使用包含两个选项，一个是sensor输入，一个是灌码流输入。通路获取数据帧后送spi_lcd屏幕显示。</p>
+</li>
+<li>
+<p>数据流程</p>
+<p><strong>图 1</strong> <strong>数据流程</strong><a name="fig142018488147"></a><br />
+<img alt="" src="../figures/%E6%95%B0%E6%8D%AE%E6%B5%81%E7%A8%8B.png" title="数据流程" /></p>
+</li>
+</ol>
+<h3 id="svp">svp<a name="ZH-CN_TOPIC_0000002200878884"></a></h3>
+<p>本章主要介绍SVP的相关Sample，主要包括IVE和SVP_NPU两个模块的示例代码。</p>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002247861805">IVE</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002212861732">SVP_NPU</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002247781761">AIComponent</a></strong>  </p>
+</li>
+</ul>
+<h4 id="IVE">IVE<a name="ZH-CN_TOPIC_0000002247861805"></a></h4>
+<p>IVE总共提供了9个Sample，主要包含了</p>
+<ol>
+<li>
+<p>Canny,&lt;complete&gt;:0, part canny;1,complete canny. (FILE-&gt;IVE-&gt;FILE)</p>
+<p>Canny 操作是一种经典的边缘检测算法，Sample中共提供了两种不同的实现方式，主要区别在于是否包含了完整的Canny步骤。Sample中读取灰度图进行边缘检测，得到运算后的检测结果图并保存为文件，两种Canny边缘提取流程如<a href="#fig429714182919">图1</a>所示。</p>
+<p><strong>图 1</strong>  Canny边缘提取<a name="fig429714182919"></a><br />
+<img alt="" src="../figures/Canny%E8%BE%B9%E7%BC%98%E6%8F%90%E5%8F%96.png" title="Canny边缘提取" /></p>
+<ul>
+<li>
+<p>part canny 仅实现了Canny算法的部分步骤，只进行了滤波和梯度计算，省略了极大值抑制和双阈值检测。特点是实现简单，计算速度快，边缘检测效果较差，容易出现噪声或断裂的边缘，适用于对实时性要求高，但对边缘精度要求不高的场景。</p>
+<p>核心步骤：</p>
+<p>①梯度计算 ss_mpi_ive_mag_and_ang；</p>
+<p>②阈值化处理 ss_mpi_ive_threshold_u16。</p>
+<p>part canny边缘检测效果如<a href="#fig1566154516577">图2</a>所示。</p>
+<p><strong>图 2</strong>  part canny<a name="fig1566154516577"></a><br />
+<img alt="" src="../figures/part-canny.png" title="part-canny" /></p>
+</li>
+<li>
+<p>complete canny 严格遵循了Canny算法的所有步骤，包括高斯滤波、梯度计算、非极大值抑制、双阈值检测和边缘连接。特点是实现复杂，计算量较大，边缘检测效果较好，能够提取出连续、清晰的边缘。</p>
+<p>核心步骤：</p>
+<p>① ss_mpi_ive_canny_hys_edge 灰度图的Canny边缘提取的前半部：求梯度、计算梯度幅值幅角、磁滞阈值化及非极大抑制。</p>
+<p>② ss_mpi_ive_canny_edge 灰度图的Canny边缘提取的后半部：连接边缘点，形成Canny边缘图。</p>
+<p>complete canny边缘检测效果如<a href="#fig14934831175910">图3</a>所示。</p>
+<p><strong>图 3</strong>  complete canny<a name="fig14934831175910"></a><br />
+<img alt="" src="../figures/complete-canny.png" title="complete-canny" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Gmm2. (FILE-&gt;IVE-&gt;FILE)</p>
+<p>Gmm2背景建模示例。主要演示了如何利用Gmm2实现建模，提取前景。Gmm2建模提取前景流程如<a href="#fig773824413816">图4</a>所示。</p>
+<p><strong>图 4</strong>  Gmm2建模提取前景流程<a name="fig773824413816"></a><br />
+<img alt="" src="../figures/Gmm2%E5%BB%BA%E6%A8%A1%E6%8F%90%E5%8F%96%E5%89%8D%E6%99%AF%E6%B5%81%E7%A8%8B.png" title="Gmm2建模提取前景流程" /></p>
+<p>Gmm2效果如<a href="#fig10612153665612">图5</a>和<a href="#fig1929845805619">图6</a>所示。</p>
+<p><strong>图 5</strong>  Gmm2示例输入的视频帧<a name="fig10612153665612"></a><br />
+<img alt="" src="../figures/Gmm2%E7%A4%BA%E4%BE%8B%E8%BE%93%E5%85%A5%E7%9A%84%E8%A7%86%E9%A2%91%E5%B8%A7.png" title="Gmm2示例输入的视频帧" /></p>
+<p><strong>图 6</strong>  识别到的背景和前景<a name="fig1929845805619"></a><br />
+<img alt="" src="../figures/%E8%AF%86%E5%88%AB%E5%88%B0%E7%9A%84%E8%83%8C%E6%99%AF%E5%92%8C%E5%89%8D%E6%99%AF.png" title="识别到的背景和前景" /></p>
+</li>
+<li>
+<p>MemoryTest. (FILE-&gt;IVE-&gt;FILE)</p>
+<p>DMA操作示例。主要演示了如何创建直接内存访问任务。sample流程示例如<a href="#fig1424454192014">图7</a>所示。</p>
+<p><strong>图 7</strong>  MemoryTest流程<a name="fig1424454192014"></a><br />
+<img alt="" src="../figures/MemoryTest%E6%B5%81%E7%A8%8B.png" title="MemoryTest流程" /></p>
+</li>
+<li>
+<p>Sobel. (FILE-&gt;IVE-&gt;FILE)</p>
+<p>Sobel示例，主要演示了Sobel的用法，同时演示了mmz_alloc_cache、flush_cache的正确用法。主要流程如<a href="#fig1677182372815">图8</a>所示。</p>
+<p><strong>图 8</strong>  Sobel流程<a name="fig1677182372815"></a><br />
+<img alt="" src="../figures/Sobel%E6%B5%81%E7%A8%8B.png" title="Sobel流程" /></p>
+</li>
+<li>
+<p>St Lk. (FILE-&gt;IVE-&gt;FILE)</p>
+<p>ShiTomasi + LK 示例。主要演示了如何利用角点提取及LK跟踪，具体实现流程如<a href="#fig129705500430">图9</a>所示。</p>
+<p><strong>图 9</strong>  ShiTomasi + LK 流程<a name="fig129705500430"></a><br />
+<img alt="" src="../figures/ShiTomasi-%2B-LK-%E6%B5%81%E7%A8%8B.png" title="ShiTomasi-+-LK-流程" /></p>
+</li>
+<li>
+<p>PerspTrans. (FILE-&gt;IVE-&gt;FILE)</p>
+<p>透视变换示例。主要演示了如何根据输入源图的区域位置和点对信息做相应的透视变换，透视变换流程如下<a href="#fig157141320183016">图10</a>所示。</p>
+<p>核心API：ss_mpi_ive_persp_trans，详细API接口描述及配置参数可参考《IVE API 参考》。</p>
+<p><strong>图 10</strong>  透视变换流程<a name="fig157141320183016"></a><br />
+<img alt="" src="../figures/%E9%80%8F%E8%A7%86%E5%8F%98%E6%8D%A2%E6%B5%81%E7%A8%8B.png" title="透视变换流程" /></p>
+</li>
+<li>
+<p>Occlusion detected. (VI-&gt;VPSS-&gt;IVE-&gt;VENC)</p>
+<p>检测摄像头是否被遮挡的示例实现，通过检测VI传入的视频帧，识别摄像头是否有遮挡，当检测到遮挡时在控制台打印告警信息，检测流程如<a href="#fig193781186114">图11</a>所示。</p>
+<p>核心代码：sample_ive_od_proc，演示了实现遮挡检测的接口调用。</p>
+<p><strong>图 11</strong>  遮挡检测流程<a name="fig193781186114"></a><br />
+<img alt="" src="../figures/%E9%81%AE%E6%8C%A1%E6%A3%80%E6%B5%8B%E6%B5%81%E7%A8%8B.png" title="遮挡检测流程" /></p>
+</li>
+<li>
+<p>Motion detected. (VI-&gt;VPSS-&gt;IVE-&gt;VGS-&gt;VENC)</p>
+<p>移动侦测示例，移动侦测是通过分析图像或视频序列来检测场景中的运动目标。sample演示了如何利用md实现移动侦测，通过检测VI传入的视频帧，对运动物体进行画框，并编码保存成文件。移动侦测流程如下<a href="#fig192801216269">图12</a>所示。</p>
+<p><strong>图 12</strong>  移动侦测流程<a name="fig192801216269"></a><br />
+<img alt="" src="../figures/%E7%A7%BB%E5%8A%A8%E4%BE%A6%E6%B5%8B%E6%B5%81%E7%A8%8B.png" title="移动侦测流程" /></p>
+</li>
+<li>
+<p>Resize. (FILE-&gt;IVE-&gt;FILE)</p>
+<p>图像大小缩放示例，示例演示了对YUV420SP格式的图像大小镜像缩小并保存输出图像。</p>
+<p>核心API：ss_mpi_ive_resize，详细API接口描述及配置参数可参考《IVE API 参考》。</p>
+<p>Sample Resize效果如<a href="#fig14822205175012">图13</a>所示。</p>
+<p><strong>图 13</strong>  Resize效果<a name="fig14822205175012"></a><br />
+<img alt="" src="../figures/Resize%E6%95%88%E6%9E%9C.png" title="Resize效果" /></p>
+</li>
+</ol>
+<p>如需根据业务调整以上Sample对应配置的接口参数，请参考《IVE API 参考》进行配置。</p>
+<h4 id="SVP_NPU">SVP_NPU<a name="ZH-CN_TOPIC_0000002212861732"></a></h4>
+<p>SVP_NPU共提供了6个sample，主要包括代表性智能模型的示例代码，以及一些NPU主要功能的接口调用流程。</p>
+<p>Sample代码中提供了NPU通用智能模型接口的调用流程，接口调用如<a href="#fig73121905010">图1</a>所示。</p>
+<p><strong>图 1</strong>  通用模型推理流程<a name="fig73121905010"></a><br />
+<img alt="" src="../figures/%E9%80%9A%E7%94%A8%E6%A8%A1%E5%9E%8B%E6%8E%A8%E7%90%86%E6%B5%81%E7%A8%8B.png" title="通用模型推理流程" /></p>
+<p>SVP_NPU Sample的基本调用流程都是一致的，主要包括ACL初始化、模型加载推理和资源释放三个方面。下面对各个Sample的特点进行介绍：</p>
+<ol>
+<li>
+<p><strong>svp_acl_resnet50</strong></p>
+<p>resnet50模型示例代码，主要演示了NPU加载resnet50模型，并推理单张图片的过程。</p>
+<p>应用场景：NPU 分类网模型的加载推理，以及如何处理分类网模型的推理结果。</p>
+<p>核心代码：sample_common_svp_npu_output_classification_result，通过获取分类网输出结果，对每种类的分值进行排序，并输出分值最高的前五个分类。</p>
+</li>
+<li>
+<p><strong>svp_acl_resnet50_multi_thread</strong></p>
+<p>NPU推理多线程示例代码，在svp_acl_resnet50的基础上，加入了多线程的实现。</p>
+<p>核心代码：sample_svp_npu_acl_model_execute_multithread，通过创建多个NPU task, 将任务分发给不同线程，从而达到多线程调用NPU任务的效果。</p>
+</li>
+<li>
+<p><strong>svp_acl_resnet50_dynamic_batch_with_mem_cached</strong></p>
+<p>动态batch示例代码，主要演示了如何调用接口动态配置batch，并完成多batch推理。svp_acl_resnet50输入数据为一张单batch图片，该用例在svp_acl_resnet50基础上，通过配置模型batch_size，使模型每次处理图片的数量达到8张。同时，该sample演示了如何配置NPU task是否带cache调用。</p>
+<p>核心参数配置：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>g_svp_npu_task[0].cfg.max_batch_num = 8;
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>g_svp_npu_task[0].cfg.is_cached = TD_TRUE;
+</span></code></pre></div>
+<p>核心代码：sample_common_svp_npu_set_dynamic_batch， 通过调用svp_acl_mdl_set_dynamic_batch_size接口，配置模型batch_num。batch_num值约束请查看《ATC工具使用指南》中batch_num参数说明。</p>
+</li>
+<li>
+<p><strong>svp_acl_lstm</strong></p>
+<p>lstm模型实例代码，主要演示了如何配置lstm模型推理所需的参数。lstm具有两路输入，且lstm模型推理需要额外配置total_t参数(Recurrent网络包含LSTM/RNN/GRU层每一句话的最大帧数)，该sample演示了lstm模型推理的参数配置。</p>
+<p>特殊参数配置：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>g_svp_npu_task[0].cfg.total_t = 3;
+</span></code></pre></div>
+<p>核心代码：svp_acl_mdl_set_total_t，调用ACL接口配置模型所需的total_t参数。</p>
+</li>
+<li>
+<p><strong>svp_acl_preemption</strong></p>
+<p>模型抢占示例代码，主要演示了当开启模型抢占时，高优先级的模型推理任务可以打断低优先级的推理任务，从而抢占NPU资源优先执行。该sample中加载的模型为可抢占模型（模型是否可被抢占参考《ATC工具使用指南》“--hwts_preemption_enable”章节）, NPU通过两次加载该模型，并配置其中一个模型的抢占级别更高，进而使高优先级的模型可以抢占低优先级的模型，获取对应NPU资源优先执行。</p>
+<p>核心代码：sample_svp_npu_set_model_prior_info，通过配置抢占参数，使分别加载进来的模型拥有不同的抢占优先级，进而在推理任务开始时，优先执行抢占优先级高的模型推理任务</p>
+<p>核心参数示例：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>g_svp_npu_model.prior_cfg.priority = 2; // 模型优先级值
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>g_svp_npu_model.prior_cfg.prior_preemp_en = 1; // 是否开启优先级抢占
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>g_svp_npu_model.prior_cfg.prior_up_step_timeout = 1200; // 优先级提升超时值
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>yolov8 (VI-&gt;VPSS-&gt;SVP_NPU-&gt;VGS-&gt;VENC)</strong></p>
+<p>yolov8模型示例代码，主要演示了如何全流程跑通VI、VPSS、NPU推理、VGS、VENC，为实际应用场景提供了接口调用的流程示例。整个流程涉及到VI, VPSS, VB, NPU, VGS, VENC, VO多个模块的协同工作，各个模块调用流程如<a href="#fig1197011920562">图2</a>所示。</p>
+<p><strong>图 2</strong>  yolov8 sample流程图<a name="fig1197011920562"></a><br />
+<img alt="" src="../figures/yolov8-sample%E6%B5%81%E7%A8%8B%E5%9B%BE.png" title="yolov8-sample流程图" /></p>
+<p>主要流程：</p>
+<ul>
+<li>VI模块进行摄像头传感器流输入。</li>
+<li>视频流会送入VPSS模块进行图像处理，这里将原始流截取出yuv420P图像，并resize成模型需要用到的图像大小。</li>
+<li>VB模块负责管理缓冲池，接受来自VPSS输出信号。</li>
+<li>NPU不断从VB缓冲池中获取对应帧，创建任务并进行推理。</li>
+<li>VGS模块根据推理结果，在展示帧上进行画框。</li>
+<li>VENC模块将展示帧进行编码。</li>
+</ul>
+<p>核心代码：sample_common_svp_npu_start_vi_vpss_venc，示例代码中描述了如何配置vi参数、创建vb、启动vi、绑定vpss、启动vpss、vpss连接vb、启动venc等。</p>
+</li>
+</ol>
+<h4 id="AIComponent">AIComponent<a name="ZH-CN_TOPIC_0000002247781761"></a></h4>
+<p>AIComponent总共提供了4个sample，主要包括aidetect和aivsr两大模块的接口调用流程。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+本节涉及的相关接口参考《智能视频处理软件 V1.0 开发参考》文档。</p>
+</blockquote>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002212701972">aidetect</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002247861845">aidetect_vie</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002212861788">aivsr</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002247781821">aivsr_vie</a></strong>  </p>
+</li>
+</ul>
+<h5 id="aidetect">aidetect<a name="ZH-CN_TOPIC_0000002212701972"></a></h5>
+<ol>
+<li>应用场景：主要演示图片输入的aidetect检测模块接口调用流程。</li>
+<li>
+<p>代码流程</p>
+</li>
+<li>
+<p>系统初始化，并创建aidetect 通道，详细使用参考接口ss_mpi_aidetect_create_chn</p>
+</li>
+<li>设置通道参数和属性，详细使用参考接口ss_mpi_aidetect_get_chn_param，ss_mpi_aidetect_set_chn_param，ss_mpi_aidetect_get_chn_attr，ss_mpi_aidetect_set_chn_attr，参数设置接口按需调用，如果不调用则使用默认配置。</li>
+<li>读取nv21图片数据，并处理该图片得到对应的检测结果，详细使用参考接口ss_mpi_aidetect_process</li>
+<li>销毁通道并去初始化系统。</li>
+</ol>
+<p>具体操作流程如<a href="#fig15211912102215">图1</a>所示。</p>
+<p><strong>图 1</strong>  代码流程图<a name="fig15211912102215"></a><br />
+<img alt="" src="../figures/%E4%BB%A3%E7%A0%81%E6%B5%81%E7%A8%8B%E5%9B%BE-1.png" title="代码流程图-1" /></p>
+<ol>
+<li>
+<p>使用说明</p>
+</li>
+<li>
+<p>板端加载对应的ko</p>
+</li>
+<li>
+<p>设置环境变量LD_LIBRARY_PATH</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>export LD_LIBRARY_PATH=&lt;SDK_PATH&gt;/smp/a7_linux/source/out/lib:$LD_LIBRARY_PATH
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>注：&lt;SDK_PATH&gt; 是sdk目录在板端的绝对路径
+</span></code></pre></div>
+</li>
+<li>
+<p>运行sample</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>cd mpp/sample/svp/ai_component/aidetect
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>./sample_aidetect -i &lt;nv21图片&gt; -m &lt;模型bin文件&gt; -s &lt;width x height&gt; -v (不加-v表示从内存加载模型，加上-v表示从路径加载模型)
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>例如：
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a> ./sample_aidetect -i ./data/hvf_image_hor_1920x1080.yuv -m ../../../../../out/model/aidetect/det_hvf_hor.bin -s 1920x1080
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>./sample_aidetect -i ./data/hvf_image_ver_1080x1920.yuv -m ../../../../../out/model/aidetect/det_hvf_ver.bin -s 1080x1920 -v
+</span></code></pre></div>
+<p>运行截图如下图所示（以det_hvf_hor.bin作为输入模型为例）</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002655192123.png" /></p>
+</li>
+</ol>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+模型文件在&lt;SDK_PATH&gt;/smp/a7_linux/source/out/model/aidetect目录下，测试的输入图片在sample/svp/ai_component/aidetect/data目录下，内存资源紧张时，推荐使用路径传入的方式。<br />
+运行sample命令参数说明：<br />
+-i: 指定测试图片路径<br />
+-s: 指定测试图片的分辨率，用x分割，比如1920x1080<br />
+-m: 指定测试的模型文件路径<br />
+-v: 指定创建通道时的模型加载方式是路径传入还是内存传入，默认为内存传入<br />
+-h: 显示帮助信息</p>
+</blockquote>
+<h5 id="aidetect_vie">aidetect_vie<a name="ZH-CN_TOPIC_0000002247861845"></a></h5>
+<ol>
+<li>应用场景：主要演示媒体通路下的aidetect检测模块接口调用流程。</li>
+<li>
+<p>代码流程</p>
+</li>
+<li>
+<p>启动数据流通路，从前向后分别启动各媒体模块VI，VPSS，VENC</p>
+</li>
+<li>创建aidetect通道并创建一个线程，参考接口ss_mpi_aidetect_create_chn</li>
+<li>线程中从vpss获取数据帧，然后送给aidetect处理，将aidetect输出的检测框画在当前帧上，然后将画框后的帧送给venc，最后释放该帧，参考接口ss_mpi_vpss_get_chn_frame、ss_mpi_aidetect_process、ss_mpi_venc_send_frame、ss_mpi_vpss_release_chn_frame。</li>
+<li>停止业务时，先结束线程并销毁创建的通道，然后销毁各媒体模块，参考接口ss_mpi_aidetect_destroy_chn。</li>
+</ol>
+<p>具体操作流程如<a href="#fig1882115410186">图1</a>所示。</p>
+<p><strong>图 1</strong>  代码流程图<a name="fig1882115410186"></a><br />
+<img alt="" src="../figures/%E4%BB%A3%E7%A0%81%E6%B5%81%E7%A8%8B%E5%9B%BE-2.png" title="代码流程图-2" /></p>
+<ol>
+<li>
+<p>使用说明</p>
+</li>
+<li>
+<p>板端加载对应的ko</p>
+</li>
+<li>
+<p>设置环境变量LD_LIBRARY_PATH</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>export LD_LIBRARY_PATH=&lt;SDK_PATH&gt;/smp/a7_linux/source/out/lib:$LD_LIBRARY_PATH
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>注：&lt;SDK_PATH&gt; 是sdk目录在板端的绝对路径
+</span></code></pre></div>
+</li>
+<li>
+<p>运行sample</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>cd mpp/sample/svp/ai_component/aidetect_vie
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>./sample_aidetect_vie &lt;模型bin文件&gt;
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>例如：
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a> ./sample_aidetect_vie det_hvf_hor.bin
+</span></code></pre></div>
+<p>运行截图如下图所示（以det_hvf_hor.bin作为输入模型为例），运行后在mpp/sample/svp/ai_component/aidetect_vie目录会生成stream_chn0.h265和stream_chn1.h265视频文件<img alt="" src="../figures/zh-cn_image_0000002624444487.png" /></p>
+</li>
+</ol>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+模型文件在&lt;SDK_PATH&gt;/smp/a7_linux/source/out/model/aidetect目录下<br />
+运行sample命令参数说明：<br />
+-h: 显示帮助信息</p>
+</blockquote>
+<h5 id="aivsr">aivsr<a name="ZH-CN_TOPIC_0000002212861788"></a></h5>
+<ol>
+<li>应用场景：主要演示aivsr三种识别（车牌识别，人脸抓拍，人脸识别）任务的接口调用流程。</li>
+<li>
+<p>代码流程</p>
+</li>
+<li>
+<p>创建aidetect通道，参考接口ss_mpi_aidetect_create_chn</p>
+</li>
+<li>创建aivsr通道，参考接口ss_mpi_aivsr_create_chn</li>
+<li>设置通道参数，参考接口ss_mpi_aivsr_set_chn_param，参数设置接口按需调用，如果不调用则使用默认配置</li>
+<li>读取NV21图片，使用aidetect检测图片中的目标，然后将检测结果输入aivsr处理，参考接口ss_mpi_aidetect_process和ss_mpi_aivsr_process</li>
+<li>销毁aivsr通道和aidetect通道，参考接口ss_mpi_aidetect_destroy_chn和ss_mpi_aivsr_destroy_chn</li>
+</ol>
+<p>具体操作流程如<a href="#fig197071858172717">图1</a>所示。</p>
+<p><strong>图 1</strong>  代码流程图<a name="fig197071858172717"></a><br />
+<img alt="" src="../figures/%E4%BB%A3%E7%A0%81%E6%B5%81%E7%A8%8B%E5%9B%BE-3.png" title="代码流程图-3" /></p>
+<ol>
+<li>
+<p>sample用例介绍</p>
+</li>
+<li>
+<p>车牌识别</p>
+<p>应用场景：用于识别车辆上的车牌号码</p>
+<p>操作流程：如<a href="#fig197071858172717">图1</a>，任务类型设置为OT_AIVSR_TASK_VLPR，相关的数据结构为ot_vlpr_attr，ot_vlpr_param和ot_vlpr_result_array。</p>
+</li>
+<li>
+<p>人脸抓拍</p>
+<p>应用场景：用于抓拍满足一定要求的人脸</p>
+<p>操作流程：如<a href="#fig197071858172717">图1</a>，任务类型设置为OT_AIVSR_TASK_FACE_CAPTURE，相关的数据结构为ot_face_capture_attr，ot_face_capture_param和ot_face_capture_result_array</p>
+</li>
+<li>
+<p>人脸底库特征提取</p>
+<p>应用场景：用于提取底库人脸的特征</p>
+<p>操作流程：如<a href="#fig197071858172717">图1</a>，任务类型设置为OT_AIVSR_TASK_FR, 相关的数据类型为ot_fr_result_array</p>
+</li>
+<li>
+<p>人脸特征比对</p>
+<p>应用场景：用于人脸特征与底库对比</p>
+<p>操作流程：如<a href="#fig197071858172717">图1</a>，任务类型设置为OT_AIVSR_TASK_FR, 相关的数据类型为ot_fr_result_array</p>
+</li>
+<li>
+<p>使用说明</p>
+</li>
+<li>
+<p>板端加载对应的ko</p>
+</li>
+<li>
+<p>设置环境变量LD_LIBRARY_PATH</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>export LD_LIBRARY_PATH=&lt;SDK_PATH&gt;/smp/a7_linux/source/out/lib:$LD_LIBRARY_PATH
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>注：&lt;SDK_PATH&gt; 是sdk目录在板端的绝对路径
+</span></code></pre></div>
+</li>
+<li>
+<p>运行sample</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>cd mpp/sample/svp/ai_component/aivsr
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>./sample_aivsr -c &lt;用例index&gt; -p &lt;NV21图片路径&gt; -s &lt;宽x高&gt; -v(不加-v表示从内存加载模型，加上-v表示从路径加载模型)
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>例如：
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a> ./sample_aivsr -c 0 -p /xxx/xxx.yuv -s 1920x1080
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a> ./sample_aivsr -c 1 -p /xxx/xxx.yuv -s 1920x1080
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a> ./sample_aivsr -c 2 -p /xxx/xxx.yuv -s 1920x1080 -n name -o ./name.txt
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a> ./sample_aivsr -c 3 -p /xxx/xxx.yuv -s 1920x1080 -d ./database
+</span></code></pre></div>
+<p>运行成功截图如下图所示（以用例0为例）</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002655272315.png" /></p>
+</li>
+</ol>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+模型文件在&lt;SDK_PATH&gt;/smp/a7_linux/source/out/model/aivsr目录下；内存资源紧张时，推荐使用路径传入的方式；人脸识别场景需要将生成的底库文件放在同一个目录下再执行人脸特征与底库比对。<br />
+运行sample命令参数说明：<br />
+-c：指定运行的sample用例<br />
+0：人脸抓拍(face_capture)<br />
+1：车牌识别(vlpr)，<br />
+2：人脸底库特征提取(fr)<br />
+3：人脸特征与底库比对(fr)<br />
+-v：指定创建通道是通过传入路径还是内存，默认为内存传入<br />
+-p：输入图片路径，输入图片需为nv21格式的yuv图片<br />
+-s：输入图片分辨率，宽x高<br />
+-n：输入底库图片名称或id<br />
+-o：底库图片特征信息的输出文件路径<br />
+-d：输入底库特征信息文件的文件夹路径，支持路径下有多个底库特征文件<br />
+-h：显示帮助信息</p>
+</blockquote>
+<h5 id="aivsr_vie">aivsr_vie<a name="ZH-CN_TOPIC_0000002247781821"></a></h5>
+<ol>
+<li>应用场景：主要演示车牌识别任务的异步调用流程。</li>
+<li>
+<p>代码流程</p>
+</li>
+<li>
+<p>启动数据流通路，从前向后分别启动各媒体模块VI，VPSS，VENC</p>
+</li>
+<li>创建aidetect通道，创建aivsr通道，并注册结果回调函数，参考接口ss_mpi_aidetect_create_chn，ss_mpi_aivsr_create_chn，ss_mpi_aivsr_register_result_callback</li>
+<li>创建一个线程用于处理帧数据</li>
+<li>线程中从vpss获取数据帧，送给aidetect处理，再送给aivsr异步接口处理，最后释放该帧，参考接口ss_mpi_vpss_get_chn_frame、ss_mpi_aidetect_process、ss_mpi_aivsr_async_process、ss_mpi_vpss_release_chn_frame</li>
+<li>停止业务时，先结束线程，然后注销回调函数，销毁aivsr通道，销毁aidetect通道，然后销毁各媒体模块，参考接口ss_mpi_aidetect_destroy_chn、ss_mpi_aivsr_unregister_result_callback、ss_mpi_aivsr_destroy_chn</li>
+</ol>
+<p>具体操作流程如<a href="#fig36611655144816">图1</a>所示。</p>
+<p><strong>图 1</strong>  代码流程图<a name="fig36611655144816"></a><br />
+<img alt="" src="../figures/%E4%BB%A3%E7%A0%81%E6%B5%81%E7%A8%8B%E5%9B%BE-4.png" title="代码流程图-4" /></p>
+<ol>
+<li>
+<p>使用说明</p>
+</li>
+<li>
+<p>板端加载对应的ko</p>
+</li>
+<li>
+<p>设置环境变量LD_LIBRARY_PATH</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>export LD_LIBRARY_PATH=&lt;SDK_PATH&gt;/smp/a7_linux/source/out/lib:$LD_LIBRARY_PATH
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>注：&lt;SDK_PATH&gt; 是sdk目录在板端的绝对路径
+</span></code></pre></div>
+</li>
+<li>
+<p>运行sample</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>cd mpp/sample/svp/ai_component/aivsr_vie
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>./sample_aivsr_vie &lt;aidetect模型bin文件&gt; &lt;车牌识别模型bin文件&gt;
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>例如：
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>./sample_aivsr_vie det_hvf_hor.bin vsr_vlpr_lite.bin
+</span></code></pre></div>
+<p>运行截图如下图所示（以det_hvf_hor.bin和vsr_vlpr_lite.bin作为输入模型为例），运行后在mpp/sample/svp/ai_component/aivsr_vie目录会生成stream_chn0.h265和stream_chn1.h265视频文件</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002623706839.png" /></p>
+</li>
+</ol>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+模型文件在&lt;SDK_PATH&gt;/smp/a7_linux/source/out/model/aivsr目录下；vsr_vlpr.bin在256MB以上平台上运行，vsr_vlpr_lite.bin在128MB以上平台上运行。<br />
+运行sample命令参数说明：<br />
+-h：显示帮助信息</p>
+</blockquote>
+<h3 id="svc_venc">svc_venc<a name="ZH-CN_TOPIC_0000002235919109"></a></h3>
+<p>本章节主要介绍智能编码sample，包含两种送框形式。</p>
+<ol>
+<li>智能检测Mask 分割图</li>
+<li>智能检测矩形窗</li>
+</ol>
+<p>智能编码sample的智能分析部分使用了svp模块中的yolov8推理模型。</p>
+<p><strong><em>*代码流程及介绍</em>*<a name="section1982020161018"></a></strong></p>
+<p><strong>图 1</strong>  代码流程<a name="fig1782117462228"></a><br />
+<img alt="" src="../figures/%E4%BB%A3%E7%A0%81%E6%B5%81%E7%A8%8B.png" title="代码流程" /></p>
+<ol>
+<li>sample_svp_npu_acl_e2e_yolo：配置vi参数、创建vb、启动vi、绑定vpss、启动vpss、vpss连接vb、启动svp智能分析、启动venc。</li>
+<li>sample_svp_npu_acl_to_venc：将智能检测的mask或者rect送入编码，可参考《MPP 媒体处理软件 V6.0 开发参考》中关于ss_mpi_venc_send_svc_region、ss_mpi_venc_send_svc_mask、ss_mpi_venc_set_svc_param_ex 的接口描述。</li>
+</ol>
+<p><strong><em>*运行示例</em>*<a name="section9468162291914"></a></strong></p>
+<ol>
+<li>compile sample code</li>
+<li>
+<p>设置环境变量LD_LIBRARY_PATH</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>export LD_LIBRARY_PATH=/home/xxx/mpp/out/lib:$LD_LIBRARY_PATH
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>xxx is sdk package path.
+</span></code></pre></div>
+</li>
+<li>
+<p>run sample</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>./sample_svp_svc_main (a) [8]
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>input char
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>(0): Rect mode
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>(1): Mask mode
+</span></code></pre></div>
+</li>
+</ol>
+<h3 id="uvc">uvc<a name="ZH-CN_TOPIC_0000002236038953"></a></h3>
+<p>uvc有两个sample，分别为host_uvc和uvc_app。</p>
+<ol>
+<li>板端做USB HOST的host_uvc，不使用图像sensor，从外接的UVC摄像头中拉取视频流；</li>
+<li>
+<p>板端做外设的uvc_app，从sensor采集图像，经过VI、VPSS、(VENC)、UVC、内核驱动的处理向HOST发送视频流。</p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002201038680">host_uvc</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002200878888">uvc_app</a></strong>  </p>
+</li>
+</ol>
+<h4 id="host_uvc">host_uvc<a name="ZH-CN_TOPIC_0000002201038680"></a></h4>
+<p>host_uvc在板端做USB HOST时，从外接UVC摄像头中读取YUV/编码数据流，并保存为文件，其中不涉及MPP媒体接口。</p>
+<p><strong><em>*代码简介</em>*<a name="section1738414593463"></a></strong></p>
+<ul>
+<li>host_uvc代码按V4L2标准打开/dev/videoX设备后，通过ioctl方式查询设备能力、添加buffer、设置媒体格式和分辨率等操作，循环读取视频流数据后存为文件。由于不依赖第三方库，用户也可以移植开源代码来实现同样功能。</li>
+<li>host_uvc.c中sample_uvc_video_save_image()拿到内核返回的帧缓冲buffer后，立即进行保存文件操作，可在此处进行修改，禁用存文件功能，对接其他业务。</li>
+</ul>
+<p><strong><em>*运行示例</em>*<a name="section14321171044713"></a></strong></p>
+<ol>
+<li>
+<p>先将USB子系统切换为HOST主机模式：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>echo host     &gt; /proc/wing-usb/10300000.usb20drd/mode
+</span></code></pre></div>
+</li>
+<li>
+<p>接上外部UVC摄像头，用下面命令查看其支持的格式和分辨率：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>./sample_host_uvc /dev/video0 --enum-formats
+</span></code></pre></div>
+</li>
+<li>
+<p>根据支持的格式和分辨率，拉取视频流并保存文件，参考下列命令：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>./sample_host_uvc /dev/video0 -fMJPEG -s1920x1080 -Fstream_1920x1080.mjpg
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>./sample_host_uvc /dev/video0 -fH264  -s1920x1080 -Fstream_1920x1080.h264
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>./sample_host_uvc /dev/video0 -fH265  -s1920x1080 -Fstream_1920x1080.h265
+</span><span id="__span-17-4"><a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>./sample_host_uvc /dev/video0 -fYUYV  -s1920x1080 -Fraw_1920x1080.yuyv
+</span><span id="__span-17-5"><a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>./sample_host_uvc /dev/video0 -fNV21  -s1920x1080 -Fraw_1920x1080.nv21
+</span><span id="__span-17-6"><a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>./sample_host_uvc /dev/video0 -fNV12  -s1920x1080 -Fraw_1920x1080.nv12
+</span></code></pre></div>
+<p>注意：保证当前目录的可用空间足够大。</p>
+</li>
+<li>
+<p>将上述操作生成的YUV或码流文件权限改为0666，然后复制到电脑上，用PotPlayer、VLC、YUV Player等工具查看图像是否正常。</p>
+</li>
+</ol>
+<p><strong><em>*常见问题</em>*<a name="section595820414529"></a></strong></p>
+<p>下面常见问题的处理方法详细参考代码目录sample/host_uvc/readme.txt.</p>
+<ol>
+<li>sample可能会因系统内存不足被杀掉，可以通过增大OS内存和减小MMZ内存来解决；</li>
+<li>板子内核默认不支持NV21，需要修改两处地方，并重新编译烧写内核；</li>
+<li>
+<p>拉取YUV数据流时，如果CPU占用率较高，可以在third_party/linux/linux-5.10.y/drivers/media/usb/uvc/uvc_video.c文件的前面添加如下一行，确保USB驱动分配使用的内存带Cache属性，然后编译烧写内核。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>#define CONFIG_DMA_NONCOHERENT
+</span></code></pre></div>
+</li>
+</ol>
+<h4 id="uvc_app">uvc_app<a name="ZH-CN_TOPIC_0000002200878888"></a></h4>
+<p>uvc_app用于将板端做为USB摄像头设备，实现UVC gadget功能，通过编译开关兼包含UAC功能。目前UVC支持YUYV、NV12、NV21、MJPEG、H264、H265格式。在接有两个图像sensor的情况下，也可以支持双路UVC设备。</p>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002239315513">代码简介</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002204435298">Sample用例介绍</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002204769374">Sample高级用例</a></strong>  </p>
+</li>
+</ul>
+<h5 id="代码简介">代码简介<a name="ZH-CN_TOPIC_0000002239315513"></a></h5>
+<p>基于V4L2框架，uvc_app可以编译出两个sample程序。</p>
+<ul>
+<li>sampel_uvc_v4l2支持传统的纯V4L2方案，即通过VIDEO_IOCTL_DQUEUE_BUF/VIDEO_IOCTL_QUEUE_BUF两个ioctl系统调用将视频流数据复制给内核并发送给USB HOST，此种方式需要复制一次，效率不高。</li>
+<li>sample_uvc对视频流的发送方式进行了定制优化，基于新增的ot_uvc.ko和mpi_uvc_xxx接口支持三类送视频数据输入模式：零拷贝绑定、用户态零拷贝送stream/frame、用户态拷贝自有数据流。</li>
+</ul>
+<p>两个程序在V4L2控制方面的实现是相同的，主要差异在于发送视频数据的方式。另外V4L2程序单路场景可支持still image抓图功能。</p>
+<h5 id="Sample用例介绍">Sample用例介绍<a name="ZH-CN_TOPIC_0000002204435298"></a></h5>
+<p>由于芯片有多种型号，对应不同的loadko脚本，以Hi3516CV610-20S debug为例，对应使用的脚本为ko/load3516cv610/load3516cv610_20s_debug，其他型号视具体情况调整。</p>
+<ol>
+<li>
+<p>准备脚本</p>
+<p>UVC sample运行前需要先跑Config脚本，将格式分辨率等信息通过configfs传给内核驱动层。</p>
+<ol>
+<li>先从《外围设备驱动 操作指南》的“录像机”小节中复制脚本保存为ConfigUVC.sh</li>
+<li>然后从“内核下录像机操作示例”小节步骤2中复制环境变量配置脚本，保存为runUVC.sh，并按要求修改VID、PID、MANUFACTURER、PRODUCT，默认配置为单路、ISOC、零拷贝sample_uvc。</li>
+</ol>
+</li>
+<li>
+<p>配置运行环境</p>
+<p>将ConfigUVC.sh, runUVC.sh，编译好的sample_uvc, sample_uvc_v4l2，ko目录一起放在板端。对于128MB内存的板子，建议配置OS和MMZ各占64MB。其他内存大小根据情况调整两者占比，如果内存不足，可以在runUVC.sh裁剪大分辨率，并在uvc_media*.c中修改vb_cfg，减少MMZ内存占用，然后重新编译sample。</p>
+<ol>
+<li>
+<p>关于配置OS和MMZ内存。修改OS内存要进入uboot命令行，修改bootargs mem变量后用sa保存</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>setenv bootargs &#39;mem=64m ...&#39;
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>sa
+</span></code></pre></div>
+</li>
+<li>
+<p>然后编辑ko/load3516cv610/load3516cv610_20s_debug，修改mmz_start和mmz_size</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>mmz_start=0x44000000;
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>mmz_size=64M;
+</span></code></pre></div>
+</li>
+<li>
+<p>打开UVC KO（纯V4L2 sample不用），编辑ko/load3516cv610/load3516cv610_20s_debug，去掉insmod ot_uvc.ko和rmmod ot_uvc前面的#号。</p>
+</li>
+</ol>
+</li>
+<li>
+<p>运行sample</p>
+<ol>
+<li>
+<p>板子启动后USB默认为device模式，如果之前跑过sample_host_uvc host模式，需要显式切换USB device模式：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>echo device &gt; /proc/wing-usb/10300000.usb20drd/mode
+</span></code></pre></div>
+</li>
+<li>
+<p>然后运行runUVC.sh即可跑起来，runUVC.sh中已经调用了ConfigUVC.sh和loadko脚本及sample。</p>
+</li>
+</ol>
+<p>用USB线连接电脑，打开PotPlayer，通过F5打开配置界面，选择设备、格式分辨率，确定后按Ctrl+J可播放摄像头画面。</p>
+<p>播放过程中按TAB键可以显示当前格式分辨率及解码信息，再按TAB则隐藏。播放H264/H265格式时可以点PotPlayer下边栏的S/W或H/W来切换软硬解码器。</p>
+</li>
+</ol>
+<p><strong>图 1</strong>  sample_uvc 单路绑定模式NV12/NV21<a name="fig5405153843611"></a><br />
+<img alt="" src="../figures/sample_uvc-%E5%8D%95%E8%B7%AF%E7%BB%91%E5%AE%9A%E6%A8%A1%E5%BC%8FNV12-NV21.png" title="sample_uvc-单路绑定模式NV12-NV21" /></p>
+<p><strong>图 2</strong>  sample_uvc 单路绑定模式YUYV<a name="fig1173212483719"></a><br />
+<img alt="" src="../figures/sample_uvc-%E5%8D%95%E8%B7%AF%E7%BB%91%E5%AE%9A%E6%A8%A1%E5%BC%8FYUYV.png" title="sample_uvc-单路绑定模式YUYV" /></p>
+<p><strong>图 3</strong>  sample_uvc 单路绑定模式MJPEG/H264/H265<a name="fig15659122773716"></a><br />
+<img alt="" src="../figures/sample_uvc-%E5%8D%95%E8%B7%AF%E7%BB%91%E5%AE%9A%E6%A8%A1%E5%BC%8FMJPEG-H264-H265.png" title="sample_uvc-单路绑定模式MJPEG-H264-H265" /></p>
+<h5 id="Sample高级用例">Sample高级用例<a name="ZH-CN_TOPIC_0000002204769374"></a></h5>
+<p><a href="#ZH-CN_TOPIC_0000002204435298">Sample用例介绍</a>章节介绍了默认的sample运行步骤，通过修改脚本、内核或特定的操作步骤，可以打开高级功能，以下为高级功能场景的操作方法。</p>
+<ol>
+<li>
+<p>UVC协议版本1.1/1.5</p>
+<p>编辑runUVC.sh，找到export BCDUVC一行，将内容修改为0x0150即为UVC1.5, 修改为0x0110即为UVC1.1。重启运行runUVC.sh。</p>
+</li>
+<li>
+<p>USB传输模式</p>
+<p>编辑runUVC.sh，找到export TransferMode一行，将内容修改为bulk即USB bulk传输模式，修改为isoc即为USB isoc传输模式。重启运行runUVC.sh。</p>
+</li>
+<li>
+<p>选择零拷贝或纯V4L2 sample</p>
+<p>编辑runUVC.sh，找到 export PerfMode一行，修改内容为v4l2，去掉前面的#注释符，将会运行sample_uvc_v4l2，如果用#注释掉这一行，将会运行sample_uvc。重启运行runUVC.sh。</p>
+<p><strong>图 1</strong>  sample_uvc_v4l2 单路NV12/NV21<a name="fig38574010397"></a><br />
+<img alt="" src="../figures/sample_uvc_v4l2-%E5%8D%95%E8%B7%AFNV12-NV21.png" title="sample_uvc_v4l2-单路NV12-NV21" /></p>
+<p><strong>图 2</strong>  sample_uvc_v4l2 单路YUYV<a name="fig206121127143915"></a><br />
+<img alt="" src="../figures/sample_uvc_v4l2-%E5%8D%95%E8%B7%AFYUYV.png" title="sample_uvc_v4l2-单路YUYV" /></p>
+<p><strong>图 3</strong>  sample_uvc_v4l2 单路MJPEG/H264/H265<a name="fig590684323911"></a><br />
+<img alt="" src="../figures/sample_uvc_v4l2-%E5%8D%95%E8%B7%AFMJPEG-H264-H265.png" title="sample_uvc_v4l2-单路MJPEG-H264-H265" /></p>
+</li>
+<li>
+<p>双路UVC设备</p>
+<p>双路UVC需要用MIPI一拖二排线接入两个图像sensor。</p>
+<p>内核默认只支持单路，双路场景需要重新配置内核，参考《外围设备驱动 操作指南》“内核下录像机操作示例”章节，关闭UVC Still Image并使能USB Gadget Webcam without status interrupt endpoint，然后重新编译烧写内核。</p>
+<p>编辑runUVC.sh，找到 export UVC_DEVICE_CNT一行，将其值修改为2，最后检查load3516cv6**_XXX脚本里-sensor0 -sensor1都指定了正确的sensor类型。重启运行runUVC.sh，可以看到两个UVC摄像头"UVC Camrea 1"和"UVC Camera 2"，用两个播放器实例分别打开UVC Camera N进行播放。</p>
+<p>sample_uvc和sample_uvc_v4l2都支持双路设备。</p>
+<p><strong>图 4</strong>  sample_uvc双路 YUYV+编码<a name="fig16302113814404"></a><br />
+<img alt="" src="../figures/sample_uvc%E5%8F%8C%E8%B7%AF-YUYV%2B%E7%BC%96%E7%A0%81.png" title="sample_uvc双路-YUYV+编码" /></p>
+<p><strong>图 5</strong>  sample_uvc双路 编码+编码<a name="fig17215552402"></a><br />
+<img alt="" src="../figures/sample_uvc%E5%8F%8C%E8%B7%AF-%E7%BC%96%E7%A0%81%2B%E7%BC%96%E7%A0%81.png" title="sample_uvc双路-编码+编码" /></p>
+<p><strong>图 6</strong>  sample_uvc双路  NV12+NV12<a name="fig11392615124111"></a><br />
+<img alt="" src="../figures/sample_uvc%E5%8F%8C%E8%B7%AF-NV12%2BNV12.png" title="sample_uvc双路-NV12+NV12" /></p>
+</li>
+<li>
+<p>零拷贝sample数据输入模式</p>
+<p>不同于sample_uvc_v4l2使用ioctl系统调用将缓冲区从用户态送进内核驱动，零拷贝的sample_uvc通过ot_uvc.ko和UVC mpi接口，使用了定制的视频流传输通道，目前支持三类方式，可以通过命令行参数进行修改。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>./sample_uvc [DEVICE_COUNT] [DATA_MODE]
+</span></code></pre></div>
+<ul>
+<li>DEVICE_COUNT：UVC设备数量（设备号对应UVC通道号），跟ConfigUVC.sh用到的${UVC_DEVICE_CNT}要保持一致。</li>
+<li>
+<p>DATA_MODE：UVC视频流数据输入模式，现在支持0-2三种选择：</p>
+<ul>
+<li>0：UVC_MPP_BIND_UVC 绑定模式，VPSS或VENC可以与UVC绑定，内核态零拷贝绑定直传视频数据；</li>
+<li>1：UVC_SEND_YUV_FRAME/UVC_SEND_VENC_STREAM，用户态从VPSS/VENC拿到的frame/stream以零拷贝方式用mpi_uvc_send_frame/mpi_uvc_send_stream接口中送UVC驱动；该模式可以在把视频数据发送给UVC接口之前，将视频数据进行网络传输或存储；</li>
+<li>2：UVC_SEND_USER_STREAM对于编码码流，可以从用户指定的任意有效地址上拷贝码流，便于定制添加私有数据。在sample里YUV格式仍采用绑定方式，虽然可以用mpi_uvc_send_user_stream传送YUV数据，由于拷贝方式效率较低所以不推荐。</li>
+</ul>
+<p>如果要修改数据输入模式，需要修改sample_uvc的第2个命令行参数为0、1、2之一即可，然后重启运行runUVC.sh。</p>
+</li>
+</ul>
+<p><strong>图 7</strong>  sample_uvc 单路SEND_YUV_FRAME模式 NV12/NV21<a name="fig1513821174211"></a><br />
+<img alt="" src="../figures/sample_uvc-%E5%8D%95%E8%B7%AFSEND_YUV_FRAME%E6%A8%A1%E5%BC%8F-NV12-NV21.png" title="sample_uvc-单路SEND_YUV_FRAME模式-NV12-NV21" /></p>
+<p><strong>图 8</strong>  sample_uvc 单路SEND_YUV_FRAME模式 YUYV<a name="fig731917357428"></a><br />
+<img alt="" src="../figures/sample_uvc-%E5%8D%95%E8%B7%AFSEND_YUV_FRAME%E6%A8%A1%E5%BC%8F-YUYV.png" title="sample_uvc-单路SEND_YUV_FRAME模式-YUYV" /></p>
+<p><strong>图 9</strong>  sample_uvc 单路SEND_VENC_STREAM模式MJPEG/H264/H265<a name="fig4505125284210"></a><br />
+<img alt="" src="../figures/sample_uvc-%E5%8D%95%E8%B7%AFSEND_VENC_STREAM%E6%A8%A1%E5%BC%8FMJPEG-H264-H265.png" title="sample_uvc-单路SEND_VENC_STREAM模式MJPEG-H264-H265" /></p>
+<p><strong>图 10</strong>  sample_uvc 单路SEND_USER_STREAM模式MJPEG/H264/H265<a name="fig959118813434"></a><br />
+<img alt="" src="../figures/sample_uvc-%E5%8D%95%E8%B7%AFSEND_USER_STREAM%E6%A8%A1%E5%BC%8FMJPEG-H264-H265.png" title="sample_uvc-单路SEND_USER_STREAM模式MJPEG-H264-H265" /></p>
+</li>
+<li>
+<p>Still Image抓图</p>
+<p>目前仅V4L2 sample的单路场景支持抓图。</p>
+<p>内核默认不支持Still Image，需要重新配置内核，参考《外围设备驱动 操作指南》“内核下录像机操作示例”章节，打开UVC Still Image并禁用USB Gadget Webcam without status interrupt endpoint，然后重新编译烧写内核。</p>
+<ol>
+<li>
+<p>编辑runUVC.sh,  配置export UVC_DEVICE_CNT=1,  打开（去掉#号）并配置export PerfMode="v4l2"，export StillCaptureMethod=2。然后重启运行runUVC.sh。</p>
+<p>使用最新的amcap播放器，选择UVC Camera 1设备，打开预览画面。</p>
+</li>
+<li>
+<p>点击amcap菜单栏Photo，Set Photo Format， 在Type Setting子窗口中选择MJPG或YUYV, 在Size Setting中选择一个分辨率，点击“Apply”后，再点击右下角“Photo”按钮，会弹出一个新窗口显示所抓图片。</p>
+</li>
+</ol>
+<p><strong>图 11</strong>  sample_uvc_v4l2 单路Still Image，预览YUYV 抓YUYV<a name="fig0991185014313"></a><br />
+<img alt="" src="../figures/sample_uvc_v4l2-%E5%8D%95%E8%B7%AFStill-Image-%E9%A2%84%E8%A7%88YUYV-%E6%8A%93YUYV.png" title="sample_uvc_v4l2-单路Still-Image-预览YUYV-抓YUYV" /></p>
+<p><strong>图 12</strong>  sample_uvc_v4l2 单路Still Image，预览YUYV 抓MJPEG<a name="fig99814713444"></a><br />
+<img alt="" src="../figures/sample_uvc_v4l2-%E5%8D%95%E8%B7%AFStill-Image-%E9%A2%84%E8%A7%88YUYV-%E6%8A%93MJPEG.png" title="sample_uvc_v4l2-单路Still-Image-预览YUYV-抓MJPEG" /></p>
+<p><strong>图 13</strong>  sample_uvc_v4l2 单路Still Image，预览MJPEG 抓JPEG<a name="fig16811822174414"></a><br />
+<img alt="" src="../figures/sample_uvc_v4l2-%E5%8D%95%E8%B7%AFStill-Image-%E9%A2%84%E8%A7%88MJPEG-%E6%8A%93JPEG.png" title="sample_uvc_v4l2-单路Still-Image-预览MJPEG-抓JPEG" /></p>
+<p><strong>图 14</strong>  sample_uvc_v4l2 单路Still Image，预览MJPEG 抓YUYV<a name="fig27915477442"></a><br />
+<img alt="" src="../figures/sample_uvc_v4l2-%E5%8D%95%E8%B7%AFStill-Image-%E9%A2%84%E8%A7%88MJPEG-%E6%8A%93YUYV.png" title="sample_uvc_v4l2-单路Still-Image-预览MJPEG-抓YUYV" /></p>
+</li>
+<li>
+<p>PU/CT控制</p>
+<p>PotPlayer播放过程中按F5打开参数选项窗口，选择设备-&gt;摄像头，在视频录制设备里选择UVC Camera N，点击右边"..."按钮，弹出PU/CT控制窗口，此处可对亮度等属性进行调整，详细参考《UVC+UAC解决方案应用指导》。</p>
+</li>
+<li>
+<p>UAC设备</p>
+<p>ConfigUVC.sh中UAC默认是关闭的，若要启用，将脚本中uac有关的三行命令开头#号注释去掉。</p>
+<p>假如同时使用Still Image抓图功能，注意runUVC.sh中StillCaptureMethod只能为2。</p>
+<p>uvc_app编译时默认关闭UAC，要打开UAC功能，将Makefile.perf和Makefile.v4l2中的UAC_COMPILE都打开设置为y，按照代码目录的sample/uvc_app/alsa_readme.txt先编译ALSA库，再重新make clean; make编译sample，最后将sample程序、ALSA库，ALSA配置文件按ALSA要求复制到板子上。</p>
+<p>一切准备就绪后，跑runUVC.sh，即可在电脑上看到UAC设备，详细参考《UVC+UAC解决方案应用指导》。</p>
+</li>
+</ol>
+<h3 id="venc">venc<a name="ZH-CN_TOPIC_0000002235919113"></a></h3>
+<p>受限于不同单板的内存或者规格差异，部分用例在Hi3516CV610-10B或Hi3516CV608不能运行（如 sample_venc 6/7/8/9/10），需要裁剪VB个数或者使用其他手段降低内存占用才可正常运行。</p>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002204708208">sample_venc_normal</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002204868008">sample_venc_intra_refresh</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002239948189">sample_venc_roi_bg</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002239828353">sample_venc_qpmap</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002204708212">sample_venc_debreath_effect</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002204868012">sample_venc_mosaic_map</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002239948193">sample_venc_single_sp</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002239828357">sample_venc_mjpeg_roi_set</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002204708216">sample_venc_svac3</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002204868016">sample_venc_inner_scale</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002204883400">sample_venc_mjpeg_roimap</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002239843781">sample_venc_composite</a></strong>  </p>
+</li>
+</ul>
+<h4 id="sample_venc_normal">sample_venc_normal<a name="ZH-CN_TOPIC_0000002204708208"></a></h4>
+<ul>
+<li>
+<p>场景介绍</p>
+<p>演示从VI-VPSS-VENC通路的一般配置流程。</p>
+</li>
+<li>
+<p>数据流</p>
+</li>
+</ul>
+<p><img alt="" src="../figures/zh-cn_image_0000002239962973.png" /></p>
+<ul>
+<li>
+<p>代码流程</p>
+</li>
+<li>
+<p>初始化VENC前级模块（VI-VPSS）并进行绑定</p>
+</li>
+<li>获取用户配置（GOP结构、RC模式）</li>
+<li>创建编码器，和VPSS进行绑定</li>
+<li>启动收流。</li>
+</ul>
+<h4 id="sample_venc_intra_refresh">sample_venc_intra_refresh<a name="ZH-CN_TOPIC_0000002204868008"></a></h4>
+<ul>
+<li>
+<p>场景介绍</p>
+<p>演示P帧内刷新的使用方法。P帧帧内刷新，可以为客户提供码率非常平滑的编码方式，每个I帧和P帧的大小可以非常接近。在网络带宽有限（如无线网络）的情况下，降低I帧过大带来的网络冲击，降低网传延时。</p>
+<p>P帧帧内刷新的的介绍和接口使用请参考《MPP 媒体处理软件 V6.0 开发参考》第6章“P帧帧内刷新”小节。</p>
+</li>
+<li>
+<p>数据流</p>
+<p>同sample_venc_normal</p>
+</li>
+<li>
+<p>初始化VENC前级模块（VI-VPSS）并进行绑定</p>
+</li>
+<li>获取用户配置（GOP结构、帧内刷新模式、RC模式）</li>
+<li>创建编码器，和VPSS进行绑定，设置帧内刷新模式。</li>
+<li>启动收流。</li>
+</ul>
+<h4 id="sample_venc_roi_bg">sample_venc_roi_bg<a name="ZH-CN_TOPIC_0000002239948189"></a></h4>
+<ul>
+<li>
+<p>场景介绍</p>
+<p>演示背景帧低帧率的配置方法。背景帧低帧率适用于背景区域相对固定的场景，该功能与ROI接口配合，通过降低背景区域的刷新率，降低编码码率。</p>
+<p>背景帧低帧率的配置方法和注意事项请参考《MPP 媒体处理软件 V6.0 开发参考》第6章“非ROI区域的低帧率编码”小节。</p>
+</li>
+<li>
+<p>数据流</p>
+</li>
+</ul>
+<p>同sample_venc_normal</p>
+<ol>
+<li>初始化VENC前级模块（VI-VPSS）并进行绑定</li>
+<li>获取用户配置（GOP结构、RC模式）</li>
+<li>创建编码器，和VPSS进行绑定，设置ROI属性、背景帧低帧率属性。</li>
+<li>启动收流。</li>
+</ol>
+<h4 id="sample_venc_qpmap">sample_venc_qpmap<a name="ZH-CN_TOPIC_0000002239828353"></a></h4>
+<ul>
+<li>
+<p>场景介绍</p>
+<p>演示QPMAP功能的使用。QPMAP 模式下允许用户自由决定码控的策略。</p>
+<p>QPMAP的功能介绍以及使用注意事项请参考《MPP 媒体处理软件 V6.0 开发参考》第6章“码率控制”小节。</p>
+</li>
+<li>
+<p>数据流</p>
+</li>
+</ul>
+<p><img alt="" src="../figures/zh-cn_image_0000002244778369.png" /></p>
+<ol>
+<li>初始化VENC前级模块（VI-VPSS）并进行绑定</li>
+<li>获取用户配置（GOP结构）</li>
+<li>创建编码器。</li>
+<li>
+<p>从vpss通道获取视频帧，填充qpmap信息后送给编码通道编码。</p>
+<ul>
+<li>带有QPMAP信息送帧，需要使用ss_mpi_venc_send_frame_ex接口。</li>
+<li>QPMAP内存信息填充示例参考函数sample_comm_venc_vir_addr_temp。</li>
+</ul>
+</li>
+<li>
+<p>启动收流。</p>
+</li>
+</ol>
+<h4 id="sample_venc_debreath_effect">sample_venc_debreath_effect<a name="ZH-CN_TOPIC_0000002204708212"></a></h4>
+<ul>
+<li>
+<p>场景介绍</p>
+<p>演示去呼吸功能的配置。去呼吸功能可以减少编码后码流的呼吸效应。</p>
+<p>去呼吸功能的配置以及使用注意事项请参考《MPP 媒体处理软件 V6.0 开发参考》第6章 ss_mpi_venc_set_debreath_effect接口。</p>
+</li>
+<li>
+<p>数据流</p>
+</li>
+</ul>
+<p><img alt="" src="../figures/zh-cn_image_0000002209749340.png" /></p>
+<ol>
+<li>初始化VENC前级模块（VI-VPSS）并进行绑定</li>
+<li>获取用户配置（GOP结构、RC模式）</li>
+<li>创建编码器，和VPSS进行绑定，设置通道0去呼吸。</li>
+<li>启动收流。</li>
+</ol>
+<h4 id="sample_venc_mosaic_map">sample_venc_mosaic_map<a name="ZH-CN_TOPIC_0000002204868012"></a></h4>
+<ul>
+<li>
+<p>场景介绍</p>
+<p>演示马赛克功能使用。逻辑根据马赛克表和马赛克配置将原始yuv直接改写，再进行编码，那么输出的码流就会带有马赛克的效果。</p>
+</li>
+<li>
+<p>数据流</p>
+</li>
+</ul>
+<p>同sample_venc_qpmap</p>
+<ol>
+<li>初始化VENC前级模块（VI-VPSS）并进行绑定</li>
+<li>获取用户配置（GOP结构，RC模式）</li>
+<li>创建编码器。</li>
+<li>
+<p>从vpss通道获取视频帧，填充mosaic信息后送给编码通道编码。</p>
+<ul>
+<li>带有QPMAP信息送帧，需要使用ss_mpi_venc_send_frame_ex接口。</li>
+<li>马赛克信息填充示例参考函数sample_comm_venc_mosaic_map_send_frame_proc。</li>
+</ul>
+</li>
+<li>
+<p>启动收流。</p>
+</li>
+</ol>
+<h4 id="sample_venc_single_sp">sample_venc_single_sp<a name="ZH-CN_TOPIC_0000002239948193"></a></h4>
+<ul>
+<li>
+<p>场景介绍</p>
+<p>延时GOP结构SINGLE_SP的配置方式。</p>
+<p>SINGLE_SP的功能介绍和注意事项请参考《MPP 媒体处理软件 V6.0 开发参考》第6章“GOP 结构”小节。</p>
+</li>
+<li>
+<p>数据流</p>
+</li>
+</ul>
+<p><img alt="" src="../figures/zh-cn_image_0000002244925277.png" /></p>
+<ol>
+<li>初始化VENC前级模块（VI-VPSS）并进行绑定</li>
+<li>获取用户配置（RC模式）</li>
+<li>创建编码器（GOP模式为singlesp，设置跳帧参考参数（base, enhance, pred_en）=（1, 3, TRUE）），和VPSS进行绑定。</li>
+<li>启动收流。</li>
+</ol>
+<h4 id="sample_venc_mjpeg_roi_set">sample_venc_mjpeg_roi_set<a name="ZH-CN_TOPIC_0000002239828357"></a></h4>
+<ul>
+<li>
+<p>场景介绍</p>
+<p>演示mjpeg ROI 的配置方法。</p>
+<p>功能介绍和使用注意事项参考《MPP 媒体处理软件 V6.0 开发参考》第6章 ss_mpi_venc_set_jpeg_roi_attr接口。</p>
+</li>
+<li>
+<p>数据流</p>
+</li>
+</ul>
+<p><img alt="" src="../figures/zh-cn_image_0000002204882780.png" /></p>
+<ol>
+<li>初始化VENC前级模块（VI-VPSS）并进行绑定</li>
+<li>获取用户配置（RC模式）</li>
+<li>创建编码器，设置mjpeg roi属性，和VPSS进行绑定。</li>
+<li>启动收流。</li>
+</ol>
+<h4 id="sample_venc_svac3">sample_venc_svac3<a name="ZH-CN_TOPIC_0000002204708216"></a></h4>
+<ul>
+<li>
+<p>场景介绍</p>
+<p>演示SVAC3.0的配置方法。配置方式和H.264、H.265协议基本相同。</p>
+</li>
+<li>
+<p>数据流</p>
+</li>
+</ul>
+<p><img alt="" src="../figures/zh-cn_image_0000002239843137.png" /></p>
+<ol>
+<li>初始化VENC前级模块（VI-VPSS）并进行绑定</li>
+<li>获取用户配置（GOP结构、RC模式）</li>
+<li>创建编码器(SVAC3协议)，和VPSS进行绑定</li>
+<li>启动收流。</li>
+</ol>
+<h4 id="sample_venc_inner_scale">sample_venc_inner_scale<a name="ZH-CN_TOPIC_0000002204868016"></a></h4>
+<ul>
+<li>
+<p>场景介绍</p>
+<p>演示VENC内部缩放功能的配置和使用。内部缩放功能在编码大码流时缩放输出小yuv给小码流进行编码，由于大小码流之间只有一个VB交互，因此相比小码流前级送帧，可以节省VB个数。</p>
+<p>功能介绍和使用注意事项请参考《MPP 媒体处理软件 V6.0 开发参考》第6章“内部缩放”小节。</p>
+</li>
+<li>
+<p>数据流</p>
+</li>
+</ul>
+<p><img alt="" src="../figures/zh-cn_image_0000002204722988.png" /></p>
+<ol>
+<li>初始化VENC前级模块（VI-VPSS）并进行绑定</li>
+<li>获取用户配置（协议、GOP结构、RC模式）</li>
+<li>创建编码器，VPSS chn0(发送方)绑定给VENC chn0(接收方)， VENC chn0（发送方）绑定给VENC chn1（接收方）</li>
+<li>启动收流。</li>
+</ol>
+<h4 id="sample_venc_mjpeg_roimap">sample_venc_mjpeg_roimap<a name="ZH-CN_TOPIC_0000002204883400"></a></h4>
+<ul>
+<li>
+<p>场景介绍</p>
+<p>演示JPEG ROI map的配置方式。</p>
+<p>ROI表的配置说明请参考《MPP 媒体处理软件 V6.0 开发参考》第6章 ot_venc_user_roimap。</p>
+</li>
+<li>
+<p>数据流</p>
+</li>
+</ul>
+<p><img alt="" src="../figures/zh-cn_image_0000002213267156.png" /></p>
+<ol>
+<li>初始化VENC前级模块（VI-VPSS）并进行绑定</li>
+<li>获取用户配置（RC模式）</li>
+<li>创建编码器。</li>
+<li>
+<p>从vpss通道获取视频帧，填充ROI map信息后送给编码通道编码。</p>
+<p>带有ROI map信息送帧，需要使用ss_mpi_venc_send_frame_ex接口。</p>
+</li>
+<li>
+<p>启动收流。</p>
+</li>
+</ol>
+<h4 id="sample_venc_composite">sample_venc_composite<a name="ZH-CN_TOPIC_0000002239843781"></a></h4>
+<ul>
+<li>
+<p>场景介绍</p>
+<p>演示复合编码的配置方法。</p>
+<p>复合编码功能介绍和具体使用方法参考《MPP 媒体处理软件 V6.0 开发参考》第6章“复合编码”小节。</p>
+</li>
+<li>
+<p>数据流</p>
+</li>
+</ul>
+<p><img alt="" src="../figures/zh-cn_image_0000002239849137.png" /></p>
+<ol>
+<li>初始化VENC前级模块（VI-VPSS）并进行绑定</li>
+<li>获取用户配置（GOP结构，RC模式）</li>
+<li>
+<p>设置通道config（composite_enc_en，mosaic_en，quality_level），创建编码器。</p>
+<p>通道配置请参考《MPP 媒体处理软件 V6.0 开发参考》第6章 ss_mpi_venc_set_chn_config接口。</p>
+</li>
+<li>
+<p>从vpss通道获取视频帧，填充mosaic信息后调用ss_mpi_venc_send_multi_frame接口送编码通道编码。</p>
+<p>复合编码送帧需要使用接口ss_mpi_venc_send_multi_frame</p>
+</li>
+<li>
+<p>启动收流。</p>
+</li>
+</ol>
+<h3 id="vgs">vgs<a name="ZH-CN_TOPIC_0000002200803672"></a></h3>
+<p>本章节介绍如何使用VGS模块在帧上进行缩放、COVER、CORNER_RECT、LINE、ROTATE、LUMA_SUM功能。</p>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002218383324">代码流程</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002253382937">sample用例介绍</a></strong>  </p>
+</li>
+</ul>
+<h4 id="代码流程_6">代码流程<a name="ZH-CN_TOPIC_0000002218383324"></a></h4>
+<ol>
+<li>初始化sys和common vb，打开文件</li>
+<li>读取文件内容，获取buffer配置和VB块</li>
+<li>ss_mpi_vgs_begin_job 启动（创建）job</li>
+<li>ss_mpi_vgs_add_xx_task 添加1个或多个任务</li>
+<li>ss_mpi_vgs_end_job 提交job</li>
+<li>sample_vgs_save_sp42_x_to_planar 保存帧到文件</li>
+<li>释放sys和vb资源退出</li>
+</ol>
+<p><strong>图 1</strong>  代码流程图<a name="fig7575528193713"></a><br />
+<img alt="" src="../figures/%E4%BB%A3%E7%A0%81%E6%B5%81%E7%A8%8B%E5%9B%BE-5.png" title="代码流程图-5" /></p>
+<h4 id="sample用例介绍_3">sample用例介绍<a name="ZH-CN_TOPIC_0000002253382937"></a></h4>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002218543148">SCALE</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002253503029">COVER &amp; CORNER_RECT</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002218383328">LINE</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002253382945">ROTATE</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002218543152">LUMA_SUM</a></strong>  </p>
+</li>
+</ul>
+<h5 id="SCALE">SCALE<a name="ZH-CN_TOPIC_0000002218543148"></a></h5>
+<ol>
+<li>
+<p>应用场景：对图像进行缩放操作。</p>
+<ul>
+<li>对图像进行缩小，作为画中画的小图。</li>
+<li>降低图像分辨率减少内存占用。</li>
+</ul>
+</li>
+<li>
+<p>用例功能：将1920x1080分辨率图像缩小到1280x720分辨率，如下方效果示例图所示</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002218394704.png" /></p>
+</li>
+<li>
+<p>操作流程：</p>
+<ul>
+<li>参考<a href="#ZH-CN_TOPIC_0000002218383324">代码流程</a>，在步骤4中添加任务时用ss_mpi_vgs_add_scale_task，重点是在ot_vgs_task_attr vgs任务属性结构体中对输入图像img_in和输出图像img_out的分辨率进行配置，img_in和img_out是缩放时的关键参数。</li>
+<li>需要注意：输入输出帧是否在同一buffer需由使用者判断，本scale sample中默认输入输出不在同一buffer。</li>
+</ul>
+</li>
+</ol>
+<h5 id="COVER-&amp;-CORNER_RECT">COVER &amp; CORNER_RECT<a name="ZH-CN_TOPIC_0000002253503029"></a></h5>
+<ol>
+<li>
+<p>应用场景：在图像中打COVER 或 CORNER_RECT。</p>
+<ul>
+<li>对图像的某块区域进行遮挡时，向该区域叠加纯色块。</li>
+<li>重点突出画面中的区域和某个目标（例如人脸，宠物等）时，可以使用空心矩形框（实线框）或角框圈出来。</li>
+</ul>
+</li>
+<li>
+<p>用例功能：在图像上叠加显示1个绿色实心矩形，5个粉色角框，如下图所示</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002218554476.png" /></p>
+</li>
+<li>
+<p>操作流程</p>
+<ul>
+<li>参考<a href="#ZH-CN_TOPIC_0000002218383324">代码流程</a>，在步骤4中使用sample_vgs_add_case2_task添加ss_mpi_vgs_add_cover_task和ss_mpi_vgs_add_corner_rect_task。</li>
+<li>在ss_mpi_vgs_add_cover_task任务中，重点是对第3个参数ot_cover结构体数组指针和第4个参数array_size进行配置，ot_cover中包括cover type(矩形/任意四边形)和对应属性、颜色，array_size为cover数目。</li>
+<li>在ss_mpi_vgs_add_corner_rect_task任务中，重点是第3个参数ot_corner_rect、第4个参数ot_corner_rect_attr、第5个参数array_size同样为corner_rect数目。ot_corner_rect包括区域和水平/垂直线长以及线宽，ot_corner_rect_attr包括角框类型(角框/实线框)和颜色。</li>
+<li>在非压缩场景中，输入输出图像必须在同一buffer内。</li>
+</ul>
+</li>
+</ol>
+<h5 id="LINE">LINE<a name="ZH-CN_TOPIC_0000002218383328"></a></h5>
+<ol>
+<li>应用场景：在图像上叠加显示多条宽度/颜色不同的直线，根据自身需求，能够通过多次画线实现任意多边形、虚线的效果。</li>
+<li>
+<p>用例功能：在图像上叠加显示1条蓝色倾斜直线，效果如图所示</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002253394305.png" /></p>
+</li>
+<li>
+<p>操作流程</p>
+<ul>
+<li>参考<a href="#ZH-CN_TOPIC_0000002218383324">代码流程</a>，在步骤4中添加任务时使用ss_mpi_vgs_add_draw_line_task。</li>
+<li>在ss_mpi_vgs_add_draw_line_task任务中，重点是对第3个参数ot_vgs_line和第4个参数array_size线条个数，其中ot_vgs_line中包括线段起始点和终点，以及它们的厚度和颜色。</li>
+<li>在非压缩场景中，输入输出图像必须在同一buffer内。</li>
+</ul>
+</li>
+</ol>
+<h5 id="ROTATE">ROTATE<a name="ZH-CN_TOPIC_0000002253382945"></a></h5>
+<ol>
+<li>应用场景：对图像进行旋转操作，用于用户对操作界面进行旋转或设备旋转安装时的场景。</li>
+<li>
+<p>用例功能：对图像旋转90度，效果如图所示。</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002220139908.png" /></p>
+</li>
+<li>
+<p>操作流程</p>
+<ul>
+<li>参考<a href="#ZH-CN_TOPIC_0000002218383324">代码流程</a>，在步骤4中添加任务时使用ss_mpi_vgs_add_rotation_task。</li>
+<li>在ss_mpi_vgs_add_rotation_task任务中，重点是第3个参数旋转角度，配置需要的旋转角度即可。</li>
+<li>当旋转90度或270度时，输入输出必须为不同buffer。</li>
+</ul>
+</li>
+</ol>
+<h5 id="LUMA_SUM">LUMA_SUM<a name="ZH-CN_TOPIC_0000002218543152"></a></h5>
+<ol>
+<li>应用场景：计算图像指定区域亮度和，用于osd反色控制</li>
+<li>
+<p>用例功能：计算图像指定4个40x40区域亮度和，输入图像和区域参数，得到结果如下</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002218554480.png" /></p>
+</li>
+<li>
+<p>操作流程</p>
+<ul>
+<li>参考<a href="#ZH-CN_TOPIC_0000002218383324">代码流程</a>，在步骤4中添加任务时使用ss_mpi_vgs_add_luma_task。</li>
+<li>在ss_mpi_vgs_add_luma_task任务中，第3个参数配置需要计算亮度和的区域数组指针，第4个参数是亮度和区域数目，第5个参数是存储亮度和的数组指针</li>
+<li>亮度和任务仅检查输入帧的合法性。</li>
+</ul>
+</li>
+</ol>
+<h3 id="vie">vie<a name="ZH-CN_TOPIC_0000001969863381"></a></h3>
+<p>VIE sample主要展示VI-VPSS-VENC各种模式通路，主要功能是对接sensor，并对sensor的数据进行isp降噪等效果处理，处理后的数据传递给VPSS和VENC模块。除了场景通路，其他sample还穿插了WDR、FPN、ROTATION/LDC，低延时，用户图片，多路接入以及模式切换，以下介绍sample方式。</p>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001969863377">sample_vie_all_mode</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001969743605">sample_vie_wdr</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001942665130">sample_vie_fpn</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001942824442">sample_vie_ldc_rotation</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001969743621">sample_vie_low_delay</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001942665142">sample_vie_user_pic</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001942665138">sample_vie_two_sensor</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002218445022">sample_vie_switch_mode</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002253444657">sample_vie_switch_resolution</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002218604854">sample_vie_run_be_switch_mode</a></strong>  </p>
+</li>
+</ul>
+<h4 id="sample_vie_all_mode">sample_vie_all_mode<a name="ZH-CN_TOPIC_0000001969863377"></a></h4>
+<ol>
+<li>
+<p>使用场景</p>
+<p>对接SENSOR，启动VI-VPSS-VENC数据流通路。</p>
+</li>
+<li>
+<p>数据流</p>
+</li>
+</ol>
+<p><strong>图 1</strong>  VI在线VPSS在线<a name="fig394416221369"></a>  </p>
+<p><img alt="" src="../figures/zh-cn_image_0000002247214617.png" /></p>
+<p><strong>图 2</strong>  VI在线VPSS离线<a name="fig237819123710"></a><br />
+<img alt="" src="../figures/VI%E5%9C%A8%E7%BA%BFVPSS%E7%A6%BB%E7%BA%BF.png" title="VI在线VPSS离线" /></p>
+<p><strong>图 3</strong>  VI离线VPSS在线<a name="fig155141424143712"></a><br />
+<img alt="" src="../figures/VI%E7%A6%BB%E7%BA%BFVPSS%E5%9C%A8%E7%BA%BF.png" title="VI离线VPSS在线" /></p>
+<p><strong>图 4</strong>  VI离线VPSS离线<a name="fig82475316382"></a><br />
+<img alt="" src="../figures/VI%E7%A6%BB%E7%BA%BFVPSS%E7%A6%BB%E7%BA%BF.png" title="VI离线VPSS离线" /></p>
+<ol>
+<li>
+<p>软件配置流程</p>
+</li>
+<li>
+<p>配置SYS和VB，包含VI-VPSS工作模式，AIISP模式以及VB大小及个数等;</p>
+</li>
+<li>配置MIPIRX，配置LANE属性及分配模式;</li>
+<li>配置VI，包含DEV、BIND、GROUP、PIPE和CHN的配置;</li>
+<li>配置ISP;</li>
+<li>配置VPSS;</li>
+<li>配置VENC。</li>
+</ol>
+<p>注意：以下章节无特殊说明起通路流程与此次保持一致，不再重复描写。</p>
+<h4 id="sample_vie_wdr">sample_vie_wdr<a name="ZH-CN_TOPIC_0000001969743605"></a></h4>
+<ol>
+<li>
+<p>使用场景</p>
+<p>WDR（Wide Dynamic Range，宽动态范围）是一种图像处理技术，主要用于改善在高对比度光照环境下拍摄的图像质量。在一些场景下，比如室内室外光线差异极大的地方，或者强光源直射的地方，普通的摄像头可能会因为过曝或欠曝而无法清晰地捕捉到所有细节。WDR技术通过结合不同曝光时间的多张图像来生成一张最终的图像，在这张图像中，亮部和暗部的细节都能得到较好的保留。这样就能使得在极端光照条件下也能获得更加自然、清晰的图像效果。</p>
+<p>线性模式与WDR模式效果对比：</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002247940013.png" /></p>
+</li>
+<li>
+<p>使用说明</p>
+<ul>
+<li>load脚本时需要使用参数profile=1，以20s为例，ko加载命令为 ./load3516cv610_20s_debug -a -profile 1;</li>
+<li>Hi3516CV610-10B默认的VICAP及ISP0频点较低，若需要接入WDR时序，需要更改SYS_CFG模块的HI3516CV610_10B_WDR宏值以接入WDR时序，详见《SYS_CFG 配置指南》。</li>
+<li>默认SENSOR HY006_3814_0011_MIPI_4M_30FPS_10BIT不支持WDR模式，但是sample中预留HY006_3814_0011_MIPI_4M_30FPS_10BIT_WDR2TO1配置，若用户接入一个可支持WDR时序的SENSOR，可根据预留配置做适配。主要适配点包括（搜索关键字HY006_3814_0011_MIPI_4M_30FPS_10BIT_WDR2TO1适配即可）：<ul>
+<li>在Makefile中链接SENSOR库；</li>
+<li>适配MIPI_RX属性；</li>
+<li>适配ISP_PUB_ATTR属性；</li>
+<li>适配VI、ISP宽高；</li>
+<li>适配VI的PIPE路数；</li>
+<li>适配WDR模式。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>场景数据流</p>
+<p><strong>图 1</strong>  VI在线VPSS在线<a name="fig197117571465"></a><br />
+<img alt="" src="../figures/VI%E5%9C%A8%E7%BA%BFVPSS%E5%9C%A8%E7%BA%BF.png" title="VI在线VPSS在线" /></p>
+<p><strong>图 2</strong>  VI在线VPSS离线<a name="fig10711155714464"></a><br />
+<img alt="" src="../figures/VI%E5%9C%A8%E7%BA%BFVPSS%E7%A6%BB%E7%BA%BF-6.png" title="VI在线VPSS离线-6" /></p>
+<p><strong>图 3</strong>  VI离线VPSS在线<a name="fig20711135710468"></a><br />
+<img alt="" src="../figures/VI%E7%A6%BB%E7%BA%BFVPSS%E5%9C%A8%E7%BA%BF-7.png" title="VI离线VPSS在线-7" /></p>
+<p><strong>图 4</strong>  VI离线VPSS离线<a name="fig9711557174614"></a><br />
+<img alt="" src="../figures/VI%E7%A6%BB%E7%BA%BFVPSS%E7%A6%BB%E7%BA%BF-8.png" title="VI离线VPSS离线-8" /></p>
+</li>
+<li>
+<p>接口配置</p>
+</li>
+<li>
+<p>根据SENSOR型号及序列确认WDR模式，例如帧WDR、行WDR;</p>
+</li>
+<li>根据数据场景选择VI是否在线；</li>
+<li>若VI在线且处于行WDR模式，根据指导配置数据缓存卷绕行cache_line，可节省内存；</li>
+<li>根据用户需求配置其他参数；</li>
+<li>VI绑定之后创建PIPE之前，调用ss_mpi_vi_set_wdr_fusion_grp_attr设置WDR组属性。</li>
+</ol>
+<h4 id="sample_vie_fpn">sample_vie_fpn<a name="ZH-CN_TOPIC_0000001942665130"></a></h4>
+<ol>
+<li>
+<p>使用场景</p>
+<p>固定模式噪声（Fixed Pattern Noise，FPN）是一种常见的图像传感器噪声类型，这种噪声通常是由于传感器内部的物理缺陷或不均匀性造成的。FPN可能导致图像中出现明显的条纹或斑点，影响图像的清晰度和对比度。Hi3516CV610提供去FPN功能，去除SENSOR产生的固定噪声，图像效果更佳。</p>
+<p><strong>图 1</strong>  未去FPN<a name="fig499115945015"></a><br />
+<img alt="" src="../figures/%E6%9C%AA%E5%8E%BBFPN.jpg" title="未去FPN" /></p>
+<p><strong>图 2</strong>  去FPN效果<a name="fig3992059145019"></a><br />
+<img alt="" src="../figures/%E5%8E%BBFPN%E6%95%88%E6%9E%9C.png" title="去FPN效果" /></p>
+</li>
+<li>
+<p>场景数据流</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002212092808.png" /></p>
+</li>
+<li>
+<p>流程配置</p>
+</li>
+<li>
+<p>正常起VI-VPSS-VENC通路；</p>
+</li>
+<li>调用ss_mpi_vb_create_pool接口创建池子，并调用ss_mpi_vb_get_blk接口准备黑帧VB;</li>
+<li>调用ss_mpi_vi_disable_chn接口关闭通道；</li>
+<li>调用ss_mpi_isp_fpn_calibrate接口启动标定；</li>
+<li>标定结束后会输出一张黑帧，并保存到sample的同级目录下，再调用ss_mpi_vi_enable_chn接口使能通道；</li>
+<li>
+<p>读取保存的黑帧，并调用ss_mpi_isp_set_fpn_attr启动校正。</p>
+</li>
+<li>
+<p>注意事项</p>
+</li>
+<li>
+<p>写黑帧信息时会调用fwrite函数往DDR写数据，若同时写出多张黑帧可能会造成系统OOM。</p>
+</li>
+<li>如果标定时未遮住镜头，会把采集到的图像当成噪点处理，标定后图像呈现粉色。</li>
+</ol>
+<h4 id="sample_vie_ldc_rotation">sample_vie_ldc_rotation<a name="ZH-CN_TOPIC_0000001942824442"></a></h4>
+<ol>
+<li>
+<p>使用场景</p>
+<p>对SENSOR采集的数据或者用户送的数据进行固定角度旋转和LDC校正处理。</p>
+<p><strong>图 1</strong>  原始图<a name="fig1212105111514"></a><br />
+<img alt="" src="../figures/%E5%8E%9F%E5%A7%8B%E5%9B%BE.png" title="原始图" /></p>
+<p><strong>图 2</strong>  旋转+LDC校正效果图<a name="fig112131551165110"></a><br />
+<img alt="" src="../figures/%E6%97%8B%E8%BD%AC%2BLDC%E6%A0%A1%E6%AD%A3%E6%95%88%E6%9E%9C%E5%9B%BE.png" title="旋转+LDC校正效果图" /></p>
+</li>
+<li>
+<p>场景数据流图</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002212435530.png" /></p>
+</li>
+<li>
+<p>流程配置</p>
+</li>
+<li>
+<p>正常起VI-VPSS-VENC通路；</p>
+</li>
+<li>选择所需的LDC类型，调用ss_mpi_vi_set_chn_ldc_attr启动LDC校正功能；</li>
+<li>
+<p>选择所需的旋转角度，调用ss_mpi_vi_set_chn_rotation启动旋转功能。</p>
+</li>
+<li>
+<p>注意事项</p>
+</li>
+<li>
+<p>仅支持VI-VPSS离线模式下使用；</p>
+</li>
+<li>仅支持固定角度旋转。</li>
+</ol>
+<h4 id="sample_vie_low_delay">sample_vie_low_delay<a name="ZH-CN_TOPIC_0000001969743621"></a></h4>
+<ol>
+<li>
+<p>使用场景</p>
+<p>离线模式下，low_delay功能可降低数据接收到发送至后端模块之间的延时，即降低端到端延时。</p>
+<p>关闭低延时效果：</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002212500666.png" /></p>
+<p><img alt="" src="../figures/zh-cn_image_0000002212354618.png" /></p>
+<p>开启低延时效果：</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002212501618.png" /></p>
+<p><img alt="" src="../figures/zh-cn_image_0000002212353606.png" /></p>
+</li>
+<li>
+<p>场景数据流</p>
+<p>关闭低延时：</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002247497809.png" /></p>
+<p>开启低延时：</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002247503261.png" /></p>
+</li>
+<li>
+<p>流程配置</p>
+</li>
+<li>
+<p>正常起VI-VPSS-VENC通路；</p>
+</li>
+<li>调用ss_mpi_vi_set_pipe_low_delay接口使能vi_pipe低延时功能；</li>
+<li>
+<p>调用ss_mpi_vpss_set_chn_low_delay接口使能vpss_chn低延时功能。</p>
+</li>
+<li>
+<p>注意事项</p>
+<p>vi_chn支持输入输出低延时，但是vpss仅支持输出低延时，因此VI绑定VPSS时不能使能vi_chn低延时。</p>
+</li>
+</ol>
+<h4 id="sample_vie_user_pic">sample_vie_user_pic<a name="ZH-CN_TOPIC_0000001942665142"></a></h4>
+<ol>
+<li>
+<p>使用场景</p>
+<p>当用户数据流不稳定或者sensor断流时，使能用户图片功能显示自定义的图片，可以是logo等。</p>
+</li>
+<li>
+<p>场景数据流</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002212378620.png" /></p>
+</li>
+<li>
+<p>流程配置</p>
+</li>
+<li>
+<p>正常起VI-VPSS-VENC通路；</p>
+</li>
+<li>调用ss_mpi_vi_set_pipe_user_pic接口设置需要显示的图片；</li>
+<li>调用ss_mpi_vi_set_pipe_3dnr_attr接口关闭3DNR功能；</li>
+<li>
+<p>调用ss_mpi_vi_enable_pipe_user_pic接口使能用户图片功能。</p>
+</li>
+<li>
+<p>注意事项</p>
+</li>
+</ol>
+<p>sample默认开启3DNR功能，使能用户图片前需要确保关闭3DNR，否则会因为有参考导致残影。</p>
+<h4 id="sample_vie_two_sensor">sample_vie_two_sensor<a name="ZH-CN_TOPIC_0000001942665138"></a></h4>
+<ol>
+<li>
+<p>使用场景</p>
+<p>VI有两个设备，可支持接入两路SENSOR。</p>
+</li>
+<li>
+<p>场景数据流</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002247473417.png" />、</p>
+</li>
+<li>
+<p>流程配置</p>
+</li>
+<li>
+<p>确认两路SENSOR的I2C号，SENSOR0使用I2C0，默认SENSOR1使用I2C1；</p>
+</li>
+<li>确认MIPI LANE分配模式为LANE_DIVIDE_MODE_1， 并且确认两路的LANE_ID，使用ioctl(fd, OT_MIPI_SET_DEV_ATTR, combo_dev_attr)接口配置MIPI属性；</li>
+<li>
+<p>VI和ISP需要开启两路DEV和两路PIPE，DEV分别绑定PIPE，其他流程和单路基本一致。</p>
+</li>
+<li>
+<p>注意事项</p>
+</li>
+</ol>
+<p>无</p>
+<h4 id="sample_vie_switch_mode">sample_vie_switch_mode<a name="ZH-CN_TOPIC_0000002218445022"></a></h4>
+<ol>
+<li>
+<p>使用场景</p>
+<p>该sample的主要展现线性模式和WDR模式的切换过程，用户应用于实际环境的ISO值切换工作模式。</p>
+</li>
+<li>
+<p>场景数据流</p>
+<p><strong>图 1</strong>  线性数据流<a name="fig202491540310"></a><br />
+<img alt="" src="../figures/%E7%BA%BF%E6%80%A7%E6%95%B0%E6%8D%AE%E6%B5%81.png" title="线性数据流" /></p>
+<p><strong>图 2</strong>  切换WDR模式的数据流<a name="fig224924139"></a><br />
+<img alt="" src="../figures/%E5%88%87%E6%8D%A2WDR%E6%A8%A1%E5%BC%8F%E7%9A%84%E6%95%B0%E6%8D%AE%E6%B5%81.png" title="切换WDR模式的数据流" /></p>
+</li>
+</ol>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+VI在线VPSS离线、VI离线VPSS在线、VI离线VPSS离线和VI在线VPSS在线流程和数据流基本一致，这里不一一描述。</p>
+</blockquote>
+<ol>
+<li>
+<p>流程步骤</p>
+</li>
+<li>
+<p>正常启动VI和ISP线性通路；</p>
+</li>
+<li>正常退出VI通路，不退出ISP通路；</li>
+<li>设置为WDR模式；</li>
+<li>启动VI DEV、BIND、GROUP相关通路；</li>
+<li>确认WDR切换是否完成(wdr_switch_finish)，参考ss_mpi_isp_query_inner_state_info接口；</li>
+<li>
+<p>切换成功后启动VI PIPE及CHN相关通路。</p>
+</li>
+<li>
+<p>注意事项</p>
+</li>
+</ol>
+<p>无</p>
+<h4 id="sample_vie_switch_resolution">sample_vie_switch_resolution<a name="ZH-CN_TOPIC_0000002253444657"></a></h4>
+<ol>
+<li>
+<p>使用场景</p>
+<p>该sample的主要展现前端模块MIPIRX和ISP动态裁剪分辨率的过程。从源数据进行裁剪，降低后端模块的带宽。</p>
+</li>
+<li>
+<p>场景数据流</p>
+<p><strong>图 1</strong>  裁剪前分辨率为SNESOR输入分辨率<a name="fig1175210247518"></a><br />
+<img alt="" src="../figures/%E8%A3%81%E5%89%AA%E5%89%8D%E5%88%86%E8%BE%A8%E7%8E%87%E4%B8%BASNESOR%E8%BE%93%E5%85%A5%E5%88%86%E8%BE%A8%E7%8E%87.png" title="裁剪前分辨率为SNESOR输入分辨率" /></p>
+<p><strong>图 2</strong>  裁剪后分辨率为1920*1080<a name="fig10752102416510"></a><br />
+<img alt="" src="../figures/%E8%A3%81%E5%89%AA%E5%90%8E%E5%88%86%E8%BE%A8%E7%8E%87%E4%B8%BA1920-1080.png" title="裁剪后分辨率为1920-1080" /></p>
+</li>
+</ol>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+VI在线VPSS离线、VI离线VPSS在线、VI离线VPSS离线和VI在线VPSS在线流程和数据流基本一致，这里不一一描述。</p>
+</blockquote>
+<ol>
+<li>
+<p>流程步骤</p>
+</li>
+<li>
+<p>正常启动VI-VPSS-VENC通路；</p>
+</li>
+<li>正常退出VI-VPSS-VENC通路，但不退出ISP；</li>
+<li>更改MIPI_RX, ISP, VI, ISP, VENC模块的通路分辨率；</li>
+<li>启动VI部分通路: DEV、BIND、GROUP；</li>
+<li>确认分辨率切换是否完成（res_switch_finish），参考ss_mpi_isp_query_inner_state_info接口；</li>
+<li>切换成功后启动VI完整通路（PIPE、CHN）；</li>
+<li>
+<p>启动VPSS-VENC通路。</p>
+</li>
+<li>
+<p>注意事项</p>
+</li>
+</ol>
+<p>无</p>
+<h4 id="sample_vie_run_be_switch_mode">sample_vie_run_be_switch_mode<a name="ZH-CN_TOPIC_0000002218604854"></a></h4>
+<ol>
+<li>
+<p>使用场景</p>
+<p>在抓raw之后，离线调用BE处理的场景，ISP推荐使用run_be模式。</p>
+</li>
+<li>
+<p>流程步骤</p>
+</li>
+<li>
+<p>配置VI后，初始化ISP外部寄存器前，设置ISP控制参数中isp_run_wakeup_select为1（BE帧结束中断），参考ss_mpi_isp_set_ctrl_param接口。</p>
+</li>
+<li>从前往后启动ISP、VPSS、VENC模块。</li>
+<li>从VI PIPE抓raw处理后并送回，参考ss_mpi_vi_get_pipe_frame、ss_mpi_vi_send_pipe_frame接口。</li>
+<li>参考<a href="#ZH-CN_TOPIC_0000002218445022">sample_vie_switch_mode</a>切换WDR模式。</li>
+</ol>
+<h2 id="加载KO卡住">加载KO卡住<a name="ZH-CN_TOPIC_0000001969743617"></a></h2>
+<p>加载卡住原因：</p>
+<ul>
+<li>uboot烧写错误：使用Hi3516CV610-20S芯片，但烧写了Hi3516CV610-00S表格。</li>
+<li>pm.ko没有加载。</li>
+</ul>
+<h2 id="工具链问题">工具链问题<a name="ZH-CN_TOPIC_0000001969743613"></a></h2>
+<p>查看工具链安装路径：查看服务器环境变量 /etc/profile。</p>
+<p><strong>图 1</strong>  对应工具链路径<a name="fig455mcpsimp"></a>  </p>
+<p><img alt="" src="../figures/zh-cn_image_0000002250837321.png" /></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+工具链安装后需要执行source /etc/profile生效。</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+
+  <div class="footer-box">
+    <div class="footer-list">
+      
+      
+      <div class="footer-list-child">
+        <a href="https://www.hisilicon.com/cn" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/home" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开发者网站</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://gitcode.com/HiSpark" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开源社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developer.huawei.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">华为开发者官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hikunpeng.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">鲲鹏社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hiascend.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">昇腾社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/aboutus" target="_blank" class="footer-nav-first" rel="noopener noreferrer">关于我们</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/login" target="_blank" class="footer-nav-first" rel="noopener noreferrer">投诉举报</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      
+    </div>
+    <div class="footer-fix">
+      <div class="footer-fix-content">
+        <div>
+          <span class="footer-copyright">&nbsp;&copy;2024 华为技术有限公司</span>
+          <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer">粤A2-20044005号</a>
+          <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702004153"
+            target="_blank" rel="noopener noreferrer">粤公网安备44030702004153号</a>
+        </div>
+        <div class="footer-name-list">
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/legalNotices" target="_blank" class="footer-name" rel="noopener noreferrer">法律声明</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/cookie-policy" target="_blank" class="footer-name" rel="noopener noreferrer">关于Cookie</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/privacyPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">隐私政策</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/userPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">用户协议</a>
+          
+          
+          
+          <a href="javascript:void(0);" onclick="openDisclaimerDialog()" class="footer-name">免责声明</a>
+          
+          
+          
+        </div>
+      </div>
+
+
+      <!-- 免责声明弹窗 -->
+      <div id="disclaimerDialog" class="disclaimer-overlay" style="display: none;">
+        <div class="disclaimer-dialog">
+          <div class="disclaimer-dialog__header">
+            <span class="disclaimer-dialog__title">免责声明</span>
+            <button class="disclaimer-dialog__close" onclick="closeDisclaimerDialog()">×</button>
+          </div>
+          <div class="disclaimer-dialog__body">
+            <p class="disclaimer-dialog__text-center"><strong>海思开发者网站免责声明</strong></p>
+            <p>尊敬的用户，您好：</p>
+            <p>&nbsp; &nbsp;
+              请确保您通过本平台向海思提供或反馈的任何信息或意见不侵犯第三方知识产权和/或合法权益。如您提供或反馈的上述任何信息或意见侵犯第三方知识产权和/或合法权益，和/或给第三方造成损害的，您将承担全部法律及赔偿责任。
+            </p>
+          </div>
+          <div class="disclaimer-dialog__footer">
+            <button class="disclaimer-dialog__btn" onclick="closeDisclaimerDialog()">关闭</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function openDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'flex';
+        }
+        function closeDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'none';
+        }
+        // 点击弹窗背景关闭
+        document.getElementById('disclaimerDialog').addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeDisclaimerDialog();
+          }
+        });
+      </script>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../static/js/custom.js"></script>
+      
+        <script src="../../../../static/js/version-selector.js"></script>
+      
+        <script src="../../../../static/js/code-highlight.js"></script>
+      
+        <script src="../../../../static/js/wavedrom-skin.js"></script>
+      
+        <script src="../../../../static/js/wavedrom.min.js"></script>
+      
+        <script src="../../../../static/js/wavedrom-init.js"></script>
+      
+        <script src="../../../../static/js/no-flash.js"></script>
+      
+    
+  </body>
+</html>

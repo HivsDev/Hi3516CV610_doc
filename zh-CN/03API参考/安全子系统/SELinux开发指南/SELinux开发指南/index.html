@@ -1,0 +1,1453 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hi3516CV610 超高清智慧视觉 SoC 文档中心">
+      
+      
+        <meta name="author" content="HiSpark">
+      
+      
+        <link rel="canonical" href="https://hivsdev.github.io/Hi3516CV610_doc/zh-CN/03API%E5%8F%82%E8%80%83/%E5%AE%89%E5%85%A8%E5%AD%90%E7%B3%BB%E7%BB%9F/SELinux%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/SELinux%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../static/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>前言 - Hi3516CV610 开发者中心</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+    
+    
+      <link rel="stylesheet" href="../../../../../static/css/extra.css">
+    
+      <link rel="stylesheet" href="../../../../../static/css/version-selector.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+      <meta name="gitcode-issues-url" content="https://gitcode.com/HiSpark/fbb_ws63/issues">
+      
+      <link rel="dns-prefetch" href="https://docs.hisilicon.com">
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://docs.hisilicon.com" crossorigin>
+      <link rel="preload" href="../../../../../assets/stylesheets/main.484c7ddc.min.css" as="style">
+      <link rel="preload" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css" as="style">
+      <link rel="preload" href="../../../../../static/css/extra.css" as="style">
+      <link rel="preload" href="../../../../../assets/javascripts/bundle.79ae519e.min.js" as="script">
+      <link rel="preload" href="../../../../../static/js/custom.js" as="script">
+
+      
+      
+        
+        
+      
+      <style>:root{--md-text-font:"Helvetica Neue, PingFang SC, Microsoft YaHei";--md-code-font:"Consolas, Roboto Mono"}</style>
+      <script>
+        // 防止宽窄屏刷新闪烁 — 在 body 解析前就读取 localStorage 标记 <html>
+        // 配合 CSS: html.prefer-narrow .md-grid 在首帧即应用 76%
+        if (localStorage.getItem('wideScreen') === 'false') {
+          document.documentElement.classList.add('prefer-narrow');
+        }
+      </script>
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#前言" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://developers.hisilicon.com" title="Hi3516CV610 开发者中心" class="md-header__button md-logo" aria-label="Hi3516CV610 开发者中心" data-md-component="logo" target="_blank" rel="noopener noreferrer">
+      <img 
+  src="../../../../../static/images/light-icon.png" 
+  class="md-logo__img md-logo__img--light"
+  alt="Hi3516CV610 开发者中心" 
+/>
+<img 
+  src="../../../../../static/images/dark-icon.png" 
+  class="md-logo__img md-logo__img--dark"
+  alt="Hi3516CV610 开发者中心" 
+/>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+      </div>
+    </div>
+    
+      
+      
+        <label class="md-header__button md-icon md-header__button--search" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+      
+    
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="切换到暗色主题"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色主题" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="切换到亮色主题"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色主题" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <div class="md-header__source">
+        <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="Go to repository" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+      </div>
+    
+  </nav>
+  
+  
+    
+    
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        <!-- 
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+         -->
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+</header>
+
+
+<script>
+  var USER_DEFINED_OPTIONS = {
+    REPO_PATH: "Hi3516CV610_doc",
+    ROOT_URL: "https://docs.hisilicon.com/projects"
+  };
+  var DOCUMENTATION_OPTIONS = {
+    VERSION: "master",
+    // 构建时声明主题的语言
+    LANGUAGE: "en"
+  };
+</script>
+<script src="https://docs.hisilicon.com/projects/version/hispark_version.js"></script>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="sidebar-selectors">
+                  <div class="repo-select custom-select">
+                    <span class="select-label">芯片</span>
+                    <div class="repo-selector" title="">
+                      <span class="repo-readOnly"></span>
+                      <select id="repo-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="repo-options" style="display:none"></ul>
+                  </div>
+                  <div class="version-select custom-select">
+                    <span class="select-label">版本</span>
+                    <div class="version-selector" title="">
+                      <span class="version-readOnly"></span>
+                      <select id="version-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="version-options" style="display:none"></ul>
+                  </div>
+                  
+                    
+                    
+                      <div class="sidebar-search">
+                        <label class="sidebar-search__button" for="__search">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+                          <span>全文检索</span>
+                        </label>
+                      </div>
+                    
+                  
+                </div>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+    <div class="md-nav__source">
+      <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="Go to repository" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../00%E6%A6%82%E8%A7%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整体架构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考案例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../05%E7%A1%AC%E4%BB%B6%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具中心
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../07FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../08%E5%85%B6%E4%BB%96/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#前言_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#SELinux介绍" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SELinux介绍
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SELinux介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#SELinux介绍_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SELinux介绍
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SELinux依赖介绍" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SELinux依赖介绍
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#SELinux编译使用说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SELinux编译使用说明
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SELinux编译使用说明">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#SELinux编译指导" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SELinux编译指导
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#SELinux使用说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SELinux使用说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#权限访问控制sample样例" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        权限访问控制sample样例
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="权限访问控制sample样例">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#样例目标" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        样例目标
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample_vio编译及运行" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sample_vio编译及运行
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample_vio访问控制策略实现说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sample_vio访问控制策略实现说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#注意事项" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        注意事项
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="注意事项">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#SELinux注意事项" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SELinux注意事项
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="前言">前言<a name="ZH-CN_TOPIC_0000001631236237"></a></h1>
+<h2 id="前言_1">前言<a name="ZH-CN_TOPIC_0000001631236237"></a></h2>
+<p><strong>概述<a name="section184mcpsimp"></a></strong></p>
+<p>本文档主要介绍如何在产品版本上集成SELinux，及SELinux相关功能开发。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+本文档以Hi3519DV500为例，未有特殊说明，其余产品版本与Hi3519DV500内容完全一致。</p>
+</blockquote>
+<p><strong>产品版本<a name="section187mcpsimp"></a></strong></p>
+<p>与本文档相对应的产品版本如下。</p>
+<p><a name="table190mcpsimp"></a></p>
+<table><thead align="left"><tr id="row195mcpsimp"><th class="cellrowborder" valign="top" width="32%" id="mcps1.1.3.1.1"><p id="p197mcpsimp"><a name="p197mcpsimp"></a><a name="p197mcpsimp"></a>产品名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="68%" id="mcps1.1.3.1.2"><p id="p199mcpsimp"><a name="p199mcpsimp"></a><a name="p199mcpsimp"></a>产品版本</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row11632185241913"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p15312149122013"><a name="p15312149122013"></a><a name="p15312149122013"></a>Hi3516D</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p1531210915205"><a name="p1531210915205"></a><a name="p1531210915205"></a>V500</p>
+</td>
+</tr>
+<tr id="row201mcpsimp"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p203mcpsimp"><a name="p203mcpsimp"></a><a name="p203mcpsimp"></a>Hi3519D</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p205mcpsimp"><a name="p205mcpsimp"></a><a name="p205mcpsimp"></a>V500</p>
+</td>
+</tr>
+<tr id="row15564493910"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p63331555172315"><a name="p63331555172315"></a><a name="p63331555172315"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p141352132417"><a name="p141352132417"></a><a name="p141352132417"></a>V608</p>
+</td>
+</tr>
+<tr id="row2144318365"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p47921410203711"><a name="p47921410203711"></a><a name="p47921410203711"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p16792101014379"><a name="p16792101014379"></a><a name="p16792101014379"></a>V610</p>
+</td>
+</tr>
+<tr id="row128616553483"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p10460584365"><a name="p10460584365"></a><a name="p10460584365"></a>Hi3511C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p14460982363"><a name="p14460982363"></a><a name="p14460982363"></a>V100</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>读者对象<a name="section206mcpsimp"></a></strong></p>
+<p>本文档（本指南）主要适用于以下工程师：</p>
+<ul>
+<li>技术支持工程师</li>
+<li>软件开发工程师</li>
+</ul>
+<p><strong>修订记录<a name="section211mcpsimp"></a></strong></p>
+<p>修订记录累积了每次文档更新的说明。最新版本的文档包含以前所有文档版本的更新内容。</p>
+<p><a name="table1557726816410"></a></p>
+<table><thead align="left"><tr id="row2942532716410"><th class="cellrowborder" valign="top" width="20.72%" id="mcps1.1.4.1.1"><p id="p3778275416410"><a name="p3778275416410"></a><a name="p3778275416410"></a><strong id="b5687322716410"><a name="b5687322716410"></a><a name="b5687322716410"></a>文档版本</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="26.119999999999997%" id="mcps1.1.4.1.2"><p id="p5627845516410"><a name="p5627845516410"></a><a name="p5627845516410"></a><strong id="b5800814916410"><a name="b5800814916410"></a><a name="b5800814916410"></a>发布日期</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="53.16%" id="mcps1.1.4.1.3"><p id="p2382284816410"><a name="p2382284816410"></a><a name="p2382284816410"></a><strong id="b3316380216410"><a name="b3316380216410"></a><a name="b3316380216410"></a>修改说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row5106435797"><td class="cellrowborder" valign="top" width="20.72%" headers="mcps1.1.4.1.1 "><p id="p155221742896"><a name="p155221742896"></a><a name="p155221742896"></a>00B01</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.119999999999997%" headers="mcps1.1.4.1.2 "><p id="p1152254213917"><a name="p1152254213917"></a><a name="p1152254213917"></a><span id="ph17791105814542"><a name="ph17791105814542"></a><a name="ph17791105814542"></a>2026-06-30</span></p>
+</td>
+<td class="cellrowborder" valign="top" width="53.16%" headers="mcps1.1.4.1.3 "><p id="p95228426917"><a name="p95228426917"></a><a name="p95228426917"></a>第1次临时版本发布。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="SELinux介绍">SELinux介绍<a name="ZH-CN_TOPIC_0000001581035776"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001630996401">SELinux介绍</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001631115825">SELinux依赖介绍</a></strong>  </p>
+</li>
+</ul>
+<h3 id="SELinux介绍_1">SELinux介绍<a name="ZH-CN_TOPIC_0000001630996401"></a></h3>
+<p>SELinux（Security-Enhanced Linux）是一种安全增强的Linux操作系统，旨在提供更高级别的安全保护。</p>
+<ul>
+<li>SELinux通过强制访问控制（MAC，Mandatory Access Control）机制来限制进程的访问权限，从而提高系统的安全性。</li>
+<li>与传统的Linux访问控制（DAC, Discretionary Access Control）机制不同，SELinux使用了一种基于策略的访问控制模型，它将每个进程和文件都分配了一个安全上下文（Security Context），并根据预定义的策略来限制进程和文件之间的交互。这种策略是由系统管理员定义的，可以根据实际需求进行修改和调整。</li>
+</ul>
+<p>更多SELinux的信息参考：<a href="http://selinuxproject.org/page/Main_Page" target="_blank" rel="noopener noreferrer">http://selinuxproject.org/page/Main_Page</a></p>
+<h3 id="SELinux依赖介绍">SELinux依赖介绍<a name="ZH-CN_TOPIC_0000001631115825"></a></h3>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001580716432">pcre2</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001630916365">libsepol</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001631235745">libselinux</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001580556628">checkpolicy</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001580875848">policycoreutils</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001581035780">refpolicy</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001630996405">musl_fts</a></strong>  </p>
+</li>
+</ul>
+<h4 id="pcre2">pcre2<a name="ZH-CN_TOPIC_0000001580716432"></a></h4>
+<p>pcre2（Perl Compatible Regular Expressions 2）是一个正则表达式库，它提供了一种强大的方式来处理文本匹配和替换。PCRE2支持UTF-8、UTF-16和UTF-32编码，并提供了许多高级功能，如反向引用、零宽度断言、递归模式等。此处主要用来处理策略规则。</p>
+<h4 id="libsepol">libsepol<a name="ZH-CN_TOPIC_0000001630916365"></a></h4>
+<p>libsepol是一个用于SELinux策略管理的库，它提供了一组API，用于读取、解析和操作SELinux策略。它是SELinux策略管理工具中的一个重要组成部分，可以帮助用户管理和维护SELinux策略。其主要作用包括：</p>
+<ul>
+<li>解析和加载SELinux策略文件：libsepol可以读取和解析SELinux策略文件，将其转换为内存中的数据结构，以便后续的操作。</li>
+<li>操作SELinux策略：libsepol提供了一组API，可以用于操作SELinux策略，例如添加、删除和修改SELinux策略规则等。</li>
+<li>验证SELinux策略：libsepol可以验证SELinux策略的正确性，以确保其符合SELinux的安全要求。</li>
+<li>支持多种策略格式：libsepol支持多种SELinux策略格式，包括二进制格式和文本格式，可以方便地进行转换和管理。</li>
+</ul>
+<h4 id="libselinux">libselinux<a name="ZH-CN_TOPIC_0000001631235745"></a></h4>
+<p>libselinux是一个用于实现SELinux安全策略的库文件。SELinux是一种强制访问控制（MAC）机制，它可以限制进程对系统资源的访问，从而提高系统的安全性。libselinux提供了一组API，可以让开发者在应用程序中使用SELinux策略。其主要作用包括：</p>
+<ol>
+<li>实现SELinux安全策略：libselinux提供了一组API，可以让开发者在应用程序中使用SELinux策略。这些API包括获取和设置进程的安全上下文、检查文件或进程的安全上下文等。</li>
+<li>提高系统安全性：SELinux可以限制进程对系统资源的访问，从而提高系统的安全性。通过使用libselinux，开发者可以在应用程序中使用SELinux策略，从而进一步提高系统的安全性。</li>
+<li>支持多种安全策略：libselinux支持多种安全策略，包括MLS（Multi-Level Security）、MCS（Multi-Category Security）和RBAC（Role-Based Access Control）等。这些安全策略可以根据不同的应用场景进行选择和配置。</li>
+</ol>
+<h4 id="checkpolicy">checkpolicy<a name="ZH-CN_TOPIC_0000001580556628"></a></h4>
+<p>checkpolicy是SELinux中的一个工具，用于检查SELinux策略文件的语法和语义错误。它可以帮助用户在安装或修改SELinux策略时发现错误，从而提高系统的安全性和稳定性。其主要有以下几个方面：检查策略文件的语法错误，检查策略文件的语义错误，生成策略文件。此处其作用是作为编译refpolicy的依赖工具。</p>
+<h4 id="policycoreutils">policycoreutils<a name="ZH-CN_TOPIC_0000001580875848"></a></h4>
+<p>policycoreutils是一个用于管理SELinux策略的工具集。它包含了一系列的命令行工具，可以用于创建、修改、删除和查询SELinux策略。此处其作用是作为编译refpolicy的依赖工具。</p>
+<h4 id="refpolicy">refpolicy<a name="ZH-CN_TOPIC_0000001581035780"></a></h4>
+<p>refpolicy是一个基于SELinux的安全策略，用于控制进程和用户在系统中的访问权限。它定义了一系列规则和限制，以确保系统资源只能被授权的进程和用户访问，从而提高系统的安全性。其作用包括：</p>
+<ul>
+<li>控制进程和用户的访问权限：refpolicy定义了一系列规则和限制，以确保只有授权的进程和用户才能访问系统资源。</li>
+<li>防止未授权的访问：refpolicy可以防止未授权的进程和用户访问系统资源，从而提高系统的安全性。</li>
+<li>简化安全管理：refpolicy提供了一种简单的方法来管理系统的安全性，可以减少管理员的工作量。</li>
+<li>支持定制化：refpolicy可以根据不同的需求进行定制化，以满足不同系统的安全需求。</li>
+</ul>
+<h4 id="musl_fts">musl_fts<a name="ZH-CN_TOPIC_0000001630996405"></a></h4>
+<p>编译musl版本SELinux的依赖库（编译glibc版本的SELinux是不需要该开源软件的）。musl-fts是一个用于文件树遍历的库，它提供了一组函数，可以在文件系统中遍历目录树，并对每个文件或目录执行指定的操作。musl-fts库的主要作用是提供一种方便的方式来遍历文件系统中的目录树，以便于实现文件操作、备份、搜索等功能。它可以递归地遍历目录树，同时提供了一些过滤器，可以根据文件类型、名称、大小等条件来过滤文件。</p>
+<h2 id="SELinux编译使用说明">SELinux编译使用说明<a name="ZH-CN_TOPIC_0000001631115829"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001580716436">SELinux编译指导</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001581035784">SELinux使用说明</a></strong>  </p>
+</li>
+</ul>
+<h3 id="SELinux编译指导">SELinux编译指导<a name="ZH-CN_TOPIC_0000001580716436"></a></h3>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-caution.gif" /> <strong>注意：</strong> <br />
+在编译 SELinux 前请参考 《Hi35xxVxxx 开发环境用户指南》 搭建基础 编译环境。</p>
+</blockquote>
+<p>本文档以Hi3519DV500芯片为例。</p>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001630916369">SELinux依赖源码下载</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001631235749">SDK下载</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001580556632">编译环境准备</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001580875852">源码编译</a></strong>  </p>
+</li>
+</ul>
+<h4 id="SELinux依赖源码下载">SELinux依赖源码下载<a name="ZH-CN_TOPIC_0000001630916369"></a></h4>
+<ul>
+<li>
+<p>下载pcre2-10.40.tar.gz</p>
+<p>链接：<a href="https://github.com/PCRE2Project/pcre2/releases/tag/pcre2-10.40" target="_blank" rel="noopener noreferrer">https://github.com/PCRE2Project/pcre2/releases/tag/pcre2-10.40</a></p>
+</li>
+<li>
+<p>下载libsepol-3.3.tar.gz</p>
+<p>链接：<a href="https://github.com/SELinuxProject/selinux/releases/tag/3.3" target="_blank" rel="noopener noreferrer">https://github.com/SELinuxProject/selinux/releases/tag/3.3</a></p>
+</li>
+<li>
+<p>下载libselinux-3.3.tar.gz</p>
+<p>链接：<a href="https://github.com/SELinuxProject/selinux/releases/tag/3.3" target="_blank" rel="noopener noreferrer">https://github.com/SELinuxProject/selinux/releases/tag/3.3</a></p>
+</li>
+<li>
+<p>下载checkpolicy-3.3.tar.gz</p>
+<p>链接：<a href="https://github.com/SELinuxProject/selinux/releases/tag/3.3" target="_blank" rel="noopener noreferrer">https://github.com/SELinuxProject/selinux/releases/tag/3.3</a></p>
+</li>
+<li>
+<p>下载policycoreutils-3.3.tar.gz</p>
+<p>链接：<a href="https://github.com/SELinuxProject/selinux/releases/tag/3.3" target="_blank" rel="noopener noreferrer">https://github.com/SELinuxProject/selinux/releases/tag/3.3</a></p>
+</li>
+<li>
+<p>下载refpolicy-2.20220520.tar.bz2</p>
+<p>链接：<a href="https://github.com/SELinuxProject/refpolicy/releases/tag/RELEASE_2_20220520" target="_blank" rel="noopener noreferrer">https://github.com/SELinuxProject/refpolicy/releases/tag/RELEASE_2_20220520</a></p>
+</li>
+<li>
+<p>下载musl-fts-1.2.7.tar.gz</p>
+<p>链接：<a href="https://github.com/void-linux/musl-fts/releases/tag/v1.2.7" target="_blank" rel="noopener noreferrer">https://github.com/void-linux/musl-fts/releases/tag/v1.2.7</a></p>
+</li>
+</ul>
+<h4 id="SDK下载">SDK下载<a name="ZH-CN_TOPIC_0000001631235749"></a></h4>
+<p>SDK版本包下载，参考版本包名，如：Hi35xxx_SDK_Vx.x.x.tgz</p>
+<h4 id="编译环境准备">编译环境准备<a name="ZH-CN_TOPIC_0000001580556632"></a></h4>
+<ol>
+<li>
+<p>新建一个空目录，将从版本包下载的“SDK压缩包（Hi35xxx_SDK_Vx.x.x.tgz）和SELinux目录”放于该空目录下：</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002579813616.png" /></p>
+</li>
+<li>
+<p>将<a href="#ZH-CN_TOPIC_0000001630916369">SELinux依赖源码下载</a>章节下载的SELinux相关源码，放入步骤1所示的SELinux目录下。</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002610093497.png" /></p>
+</li>
+</ol>
+<h4 id="源码编译">源码编译<a name="ZH-CN_TOPIC_0000001580875852"></a></h4>
+<p>进入<a href="#ZH-CN_TOPIC_0000001580556632">编译环境准备</a>中<a href="#li54961447125219">2</a>的SELinux/build/目录：修改脚本build_selinux_hi3516cv610.sh中，下图所示的五个参数为当前环境对应值：</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002579653714.png" /></p>
+<p>此外，release版本需要将环境变量编译进uboot，即修改bsp/tools/pc/uboot_env/env_text/hi3516cv610/nand_env.txt文件内容为：</p>
+<p>在bootargs末尾添加上security=selinux selinux=1</p>
+<p>若使用release版本的SPI NOR介质，需要将BOOT_MEDIA_SELINUX="spi_nand"修改为BOOT_MEDIA_SELINUX="spi"。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+SELinux默认是在release版本上支持的。<br />
+此处以Hi3519DV500为例，执行的脚本名为：build_selinux_hi3519dv500.sh；其余芯片版本需将脚本名上的芯片名替换为对应芯片名字，如Hi3516CV610执行的脚本名为：build_selinux_hi3516cv610.sh。</p>
+</blockquote>
+<p>参考以下步骤进行编译。</p>
+<ol>
+<li>
+<p>整体编译：</p>
+<p>./build_selinux_hi3519dv500.sh all</p>
+<p>执行完整体编译后会在SDK版本包的Hi35xxx_SDK_Vx.x.x /smp/a55_linux/source/bsp/pub/hi35xxx_xxx_image_xxx下生成包含SELinux功能的镜像文件：</p>
+<p>例如：</p>
+<p><img alt="" src="../figures/zh-cn_image_0000001631115841.png" /></p>
+</li>
+<li>
+<p>部分编译：</p>
+<ol>
+<li>
+<p>单编策略：./build_selinux_hi3519dv500.sh policy</p>
+<p>执行完单编策略后，会在SELinux/open_source/refpolicy/out下生成策略二进制文件，将out下的内容拷贝到单板linux的文件系统中对应目录下，然后重启单板，即可完成策略的更新；</p>
+</li>
+<li>
+<p>单编文件系统：./build_selinux_hi3519dv500.sh fs</p>
+<p>执行完单编文件系统后，会更新SDK版本包的Hi35xxx_SDK_Vx.x.x /smp/a55_linux/source/bsp/pub/hi35xxx_xxx_image_xxx目录下，文件系统对应的二进制文件；</p>
+</li>
+</ol>
+</li>
+<li>
+<p>清理：</p>
+<ol>
+<li>清理文件：./build_selinux_hi3519dv500.sh clean</li>
+<li>深度清理文件：./build_selinux_hi3519dv500.sh distclean</li>
+</ol>
+</li>
+<li>
+<p>查看帮助：</p>
+<p>./build_selinux_hi3519dv500.sh -h</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+1.  musl和glibc是两个不同的版本包<br />
+2.  整体编译会重编所有SDK相关驱动的ko文件<br />
+3.  每次编译前建议先执行：./build_selinux_hi3519dv500.sh clean</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="SELinux使用说明">SELinux使用说明<a name="ZH-CN_TOPIC_0000001581035784"></a></h3>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001630996409">烧写镜像</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001631115833">uboot启动参数设置</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001580716440">SELinux常用命令</a></strong>  </p>
+</li>
+</ul>
+<h4 id="烧写镜像">烧写镜像<a name="ZH-CN_TOPIC_0000001630996409"></a></h4>
+<p>将<a href="#ZH-CN_TOPIC_0000001580875852">源码编译</a>中<a href="#li969165485012">1</a>生成的镜像文件，烧写到单板上，烧写镜像：参考SDK版本包镜像烧写方式。</p>
+<h4 id="uboot启动参数设置">uboot启动参数设置<a name="ZH-CN_TOPIC_0000001631115833"></a></h4>
+<ol>
+<li>
+<p>烧写完后，重启单板，进入uboot命令行，设置uboot启动参数：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>setenv bootargs ‘xxx security=selinux selinux=1’
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>sa;
+</span></code></pre></div>
+<p>注：xxx代表uboot的bootargs的原始参数，release版本不需要设置该参数。</p>
+</li>
+<li>
+<p>重启单板，进入的即为包含SELinux功能的Linux系统，执行命令：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>cd /
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>ls -Z
+</span></code></pre></div>
+<p>预期正常结果为：</p>
+<p><img alt="" src="../figures/zh-cn_image_0000001580716448.png" /></p>
+</li>
+</ol>
+<h4 id="SELinux常用命令">SELinux常用命令<a name="ZH-CN_TOPIC_0000001580716440"></a></h4>
+<ul>
+<li>
+<p>SELinux模式介绍：</p>
+<ol>
+<li>enforcing: 强制模式，违反SELinux规则的行为将被阻止并记录到日志中。</li>
+<li>permissive: 宽容模式，当违反SELinux的行为规则时，会发出警告并记录到日志中，但是不会被阻止，一般都是调试用。</li>
+<li>disabled: 关闭SELinux，不使用SELinux。</li>
+</ol>
+</li>
+<li>
+<p>SELinux命令介绍：</p>
+<ol>
+<li>
+<p>使能SELinux强制模式：</p>
+<ol>
+<li>临时使能（主要用于调试，重启后失效），需执行命令：setenforce 1</li>
+<li>永久使能：更改单板/etc/selinux/config中的SELINUX变量为：SELINUX=enforcing</li>
+</ol>
+</li>
+<li>
+<p>使能SELinux宽容模式：</p>
+<ol>
+<li>临时使能（主要用于调试，重启后失效），需执行命令：setenforce 0</li>
+<li>永久使能：更改单板/etc/selinux/config中的SELINUX变量为：SELINUX=permissive</li>
+</ol>
+</li>
+<li>
+<p>关闭SELinux：</p>
+<p>更改单板/etc/selinux/config中的SELINUX变量为：SELINUX=disabled</p>
+</li>
+<li>
+<p>从策略二进制中，更新/mpp下的文件的上下文：restorecon -R /mpp/</p>
+</li>
+<li>查看当前目录文件的安全上下文：ls -Z</li>
+</ol>
+</li>
+</ul>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+通过该指南构建出来的含有SELinux功能的镜像，烧写到单板后，系统默认处于permissive状态，宽容模式，即单板系统中的/etc/selinux/config中的SELINUX变量为：SELINUX=permissive。</p>
+</blockquote>
+<h2 id="权限访问控制sample样例">权限访问控制sample样例<a name="ZH-CN_TOPIC_0000001630916373"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001631235753">样例目标</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001580556636">sample_vio编译及运行</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001630996413">sample_vio访问控制策略实现说明</a></strong>  </p>
+</li>
+</ul>
+<h3 id="样例目标">样例目标<a name="ZH-CN_TOPIC_0000001631235753"></a></h3>
+<p>该权限访问控制sample以sample_vio为例，具体为了实现：sample_vio的进程在配置了访问控制策略后能正常访问mpp video相关的设备节点，进而其能正常运行，而其它进程因未配置相关允许访问策略，则无法访问mpp video相关的设备节点，因此其它任何进程都无法影响sample_vio的正常运行，从而增加业务进程稳定性。</p>
+<h3 id="sample_vio编译及运行">sample_vio编译及运行<a name="ZH-CN_TOPIC_0000001580556636"></a></h3>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+Hi3519DV500/Hi3516DV500的sample名为：sample_vio；Hi3516CV610名为：sample_vie，操作方法与Hi3519DV500/Hi3516DV500一致。</p>
+</blockquote>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001580875856">sample_vio编译</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001581035788">sample_vio运行</a></strong>  </p>
+</li>
+</ul>
+<h4 id="sample_vio编译">sample_vio编译<a name="ZH-CN_TOPIC_0000001580875856"></a></h4>
+<p>参考SDK的sample编译方式，此处用到的是：sample_vio。</p>
+<h4 id="sample_vio运行">sample_vio运行<a name="ZH-CN_TOPIC_0000001581035788"></a></h4>
+<ol>
+<li>当前环境参考：sdk版本包内：“Hi35xxVxxx 开发环境用户指南.pdf”，单板启动进入linux后，mount ko所在服务器到单板share目录，然后插入重编后的ko（参考SDK的ko插入方式）;</li>
+<li>
+<p>将sample_vio拷贝到单板的“/mpp/”目录下;</p>
+</li>
+<li>
+<p>步骤1、步骤2完成后，在单板linux下，执行以下命令：</p>
+<p>restorecon -R /dev/ （更新/dev/目录下设备节点的上下文）</p>
+<p>restorecon -R /mpp/ （更新mpp/目录下的文件的上下文）</p>
+<p>cd /mpp</p>
+<p>chmod +x sample_vio</p>
+<p>setenforce 1 （使能SELinux强制模式）</p>
+</li>
+<li>
+<p>执行sample_vio（参考SDK的sample_vio的执行方式）。</p>
+</li>
+</ol>
+<h3 id="sample_vio访问控制策略实现说明">sample_vio访问控制策略实现说明<a name="ZH-CN_TOPIC_0000001630996413"></a></h3>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001631115837">策略基本介绍</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001580716444">策略文件组成</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001630916377">策略访问控制实现</a></strong>  </p>
+</li>
+</ul>
+<h4 id="策略基本介绍">策略基本介绍<a name="ZH-CN_TOPIC_0000001631115837"></a></h4>
+<p>sample_vio访问控制策略主要提供了一系列针对mpp video相关设备节点访问的SELinux策略规则，进而让sample_vio的进程能在打开了SELinux的Linux系统中具有访问mpp video相关设备节点的权限，进而能正常运行，而其它进程则限制了其访问mpp video相关设备节点的权限，进而无法影响sample_vio的正常运行。</p>
+<h4 id="策略文件组成">策略文件组成<a name="ZH-CN_TOPIC_0000001580716444"></a></h4>
+<p>SELinux一个策略源模块一般由三个文件组成，下图为sample的策略文件组成:</p>
+<p><img alt="" src="../figures/zh-cn_image_0000001630916381.png" /></p>
+<ul>
+<li>标记策略文件(.fc)：这个文件包括与这个模块有关的文件上下文标记语句；</li>
+<li>外部接口文件(.if)：这个文件包括模块接口，这些接口是其它模块访问这个模块的类型和属性，一般不使用；</li>
+<li>私有策略文件(.te)：这个文件包括了模块专用的声明和规则，通常，所有模块类型和属性声明都包括在.te文件中，以及授予这些类型和属性核心访问权的规则（allow语句）；</li>
+</ul>
+<h4 id="策略访问控制实现">策略访问控制实现<a name="ZH-CN_TOPIC_0000001630916377"></a></h4>
+<p>SELinux的访问控制主要是基于类型（type）进行的，对于linux中的每个对象，都设定有一个类型，因此便可通过一系列权限控制语句对进程、文件、设备节点等进行访问控制。</p>
+<p>策略语句样例：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>allow mpp_video_process_t mpp_video_t:chr_file { ioctl map open read write };
+</span></code></pre></div>
+<p>即：允许拥有mpp_video_process_t类型的对象，对拥有mpp_video_t类型的对象，具有ioctl、map、open、read、write操作的权限。</p>
+<p>sample_vio策略访问控制的核心实现逻辑如<a href="#fig89221231103810">图1</a>所示。</p>
+<p><strong>图 1</strong>  策略访问控制核心实现逻辑图<a name="fig89221231103810"></a><br />
+<img alt="" src="../figures/%E7%AD%96%E7%95%A5%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E6%A0%B8%E5%BF%83%E5%AE%9E%E7%8E%B0%E9%80%BB%E8%BE%91%E5%9B%BE.png" title="策略访问控制核心实现逻辑图" /></p>
+<p>此外，其详细实现步骤为：</p>
+<ol>
+<li>
+<p>类型定义：在mpp_video.te文件中定义类型</p>
+<p>type mpp_video_process_t; # mpp下所有video相关进程都为该类型</p>
+<p>type mpp_video_exec_t; # mpp下所有video相关可执行程序都为该类型</p>
+<p>type mpp_video_t; # mpp下所有video相关设备节点都为该类型</p>
+<p>type mpp_others_t; # mpp下所有非video相关设备节点都为该类型</p>
+</li>
+<li>
+<p>mpp相关对象上下文定义：在mpp_video.fc文件中定义mpp设备节点和sample_vio的上下文： 即将sample_vio设为mpp_video_exec_t,将/dev目录下的video相关节点设为：mpp_vedio_t,将/dev目录下mpp相关的非video相关节点设为：mpp_others_t；</p>
+</li>
+<li>
+<p>mpp全局访问控制：在mpp_video.te文件中定义全局访问控制，不允许非mpp_video_process_t类型的对象对"mpp_video_t"的chr_file文件进行任何操作：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>neverallow ~mpp_video_process_t { mpp_video_t } : chr_file { ioctl read write create setattr lock
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>relabelfrom append map unlink link rename execute quotaon mounton audit_access open execmod watch
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>watch_mount watch_sb watch_with_perm watch_reads };
+</span></code></pre></div>
+</li>
+<li>
+<p>角色关联：在mpp_video.te文件中定义角色关联语句，将用户角色sysadm_r与mpp_video_process_t、mpp_video_exec_t、mpp_others_t、mpp_video_t类型关联，进而能让上述类型在访问控制中能生成有效的上下文；</p>
+</li>
+<li>mpp video相关进程类型转换：在mpp_video.te文件中定义进程类型转换语句，让user能通过运行mpp_video_exec_t类型的可执行程序进而将该进程转换成mpp_video_process_t类型；</li>
+<li>
+<p>基础策略确定后，通过"<a href="#ZH-CN_TOPIC_0000001580875852">源码编译</a>"的单编策略步骤，将生成的策略文件拷贝到单板文件系统中，然后设定SELinux为permissive模式（即让单板中的/etc/selinux/config中的SELINUX变量设置为permissive，即SELINUX=permissive），然后运行sample_vio，查看当前控制台输出的权限拒绝提示：</p>
+<p>例如：audit: type=1400 audit(8430820.660:3): avc:  denied  { map } for  pid=1592 comm="sample_vo" path="/dev/mmz_userdev" dev="devtmpfs" ino=318 scontext=root:sysadm_r:sysadm_t tcontext=system_u:object_r:device_t tclass=chr_file permissive=1</p>
+<p>分析拒绝原因为：sysadm_t想要对device_t类型的对象进行map操作被拒绝:</p>
+<ul>
+<li>源类型：sysadm_t</li>
+<li>目标类型：device_t</li>
+<li>目标对象：chr_file</li>
+<li>拒绝访问操作：map</li>
+</ul>
+<p>因此，编写策略：allow sysadm_t device_t:chr_file { map }，即可解决该权限拒绝问题，重复步骤5和6，直到在SELinux的permissive模式下，不出现mpp相关类型的权限拒绝信息；</p>
+</li>
+<li>
+<p>将SELinux设为强制模式：参考“ 2.2.3 SELinux常用命令” ，然后运行sample_vio，即可实现，非mpp_video_process_t类型的进程无法访问mpp video设备相关节点，进而无法干扰sample_vio正常运行的目的。</p>
+</li>
+</ol>
+<h2 id="注意事项">注意事项<a name="ZH-CN_TOPIC_0000001631235757"></a></h2>
+<ul>
+<li><strong><a href="#ZH-CN_TOPIC_0000001580556640">SELinux注意事项</a></strong>  </li>
+</ul>
+<h3 id="SELinux注意事项">SELinux注意事项<a name="ZH-CN_TOPIC_0000001580556640"></a></h3>
+<ul>
+<li>编译SELinux相关依赖时，需要保证编译环境能编过SDK版本包；</li>
+<li>本指导文档提供的SELinux的权限控制sample，仅供参考使用，完整的策略规则，需要用户自行去完善；</li>
+<li>
+<p>要使SELinux的访问控制功能生效，需用户编写策略集，该版本不交付商用策略，SELinux策略参考：refpolicy</p>
+<p>链接：<a href="https://github.com/SELinuxProject/refpolicy" target="_blank" rel="noopener noreferrer">https://github.com/SELinuxProject/refpolicy</a></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+
+  <div class="footer-box">
+    <div class="footer-list">
+      
+      
+      <div class="footer-list-child">
+        <a href="https://www.hisilicon.com/cn" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/home" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开发者网站</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://gitcode.com/HiSpark" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开源社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developer.huawei.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">华为开发者官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hikunpeng.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">鲲鹏社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hiascend.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">昇腾社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/aboutus" target="_blank" class="footer-nav-first" rel="noopener noreferrer">关于我们</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/login" target="_blank" class="footer-nav-first" rel="noopener noreferrer">投诉举报</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      
+    </div>
+    <div class="footer-fix">
+      <div class="footer-fix-content">
+        <div>
+          <span class="footer-copyright">&nbsp;&copy;2024 华为技术有限公司</span>
+          <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer">粤A2-20044005号</a>
+          <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702004153"
+            target="_blank" rel="noopener noreferrer">粤公网安备44030702004153号</a>
+        </div>
+        <div class="footer-name-list">
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/legalNotices" target="_blank" class="footer-name" rel="noopener noreferrer">法律声明</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/cookie-policy" target="_blank" class="footer-name" rel="noopener noreferrer">关于Cookie</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/privacyPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">隐私政策</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/userPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">用户协议</a>
+          
+          
+          
+          <a href="javascript:void(0);" onclick="openDisclaimerDialog()" class="footer-name">免责声明</a>
+          
+          
+          
+        </div>
+      </div>
+
+
+      <!-- 免责声明弹窗 -->
+      <div id="disclaimerDialog" class="disclaimer-overlay" style="display: none;">
+        <div class="disclaimer-dialog">
+          <div class="disclaimer-dialog__header">
+            <span class="disclaimer-dialog__title">免责声明</span>
+            <button class="disclaimer-dialog__close" onclick="closeDisclaimerDialog()">×</button>
+          </div>
+          <div class="disclaimer-dialog__body">
+            <p class="disclaimer-dialog__text-center"><strong>海思开发者网站免责声明</strong></p>
+            <p>尊敬的用户，您好：</p>
+            <p>&nbsp; &nbsp;
+              请确保您通过本平台向海思提供或反馈的任何信息或意见不侵犯第三方知识产权和/或合法权益。如您提供或反馈的上述任何信息或意见侵犯第三方知识产权和/或合法权益，和/或给第三方造成损害的，您将承担全部法律及赔偿责任。
+            </p>
+          </div>
+          <div class="disclaimer-dialog__footer">
+            <button class="disclaimer-dialog__btn" onclick="closeDisclaimerDialog()">关闭</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function openDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'flex';
+        }
+        function closeDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'none';
+        }
+        // 点击弹窗背景关闭
+        document.getElementById('disclaimerDialog').addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeDisclaimerDialog();
+          }
+        });
+      </script>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../static/js/custom.js"></script>
+      
+        <script src="../../../../../static/js/version-selector.js"></script>
+      
+        <script src="../../../../../static/js/code-highlight.js"></script>
+      
+        <script src="../../../../../static/js/wavedrom-skin.js"></script>
+      
+        <script src="../../../../../static/js/wavedrom.min.js"></script>
+      
+        <script src="../../../../../static/js/wavedrom-init.js"></script>
+      
+        <script src="../../../../../static/js/no-flash.js"></script>
+      
+    
+  </body>
+</html>

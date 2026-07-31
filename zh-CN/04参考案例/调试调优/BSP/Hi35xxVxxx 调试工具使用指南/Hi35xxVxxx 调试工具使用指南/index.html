@@ -1,0 +1,1422 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hi3516CV610 超高清智慧视觉 SoC 文档中心">
+      
+      
+        <meta name="author" content="HiSpark">
+      
+      
+        <link rel="canonical" href="https://hivsdev.github.io/Hi3516CV610_doc/zh-CN/04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/%E8%B0%83%E8%AF%95%E8%B0%83%E4%BC%98/BSP/Hi35xxVxxx%20%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/Hi35xxVxxx%20%E8%B0%83%E8%AF%95%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../../static/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>前言 - Hi3516CV610 开发者中心</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+    
+    
+      <link rel="stylesheet" href="../../../../../../static/css/extra.css">
+    
+      <link rel="stylesheet" href="../../../../../../static/css/version-selector.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+      <meta name="gitcode-issues-url" content="https://gitcode.com/HiSpark/fbb_ws63/issues">
+      
+      <link rel="dns-prefetch" href="https://docs.hisilicon.com">
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://docs.hisilicon.com" crossorigin>
+      <link rel="preload" href="../../../../../../assets/stylesheets/main.484c7ddc.min.css" as="style">
+      <link rel="preload" href="../../../../../../assets/stylesheets/palette.ab4e12ef.min.css" as="style">
+      <link rel="preload" href="../../../../../../static/css/extra.css" as="style">
+      <link rel="preload" href="../../../../../../assets/javascripts/bundle.79ae519e.min.js" as="script">
+      <link rel="preload" href="../../../../../../static/js/custom.js" as="script">
+
+      
+      
+        
+        
+      
+      <style>:root{--md-text-font:"Helvetica Neue, PingFang SC, Microsoft YaHei";--md-code-font:"Consolas, Roboto Mono"}</style>
+      <script>
+        // 防止宽窄屏刷新闪烁 — 在 body 解析前就读取 localStorage 标记 <html>
+        // 配合 CSS: html.prefer-narrow .md-grid 在首帧即应用 76%
+        if (localStorage.getItem('wideScreen') === 'false') {
+          document.documentElement.classList.add('prefer-narrow');
+        }
+      </script>
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#前言" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://developers.hisilicon.com" title="Hi3516CV610 开发者中心" class="md-header__button md-logo" aria-label="Hi3516CV610 开发者中心" data-md-component="logo" target="_blank" rel="noopener noreferrer">
+      <img 
+  src="../../../../../../static/images/light-icon.png" 
+  class="md-logo__img md-logo__img--light"
+  alt="Hi3516CV610 开发者中心" 
+/>
+<img 
+  src="../../../../../../static/images/dark-icon.png" 
+  class="md-logo__img md-logo__img--dark"
+  alt="Hi3516CV610 开发者中心" 
+/>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+      </div>
+    </div>
+    
+      
+      
+        <label class="md-header__button md-icon md-header__button--search" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+      
+    
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="切换到暗色主题"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色主题" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="切换到亮色主题"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色主题" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <div class="md-header__source">
+        <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="Go to repository" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+      </div>
+    
+  </nav>
+  
+  
+    
+    
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        <!-- 
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+         -->
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+</header>
+
+
+<script>
+  var USER_DEFINED_OPTIONS = {
+    REPO_PATH: "Hi3516CV610_doc",
+    ROOT_URL: "https://docs.hisilicon.com/projects"
+  };
+  var DOCUMENTATION_OPTIONS = {
+    VERSION: "master",
+    // 构建时声明主题的语言
+    LANGUAGE: "en"
+  };
+</script>
+<script src="https://docs.hisilicon.com/projects/version/hispark_version.js"></script>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="sidebar-selectors">
+                  <div class="repo-select custom-select">
+                    <span class="select-label">芯片</span>
+                    <div class="repo-selector" title="">
+                      <span class="repo-readOnly"></span>
+                      <select id="repo-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="repo-options" style="display:none"></ul>
+                  </div>
+                  <div class="version-select custom-select">
+                    <span class="select-label">版本</span>
+                    <div class="version-selector" title="">
+                      <span class="version-readOnly"></span>
+                      <select id="version-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="version-options" style="display:none"></ul>
+                  </div>
+                  
+                    
+                    
+                      <div class="sidebar-search">
+                        <label class="sidebar-search__button" for="__search">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+                          <span>全文检索</span>
+                        </label>
+                      </div>
+                    
+                  
+                </div>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+    <div class="md-nav__source">
+      <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="Go to repository" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../00%E6%A6%82%E8%A7%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整体架构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../03API%E5%8F%82%E8%80%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考案例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../05%E7%A1%AC%E4%BB%B6%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具中心
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../07FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../08%E5%85%B6%E4%BB%96/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#前言_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perf介绍" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        perf介绍
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="perf介绍">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#概述" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perf依赖" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        perf依赖
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#perf编译" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        perf编译
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="perf编译">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perf依赖库" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        perf依赖库
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#编译perf-musl版本" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        编译perf musl版本
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#打开perf配置选项，重编linux内核" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        打开perf配置选项，重编linux内核
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#perf使用说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        perf使用说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#注意事项" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        注意事项
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="前言">前言<a name="ZH-CN_TOPIC_0000002662863963"></a></h1>
+<h2 id="前言_1">前言<a name="ZH-CN_TOPIC_0000002662863963"></a></h2>
+<p><strong>概述<a name="section4537382116410"></a></strong></p>
+<p>本文档为使用linux perf工具进行性能分析的使用指导。</p>
+<p><strong>读者对象<a name="section4378592816410"></a></strong></p>
+<p>本文档（本指南）主要适用于以下工程师：</p>
+<ul>
+<li>技术支持工程师</li>
+<li>软件开发工程师</li>
+</ul>
+<p><strong>产品版本<a name="section2604mcpsimp"></a></strong></p>
+<p>与本文档相对应的产品版本如下。</p>
+<p><a name="table2607mcpsimp"></a></p>
+<table><thead align="left"><tr id="row2612mcpsimp"><th class="cellrowborder" valign="top" width="32%" id="mcps1.1.3.1.1"><p id="p2614mcpsimp"><a name="p2614mcpsimp"></a><a name="p2614mcpsimp"></a>产品名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="68%" id="mcps1.1.3.1.2"><p id="p2616mcpsimp"><a name="p2616mcpsimp"></a><a name="p2616mcpsimp"></a>产品版本</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row44621647115214"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p63331555172315"><a name="p63331555172315"></a><a name="p63331555172315"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p141352132417"><a name="p141352132417"></a><a name="p141352132417"></a>V608</p>
+</td>
+</tr>
+<tr id="row05066551089"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p1050625515811"><a name="p1050625515811"></a><a name="p1050625515811"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p155066551389"><a name="p155066551389"></a><a name="p155066551389"></a>V610</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+本文以Hi3516CV610描述为例，未有特殊说明，其他芯片与Hi3516CV610内容一致。</p>
+</blockquote>
+<p><strong>符号约定<a name="section133020216410"></a></strong></p>
+<p>在本文中可能出现下列标志，它们所代表的含义如下。</p>
+<p><a name="table2622507016410"></a></p>
+<table><thead align="left"><tr id="row1530720816410"><th class="cellrowborder" valign="top" width="20.580000000000002%" id="mcps1.1.3.1.1"><p id="p6450074116410"><a name="p6450074116410"></a><a name="p6450074116410"></a><strong id="b2136615816410"><a name="b2136615816410"></a><a name="b2136615816410"></a>符号</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="79.42%" id="mcps1.1.3.1.2"><p id="p5435366816410"><a name="p5435366816410"></a><a name="p5435366816410"></a><strong id="b5941558116410"><a name="b5941558116410"></a><a name="b5941558116410"></a>说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row1372280416410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p3734547016410"><a name="p3734547016410"></a><a name="p3734547016410"></a><a name="image2670064316410"></a><a name="image2670064316410"></a><span><img class="" id="image2670064316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000002663023931.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p1757432116410"><a name="p1757432116410"></a><a name="p1757432116410"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row466863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1432579516410"><a name="p1432579516410"></a><a name="p1432579516410"></a><a name="image4895582316410"></a><a name="image4895582316410"></a><span><img class="" id="image4895582316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000002632544820.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p959197916410"><a name="p959197916410"></a><a name="p959197916410"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row123863216410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p1232579516410"><a name="p1232579516410"></a><a name="p1232579516410"></a><a name="image1235582316410"></a><a name="image1235582316410"></a><span><img class="" id="image1235582316410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000002662863973.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p123197916410"><a name="p123197916410"></a><a name="p123197916410"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
+</td>
+</tr>
+<tr id="row5786682116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p2204984716410"><a name="p2204984716410"></a><a name="p2204984716410"></a><a name="image4504446716410"></a><a name="image4504446716410"></a><span><img class="" id="image4504446716410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000002632704730.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4388861916410"><a name="p4388861916410"></a><a name="p4388861916410"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
+<p id="p1238861916410"><a name="p1238861916410"></a><a name="p1238861916410"></a>“须知”不涉及人身伤害。</p>
+</td>
+</tr>
+<tr id="row2856923116410"><td class="cellrowborder" valign="top" width="20.580000000000002%" headers="mcps1.1.3.1.1 "><p id="p5555360116410"><a name="p5555360116410"></a><a name="p5555360116410"></a><a name="image799324016410"></a><a name="image799324016410"></a><span><img class="" id="image799324016410" height="25.270000000000003" width="67.83" src="figures/zh-cn_image_0000002632704732.png"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79.42%" headers="mcps1.1.3.1.2 "><p id="p4612588116410"><a name="p4612588116410"></a><a name="p4612588116410"></a>对正文中重点信息的补充说明。</p>
+<p id="p1232588116410"><a name="p1232588116410"></a><a name="p1232588116410"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>修改记录<a name="section2467512116410"></a></strong></p>
+<p><a name="table1557726816410"></a></p>
+<table><thead align="left"><tr id="row2942532716410"><th class="cellrowborder" valign="top" width="20.72%" id="mcps1.1.4.1.1"><p id="p3778275416410"><a name="p3778275416410"></a><a name="p3778275416410"></a><strong id="b5687322716410"><a name="b5687322716410"></a><a name="b5687322716410"></a>文档版本</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="26.119999999999997%" id="mcps1.1.4.1.2"><p id="p5627845516410"><a name="p5627845516410"></a><a name="p5627845516410"></a><strong id="b5800814916410"><a name="b5800814916410"></a><a name="b5800814916410"></a>发布日期</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="53.16%" id="mcps1.1.4.1.3"><p id="p2382284816410"><a name="p2382284816410"></a><a name="p2382284816410"></a><strong id="b3316380216410"><a name="b3316380216410"></a><a name="b3316380216410"></a>修改说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row5947359616410"><td class="cellrowborder" valign="top" width="20.72%" headers="mcps1.1.4.1.1 "><p id="p2149706016410"><a name="p2149706016410"></a><a name="p2149706016410"></a>00B01</p>
+</td>
+<td class="cellrowborder" valign="top" width="26.119999999999997%" headers="mcps1.1.4.1.2 "><p id="p648803616410"><a name="p648803616410"></a><a name="p648803616410"></a>2026-06-30</p>
+</td>
+<td class="cellrowborder" valign="top" width="53.16%" headers="mcps1.1.4.1.3 "><p id="p1946537916410"><a name="p1946537916410"></a><a name="p1946537916410"></a>第1次临时发布。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="perf介绍">perf介绍<a name="ZH-CN_TOPIC_0000002632544802"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002662863961">概述</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002663023915">perf依赖</a></strong>  </p>
+</li>
+</ul>
+<h3 id="概述">概述<a name="ZH-CN_TOPIC_0000002662863961"></a></h3>
+<p>perf是linux下的一款性能分析工具，能够进行函数级与指令级的热点查找。它由一个叫“performance counters”的内核子系统实现，基于事件采样原理，以性能事件为基础，支持针对处理器相关性能指标与操作系统相关性能指标的性能剖析，可用于性能瓶颈的查找与热点代码的定位。</p>
+<p>perf不但可以分析特定应用程序的性能问题，还可以分析内核的性能问题，当然也可以同时分析应用程序和内核，从而全面理解应用程序中的性能瓶颈。</p>
+<p>综合来看，perf工具有以下优势：</p>
+<ul>
+<li>perf是linux kernel自带的系统性能优化工具，与linux kernel的紧密结合；</li>
+<li>工具能够对应用、内核、整个系统进行性能分析，查找性能瓶颈，发现性能问题的原因及热点代码；</li>
+<li>是一款综合性能分析工具，大到系统全局性能，小到进程、线程，甚至函数、汇编级别。</li>
+</ul>
+<p>更多perf的信息参考：<a href="https://perf.wiki.kernel.org/index.php/Tutorial" target="_blank" rel="noopener noreferrer">https://perf.wiki.kernel.org/index.php/Tutorial</a></p>
+<h3 id="perf依赖">perf依赖<a name="ZH-CN_TOPIC_0000002663023915"></a></h3>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002632544810">zlib</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002632704720">elfutils</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002663023921">binutils</a></strong>  </p>
+</li>
+</ul>
+<h4 id="zlib">zlib<a name="ZH-CN_TOPIC_0000002632544810"></a></h4>
+<p>zlib是一个广泛使用的压缩库，它提供了一种高效的压缩和解压缩数据的方法。</p>
+<h4 id="elfutils">elfutils<a name="ZH-CN_TOPIC_0000002632704720"></a></h4>
+<p>elfutils是一个用于操作ELF（Executable and Linkable Format）二进制文件的开源工具集，包括查找和处理GNU Linux上进程和核心文件的DWARF调试数据、符号、线程状态和堆栈跟踪。</p>
+<h4 id="binutils">binutils<a name="ZH-CN_TOPIC_0000002663023921"></a></h4>
+<p>binutils是一组用于创建、操作和转换二进制文件的工具集。它包括了一些常用的工具，如汇编器、链接器、反汇编器、目标文件复制器等等。</p>
+<h2 id="perf编译">perf编译<a name="ZH-CN_TOPIC_0000002663023923"></a></h2>
+<p>本文档以Hi3516CV610芯片为例。</p>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002632544806">perf依赖库</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002632544812">编译perf musl版本</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002663023919">打开perf配置选项，重编linux内核</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002662863959">perf使用说明</a></strong>  </p>
+</li>
+</ul>
+<h3 id="perf依赖库">perf依赖库<a name="ZH-CN_TOPIC_0000002632544806"></a></h3>
+<p>因直接在Linux内核tool/perf路径下编译出的perf会缺少依赖库，进而导致perf在使用时，无法解析得到函数名，只能得到地址；通过预先编译好perf的依赖库，然后在perf编译时设置好所编译好的依赖库的路径，即可解决该问题。</p>
+<ul>
+<li><strong><a href="#ZH-CN_TOPIC_0000002632544804">perf依赖源码下载</a></strong>  </li>
+</ul>
+<h4 id="perf依赖源码下载">perf依赖源码下载<a name="ZH-CN_TOPIC_0000002632544804"></a></h4>
+<ul>
+<li>
+<p>下载zlib-1.2.13.tar.gz</p>
+<p>链接：<a href="https://zlib.net/fossils/zlib-1.2.13.tar.gz" target="_blank" rel="noopener noreferrer">https://zlib.net/fossils/zlib-1.2.13.tar.gz</a></p>
+</li>
+<li>
+<p>下载elfutils-0.188.tar.bz2</p>
+<p>链接：<a href="https://sourceware.org/elfutils/ftp/0.188/elfutils-0.188.tar.bz2" target="_blank" rel="noopener noreferrer">https://sourceware.org/elfutils/ftp/0.188/elfutils-0.188.tar.bz2</a></p>
+</li>
+<li>
+<p>下载binutils-2.38.tar.gz</p>
+<p>链接：<a href="https://ftp.gnu.org/gnu/binutils/binutils-2.38.tar.gz" target="_blank" rel="noopener noreferrer">https://ftp.gnu.org/gnu/binutils/binutils-2.38.tar.gz</a></p>
+</li>
+</ul>
+<h3 id="编译perf-musl版本">编译perf musl版本<a name="ZH-CN_TOPIC_0000002632544812"></a></h3>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002663023917">编译环境准备</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002663023927">源码编译</a></strong>  </p>
+</li>
+</ul>
+<h4 id="编译环境准备">编译环境准备<a name="ZH-CN_TOPIC_0000002663023917"></a></h4>
+<ol>
+<li>将<a href="#ZH-CN_TOPIC_0000002632544804">perf依赖源码下载</a>的perf依赖源码，放在步骤2中新建perf目录结构下</li>
+<li>
+<p>创建目录结构如下：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>perf/                           # 存放 perf 依赖开源软件
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── zlib-1.2.13/
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├── elfutils-0.188/
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>└── binutils-2.38/
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>perf_tool_openeuler/
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>├── build_musl_perf.sh          # 编译脚本
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>├── FEATURE-DUMP                # feature 检测绕过文件
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>└── output/                     # 编译输出目录
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    └── bin/
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        └── perf                # 编译生成的 perf 可执行文件
+</span></code></pre></div>
+</li>
+<li>
+<p>创建FEATURE-DUMP文件</p>
+<p>由于交叉编译环境下 feature detection 无法正常工作，需提供预生成的 FEATURE-DUMP</p>
+<p>文件声明可用的系统特性：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>feature-backtrace := 0
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>feature-dwarf := 0
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>feature-dwarf_getlocations := 0
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>feature-eventfd := 1
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>feature-fortify-source := 1
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>feature-sync-compare-and-swap := 1
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>feature-get_current_dir_name := 1
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>feature-gettid := 1
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>feature-glibc := 0
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>feature-libbfd := 0
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>feature-libbfd-buildid := 0
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>feature-libcap := 0
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>feature-libelf := 0
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>feature-libelf-getphdrnum := 0
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>feature-libelf-gelf_getnote := 0
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>feature-libelf-getshdrstrndx := 0
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>feature-libnuma := 0
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>feature-numa_num_possible_cpus := 0
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>feature-libperl := 0
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>feature-libpython := 0
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>feature-libslang := 0
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>feature-libslang-include-subdir := 0
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>feature-libcrypto := 0
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>feature-libunwind := 0
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>feature-pthread-attr-setaffinity-np := 0
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>feature-pthread-barrier := 1
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>feature-reallocarray := 1
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>feature-stackprotector-all := 1
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>feature-timerfd := 1
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>feature-libdw-dwarf-unwind := 0
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>feature-zlib := 0
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>feature-lzma := 0
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>feature-get_cpuid := 0
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>feature-bpf := 0
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>feature-sched_getcpu := 1
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>feature-sdt := 0
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>feature-setns := 1
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>feature-libaio := 1
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>feature-libzstd := 0
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>feature-disassembler-four-args := 0
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>feature-file-handle := 1
+</span></code></pre></div>
+</li>
+<li>
+<p>新建一个build_musl_perf.sh放到perf_tool_openeuler/build目录下，将下面的“脚本内容”拷贝到build_musl_perf.sh脚本中。</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>#!/bin/bash
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a># user modify compile parameter
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a># cross compiler
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>CROSS_PERF=arm-openeuler-linux-musleabi
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a># linux-5.10 kernel root directory
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>KERNEL_DIR=xxx/open_source/linux/linux-5.10.y
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a># pre-built dependency libraries directory
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>DEPS_DIR=xxx/open_source/linux/perf
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a># color define
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>YELLOW=&quot;\e[33;1m&quot;
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>GREEN=&quot;\e[32;1m&quot;
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>DONE=&quot;\033[0m&quot;
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a># compile variable
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>set -e
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>test -d $KERNEL_DIR || { echo -e &quot;$YELLOW invalid kernel dir $DONE&quot;; exit 1; }
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>CUR_DIR=`pwd`
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>BUILD_DIR=${CUR_DIR}
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>OUPUT_DIR=${BUILD_DIR}/output
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>PERF_DIR=${KERNEL_DIR}/tools/perf
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>FEATURES_DUMP=/tmp/perf_tool_openeuler_openeuler/FEATURE-DUMP
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>function build_perf(){
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>cd ${PERF_DIR}
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>make ARCH=arm CROSS_COMPILE=${CROSS_PERF}- clean
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>sed -i &quot;s/CORE_CFLAGS += -Wall/CORE_CFLAGS += -w/g&quot; Makefile.config
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a># 第一步：动态编译，确定配置（NO_LIBELF=1 简化配置）
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>make ARCH=arm CROSS_COMPILE=${CROSS_PERF}- WERROR=0 \
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>    FEATURES_DUMP=${FEATURES_DUMP} \
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>    NO_LIBELF=1 \
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>    V=1 perf
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a># 第二步：静态编译，生成独立可执行文件
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>LDFLAGS=-static make ARCH=arm CROSS_COMPILE=${CROSS_PERF}- WERROR=0 \
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>    FEATURES_DUMP=${FEATURES_DUMP} \
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>    NO_LIBELF=1 \
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>    V=1 perf
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>}
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>function generate_install(){
+</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>rm -rf ${OUPUT_DIR}
+</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>mkdir -p ${OUPUT_DIR}/bin/
+</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>cp -f ${PERF_DIR}/perf ${OUPUT_DIR}/bin
+</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>tree ${OUPUT_DIR}
+</span><span id="__span-2-46"><a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>}
+</span><span id="__span-2-47"><a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>
+</span><span id="__span-2-48"><a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>if [ ! -n &quot;$1&quot; ] || [ &quot;$1&quot; == &quot;-h&quot; ] || [ &quot;$#&quot; -gt &quot;1&quot; ]; then
+</span><span id="__span-2-49"><a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>echo -e &quot;${YELLOW} infor: ./build_musl_perf.sh all :build perf for linux-5.10.221${DONE}&quot;;
+</span><span id="__span-2-50"><a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>echo -e &quot;${YELLOW} infor: ./build_musl_perf.sh clean :build clean${DONE}&quot;;
+</span><span id="__span-2-51"><a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>echo -e &quot;${YELLOW} infor: ./build_musl_perf.sh distclean :build distclean${DONE}&quot;;
+</span><span id="__span-2-52"><a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a>exit 0
+</span><span id="__span-2-53"><a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>fi
+</span><span id="__span-2-54"><a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>if [ &quot;$1&quot; == &quot;clean&quot; ]; then
+</span><span id="__span-2-55"><a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a>rm -rf ${OUPUT_DIR}
+</span><span id="__span-2-56"><a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a>cd ${PERF_DIR}
+</span><span id="__span-2-57"><a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a>make ARCH=arm CROSS_COMPILE=${CROSS_PERF}- clean;
+</span><span id="__span-2-58"><a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a>fi
+</span><span id="__span-2-59"><a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a>if [ &quot;$1&quot; == &quot;distclean&quot; ]; then
+</span><span id="__span-2-60"><a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a>rm -rf ${OUPUT_DIR}
+</span><span id="__span-2-61"><a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a>cd ${PERF_DIR}
+</span><span id="__span-2-62"><a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a>make ARCH=arm CROSS_COMPILE=${CROSS_PERF}- clean;
+</span><span id="__span-2-63"><a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a>fi
+</span><span id="__span-2-64"><a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a>if [ &quot;$1&quot; == &quot;all&quot; ]; then
+</span><span id="__span-2-65"><a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a>build_perf;
+</span><span id="__span-2-66"><a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a>generate_install;
+</span><span id="__span-2-67"><a id="__codelineno-2-67" name="__codelineno-2-67" href="#__codelineno-2-67"></a>fi
+</span></code></pre></div>
+</li>
+<li>
+<p>进入perf_tool_openeuler/build/的目录：修改脚本build_musl_perf.sh中四个参数为当前环境对应值</p>
+<p><strong>CROSS_PERF=arm-openeuler-linux-musleabi</strong></p>
+<p><strong>KERNEL_DIR=xxx/open_source/linux/linux-5.10.y</strong></p>
+<p><strong>DEPS_DIR=xxx/open_source/linux/perf</strong></p>
+</li>
+</ol>
+<h4 id="源码编译">源码编译<a name="ZH-CN_TOPIC_0000002663023927"></a></h4>
+<ol>
+<li>
+<p>给脚本添加执行权限</p>
+<p>chmod +x build_musl_perf.sh</p>
+</li>
+<li>
+<p>查看帮助</p>
+<p>./build_musl_perf.sh -h</p>
+</li>
+<li>
+<p>清理（建议每次编译前执行）</p>
+<p>./build_musl_perf.sh clean</p>
+</li>
+<li>
+<p>一键编译</p>
+<p>./build_musl_perf.sh all</p>
+</li>
+<li>
+<p>执行整体编译后，会在perf_tool_openeuler/output/bin下生成perf工具</p>
+</li>
+</ol>
+<h3 id="打开perf配置选项，重编linux内核">打开perf配置选项，重编linux内核<a name="ZH-CN_TOPIC_0000002663023919"></a></h3>
+<p>使用perf工具时需要打开linux内核相关的perf配置选项。其步骤如下：</p>
+<ol>
+<li>
+<p>进入linux-5.10内核源码目录后，执行：</p>
+<p>make ARCH=arm CROSS_COMPILE=arm-openeuler-linux-musleabi menuconfig</p>
+<p>注：当使用gnu工具链时，需将musl替换成gnu。</p>
+</li>
+<li>
+<p>开启以下四个内核配置选项</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002632704728.png" /></p>
+</li>
+<li>
+<p>参考SDK版本包中boards/dmeb/readme_cn.txt 内核编译步骤进行编译；</p>
+</li>
+<li>
+<p>生成的内核镜像即为支持perf的linux内核镜像，烧写到单板，然后配合<a href="#ZH-CN_TOPIC_0000002632544806">perf依赖库</a>章节编译的perf工具及其依赖库，即可使用。</p>
+<p>注：内核配置进行更改后，若业务代码存在ko，则需要根据打开了perf配置的内核对其进行重编ko。</p>
+</li>
+</ol>
+<h3 id="perf使用说明">perf使用说明<a name="ZH-CN_TOPIC_0000002662863959"></a></h3>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002662863957">perf使用准备</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002632704724">perf使用方式</a></strong>  </p>
+</li>
+</ul>
+<h4 id="perf使用准备">perf使用准备<a name="ZH-CN_TOPIC_0000002662863957"></a></h4>
+<ol>
+<li>
+<p>将<a href="#ZH-CN_TOPIC_0000002663023919">打开perf配置选项，重编linux内核</a>编译生成的内核镜像烧写到单板。参考SDK版本包镜像烧写方式。</p>
+<p>注：由于开了perf后，内核镜像会变大，uboot可能无法正常启动内核，因此，需要根据当前大小情况修改uboot的bootargs和bootcmd，以确保内核能正常起来。</p>
+</li>
+<li>
+<p>重启单板，mount当前perf_tool_openeuler/output/bin文件夹所在服务器。</p>
+</li>
+<li>
+<p>mount完成后，将perf_tool_openeuler/output/bin导出到单板的PATH，lib导出到单板的LD_LIBRARY_PATH环境变量中，即可执行perf命令，参考<a href="#ZH-CN_TOPIC_0000002632704724">perf使用方式</a>章节。</p>
+<p><strong>export PATH="xxx/bin:$PATH"</strong></p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+-   替换xxx路径，为当前实际路径<br />
+-   xxx/bin目录下的可执行文件，需要添加执行权限：chmod +x -R xxx/bin/*</p>
+</blockquote>
+</li>
+</ol>
+<h4 id="perf使用方式">perf使用方式<a name="ZH-CN_TOPIC_0000002632704724"></a></h4>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002662863955">常用命令</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002662863965">生成火焰图</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002662863967">采集热点汇编指令</a></strong>  </p>
+</li>
+</ul>
+<h5 id="常用命令">常用命令<a name="ZH-CN_TOPIC_0000002662863955"></a></h5>
+<ul>
+<li>
+<p>perf top</p>
+<p>实时显示系统/进程的性能统计信息</p>
+</li>
+<li>
+<p>perf list</p>
+<p>查看支持的性能事件</p>
+</li>
+<li>
+<p>perf --help</p>
+<p>查看帮助</p>
+</li>
+</ul>
+<h5 id="生成火焰图">生成火焰图<a name="ZH-CN_TOPIC_0000002662863965"></a></h5>
+<ol>
+<li>
+<p>采集数据：</p>
+<p>perf record -a -F 99 -g sleep 20</p>
+<p>参数解释：</p>
+<ul>
+<li>-a：采集所有cpu信息</li>
+<li>-F 99 ：1秒钟进行采集99次</li>
+<li>-g：收集调用栈</li>
+<li>sleep 20:采集时间为20秒</li>
+</ul>
+</li>
+<li>
+<p>解析数据：</p>
+<p>perf script -i perf.data &gt; out.unfold</p>
+</li>
+<li>
+<p>服务器下载FlameGraph：</p>
+<p>git clone  <a href="https://github.com/brendangregg/FlameGraph.git" target="_blank" rel="noopener noreferrer">https://github.com/brendangregg/FlameGraph.git</a></p>
+</li>
+<li>
+<p>将out.unfold拷贝到服务器下载的FlameGraph目录下</p>
+<p><img alt="" src="../figures/zh-cn_image_0000002662863971.png" /></p>
+</li>
+<li>
+<p>在服务器上执行折叠符号：</p>
+<p>./stackcollapse-perf.pl out.unfold | ./flamegraph.pl &gt; out.svg</p>
+</li>
+</ol>
+<h5 id="采集热点汇编指令">采集热点汇编指令<a name="ZH-CN_TOPIC_0000002662863967"></a></h5>
+<ul>
+<li>
+<p>采集数据：</p>
+<p>perf record –e cache-misses -t tid</p>
+<p>参数解释：</p>
+<p>-e cache-misses：指定cache-misses事件</p>
+<p>-t tid：指定采集线程的tid</p>
+</li>
+<li>
+<p>得到函数热点：</p>
+<p>perf report &gt; out_fun.txt</p>
+</li>
+<li>
+<p>得到汇编指令热点：</p>
+<p>perf annotate xxxFunc &gt; out_annotate.txt</p>
+<p>注：</p>
+<ol>
+<li>xxxFunc：需要分析的函数符号</li>
+<li>
+<p>汇编指令无对应C语言函数符号时，可以通过以下方式解决：</p>
+<ol>
+<li>编译选项加-g</li>
+<li>
+<p>使用相应工具链的objdump，查看相应.o文件的函数汇编对应关系，如：</p>
+<p>arm-openeuler-linux-musleabi-objdump -d -l xxx/xxx.o &gt; test1</p>
+</li>
+</ol>
+<p>注：当使用musl工具链时，需将gnu替换成musl。</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="注意事项">注意事项<a name="ZH-CN_TOPIC_0000002632704716"></a></h2>
+<ul>
+<li>编译perf相关依赖时，需要保证编译环境能编过linux-5.10内核；</li>
+<li>本文档仅支持linux-5.10内核版本。</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+
+  <div class="footer-box">
+    <div class="footer-list">
+      
+      
+      <div class="footer-list-child">
+        <a href="https://www.hisilicon.com/cn" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/home" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开发者网站</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://gitcode.com/HiSpark" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开源社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developer.huawei.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">华为开发者官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hikunpeng.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">鲲鹏社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hiascend.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">昇腾社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/aboutus" target="_blank" class="footer-nav-first" rel="noopener noreferrer">关于我们</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/login" target="_blank" class="footer-nav-first" rel="noopener noreferrer">投诉举报</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      
+    </div>
+    <div class="footer-fix">
+      <div class="footer-fix-content">
+        <div>
+          <span class="footer-copyright">&nbsp;&copy;2024 华为技术有限公司</span>
+          <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer">粤A2-20044005号</a>
+          <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702004153"
+            target="_blank" rel="noopener noreferrer">粤公网安备44030702004153号</a>
+        </div>
+        <div class="footer-name-list">
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/legalNotices" target="_blank" class="footer-name" rel="noopener noreferrer">法律声明</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/cookie-policy" target="_blank" class="footer-name" rel="noopener noreferrer">关于Cookie</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/privacyPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">隐私政策</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/userPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">用户协议</a>
+          
+          
+          
+          <a href="javascript:void(0);" onclick="openDisclaimerDialog()" class="footer-name">免责声明</a>
+          
+          
+          
+        </div>
+      </div>
+
+
+      <!-- 免责声明弹窗 -->
+      <div id="disclaimerDialog" class="disclaimer-overlay" style="display: none;">
+        <div class="disclaimer-dialog">
+          <div class="disclaimer-dialog__header">
+            <span class="disclaimer-dialog__title">免责声明</span>
+            <button class="disclaimer-dialog__close" onclick="closeDisclaimerDialog()">×</button>
+          </div>
+          <div class="disclaimer-dialog__body">
+            <p class="disclaimer-dialog__text-center"><strong>海思开发者网站免责声明</strong></p>
+            <p>尊敬的用户，您好：</p>
+            <p>&nbsp; &nbsp;
+              请确保您通过本平台向海思提供或反馈的任何信息或意见不侵犯第三方知识产权和/或合法权益。如您提供或反馈的上述任何信息或意见侵犯第三方知识产权和/或合法权益，和/或给第三方造成损害的，您将承担全部法律及赔偿责任。
+            </p>
+          </div>
+          <div class="disclaimer-dialog__footer">
+            <button class="disclaimer-dialog__btn" onclick="closeDisclaimerDialog()">关闭</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function openDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'flex';
+        }
+        function closeDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'none';
+        }
+        // 点击弹窗背景关闭
+        document.getElementById('disclaimerDialog').addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeDisclaimerDialog();
+          }
+        });
+      </script>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../../static/js/custom.js"></script>
+      
+        <script src="../../../../../../static/js/version-selector.js"></script>
+      
+        <script src="../../../../../../static/js/code-highlight.js"></script>
+      
+        <script src="../../../../../../static/js/wavedrom-skin.js"></script>
+      
+        <script src="../../../../../../static/js/wavedrom.min.js"></script>
+      
+        <script src="../../../../../../static/js/wavedrom-init.js"></script>
+      
+        <script src="../../../../../../static/js/no-flash.js"></script>
+      
+    
+  </body>
+</html>

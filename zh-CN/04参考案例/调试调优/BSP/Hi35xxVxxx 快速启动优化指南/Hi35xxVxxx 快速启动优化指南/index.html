@@ -1,0 +1,1649 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hi3516CV610 超高清智慧视觉 SoC 文档中心">
+      
+      
+        <meta name="author" content="HiSpark">
+      
+      
+        <link rel="canonical" href="https://hivsdev.github.io/Hi3516CV610_doc/zh-CN/04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/%E8%B0%83%E8%AF%95%E8%B0%83%E4%BC%98/BSP/Hi35xxVxxx%20%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%8C%87%E5%8D%97/Hi35xxVxxx%20%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8%E4%BC%98%E5%8C%96%E6%8C%87%E5%8D%97/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../../static/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>前言 - Hi3516CV610 开发者中心</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+    
+    
+      <link rel="stylesheet" href="../../../../../../static/css/extra.css">
+    
+      <link rel="stylesheet" href="../../../../../../static/css/version-selector.css">
+    
+    <script>__md_scope=new URL("../../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+      <meta name="gitcode-issues-url" content="https://gitcode.com/HiSpark/fbb_ws63/issues">
+      
+      <link rel="dns-prefetch" href="https://docs.hisilicon.com">
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://docs.hisilicon.com" crossorigin>
+      <link rel="preload" href="../../../../../../assets/stylesheets/main.484c7ddc.min.css" as="style">
+      <link rel="preload" href="../../../../../../assets/stylesheets/palette.ab4e12ef.min.css" as="style">
+      <link rel="preload" href="../../../../../../static/css/extra.css" as="style">
+      <link rel="preload" href="../../../../../../assets/javascripts/bundle.79ae519e.min.js" as="script">
+      <link rel="preload" href="../../../../../../static/js/custom.js" as="script">
+
+      
+      
+        
+        
+      
+      <style>:root{--md-text-font:"Helvetica Neue, PingFang SC, Microsoft YaHei";--md-code-font:"Consolas, Roboto Mono"}</style>
+      <script>
+        // 防止宽窄屏刷新闪烁 — 在 body 解析前就读取 localStorage 标记 <html>
+        // 配合 CSS: html.prefer-narrow .md-grid 在首帧即应用 76%
+        if (localStorage.getItem('wideScreen') === 'false') {
+          document.documentElement.classList.add('prefer-narrow');
+        }
+      </script>
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#前言" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://developers.hisilicon.com" title="Hi3516CV610 开发者中心" class="md-header__button md-logo" aria-label="Hi3516CV610 开发者中心" data-md-component="logo" target="_blank" rel="noopener noreferrer">
+      <img 
+  src="../../../../../../static/images/light-icon.png" 
+  class="md-logo__img md-logo__img--light"
+  alt="Hi3516CV610 开发者中心" 
+/>
+<img 
+  src="../../../../../../static/images/dark-icon.png" 
+  class="md-logo__img md-logo__img--dark"
+  alt="Hi3516CV610 开发者中心" 
+/>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+      </div>
+    </div>
+    
+      
+      
+        <label class="md-header__button md-icon md-header__button--search" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+      
+    
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="切换到暗色主题"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色主题" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="切换到亮色主题"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色主题" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <div class="md-header__source">
+        <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="Go to repository" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+      </div>
+    
+  </nav>
+  
+  
+    
+    
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        <!-- 
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+         -->
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+</header>
+
+
+<script>
+  var USER_DEFINED_OPTIONS = {
+    REPO_PATH: "Hi3516CV610_doc",
+    ROOT_URL: "https://docs.hisilicon.com/projects"
+  };
+  var DOCUMENTATION_OPTIONS = {
+    VERSION: "master",
+    // 构建时声明主题的语言
+    LANGUAGE: "en"
+  };
+</script>
+<script src="https://docs.hisilicon.com/projects/version/hispark_version.js"></script>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="sidebar-selectors">
+                  <div class="repo-select custom-select">
+                    <span class="select-label">芯片</span>
+                    <div class="repo-selector" title="">
+                      <span class="repo-readOnly"></span>
+                      <select id="repo-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="repo-options" style="display:none"></ul>
+                  </div>
+                  <div class="version-select custom-select">
+                    <span class="select-label">版本</span>
+                    <div class="version-selector" title="">
+                      <span class="version-readOnly"></span>
+                      <select id="version-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="version-options" style="display:none"></ul>
+                  </div>
+                  
+                    
+                    
+                      <div class="sidebar-search">
+                        <label class="sidebar-search__button" for="__search">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+                          <span>全文检索</span>
+                        </label>
+                      </div>
+                    
+                  
+                </div>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+    <div class="md-nav__source">
+      <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="Go to repository" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../00%E6%A6%82%E8%A7%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整体架构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../03API%E5%8F%82%E8%80%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考案例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../05%E7%A1%AC%E4%BB%B6%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具中心
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../07FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../08%E5%85%B6%E4%BB%96/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#前言_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#概述" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#免责声明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        免责声明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#系统启动的主要流程简介" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        系统启动的主要流程简介
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#快速启动优化总体思路" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快速启动优化总体思路
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#快速启动版本开发建议" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快速启动版本开发建议
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#硬件优化" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        硬件优化
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="硬件优化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#BootRom阶段Flash-Boot模式频率修改" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BootRom阶段Flash Boot模式频率修改
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Flash最高频率支持修改" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flash最高频率支持修改
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Flash选型" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flash选型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Sensor选型" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sensor选型
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#BootRom关闭通道扫描" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BootRom关闭通道扫描
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#软件优化" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        软件优化
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="软件优化">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#GSL优化修改说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GSL优化修改说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#U-Boot优化修改说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        U-Boot优化修改说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Linux内核优化修改说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux内核优化修改说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Rootfs优化修改说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rootfs优化修改说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#快启sample说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快启sample说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#快启性能调试说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快启性能调试说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#AE快启sample说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AE快启sample说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#快启配置项说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        快启配置项说明
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="前言">前言<a name="ZH-CN_TOPIC_0000002024985801"></a></h1>
+<h2 id="前言_1">前言<a name="ZH-CN_TOPIC_0000002024985801"></a></h2>
+<p><strong>概述<a name="zh-cn_topic_0000001885927369_section1727715121391"></a></strong></p>
+<p>本文档主要介绍快速启动的优化点及优化建议和使用方法，以及如何构建及使用参考快速启动镜像。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+本文中优化手段仅做快启优化参考，产品可根据具体要求进行选用，并做好严格验证，本文中优化带来的风险后果请自行承担。<br />
+本文描述均以Hi3516CV610产品为例，在实际操作中，如无特殊说明，只需替换产品名和工具链名称。</p>
+</blockquote>
+<p><strong>产品版本<a name="zh-cn_topic_0000001885927369_section2604mcpsimp"></a></strong></p>
+<p>与本文档相对应的产品版本如下。</p>
+<p><a name="zh-cn_topic_0000001885927369_table2607mcpsimp"></a></p>
+<table><thead align="left"><tr id="zh-cn_topic_0000001885927369_row2612mcpsimp"><th class="cellrowborder" valign="top" width="32%" id="mcps1.1.3.1.1"><p id="zh-cn_topic_0000001885927369_p2614mcpsimp"><a name="zh-cn_topic_0000001885927369_p2614mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p2614mcpsimp"></a>产品名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="68%" id="mcps1.1.3.1.2"><p id="zh-cn_topic_0000001885927369_p2616mcpsimp"><a name="zh-cn_topic_0000001885927369_p2616mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p2616mcpsimp"></a>产品版本</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="zh-cn_topic_0000001885927369_row183648101131"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0000001885927369_p63331555172315"><a name="zh-cn_topic_0000001885927369_p63331555172315"></a><a name="zh-cn_topic_0000001885927369_p63331555172315"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0000001885927369_p141352132417"><a name="zh-cn_topic_0000001885927369_p141352132417"></a><a name="zh-cn_topic_0000001885927369_p141352132417"></a>V608</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0000001885927369_row352011393813"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="zh-cn_topic_0000001885927369_p1552114134388"><a name="zh-cn_topic_0000001885927369_p1552114134388"></a><a name="zh-cn_topic_0000001885927369_p1552114134388"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0000001885927369_p75211913123820"><a name="zh-cn_topic_0000001885927369_p75211913123820"></a><a name="zh-cn_topic_0000001885927369_p75211913123820"></a>V610</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>读者对象<a name="zh-cn_topic_0000001885927369_section1795711814117"></a></strong></p>
+<p>本文档（本指南）主要适用于以下工程师：</p>
+<ul>
+<li>技术支持工程师</li>
+<li>软件开发工程师</li>
+</ul>
+<p><strong>符号约定<a name="zh-cn_topic_0000001885927369_section262mcpsimp"></a></strong></p>
+<p>在本文中可能出现下列标志，它们所代表的含义如下。</p>
+<p><a name="zh-cn_topic_0000001885927369_table265mcpsimp"></a></p>
+<table><thead align="left"><tr id="zh-cn_topic_0000001885927369_row270mcpsimp"><th class="cellrowborder" valign="top" width="21%" id="mcps1.1.3.1.1"><p id="zh-cn_topic_0000001885927369_p272mcpsimp"><a name="zh-cn_topic_0000001885927369_p272mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p272mcpsimp"></a><strong id="zh-cn_topic_0000001885927369_b273mcpsimp"><a name="zh-cn_topic_0000001885927369_b273mcpsimp"></a><a name="zh-cn_topic_0000001885927369_b273mcpsimp"></a>符号</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="79%" id="mcps1.1.3.1.2"><p id="zh-cn_topic_0000001885927369_p275mcpsimp"><a name="zh-cn_topic_0000001885927369_p275mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p275mcpsimp"></a><strong id="zh-cn_topic_0000001885927369_b276mcpsimp"><a name="zh-cn_topic_0000001885927369_b276mcpsimp"></a><a name="zh-cn_topic_0000001885927369_b276mcpsimp"></a>说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="zh-cn_topic_0000001885927369_row278mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="zh-cn_topic_0000001885927369_p280mcpsimp"><a name="zh-cn_topic_0000001885927369_p280mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p280mcpsimp"></a><a name="zh-cn_topic_0000001885927369_image107"></a><a name="zh-cn_topic_0000001885927369_image107"></a><span><img id="zh-cn_topic_0000001885927369_image107" src="figures/zh-cn_image_0000001839846400.png" height="23.94" width="67.83"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0000001885927369_p282mcpsimp"><a name="zh-cn_topic_0000001885927369_p282mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p282mcpsimp"></a>表示如不避免则将会导致死亡或严重伤害的具有高等级风险的危害。</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0000001885927369_row283mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="zh-cn_topic_0000001885927369_p285mcpsimp"><a name="zh-cn_topic_0000001885927369_p285mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p285mcpsimp"></a><a name="zh-cn_topic_0000001885927369_image108"></a><a name="zh-cn_topic_0000001885927369_image108"></a><span><img id="zh-cn_topic_0000001885927369_image108" src="figures/zh-cn_image_0000001839687656.png" height="23.94" width="67.83"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0000001885927369_p287mcpsimp"><a name="zh-cn_topic_0000001885927369_p287mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p287mcpsimp"></a>表示如不避免则可能导致死亡或严重伤害的具有中等级风险的危害。</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0000001885927369_row288mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="zh-cn_topic_0000001885927369_p290mcpsimp"><a name="zh-cn_topic_0000001885927369_p290mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p290mcpsimp"></a><a name="zh-cn_topic_0000001885927369_image109"></a><a name="zh-cn_topic_0000001885927369_image109"></a><span><img id="zh-cn_topic_0000001885927369_image109" src="figures/zh-cn_image_0000001839687660.png" height="23.94" width="67.83"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0000001885927369_p292mcpsimp"><a name="zh-cn_topic_0000001885927369_p292mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p292mcpsimp"></a>表示如不避免则可能导致轻微或中度伤害的具有低等级风险的危害。</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0000001885927369_row293mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="zh-cn_topic_0000001885927369_p295mcpsimp"><a name="zh-cn_topic_0000001885927369_p295mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p295mcpsimp"></a><a name="zh-cn_topic_0000001885927369_image110"></a><a name="zh-cn_topic_0000001885927369_image110"></a><span><img id="zh-cn_topic_0000001885927369_image110" src="figures/zh-cn_image_0000001885927389.png" height="23.94" width="67.83"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0000001885927369_p297mcpsimp"><a name="zh-cn_topic_0000001885927369_p297mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p297mcpsimp"></a>用于传递设备或环境安全警示信息。如不避免则可能会导致设备损坏、数据丢失、设备性能降低或其它不可预知的结果。</p>
+<p id="zh-cn_topic_0000001885927369_p298mcpsimp"><a name="zh-cn_topic_0000001885927369_p298mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p298mcpsimp"></a>“须知”不涉及人身伤害。</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0000001885927369_row299mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.3.1.1 "><p class="msonormal" id="zh-cn_topic_0000001885927369_p301mcpsimp"><a name="zh-cn_topic_0000001885927369_p301mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p301mcpsimp"></a><a name="zh-cn_topic_0000001885927369_image111"></a><a name="zh-cn_topic_0000001885927369_image111"></a><span><img id="zh-cn_topic_0000001885927369_image111" src="figures/zh-cn_image_0000001886006913.png" height="23.94" width="67.83"></span></p>
+</td>
+<td class="cellrowborder" valign="top" width="79%" headers="mcps1.1.3.1.2 "><p id="zh-cn_topic_0000001885927369_p303mcpsimp"><a name="zh-cn_topic_0000001885927369_p303mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p303mcpsimp"></a>对正文中重点信息的补充说明。</p>
+<p id="zh-cn_topic_0000001885927369_p304mcpsimp"><a name="zh-cn_topic_0000001885927369_p304mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p304mcpsimp"></a>“说明”不是安全警示信息，不涉及人身、设备及环境伤害信息。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>修改记录<a name="zh-cn_topic_0000001885927369_section305mcpsimp"></a></strong></p>
+<p><a name="zh-cn_topic_0000001885927369_table307mcpsimp"></a></p>
+<table><thead align="left"><tr id="zh-cn_topic_0000001885927369_row313mcpsimp"><th class="cellrowborder" valign="top" width="21%" id="mcps1.1.4.1.1"><p id="zh-cn_topic_0000001885927369_p315mcpsimp"><a name="zh-cn_topic_0000001885927369_p315mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p315mcpsimp"></a><strong id="zh-cn_topic_0000001885927369_b316mcpsimp"><a name="zh-cn_topic_0000001885927369_b316mcpsimp"></a><a name="zh-cn_topic_0000001885927369_b316mcpsimp"></a>文档版本</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="25.979999999999997%" id="mcps1.1.4.1.2"><p id="zh-cn_topic_0000001885927369_p318mcpsimp"><a name="zh-cn_topic_0000001885927369_p318mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p318mcpsimp"></a><strong id="zh-cn_topic_0000001885927369_b319mcpsimp"><a name="zh-cn_topic_0000001885927369_b319mcpsimp"></a><a name="zh-cn_topic_0000001885927369_b319mcpsimp"></a>发布日期</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="53.02%" id="mcps1.1.4.1.3"><p id="zh-cn_topic_0000001885927369_p321mcpsimp"><a name="zh-cn_topic_0000001885927369_p321mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p321mcpsimp"></a><strong id="zh-cn_topic_0000001885927369_b322mcpsimp"><a name="zh-cn_topic_0000001885927369_b322mcpsimp"></a><a name="zh-cn_topic_0000001885927369_b322mcpsimp"></a>修改说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="zh-cn_topic_0000001885927369_row324mcpsimp"><td class="cellrowborder" valign="top" width="21%" headers="mcps1.1.4.1.1 "><p id="zh-cn_topic_0000001885927369_p326mcpsimp"><a name="zh-cn_topic_0000001885927369_p326mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p326mcpsimp"></a>00B01</p>
+</td>
+<td class="cellrowborder" valign="top" width="25.979999999999997%" headers="mcps1.1.4.1.2 "><p id="zh-cn_topic_0000001885927369_p328mcpsimp"><a name="zh-cn_topic_0000001885927369_p328mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p328mcpsimp"></a>2026-06-30</p>
+</td>
+<td class="cellrowborder" valign="top" width="53.02%" headers="mcps1.1.4.1.3 "><p id="zh-cn_topic_0000001885927369_p330mcpsimp"><a name="zh-cn_topic_0000001885927369_p330mcpsimp"></a><a name="zh-cn_topic_0000001885927369_p330mcpsimp"></a>第1次临时版本发布。</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="概述">概述<a name="ZH-CN_TOPIC_0000001988506286"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001988346562">免责声明</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002025106277">系统启动的主要流程简介</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002024985805">快速启动优化总体思路</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002292333717">快速启动版本开发建议</a></strong>  </p>
+</li>
+</ul>
+<h3 id="免责声明">免责声明<a name="ZH-CN_TOPIC_0000001988346562"></a></h3>
+<p>本文中提供的快速启动方法手段仅供参考。在使用这些优化方法之前，请您务必仔细理解并分析其可能带来的风险。您可以选择不使用本文档中的快速启动优化手段，但如果您使用，您的使用行为将被视为已认可本声明，并知晓快速启动方法可能存在的风险。</p>
+<h3 id="系统启动的主要流程简介">系统启动的主要流程简介<a name="ZH-CN_TOPIC_0000002025106277"></a></h3>
+<p>系统启动的主要流程包含如下步骤：</p>
+<ol>
+<li>硬件上电、芯片复位：纯硬件行为。</li>
+<li>BootRom阶段：芯片内sram运行，随芯片出厂预置，后期不可变更，GSL在本阶段加载。</li>
+<li>GSL阶段：SVB及DDR初始化；FLASH初始化；加载U-Boot和跳转到U-Boot。</li>
+<li>U-Boot阶段：板级初始化；加载Kernel和Rootfs；跳转到Kernel。</li>
+<li>Kernel阶段：驱动初始化；挂载Rootfs；准备Shell运行时环境。</li>
+<li>Shell/Rootfs阶段：执行rcS启动脚本，脚本中一般会拉起Application应用进程。</li>
+<li>Application应用业务启动阶段：初始化SDK运行时环境；加载业务相关的KO驱动；进入应用业务主线程。</li>
+</ol>
+<h3 id="快速启动优化总体思路">快速启动优化总体思路<a name="ZH-CN_TOPIC_0000002024985805"></a></h3>
+<p>快速启动可以从硬件和软件两大方向分别进行优化。其中硬件优化主要包括：</p>
+<ul>
+<li>BootRom下Flash Boot模式提频</li>
+<li>Flash默认电压修改支持更高频率</li>
+<li>选用读速高的介质，比如选择支持4线DTR频率高的Flash，提高镜像等加载速度</li>
+<li>Sensor选型选择支持初始化序列耗时短的Sensor</li>
+</ul>
+<p>其中软件按启动阶段，又可以细分为GSL、U-Boot、Kernel、Application业务等，虽然不同产品快速启动方案不同，但细分至各阶段，往往存在一些公共优化原则。本文描述的快速启动方案总体遵循如下优化原则：</p>
+<ul>
+<li>业务流程优化：流程精简，识别并剪裁非必须业务流程和特性；优化关键流程的性能；模块提前或者延后执行，比如快启及依赖相关的流程提前先执行，优先保证出图业务。</li>
+<li>并行化：充分利用SOC上硬件资源，将能独立运行的子任务放到硬件资源上执行，使得时间维度上和其他任务并行执行，缩短整体耗时。</li>
+<li>
+<p>小型化：小型化业务及镜像，可以提高镜像加载速度及加快业务流程执行速度，包括GSL小型化、U-Boot小型化、OS镜像小型化、ROOTFS小型化、App业务小型化等。</p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001988506290">硬件优化方向</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001988346566">软件优化方向</a></strong>  </p>
+</li>
+</ul>
+<h4 id="硬件优化方向">硬件优化方向<a name="ZH-CN_TOPIC_0000001988506290"></a></h4>
+<p>本指南针对Hi3516CV610硬件层面可以优化的点，详细请见<a href="#ZH-CN_TOPIC_0000002024985809">硬件优化</a>章节。实际业务使用时根据场景需要选用或者参考修改。</p>
+<h4 id="软件优化方向">软件优化方向<a name="ZH-CN_TOPIC_0000001988346566"></a></h4>
+<p>本指南针对Hi3516CV610软件层面可以优化的点，详细请见<a href="#ZH-CN_TOPIC_0000001988346574">软件优化</a>章节。实际业务使用时根据场景需要选用或者参考修改。</p>
+<h3 id="快速启动版本开发建议">快速启动版本开发建议<a name="ZH-CN_TOPIC_0000002292333717"></a></h3>
+<p>由于发布版本默认支持快速启动，各个组件包相比原始状态裁剪了部分功能，不可避免地对开发调试效率造成了影响，如裁剪busybox部分调试命令、U-Boot部分调试命令等。因此在开发前期需要熟悉本文档，对于开发过程中特殊调试需求的，可以根据本身业务需求重新配置Kernel与U-Boot。</p>
+<h2 id="硬件优化">硬件优化<a name="ZH-CN_TOPIC_0000002024985809"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001988506294">BootRom阶段Flash Boot模式频率修改</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001988346570">Flash最高频率支持修改</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002025106289">Flash选型</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002024985813">Sensor选型</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001988506298">BootRom关闭通道扫描</a></strong>  </p>
+</li>
+</ul>
+<h3 id="BootRom阶段Flash-Boot模式频率修改">BootRom阶段Flash Boot模式频率修改<a name="ZH-CN_TOPIC_0000001988506294"></a></h3>
+<p>当前Hi3516CV610芯片，Flash BOOT模式下默认的频率是12MHz。可以根据产品Flash配置合适的频率，当前有12MHz，75MHz，99MHz几档可以供配置选择。修改方法如下：</p>
+<p>根据Flash支持的频率范围，修改GSL_code_FlashReadClk配置项(配置文件路径：boards/dmeb/tools/pc/image_tool/oem/quick_build_config.json)，如图所示。</p>
+<p><img alt="" src="../figures/zh-cn_image_0000001890591866.png" /></p>
+<p>此配置项值可以为0x0，0x1，0x2，分别代表BOOT模式下读频率为12MHz、75MHz、99MHz。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+根据实际产品Flash选型支持的最高的频率修改配置项，如最高频率小于90MHz，则只能配置12MHz或者75MHz。</p>
+</blockquote>
+<h3 id="Flash最高频率支持修改">Flash最高频率支持修改<a name="ZH-CN_TOPIC_0000001988346570"></a></h3>
+<p>Flash频率高低决定了Flash读速，影响了U-Boot镜像、内核镜像、rootfs镜像加载及文件系统读速，对快速启动有极其重要的影响。</p>
+<p>当前芯片Flash默认电压是1.8V，此电压下最高只能支持到75MHz频率。如果选型的Flash能支持更高频率，需要修改BOOT表格FMC_VOLT_REG寄存器，使Flash电压支持到3.3V。</p>
+<p>如下所示，修改BOOT表格中FMC_VOLT_REG项的Value值：可以填0x0或者0x1 （当前版本默认是0x1）</p>
+<p>SFC器件工作电压和速率选择：</p>
+<p>0x0: 最高支持99MHz（仅3.3V支持）</p>
+<p>0x1: 最高支持75MHz (3.3V/1.8V均支持)</p>
+<p><img alt="" src="../figures/zh-cn_image_0000001890752026.png" /></p>
+<p>表格路径：boards/dmeb/tools/pc/boot_tools/</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+请根据产品实际Flash选型对应型号Flash手册查看Flash支持的最高频率，再确定是否要修改。</p>
+</blockquote>
+<h3 id="Flash选型">Flash选型<a name="ZH-CN_TOPIC_0000002025106289"></a></h3>
+<p>不同FLASH器件对启动速度有较大影响，可以根据产品使用场景选择合适的Flash。如<a href="#zh-cn_topic_0000001887918448_table15315164552319">表1</a>所示，数据仅供参考。</p>
+<p><strong>表 1</strong>  Flash速率</p>
+<p><a name="zh-cn_topic_0000001887918448_table15315164552319"></a></p>
+<table><thead align="left"><tr id="zh-cn_topic_0000001887918448_row8360445102315"><th class="cellrowborder" valign="top" width="12.601260126012601%" id="mcps1.2.5.1.1"><p id="zh-cn_topic_0000001887918448_p936014453238"><a name="zh-cn_topic_0000001887918448_p936014453238"></a><a name="zh-cn_topic_0000001887918448_p936014453238"></a>FLASH类型</p>
+</th>
+<th class="cellrowborder" valign="top" width="22.772277227722775%" id="mcps1.2.5.1.2"><p id="zh-cn_topic_0000001887918448_p7360104511232"><a name="zh-cn_topic_0000001887918448_p7360104511232"></a><a name="zh-cn_topic_0000001887918448_p7360104511232"></a>特性</p>
+</th>
+<th class="cellrowborder" valign="top" width="15.661566156615661%" id="mcps1.2.5.1.3"><p id="zh-cn_topic_0000001887918448_p1836034542320"><a name="zh-cn_topic_0000001887918448_p1836034542320"></a><a name="zh-cn_topic_0000001887918448_p1836034542320"></a>最高读速率参考</p>
+</th>
+<th class="cellrowborder" valign="top" width="48.964896489648964%" id="mcps1.2.5.1.4"><p id="zh-cn_topic_0000001887918448_p1536019459237"><a name="zh-cn_topic_0000001887918448_p1536019459237"></a><a name="zh-cn_topic_0000001887918448_p1536019459237"></a>使用限制</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="zh-cn_topic_0000001887918448_row1736074517230"><td class="cellrowborder" rowspan="3" valign="top" width="12.601260126012601%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0000001887918448_p193600458237"><a name="zh-cn_topic_0000001887918448_p193600458237"></a><a name="zh-cn_topic_0000001887918448_p193600458237"></a>SPI NOR FLASH</p>
+</td>
+<td class="cellrowborder" valign="top" width="22.772277227722775%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0000001887918448_p143609457235"><a name="zh-cn_topic_0000001887918448_p143609457235"></a><a name="zh-cn_topic_0000001887918448_p143609457235"></a>2I/O模式 (DIO)</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.661566156615661%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0000001887918448_p12360154510237"><a name="zh-cn_topic_0000001887918448_p12360154510237"></a><a name="zh-cn_topic_0000001887918448_p12360154510237"></a>18MB/S</p>
+</td>
+<td class="cellrowborder" valign="top" width="48.964896489648964%" headers="mcps1.2.5.1.4 "><p id="zh-cn_topic_0000001887918448_p153601545172319"><a name="zh-cn_topic_0000001887918448_p153601545172319"></a><a name="zh-cn_topic_0000001887918448_p153601545172319"></a>优点：器件种类多</p>
+<p id="zh-cn_topic_0000001887918448_p1636084562315"><a name="zh-cn_topic_0000001887918448_p1636084562315"></a><a name="zh-cn_topic_0000001887918448_p1636084562315"></a>缺点：速度偏慢</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0000001887918448_row17361945172313"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0000001887918448_p4361124562315"><a name="zh-cn_topic_0000001887918448_p4361124562315"></a><a name="zh-cn_topic_0000001887918448_p4361124562315"></a>4I/O模式（QIO）</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0000001887918448_p036174510233"><a name="zh-cn_topic_0000001887918448_p036174510233"></a><a name="zh-cn_topic_0000001887918448_p036174510233"></a>36MB/S</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0000001887918448_p13611645122310"><a name="zh-cn_topic_0000001887918448_p13611645122310"></a><a name="zh-cn_topic_0000001887918448_p13611645122310"></a>优点：速度较快</p>
+<p id="zh-cn_topic_0000001887918448_p33611045102319"><a name="zh-cn_topic_0000001887918448_p33611045102319"></a><a name="zh-cn_topic_0000001887918448_p33611045102319"></a>缺点：市场上支持4I/O模式的器件较少。</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0000001887918448_row14361194512235"><td class="cellrowborder" valign="top" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0000001887918448_p3361645122315"><a name="zh-cn_topic_0000001887918448_p3361645122315"></a><a name="zh-cn_topic_0000001887918448_p3361645122315"></a>4I/O DTR模式</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0000001887918448_p103616458231"><a name="zh-cn_topic_0000001887918448_p103616458231"></a><a name="zh-cn_topic_0000001887918448_p103616458231"></a>80MB/S</p>
+</td>
+<td class="cellrowborder" valign="top" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0000001887918448_p03615451238"><a name="zh-cn_topic_0000001887918448_p03615451238"></a><a name="zh-cn_topic_0000001887918448_p03615451238"></a>优点：速度快</p>
+<p id="zh-cn_topic_0000001887918448_p163611445102316"><a name="zh-cn_topic_0000001887918448_p163611445102316"></a><a name="zh-cn_topic_0000001887918448_p163611445102316"></a>缺点：市场上支持4I/O DTR模式的可供选择的器件型号少</p>
+<p id="zh-cn_topic_0000001887918448_p136115453235"><a name="zh-cn_topic_0000001887918448_p136115453235"></a><a name="zh-cn_topic_0000001887918448_p136115453235"></a>要求：器件的工作频率不小于90MHz。</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0000001887918448_row23616458235"><td class="cellrowborder" valign="top" width="12.601260126012601%" headers="mcps1.2.5.1.1 "><p id="zh-cn_topic_0000001887918448_p1436114519230"><a name="zh-cn_topic_0000001887918448_p1436114519230"></a><a name="zh-cn_topic_0000001887918448_p1436114519230"></a>SPI Nand</p>
+</td>
+<td class="cellrowborder" valign="top" width="22.772277227722775%" headers="mcps1.2.5.1.2 "><p id="zh-cn_topic_0000001887918448_p836164582318"><a name="zh-cn_topic_0000001887918448_p836164582318"></a><a name="zh-cn_topic_0000001887918448_p836164582318"></a>4线模式（QIO）</p>
+</td>
+<td class="cellrowborder" valign="top" width="15.661566156615661%" headers="mcps1.2.5.1.3 "><p id="zh-cn_topic_0000001887918448_p3362174519239"><a name="zh-cn_topic_0000001887918448_p3362174519239"></a><a name="zh-cn_topic_0000001887918448_p3362174519239"></a>17MB/S</p>
+</td>
+<td class="cellrowborder" valign="top" width="48.964896489648964%" headers="mcps1.2.5.1.4 "><p id="zh-cn_topic_0000001887918448_p13362145122320"><a name="zh-cn_topic_0000001887918448_p13362145122320"></a><a name="zh-cn_topic_0000001887918448_p13362145122320"></a>优点：容量较大、器件小</p>
+<p id="zh-cn_topic_0000001887918448_p636294516238"><a name="zh-cn_topic_0000001887918448_p636294516238"></a><a name="zh-cn_topic_0000001887918448_p636294516238"></a>缺点：速度偏慢</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+对启动速度要求高，建议使用 SPI NOR 4线 DTR Flash。</p>
+</blockquote>
+<h3 id="Sensor选型">Sensor选型<a name="ZH-CN_TOPIC_0000002024985813"></a></h3>
+<p>不同的Sensor初始化序列及图像收敛耗时差别较大，对快速启动影响较大。市面上Sensor初始化耗时从几个毫秒到几百毫秒的都有，可以根据产品定位选择合适的Sensor。</p>
+<p>媒体初始化时，在ISP初始化阶段会先初始化Sensor，再初始化其他模块，媒体初始化完成后，再等待Sensor的起始帧中断，这个流程是串行的，所以Sensor初始化的快慢直接影响整个媒体初始化的速度。</p>
+<p>市面上不同Sensor初始化序列及时序等差别较大，一般初始化通过I2C按时序要求写寄存器，读写寄存器数量从几个到几百个，甚至多达上千个都存在，这个不同Sensor各不相同。除此之外，Sensor可能有等时序Delay的要求，从0毫秒到上百毫秒的情况都存在，这些属性差异导致Sensor序列初始化耗时差异可能较大。</p>
+<p>另外，Sensor的图像收敛耗时差异也较大，有些Sensor支持图形快速收敛，有些Sensor能够自动收敛，收敛耗时从业务应用角度看等待0帧到10多帧情况都存在。如果对快速出高质量帧这一指标有高要求，这一部分也是Sensor选型需要考虑的因素。</p>
+<h3 id="BootRom关闭通道扫描">BootRom关闭通道扫描<a name="ZH-CN_TOPIC_0000001988506298"></a></h3>
+<p>芯片BootRom支持通道扫描功能，用于调试阶段串口裸烧等，此部分扫描通道耗时超过30ms，实际产品release版本可以关闭此功能。参考板上可以通过fastboot拨码关闭。</p>
+<h2 id="软件优化">软件优化<a name="ZH-CN_TOPIC_0000001988346574"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002025106293">GSL优化修改说明</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002024985817">U-Boot优化修改说明</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002025106297">Linux内核优化修改说明</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002024985821">Rootfs优化修改说明</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001988506306">快启sample说明</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001988346582">快启性能调试说明</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000002025106301">AE快启sample说明</a></strong>  </p>
+</li>
+</ul>
+<h3 id="GSL优化修改说明">GSL优化修改说明<a name="ZH-CN_TOPIC_0000002025106293"></a></h3>
+<ul>
+<li>
+<p>Flash提前初始化为normal模式</p>
+<p>默认情况下，GSL加载U-Boot时Flash工作在Boot模式，读速较慢，U-Boot镜像越大耗时越长。</p>
+<p>可以通过将GSL阶段Flash初始化为normal模式，提高U-Boot的加载速度。</p>
+<p>Flash normal模式读优化默认是关闭的，可以打开CONFIG_GSL_FMC_READ=1选项使能Flash normal模式读。此控制选项定义所在文件路径：boards/dmeb/components/gsl/cfg.mk</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+GSL中Flash当前只适配了SPI NOR Flash，另外需要根据具体Flash型号修改Flash支持表。GSL中Flash支持列表路径：drivers/fmc/spi/fmc100/fmc_spi_nor_ids.c，将对应的Flash配置替换到fmc_spi_nor_info_table中（修改MINI_TABLE宏分支中的table表结构体，当前默认只做参考，产品需要根据实际型号替换）。</p>
+</blockquote>
+</li>
+<li>
+<p><strong>GSL小型化</strong></p>
+<p>GSL是BootRom阶段加载的，运行在RAM中。RAM资源大小有限，并且BootRom是在Boot模式将GSL代码等读到RAM中，GSL小型化可以缩短加载GSL时间，对快启有收益。</p>
+<p>实际产品开发中，这部分如果有开发修改，且对快启有极高的要求，这部分建议尽量简化，保持GSL小型化，这样能缩短BootRom加载GSL镜像时间。</p>
+</li>
+</ul>
+<h3 id="U-Boot优化修改说明">U-Boot优化修改说明<a name="ZH-CN_TOPIC_0000002024985817"></a></h3>
+<p>U-Boot启动是当前系统启动必经流程，提高其启动速度，能提高整体启动速度。U-Boot启动流程主要包括：U-Boot自解压，板级初始化、和Kernel&amp;文件系统等加载，分析Image并启动Linux流程。优化手段按启动流程划分，主要包含但不限于如下二点。</p>
+<ul>
+<li>板级初始化优化：去掉板级初始化阶段U-Boot代码重定位,删除非必要的驱动初始化流程，减少必要的驱动初始化耗时，最终板级初始化耗时减少；</li>
+<li>镜像加载优化：主要包括镜像小型化、使用芯片硬解压功能、提升FLASH控制器主频等手段，减少镜像加载耗时，rugzip命令优化。</li>
+</ul>
+<p>U-Boot的主要优化点：</p>
+<ol>
+<li>剪裁不需要的CMD命令</li>
+<li>剪裁不需要的驱动（网络、USB、Flash驱动等）</li>
+<li>关闭串口打印</li>
+<li>ENV分区减小，提高env分区加载速度（或者禁用ENV分区，固化bootargs和bootcmd）</li>
+<li>bootdelay等待延时关闭（当前默认是2秒，请自行修改bootargs中bootdelay值为0）</li>
+<li>支持边读边解压，提高镜像和rootfs加载速度</li>
+<li>板级初始化时U-Boot代码及数据段重定位优化</li>
+<li>SPI NOR Flash支持4线DTR模式</li>
+<li>
+<p>bootm起内核镜像和dtb镜像零拷贝</p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001988506302">U-Boot快启优化配置剪裁项说明</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001988346578">U-Boot启动性能调试</a></strong>  </p>
+</li>
+</ol>
+<h4 id="U-Boot快启优化配置剪裁项说明">U-Boot快启优化配置剪裁项说明<a name="ZH-CN_TOPIC_0000001988506302"></a></h4>
+<ul>
+<li>
+<p>U-Boot快启相关的优化在U-Boot的文件hi3516cv610_mini_defconfig中，U-Boot小型化剪裁相关的配置都在config中，当前默认支持以下命令：</p>
+<p><img alt="" src="../figures/zh-cn_image_0000001919586952.png" /></p>
+<p>注：只保留基本命令行，不支持自动补全及详细帮助等。</p>
+</li>
+<li>
+<p>另外此config除了做了小型化剪裁外，还打开了以下配置：</p>
+<p>CONFIG_TIME_ADDR_OFFSET=0xF800</p>
+<p>CONFIG_CMD_TIMESTAMP=y</p>
+<p>CONFIG_CMD_UGZIP=y</p>
+<p>CONFIG_DTR_MODE_SUPPORT=y</p>
+<p>其中CONFIG_CMD_TIMESTAMP和CONFIG_TIME_ADDR_OFFSET是耗时时间戳统计配置，方便统计从bootrom到U-Boot阶段详细耗时统计，详细见<a href="#ZH-CN_TOPIC_0000001988346578">U-Boot启动性能调试</a>小节说明。</p>
+<p>CONFIG_CMD_UGZIP使能边读边解压命令，Flash读镜像和硬件解压镜像并行，提高加载速度，其中镜像采用gzip压缩。</p>
+<p>CONFIG_DTR_MODE_SUPPORT开启DTR模式读写，提高Flash读速，具体使用时请根据实际Flash是否支持选择关闭或者打开。</p>
+</li>
+<li>
+<p>mini uboot配置去掉了大部分的调试信息，并且默认关闭了升级功能，建议调试验证时使用hi3516cv610_mini_debug_defconfig配置，并通过tftp烧写mini uboot。</p>
+</li>
+</ul>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+1.  hi3516cv610_mini_defconfig配置仅做参考使用，实际产品化根据实际需求场景选用打开或者关闭相关选项。<br />
+2.  mini boot优化及剪裁项在代码中使用MINI_BOOT宏控制(config中通过CONFIG_MINI_BOOT宏控制打开或者关闭，hi3516cv610_mini_defconfig中默认打开)，如有需要，可以详细查看U-Boot代码中MINI_BOOT宏分支相关地方。</p>
+</blockquote>
+<h4 id="U-Boot启动性能调试">U-Boot启动性能调试<a name="ZH-CN_TOPIC_0000001988346578"></a></h4>
+<ul>
+<li>
+<p>时间调试</p>
+<p>调试阶段可在U-Boot中恰当位置增加时间戳日志信息，如进入main_loop时，增加如下“timestamp_mark("main_loop_enter", __LINE__);”代码调用，即可增加一条时间戳日志。</p>
+<p>同时在内核中同步了 timer计时，从而保证了在内核中使用printk打印时间信息时，是接续了U-Boot阶段的时间的，方便调测。</p>
+<p><strong>特别注意</strong>：U-Boot的时间戳是微秒为单位，内核printk打印的时间戳单位是秒</p>
+</li>
+<li>
+<p>打印调试</p>
+<p>上述时间戳信息会在内核初始化过程中打印出来，方便后续直接使用dmesg命令查看和分析，如下：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[    2.075860]  -0- boot timestamp bootrom_start @ 215
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>[    2.075868]  -1- boot timestamp bootrom_getchannel @ 1495
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>[    2.075873]  -2- boot timestamp bootrom_gsl_end @ 5745
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>[    2.075878]  -3- boot timestamp bootrom_end @ 5757
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>[    2.075883]  -4- boot timestamp gsl_start @ 5766
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>[    2.075888]  -5- boot timestamp uboot_start @ 13125
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>[    2.075894]  -6- boot timestamp board_init_r_start @ 13734
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>[    2.075899]  -7- boot timestamp main_loop_enter @ 16312
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>[    2.075906]  -8- boot timestamp main_loop_autoboot_cmd_start @ 16316
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>[    2.075910]  -9- boot timestamp rugzip_start @ 2016640
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>[    2.075916]  -10- boot timestamp rugzip_end @ 2044658
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>[    2.075921]  -11- boot timestamp rugzip_start @ 2044667
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>[    2.075926]  -12- boot timestamp rugzip_end @ 2067646
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>[    2.075931]  -13- boot timestamp bootm_start @ 2067652
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>[    2.075936]  -14- boot timestamp bootm_end @ 2068612
+</span></code></pre></div>
+</li>
+</ul>
+<p>上述日志信息分析方法：</p>
+<p>BootRom阶段耗时：5757-215=5542微秒，5.54毫秒。其它阶段可自行计算分析。</p>
+<p>****注：上述时间戳打印并接续到内核中，需要在bootargs中设置timestamp参数，并且内核中CONFIG_CMD_TIMESTAMP需要打开，才能生效。如快启参考bootargs参数如下，打开timestamp参数：</p>
+<p>bootargs=quiet  <strong>timestamp=0x41FFF800,0x800</strong>  mem=30m earlycon=pl011,0x11040000 console=ttyAMA0,115200 clk_ignore_unused rw root=/dev/ram0 rootfstype=romfs initrd=0x41980000,0x480000  mtdparts=sfc:512K(boot),512K(env),5M(kernel),10M(rootfs.ramdisk)</p>
+<p>其中timestamp第一个参数是时间戳打印的地址位置，第二参数代表总大小。可以根据实际情况自行定义设置，注意打印的地址位置不要和其他位置冲突，避免被覆盖。</p>
+<h3 id="Linux内核优化修改说明">Linux内核优化修改说明<a name="ZH-CN_TOPIC_0000002025106297"></a></h3>
+<p>Kernel的启动时间主要受内核大小、内核解压速度、默认加载模块等方面影响。按照优化项划分，主要包含但不限于以下几点：</p>
+<ul>
+<li>镜像小型化：删减非必须模块，减少镜像大小，详细参考《Hi35xxVxxx 系统小型化说明》；</li>
+<li>Rootfs使用Ramdisk方式挂载；</li>
+<li>Ramdisk零拷贝（不生成和读写/initrd.image文件），配置VENDOR_RAMDISK_ZERO_COPY打开此优化；</li>
+<li>RCU快速触发（加速锁检测），配置VENDOR_TIMER_TRIGGER_RCU打开此优化；</li>
+<li>节点并行（并行生成设备节点），配置STARTUP_PARALLEL_CREATION_NODE_OPT打开此优化；</li>
+<li>Sysfs小型化（裁剪不需要的调试信息），配置SYSFS_MINI_OPT打开此优化；</li>
+<li>Uevent小型化（裁剪不用的uevent信息），配置KUEVENT_MINI_OPT打开此优化，若udev中有复杂的uevent监听需求可选择性关闭该优化；</li>
+<li>流程并行（启动流程模块并行），配置STARTUP_PARALLEL_OPT打开此优化，建议使用；</li>
+<li>其它优化：关闭打印，可配置BOOTSTAGE_PRINTK_MINI_OPT开关打开此优化（关闭启动过程中的所有打印信息，可能影响调试，建议发行版里打开此优化，调试版关闭）。</li>
+</ul>
+<p>Linux内核优化及剪裁相关的配置参考配置文件hi3516cv610_nor_quickboot_defconfig，上述优化点配置已默认在此文件中打开</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+hi3516cv610_nor_quickboot_defconfig配置仅做参考使用，实际产品化根据实际需求场景选用打开或者关闭相关选项。</p>
+</blockquote>
+<h3 id="Rootfs优化修改说明">Rootfs优化修改说明<a name="ZH-CN_TOPIC_0000002024985821"></a></h3>
+<ul>
+<li>
+<p>根文件系统主要承载具体的小系统Shell命令行环境下的基本命令，由busybox构建。根据快启基本原则，Rootfs越小越好，因此裁减Rootfs中不必要的命令等减少Rootfs大小很有必要。</p>
+<p>同时根文件系统一般是存储在flash介质上，通常是采用EXT4、UBI、Squash、JFFS2等文件系统格式制作。此类文件系统格式通常存在镜像读取时间长的问题，因为内存的读取速度远远大于flash介质，所以可以考虑采用ramdisk/romfs的方式可以减少根文件系统的读写时间。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+使用ramdisk文件系统时，需要打开内核配置文件相关选项,可以参考内核配置hi3516cv610_nor_quickboot_defconfig中打开，同时bootargs参数需要同步配置修改，可以参考快启env配置文件修改(路径：boards/dmeb/tools/pc/uboot_env/env_text/hi3516cv610/nor_quickstart_env.txt)，如下加粗地方是涉及ramdisk的相关配置修改：<br />
+bootargs=quiet timestamp=0x41FFF800,0x800 mem=30m earlycon=pl011,0x11040000 console=ttyAMA0,115200 clk_ignore_unused rw  <strong>root=/dev/ram0 rootfstype=romfs</strong> <strong>initrd=0x41980000,0x480000</strong>   mtdparts=sfc:512K(boot),512K(env),5M(kernel),<strong>10M(rootfs.ramdisk)</strong><br />
+bootcmd=sf probe 0;rugzip 0x100000 0x44000000 0x40007f40 0x80000<strong>;rugzip 0x600000 0x44000000 0x41980000 0x80000</strong>;bootm 0x40007f44<br />
+修改root类型为ram类型，指定rootfs挂载的内存地址及大小(initrd第一个参数是代码挂载地址，第二参数是大小，需要根据实际业务场景地址划分修改配置)，另外bootcmd中读rootfs的地址也同步修改为对应地址。</p>
+</blockquote>
+</li>
+<li>
+<p>提供busybox小型化配置文件config_mini_arm_a7_softfp_neon，该配置仅保留启动及运行sample必需功能，可用常见命令包含：cat、zcat、chmod、chown、cp、echo、ln、ls、mkdir、pwd、reboot、getty、login、insmod、mdev、mount、umount、ifconfig、route、ping、free、top。</p>
+<p>详细请参考《Hi35xxVxxx 系统小型化说明》文档。</p>
+</li>
+<li>
+<p>文件系统挂载时间优化</p>
+<p>开启CONFIG_JFFS2_SUMMARY</p>
+</li>
+</ul>
+<h3 id="快启sample说明">快启sample说明<a name="ZH-CN_TOPIC_0000001988506306"></a></h3>
+<p>SDK中提供一个快启sample，快启sample实现了一个验证媒体通路及耗时参考。</p>
+<p>sample路径：soc/drivers/mpp/sample/quick_start_demo</p>
+<p>sample可以单独编译，在sample目录下，执行make quick_start_demo。编译结果在quick_start_demo目录中。</p>
+<p>参考sample中记录了媒体初始化、获取第一帧等关键节点的耗时信息，耗时时间统一输入到内核打印buffer。可以通过dmesg命令查看，如下是sample默认打印信息：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[    2.522096] sample_main_enter pts is: 2119172, gap: 0
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>[    2.523357] sample_main_sighandle_end pts is: 2120163, gap: 991
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>[    2.524639] sample_vio_all_mode cfg start pts is: 2120175, gap: 12
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>[    2.525915] sample_vio_all_mode cfg end pts is: 2121647, gap: 1472
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>[    2.527188] sample_vio_start_route_start pts is: 2121808, gap: 161
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>[    2.528466] route_sys_start_end pts is: 2123520, gap: 1712
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>[    2.529749] mpi_isp_init start pts is: 2125851, gap: 2331
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>[    2.531106] hi_mpi_vi_get_chn_frame_start pts is: 2130683, gap: 4832
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>[    2.532361] mpi_isp_init end pts is: 2144386, gap: 13703
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>[    2.533625] route_vi_start_end pts is: 2144555, gap: 169
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>[    2.534892] route_vpss_start_end pts is: 2144800, gap: 245
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>[    2.536156] sample_vio_start_route_done pts is: 2144849, gap: 49
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>[    2.537420] hi_mpi_vi_get_chn_frame_done_2148675 pts is: 2177965, gap: 33116
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>[    2.538682] hi_mpi_vpss_get_chn_frame_start pts is: 2178012, gap: 47
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>[    2.539972] hi_mpi_vpss_get_chn_frame_done_2148675 pts is: 2185941, gap: 7929
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>[    2.541295] sample_main_exit pts is: 2521039, gap: 335098
+</span></code></pre></div>
+<p>打印时间戳函数：print_timestamp，如有需要可参考sample自行添加需要的节点耗时信息。</p>
+<h3 id="快启性能调试说明">快启性能调试说明<a name="ZH-CN_TOPIC_0000001988346582"></a></h3>
+<p>从系统启动到sample完成，每个阶段都记录了关键节点的时间戳的信息，所有阶段时间戳是来自同一个系统时钟寄存器，时间是连续的，可以查看完整的从启动到各阶段准确耗时。为方便统一查看，时间统一打印到内核打印Buffer。可以通过dmesg查看完整流程耗时信息：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>~ # dmesg
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>[    2.075860]  -0- boot timestamp bootrom_start @ 215
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>[    2.075868]  -1- boot timestamp bootrom_getchannel @ 1495
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>[    2.075873]  -2- boot timestamp bootrom_gsl_end @ 5745
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>[    2.075878]  -3- boot timestamp bootrom_end @ 5757
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>[    2.075883]  -4- boot timestamp gsl_start @ 5766
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>[    2.075888]  -5- boot timestamp uboot_start @ 13125
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>[    2.075894]  -6- boot timestamp board_init_r_start @ 13734
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>[    2.075899]  -7- boot timestamp main_loop_enter @ 16312
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>[    2.075906]  -8- boot timestamp main_loop_autoboot_cmd_start @ 16316
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>[    2.075910]  -9- boot timestamp rugzip_start @ 2016640
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>[    2.075916]  -10- boot timestamp rugzip_end @ 2044658
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>[    2.075921]  -11- boot timestamp rugzip_start @ 2044667
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>[    2.075926]  -12- boot timestamp rugzip_end @ 2067646
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>[    2.075931]  -13- boot timestamp bootm_start @ 2067652
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>[    2.075936]  -14- boot timestamp bootm_end @ 2068612
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>[    2.110227] Run /sbin/init as init process
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>[    2.110232]   with arguments:
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>[    2.110242]     /sbin/init
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>[    2.110245]   with environment:
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>[    2.110249]     HOME=/
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>[    2.110253]     TERM=linux
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>[    2.141955] udevd[54]: error getting socket: Function not implemented
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>[    2.153940] udevd[54]: error initializing udev control socket
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>[    2.522096] sample_main_enter pts is: 2119172, gap: 0
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>[    2.523357] sample_main_sighandle_end pts is: 2120163, gap: 991
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>[    2.524639] sample_vio_all_mode cfg start pts is: 2120175, gap: 12
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>[    2.525915] sample_vio_all_mode cfg end pts is: 2121647, gap: 1472
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>[    2.527188] sample_vio_start_route_start pts is: 2121808, gap: 161
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>[    2.528466] route_sys_start_end pts is: 2123520, gap: 1712
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>[    2.529749] mpi_isp_init start pts is: 2125851, gap: 2331
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>[    2.531106] hi_mpi_vi_get_chn_frame_start pts is: 2130683, gap: 4832
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>[    2.532361] mpi_isp_init end pts is: 2144386, gap: 13703
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>[    2.533625] route_vi_start_end pts is: 2144555, gap: 169
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>[    2.534892] route_vpss_start_end pts is: 2144800, gap: 245
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>[    2.536156] sample_vio_start_route_done pts is: 2144849, gap: 49
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>[    2.537420] hi_mpi_vi_get_chn_frame_done_2148675 pts is: 2177965, gap: 33116
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>[    2.538682] hi_mpi_vpss_get_chn_frame_start pts is: 2178012, gap: 47
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>[    2.539972] hi_mpi_vpss_get_chn_frame_done_2148675 pts is: 2185941, gap: 7929
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>[    2.541295] sample_main_exit pts is: 2521039, gap: 335098
+</span></code></pre></div>
+<p>“boot timestamp”是boot阶段的耗时，包括BootRom、GSL、U-Boot阶段。boot阶段时间是@符号后的时间，如uboot_start 的时间是点@符号后时间13125，单位是微秒，“Run /sbin/init as init process”是内核初始完成时间打印点，内核启动过程其他时间默认关闭，如有需要可以参考<a href="#ZH-CN_TOPIC_0000002025106297">Linux内核优化修改说明</a>章节自行打开或关闭相关的配置。内核时间是[]中时间，如[    2.110227] Run /sbin/init as init process，init进程时间点是2.110227，单位是秒。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+上述打印仅做参考说明使用。如有需要，可自行增删改相关时间戳打印。</p>
+</blockquote>
+<h3 id="AE快启sample说明">AE快启sample说明<a name="ZH-CN_TOPIC_0000002025106301"></a></h3>
+<p>若使用的sensor是普通的sensor，需要优化媒体通路初始化过程中sensor初始化耗时长的问题，可参考这个sample。</p>
+<p>SDK中提供一个AE快启sample，AE快启sample实现了AE快速收敛的功能。</p>
+<p>sample路径：soc/drivers/mpp/sample/fast_ae</p>
+<p>sample可以单独编译，在sample目录下，执行make。编译结果在fast_ae目录中。</p>
+<p>执行步骤：</p>
+<ol>
+<li>执行./sample_fast_ae 0 0 0 0 0 0 0 0 0</li>
+<li>收敛完成后退出用例，打印曝光参数</li>
+<li>使用曝光参数重新执行./sample_fast_ae</li>
+<li>观察收敛效果</li>
+</ol>
+<p>注意事项：</p>
+<p>增益和曝光量需要对应，否则会影响收敛的速度。</p>
+<h2 id="快启配置项说明">快启配置项说明<a name="ZH-CN_TOPIC_0000002024985825"></a></h2>
+<p><strong>表 1</strong>  快启相关的配置项及说明</p>
+<p><a name="zh-cn_topic_0000001886060544_table6655910194513"></a></p>
+<table><thead align="left"><tr id="zh-cn_topic_0000001886060544_row274421020457"><th class="cellrowborder" valign="top" width="5.0200000000000005%" id="mcps1.2.4.1.1"><p id="zh-cn_topic_0000001886060544_p1574412102456"><a name="zh-cn_topic_0000001886060544_p1574412102456"></a><a name="zh-cn_topic_0000001886060544_p1574412102456"></a><strong id="zh-cn_topic_0000001886060544_b17744131044514"><a name="zh-cn_topic_0000001886060544_b17744131044514"></a><a name="zh-cn_topic_0000001886060544_b17744131044514"></a>序号</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="44.6%" id="mcps1.2.4.1.2"><p id="zh-cn_topic_0000001886060544_p67441510154517"><a name="zh-cn_topic_0000001886060544_p67441510154517"></a><a name="zh-cn_topic_0000001886060544_p67441510154517"></a><strong id="zh-cn_topic_0000001886060544_b197441110144514"><a name="zh-cn_topic_0000001886060544_b197441110144514"></a><a name="zh-cn_topic_0000001886060544_b197441110144514"></a>配置项</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="50.38%" id="mcps1.2.4.1.3"><p id="zh-cn_topic_0000001886060544_p187441210154510"><a name="zh-cn_topic_0000001886060544_p187441210154510"></a><a name="zh-cn_topic_0000001886060544_p187441210154510"></a><strong id="zh-cn_topic_0000001886060544_b1674421054514"><a name="zh-cn_topic_0000001886060544_b1674421054514"></a><a name="zh-cn_topic_0000001886060544_b1674421054514"></a>说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="zh-cn_topic_0000001886060544_row19744201011458"><td class="cellrowborder" valign="top" width="5.0200000000000005%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0000001886060544_p974451084518"><a name="zh-cn_topic_0000001886060544_p974451084518"></a><a name="zh-cn_topic_0000001886060544_p974451084518"></a>1</p>
+</td>
+<td class="cellrowborder" valign="top" width="44.6%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0000001886060544_p6744191014459"><a name="zh-cn_topic_0000001886060544_p6744191014459"></a><a name="zh-cn_topic_0000001886060544_p6744191014459"></a>FASTBOOT_ENABLE=1</p>
+</td>
+<td class="cellrowborder" valign="top" width="50.38%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0000001886060544_p17744310124518"><a name="zh-cn_topic_0000001886060544_p17744310124518"></a><a name="zh-cn_topic_0000001886060544_p17744310124518"></a>用于打开快启内核镜像及rootfs镜像的编译</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0000001886060544_row77441010154518"><td class="cellrowborder" valign="top" width="5.0200000000000005%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0000001886060544_p1174516109457"><a name="zh-cn_topic_0000001886060544_p1174516109457"></a><a name="zh-cn_topic_0000001886060544_p1174516109457"></a>2</p>
+</td>
+<td class="cellrowborder" valign="top" width="44.6%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0000001886060544_p1074515108454"><a name="zh-cn_topic_0000001886060544_p1074515108454"></a><a name="zh-cn_topic_0000001886060544_p1074515108454"></a>MINI_COMPILE=1</p>
+</td>
+<td class="cellrowborder" valign="top" width="50.38%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0000001886060544_p18745171014451"><a name="zh-cn_topic_0000001886060544_p18745171014451"></a><a name="zh-cn_topic_0000001886060544_p18745171014451"></a>打开小型化优化配置</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0000001886060544_row874551044516"><td class="cellrowborder" valign="top" width="5.0200000000000005%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0000001886060544_p6745121004520"><a name="zh-cn_topic_0000001886060544_p6745121004520"></a><a name="zh-cn_topic_0000001886060544_p6745121004520"></a>3</p>
+</td>
+<td class="cellrowborder" valign="top" width="44.6%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0000001886060544_p7745181013450"><a name="zh-cn_topic_0000001886060544_p7745181013450"></a><a name="zh-cn_topic_0000001886060544_p7745181013450"></a>BUSYBOX_CFG=config_quickstart_arm_a7_softfp_neon</p>
+</td>
+<td class="cellrowborder" valign="top" width="50.38%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0000001886060544_p3745310114512"><a name="zh-cn_topic_0000001886060544_p3745310114512"></a><a name="zh-cn_topic_0000001886060544_p3745310114512"></a>使用快启优化busybox配置</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0000001886060544_row1774519103459"><td class="cellrowborder" valign="top" width="5.0200000000000005%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0000001886060544_p13745131014518"><a name="zh-cn_topic_0000001886060544_p13745131014518"></a><a name="zh-cn_topic_0000001886060544_p13745131014518"></a>4</p>
+</td>
+<td class="cellrowborder" valign="top" width="44.6%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0000001886060544_p9745191010454"><a name="zh-cn_topic_0000001886060544_p9745191010454"></a><a name="zh-cn_topic_0000001886060544_p9745191010454"></a>KERNEL_CFG=hi3516cv610_nor_quickboot_defconfig</p>
+</td>
+<td class="cellrowborder" valign="top" width="50.38%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0000001886060544_p1474561024518"><a name="zh-cn_topic_0000001886060544_p1474561024518"></a><a name="zh-cn_topic_0000001886060544_p1474561024518"></a>使用快启优化内核配置</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0000001886060544_row87458102451"><td class="cellrowborder" valign="top" width="5.0200000000000005%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0000001886060544_p1074541016454"><a name="zh-cn_topic_0000001886060544_p1074541016454"></a><a name="zh-cn_topic_0000001886060544_p1074541016454"></a>5</p>
+</td>
+<td class="cellrowborder" valign="top" width="44.6%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0000001886060544_p14745131012457"><a name="zh-cn_topic_0000001886060544_p14745131012457"></a><a name="zh-cn_topic_0000001886060544_p14745131012457"></a>CONFIG_GSL_FMC_READ=1</p>
+</td>
+<td class="cellrowborder" valign="top" width="50.38%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0000001886060544_p117451103457"><a name="zh-cn_topic_0000001886060544_p117451103457"></a><a name="zh-cn_topic_0000001886060544_p117451103457"></a>GSL下nor flash normal模式读打开</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0000001886060544_row0745151004511"><td class="cellrowborder" valign="top" width="5.0200000000000005%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0000001886060544_p14745181034516"><a name="zh-cn_topic_0000001886060544_p14745181034516"></a><a name="zh-cn_topic_0000001886060544_p14745181034516"></a>6</p>
+</td>
+<td class="cellrowborder" valign="top" width="44.6%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0000001886060544_p1574517103452"><a name="zh-cn_topic_0000001886060544_p1574517103452"></a><a name="zh-cn_topic_0000001886060544_p1574517103452"></a>BUILD_DRIVER_TO_KERNEL=y</p>
+</td>
+<td class="cellrowborder" valign="top" width="50.38%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0000001886060544_p10745161014511"><a name="zh-cn_topic_0000001886060544_p10745161014511"></a><a name="zh-cn_topic_0000001886060544_p10745161014511"></a>MPP等KO编译进内核配置</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0000001886060544_row274521094518"><td class="cellrowborder" valign="top" width="5.0200000000000005%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0000001886060544_p874571012458"><a name="zh-cn_topic_0000001886060544_p874571012458"></a><a name="zh-cn_topic_0000001886060544_p874571012458"></a>7</p>
+</td>
+<td class="cellrowborder" valign="top" width="44.6%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0000001886060544_p11745141044512"><a name="zh-cn_topic_0000001886060544_p11745141044512"></a><a name="zh-cn_topic_0000001886060544_p11745141044512"></a>UBOOT_CONFIG=hi3516cv610_mini_defconfig</p>
+</td>
+<td class="cellrowborder" valign="top" width="50.38%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0000001886060544_p57451610204510"><a name="zh-cn_topic_0000001886060544_p57451610204510"></a><a name="zh-cn_topic_0000001886060544_p57451610204510"></a>快启优化U-Boot配置，对U-Boot做了深入优化及剪裁</p>
+</td>
+</tr>
+<tr id="zh-cn_topic_0000001886060544_row1374513101459"><td class="cellrowborder" valign="top" width="5.0200000000000005%" headers="mcps1.2.4.1.1 "><p id="zh-cn_topic_0000001886060544_p17451510144515"><a name="zh-cn_topic_0000001886060544_p17451510144515"></a><a name="zh-cn_topic_0000001886060544_p17451510144515"></a>8</p>
+</td>
+<td class="cellrowborder" valign="top" width="44.6%" headers="mcps1.2.4.1.2 "><p id="zh-cn_topic_0000001886060544_p1274511102459"><a name="zh-cn_topic_0000001886060544_p1274511102459"></a><a name="zh-cn_topic_0000001886060544_p1274511102459"></a>UBOOT_CONFIG=hi3516cv610_mini_debug_defconfig</p>
+</td>
+<td class="cellrowborder" valign="top" width="50.38%" headers="mcps1.2.4.1.3 "><p id="zh-cn_topic_0000001886060544_p474631013452"><a name="zh-cn_topic_0000001886060544_p474631013452"></a><a name="zh-cn_topic_0000001886060544_p474631013452"></a>快启优化U-Boot配置，用于开发调试阶段</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+上面配置项在本快启参考中默认全部打开。可以根据实际场景打开或者关闭，并对具体配置文件中的内容进行修改满足不同的实际业务场景。比如需要打开或者关闭内核的某些功能，可以修改内核配置文件hi3516cv610_nor_quickboot_defconfig中内容或替换自定义的配置文件，其他U-Boot配置文件及mpp编译进内核等配置类似。<br />
+本节描述均以Hi3516CV610产品为例，如果需要使用Hi3516CV608，上述的配置文件可以替换为Hi3516CV608对应的配置文件，如KERNEL_CFG=hi3516cv608_nor_quickboot_defconfig，UBOOT_CONFIG=hi3516cv608_mini_defconfig。</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+
+  <div class="footer-box">
+    <div class="footer-list">
+      
+      
+      <div class="footer-list-child">
+        <a href="https://www.hisilicon.com/cn" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/home" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开发者网站</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://gitcode.com/HiSpark" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开源社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developer.huawei.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">华为开发者官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hikunpeng.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">鲲鹏社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hiascend.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">昇腾社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/aboutus" target="_blank" class="footer-nav-first" rel="noopener noreferrer">关于我们</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/login" target="_blank" class="footer-nav-first" rel="noopener noreferrer">投诉举报</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      
+    </div>
+    <div class="footer-fix">
+      <div class="footer-fix-content">
+        <div>
+          <span class="footer-copyright">&nbsp;&copy;2024 华为技术有限公司</span>
+          <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer">粤A2-20044005号</a>
+          <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702004153"
+            target="_blank" rel="noopener noreferrer">粤公网安备44030702004153号</a>
+        </div>
+        <div class="footer-name-list">
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/legalNotices" target="_blank" class="footer-name" rel="noopener noreferrer">法律声明</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/cookie-policy" target="_blank" class="footer-name" rel="noopener noreferrer">关于Cookie</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/privacyPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">隐私政策</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/userPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">用户协议</a>
+          
+          
+          
+          <a href="javascript:void(0);" onclick="openDisclaimerDialog()" class="footer-name">免责声明</a>
+          
+          
+          
+        </div>
+      </div>
+
+
+      <!-- 免责声明弹窗 -->
+      <div id="disclaimerDialog" class="disclaimer-overlay" style="display: none;">
+        <div class="disclaimer-dialog">
+          <div class="disclaimer-dialog__header">
+            <span class="disclaimer-dialog__title">免责声明</span>
+            <button class="disclaimer-dialog__close" onclick="closeDisclaimerDialog()">×</button>
+          </div>
+          <div class="disclaimer-dialog__body">
+            <p class="disclaimer-dialog__text-center"><strong>海思开发者网站免责声明</strong></p>
+            <p>尊敬的用户，您好：</p>
+            <p>&nbsp; &nbsp;
+              请确保您通过本平台向海思提供或反馈的任何信息或意见不侵犯第三方知识产权和/或合法权益。如您提供或反馈的上述任何信息或意见侵犯第三方知识产权和/或合法权益，和/或给第三方造成损害的，您将承担全部法律及赔偿责任。
+            </p>
+          </div>
+          <div class="disclaimer-dialog__footer">
+            <button class="disclaimer-dialog__btn" onclick="closeDisclaimerDialog()">关闭</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function openDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'flex';
+        }
+        function closeDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'none';
+        }
+        // 点击弹窗背景关闭
+        document.getElementById('disclaimerDialog').addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeDisclaimerDialog();
+          }
+        });
+      </script>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../../static/js/custom.js"></script>
+      
+        <script src="../../../../../../static/js/version-selector.js"></script>
+      
+        <script src="../../../../../../static/js/code-highlight.js"></script>
+      
+        <script src="../../../../../../static/js/wavedrom-skin.js"></script>
+      
+        <script src="../../../../../../static/js/wavedrom.min.js"></script>
+      
+        <script src="../../../../../../static/js/wavedrom-init.js"></script>
+      
+        <script src="../../../../../../static/js/no-flash.js"></script>
+      
+    
+  </body>
+</html>

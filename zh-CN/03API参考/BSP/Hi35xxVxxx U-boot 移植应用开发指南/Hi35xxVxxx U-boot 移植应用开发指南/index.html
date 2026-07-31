@@ -1,0 +1,1487 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Hi3516CV610 超高清智慧视觉 SoC 文档中心">
+      
+      
+        <meta name="author" content="HiSpark">
+      
+      
+        <link rel="canonical" href="https://hivsdev.github.io/Hi3516CV610_doc/zh-CN/03API%E5%8F%82%E8%80%83/BSP/Hi35xxVxxx%20U-boot%20%E7%A7%BB%E6%A4%8D%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/Hi35xxVxxx%20U-boot%20%E7%A7%BB%E6%A4%8D%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E6%8C%87%E5%8D%97/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../static/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>前言 - Hi3516CV610 开发者中心</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+    
+    
+      <link rel="stylesheet" href="../../../../../static/css/extra.css">
+    
+      <link rel="stylesheet" href="../../../../../static/css/version-selector.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+      <meta name="gitcode-issues-url" content="https://gitcode.com/HiSpark/fbb_ws63/issues">
+      
+      <link rel="dns-prefetch" href="https://docs.hisilicon.com">
+      <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+      <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://docs.hisilicon.com" crossorigin>
+      <link rel="preload" href="../../../../../assets/stylesheets/main.484c7ddc.min.css" as="style">
+      <link rel="preload" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css" as="style">
+      <link rel="preload" href="../../../../../static/css/extra.css" as="style">
+      <link rel="preload" href="../../../../../assets/javascripts/bundle.79ae519e.min.js" as="script">
+      <link rel="preload" href="../../../../../static/js/custom.js" as="script">
+
+      
+      
+        
+        
+      
+      <style>:root{--md-text-font:"Helvetica Neue, PingFang SC, Microsoft YaHei";--md-code-font:"Consolas, Roboto Mono"}</style>
+      <script>
+        // 防止宽窄屏刷新闪烁 — 在 body 解析前就读取 localStorage 标记 <html>
+        // 配合 CSS: html.prefer-narrow .md-grid 在首帧即应用 76%
+        if (localStorage.getItem('wideScreen') === 'false') {
+          document.documentElement.classList.add('prefer-narrow');
+        }
+      </script>
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#前言" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://developers.hisilicon.com" title="Hi3516CV610 开发者中心" class="md-header__button md-logo" aria-label="Hi3516CV610 开发者中心" data-md-component="logo" target="_blank" rel="noopener noreferrer">
+      <img 
+  src="../../../../../static/images/light-icon.png" 
+  class="md-logo__img md-logo__img--light"
+  alt="Hi3516CV610 开发者中心" 
+/>
+<img 
+  src="../../../../../static/images/dark-icon.png" 
+  class="md-logo__img md-logo__img--dark"
+  alt="Hi3516CV610 开发者中心" 
+/>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+      </div>
+    </div>
+    
+      
+      
+        <label class="md-header__button md-icon md-header__button--search" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+      
+    
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="custom"  aria-label="切换到暗色主题"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换到暗色主题" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="custom"  aria-label="切换到亮色主题"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换到亮色主题" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <div class="md-header__source">
+        <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="Go to repository" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+      </div>
+    
+  </nav>
+  
+  
+    
+    
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        <!-- 
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+         -->
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+  
+</header>
+
+
+<script>
+  var USER_DEFINED_OPTIONS = {
+    REPO_PATH: "Hi3516CV610_doc",
+    ROOT_URL: "https://docs.hisilicon.com/projects"
+  };
+  var DOCUMENTATION_OPTIONS = {
+    VERSION: "master",
+    // 构建时声明主题的语言
+    LANGUAGE: "en"
+  };
+</script>
+<script src="https://docs.hisilicon.com/projects/version/hispark_version.js"></script>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="sidebar-selectors">
+                  <div class="repo-select custom-select">
+                    <span class="select-label">芯片</span>
+                    <div class="repo-selector" title="">
+                      <span class="repo-readOnly"></span>
+                      <select id="repo-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="repo-options" style="display:none"></ul>
+                  </div>
+                  <div class="version-select custom-select">
+                    <span class="select-label">版本</span>
+                    <div class="version-selector" title="">
+                      <span class="version-readOnly"></span>
+                      <select id="version-select" hidden>
+                        <option value=""></option>
+                      </select>
+                    </div>
+                    <ul class="select-options" id="version-options" style="display:none"></ul>
+                  </div>
+                  
+                    
+                    
+                      <div class="sidebar-search">
+                        <label class="sidebar-search__button" for="__search">
+                          
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+                          <span>全文检索</span>
+                        </label>
+                      </div>
+                    
+                  
+                </div>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  
+    <div class="md-nav__source">
+      <div class="source-container">
+  <a href="https://github.com/hivsdev/Hi3516CV610_doc" target="_blank" title="Go to repository" class="md-source" data-md-component="source" rel="noopener noreferrer">
+    <div class="md-source__icon md-icon">
+      <svg viewBox="0 0 1024 1024" width="20" height="20">
+        <path d="M472.746667 896.853333c-72.533333-8.106667-151.466667-39.253333-200.106667-78.08-27.306667-21.76-72.533333-71.253333-89.6-97.706666-51.626667-80.213333-72.533333-179.626667-57.173333-269.653334 15.36-86.613333 50.773333-154.453333 113.92-216.32 109.653333-107.52 285.44-141.653333 425.813333-82.346666 46.08 19.626667 90.453333 46.933333 108.8 66.986666 35.84 39.68 22.613333 104.106667-25.173333 128-20.48 9.813333-58.453333 10.24-72.96 0.853334-14.933333-9.386667-28.16-35.84-32-62.293334-1.706667-12.8-3.84-23.04-4.266667-23.04-0.853333 0-11.946667 5.973333-23.893333 13.226667-40.106667 23.466667-51.626667 26.88-113.066667 30.72-32.426667 1.706667-67.84 4.693333-78.933333 6.4-20.053333 2.56-44.373333-0.853333-83.2-13.226667l-20.48-6.4 0.853333 42.24c0.426667 40.96 0 43.093333-17.493333 79.36-22.613333 46.933333-30.72 75.52-34.56 117.333334-8.106667 100.693333 46.506667 175.36 150.613333 205.226666 67.413333 19.2 179.2 15.36 239.36-8.533333 58.026667-23.04 108.8-76.8 108.8-114.773333 0-15.786667-20.053333-35.84-41.813333-40.96-8.96-2.56-43.946667-5.546667-77.226667-6.826667-69.973333-2.986667-119.04-9.386667-132.266667-18.346667-13.653333-8.533333-20.48-33.28-14.506666-51.2 5.973333-19.2 15.786667-27.306667 43.946666-37.973333 19.2-7.253333 33.28-8.533333 88.746667-8.533333 118.613333 0 174.08 14.933333 217.6 58.453333 49.92 50.346667 55.466667 127.146667 13.226667 194.986667-62.293333 99.84-135.68 156.586667-235.52 182.613333-33.706667 8.96-122.453333 14.933333-158.72 10.666667z" fill="#D62240"></path>
+      </svg>
+    </div>
+  </a>
+
+  <button class="wide-screen-toggle" id="wide-screen-toggle" >
+    <img src="../../../../../static/images/open.png" class="wide-screen-icon wide-screen-open" alt="切换宽屏" title="切换宽屏" />
+    <img src="../../../../../static/images/close.png" class="wide-screen-icon wide-screen-close" alt="切换窄屏" title="切换窄屏" />
+  </button>
+</div>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../00%E6%A6%82%E8%A7%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概览
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../01%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    快速入门
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../02%E6%95%B4%E4%BD%93%E6%9E%B6%E6%9E%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    整体架构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API 参考
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../04%E5%8F%82%E8%80%83%E6%A1%88%E4%BE%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    参考案例
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../05%E7%A1%AC%E4%BB%B6%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    硬件指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../06%E5%B7%A5%E5%85%B7%E4%B8%AD%E5%BF%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    工具中心
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../07FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../08%E5%85%B6%E4%BB%96/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    其他
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#前言_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        前言
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#概述" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="概述">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#概述_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#U-boot目录结构" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        U-boot目录结构
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#移植U-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        移植U-boot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="移植U-boot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#U-boot硬件环境" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        U-boot硬件环境
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#编译U-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        编译U-boot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#配置DDR存储器" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        配置DDR存储器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#配置管脚复用" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        配置管脚复用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#生成最终使用的U-boot镜像" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        生成最终使用的U-boot镜像
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#烧写U-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        烧写U-boot
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="烧写U-boot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#概述_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        概述
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#通过bootrom工具烧写U-boot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        通过bootrom工具烧写U-boot
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#Flash的U-boot烧写方法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Flash的U-boot烧写方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eMMC的U-boot烧写方法" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        eMMC的U-boot烧写方法
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#附录" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        附录
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="附录">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#U-boot命令说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        U-boot命令说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#U-boot环境变量使用说明" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        U-boot环境变量使用说明
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="前言">前言<a name="ZH-CN_TOPIC_0000001822358153"></a></h1>
+<h2 id="前言_1">前言<a name="ZH-CN_TOPIC_0000001822358153"></a></h2>
+<p><strong>概述<a name="section143mcpsimp"></a></strong></p>
+<p>本文档主要介绍在Hi3516CV610单板上如何移植和烧写U-boot（Hi3516CV610单板的Bootloader）的相关操作及如何使用ARM调试工具。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+本文仅支持musl库工具链arm-openeuler-linux-musleabi-gcc<br />
+本文描述以Hi3516CV610为例，无特殊说明，Hi3516CV608的描述与Hi3516CV610一致。</p>
+</blockquote>
+<p><strong>产品版本<a name="section146mcpsimp"></a></strong></p>
+<p>与本文档相对应的产品版本如下。</p>
+<p><a name="table149mcpsimp"></a></p>
+<table><thead align="left"><tr id="row154mcpsimp"><th class="cellrowborder" valign="top" width="32%" id="mcps1.1.3.1.1"><p id="p156mcpsimp"><a name="p156mcpsimp"></a><a name="p156mcpsimp"></a>产品名称</p>
+</th>
+<th class="cellrowborder" valign="top" width="68%" id="mcps1.1.3.1.2"><p id="p158mcpsimp"><a name="p158mcpsimp"></a><a name="p158mcpsimp"></a>产品版本</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row14518172164117"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p63331555172315"><a name="p63331555172315"></a><a name="p63331555172315"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p141352132417"><a name="p141352132417"></a><a name="p141352132417"></a>V608</p>
+</td>
+</tr>
+<tr id="row11858756132710"><td class="cellrowborder" valign="top" width="32%" headers="mcps1.1.3.1.1 "><p id="p10858185642717"><a name="p10858185642717"></a><a name="p10858185642717"></a>Hi3516C</p>
+</td>
+<td class="cellrowborder" valign="top" width="68%" headers="mcps1.1.3.1.2 "><p id="p15859165616276"><a name="p15859165616276"></a><a name="p15859165616276"></a>V610</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p><strong>读者对象<a name="section165mcpsimp"></a></strong></p>
+<p>本文档（本指南）主要适用于以下工程师：</p>
+<ul>
+<li>技术支持工程师</li>
+<li>软件开发工程师</li>
+</ul>
+<p><strong>修订记录<a name="section171mcpsimp"></a></strong></p>
+<p>修订记录累积了每次文档更新的说明。最新版本的文档包含以前所有文档版本的更新内容。</p>
+<p><a name="table1557726816410"></a></p>
+<table><thead align="left"><tr id="row2942532716410"><th class="cellrowborder" valign="top" width="20.72%" id="mcps1.1.4.1.1"><p id="p3778275416410"><a name="p3778275416410"></a><a name="p3778275416410"></a><strong id="b5687322716410"><a name="b5687322716410"></a><a name="b5687322716410"></a>文档版本</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="23.77%" id="mcps1.1.4.1.2"><p id="p5627845516410"><a name="p5627845516410"></a><a name="p5627845516410"></a><strong id="b5800814916410"><a name="b5800814916410"></a><a name="b5800814916410"></a>发布日期</strong></p>
+</th>
+<th class="cellrowborder" valign="top" width="55.510000000000005%" id="mcps1.1.4.1.3"><p id="p2382284816410"><a name="p2382284816410"></a><a name="p2382284816410"></a><strong id="b3316380216410"><a name="b3316380216410"></a><a name="b3316380216410"></a>修改说明</strong></p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row7388166201812"><td class="cellrowborder" valign="top" width="20.72%" headers="mcps1.1.4.1.1 "><p id="p33881562188"><a name="p33881562188"></a><a name="p33881562188"></a>00B01</p>
+</td>
+<td class="cellrowborder" valign="top" width="23.77%" headers="mcps1.1.4.1.2 "><p id="p45591891812"><a name="p45591891812"></a><a name="p45591891812"></a><span id="ph106503315591"><a name="ph106503315591"></a><a name="ph106503315591"></a>2026-03-20</span></p>
+</td>
+<td class="cellrowborder" valign="top" width="55.510000000000005%" headers="mcps1.1.4.1.3 "><p id="p12395107189"><a name="p12395107189"></a><a name="p12395107189"></a>第1次临时版本发布</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="概述">概述<a name="ZH-CN_TOPIC_0000001822358141"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822358129">概述</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822398061">U-boot目录结构</a></strong>  </p>
+</li>
+</ul>
+<h3 id="概述_1">概述<a name="ZH-CN_TOPIC_0000001822358129"></a></h3>
+<p>Hi3516CV610单板的Bootloader采用gsl进行ddr初始化后启动U-boot方式。当选用的外围芯片的型号与单板上外围芯片的型号不同时，需要修改gsl使用的寄存器表格配置文件，主要包括存储器配置、管脚复用。</p>
+<h3 id="U-boot目录结构">U-boot目录结构<a name="ZH-CN_TOPIC_0000001822398061"></a></h3>
+<p>U-boot的主要目录结构如<a href="#_Ref138244663">表1</a>所示，详细目录说明请阅读U-boot目录下的README文档。</p>
+<p><strong>表 1</strong>  U-boot的主要目录结构</p>
+<p><a name="_Ref138244663"></a></p>
+<table><thead align="left"><tr id="row206mcpsimp"><th class="cellrowborder" valign="top" width="41%" id="mcps1.2.3.1.1"><p id="p208mcpsimp"><a name="p208mcpsimp"></a><a name="p208mcpsimp"></a>目录名</p>
+</th>
+<th class="cellrowborder" valign="top" width="59%" id="mcps1.2.3.1.2"><p id="p210mcpsimp"><a name="p210mcpsimp"></a><a name="p210mcpsimp"></a>描述</p>
+</th>
+</tr>
+</thead>
+<tbody><tr id="row212mcpsimp"><td class="cellrowborder" valign="top" width="41%" headers="mcps1.2.3.1.1 "><p id="p214mcpsimp"><a name="p214mcpsimp"></a><a name="p214mcpsimp"></a>arch</p>
+</td>
+<td class="cellrowborder" valign="top" width="59%" headers="mcps1.2.3.1.2 "><p id="p216mcpsimp"><a name="p216mcpsimp"></a><a name="p216mcpsimp"></a>各种芯片架构的相关代码、U-boot入口代码。</p>
+</td>
+</tr>
+<tr id="row217mcpsimp"><td class="cellrowborder" valign="top" width="41%" headers="mcps1.2.3.1.1 "><p id="p219mcpsimp"><a name="p219mcpsimp"></a><a name="p219mcpsimp"></a>board</p>
+</td>
+<td class="cellrowborder" valign="top" width="59%" headers="mcps1.2.3.1.2 "><p id="p221mcpsimp"><a name="p221mcpsimp"></a><a name="p221mcpsimp"></a>各种单板的相关代码，主要包括存储器驱动等。</p>
+</td>
+</tr>
+<tr id="row222mcpsimp"><td class="cellrowborder" valign="top" width="41%" headers="mcps1.2.3.1.1 "><p id="p224mcpsimp"><a name="p224mcpsimp"></a><a name="p224mcpsimp"></a>board/vendor/hi3516cv610</p>
+</td>
+<td class="cellrowborder" valign="top" width="59%" headers="mcps1.2.3.1.2 "><p id="p226mcpsimp"><a name="p226mcpsimp"></a><a name="p226mcpsimp"></a>Hi3516CV610单板相关代码。</p>
+</td>
+</tr>
+<tr id="row227mcpsimp"><td class="cellrowborder" valign="top" width="41%" headers="mcps1.2.3.1.1 "><p id="p229mcpsimp"><a name="p229mcpsimp"></a><a name="p229mcpsimp"></a>arch/xxx/lib</p>
+</td>
+<td class="cellrowborder" valign="top" width="59%" headers="mcps1.2.3.1.2 "><p id="p231mcpsimp"><a name="p231mcpsimp"></a><a name="p231mcpsimp"></a>各种体系结构的相关代码，如ARM、MIPS的通用代码。</p>
+</td>
+</tr>
+<tr id="row232mcpsimp"><td class="cellrowborder" valign="top" width="41%" headers="mcps1.2.3.1.1 "><p id="p234mcpsimp"><a name="p234mcpsimp"></a><a name="p234mcpsimp"></a>include</p>
+</td>
+<td class="cellrowborder" valign="top" width="59%" headers="mcps1.2.3.1.2 "><p id="p236mcpsimp"><a name="p236mcpsimp"></a><a name="p236mcpsimp"></a>头文件。</p>
+</td>
+</tr>
+<tr id="row237mcpsimp"><td class="cellrowborder" valign="top" width="41%" headers="mcps1.2.3.1.1 "><p id="p239mcpsimp"><a name="p239mcpsimp"></a><a name="p239mcpsimp"></a>include/configs</p>
+</td>
+<td class="cellrowborder" valign="top" width="59%" headers="mcps1.2.3.1.2 "><p id="p241mcpsimp"><a name="p241mcpsimp"></a><a name="p241mcpsimp"></a>各种单板的配置文件。</p>
+</td>
+</tr>
+<tr id="row242mcpsimp"><td class="cellrowborder" valign="top" width="41%" headers="mcps1.2.3.1.1 "><p id="p244mcpsimp"><a name="p244mcpsimp"></a><a name="p244mcpsimp"></a>common</p>
+</td>
+<td class="cellrowborder" valign="top" width="59%" headers="mcps1.2.3.1.2 "><p id="p246mcpsimp"><a name="p246mcpsimp"></a><a name="p246mcpsimp"></a>各种功能（命令）实现文件。</p>
+</td>
+</tr>
+<tr id="row247mcpsimp"><td class="cellrowborder" valign="top" width="41%" headers="mcps1.2.3.1.1 "><p id="p249mcpsimp"><a name="p249mcpsimp"></a><a name="p249mcpsimp"></a>drivers</p>
+</td>
+<td class="cellrowborder" valign="top" width="59%" headers="mcps1.2.3.1.2 "><p id="p251mcpsimp"><a name="p251mcpsimp"></a><a name="p251mcpsimp"></a>网口、Flash、串口等的驱动代码。</p>
+</td>
+</tr>
+<tr id="row252mcpsimp"><td class="cellrowborder" valign="top" width="41%" headers="mcps1.2.3.1.1 "><p id="p254mcpsimp"><a name="p254mcpsimp"></a><a name="p254mcpsimp"></a>net</p>
+</td>
+<td class="cellrowborder" valign="top" width="59%" headers="mcps1.2.3.1.2 "><p id="p256mcpsimp"><a name="p256mcpsimp"></a><a name="p256mcpsimp"></a>网络协议实现文件。</p>
+</td>
+</tr>
+<tr id="row257mcpsimp"><td class="cellrowborder" valign="top" width="41%" headers="mcps1.2.3.1.1 "><p id="p259mcpsimp"><a name="p259mcpsimp"></a><a name="p259mcpsimp"></a>fs</p>
+</td>
+<td class="cellrowborder" valign="top" width="59%" headers="mcps1.2.3.1.2 "><p id="p261mcpsimp"><a name="p261mcpsimp"></a><a name="p261mcpsimp"></a>文件系统实现文件。</p>
+</td>
+</tr>
+<tr id="row262mcpsimp"><td class="cellrowborder" valign="top" width="41%" headers="mcps1.2.3.1.1 "><p id="p264mcpsimp"><a name="p264mcpsimp"></a><a name="p264mcpsimp"></a>product/update</p>
+</td>
+<td class="cellrowborder" valign="top" width="59%" headers="mcps1.2.3.1.2 "><p id="p266mcpsimp"><a name="p266mcpsimp"></a><a name="p266mcpsimp"></a>SD卡升级、USB升级功能实现</p>
+</td>
+</tr>
+<tr id="row267mcpsimp"><td class="cellrowborder" valign="top" width="41%" headers="mcps1.2.3.1.1 "><p id="p269mcpsimp"><a name="p269mcpsimp"></a><a name="p269mcpsimp"></a>product/ot_osd</p>
+</td>
+<td class="cellrowborder" valign="top" width="59%" headers="mcps1.2.3.1.2 "><p id="p271mcpsimp"><a name="p271mcpsimp"></a><a name="p271mcpsimp"></a>dec、hdmi接口、vo、mipi功能实现</p>
+</td>
+</tr>
+<tr id="row272mcpsimp"><td class="cellrowborder" valign="top" width="41%" headers="mcps1.2.3.1.1 "><p id="p274mcpsimp"><a name="p274mcpsimp"></a><a name="p274mcpsimp"></a>product/i2c</p>
+</td>
+<td class="cellrowborder" valign="top" width="59%" headers="mcps1.2.3.1.2 "><p id="p276mcpsimp"><a name="p276mcpsimp"></a><a name="p276mcpsimp"></a>i2c功能实现文件</p>
+</td>
+</tr>
+<tr id="row277mcpsimp"><td class="cellrowborder" valign="top" width="41%" headers="mcps1.2.3.1.1 "><p id="p279mcpsimp"><a name="p279mcpsimp"></a><a name="p279mcpsimp"></a>product/security_subsys</p>
+</td>
+<td class="cellrowborder" valign="top" width="59%" headers="mcps1.2.3.1.2 "><p id="p281mcpsimp"><a name="p281mcpsimp"></a><a name="p281mcpsimp"></a>安全模块功能实现文件</p>
+</td>
+</tr>
+<tr id="row282mcpsimp"><td class="cellrowborder" valign="top" width="41%" headers="mcps1.2.3.1.1 "><p id="p284mcpsimp"><a name="p284mcpsimp"></a><a name="p284mcpsimp"></a>product/tzasc</p>
+</td>
+<td class="cellrowborder" valign="top" width="59%" headers="mcps1.2.3.1.2 "><p id="p286mcpsimp"><a name="p286mcpsimp"></a><a name="p286mcpsimp"></a>tzasc 接口</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="移植U-boot">移植U-boot<a name="ZH-CN_TOPIC_0000001822358161"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775798178">U-boot硬件环境</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822358169">编译U-boot</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775638554">配置DDR存储器</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775798134">配置管脚复用</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822398105">生成最终使用的U-boot镜像</a></strong>  </p>
+</li>
+</ul>
+<h3 id="U-boot硬件环境">U-boot硬件环境<a name="ZH-CN_TOPIC_0000001775798178"></a></h3>
+<p>Hi3516CV610 DMEB板上的外围设备包括DDR SDRAM、eMMC、SPI Nor Flash和SPI-NAND Flash。</p>
+<h3 id="编译U-boot">编译U-boot<a name="ZH-CN_TOPIC_0000001822358169"></a></h3>
+<p>当所有移植步骤完成后，就可以编译U-boot，进入U-boot源码目录，执行 make all 命令编译。</p>
+<p>编译成功后，将在U-boot目录下生成u-boot-hi3516cv610.bin</p>
+<p>注：可根据需要，使用参数 UBOOT_CONFIG 可调整编译使用的defconfig配置文件。</p>
+<h3 id="配置DDR存储器">配置DDR存储器<a name="ZH-CN_TOPIC_0000001775638554"></a></h3>
+<p>在Windows下打开SDK中的“boards/dmeb/tools/pc/boot_tools/”目录下的配置表格。当选用不同的DDR SDRAM时，需要针对不同器件的特性，对配置工作表中的DDR相关标签页进行修改。</p>
+<h3 id="配置管脚复用">配置管脚复用<a name="ZH-CN_TOPIC_0000001775798134"></a></h3>
+<p>如果管脚复用有变化，还需要对配置表格中的管脚复用相关标签页进行修改。</p>
+<h3 id="生成最终使用的U-boot镜像">生成最终使用的U-boot镜像<a name="ZH-CN_TOPIC_0000001822398105"></a></h3>
+<p>U-boot镜像生成步骤如下：</p>
+<ol>
+<li>完成配置表格的修改后，保存表格。</li>
+<li>单击表格第一个标签页上的按钮【Generate reg bin file】或者使用xlsm_to_bin.py脚本, 参考readme：boards/dmeb/tools/pc/boot_tools/readme_zh.txt，<strong>生成临时文件reg_info.bin</strong>。</li>
+<li>
+<p>进入boards/dmeb/目录，执行以下操作来制作非安全镜像：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cd components/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>cd gsl
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>make clean
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>make CHIP=hi3516cv610
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>cd ../../
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>cp components/gsl/pub/gsl.bin ./tools/pc/image_tool/input
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>cp ../../third_party/u-boot/u-boot-2022.07/u-boot-hi3516cv610.bin ./tools/pc/image_tool/input/u-boot-original.bin
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>cp tools/pc/boot_tools/reg_info.bin ./tools/pc/image_tool/input
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>cd tools/pc/image_tool
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>python oem/oem_quick_build.py
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>（执行该步骤前需要先确认image_tool/oem/quick_build_config.json中默认适配项与input目录中文件名是否一致，不一致请适配一致后再执行该步骤，否则会因找不到文件报错）
+</span></code></pre></div>
+<p>tools/pc/image_tool/image/oem/下生成的boot_image.bin即为“非安全启动”能在单板上运行的uboot 镜像。</p>
+</li>
+</ol>
+<h2 id="烧写U-boot">烧写U-boot<a name="ZH-CN_TOPIC_0000001822398125"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822398073">概述</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775638522">通过bootrom工具烧写U-boot</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775638546">Flash的U-boot烧写方法</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775798146">eMMC的U-boot烧写方法</a></strong>  </p>
+</li>
+</ul>
+<h3 id="概述_2">概述<a name="ZH-CN_TOPIC_0000001822398073"></a></h3>
+<p>如果待移植单板中已有U-boot运行，则可以通过串口或网口与服务器连接，直接更新U-boot。</p>
+<p>如果是第一次烧写，则需要使用ToolPlatform或者DS-5工具进行烧写。由于芯片特性，在使用DS-5时必须要对存储器和芯片进行初始化。在Hi3516CV610 SDK中提供了相应的初始化脚本，当选用了不同的外围芯片，则需要重新配置初始化脚本才能使用。</p>
+<h3 id="通过bootrom工具烧写U-boot">通过bootrom工具烧写U-boot<a name="ZH-CN_TOPIC_0000001775638522"></a></h3>
+<p>具体操作方式请参考《BurnTool工具使用指南》。</p>
+<h3 id="Flash的U-boot烧写方法">Flash的U-boot烧写方法<a name="ZH-CN_TOPIC_0000001775638546"></a></h3>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822398089">SPI -Nor Flash烧写方法</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822398133">SPI-Nand Flash烧写方法</a></strong>  </p>
+</li>
+</ul>
+<h4 id="SPI-Nor-Flash烧写方法">SPI -Nor Flash烧写方法<a name="ZH-CN_TOPIC_0000001822398089"></a></h4>
+<p>SPI-Nor Flash烧写方法如下：</p>
+<ol>
+<li>
+<p>在内存中运行起来之后在超级终端中输入：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a># mw.b &lt;ddr_addr&gt; 0xff 0x80000      /* 对内存初始化*/
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a># tftp &lt;ddr_addr&gt; boot_image.bin     /*U-boot下载到内存*/
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a># sf probe 0                      /*探测并初始化SPI-Nor flash*/
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a># sf erase 0x0 0x80000              /*擦除 512k大小*/
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a># sf write &lt;ddr_addr&gt; 0x0 0x80000  /*从内存写入SPI-Nor Flash*/
+</span></code></pre></div>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+Hi3516CV610平台的&lt;ddr_addr&gt;可用地址0x41000000。</p>
+</blockquote>
+</li>
+<li>
+<p>上述步骤操作完成后，重启系统可以看到U-boot烧写成功。</p>
+</li>
+</ol>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+在当前版本，使用sf lock 可以对SPI Nor Flash进行块保护（Blocks Protect）。如果对SPI Nor Flash的某个块进行了块保护，这个块就变成只读，运行擦除和写命令都不会生效，而且掉电并不能失效块保护。在这种情况下，只有在执行sf lock 0命令，解除块保护之后，SPI Nor Flash擦除和写操作才会起作用。详见<a href="zh-cn_topic_0000001775638490.md">zh-cn_topic_0000001775638490.md</a>章节。</p>
+</blockquote>
+<h4 id="SPI-Nand-Flash烧写方法">SPI-Nand Flash烧写方法<a name="ZH-CN_TOPIC_0000001822398133"></a></h4>
+<p>SPI-Nand Flash烧写方法如下：</p>
+<ol>
+<li>
+<p>在内存中运行起来之后在超级终端中输入：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a># nand erase 0 0x80000              /*擦除512k大小*/
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a># mw.b &lt;ddr_addr&gt; 0xff 0x80000         /* 对内存初始化*/
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a># tftp &lt;ddr_addr&gt; boot_image.bin     /*U-boot下载到内存*/
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a># nand write &lt;ddr_addr&gt; 0 0x80000 /*从内存写入NAND Flash*/
+</span></code></pre></div>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+Hi3516CV610平台的&lt;ddr_addr&gt;可用地址0x41000000。</p>
+</blockquote>
+</li>
+<li>
+<p>重启系统可以看到U-boot烧写成功。</p>
+</li>
+</ol>
+<h3 id="eMMC的U-boot烧写方法">eMMC的U-boot烧写方法<a name="ZH-CN_TOPIC_0000001775798146"></a></h3>
+<p>eMMC烧写方法如下：</p>
+<ol>
+<li>
+<p>在内存中运行起来之后在超级终端中输入：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a># mw.b &lt;ddr_addr&gt; 0xff 0x80000               /* 对内存初始化*/
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a># tftp &lt;ddr_addr&gt; boot_image.bin    /*U-boot下载到内存*/
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a># mmc write 0 &lt;ddr_addr&gt; 0 0x400   /*从内存写入eMMC*/
+</span></code></pre></div>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-note.gif" /> <strong>说明：</strong> <br />
+&lt;ddr_addr&gt;可用地址0x41000000。<br />
+mmc write命令说明：<br />
+格式：mmc write  &lt;device num&gt;  addr  blk#  cnt<br />
+参数：<br />
+-   &lt;device num&gt;：设备号<br />
+-   addr：源地址<br />
+-   blk#：目的地址的块序号<br />
+-   cnt：块的数目，块大小为512字节</p>
+</blockquote>
+</li>
+<li>
+<p>重启系统可以看到U-boot烧写成功。</p>
+</li>
+</ol>
+<h2 id="附录">附录<a name="ZH-CN_TOPIC_0000001775798206"></a></h2>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775638506">U-boot命令说明</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775798214">U-boot环境变量使用说明</a></strong>  </p>
+</li>
+</ul>
+<h3 id="U-boot命令说明">U-boot命令说明<a name="ZH-CN_TOPIC_0000001775638506"></a></h3>
+<ul>
+<li><strong><a href="#ZH-CN_TOPIC_0000001775798162">tftp命令的使用限制</a></strong>  </li>
+</ul>
+<h4 id="tftp命令的使用限制">tftp命令的使用限制<a name="ZH-CN_TOPIC_0000001775798162"></a></h4>
+<p>uboot下include/configs/Hi3516CV610.h文件中PHYS_SDRAM_1_SIZE宏的大小定义限制了tftp命令的地址范围。默认发布包中，PHYS_SDRAM_1_SIZE宏定义为0x4000000，即通过tftp命令只能把文件下载到ddr前64M的地址空间。</p>
+<p>tftp命令使用示例如下所示:</p>
+<p><img alt="" src="../figures/6.png" /></p>
+<p>tftp命令中第一个参数只能是ddr前64M地址空间，即0x40000000至0x43ffffff。</p>
+<p>备注：如果需要把文件下载到64M以上的地址空间，则可以先通过tftp命令把文件下载到64M以内的地址空间，再通过cp.b命令把文件从64M以内的地址空间拷贝到64M以上的地址空间。cp.b 命令使用示例如下：</p>
+<p><img alt="" src="../figures/1.png" /></p>
+<p>上述cp.b命令中，第一个参数为源地址，第二个参数为目的地址，第三个参数为长度。</p>
+<h3 id="U-boot环境变量使用说明">U-boot环境变量使用说明<a name="ZH-CN_TOPIC_0000001775798214"></a></h3>
+<ul>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001775798194">通过U-boot命令行配置bootargs/bootcmd到介质分区</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822358093">通过U-boot config配置环境bootargs/bootcmd到介质分区</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822358109">mount一个空文件系统方法</a></strong>  </p>
+</li>
+<li>
+<p><strong><a href="#ZH-CN_TOPIC_0000001822398117">mount一个已制作完成文件系统</a></strong>  </p>
+</li>
+</ul>
+<h4 id="通过U-boot命令行配置bootargs/bootcmd到介质分区">通过U-boot命令行配置bootargs/bootcmd到介质分区<a name="ZH-CN_TOPIC_0000001775798194"></a></h4>
+<p>bootargs有多组配置项时，不同配置项之间需要以空格间隔，如mem与console之间；同一个配置项的多个内容之间需要以逗号间隔，如分区信息参数blkdevparts、mtdparts。</p>
+<p>bootcmd有多组命令操作时，不同命令操作需要以分号间隔，命令操作格式取决于具体命令要求，一般以空格间隔。其中介质偏移地址与长度需要根据实际需求适配修改；spi nor与spi nand器件的地址偏移与长度以byte为单位计算，按byte填写读取介质偏移与长度既可；emmc介质的地址偏移与长度以扇区为单位，需要按扇区计算偏移与长度，例如读取emmc器件偏移为0x100000，长度为0x80000数据时，mmc read命令的介质偏移与长度需要分别除以512，即偏移为0x800，长度为0x400（mmc read 0 0x40010000 0x800 0x400）；具体如下所示：</p>
+<ul>
+<li>
+<p>emmc介质配置示例</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>setenv bootargs &#39;mem=96m console=ttyAMA0,115200 clk_ignore_unused root=/dev/mmcblk0p4 rootfstype=ext4 rw rootwait blkdevparts=mmcblk0:512K(boot),512K(env),4M(kernel),96M(rootfs)&#39;;
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>setenv bootcmd &#39;mmc read 0 0x47000000 0x800 0x2000; bootm 0x47000000&#39;; sa
+</span></code></pre></div>
+</li>
+<li>
+<p>nand介质配置示例</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>setenv bootargs &#39;mem=96m console=ttyAMA0,115200 clk_ignore_unused root=ubi0:ubifs rootfstype=ubifs rw ubi.mtd=3 mtdparts=nand:512K(boot),512K(env),4M(kernel),32M(rootfs)&#39;; save
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>setenv bootcmd &#39;nand read 0x47000000 0x100000 0x400000; bootm 0x47000000&#39;; save
+</span></code></pre></div>
+</li>
+<li>
+<p>nor介质配置示例</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>setenv bootargs &#39;mem=96M console=ttyAMA0,115200 clk_ignore_unused root=/dev/mtdblock3 rootfstype=jffs2 rw mtdparts=sfc:512K(boot),512K(env),4M(kernel),10M(rootfs)&#39;; save
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>setenv bootcmd &#39;sf probe 0; sf read 0x47000000 0x100000 0x400000; bootm 0x47000000&#39;; save
+</span></code></pre></div>
+</li>
+</ul>
+<h4 id="通过U-boot-config配置环境bootargs/bootcmd到介质分区">通过U-boot config配置环境bootargs/bootcmd到介质分区<a name="ZH-CN_TOPIC_0000001822358093"></a></h4>
+<p>U-boot 支持在配置文件中配置bootargs与bootcmd，配置后编译到U-boot，无需再次通过命令行方式配置，配置方法如下：</p>
+<ol>
+<li>进入menuconfig配置页面。</li>
+<li>
+<p>填充需要的bootargs与bootcmd字符串, 以emmc介质为例：</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Boot options  ---&gt;
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>[*] Enable boot arguments
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>(mem=96M console=ttyAMA0,115200 clk_ignore_unused root=/dev/mmcblk0p4 rootfstype=ext4 rw rootwait blkdevparts=mmcblk0:512K(boot),512K(env),4M(kernel),96M(rootfs))
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>[*] Enable a default value for bootcmd
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>(mmc read 0 0x47000000 0x800 0x2000; bootm 0x47000000)
+</span></code></pre></div>
+<p>注意：删除原有默认字符串可能需要“Shift+Backspace”</p>
+</li>
+<li>
+<p>继续执行，生成U-boot镜像。</p>
+</li>
+</ol>
+<h4 id="mount一个空文件系统方法">mount一个空文件系统方法<a name="ZH-CN_TOPIC_0000001822358109"></a></h4>
+<ol>
+<li>
+<p>emmc介质bootargs新增一个大小为200M的ext4文件系统分区/dev/mmcblk0p5，分区名为ext4_partion_test</p>
+<ol>
+<li>
+<p>查看当前系统分区信息，确认新添加分区dev节点：/dev/mmcblk0p5</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ls /dev/mmcblk0p*
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>/dev/mmcblk0p1  /dev/mmcblk0p3  
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>/dev/mmcblk0p2  /dev/mmcblk0p4
+</span></code></pre></div>
+</li>
+<li>
+<p>U-boot bootargs添加分区/dev/mmcblk0p5，分区名ext4_partion_test</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>setenv bootargs &#39;mem=96M console=ttyAMA0,115200 clk_ignore_unused root=/dev/mmcblk0p4 rootfstype=ext4 rw rootwait blkdevparts=mmcblk0:512K(boot),512K(env),4M(kernel),96M(rootfs),200M(ext4_partion_test)&#39;;save
+</span></code></pre></div>
+</li>
+<li>
+<p>启动至内核，格式化新增分区/dev/mmcblk0p5为ext4文件系统</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>mkfs.ext4 /dev/mmcblk0p5
+</span></code></pre></div>
+</li>
+<li>
+<p>mount至mnt目录后，即可按实际需求使用该格式化后分区</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>mount -t ext4 /dev/mmcblk0p5 /mnt/
+</span></code></pre></div>
+</li>
+</ol>
+</li>
+<li>
+<p>nand介质bootargs新增一个大小为32M的ubifs文件系统分区/dev/mtd4，分区名为ubifs_partion_test</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>setenv bootargs &#39;mem=96M console=ttyAMA0,115200 clk_ignore_unused root=ubi0:ubifs rootfstype=ubifs rw ubi.mtd=3 mtdparts=nand:512K(boot),512K(env),4M(kernel),32M(rootfs),32M(ubifs_partion_test)&#39;;save
+</span></code></pre></div>
+<p>按《UBI 文件系统使用指南》中“mount 一个空 UBIFS 文件系统”操作流程，挂载一个ubifs_partion_test分区至内核后，即可按实际需求使用该格式化后分区</p>
+</li>
+<li>
+<p>nor介质bootargs新增一个10M jffs2文件系统分区 /dev/mtdblock4, 分区名为jffs2_partion_test</p>
+<ol>
+<li>
+<p>U-boot bootargs添加分区/dev/mtdblock4，分区名jffs2_partion_test</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>setenv bootargs &#39;mem=132928K console=ttyAMA0,115200 clk_ignore_unused root=/dev/mtdblock3 rootfstype=jffs2 rw mtdparts=sfc:512K(boot),512K(env),4M(kernel),10M(rootfs),10M(jffs2_partion_test)&#39;;save
+</span></code></pre></div>
+</li>
+<li>
+<p>启动至内核，格式化新增分区/dev/mtdblock4为jffs2文件系统</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>flash_erase /dev/mtd4 0 0 
+</span></code></pre></div>
+</li>
+<li>
+<p>mount至mnt目录后，即可按实际需求使用该格式化后分区</p>
+<p>mount -t jffs2 /dev/mtdblock4 /mnt/</p>
+</li>
+</ol>
+</li>
+</ol>
+<h4 id="mount一个已制作完成文件系统">mount一个已制作完成文件系统<a name="ZH-CN_TOPIC_0000001822398117"></a></h4>
+<ol>
+<li>bootargs新增一个文件系统分区，参考"mount一个新增空文件系统"中设置bootargs方式；</li>
+<li>制作新增分区文件系统镜像，具体可参考SDK版本包boards/dmeb/readme_cn.txt“制作文件系统镜像”章节；</li>
+<li>烧写新增分区文件系统镜像，烧写方法请参考《BurnTool 工具使用指南》中“按分区烧写”章节；</li>
+<li>
+<p>启动至内核环境，直接mount新增分区到mnt目录，参考"mount一个新增空文件系统"中mount方式。</p>
+<blockquote>
+<p><img alt="" src="../public_sys-resources/icon-notice.gif" /> <strong>须知：</strong> <br />
+-   以上bootargs/bootcmd参数、分区大小仅为示例参数，具体参数、分区大小需要根据实际使用场景配置；<br />
+-   以上所用文件系统工具放在SDK版本包编译后目录：boards/dmeb/pub/bin/board_xxx，board_xxx路径的命名与编译时选择的工具链以及产品相关，请按需取用。</p>
+</blockquote>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  
+  
+
+  <div class="footer-box">
+    <div class="footer-list">
+      
+      
+      <div class="footer-list-child">
+        <a href="https://www.hisilicon.com/cn" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/home" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开发者网站</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://gitcode.com/HiSpark" target="_blank" class="footer-nav-first" rel="noopener noreferrer">海思开源社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developer.huawei.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">华为开发者官网</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hikunpeng.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">鲲鹏社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://www.hiascend.com/" target="_blank" class="footer-nav-first" rel="noopener noreferrer">昇腾社区</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/aboutus" target="_blank" class="footer-nav-first" rel="noopener noreferrer">关于我们</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      <div class="footer-list-child">
+        <a href="https://developers.hisilicon.com/login" target="_blank" class="footer-nav-first" rel="noopener noreferrer">投诉举报</a>
+        <ul class="footer-ul"></ul>
+      </div>
+      
+      
+    </div>
+    <div class="footer-fix">
+      <div class="footer-fix-content">
+        <div>
+          <span class="footer-copyright">&nbsp;&copy;2024 华为技术有限公司</span>
+          <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer">粤A2-20044005号</a>
+          <a href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030702004153"
+            target="_blank" rel="noopener noreferrer">粤公网安备44030702004153号</a>
+        </div>
+        <div class="footer-name-list">
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/legalNotices" target="_blank" class="footer-name" rel="noopener noreferrer">法律声明</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/cookie-policy" target="_blank" class="footer-name" rel="noopener noreferrer">关于Cookie</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/privacyPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">隐私政策</a>
+          
+          
+          
+          <a href="https://developers.hisilicon.com/legalNotices/userPolicy" target="_blank" class="footer-name" rel="noopener noreferrer">用户协议</a>
+          
+          
+          
+          <a href="javascript:void(0);" onclick="openDisclaimerDialog()" class="footer-name">免责声明</a>
+          
+          
+          
+        </div>
+      </div>
+
+
+      <!-- 免责声明弹窗 -->
+      <div id="disclaimerDialog" class="disclaimer-overlay" style="display: none;">
+        <div class="disclaimer-dialog">
+          <div class="disclaimer-dialog__header">
+            <span class="disclaimer-dialog__title">免责声明</span>
+            <button class="disclaimer-dialog__close" onclick="closeDisclaimerDialog()">×</button>
+          </div>
+          <div class="disclaimer-dialog__body">
+            <p class="disclaimer-dialog__text-center"><strong>海思开发者网站免责声明</strong></p>
+            <p>尊敬的用户，您好：</p>
+            <p>&nbsp; &nbsp;
+              请确保您通过本平台向海思提供或反馈的任何信息或意见不侵犯第三方知识产权和/或合法权益。如您提供或反馈的上述任何信息或意见侵犯第三方知识产权和/或合法权益，和/或给第三方造成损害的，您将承担全部法律及赔偿责任。
+            </p>
+          </div>
+          <div class="disclaimer-dialog__footer">
+            <button class="disclaimer-dialog__btn" onclick="closeDisclaimerDialog()">关闭</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function openDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'flex';
+        }
+        function closeDisclaimerDialog() {
+          document.getElementById('disclaimerDialog').style.display = 'none';
+        }
+        // 点击弹窗背景关闭
+        document.getElementById('disclaimerDialog').addEventListener('click', function (e) {
+          if (e.target === this) {
+            closeDisclaimerDialog();
+          }
+        });
+      </script>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["announce.dismiss", "content.code.annotate", "content.code.copy", "content.tabs.link", "content.tooltips", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.indexes", "navigation.top", "navigation.footer", "navigation.path", "search.highlight", "search.share", "search.suggest", "toc.follow"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../static/js/custom.js"></script>
+      
+        <script src="../../../../../static/js/version-selector.js"></script>
+      
+        <script src="../../../../../static/js/code-highlight.js"></script>
+      
+        <script src="../../../../../static/js/wavedrom-skin.js"></script>
+      
+        <script src="../../../../../static/js/wavedrom.min.js"></script>
+      
+        <script src="../../../../../static/js/wavedrom-init.js"></script>
+      
+        <script src="../../../../../static/js/no-flash.js"></script>
+      
+    
+  </body>
+</html>
